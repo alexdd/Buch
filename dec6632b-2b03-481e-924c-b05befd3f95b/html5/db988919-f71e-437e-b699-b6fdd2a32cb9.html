@@ -1,0 +1,527 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-tektur-document-version="0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>XSLT Hands-On</title>
+      <link>
+         <link rel="stylesheet" type="text/css" href="/html5/css/site.css">
+         <link rel="stylesheet" type="text/css" href="/html5/css/elements.css">
+         <link rel="stylesheet" type="text/css" href="/html5/css/prettify.css"><script type="text/javascript" src="/html5/js/jquery.js"></script><script type="text/javascript" src="/html5/js/jquery.cookie.js"></script><script type="text/javascript" src="/html5/js/jquery.treeview.js"></script><script type="text/javascript" src="/html5/js/jquery.mark.min.js"></script><script type="text/javascript" src="/html5/js/prettify.js"></script><script type="text/javascript" src="/dist/site.js"></script>
+   </head>
+   <body>
+      <div id="bar"></div>
+      <div id="header">
+         <h1>
+            <div id="header-text">XSLT Hands-On</div>
+         </h1>
+      </div>
+      <div id="nav">
+         <div class="buttons" style="width:100%">
+            <ul>
+               <li><a href="#" class="info menu"><img id="tocbutton" src="/images/toc_open.png" border="0"><span>hide sidebar</span></a></li>
+               <li><a href="../result.pdf" target="_blank" class="info menu"><img id="pdfbutton" style="margin-top:3px" src="/images/pdficon.png" border="0"><span>Show PDF</span></a></li>
+            </ul>
+         </div>
+      </div>
+      <div id="sidebar"><a href="/tektur.html" title="Go to Tektur CCMS"><img id="logo-image" src="../logo.png"></a><div id="scrollarea">
+            <div id="toc-panel"><a class="cover-link" href="book.html">Cover</a><ul id="navigation" class="treeview-gray">
+                  <li class="toc-level-1"><a href="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88.html" class="toc-entry" id="chapter-link_c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88" data-level="1"><span class="chapter-link1">1&nbsp;&nbsp;
+                           Intro 
+                           </span></a></li>
+                  <li class="toc-level-1"><a href="31a92dc0-959c-49a1-b06e-01e2369e050e.html" class="toc-entry" id="chapter-link_31a92dc0-959c-49a1-b06e-01e2369e050e" data-level="1"><span class="chapter-link1">2&nbsp;&nbsp;
+                           Theorie 
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="5b73f348-0058-45e0-82f7-c3de72ec5d41.html" class="toc-entry" id="chapter-link_5b73f348-0058-45e0-82f7-c3de72ec5d41" data-level="2"><span class="chapter-link2">2.1&nbsp;&nbsp;
+                                 Push vs. Pull Stylesheets 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" class="toc-entry" id="chapter-link_db988919-f71e-437e-b699-b6fdd2a32cb9" data-level="2"><span class="chapter-link2">2.2&nbsp;&nbsp;
+                                 Eindeutigkeit der Regelbasis
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_4e789913-7860-4c4e-b618-01dced6b6b2ed6e8" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          Reihenfolge der Match-Regeln
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_5f870821-8ca8-44f0-b676-57793dedc2c6d6e15" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          Präzedenz der Auswertung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_ea722739-d975-4b73-b56c-f72818cd84c4d6e76" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          Import Präzendenz und Default-Regel
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_c5374863-4a57-4e82-bd14-1ba9cbc97c0fd6e89" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.4</span>&nbsp;&nbsp;<span class="text">
+                                          Prioritäten
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_8b11fd3b-f9f9-446d-a9a5-a799dc909169d6e118" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.5</span>&nbsp;&nbsp;<span class="text">
+                                          Modus Attribute
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="f838f9be-97bf-44a4-ac63-2e813a87f2ea.html" class="toc-entry" id="chapter-link_f838f9be-97bf-44a4-ac63-2e813a87f2ea" data-level="1"><span class="chapter-link1">3&nbsp;&nbsp;
+                           Praxis 
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" class="toc-entry" id="chapter-link_3c090c4b-2d46-459c-87ba-60a824bf5aa5" data-level="2"><span class="chapter-link2">3.1&nbsp;&nbsp;
+                                 Anwendungsbeispiele
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_4bf2b25f-e483-4835-b734-2668331d5b0bd6e6" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.1.1</span>&nbsp;&nbsp;<span class="text">
+                                          XML Webseiten
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_0a5be3cb-7fee-4448-8eaa-33cec9c28221d6e25" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.1.2</span>&nbsp;&nbsp;<span class="text">
+                                          Serverseitige Konvertierung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_d30a54b4-a08c-40b9-b701-91be5bb340cdd6e40" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.1.3</span>&nbsp;&nbsp;<span class="text">
+                                          Ausgabeformate
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_7c613c35-961e-46a6-af57-6778858a71bcd6e47" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.1.4</span>&nbsp;&nbsp;<span class="text">
+                                          Menschenlesbar machen
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_e2d39407-3980-4050-86fa-aa653f737cd2d6e60" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.1.5</span>&nbsp;&nbsp;<span class="text">
+                                          Diagramme
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" class="toc-entry" id="chapter-link_151a9719-a32a-4fca-a55c-769b47a73b34" data-level="2"><span class="chapter-link2">3.2&nbsp;&nbsp;
+                                 Komplexe Anwendung
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_0010aab5-f425-4968-bf0b-f22bc59159b1d6e6" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          Single Source Publishing
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_ddc898c3-a0c6-45e4-8470-f04e3ccb9603d6e38" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          Code Generierung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_30786084-ece7-4b45-a77b-88512e4fe461d6e55" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          Migrationen und Konvertierungen
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="ceed4546-a60b-4d5f-a625-6e79c180cc13.html" class="toc-entry" id="chapter-link_ceed4546-a60b-4d5f-a625-6e79c180cc13" data-level="2"><span class="chapter-link2">3.3&nbsp;&nbsp;
+                                 Vortransformationen 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" class="toc-entry" id="chapter-link_6fd7b270-9d1f-4f8e-996f-13b5862956a9" data-level="2"><span class="chapter-link2">3.4&nbsp;&nbsp;
+                                 Validierung mit Schematron
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" id="chapter-link_ac6fc705-65f7-4476-b83d-78df36629ccad6e14" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.4.1</span>&nbsp;&nbsp;<span class="text">
+                                          Schematron ist XSLT
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" id="chapter-link_5bb03dd6-9311-4d44-822f-d819372c5e67d6e30" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.4.2</span>&nbsp;&nbsp;<span class="text">
+                                          CLI Verwendung
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="888d37da-0dbe-4fae-bec9-2ad1e99f7818.html" class="toc-entry" id="chapter-link_888d37da-0dbe-4fae-bec9-2ad1e99f7818" data-level="2"><span class="chapter-link2">3.5&nbsp;&nbsp;
+                                 Vererbung 
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="888d37da-0dbe-4fae-bec9-2ad1e99f7818.html" id="chapter-link_2840fc03-3cdf-4021-93af-6642965cc464d6e8" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.5.1</span>&nbsp;&nbsp;<span class="text">
+                                          Beispiel: Parameterisierung
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="f606e9c6-3d46-48f3-8de4-46e13dc7d055.html" class="toc-entry" id="chapter-link_f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-level="1"><span class="chapter-link1">4&nbsp;&nbsp;
+                           Sonstiges 
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="7dbb15ce-bbc5-4d91-b977-ed7e8117730e.html" class="toc-entry" id="chapter-link_7dbb15ce-bbc5-4d91-b977-ed7e8117730e" data-level="2"><span class="chapter-link2">4.1&nbsp;&nbsp;
+                                 GIT Einmaleins 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" class="toc-entry" id="chapter-link_4100d43a-5b71-43ba-a05f-1063fcee8679" data-level="2"><span class="chapter-link2">4.2&nbsp;&nbsp;
+                                 XML Editoren 
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_498cf31b-9271-4bd5-99c3-267338011c2bd6e52" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYM Desktop
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_bedf667b-7726-4999-881b-891f147ff923d6e73" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYG Desktop
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_eea96007-349a-4143-b26d-aea0617aa994d6e78" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYM Online
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="3dfad2c2-2299-461a-9d80-42237bbb5e89.html" class="toc-entry" id="chapter-link_3dfad2c2-2299-461a-9d80-42237bbb5e89" data-level="1"><span class="chapter-link1">5&nbsp;&nbsp;
+                           Glossar 
+                           </span></a></li>
+                  <li class="toc-level-1"><a href="dac12b19-ef37-4e41-b88c-6f0ce7becbb8.html" class="toc-entry" id="chapter-link_dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-level="1"><span class="chapter-link1">6&nbsp;&nbsp;
+                           Tektur CCMS
+                           </span></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div id="main">
+         <div id="content-wrapper">
+            <div id="db988919-f71e-437e-b699-b6fdd2a32cb9-target" class="chapter first" data-element-name="chapter">
+               <h2 id="" data-element-name="title"><span class="number">2.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                        
+                        <div class="title" data-tektur-reviewer-number="" id="b8539c31-c176-46bb-b028-e811b2decfbe" data-element-name="title">Eindeutigkeit der Regelbasis</div>
+                        </span></span></h2>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Regelbasis der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten
+                     betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz
+                     der Regelbasis ist der Programmierer selbst verantwortlich.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</div>
+               </div>
+               <div id="4e789913-7860-4c4e-b618-01dced6b6b2ed6e8-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">2.2.1&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9" data-element-name="title">Reihenfolge der Match-Regeln</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt
+                        gibt, wird zumindest bei Saxon diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto
+                        "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.
+                     </div>
+                  </div>
+               </div>
+               <div id="5f870821-8ca8-44f0-b676-57793dedc2c6d6e15-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">2.2.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="c35ab440-7d81-4466-a34f-32545cec227ad6e14" data-element-name="title">Präzedenz der Auswertung</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Match-Regeln werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten
+                        zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="procedure" id="" data-element-name="procedure">
+                        
+                        <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                           
+                           <div class="action" id="" data-element-name="action">
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">1.</td>
+                                    <td>Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</td>
+                                 </tr>
+                              </table>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                        <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                           
+                           <div class="action" id="" data-element-name="action">
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">2.</td>
+                                    <td>Templates mit einem höheren Priority Attribut haben Vorrang.</td>
+                                 </tr>
+                              </table>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                        <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                           
+                           <div class="action" id="" data-element-name="action">
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">3.</td>
+                                    <td>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</td>
+                                 </tr>
+                              </table>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                        <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                           
+                           <div class="action" id="" data-element-name="action">
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">4.</td>
+                                    <td>Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </td>
+                                 </tr>
+                              </table>
+                              
+                              <ul id="" data-element-name="ul">
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Einfache Elementnamen (z.B. "para") haben Prio 0.</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wildcards (z.B. *, @*) haben Priorität -0.25</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">In allen anderen Fällen ist die Prio 0.5.</div>
+                                    
+                                 </li>
+                                 
+                              </ul>
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">4.</td>
+                                    <td>Beispiele:</td>
+                                 </tr>
+                              </table>
+                              
+                              <ul id="" data-element-name="ul">
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">para -&gt; 0</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">h:* -&gt; -0.25</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">* -&gt; -0.25</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">node() -&gt; -0.25</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">contents/para -&gt; 0.5</div>
+                                    
+                                 </li>
+                                 
+                                 <li id="" data-element-name="li">
+                                    
+                                    <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">contents/* -&gt; 0.5</div>
+                                    
+                                 </li>
+                                 
+                              </ul>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                        <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                           
+                           <div class="action" id="" data-element-name="action">
+                              
+                              <table class="CmdStep-Table">
+                                 <tr>
+                                    <td class="CmdStep-Icon" valign="top">5.</td>
+                                    <td>Mit einer Kommandozeilen-Option kann bei Saxon festgelegt werden, dass die Transformation abbricht, sobald es einen Konflikt
+                                       bei der Regelauswertung gibt.
+                                    </td>
+                                 </tr>
+                              </table>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div id="ea722739-d975-4b73-b56c-f72818cd84c4d6e76-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">2.2.3&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19" data-element-name="title">Import Präzendenz und Default-Regel</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle Regeln in einem importierten Stylesheet eine geringere Priorität
+                        als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel einzubinden, bspw:
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">&lt;xsl:template match="*" mode="#all"/&gt;</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur
+                        dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde
+                        bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer XML-2-XML Migration automatisch Knoten im XML Baum abgetrennt
+                        werden sollen, für die keine Match-Regel existiert.
+                     </div>
+                  </div>
+               </div>
+               <div id="c5374863-4a57-4e82-bd14-1ba9cbc97c0fd6e89-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">2.2.4&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="be710deb-554e-4962-beb9-9de58d386c7fd6e24" data-element-name="title">Prioritäten</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wie oben schon verdeutlicht werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit
+                        diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten
+                        wÃ¤re bspw. folgendes Szenario:
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <ul id="" data-element-name="ul">
+                        
+                        <li id="" data-element-name="li">
+                           
+                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</div>
+                           
+                        </li>
+                        
+                        <li id="" data-element-name="li">
+                           
+                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Dabei sollen Seminar-Elemente markiert werden, die nicht besonderen Bedingungen entsprechen:</div>
+                           
+                           <ul id="" data-element-name="ul">
+                              
+                              <li id="" data-element-name="li">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Das Seminar-Element hat ein Feld "Ende-Datum" das abgelaufen ist.</div>
+                                 
+                              </li>
+                              
+                              <li id="" data-element-name="li">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Am Seminar-Element sind mehrere Dozenten angestellt, obwohl das Seminar-Element vom Type "Single" ist.</div>
+                                 
+                              </li>
+                              
+                              <li id="" data-element-name="li">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">em Seminar-Element ist kein Dozent zugeordnet.</div>
+                                 
+                              </li>
+                              
+                           </ul>
+                           
+                        </li>
+                        
+                        <li id="" data-element-name="li">
+                           
+                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Sicherlich kann es Seminar-Elemente geben, die alle drei Bedingungen erfüllen. Um das Error-Log aber nicht zu überfüllen,
+                              sollen die Filter nach ihren Prioritäten ausgeführt werden.
+                           </div>
+                           
+                        </li>
+                        
+                     </ul>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">In Templates überführt, könnte diese Anforderung so umgsetzt werden:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
+              priority="30" mode="filter-network"&gt; 
+  &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt; 
+
+&lt;xsl:template match="Seminar[Type eq 'SINGLE' and count(dozenten/dozent) gt 1]"
+              priority="20" mode="filter-network"&gt; 
+  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;dozenten-count&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt; 
+
+&lt;xsl:template match="Seminar[not(dozenten/dozent)]" mode="filter-network"&gt; 
+  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;dozenten-missing&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt;</pre></div>
+               </div>
+               <div id="8b11fd3b-f9f9-446d-a9a5-a799dc909169d6e118-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">2.2.5&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29" data-element-name="title">Modus Attribute</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">An allen Templates hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine
+                        bestimmte Richtung gepusht, vgl. <a class="ref" id="5c94c28f-26eb-4c44-88ca-72a736b38ea1" data-id-ref="" data-element-name="doclink" data-is-inline-element="yes">Push vs. Pull Stylesheets </a>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen
+                        z.B. keine Fussnoten-Marker angezeigt werden. 
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">In Templates formuliert würde diese Anweisung folgendermassen aussehen:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">&lt;xsl:template match="title" mode="toc"&gt;
+  &lt;div class="toc-entry"&gt;
+    &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
+  &lt;/div&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match="title"&gt;
+  &lt;h1&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/h1&gt;
+&lt;/xsl:template&gt;</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Generierung des TOC könnte dann folgendermassen ablaufen:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">&lt;xsl:for-each select="chapter"&gt;
+  &lt;xsl:apply-templates select="title" mode="toc"&gt;
+&lt;/xsl:for-each&gt;</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie
+                        auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer
+                        Refactoring-Massnahme abgeklemmt und dann vergessen wurden.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="date-version">Version: 13<br>Dec 27 2018
+      </div>
+   </body>
+</html>

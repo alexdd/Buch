@@ -1,0 +1,94 @@
+<div xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="a619c6d9-57c8-4fde-a3c0-cf6002905cc1" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="02088d03-85f9-4b94-a502-56e2e0f303fb"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="28a8c9ba-33b0-41ff-8681-da976df43b85" class="title pmarker tags" data-element="title" data-tektur-editor-id="69d996be-b62c-418f-a06f-7f74f2476783" contenteditable="true">Vortransformationen </div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="e962d811-3744-4ad4-96c7-934951c988b7"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="41e7c942-571b-42e5-b049-4c78ed6c96f2" contenteditable="true"></div></div><div data-attribute-id="1b59d85e-4d01-4227-8ecf-cbdc2b9e5cb8" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="2e44bf3a-1e76-4d07-8588-c0557d8d7013"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="918ff968-9c12-48bc-954a-688a83b2be8f"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="8a421545-f7a1-49b2-8250-75b86ca592f8" class="p pmarker tags" data-element="p" data-tektur-editor-id="f9aa0158-4755-4120-890a-13b11d3e7821" contenteditable="true">Bei einer komplexen Transformation ist es ratsam und sogar manchmal unabdingbar die Konvertierung in einzelne Stufen aufzuteilen. Das hat folgende Vorteile:</div><ul data-attribute-id="737c537d-59ca-4b31-993d-ff25f033dc0cd6e6" class="ul tags" data-element="ul" data-tektur-editor-id="69fd41d0-a1d3-4be2-873c-5f965f5a105b"><li data-attribute-id="41798c1d-c1ce-460e-a35c-9dbb097c544dd6e7" class="li tags" data-element="li" data-tektur-editor-id="f6d0bf11-a2e0-4b24-9e5c-ebfebb7065c0"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="1f775282-48f6-4e94-819e-d92684be1b88d6e8" class="p pmarker tags" data-element="p" data-tektur-editor-id="02378508-29b4-49fd-85cd-c720959dd33a" contenteditable="true">Der Prozess ist transparenter, da die einzelnen Stufen leichter überschaubar sind.</div></li><li data-attribute-id="2e6bafcf-c36d-4b12-8cfb-5ec64ac2cbced6e10" class="li tags" data-element="li" data-tektur-editor-id="5fe9e038-9491-4d2a-846c-f57216b8fe32"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="f1e5f594-048a-4ce7-8a07-cd0c65f06729d6e11" class="p pmarker tags" data-element="p" data-tektur-editor-id="f174c3d0-fe4f-49fb-a5e3-2fef2af6570b" contenteditable="true">Die Zwischenergebnisse können für Debug-Zwecke ausgewertet werde oder dienen als Eingabe für andere Prozesse.</div></li><li data-attribute-id="e93c815a-a050-4d75-a366-bd14372a3445d6e13" class="li tags" data-element="li" data-tektur-editor-id="10a9c913-5ea8-4637-bde0-6c3f37351098"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="bf659729-4486-4a3b-b983-cec9d5748383d6e14" class="p pmarker tags" data-element="p" data-tektur-editor-id="238234c9-066e-4186-8c20-3a06d21b7433" contenteditable="true">Nicht-relevante oder invalide Teilbäume können aus der Eingabeinstanz gefiltert werden, um so die weitere Verarbeitung zu beschleunigen.</div></li><li data-attribute-id="584020a1-f0e0-4be0-8eba-62e85ba5abd4d6e16" class="li tags" data-element="li" data-tektur-editor-id="38690834-2e5a-415e-ac1d-4fb440bd8aca"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="d115f521-f45c-4ae4-85e8-6ee9264558aed6e17" class="p pmarker tags" data-element="p" data-tektur-editor-id="eea7ffc6-63f9-4489-9194-cb3c201fae0f" contenteditable="true">Hilfskonstrukte können erzeugt werden. Diese erleichtern die weitere Verarbeitung.</div></li></ul><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="e76a9b14-f720-48ff-afad-95bbd80c53a7d6e19" class="p pmarker tags" data-element="p" data-tektur-editor-id="0b2b4fe1-e937-4274-97e7-35bdd5235d8c" contenteditable="true">Es gibt zwei Möglichkeiten, wie eine Vortransformation eingebunden werden kann:</div><ul data-attribute-id="7093a130-54f7-4542-a76e-43833d6eed73d6e21" class="ul tags" data-element="ul" data-tektur-editor-id="7961f4dc-455d-461a-a5aa-9db574774c1f"><li data-attribute-id="5c0c2b3e-b947-47c1-aa0f-35e5bd621d03d6e22" class="li tags" data-element="li" data-tektur-editor-id="edb74868-21c3-4c98-a9c5-c23de93472af"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="2bcf1845-b267-46ac-b853-627fd0a0f3bfd6e23" class="p pmarker tags" data-element="p" data-tektur-editor-id="1aabcde7-fe40-4db1-84cf-a1a9dd80a11b" contenteditable="true">In einem separaten File bzw. einer XML Instanz, die vom XSLT Prozessor vor der eigentlichen Transformation aufgerufen wird uns einen Zwischenstand produziert, der als Eingabe für den Haupttransformationsschritt dient.</div></li><li data-attribute-id="c0c25021-a503-40b9-8b11-6bea28ec4908d6e25" class="li tags" data-element="li" data-tektur-editor-id="e892a31c-750f-48bf-948f-b981f832ca41"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="8f673f1d-8c7a-4616-93f2-d808745421ffd6e26" class="p pmarker tags" data-element="p" data-tektur-editor-id="9df7cbf3-08f9-4f47-bd45-3eef7991347f" contenteditable="true">Innerhalb des eigentlichen XSLT Stylesheets. Hier wird das Ergebnis der Vortransformation in einer Variablen erzeugt.</div></li></ul><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="e42f964a-137b-4b75-bfad-28dc54470a68d6e28" class="p pmarker tags" data-element="p" data-tektur-editor-id="32af3432-6d88-44a4-84c7-ad087cd6ed36" contenteditable="true">Den zweiten Punkt möchte ich anhand einer Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</div><div class="pre"><div data-attribute-id="42a9da0c-3a92-4737-861a-9d7f75bcc75ed6e30" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="dc92ff52-498d-4152-9154-0380d0471199" contenteditable="true">&#x3C;education-system&#x3E;
+  &#x3C;administrative-regions&#x3E;
+    [...]
+    &#x3C;dministrative-region id="31" name="Bavaria"&#x3E;
+      &#x3C;shools&#x3E;
+        &#x3C;school id="45"&#x3E;
+          &#x3C;teachers&#x3E;
+            &#x3C;teacher id="576"/&#x3E;
+            &#x3C;teacher id="345"/&#x3E;
+            &#x3C;teacher id="12"/&#x3E;
+          &#x3C;/teachers&#x3E;
+        &#x3C;/school&#x3E;
+        &#x3C;school id="36"&#x3E;
+          &#x3C;teachers&#x3E;
+            &#x3C;teacher id="576"/&#x3E;
+            &#x3C;teacher id="8"/&#x3E;
+          &#x3C;/teachers&#x3E;
+        &#x3C;/school&#x3E;
+        [...]
+      &#x3C;/shools&#x3E;
+    &#x3C;/dministrative-region&#x3E;
+    [...]
+  &#x3C;/administrative-regions&#x3E;
+&#x3C;/education-system&#x3E;</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="8985af84-2126-4159-b493-540b65c41b58d6e32" class="p pmarker tags" data-element="p" data-tektur-editor-id="2bbe2904-93cf-4dfd-a192-2faa481c75f2" contenteditable="true">Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</div><div class="pre"><div data-attribute-id="66a75eb5-a2a2-4e15-b2b8-d0ad55840468d6e34" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="63625808-11e7-40a9-bf93-6bf2209cda69" contenteditable="true">&#x3C;teachers&#x3E;
+  [...]
+  &#x3C;teacher id="576"&#x3E;
+    &#x3C;first-name&#x3E;Alfons&#x3C;/first-name&#x3E;
+    &#x3C;last-name&#x3E;Blimetsrieder&#x3C;/last-name&#x3E;
+    &#x3C;subjects&#x3E;
+      &#x3C;subject&#x3E;Biology&#x3C;/subject&#x3E;
+      &#x3C;subject&#x3E;Math&#x3C;/subject&#x3E;
+      &#x3C;subject&#x3E;Sport&#x3C;/subject&#x3E;
+    &#x3C;/subjects&#x3E;
+    &#x3C;suspended&#x3E;2017-12-31&#x3C;/suspended&#x3E;
+    [...]
+  &#x3C;/teacher&#x3E;
+  [...]
+&#x3C;/teachers&#x3E;</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="c35caf7a-807f-48b2-8973-1e575a619ae8d6e36" class="p pmarker tags" data-element="p" data-tektur-editor-id="2163fe70-991a-4900-8086-d9d925fcbd7c" contenteditable="true">Und die Datei, welche die Schulen auflistet:</div><div class="pre"><div data-attribute-id="e93d7651-623a-4f9f-9197-fdd3819f9923d6e38" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="1063a949-04ea-48b7-98d6-95dcc9554161" contenteditable="true">&#x3C;schools&#x3E;
+  [...]
+  &#x3C;school id="45"&#x3E;
+    &#x3C;name&#x3E;Gymnasium Bad Aibling&#x3C;/name&#x3E;
+    &#x3C;type&#x3E;Oberschule&#x3C;/type&#x3E;
+    [...]
+  &#x3C;/school&#x3E;
+  [...]
+&#x3C;/schools&#x3E;</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="c8ee6679-b15c-45f7-9fca-aa269b19e54dd6e40" class="p pmarker tags" data-element="p" data-tektur-editor-id="89d34f9b-b1e4-457a-9460-1725d8e8a872" contenteditable="true">Um diese Daten verarbeiten zu können ist es sinnvoll, die drei Dateien in einem ersten "Resolver" Schritt zusammenzuführen und ggf. irrelevante Strukturen zu entfernen. Lehrer aus obigem Beispiel können beispielsweise suspendiert worden sein. Das folgende Skript erledigt dies mittels einer zusätzlichen Transformation in eine Variable:</div><div class="pre"><div data-attribute-id="5e55e45b-2397-4eb7-9294-e65e69418b96d6e43" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="a0fe2036-404d-4a61-a932-c770fcbcc146" contenteditable="true">&#x3C;?xml version="1.0" encoding="UTF-8"?&#x3E;
+&#x3C;xsl:stylesheet version="2.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="#all"&#x3E;
+  
+  &#x3C;xsl:output indent="yes" method="xml"/&#x3E;
+  
+  &#x3C;xsl:strip-space elements="*"/&#x3E;
+  
+  &#x3C;xsl:param name="file-1" required="yes"/&#x3E;
+  &#x3C;xsl:param name="file-2" required="yes"/&#x3E;
+  &#x3C;xsl:param name="file-3" required="yes"/&#x3E;
+  
+  &#x3C;xsl:variable name="files" select="(doc($file-1), doc($file-2), doc($file-3))"/&#x3E;
+  &#x3C;xsl:variable name="bavaria-region-ids" select="(31, 58)"/&#x3E;
+  
+  &#x3C;xsl:key name="teachers" match="teacher" use="@id"/&#x3E;
+  &#x3C;xsl:key name="schools" match="school" use="@id"/&#x3E;
+  
+  &#x3C;xsl:template name="main"&#x3E;
+    &#x3C;xsl:variable name="resolve-result"&#x3E;
+      &#x3C;xsl:apply-templates select="$files/administrative-regions" mode="resolve"/&#x3E;
+    &#x3C;/xsl:variable&#x3E;
+    &#x3C;xsl:apply-templates select="$resolve-result/administrative-regions"/&#x3E;
+  &#x3C;/xsl:template&#x3E;
+  
+  &#x3C;xsl:template match="administrative-region[not(@id = $bavaria-region-ids)]" 
+                mode="resolve"/&#x3E;
+
+  &#x3C;xsl:template match="school" mode="resolve"&#x3E;
+    &#x3C;xsl:copy&#x3E;
+      &#x3C;xsl:copy-of select="key('schools',@id, $files/schools[1]/root())/node()"/&#x3E;
+      &#x3C;xsl:apply-templates select="node()|@*" mode="resolve"/&#x3E;      
+    &#x3C;/xsl:copy&#x3E;
+  &#x3C;/xsl:template&#x3E;
+
+  &#x3C;xsl:template match="teacher" mode="resolve"&#x3E;
+    &#x3C;xsl:copy-of select="key('teachers',@id, $files/teachers[1]/root())/node()"/&#x3E;
+  &#x3C;/xsl:template&#x3E;
+    
+  &#x3C;xsl:template match="teacher[suspended/xs:date(.) le current-date()]"/&#x3E;
+  
+  &#x3C;xsl:template match="node()|@*" mode="#all"&#x3E;
+    &#x3C;xsl:copy&#x3E;
+      &#x3C;xsl:apply-templates mode="#current"/&#x3E;
+    &#x3C;/xsl:copy&#x3E;
+  &#x3C;/xsl:template&#x3E;
+  
+&#x3C;/xsl:stylesheet&#x3E;</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="45fef16c-d685-4a23-9038-37e8b4ce1715d6e45" class="p pmarker tags" data-element="p" data-tektur-editor-id="0f961ea6-1b74-4449-b0b2-7bab5b93aa96" contenteditable="true">Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="aa88c1b0-cb8a-4647-8498-61e6d266fe18d6e47" class="p pmarker tags" data-element="p" data-tektur-editor-id="bc78fcba-bd15-4970-86db-b29c30eeedd0" contenteditable="true">Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören, was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus.</div></div></div></div>

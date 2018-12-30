@@ -1,0 +1,59 @@
+<div xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="b1719307-52da-4e1d-9aee-a3a6bb139d92" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="cc1d9173-625f-48ef-98d8-7925a4fb1af9"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="5d677796-4ebf-49b1-85ba-45315312a0e4" class="title pmarker tags" data-element="title" data-tektur-editor-id="5adf5551-1641-4393-923d-9ee2fc6b688b" contenteditable="true">GIT Einmaleins </div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="26028cbd-d391-4df0-99fb-1bbd40d4672f"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="036622fa-8fee-4446-9163-7db932977a42" contenteditable="true"></div></div><div data-attribute-id="0a19606e-0b70-4532-9eaa-bf50a84927d0" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="95ee9f66-b6e1-44f5-b001-a705b407b7e4"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="d054c6a0-11ec-473f-b892-4cf0b747475e"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="c2e52685-e1e6-417d-8e94-2d5367436ccb" class="p pmarker tags" data-element="p" data-tektur-editor-id="b2dac21e-1047-4b1c-b816-72940fd2257d" contenteditable="true">Im Fachbereich Technische Dokumentation wird neue Technologie ein bisschen langsamer adaptiert, als in anderen Disziplinen der IT - schliesslich muss ja erst alles dokumentiert werden ...</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="24285d0d-c75e-44d5-82a9-c7c4153549e7d6e6" class="p pmarker tags" data-element="p" data-tektur-editor-id="a143a5b9-3b05-4794-8c6e-14cccd61cef5" contenteditable="true">Bei Versionsverwaltungssystemen ist das nicht anders. Doch inzwischen hat auch GIT in manchen EntwicklerbÃ¼ros Einzug gehalten und verdrÃ¤ngt Subversion.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" data-attribute-id="9b7be9ab-cc3d-46ae-adeb-c0b506eda947d6e8" class="p pmarker tags" data-element="p" data-tektur-editor-id="ca951a6a-e83d-4a3c-8d15-6451490982f9" contenteditable="true">Ein Grund an dieser Stelle einmal zumindest die wichtigsten Befehle aufzulisten - Note to self:</div><div class="pre"><div data-attribute-id="843b014c-fa88-41d2-90e3-ee03be6f22cad6e10" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="5a1b4c86-6d84-4987-ad71-19331890261a" contenteditable="true">GIT COMMANDS
+
+CLONE
+=====
+git clone https://github.com/libgit2/libgit2
+SIMPLE
+======
+git init
+git add *
+git commit -m "Form validation addedâ€�
+[changes]
+git add [changed files] or git commit -a
+git diff â€”cached
+git branch experimental
+git checkout experimental
+git commit -a -m "only in the experimental branchâ€�
+git checkout master
+git merge experimental
+git branch -d experimental
+
+COLLABORATION
+=============
+push new branch git push -u origin newLocalBranch
+bob$ git clone /home/alice/project myrepo
+(edit files)
+bob$ git commit -a
+alice$ cd /home/alice/project
+alice$ git pull /home/bob/myrepo master  (fetch &#x26; merge)
+(fetch and not merge)
+alice$ git fetch /home/bob/myrepo master
+alice$ git log -p HEAD..FETCH_HEAD
+(visualization only)
+gitk HEAD..FETCH_HEAD
+gitk HEADâ€¦FETCH_HEAD
+â€”
+git log
+git show ea14 (firs chars is enough)
+git grep "headline_font_sizeâ€� v2.5
+
+PULL REQUESTS
+=============
+(checkout branch)
+git pull origin simple-examples
+(changes)
+git push origin simple-examples
+Create a pull request using the form on the Github page and assign it to a Reviewer
+
+MERGE CONFLICTS
+===============
+git pull origin master
+=&#x3E; merga conflicts
+
+TROUBLE SHOOTING
+=================
+git reset --hard origin/master
+git tree
+git status
+git checkout 118886ee3f06738b53f089433078d35f4d70a8f9 vendor/error-report.xsl
+git log --diff-filter=D --summary</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="bae29a64-ff07-4291-a164-37a4ae34b3fd" contenteditable="true"></div></div></div></div>
