@@ -15,7 +15,7 @@
       <td>
          <span class="number">1  </span>
          <span class="text">
-            Intro 
+            Intro
          </span>
          <div data-element-name="commentable-element"
               id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
@@ -447,10 +447,45 @@
               style="display:none"> </div>
       </td>
    </tr>
+   <tr data-tt-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
+       data-tt-parent-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c">
+      <td>
+         <span class="number">27  </span>
+         <span class="text">
+               Abfragen mit XQuery
+            </span>
+         <div data-element-name="commentable-element"
+              id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="0e661463-0259-4d9f-a784-93f4f169bc52"
+              style="display:none"> </div>
+      </td>
+   </tr>
+   <tr data-tt-id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
+       data-tt-parent-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 38f7a676-cbef-4a69-9ae9-d89bddde2719">
+      <td>
+         <span class="number">28  </span>
+         <span class="text">
+                  Connector zu Marklogic in Oxygen
+               </span>
+         <div data-element-name="commentable-element"
+              id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6"
+              style="display:none"> </div>
+      </td>
+   </tr>
    <tr data-tt-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-tt-parent-id="Manual"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055">
       <td>
-         <span class="number">27  </span>
+         <span class="number">29  </span>
          <span class="text">
             Sonstiges 
          </span>
@@ -466,7 +501,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 7dbb15ce-bbc5-4d91-b977-ed7e8117730e">
       <td>
-         <span class="number">28  </span>
+         <span class="number">30  </span>
          <span class="text">
                GIT Einmaleins 
             </span>
@@ -482,7 +517,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679">
       <td>
-         <span class="number">29  </span>
+         <span class="number">31  </span>
          <span class="text">
                XML Editoren 
             </span>
@@ -498,7 +533,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 498cf31b-9271-4bd5-99c3-267338011c2bd6e52">
       <td>
-         <span class="number">30  </span>
+         <span class="number">32  </span>
          <span class="text">
                         WYSIWYM Desktop
                      </span>
@@ -514,7 +549,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 bedf667b-7726-4999-881b-891f147ff923d6e73">
       <td>
-         <span class="number">31  </span>
+         <span class="number">33  </span>
          <span class="text">
                         WYSIWYG Desktop
                      </span>
@@ -530,7 +565,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 eea96007-349a-4143-b26d-aea0617aa994d6e78">
       <td>
-         <span class="number">32  </span>
+         <span class="number">34  </span>
          <span class="text">
                         WYSIWYM Online
                      </span>
@@ -545,7 +580,7 @@
    <tr data-tt-id="3dfad2c2-2299-461a-9d80-42237bbb5e89" data-tt-parent-id="Manual"
        data-chapter-link-id="3dfad2c2-2299-461a-9d80-42237bbb5e89">
       <td>
-         <span class="number">33  </span>
+         <span class="number">35  </span>
          <span class="text">
             Glossar 
          </span>
@@ -560,7 +595,7 @@
    <tr data-tt-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-tt-parent-id="Manual"
        data-chapter-link-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8">
       <td>
-         <span class="number">34  </span>
+         <span class="number">36  </span>
          <span class="text">
             Tektur CCMS
          </span>
