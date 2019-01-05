@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Jan 02 2019 15:02:10 </date-of-last-change>
+      <date-of-last-change>Sat Jan 05 2019 23:30:33 </date-of-last-change>
       <language>de-DE</language>
-      <status>17</status>
+      <status>18</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -1320,38 +1320,6 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
-                  ismodule="no">
-            
-               <title>
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
-               </title>
-               
-                  <column-wide-element>
-               <p>Marklogic bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren. Komfortabler arbeitet man aber mit einem Oxygen-Connector. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <column-wide-element>
-                     <subtitle>Data Source Explorer im Oxygen XML Editor öffnen</subtitle>
-                  </column-wide-element>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/data-source-explorer.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>und konfiguriert eine neue Datenquelle:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <column-wide-element>
-                     <subtitle>Neue Datenquelle im Oxygen XML Editor konfigurieren</subtitle>
-                  </column-wide-element>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/new_data-source.png"/>
-                  </figure>
-            </page-wide-element>
-               
-            
-         </chapter>
       </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"

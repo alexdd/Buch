@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Jan 02 2019 15:02:21 </date-of-last-change>
+      <date-of-last-change>Sat Jan 05 2019 23:30:33 </date-of-last-change>
       <language>de-DE</language>
-      <status>17</status>
+      <status>18</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -16,17 +16,24 @@
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
 www.github.com/alexdd/XSLT-Buch</cover-text>
       <structure>
-         <format>UNDEFINED</format>
+         <format>book</format>
+         <supplemental-directives/>
+         <toc/>
+         <index/>
+         <footnote-index/>
+         <figure-index/>
+         <chapter-on-right-page/>
+         <cover-backpage/>
       </structure>
       <design>
-         <layout>UNDEFINED</layout>
-         <paper-format>UNDEFINED</paper-format>
-         <page-margin>UNDEFINED</page-margin>
-         <spaces>UNDEFINED</spaces>
-         <header>UNDEFINED</header>
-         <footer>UNDEFINED</footer>
-         <look-and-feel>UNDEFINED</look-and-feel>
-         <table-layout>UNDEFINED</table-layout>
+         <layout>margin</layout>
+         <paper-format>A4</paper-format>
+         <page-margin>leftgap</page-margin>
+         <spaces>small</spaces>
+         <header>shortheader</header>
+         <footer>longfooter</footer>
+         <look-and-feel>fashion</look-and-feel>
+         <table-layout>simple</table-layout>
       </design>
    </meta>
    <chapter hyphenation="yes" chapterpage="no" id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
@@ -153,137 +160,119 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
             <block>
                <p>Die Regelbasis der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
                <p>Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="4e789913-7860-4c4e-b618-01dced6b6b2ed6e8">
-                  <content>
-                     <title>
-                        <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
-                     </title>
-                     <p>Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei Saxon diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
-                     <p>Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="5f870821-8ca8-44f0-b676-57793dedc2c6d6e15">
-                  <content>
-                     <title>
-                        <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
-                     </title>
-                     <p>Match-Regeln werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:</p>
-                     <procedure type="ol">
-                        <step>
-                           <action>
-                              <p>Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p>
-                           </action>
-                        </step>
-                        <step>
-                           <action>
-                              <p>Templates mit einem höheren Priority Attribut haben Vorrang.</p>
-                           </action>
-                        </step>
-                        <step>
-                           <action>
-                              <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</p>
-                           </action>
-                        </step>
-                        <step>
-                           <action>
-                              <p>Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p>
-                              <ul>
-                                 <li>
-                                    <p>Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</p>
-                                 </li>
-                                 <li>
-                                    <p>Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</p>
-                                 </li>
-                                 <li>
-                                    <p>Einfache Elementnamen (z.B. "para") haben Prio 0.</p>
-                                 </li>
-                                 <li>
-                                    <p>Wildcards (z.B. *, @*) haben Priorität -0.25</p>
-                                 </li>
-                                 <li>
-                                    <p>Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</p>
-                                 </li>
-                                 <li>
-                                    <p>In allen anderen Fällen ist die Prio 0.5.</p>
-                                 </li>
-                              </ul>
-                              <p>Beispiele:</p>
-                              <ul>
-                                 <li>
-                                    <p>para -&gt; 0</p>
-                                 </li>
-                                 <li>
-                                    <p>h:* -&gt; -0.25</p>
-                                 </li>
-                                 <li>
-                                    <p>* -&gt; -0.25</p>
-                                 </li>
-                                 <li>
-                                    <p>node() -&gt; -0.25</p>
-                                 </li>
-                                 <li>
-                                    <p>contents/para -&gt; 0.5</p>
-                                 </li>
-                                 <li>
-                                    <p>contents/* -&gt; 0.5</p>
-                                 </li>
-                              </ul>
-                           </action>
-                        </step>
-                        <step>
-                           <action>
-                              <p>Mit einer Kommandozeilen-Option kann bei Saxon festgelegt werden, dass die Transformation abbricht, sobald es einen Konflikt bei der Regelauswertung gibt.</p>
-                           </action>
-                        </step>
-                     </procedure>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="ea722739-d975-4b73-b56c-f72818cd84c4d6e76">
-                  <content>
-                     <title>
-                        <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
-                     </title>
-                     <p>Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel einzubinden, bspw:</p>
-                     <verbatim>&lt;xsl:template match="*" mode="#all"/&gt;</verbatim>
-                     <p>Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.</p>
-                     <p>Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p>
-                     <p>Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer XML-2-XML Migration automatisch Knoten im XML Baum abgetrennt werden sollen, für die keine Match-Regel existiert.</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="c5374863-4a57-4e82-bd14-1ba9cbc97c0fd6e89">
-                  <content>
-                     <title>
-                        <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
-                     </title>
-                     <p>Wie oben schon verdeutlicht werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
+               <title>
+                  <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
+               </title>
+               <p>Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei Saxon diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
+               <p>Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.</p>
+               <title>
+                  <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
+               </title>
+               <p>Match-Regeln werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:</p>
+               <procedure type="ol">
+                  <step>
+                     <action>
+                        <p>Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Templates mit einem höheren Priority Attribut haben Vorrang.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p>
+                        <ul>
+                           <li>
+                              <p>Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</p>
+                           </li>
+                           <li>
+                              <p>Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</p>
+                           </li>
+                           <li>
+                              <p>Einfache Elementnamen (z.B. "para") haben Prio 0.</p>
+                           </li>
+                           <li>
+                              <p>Wildcards (z.B. *, @*) haben Priorität -0.25</p>
+                           </li>
+                           <li>
+                              <p>Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</p>
+                           </li>
+                           <li>
+                              <p>In allen anderen Fällen ist die Prio 0.5.</p>
+                           </li>
+                        </ul>
+                        <p>Beispiele:</p>
+                        <ul>
+                           <li>
+                              <p>para -&gt; 0</p>
+                           </li>
+                           <li>
+                              <p>h:* -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>* -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>node() -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>contents/para -&gt; 0.5</p>
+                           </li>
+                           <li>
+                              <p>contents/* -&gt; 0.5</p>
+                           </li>
+                        </ul>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Mit einer Kommandozeilen-Option kann bei Saxon festgelegt werden, dass die Transformation abbricht, sobald es einen Konflikt bei der Regelauswertung gibt.</p>
+                     </action>
+                  </step>
+               </procedure>
+               <title>
+                  <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
+               </title>
+               <p>Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel einzubinden, bspw:</p>
+               <verbatim>&lt;xsl:template match="*" mode="#all"/&gt;</verbatim>
+               <p>Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.</p>
+               <p>Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p>
+               <p>Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer XML-2-XML Migration automatisch Knoten im XML Baum abgetrennt werden sollen, für die keine Match-Regel existiert.</p>
+               <title>
+                  <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
+               </title>
+               <p>Wie oben schon verdeutlicht werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
+               <ul>
+                  <li>
+                     <p>Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</p>
+                  </li>
+                  <li>
+                     <p>Dabei sollen Seminar-Elemente markiert werden, die nicht besonderen Bedingungen entsprechen:</p>
                      <ul>
                         <li>
-                           <p>Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</p>
+                           <p>Das Seminar-Element hat ein Feld "Ende-Datum" das abgelaufen ist.</p>
                         </li>
                         <li>
-                           <p>Dabei sollen Seminar-Elemente markiert werden, die nicht besonderen Bedingungen entsprechen:</p>
-                           <ul>
-                              <li>
-                                 <p>Das Seminar-Element hat ein Feld "Ende-Datum" das abgelaufen ist.</p>
-                              </li>
-                              <li>
-                                 <p>Am Seminar-Element sind mehrere Dozenten angestellt, obwohl das Seminar-Element vom Type "Single" ist.</p>
-                              </li>
-                              <li>
-                                 <p>em Seminar-Element ist kein Dozent zugeordnet.</p>
-                              </li>
-                           </ul>
+                           <p>Am Seminar-Element sind mehrere Dozenten angestellt, obwohl das Seminar-Element vom Type "Single" ist.</p>
                         </li>
                         <li>
-                           <p>Sicherlich kann es Seminar-Elemente geben, die alle drei Bedingungen erfüllen. Um das Error-Log aber nicht zu überfüllen, sollen die Filter nach ihren Prioritäten ausgeführt werden.</p>
+                           <p>em Seminar-Element ist kein Dozent zugeordnet.</p>
                         </li>
                      </ul>
-                     <p>In Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
-                     <verbatim>&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
+                  </li>
+                  <li>
+                     <p>Sicherlich kann es Seminar-Elemente geben, die alle drei Bedingungen erfüllen. Um das Error-Log aber nicht zu überfüllen, sollen die Filter nach ihren Prioritäten ausgeführt werden.</p>
+                  </li>
+               </ul>
+               <p>In Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
+               <verbatim>&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
               priority="30" mode="filter-network"&gt; 
   &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
     &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
@@ -305,19 +294,14 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
   &lt;/xsl:element&gt; 
 &lt;/xsl:template&gt;</verbatim>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="8b11fd3b-f9f9-446d-a9a5-a799dc909169d6e118">
-                  <content>
-                     <title>
-                        <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
-                     </title>
-                     <p>An allen Templates hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                                 id="5c94c28f-26eb-4c44-88ca-72a736b38ea1">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
-                     <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
-                     <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
-                     <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
+               <title>
+                  <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
+               </title>
+               <p>An allen Templates hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
+                           id="5c94c28f-26eb-4c44-88ca-72a736b38ea1">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+               <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
+               <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
+               <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
   &lt;div class="toc-entry"&gt;
     &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
   &lt;/div&gt;
@@ -328,14 +312,12 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;xsl:apply-templates/&gt;
   &lt;/h1&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
-                     <verbatim>&lt;xsl:for-each select="chapter"&gt;
+               <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
+               <verbatim>&lt;xsl:for-each select="chapter"&gt;
   &lt;xsl:apply-templates select="title" mode="toc"&gt;
 &lt;/xsl:for-each&gt;</verbatim>
-                     <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
-                     <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
-                  </content>
-               </chapter>
+               <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
+               <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
             </block>
          </content>
       </chapter>
@@ -358,15 +340,12 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
             </title>
             <block>
                <p>Einige Beispiele - aktuell und aus vergangenen Tagen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="4bf2b25f-e483-4835-b734-2668331d5b0bd6e6">
-                  <content>
-                     <title>
-                        <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
-                     </title>
-                     <p>Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre.Ich denke, u.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
-                     <p>Betrachten wir das folgende einfache XML Beispiel:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+               <title>
+                  <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
+               </title>
+               <p>Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre.Ich denke, u.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
+               <p>Betrachten wir das folgende einfache XML Beispiel:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;document&gt;
 &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
   &lt;chapter&gt;
@@ -380,15 +359,15 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;content&gt;Im Prinzip ist es ganz einfach.&lt;/content&gt;
   &lt;/chapter&gt;
 &lt;/document&gt;</verbatim>
-                     <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen.Fügt man eine Processing Instruction[[fn:https://de.wikipedia.org/wiki/Verarbeitungsanweisung]] am Anfang ein, wird ein XSLT Stylesheet vom Browser herangezogen und vor der Darstellung im Browser wird die so deklarierte XML Transformation ausgeführt:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+               <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen.Fügt man eine Processing Instruction[[fn:https://de.wikipedia.org/wiki/Verarbeitungsanweisung]] am Anfang ein, wird ein XSLT Stylesheet vom Browser herangezogen und vor der Darstellung im Browser wird die so deklarierte XML Transformation ausgeführt:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="formatiermich.xsl" ?&gt;
 &lt;document&gt;
   &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
   &lt;chapter&gt;
 [...]</verbatim>
-                     <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
-                     <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+               <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
+               <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
 &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
 
   &lt;xsl:template match="/"&gt;
@@ -432,19 +411,14 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;
 </verbatim>
-                     <p>Die Processing Instruction hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="0a5be3cb-7fee-4448-8eaa-33cec9c28221d6e25">
-                  <content>
-                     <title>
-                        <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
-                     </title>
-                     <p>Auch eine serverseitige Konvertierung ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol]] für unterschiedliche Handy-Modelle.</p>
-                     <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
-                     <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+               <p>Die Processing Instruction hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
+               <title>
+                  <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
+               </title>
+               <p>Auch eine serverseitige Konvertierung ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol]] für unterschiedliche Handy-Modelle.</p>
+               <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
+               <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wap.org/DTD/wml_1.1.xml"&gt;
 &lt;wml&gt;
   &lt;head&gt;
@@ -459,8 +433,8 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;p&gt;Im Prinzip ist es ganz einfach.&lt;/p&gt;
   &lt;/card&gt;
 &lt;/wml&gt;</verbatim>
-                     <p>Eine XSLT Transformation, die die XML Daten von oben in diese WML Darstellung überführt, könnte z.B. so implementiert werden:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+               <p>Eine XSLT Transformation, die die XML Daten von oben in diese WML Darstellung überführt, könnte z.B. so implementiert werden:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
   &lt;xsl:output
@@ -509,26 +483,16 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</verbatim>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="d30a54b4-a08c-40b9-b701-91be5bb340cdd6e40">
-                  <content>
-                     <title>
-                        <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
-                     </title>
-                     <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB[[fn:https://de.wikipedia.org/wiki/EPUB]] ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
-                     <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM[[fn:https://de.wikipedia.org/wiki/CHM_(Dateiformat)]], EclipseHelp[[fn:https://www.ibm.com/developerworks/library/os-echelp/index.html]], JavaHelp[[fn:https://en.wikipedia.org/wiki/JavaHelp]], ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker[[fn:https://de.wikipedia.org/wiki/FrameMaker]],  oder XML Standard Austauschformate, wie DITA, S1000D[[fn:https://de.wikipedia.org/wiki/S1000D]], PI-MOD[[fn:https://www.i4icm.de/forschungstransfer/pi-mod/]], JATS[[fn:https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite]] oder TEI[[fn:https://de.wikipedia.org/wiki/Text_Encoding_Initiative]].</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="7c613c35-961e-46a6-af57-6778858a71bcd6e47">
-                  <content>
-                     <title>
-                        <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
-                     </title>
-                     <p>Kryptische XML Log-, Daten- oder Konfigurationsfiles können leicht mit XSLT menschenlesbar formatiert werden&#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;?&lt;?xml-stylesheet type="text/xsl" href="de.xsl"?&gt;
+               <title>
+                  <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
+               </title>
+               <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB[[fn:https://de.wikipedia.org/wiki/EPUB]] ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
+               <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM[[fn:https://de.wikipedia.org/wiki/CHM_(Dateiformat)]], EclipseHelp[[fn:https://www.ibm.com/developerworks/library/os-echelp/index.html]], JavaHelp[[fn:https://en.wikipedia.org/wiki/JavaHelp]], ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker[[fn:https://de.wikipedia.org/wiki/FrameMaker]],  oder XML Standard Austauschformate, wie DITA, S1000D[[fn:https://de.wikipedia.org/wiki/S1000D]], PI-MOD[[fn:https://www.i4icm.de/forschungstransfer/pi-mod/]], JATS[[fn:https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite]] oder TEI[[fn:https://de.wikipedia.org/wiki/Text_Encoding_Initiative]].</p>
+               <title>
+                  <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
+               </title>
+               <p>Kryptische XML Log-, Daten- oder Konfigurationsfiles können leicht mit XSLT menschenlesbar formatiert werden&#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;?&lt;?xml-stylesheet type="text/xsl" href="de.xsl"?&gt;
 &lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
   xmlns:jcr="http://www.jcp.org/jcr/1.0" 
   xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
@@ -552,8 +516,8 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     jcr:primaryType="sling:MessageEntry"
     sling:message="Hinweis"/&gt;
   [...]</verbatim>
-                     <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+               <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
 &lt;xsl:stylesheet version="1.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:jcr="http://www.jcp.org/jcr/1.0"
@@ -581,18 +545,13 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;/tr&gt;
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</verbatim>
-                     <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="e2d39407-3980-4050-86fa-aa653f737cd2d6e60">
-                  <content>
-                     <title>
-                        <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
-                     </title>
-                     <p>Nachdem eine SVG Grafik im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden.&#8232;Über das HTML5 &lt;svg&gt; Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
-                     <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+               <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
+               <title>
+                  <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
+               </title>
+               <p>Nachdem eine SVG Grafik im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden.&#8232;Über das HTML5 &lt;svg&gt; Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
+               <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
+               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="chart.xsl" ?&gt;
 &lt;document&gt;
   &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
@@ -611,28 +570,26 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
     &lt;block/&gt;
   &lt;/chapter&gt;
 &lt;/document&gt;</verbatim>
-                     <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
-                     <verbatim>&lt;xsl:template match="block"&gt;
+               <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
+               <verbatim>&lt;xsl:template match="block"&gt;
    &lt;svg style="background-color:yellow" width="30" height="30" 
      xmlns:xlink="http://www.w3.org/1999/xlink" 
      xmlns="http://www.w3.org/2000/svg"/&gt;
   &lt;br/&gt;
   &lt;br/&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
-                     <p>
-                        <b>Weiterführende Links:</b>
-                     </p>
-                     <ul>
-                        <li>
-                           <p>Client-side image generation with SVG and XSLT[[fn:http://surguy.net/articles/client-side-svg.xml]]</p>
-                        </li>
-                        <li>
-                           <p>Knotentyp Visualisierung im Apache Jack Rabbit Projekt[[fn:http://jackrabbit.apache.org/jcr/node-type-visualization.html]]</p>
-                        </li>
-                     </ul>
-                  </content>
-               </chapter>
+               <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
+               <p>
+                  <b>Weiterführende Links:</b>
+               </p>
+               <ul>
+                  <li>
+                     <p>Client-side image generation with SVG and XSLT[[fn:http://surguy.net/articles/client-side-svg.xml]]</p>
+                  </li>
+                  <li>
+                     <p>Knotentyp Visualisierung im Apache Jack Rabbit Projekt[[fn:http://jackrabbit.apache.org/jcr/node-type-visualization.html]]</p>
+                  </li>
+               </ul>
             </block>
          </content>
       </chapter>
@@ -644,23 +601,20 @@ www.github.com/alexdd/XSLT-Buch</cover-text>
             </title>
             <block>
                <p>Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="0010aab5-f425-4968-bf0b-f22bc59159b1d6e6">
-                  <content>
-                     <title>
-                        <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
-                     </title>
-                     <p>Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD oder TEI.
+               <title>
+                  <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
+               </title>
+               <p>Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD oder TEI.
 Vorteile:</p>
-                     <ul>
-                        <li>
-                           <p>Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</p>
-                        </li>
-                        <li>
-                           <p>Strikte Trennung von Content ( / Semantik) und Layout/Design.</p>
-                        </li>
-                        <li>
-                           <p>Auf der XML Quelle sind XML Features möglich, wie:
+               <ul>
+                  <li>
+                     <p>Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</p>
+                  </li>
+                  <li>
+                     <p>Strikte Trennung von Content ( / Semantik) und Layout/Design.</p>
+                  </li>
+                  <li>
+                     <p>Auf der XML Quelle sind XML Features möglich, wie:
 	
 		Modularisierung: Erlaubt die fein-granulare Wiederverwendung von Content-Bausteinen, sowie das Verlinken, Filtern, Suchen und Exportieren derselben.
 		Generalisierung ist ein DITA Konzept, welches die Wiederverendung von angepassten Topics in anderen DITA Systemen ermöglicht.
@@ -670,50 +624,38 @@ Vorteile:</p>
 		Automatischer Satz, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
 	
 	</p>
-                        </li>
-                        <li>
-                           <p>Veraltete Formate können ausgetauscht werden, ohne dass der Content geändert werden muss oder verlorengeht.</p>
-                        </li>
-                        <li>
-                           <p>Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</p>
-                        </li>
-                        <li>
-                           <p>Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</p>
-                        </li>
-                        <li>
-                           <p>Nur das XML muss in der Datenhaltung persistiert werden</p>
-                        </li>
-                        <li>
-                           <p>Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
-                        </li>
-                     </ul>
-                     <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die Single-Source-Multi-Channel Strategie.</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="ddc898c3-a0c6-45e4-8470-f04e3ccb9603d6e38">
-                  <content>
-                     <title>
-                        <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
-                     </title>
-                     <p>Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.</p>
-                     <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>[[fn:http://argouml.tigris.org]].</p>
-                     <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) :
+                  </li>
+                  <li>
+                     <p>Veraltete Formate können ausgetauscht werden, ohne dass der Content geändert werden muss oder verlorengeht.</p>
+                  </li>
+                  <li>
+                     <p>Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</p>
+                  </li>
+                  <li>
+                     <p>Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</p>
+                  </li>
+                  <li>
+                     <p>Nur das XML muss in der Datenhaltung persistiert werden</p>
+                  </li>
+                  <li>
+                     <p>Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
+                  </li>
+               </ul>
+               <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die Single-Source-Multi-Channel Strategie.</p>
+               <title>
+                  <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
+               </title>
+               <p>Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.</p>
+               <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>[[fn:http://argouml.tigris.org]].</p>
+               <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) :
 <b>Butterfly Code Generator</b>[[fn:http://butterflycode.sourceforge.net]]</p>
-                     <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal[[fn:https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html]].</p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="30786084-ece7-4b45-a77b-88512e4fe461d6e55">
-                  <content>
-                     <title>
-                        <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
-                     </title>
-                     <p>Für jede erdenkliche Art der Migration eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen und komplexen Transformation an.</p>
-                     <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
+               <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal[[fn:https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html]].</p>
+               <title>
+                  <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
+               </title>
+               <p>Für jede erdenkliche Art der Migration eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen und komplexen Transformation an.</p>
+               <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
 Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option[[fn:http://www.saxonica.com/html/documentation/sourcedocs/streaming/]].</p>
-                  </content>
-               </chapter>
             </block>
          </content>
       </chapter>
@@ -877,64 +819,56 @@ try {
                <p>Schema Dateien können aber auch in XML Editoren eingebunden werden, um schon während der Eingabe der XML Instanz die Korrektheit zu überprüfen. </p>
                <p>Das geht einerseits über die Angabe des Doctypes in der XML Instanz, anderseits bieten auch alle Editoren die Möglichkeit ein bestimmtes Schema explizit auszuwählen, um gegen dieses auf Anforderung zu validieren.</p>
                <p>Gilt es komplexere Businessregeln zu überprüfen, die über Syntax-, Konsistenz- und einfache Korrektheitschecks hinausgehen, empfiehlt sich eine Validierung mit Schematron Regeln.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="ac6fc705-65f7-4476-b83d-78df36629ccad6e14">
-                  <content>
-                     <title>
-                        <title id="c802dd14-5953-4c24-8637-f7552d107e57d6e13">Schematron ist XSLT</title>
-                     </title>
-                     <p>Bei einer Schematron Validierung wird eine XML Instanz mit Hilfe eines automatisch generierten XSLT Stylesheets überprüft. Dieses kontextabhängige Stylesheet wird aus einer in der Schematron Syntax vom Autor verfassten Regelbasis, die wiederum in XML vorliegt, über ein zweites XSLT Stylesheet generiert - Dieses zweite XSLT Stylesheet ist sozusagen das eigentliche Schematron Programm. </p>
-                     <p>Das folgende Diagramm veranschaulicht die Vorgehensweise anhand eines Filter-Szenarios, bei dem ein XML Dokument mit einigen ungültigen Passagen in eine gefilterte Darstellung überführt wird.</p>
-                     <figure pdfwidth="page">
-                        <subtitle>Schematron Validierung mit Filter</subtitle>
-                        <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
-                     </figure>
-                     <p>Zu finden ist das Schematron Programm auf Github: https://github.com/Schematron/schematron. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
-                     </p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="5bb03dd6-9311-4d44-822f-d819372c5e67d6e30">
-                  <content>
-                     <title>
-                        <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
-                     </title>
-                     <p>Um die Schematron XSLT Skripte in eine eigene XSLT Anwendung per Kommandozeile einzubinden, könnte man folgendermassen vorgehen: </p>
-                     <ul>
-                        <li>
-                           <p>Im eigenen GIT Projekt das Schematron Projekt als Submodule referenzieren.</p>
-                        </li>
-                        <li>
-                           <p>Eine Regelbasis anlegen, beispielsweise <b>$project_name.sch</b>.</p>
-                        </li>
-                        <li>
-                           <p>Zwei Batch-Skripte anlegen, beispielsweise <b>generate_schema.sh</b> und <b>validate.sh</b>.</p>
-                        </li>
-                     </ul>
-                     <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
-                     <verbatim>saxon $script_dir/$project_name_validation.sch $script_dir/schematron/iso_dsdl_include.xsl
+               <title>
+                  <title id="c802dd14-5953-4c24-8637-f7552d107e57d6e13">Schematron ist XSLT</title>
+               </title>
+               <p>Bei einer Schematron Validierung wird eine XML Instanz mit Hilfe eines automatisch generierten XSLT Stylesheets überprüft. Dieses kontextabhängige Stylesheet wird aus einer in der Schematron Syntax vom Autor verfassten Regelbasis, die wiederum in XML vorliegt, über ein zweites XSLT Stylesheet generiert - Dieses zweite XSLT Stylesheet ist sozusagen das eigentliche Schematron Programm. </p>
+               <p>Das folgende Diagramm veranschaulicht die Vorgehensweise anhand eines Filter-Szenarios, bei dem ein XML Dokument mit einigen ungültigen Passagen in eine gefilterte Darstellung überführt wird.</p>
+               <figure pdfwidth="page">
+                  <subtitle>Schematron Validierung mit Filter</subtitle>
+                  <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
+               </figure>
+               <p>Zu finden ist das Schematron Programm auf Github: https://github.com/Schematron/schematron. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
+               </p>
+               <title>
+                  <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
+               </title>
+               <p>Um die Schematron XSLT Skripte in eine eigene XSLT Anwendung per Kommandozeile einzubinden, könnte man folgendermassen vorgehen: </p>
+               <ul>
+                  <li>
+                     <p>Im eigenen GIT Projekt das Schematron Projekt als Submodule referenzieren.</p>
+                  </li>
+                  <li>
+                     <p>Eine Regelbasis anlegen, beispielsweise <b>$project_name.sch</b>.</p>
+                  </li>
+                  <li>
+                     <p>Zwei Batch-Skripte anlegen, beispielsweise <b>generate_schema.sh</b> und <b>validate.sh</b>.</p>
+                  </li>
+               </ul>
+               <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
+               <verbatim>saxon $script_dir/$project_name_validation.sch $script_dir/schematron/iso_dsdl_include.xsl
  | \ saxon -s:- $script_dir/schematron/iso_abstract_expand.xsl | \
 saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
   <b>generate-fired-rule</b>=false &gt; $script_dir/$project_name_validation.xsl</verbatim>
-                     <p>Der Prozess zum Erzeugen des projektspezifischen Validerungs-XSLT-Skripts ist dreistufig und wird über die folgenden XSLT Schritte abgearbeitet.</p>
-                     <ul>
-                        <li>
-                           <p>iso_dsdl_include.xsl</p>
-                        </li>
-                        <li>
-                           <p>iso_abstract_expand.xsl</p>
-                        </li>
-                        <li>
-                           <p>iso_svrl_for_xslt2.xsl</p>
-                        </li>
-                     </ul>
-                     <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <b>$project_name_validation.xsl.</b>
-                     </p>
-                     <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
-                     <verbatim>saxon $xml_instance_to_check.xml $script_dir/$project_name_validation.xsl \
+               <p>Der Prozess zum Erzeugen des projektspezifischen Validerungs-XSLT-Skripts ist dreistufig und wird über die folgenden XSLT Schritte abgearbeitet.</p>
+               <ul>
+                  <li>
+                     <p>iso_dsdl_include.xsl</p>
+                  </li>
+                  <li>
+                     <p>iso_abstract_expand.xsl</p>
+                  </li>
+                  <li>
+                     <p>iso_svrl_for_xslt2.xsl</p>
+                  </li>
+               </ul>
+               <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <b>$project_name_validation.xsl.</b>
+               </p>
+               <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
+               <verbatim>saxon $xml_instance_to_check.xml $script_dir/$project_name_validation.xsl \
   &gt; $validation-result.xml</verbatim>
-                     <p>Die Ausgabe dieses Prüfprozesses ist eine XML Datei mit den Fehlern in der Eingabe-XML-Instanz, die weiterverarbeitet werden kann, beispielsweise als Filterkriterium für einen nachfolgenden Prozessschritt. Ihr Inhalt dieser Datei sieht z.B. wie folgt aus:</p>
-                     <verbatim>&lt;svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" [...]
+               <p>Die Ausgabe dieses Prüfprozesses ist eine XML Datei mit den Fehlern in der Eingabe-XML-Instanz, die weiterverarbeitet werden kann, beispielsweise als Filterkriterium für einen nachfolgenden Prozessschritt. Ihr Inhalt dieser Datei sieht z.B. wie folgt aus:</p>
+               <verbatim>&lt;svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" [...]
   &lt;svrl:active-pattern document="file:/Users/alex/xml_instance_to_check.xml" 
    id="default" name="default"/&gt;
   &lt;svrl:failed-assert test="count(key('unique-ids', current()))=1"&gt;
@@ -944,9 +878,9 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
     &lt;/svrl:diagnostic-reference&gt;
   &lt;/svrl:failed-assert&gt;
   [...]</verbatim>
-                     <p>Neben den <b>svrl:failed-assert</b> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <b>svrl:successful-report</b>.</p>
-                     <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
-                     <verbatim>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
+               <p>Neben den <b>svrl:failed-assert</b> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <b>svrl:successful-report</b>.</p>
+               <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
+               <verbatim>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
   &lt;xsl:key name="unique-ids" match="bk:id" use="."/&gt;
   &lt;sch:let name="date-regex" value="'^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])
                                      -(0[1-9]|[12][0-9]|3[01])$'"/&gt;
@@ -966,9 +900,7 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
       &lt;/xsl:element&gt;
     &lt;/sch:diagnostic&gt;
   &lt;/sch:diagnostics&gt;</verbatim>
-                     <p>Neben der "successful" und "failed" Regeln ist auch die Deklaration von Funktionen und Variablen im Body der Regelbasis erlaubt. Dies ermöglicht komplexe Bedingungen, bespw. durch das Nachschlagen in einer Lookup-Tabelle abzuprüfen. </p>
-                  </content>
-               </chapter>
+               <p>Neben der "successful" und "failed" Regeln ist auch die Deklaration von Funktionen und Variablen im Body der Regelbasis erlaubt. Dies ermöglicht komplexe Bedingungen, bespw. durch das Nachschlagen in einer Lookup-Tabelle abzuprüfen. </p>
             </block>
          </content>
       </chapter>
@@ -981,19 +913,16 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
             <block>
                <p>Mit XSLT kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
                <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="2840fc03-3cdf-4021-93af-6642965cc464d6e8">
-                  <content>
-                     <title>
-                        <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
-                     </title>
-                     <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
-                     <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
-                     <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
-                     <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                                 id="526af7fd-dedd-47a5-a1f6-19574084a5ee">Eindeutigkeit der Regelbasis</doclink> .</p>
-                     <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
-                     <verbatim>&lt;xsl:choose&gt;
+               <title>
+                  <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
+               </title>
+               <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
+               <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
+               <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
+               <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
+                           id="526af7fd-dedd-47a5-a1f6-19574084a5ee">Eindeutigkeit der Regelbasis</doclink> .</p>
+               <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
+               <verbatim>&lt;xsl:choose&gt;
     &lt;xsl:when test="$myParameter='this_option'"&gt;
         &lt;!-- do this --&gt;
     &lt;/xsl:when&gt;
@@ -1002,27 +931,25 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
     &lt;/xsl:when&gt;
         [...]
 &lt;/xsl:choose&gt;</verbatim>
-                     <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung" überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
-                     <verbatim>&lt;xsl:template name="render-header"&gt;
+               <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung" überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
+               <verbatim>&lt;xsl:template name="render-header"&gt;
     &lt;!-- print logo on the left side spanning two rows--&gt;
     &lt;!-- print some metadata right side first row --&gt;
     &lt;!-- print a running header right side second row --&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
-                     <verbatim>&lt;xsl:choose&gt;
+               <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
+               <verbatim>&lt;xsl:choose&gt;
 &lt;xsl:template name="render-header"&gt;
     &lt;!-- print a running header on left side --&gt;
     &lt;!-- print logo on right side --&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates" ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
-                     <verbatim>&lt;xsl:variable name="margin-width"&gt;
+               <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates" ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
+               <verbatim>&lt;xsl:variable name="margin-width"&gt;
     &lt;xsl:call-template name="get-margin-width"/&gt;
 &lt;/xsl:variable&gt;</verbatim>
-                     <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
-                     <verbatim>width="{$margin-width}"</verbatim>
-                     <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
-                  </content>
-               </chapter>
+               <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
+               <verbatim>width="{$margin-width}"</verbatim>
+               <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
             </block>
          </content>
       </chapter>
@@ -1044,26 +971,6 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR[[https://en.wikipedia.org/wiki/FLWOR]] Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions[[fn:http://cs.au.dk/~amoeller/XML/querying/flwrexp.html]] können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
             </block>
          </content>
-         <chapter hyphenation="yes" chapterpage="no" id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
-                  ismodule="no">
-            <content>
-               <title>
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
-               </title>
-               <block>
-                  <p>Marklogic bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren. Komfortabler arbeitet man aber mit einem Oxygen-Connector. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
-                  <figure pdfwidth="page">
-                     <subtitle>Data Source Explorer im Oxygen XML Editor öffnen</subtitle>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/data-source-explorer.png"/>
-                  </figure>
-                  <p>und konfiguriert eine neue Datenquelle:</p>
-                  <figure pdfwidth="page">
-                     <subtitle>Neue Datenquelle im Oxygen XML Editor konfigurieren</subtitle>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/new_data-source.png"/>
-                  </figure>
-               </block>
-            </content>
-         </chapter>
       </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
@@ -1157,102 +1064,87 @@ git log --diff-filter=D --summary</verbatim>
             <block>
                <p>Der XSLT Styesheet-Entwickler wird sich  gewöhnlich mit Eingabedaten beschäftigen, die entweder automatisch mittels irgendeines Prozesses erzeugt wurden, oder die durch einen menschlichen Autor mit einem XML Editor eingegeben wurden.</p>
                <p>Aus diesem Grund ist es ganz nützlich, die wichtigsten Editoren zu kennen. Wir unterscheiden zwischen Desktopapplikationen und Webanwendungen. Ausserdem unterscheiden wir noch ob der Editor WYSIWIG (<b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>I</b>s <b>W</b>hat <b>Y</b>ou <b>G</b>et) oder WYSIWYM (<b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>I</b>s <b>W</b>hat <b>Y</b>ou <b>M</b>ean) unterstützt oder eine Mischung aus beidem darstellt.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="498cf31b-9271-4bd5-99c3-267338011c2bd6e52">
-                  <content>
-                     <title>
-                        <title id="346853d6-4d45-42f4-a7b8-77af38d96151d6e9">WYSIWYM Desktop</title>
-                     </title>
-                     <table type="dl">
-                        <tgroup>
-                           <colspec colwidth="100"/>
-                           <colspec colwidth="300"/>
-                           <tbody>
-                              <row>
-                                 <entry>
-                                    <b>Editor</b>
-                                 </entry>
-                                 <entry>
-                                    <b>Beschreibung</b>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>XMetal[[fn:XM;https://xmetal.com/]]</entry>
-                                 <entry>
-                                    <p>XMetal ist wahrscheinlich der am weitesten verbreitete reine WYSIWYM Editor. Er hat Schnittstellen zu COM und Java und kann daher in eigene CMS integriert werden.</p>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>Arbortext XML Editor[[fn:EP;https://www.ptc.com/en/products/service-lifecycle-management/arbortext/editor]]</entry>
-                                 <entry>
-                                    <p>Arbortext XML Editor, früher bekannt als EPIC ist sehr betagt. Ich hatte damit im Bereich Luftfahrt/Verteidigung zu tun. Bekanntermassen ist sein Tabelleneditor etwas buggy.</p>
-                                 </entry>
-                              </row>
-                           </tbody>
-                        </tgroup>
-                     </table>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="bedf667b-7726-4999-881b-891f147ff923d6e73">
-                  <content>
-                     <title>
-                        <title id="4c42f7f1-6d2a-482d-8d84-2c500fb35927d6e74">WYSIWYG Desktop</title>
-                     </title>
-                     <p>XMetal kann so konfiguriert werden, dass bei einer einfachen DTD der Content Bereich wie Word aussieht. Auch Code Editoren, wie OxygenXML bieten diese Möglichkeit. Das Key-Handling bei dieser Variante zeigt aber schnell, dass die UX noch weit von herkömmlichen Textverarbeitungssystem, wie Word oder OpenOffice entfernt ist.  </p>
-                  </content>
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="eea96007-349a-4143-b26d-aea0617aa994d6e78">
-                  <content>
-                     <title>
-                        <title id="092992f0-ac89-4bd8-bba5-a1d685135135d6e79">WYSIWYM Online</title>
-                     </title>
-                     <table type="dl">
-                        <tgroup>
-                           <colspec colwidth="100"/>
-                           <colspec colwidth="300"/>
-                           <tbody>
-                              <row>
-                                 <entry>
-                                    <b>Editor</b>
-                                 </entry>
-                                 <entry>
-                                    <b>Beschreibung</b>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>Oxygen XML WebAuthor[[fn:OX;https://www.oxygenxml.com/oxygen-xml-web-author/app/oxygen.html]]</entry>
-                                 <entry>
-                                    <p>Dieser Online-Editor verwendet auf der Serverseite dieselbe Logik, wie das Desktop Programm des Herstellers. Das führt dazu, dass bei jedem Tastendruck eine Verbindung zum Server aufgebaut wird, und die Verarbeitung langsam werden kann. Zum Betrieb und bzgl. Customizing ist einschlägiges Java-Know-How erforderlich.</p>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>FontoXML[[fn:FX;https://www.fontoxml.com/]]</entry>
-                                 <entry>
-                                    <p>FontoXML sieht schon fast aus wie Word. Neben der WYSWYG/M Darstellung, kann auch die XML Struktur in einem Seitenpanel angezeigt werden.</p>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>XEditor[[fn:XE;http://www.xeditor.com/portal]]</entry>
-                                 <entry>
-                                    <p>Xeditor benutzt XSLT Transformationen, um aus der Eingabe die Editoransicht zu generieren. Beim Abspeichern wird der umgekehrte Weg bestritten. Das mag zwar auf den ersten Blick etwas holprig erscheinen, wie aber auch Tektur beweist, funktioniert das ganze recht gut und schnell.</p>
-                                 </entry>
-                              </row>
-                              <row>
-                                 <entry>Xopus[[fn:XO;http://xopusfiddle.net/VT7T/3/]]</entry>
-                                 <entry>
-                                    <p>Xopus ist wohl der älteste web-basierte XML Editor. Ich hatte damit schon 2008 zu tun, als er für ein Redaktionssystem evaluiert wurde. Wir haben uns dann für eine eigene nicht-generische Lösung basierend auf dem Webeditor CKEditor entschieden.</p>
-                                 </entry>
-                              </row>
-                           </tbody>
-                        </tgroup>
-                     </table>
-                     <p>Das Customizing dieser Editoren erfordert einen sehr hohen Aufwand. Es müssen diverse Ressourcen angepasst werden, wie XSLT Skripte, XSD Schemas, CSS und Javascript. Das Schema wird meist über Kommandozeilentools in eine JS Repräsentation überführt. </p>
-                     <p>Aus diesem Grund bieten einige Hersteller spezielle Schulungen an, wo man die Bedienung erlernen kann. Aus meiner Sicht ist das Problem "Webbasierter XML Editor" weltweit noch nicht ausreichend gelöst.</p>
-                     <p>Die Kosten für den Betrieb rangieren um die 1000 EUR monatl. für ein 20 Benutzer-Setup.</p>
-                  </content>
-               </chapter>
+               <title>
+                  <title id="346853d6-4d45-42f4-a7b8-77af38d96151d6e9">WYSIWYM Desktop</title>
+               </title>
+               <table type="dl">
+                  <tgroup>
+                     <colspec colwidth="100"/>
+                     <colspec colwidth="300"/>
+                     <tbody>
+                        <row>
+                           <entry>
+                              <b>Editor</b>
+                           </entry>
+                           <entry>
+                              <b>Beschreibung</b>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>XMetal[[fn:XM;https://xmetal.com/]]</entry>
+                           <entry>
+                              <p>XMetal ist wahrscheinlich der am weitesten verbreitete reine WYSIWYM Editor. Er hat Schnittstellen zu COM und Java und kann daher in eigene CMS integriert werden.</p>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>Arbortext XML Editor[[fn:EP;https://www.ptc.com/en/products/service-lifecycle-management/arbortext/editor]]</entry>
+                           <entry>
+                              <p>Arbortext XML Editor, früher bekannt als EPIC ist sehr betagt. Ich hatte damit im Bereich Luftfahrt/Verteidigung zu tun. Bekanntermassen ist sein Tabelleneditor etwas buggy.</p>
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+               <title>
+                  <title id="4c42f7f1-6d2a-482d-8d84-2c500fb35927d6e74">WYSIWYG Desktop</title>
+               </title>
+               <p>XMetal kann so konfiguriert werden, dass bei einer einfachen DTD der Content Bereich wie Word aussieht. Auch Code Editoren, wie OxygenXML bieten diese Möglichkeit. Das Key-Handling bei dieser Variante zeigt aber schnell, dass die UX noch weit von herkömmlichen Textverarbeitungssystem, wie Word oder OpenOffice entfernt ist.  </p>
+               <title>
+                  <title id="092992f0-ac89-4bd8-bba5-a1d685135135d6e79">WYSIWYM Online</title>
+               </title>
+               <table type="dl">
+                  <tgroup>
+                     <colspec colwidth="100"/>
+                     <colspec colwidth="300"/>
+                     <tbody>
+                        <row>
+                           <entry>
+                              <b>Editor</b>
+                           </entry>
+                           <entry>
+                              <b>Beschreibung</b>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>Oxygen XML WebAuthor[[fn:OX;https://www.oxygenxml.com/oxygen-xml-web-author/app/oxygen.html]]</entry>
+                           <entry>
+                              <p>Dieser Online-Editor verwendet auf der Serverseite dieselbe Logik, wie das Desktop Programm des Herstellers. Das führt dazu, dass bei jedem Tastendruck eine Verbindung zum Server aufgebaut wird, und die Verarbeitung langsam werden kann. Zum Betrieb und bzgl. Customizing ist einschlägiges Java-Know-How erforderlich.</p>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>FontoXML[[fn:FX;https://www.fontoxml.com/]]</entry>
+                           <entry>
+                              <p>FontoXML sieht schon fast aus wie Word. Neben der WYSWYG/M Darstellung, kann auch die XML Struktur in einem Seitenpanel angezeigt werden.</p>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>XEditor[[fn:XE;http://www.xeditor.com/portal]]</entry>
+                           <entry>
+                              <p>Xeditor benutzt XSLT Transformationen, um aus der Eingabe die Editoransicht zu generieren. Beim Abspeichern wird der umgekehrte Weg bestritten. Das mag zwar auf den ersten Blick etwas holprig erscheinen, wie aber auch Tektur beweist, funktioniert das ganze recht gut und schnell.</p>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>Xopus[[fn:XO;http://xopusfiddle.net/VT7T/3/]]</entry>
+                           <entry>
+                              <p>Xopus ist wohl der älteste web-basierte XML Editor. Ich hatte damit schon 2008 zu tun, als er für ein Redaktionssystem evaluiert wurde. Wir haben uns dann für eine eigene nicht-generische Lösung basierend auf dem Webeditor CKEditor entschieden.</p>
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+               <p>Das Customizing dieser Editoren erfordert einen sehr hohen Aufwand. Es müssen diverse Ressourcen angepasst werden, wie XSLT Skripte, XSD Schemas, CSS und Javascript. Das Schema wird meist über Kommandozeilentools in eine JS Repräsentation überführt. </p>
+               <p>Aus diesem Grund bieten einige Hersteller spezielle Schulungen an, wo man die Bedienung erlernen kann. Aus meiner Sicht ist das Problem "Webbasierter XML Editor" weltweit noch nicht ausreichend gelöst.</p>
+               <p>Die Kosten für den Betrieb rangieren um die 1000 EUR monatl. für ein 20 Benutzer-Setup.</p>
             </block>
          </content>
       </chapter>
