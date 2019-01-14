@@ -353,9 +353,9 @@
                   </span>
                </td>
             </tr>
-            <tr id="888d37da-0dbe-4fae-bec9-2ad1e99f7818" href="888d37da-0dbe-4fae-bec9-2ad1e99f7818/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
+            <tr class="chapter child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea ui-droppable selected" id="chapter_201901415474629964586866991" new-id="cc183707-5352-4c9c-9c31-68047a882d0f">             <td style="padding-left: 62px;">                <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.5.</span>                   <span class="header_text">                      <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="color: black;">Erste Schritte mit Xspec</a>                   </span>                </div>                <div class="editor_panel">                   <div class="editor_content"></div>                </div>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="show-topic" title="Show Topic" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="new" title="Add Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="delete" title="Delete Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="up" title="Move Topic Reference Up" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="down" title="Move Topic Reference Down" style="display: none;">                                   </span>             </td>          </tr><tr id="888d37da-0dbe-4fae-bec9-2ad1e99f7818" href="888d37da-0dbe-4fae-bec9-2ad1e99f7818/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
                <td style="padding-left: 62px;">
-                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.5.</span>
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.6.</span>
                      <span class="header_text">
                         <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Vererbung </a>
                      </span>
@@ -387,9 +387,9 @@
                   </span>
                </td>
             </tr>
-            <tr id="0846d6a2-6999-42ab-9e83-55bc197fc11c" href="0846d6a2-6999-42ab-9e83-55bc197fc11c/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized parent ui-droppable">
+            <tr id="0846d6a2-6999-42ab-9e83-55bc197fc11c" href="0846d6a2-6999-42ab-9e83-55bc197fc11c/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
                <td style="padding-left: 62px;">
-                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.6.</span>
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.7.</span>
                      <span class="header_text">
                         <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Abfragen mit XQuery</a>
                      </span>
@@ -421,7 +421,6 @@
                   </span>
                </td>
             </tr>
-            
             <tr id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" href="f606e9c6-3d46-48f3-8de4-46e13dc7d055/resource.xml" class="child-of-document-root chapter initialized parent ui-droppable">
                <td style="padding-left: 43px;">
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">4.</span>
@@ -431,27 +430,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
