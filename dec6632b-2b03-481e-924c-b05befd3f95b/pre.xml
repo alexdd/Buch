@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Jan 06 2019 00:06:46 </date-of-last-change>
+      <date-of-last-change>Tue Jan 15 2019 17:48:45 </date-of-last-change>
       <language>de-DE</language>
-      <status>18</status>
+      <status>21</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -1199,6 +1199,105 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
             
          
       </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="cc183707-5352-4c9c-9c31-68047a882d0f"
+               ismodule="no">
+         
+            <title>
+               <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
+            </title>
+            
+               <column-wide-element>
+            <p>XSpec ist ein <b>Test-Framework</b>
+               <footnote>
+                  <desc>https://github.com/xspec</desc>
+               </footnote> für XSLT, XQuery und Schematron. 
+Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b>Test-Szenario</b> 
+Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;test-szenario&gt;
+  &lt;testfall&gt;
+    &lt;personen&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Horst&lt;/vorname&gt;
+        &lt;<b>nachname</b>&gt;Schlämmer&lt;/<b>nachname</b>&gt;
+        &lt;gewicht&gt;100&lt;/gewicht&gt;
+      &lt;/person&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Gundula&lt;/vorname&gt;
+        &lt;<b>nachname</b>&gt;&lt;/<b>nachname</b>&gt;
+        &lt;gewicht&gt;60&lt;/gewicht&gt;
+      &lt;/person&gt;
+    &lt;/personen&gt;
+  &lt;/testfall&gt;
+&lt;/test-szenario&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>in einer XSpec Datei *. werden <b>Assert- und Not-Assert-Methoden</b> deklariert:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+               schematron="test.sch"&gt;
+  &lt;x:scenario label="ALL"&gt;
+    &lt;x:context href="test.xml"/&gt;
+    &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b>nachname</b>"/&gt;
+    &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b>nachname</b>"/&gt;
+  &lt;/x:scenario&gt;
+&lt;/x:description&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
+Testfalls positiv erfüllt ist. Beim Not-Assert ist das Gegenteil der Fall. Im obigen Beispiel
+reichen zwei Regeln, um den Testfall vollständig abzudecken.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Wenn man Schematron Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
+die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
+  &lt;sch:pattern id="main"&gt;
+    &lt;sch:rule context="<b>nachname</b>"&gt;
+      &lt;sch:assert id="person-nachname-rule" role="error" test="normalize-space(.)"&gt;
+        Der Nachname der Person mit ID: &lt;sch:value-of select="@id"/&gt; fehlt! 
+      &lt;/sch:assert&gt;
+    &lt;/sch:rule&gt;
+  &lt;/sch:pattern&gt;
+&lt;/sch:schema&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Hat sie keinen Nachnamen so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
+geschrieben. Diese Datei wertet nun Xspec aus.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <note>
+                  <consequence>
+                     <p>Erscheint ein Fehler (= das Feld <b>nachname</b> ist leer), so greift bei Xspec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p>
+                  </consequence>
+               </note>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Als Eselsbrücke kann man
+ein Assert in der Xspec Datei gleichsetzen mit <b>Appear</b> und ein Not-Assert mit
+<b>Not-Appear</b>. </p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ein Assert sichert also zu, dass sich ein Fehlerbericht in der
+Schematron Ergebnisdatei zum Testfall befindet. Ein Not-Assert sichert zu, dass
+sich kein Fehlerbericht befindet. </p>
+         </column-wide-element>
+               <column-wide-element>
+            <p> Wie man sich leicht vorstellen kann, sind Assert-Regeln in diesem Fall leicht zu finden,
+dazu muss man nur die Schematron Testregeln ins Leere zeigen lassen. Alles ist grün
+und alles ist gut - dem Augenschein nach.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
                ismodule="no">
          
@@ -1317,6 +1416,133 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
             <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<footnote>
                   <desc>http://cs.au.dk/~amoeller/XML/querying/flwrexp.html</desc>
                </footnote> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+               ismodule="no">
+         
+            <title>
+               <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming Beispiel</title>
+            </title>
+            
+               <column-wide-element>
+            <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <procedure type="ol">
+                  <step>
+                     <action>
+                        <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python sgmllib<footnote>
+                           <desc>https://docs.python.org/2/library/sgmllib.html</desc>
+                        </footnote>.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p>
+                     </action>
+                  </step>
+               </procedure>
+         </column-wide-element>
+               <column-wide-element>
+            <p>XSLT Streaming ist in der XSLT Version 3.0 neu hinzugekommen<footnote>
+                  <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html</desc>
+               </footnote> und in der
+kommerziellen Saxon-EE Löunsg implementiert<footnote>
+                  <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/</desc>
+               </footnote>.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird.
+Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten. Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.
+Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.
+“Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg, wie bspw. mit einem Apply-Templates Call.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
+in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:stylesheet version="3.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="#all"&gt;
+  
+  &lt;xsl:output method="xml" indent="yes"/&gt;
+  
+  &lt;xsl:mode on-no-match="shallow-copy" use-accumulators="entry-count" streamable="true"/&gt;
+  
+  &lt;xsl:accumulator name="entry-count" as="xs:integer" initial-value="0" 
+                   streamable="yes"&gt;
+    &lt;xsl:accumulator-rule match="entry" select="$value + 1"/&gt;
+  &lt;/xsl:accumulator&gt;
+  
+  &lt;xsl:template match="/"&gt;
+    &lt;result&gt;
+      &lt;xsl:apply-templates/&gt;
+      &lt;count&gt;
+        &lt;xsl:value-of select="accumulator-after('entry-count')"/&gt; 
+      &lt;/count&gt;
+    &lt;/result&gt;
+  &lt;/xsl:template&gt;
+  
+&lt;/xsl:stylesheet&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Diese Stylesheet hat einige Besonderheiten:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
+eine implizite Identity-Transformation (shallow-copy)<footnote>
+                  <desc>https://www.saxonica.com/html/documentation/xsl-elements/mode.html</desc>
+               </footnote>
+in die Ausgabeinstanz kopiert.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="node()|@*"
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="node()|@*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Zum anderen wird ein Akkumulator verwendet. Normalerweise gibt es in XSLT keine Variablen,
+sondern nur Konstanten, so wie das auch bei funktionalen Programmiersprachen der Fall ist.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
+an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
+würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
+wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
+bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur 
+späteren Auswertung bzw. Gruppierung der Key-Elemente.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
+Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
+wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
+einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
+Prozessor allerdings nicht akzeptiert.</p>
          </column-wide-element>
             
          

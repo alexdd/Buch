@@ -161,153 +161,108 @@
       </div>
       <div id="main">
          <div id="content-wrapper">
-            <div id="151a9719-a32a-4fca-a55c-769b47a73b34-target" class="chapter first" data-element-name="chapter">
-               <h2 id="" data-element-name="title"><span class="number">3.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+            <div id="cc183707-5352-4c9c-9c31-68047a882d0f-target" class="chapter first" data-element-name="chapter">
+               <h2 id="" data-element-name="title"><span class="number">3.5&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
                         
-                        <div class="title" data-tektur-reviewer-number="" id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8" data-element-name="title">Komplexe Anwendung</div>
+                        <div class="title" data-tektur-reviewer-number="" id="9b1e7086-25cc-4bdf-ba77-6adfb503603b" data-element-name="title">Erste Schritte mit Xspec</div>
                         </span></span></h2>
                <div class="margin">
-                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</div>
-               </div>
-               <div id="0010aab5-f425-4968-bf0b-f22bc59159b1d6e6-target" class="chapter" data-element-name="chapter">
-                  <h2 id="" data-element-name="title"><span class="number">3.2.1&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
-                           
-                           <div class="title" data-tektur-reviewer-number="" id="012db970-b72c-425a-a3ad-3e817e002282d6e7" data-element-name="title">Single Source Publishing</div>
-                           </span></span></h2>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub,
-                        ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD oder
-                        TEI.
-                        Vorteile:
-                     </div>
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">XSpec ist ein <b id="" data-element-name="b" data-is-inline-element="yes">Test-Framework</b>
+                     <a href="https://github.com/xspec" title="https://github.com/xspec" target="_blank">
+                        <sup id="" data-element-name="sup">↗↗</sup>
+                        </a> für XSLT, XQuery und Schematron. 
+                     Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b id="" data-element-name="b" data-is-inline-element="yes">Test-Szenario</b> 
+                     Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.
                   </div>
-                  <div class="margin">
-                     <ul id="" data-element-name="ul">
+               </div>
+               <div class="margin"><pre class="prettyprint">&lt;test-szenario&gt;
+  &lt;testfall&gt;
+    &lt;personen&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Horst&lt;/vorname&gt;
+        &lt;<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>&gt;Schlämmer&lt;/<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>&gt;
+        &lt;gewicht&gt;100&lt;/gewicht&gt;
+      &lt;/person&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Gundula&lt;/vorname&gt;
+        &lt;<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>&gt;&lt;/<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>&gt;
+        &lt;gewicht&gt;60&lt;/gewicht&gt;
+      &lt;/person&gt;
+    &lt;/personen&gt;
+  &lt;/testfall&gt;
+&lt;/test-szenario&gt;</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">in einer XSpec Datei *. werden <b id="" data-element-name="b" data-is-inline-element="yes">Assert- und Not-Assert-Methoden</b> deklariert:
+                  </div>
+               </div>
+               <div class="margin"><pre class="prettyprint">&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+               schematron="test.sch"&gt;
+  &lt;x:scenario label="ALL"&gt;
+    &lt;x:context href="test.xml"/&gt;
+    &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>"/&gt;
+    &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>"/&gt;
+  &lt;/x:scenario&gt;
+&lt;/x:description&gt;</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
+                     Testfalls positiv erfüllt ist. Beim Not-Assert ist das Gegenteil der Fall. Im obigen Beispiel
+                     reichen zwei Regeln, um den Testfall vollständig abzudecken.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wenn man Schematron Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
+                     die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.
+                  </div>
+               </div>
+               <div class="margin"><pre class="prettyprint">&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
+  &lt;sch:pattern id="main"&gt;
+    &lt;sch:rule context="<b id="" data-element-name="b" data-is-inline-element="yes">nachname</b>"&gt;
+      &lt;sch:assert id="person-nachname-rule" role="error" test="normalize-space(.)"&gt;
+        Der Nachname der Person mit ID: &lt;sch:value-of select="@id"/&gt; fehlt! 
+      &lt;/sch:assert&gt;
+    &lt;/sch:rule&gt;
+  &lt;/sch:pattern&gt;
+&lt;/sch:schema&gt;</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Hat sie keinen Nachnamen so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
+                     geschrieben. Diese Datei wertet nun Xspec aus.
+                  </div>
+               </div>
+               <div class="no-margin">
+                  <div class="note" id="" data-element-name="note">
+                     <div class="signal-word">NOTE</div>
+                     <div class="content">
                         
-                        <li id="" data-element-name="li">
+                        <div class="consequence" data-tektur-reviewer-number="" id="" data-element-name="consequence">
                            
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Strikte Trennung von Content ( / Semantik) und Layout/Design.</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Auf der XML Quelle sind XML Features möglich, wie:
-                              	
-                              		Modularisierung: Erlaubt die fein-granulare Wiederverwendung von Content-Bausteinen, sowie das Verlinken, Filtern, Suchen
-                              und Exportieren derselben.
-                              		Generalisierung ist ein DITA Konzept, welches die Wiederverendung von angepassten Topics in anderen DITA Systemen ermöglicht.
-                              		Gültigkeiten erlauben die bedingte Anwendung von Content-Bestandteilen auf Satz und Wort-Ebene.
-                              		Versionierung und Diffing - Vergleich von Änderungen zwischen Versionen
-                              		Intelligente Querverweise: Ein Link zwischen einzelnen XML Topics  bleibt versionstreu.
-                              		Automatischer Satz, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
-                              	
-                              	
+                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Erscheint ein Fehler (= das Feld <b id="" data-element-name="b" data-is-inline-element="yes">nachname</b> ist leer), so greift bei Xspec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.
                            </div>
                            
-                        </li>
+                        </div>
                         
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Veraltete Formate können ausgetauscht werden, ohne dass der Content geändert werden muss oder verlorengeht.</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Nur das XML muss in der Datenhaltung persistiert werden</div>
-                           
-                        </li>
-                        
-                        <li id="" data-element-name="li">
-                           
-                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert
-                              und sind eigentlich für eine relationale Datenbank ungeignet)
-                           </div>
-                           
-                        </li>
-                        
-                     </ul>
-                  </div>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und
-                        setzen auf die Single-Source-Multi-Channel Strategie.
                      </div>
                   </div>
                </div>
-               <div id="ddc898c3-a0c6-45e4-8470-f04e3ccb9603d6e38-target" class="chapter" data-element-name="chapter">
-                  <h2 id="" data-element-name="title"><span class="number">3.2.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
-                           
-                           <div class="title" data-tektur-reviewer-number="" id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39" data-element-name="title">Code Generierung</div>
-                           </span></span></h2>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher
-                        liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.
-                     </div>
-                  </div>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B.
-                        <b id="" data-element-name="b" data-is-inline-element="yes">ArgoUML</b>
-                        <a href="http://argouml.tigris.org" title="http://argouml.tigris.org" target="_blank">
-                           <sup id="" data-element-name="sup">↗↗</sup>
-                           </a>.
-                     </div>
-                  </div>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source
-                        Projekt (aus vergangenen Tagen) :
-                        <b id="" data-element-name="b" data-is-inline-element="yes">Butterfly Code Generator</b>
-                        <a href="http://butterflycode.sourceforge.net" title="http://butterflycode.sourceforge.net" target="_blank">
-                           <sup id="" data-element-name="sup">↗↗</sup>
-                           </a>
-                        
-                     </div>
-                  </div>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es gibt aber auch einen schönen Artikel dazu im Java World Journal<a href="https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html" title="https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html" target="_blank">
-                           <sup id="" data-element-name="sup">↗↗</sup>
-                           </a>.
-                     </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Als Eselsbrücke kann man
+                     ein Assert in der Xspec Datei gleichsetzen mit <b id="" data-element-name="b" data-is-inline-element="yes">Appear</b> und ein Not-Assert mit
+                     <b id="" data-element-name="b" data-is-inline-element="yes">Not-Appear</b>. 
                   </div>
                </div>
-               <div id="30786084-ece7-4b45-a77b-88512e4fe461d6e55-target" class="chapter" data-element-name="chapter">
-                  <h2 id="" data-element-name="title"><span class="number">3.2.3&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
-                           
-                           <div class="title" data-tektur-reviewer-number="" id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56" data-element-name="title">Migrationen und Konvertierungen</div>
-                           </span></span></h2>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Für jede erdenkliche Art der Migration eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen
-                        Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen
-                        und komplexen Transformation an.
-                     </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Ein Assert sichert also zu, dass sich ein Fehlerbericht in der
+                     Schematron Ergebnisdatei zum Testfall befindet. Ein Not-Assert sichert zu, dass
+                     sich kein Fehlerbericht befindet. 
                   </div>
-                  <div class="margin">
-                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur
-                        Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun.
-                        
-                        Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw.
-                        diese Streaming Option<a href="http://www.saxonica.com/html/documentation/sourcedocs/streaming/" title="http://www.saxonica.com/html/documentation/sourcedocs/streaming/" target="_blank">
-                           <sup id="" data-element-name="sup">↗↗</sup>
-                           </a>.
-                     </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number=""> Wie man sich leicht vorstellen kann, sind Assert-Regeln in diesem Fall leicht zu finden,
+                     dazu muss man nur die Schematron Testregeln ins Leere zeigen lassen. Alles ist grün
+                     und alles ist gut - dem Augenschein nach.
                   </div>
                </div>
             </div>

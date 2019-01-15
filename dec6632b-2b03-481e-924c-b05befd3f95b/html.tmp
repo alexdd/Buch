@@ -353,7 +353,41 @@
                   </span>
                </td>
             </tr>
-            <tr class="chapter child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea ui-droppable selected" id="chapter_201901415474629964586866991" new-id="cc183707-5352-4c9c-9c31-68047a882d0f">             <td style="padding-left: 62px;">                <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.5.</span>                   <span class="header_text">                      <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="color: black;">Erste Schritte mit Xspec</a>                   </span>                </div>                <div class="editor_panel">                   <div class="editor_content"></div>                </div>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="show-topic" title="Show Topic" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="new" title="Add Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="delete" title="Delete Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="up" title="Move Topic Reference Up" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="down" title="Move Topic Reference Down" style="display: none;">                                   </span>             </td>          </tr><tr id="888d37da-0dbe-4fae-bec9-2ad1e99f7818" href="888d37da-0dbe-4fae-bec9-2ad1e99f7818/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
+            <tr id="cc183707-5352-4c9c-9c31-68047a882d0f" href="cc183707-5352-4c9c-9c31-68047a882d0f/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
+               <td style="padding-left: 62px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.5.</span>
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Erste Schritte mit Xspec</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="cursor: pointer; display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+            <tr id="888d37da-0dbe-4fae-bec9-2ad1e99f7818" href="888d37da-0dbe-4fae-bec9-2ad1e99f7818/resource.xml" class="child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea chapter initialized ui-droppable">
                <td style="padding-left: 62px;">
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.6.</span>
                      <span class="header_text">
@@ -420,7 +454,7 @@
                      
                   </span>
                </td>
-            </tr>
+            </tr><tr class="chapter child-of-f838f9be-97bf-44a4-ac63-2e813a87f2ea ui-droppable selected" id="chapter_2019015154757075582178605601" new-id="51bec5b9-1207-45cc-9bf2-b6ce3e300547">             <td style="padding-left: 62px;">                <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">3.8.</span>                   <span class="header_text">                      <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="color: black;">XSLT Streaming Beispiel</a>                   </span>                </div>                <div class="editor_panel">                   <div class="editor_content"></div>                </div>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="show-topic" title="Show Topic" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="new" title="Add Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="delete" title="Delete Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="up" title="Move Topic Reference Up" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="down" title="Move Topic Reference Down" style="display: none;">                                   </span>             </td>          </tr>
             <tr id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" href="f606e9c6-3d46-48f3-8de4-46e13dc7d055/resource.xml" class="child-of-document-root chapter initialized parent ui-droppable">
                <td style="padding-left: 43px;">
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">4.</span>

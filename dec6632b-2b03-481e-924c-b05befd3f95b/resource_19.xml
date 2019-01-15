@@ -46,9 +46,6 @@
       <topicref id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
                 href="0846d6a2-6999-42ab-9e83-55bc197fc11c/resource.xml"
                 navtitle="Abfragen mit XQuery"/>
-      <topicref id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                href="51bec5b9-1207-45cc-9bf2-b6ce3e300547/resource.xml"
-                navtitle="XSLT Streaming Beispiel"/>
    </topicref>
    <topicref id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
              href="f606e9c6-3d46-48f3-8de4-46e13dc7d055/resource.xml"
