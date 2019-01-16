@@ -121,9 +121,23 @@
                         </li>
                         <li class="toc-level-2"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" class="toc-entry" id="chapter-link_0846d6a2-6999-42ab-9e83-55bc197fc11c" data-level="2"><span class="chapter-link2">3.7&nbsp;&nbsp;
                                  Abfragen mit XQuery
-                                 </span></a></li>
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_a6cdc20a-412c-457c-853f-4ab49dd104fdd6e19" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.1</span>&nbsp;&nbsp;<span class="text">
+                                          XQuery Builder
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ca0cf1e-9923-45a8-b96c-c6bfafaa777cd6e32" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.2</span>&nbsp;&nbsp;<span class="text">
+                                          FLOWR Expression
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_42a793a1-c0ba-4529-8448-9e1117810149d6e44" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.3</span>&nbsp;&nbsp;<span class="text">
+                                          XML per XQuery
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ef6f61d-594e-4159-9fae-be74401b0613d6e55" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.4</span>&nbsp;&nbsp;<span class="text">
+                                          Document Projection
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
                         <li class="toc-level-2"><a href="51bec5b9-1207-45cc-9bf2-b6ce3e300547.html" class="toc-entry" id="chapter-link_51bec5b9-1207-45cc-9bf2-b6ce3e300547" data-level="2"><span class="chapter-link2">3.8&nbsp;&nbsp;
-                                 XSLT Streaming Beispiel
+                                 XSLT Streaming
                                  </span></a></li>
                      </ul>
                   </li>
@@ -164,7 +178,7 @@
             <div id="51bec5b9-1207-45cc-9bf2-b6ce3e300547-target" class="chapter first" data-element-name="chapter">
                <h2 id="" data-element-name="title"><span class="number">3.8&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
                         
-                        <div class="title" data-tektur-reviewer-number="" id="40515442-a67d-49f4-9945-0f9d227bd97e" data-element-name="title">XSLT Streaming Beispiel</div>
+                        <div class="title" data-tektur-reviewer-number="" id="40515442-a67d-49f4-9945-0f9d227bd97e" data-element-name="title">XSLT Streaming</div>
                         </span></span></h2>
                <div class="margin">
                   <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</div>
@@ -215,22 +229,47 @@
                         </a> und in der
                      kommerziellen Saxon-EE Löunsg implementiert<a href="https://www.saxonica.com/html/documentation/sourcedocs/streaming/" title="https://www.saxonica.com/html/documentation/sourcedocs/streaming/" target="_blank">
                         <sup id="" data-element-name="sup">↗↗</sup>
-                        </a>.
+                        </a>. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung führt.
                   </div>
                </div>
                <div class="margin">
                   <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</div>
                </div>
                <div class="margin">
-                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren
-                     heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird.
-                     Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten. Bei einer Selektion sollte man aber darauf achten nur atomarische
-                     Werte auszuwählen.
-                     Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch
-                     nicht einer Variablen zuweisbar.
-                     “Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg, wie bspw. mit einem Apply-Templates
-                     Call.
-                  </div>
+                  <ul id="" data-element-name="ul">
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren
+                           heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse
+                           erhalten.
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch
+                           nicht einer Variablen zuweisbar.
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit
+                           einem Apply-Templates Call.
+                        </div>
+                        
+                     </li>
+                     
+                  </ul>
                </div>
                <div class="margin">
                   <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut
@@ -318,10 +357,36 @@
                      Prozessor allerdings nicht akzeptiert.
                   </div>
                </div>
+               <div class="margin"><pre class="prettyprint">Cannot call accumulator-after except during the post-descent 
+phase of a streaming template</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
+                     wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
+                     kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein
+                  </div>
+               </div>
+               <div class="margin"><pre class="prettyprint">&lt;xsl:copy-of select="."/&gt;</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">ersetzen, was gleichbedeutend mit der Mode Einstellung</div>
+               </div>
+               <div class="margin"><pre class="prettyprint">on-no-match="deep-copy"</pre></div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+                     Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
+                     am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
+                     Arten realisieren.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
+                     werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
+                     würde.
+                  </div>
+               </div>
             </div>
          </div>
       </div>
-      <div id="date-version">Version: 21<br>Jan 15 2019
+      <div id="date-version">Version: 21<br>Jan 16 2019
       </div>
    </body>
 </html>

@@ -121,9 +121,23 @@
                         </li>
                         <li class="toc-level-2"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" class="toc-entry" id="chapter-link_0846d6a2-6999-42ab-9e83-55bc197fc11c" data-level="2"><span class="chapter-link2">3.7&nbsp;&nbsp;
                                  Abfragen mit XQuery
-                                 </span></a></li>
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_a6cdc20a-412c-457c-853f-4ab49dd104fdd6e19" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.1</span>&nbsp;&nbsp;<span class="text">
+                                          XQuery Builder
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ca0cf1e-9923-45a8-b96c-c6bfafaa777cd6e32" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.2</span>&nbsp;&nbsp;<span class="text">
+                                          FLOWR Expression
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_42a793a1-c0ba-4529-8448-9e1117810149d6e44" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.3</span>&nbsp;&nbsp;<span class="text">
+                                          XML per XQuery
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ef6f61d-594e-4159-9fae-be74401b0613d6e55" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.7.4</span>&nbsp;&nbsp;<span class="text">
+                                          Document Projection
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
                         <li class="toc-level-2"><a href="51bec5b9-1207-45cc-9bf2-b6ce3e300547.html" class="toc-entry" id="chapter-link_51bec5b9-1207-45cc-9bf2-b6ce3e300547" data-level="2"><span class="chapter-link2">3.8&nbsp;&nbsp;
-                                 XSLT Streaming Beispiel
+                                 XSLT Streaming
                                  </span></a></li>
                      </ul>
                   </li>
@@ -201,10 +215,156 @@
                         </a> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.
                   </div>
                </div>
+               <div id="a6cdc20a-412c-457c-853f-4ab49dd104fdd6e19-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">3.7.1&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20" data-element-name="title">XQuery Builder</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
+                        auf einem geladenen XML Dokument auszuführen. Dazu kann man 
+                        seine Query in das betreffende Eingabefenster schreiben.
+                     </div>
+                  </div>
+                  <div class="no-margin"><img src="../..//0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png" id="" data-element-name="img"><h5 id="" class="figure-title" data-element-name="subtitle"><br>Fig.&nbsp;5&nbsp;&nbsp;oXygen XQuery Builder
+                     </h5>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Mit folgendem Ergebnis:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">&lt;dates&gt;
+  &lt;today&gt;2019-01-16+01:00&lt;/today&gt;
+  &lt;formatted&gt;Wednesday, 16th January 2019&lt;/formatted&gt;
+&lt;/dates&gt;</pre></div>
+               </div>
+               <div id="5ca0cf1e-9923-45a8-b96c-c6bfafaa777cd6e32-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">3.7.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33" data-element-name="title">FLOWR Expression</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">FLOWR steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
+                        dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">let $bibliothek := .
+for $x in $bibliothek//buecher,
+    $y in $bibliothek//autoren/autor
+where starts-with($autor, 'Grass')
+    and $x/@autorId = $y/@id
+return $x/titel</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
+                        Bemerkenswert ist hier die Syntax.
+                     </div>
+                  </div>
+                  <div class="no-margin">
+                     <div class="note" id="" data-element-name="note">
+                        <div class="signal-word">NOTE</div>
+                        <div class="content">
+                           
+                           <div class="consequence" data-tektur-reviewer-number="" id="" data-element-name="consequence">
+                              
+                              <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Normalerweise würde man zwischen den
+                                 einzelnen Anweisungen einen Blockabschluss, wie ein Semikolon erwarten.
+                                 Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...
+                              </div>
+                              
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="42a793a1-c0ba-4529-8448-9e1117810149d6e44-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">3.7.3&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44" data-element-name="title">XML per XQuery</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
+                        vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">declare variable $nachname as xs:string external;
+&lt;buecher autor="{$nachname}"&gt;
+{
+  let $bibliothek := .
+  for $x in $bibliothek/buecher//buch,
+      $y in $bibliothek/autoren//autor
+  where starts-with($y, $nachname)
+      and $x/@autorId = $y/@id
+  order by $x/ausgabe
+  return
+  &lt;buch ausgabe="{$x/ausgabe}"&gt;
+    {$x/titel}
+  &lt;/buch&gt;
+}
+&lt;/buecher&gt;</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
+                        so kann man mit der folgenden Kommandozeile auf einer buecher.xml
+                        Datei als Eingabe suchen:
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
+                                                       -q:buecher.xquery 
+                                                       -o:ergebnis.xml 
+                                                       nachname=grass</pre></div>
+               </div>
+               <div id="5ef6f61d-594e-4159-9fae-be74401b0613d6e55-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">3.7.4&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54" data-element-name="title">Document Projection</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Document Projection<a href="http://www.saxonica.com/documentation/#!sourcedocs/projection" title="http://www.saxonica.com/documentation/#!sourcedocs/projection" target="_blank">
+                           <sup id="" data-element-name="sup">↗↗</sup>
+                           </a> 
+                        ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
+                        Das kann schon recht hilfreich sein, wenn man ein mehrere 100MB großes Dokument durchsuchen
+                        will.
+                     </div>
+                  </div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Ohne Projection würde das Beispiel von oben so verarbeitet:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
+     -s:buecher.xml 
+     -q:buecher.xquery 
+     -o:ergebnis.xml 
+     -projection:off 
+     nachname=grass
+Saxon-EE 9.7.0.20J from Saxonica
+Java version 1.8.0_60
+Using license serial number V005095
+Analyzing query from Desktop/buecher.xquery
+Generating byte code...
+Analysis time: 201.10095 milliseconds
+Processing file:/Users/Alex/buecher.xml
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Building tree for file:/Users/Alex/buecher.xml 
+using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 3.482278ms
+Tree size: 46 nodes, 58 characters, 6 attributes
+Execution time: 27.137589ms
+Memory used: 67031664</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">[...]
+
+Document projection for file:/Users/Alex/buecher.xml
+-- Input nodes 50; output nodes 27; reduction = 46%
+Tree built in 3.80615ms
+Tree size: 26 nodes, 58 characters, 3 attributes
+Execution time: 15.83463ms
+Memory used: 64339064</pre></div>
+               </div>
             </div>
          </div>
       </div>
-      <div id="date-version">Version: 21<br>Jan 15 2019
+      <div id="date-version">Version: 21<br>Jan 16 2019
       </div>
    </body>
 </html>

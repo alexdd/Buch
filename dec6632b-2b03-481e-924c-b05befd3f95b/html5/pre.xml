@@ -4,7 +4,7 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Jan 15 2019 17:48:57 </date-of-last-change>
+      <date-of-last-change>Wed Jan 16 2019 20:01:39 </date-of-last-change>
       <language>de-DE</language>
       <status>21</status>
       <description>Short Description</description>
@@ -14,7 +14,7 @@
       <subtitle>XML - XSLT - XQuery</subtitle>
       <cover-text>(c) Alex Düsel 2019
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
-www.github.com/alexdd/XSLT-Buch</cover-text>
+www.github.com/alexdd/Buch</cover-text>
       <structure>
          <format>UNDEFINED</format>
       </structure>
@@ -1205,6 +1205,128 @@ und alles ist gut - dem Augenschein nach.</p>
                  address="http://cs.au.dk/~amoeller/XML/querying/flwrexp.html">
                <sup>↗↗</sup>
             </url> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="a6cdc20a-412c-457c-853f-4ab49dd104fdd6e19">
+                  
+                     <title>
+                        <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
+                     </title>
+                     <p>Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
+auf einem geladenen XML Dokument auszuführen. Dazu kann man 
+seine Query in das betreffende Eingabefenster schreiben.</p>
+                     <figure pdfwidth="page">
+                        <subtitle>oXygen XQuery Builder</subtitle>
+                        <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
+                     </figure>
+                     <p>Mit folgendem Ergebnis:</p>
+                     <verbatim>&lt;dates&gt;
+  &lt;today&gt;2019-01-16+01:00&lt;/today&gt;
+  &lt;formatted&gt;Wednesday, 16th January 2019&lt;/formatted&gt;
+&lt;/dates&gt;</verbatim>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="5ca0cf1e-9923-45a8-b96c-c6bfafaa777cd6e32">
+                  
+                     <title>
+                        <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
+                     </title>
+                     <p>FLOWR steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
+dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
+                     <verbatim>let $bibliothek := .
+for $x in $bibliothek//buecher,
+    $y in $bibliothek//autoren/autor
+where starts-with($autor, 'Grass')
+    and $x/@autorId = $y/@id
+return $x/titel</verbatim>
+                     <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
+Bemerkenswert ist hier die Syntax.</p>
+                     <note>
+                        <consequence>
+                           <p>Normalerweise würde man zwischen den
+einzelnen Anweisungen einen Blockabschluss, wie ein Semikolon erwarten.
+Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
+                        </consequence>
+                     </note>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="42a793a1-c0ba-4529-8448-9e1117810149d6e44">
+                  
+                     <title>
+                        <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
+                     </title>
+                     <p>Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
+vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:</p>
+                     <verbatim>declare variable $nachname as xs:string external;
+&lt;buecher autor="{$nachname}"&gt;
+{
+  let $bibliothek := .
+  for $x in $bibliothek/buecher//buch,
+      $y in $bibliothek/autoren//autor
+  where starts-with($y, $nachname)
+      and $x/@autorId = $y/@id
+  order by $x/ausgabe
+  return
+  &lt;buch ausgabe="{$x/ausgabe}"&gt;
+    {$x/titel}
+  &lt;/buch&gt;
+}
+&lt;/buecher&gt;</verbatim>
+                     <p>Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
+so kann man mit der folgenden Kommandozeile auf einer buecher.xml
+Datei als Eingabe suchen:</p>
+                     <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
+                                                       -q:buecher.xquery 
+                                                       -o:ergebnis.xml 
+                                                       nachname=grass</verbatim>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="5ef6f61d-594e-4159-9fae-be74401b0613d6e55">
+                  
+                     <title>
+                        <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
+                     </title>
+                     <p>Document Projection<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://www.saxonica.com/documentation/#!sourcedocs/projection">
+                  <sup>↗↗</sup>
+               </url> 
+ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
+Das kann schon recht hilfreich sein, wenn man ein mehrere 100MB großes Dokument durchsuchen
+will.</p>
+                     <p>Ohne Projection würde das Beispiel von oben so verarbeitet:</p>
+                     <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
+     -s:buecher.xml 
+     -q:buecher.xquery 
+     -o:ergebnis.xml 
+     -projection:off 
+     nachname=grass
+Saxon-EE 9.7.0.20J from Saxonica
+Java version 1.8.0_60
+Using license serial number V005095
+Analyzing query from Desktop/buecher.xquery
+Generating byte code...
+Analysis time: 201.10095 milliseconds
+Processing file:/Users/Alex/buecher.xml
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Building tree for file:/Users/Alex/buecher.xml 
+using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 3.482278ms
+Tree size: 46 nodes, 58 characters, 6 attributes
+Execution time: 27.137589ms
+Memory used: 67031664</verbatim>
+                     <p>Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</p>
+                     <verbatim>[...]
+
+Document projection for file:/Users/Alex/buecher.xml
+-- Input nodes 50; output nodes 27; reduction = 46%
+Tree built in 3.80615ms
+Tree size: 26 nodes, 58 characters, 3 attributes
+Execution time: 15.83463ms
+Memory used: 64339064</verbatim>
+                  
+               </chapter>
             
          
       </chapter>
@@ -1212,7 +1334,7 @@ und alles ist gut - dem Augenschein nach.</p>
                ismodule="no">
          
             <title>
-               <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming Beispiel</title>
+               <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming</title>
             </title>
             
                <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
@@ -1238,12 +1360,22 @@ und alles ist gut - dem Augenschein nach.</p>
 kommerziellen Saxon-EE Löunsg implementiert<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
                  address="https://www.saxonica.com/html/documentation/sourcedocs/streaming/">
                <sup>↗↗</sup>
-            </url>.</p>
+            </url>. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung führt.</p>
                <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
-               <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird.
-Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten. Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.
-Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.
-“Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg, wie bspw. mit einem Apply-Templates Call.</p>
+               <ul>
+                  <li>
+                     <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>
+                  </li>
+                  <li>
+                     <p>Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</p>
+                  </li>
+                  <li>
+                     <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
+                  </li>
+                  <li>
+                     <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
+                  </li>
+               </ul>
                <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
 in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p>
                <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
@@ -1300,6 +1432,21 @@ wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
                <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
 einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
 Prozessor allerdings nicht akzeptiert.</p>
+               <verbatim>Cannot call accumulator-after except during the post-descent 
+phase of a streaming template</verbatim>
+               <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
+wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
+kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
+               <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
+               <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
+               <verbatim>on-no-match="deep-copy"</verbatim>
+               <p>wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
+am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
+Arten realisieren.</p>
+               <p>Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
+werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
+würde.</p>
             
          
       </chapter>
