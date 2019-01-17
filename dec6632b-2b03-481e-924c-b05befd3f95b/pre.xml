@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Jan 16 2019 20:00:28 </date-of-last-change>
+      <date-of-last-change>Thu Jan 17 2019 16:32:40 </date-of-last-change>
       <language>de-DE</language>
-      <status>21</status>
+      <status>28</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -74,359 +74,59 @@ www.github.com/alexdd/Buch</cover-text>
       </chapter>
    </supplemental-directives>
    <toc/>
-   <chapter hyphenation="yes" chapterpage="no" id="31a92dc0-959c-49a1-b06e-01e2369e050e"
+   <chapter hyphenation="yes" chapterpage="no" id="792c9845-7c63-4a18-8aee-1878763200b5"
             ismodule="no">
       
          <title>
-            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Theorie </title>
+            <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete</title>
          </title>
          
             <column-wide-element>
-         <p>XSL Stylesheets finden hauptsächlich Anwendung in der Technischen Dokumentation. Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert.</p>
+         <p>
+               <b>XML,</b>
+               <b>XSLT</b>, <b>XPATH</b>, <b>XSL-FO</b> und <b>XQuery</b> sind Techniken um baumstrukturierte Daten - im Vergleich zu relationalen Daten - aus verschiedenen Quellen ineinader zu überführen, abzuspeichern, zu versenden, darzustellen und auszuwerten. Einfach gesprochen geht es um die Weiterverarbeitung solcher Daten - das XML kann dabei sowohl die Nutzdaten als auch die Steuerdaten tragen.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Vom Aussehen her sind XML Daten im Prinzip Textdaten. Sie können sehr einfach mit einem Texteditor erstellt werden. Im Gegensatz zu Multimedia-Daten sind keine komplexen Tools, wie z.B. ein Grafikeditor, erforderlich.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Auch relationale Daten können in Form von Tabellen, als Excel Tabelle oder bspw. als kommaseparierte Textdatei, aus einem System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und weiterer Kategorisierung dieser Informationseinheiten mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein Baum, der die Hierarchische Ordnung der Daten widerspiegeln sollte.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Diese Baumstrukturen sind maschinell lesbar und die Daten können, bevor sie von einem Versender zu einem Empfänger gehen, mittels eines automatischen Prozesses validiert werden. Dabei können sowohl der Inhalt als auch die Syntax anhand von definierten Regeln (Schemas) genau überprüft werden.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubt.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Der Übergang von SGML zu XML hat die Sache ein bisschen vereinfacht, eine weitere Vereinfachung brachte JSON als Standard. JSON wird gerne im Webbereich eingesetzt um baumstrukturierte Daten zu verarbeiten. JSON ist jedoch nicht so gut maschinenlesbar und es gibt noch nicht so viele Werkzeuge wie z.B. Code Editoren dafür.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern, um die es sich im weiteren Text drehen wird:</p>
       </column-wide-element>
             <column-wide-element>
          <ul>
                <li>
-                  <p>XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine Turing Maschine<footnote>
-                     <desc>http://www.unidex.com/turing/utm.htm</desc>
-                  </footnote> programmieren kann.</p>
+                  <p>
+                     <b>XML</b> ist das Datenformat. Auf XML arbeiten die anderen Technologien. XML ist immer Input für diese Tools.</p>
                </li>
                <li>
-                  <p>Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
+                  <p>
+                     <b>XSLT</b> transformiert eine XML Instanz in eine andere. Plain Text ist eine Aneinanderreihung von Text Knoten</p>
                </li>
                <li>
-                  <p>XSLT benötigt normalerweise immer eine XML Eingabe. Zumindest ein XML Knoten muss verarbeitet werden. Es gibt aber auch den Spezialfall, dass bspw. mit dem XSLT Prozessor Saxon keine Eingabe notwendig ist, bzw. diese vom XSLT Stylesheet selbst erzeugt wird.</p>
+                  <p>
+                     <b>XPATH</b> erlaubt es, bestimmte Knoten in einem XML Dokument über bedingte Pfadausdrücke zu selektieren.</p>
                </li>
                <li>
-                  <p>XSLT ist keine imperative Sprache, d.h es werden keine Anweisungen der Reihe nach abgearbeitet, sondern eine deklarative Sprache, d.h für jedes Ereignis (besser gesagt: für jeden durchlaufenen DOM Knoten) wird eine gefundene - und vom Programmierer deklarierte - Regel angewendet.</p>
+                  <p>
+                     <b>XSL-FO</b> ist eine weitere XML basierte Auszeichnungssprache, die ein XSL-FO Prozessor einlesen kann, um daraus z.B. ein PDF zu generieren. </p>
                </li>
                <li>
-                  <p>Ausserdem gibt es funktionale Anteile, um bspw. die deklarierten Regeln rekursiv anwenden zu können.</p>
-               </li>
-               <li>
-                  <p>XSLT wird oft mit XSL gleichgesetzt. Aber XSL<footnote>
-                     <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
-                  </footnote>
-                  <footnote>
-                     <desc>W3C Seiten zu The Extensible Stylesheet Language Family (XSL)</desc>
-                  </footnote> ist mehr:</p>
-                  <ul>
-                     <li>
-                        <p>Zum einen kommt noch XPATH hinzu: XPATH erlaubt komplizierte Berechnungen und Selektionen auf den DOM Knoten eines XML Dokuments.</p>
-                     </li>
-                     <li>
-                        <p>Zum anderen ist auch XSL-FO Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
-                     </li>
-                  </ul>
+                  <p>
+                     <b>XQuery</b> ist eine Abfragesprache ählich zu SQL, jedoch werden damit nicht relationale Daten abgefragt sondern baumstrukturierte.</p>
                </li>
             </ul>
-      </column-wide-element>
-         
-      
-      <chapter hyphenation="yes" chapterpage="no" id="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-               ismodule="no">
-         
-            <title>
-               <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
-            </title>
-            
-               <column-wide-element>
-            <p>XSLT ist eine ereignisgesteuerte, regelbasierte Umgebung zur Konvertierung von XML Daten. Gerade der Vorteil des regelbasierten Ansatzes ist vielen Entwicklern nicht bewusst, und es entsteht Quellcode der aussieht, wie mit XPath angereicherter PHP Code.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Ich frage mich an dieser Stelle immer, wieso nimmt man dann überhaupt XSLT, wenn man keine Template-Match Regeln verwendet, oder nur spärlich verwendet?</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Um diesen Umstand aufzuklären ist ein bisschen Theorie notwendig:</p>
-         </column-wide-element>
-               <page-wide-element>
-            <figure pdfwidth="page">
-                  <column-wide-element>
-                  <subtitle>Pull Stylesheet</subtitle>
-               </column-wide-element>
-                  <desc id="ca18b259-1ea5-4c9a-ba8d-69c008d85e8fd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
-                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
-               </figure>
-         </page-wide-element>
-               <page-wide-element>
-            <figure pdfwidth="page">
-                  <column-wide-element>
-                  <subtitle>Push Stylesheet</subtitle>
-               </column-wide-element>
-                  <desc id="90de28af-fce6-4456-9cc3-058bf16e2c24d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
-                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
-               </figure>
-         </page-wide-element>
-               <column-wide-element>
-            <p>Das bisher Gesagte verdeutlicht zwar den "Pull" Ansatz, was genau aber ge"pusht" wird, ist vermutlich noch unklar. Betrachten wir XML in der Baumdarstellung.</p>
-         </column-wide-element>
-               <page-wide-element>
-            <figure pdfwidth="page">
-                  <column-wide-element>
-                  <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
-               </column-wide-element>
-                  <desc id="6895b52a-d955-41fe-851f-5d8dff221aeed6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
-                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
-                  <legend>
-                     <leg-entry id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43">
-                        <leg-pos>
-                           <p>Remove</p>
-                        </leg-pos>
-                        <leg-name>
-                           <p>Beim Betreten einer leeren Match-Regel wird ein Teilbaum nicht kopiert</p>
-                        </leg-name>
-                     </leg-entry>
-                     <leg-entry id="4f2540c3-a78f-49dc-a2b3-3e3d5c7d1c16d6e50">
-                        <leg-pos>
-                           <p>Bypass</p>
-                        </leg-pos>
-                        <leg-name>
-                           <p>Beim Betreten einer Match-Regel ohne Kopieranweisung wird der Knoten übersprungen</p>
-                        </leg-name>
-                     </leg-entry>
-                     <leg-entry id="f38f09a2-6878-42f6-bcfe-621ca2fc7fa5d6e57">
-                        <leg-pos>
-                           <p>Push</p>
-                        </leg-pos>
-                        <leg-name>
-                           <p>Durch gezielte Auswahl einer Knotenmenge auf der Descendant-Achse wird der XSLT Prozessor in eine bestimmte Richtung ge"pusht".</p>
-                        </leg-name>
-                     </leg-entry>
-                  </legend>
-               </figure>
-         </page-wide-element>
-               <column-wide-element>
-            <p>Pull-Stylesheets werden gewöhlich mit <b>for-each</b> Loops programmiert. Dieser Ansatz ist meiner Ansicht nach gebräuchlich, wenn keine großen DTD Änderungen zu erwarten sind, der XML Baum flach strukturiert ist und die Anforderungen an die  Knvertierung relativ einfach sind, bspw. beim Auswerten / Konvertieren von Konfigurationsdateien. In alles anderen Fällen sind Push-Stylesheets vorzuziehen, d.h. möglichst wenige <b>for-each</b> loops und möglichst viele <b>Template-Match</b> Regeln.</p>
-         </column-wide-element>
-            
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-               ismodule="no">
-         
-            <title>
-               <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
-            </title>
-            
-               <column-wide-element>
-            <p>Die Regelbasis der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
-         </column-wide-element>
-               <block-title>
-                  <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
-               </block-title>
-               <column-wide-element>
-            <p>Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei Saxon diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.</p>
-         </column-wide-element>
-               <block-title>
-                  <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
-               </block-title>
-               <column-wide-element>
-            <p>Match-Regeln werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:</p>
-         </column-wide-element>
-               <column-wide-element>
-            <procedure type="ol">
-                  <step>
-                     <action>
-                        <p>Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p>
-                     </action>
-                  </step>
-                  <step>
-                     <action>
-                        <p>Templates mit einem höheren Priority Attribut haben Vorrang.</p>
-                     </action>
-                  </step>
-                  <step>
-                     <action>
-                        <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</p>
-                     </action>
-                  </step>
-                  <step>
-                     <action>
-                        <p>Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p>
-                        <ul>
-                           <li>
-                              <p>Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</p>
-                           </li>
-                           <li>
-                              <p>Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</p>
-                           </li>
-                           <li>
-                              <p>Einfache Elementnamen (z.B. "para") haben Prio 0.</p>
-                           </li>
-                           <li>
-                              <p>Wildcards (z.B. *, @*) haben Priorität -0.25</p>
-                           </li>
-                           <li>
-                              <p>Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</p>
-                           </li>
-                           <li>
-                              <p>In allen anderen Fällen ist die Prio 0.5.</p>
-                           </li>
-                        </ul>
-                        <p>Beispiele:</p>
-                        <ul>
-                           <li>
-                              <p>para -&gt; 0</p>
-                           </li>
-                           <li>
-                              <p>h:* -&gt; -0.25</p>
-                           </li>
-                           <li>
-                              <p>* -&gt; -0.25</p>
-                           </li>
-                           <li>
-                              <p>node() -&gt; -0.25</p>
-                           </li>
-                           <li>
-                              <p>contents/para -&gt; 0.5</p>
-                           </li>
-                           <li>
-                              <p>contents/* -&gt; 0.5</p>
-                           </li>
-                        </ul>
-                     </action>
-                  </step>
-                  <step>
-                     <action>
-                        <p>Mit einer Kommandozeilen-Option kann bei Saxon festgelegt werden, dass die Transformation abbricht, sobald es einen Konflikt bei der Regelauswertung gibt.</p>
-                     </action>
-                  </step>
-               </procedure>
-         </column-wide-element>
-               <block-title>
-                  <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
-               </block-title>
-               <column-wide-element>
-            <p>Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel einzubinden, bspw:</p>
-         </column-wide-element>
-               <page-wide-element>
-            <verbatim>&lt;xsl:template match="*" mode="#all"/&gt;</verbatim>
-         </page-wide-element>
-               <column-wide-element>
-            <p>Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer XML-2-XML Migration automatisch Knoten im XML Baum abgetrennt werden sollen, für die keine Match-Regel existiert.</p>
-         </column-wide-element>
-               <block-title>
-                  <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
-               </block-title>
-               <column-wide-element>
-            <p>Wie oben schon verdeutlicht werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
-         </column-wide-element>
-               <column-wide-element>
-            <ul>
-                  <li>
-                     <p>Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</p>
-                  </li>
-                  <li>
-                     <p>Dabei sollen Seminar-Elemente markiert werden, die nicht besonderen Bedingungen entsprechen:</p>
-                     <ul>
-                        <li>
-                           <p>Das Seminar-Element hat ein Feld "Ende-Datum" das abgelaufen ist.</p>
-                        </li>
-                        <li>
-                           <p>Am Seminar-Element sind mehrere Dozenten angestellt, obwohl das Seminar-Element vom Type "Single" ist.</p>
-                        </li>
-                        <li>
-                           <p>em Seminar-Element ist kein Dozent zugeordnet.</p>
-                        </li>
-                     </ul>
-                  </li>
-                  <li>
-                     <p>Sicherlich kann es Seminar-Elemente geben, die alle drei Bedingungen erfüllen. Um das Error-Log aber nicht zu überfüllen, sollen die Filter nach ihren Prioritäten ausgeführt werden.</p>
-                  </li>
-               </ul>
-         </column-wide-element>
-               <column-wide-element>
-            <p>In Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
-         </column-wide-element>
-               <page-wide-element>
-            <verbatim>&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
-              priority="30" mode="filter-network"&gt; 
-  &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt; 
-
-&lt;xsl:template match="Seminar[Type eq 'SINGLE' and count(dozenten/dozent) gt 1]"
-              priority="20" mode="filter-network"&gt; 
-  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;dozenten-count&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt; 
-
-&lt;xsl:template match="Seminar[not(dozenten/dozent)]" mode="filter-network"&gt; 
-  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;dozenten-missing&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt;</verbatim>
-         </page-wide-element>
-               <block-title>
-                  <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
-               </block-title>
-               <column-wide-element>
-            <p>An allen Templates hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="5c94c28f-26eb-4c44-88ca-72a736b38ea1">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
-         </column-wide-element>
-               <page-wide-element>
-            <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
-  &lt;div class="toc-entry"&gt;
-    &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
-  &lt;/div&gt;
-&lt;/xsl:template&gt;
-
-&lt;xsl:template match="title"&gt;
-  &lt;h1&gt;
-    &lt;xsl:apply-templates/&gt;
-  &lt;/h1&gt;
-&lt;/xsl:template&gt;</verbatim>
-         </page-wide-element>
-               <column-wide-element>
-            <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
-         </column-wide-element>
-               <page-wide-element>
-            <verbatim>&lt;xsl:for-each select="chapter"&gt;
-  &lt;xsl:apply-templates select="title" mode="toc"&gt;
-&lt;/xsl:for-each&gt;</verbatim>
-         </page-wide-element>
-               <column-wide-element>
-            <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
-         </column-wide-element>
-               <column-wide-element>
-            <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
-         </column-wide-element>
-            
-         
-      </chapter>
-   </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
-            ismodule="no">
-      
-         <title>
-            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Praxis </title>
-         </title>
-         
-            <column-wide-element>
-         <p>Hands-on Materiel mit Beispielquelltexten.</p>
       </column-wide-element>
          
       
@@ -434,11 +134,11 @@ www.github.com/alexdd/Buch</cover-text>
                ismodule="no">
          
             <title>
-               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Anwendungsbeispiele</title>
+               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Einige aktuelle und vergangene Szenarien</title>
             </title>
             
                <column-wide-element>
-            <p>Einige Beispiele - aktuell und aus vergangenen Tagen.</p>
+            <p>Einige Beispiele - aktuell und aus vergangenen Tagen:</p>
          </column-wide-element>
                <block-title>
                   <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
@@ -783,7 +483,7 @@ www.github.com/alexdd/Buch</cover-text>
                ismodule="no">
          
             <title>
-               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Komplexe Anwendung</title>
+               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
             </title>
             
                <column-wide-element>
@@ -876,6 +576,363 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
+   </chapter>
+   <chapter hyphenation="yes" chapterpage="no" id="31a92dc0-959c-49a1-b06e-01e2369e050e"
+            ismodule="no">
+      
+         <title>
+            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
+         </title>
+         
+            <column-wide-element>
+         <p>XSL Stylesheets finden hauptsächlich Anwendung in der Technischen Dokumentation. Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <ul>
+               <li>
+                  <p>XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine Turing Maschine<footnote>
+                     <desc>http://www.unidex.com/turing/utm.htm</desc>
+                  </footnote> programmieren kann.</p>
+               </li>
+               <li>
+                  <p>Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
+               </li>
+               <li>
+                  <p>XSLT benötigt normalerweise immer eine XML Eingabe. Zumindest ein XML Knoten muss verarbeitet werden. Es gibt aber auch den Spezialfall, dass bspw. mit dem XSLT Prozessor Saxon keine Eingabe notwendig ist, bzw. diese vom XSLT Stylesheet selbst erzeugt wird.</p>
+               </li>
+               <li>
+                  <p>XSLT ist keine imperative Sprache, d.h es werden keine Anweisungen der Reihe nach abgearbeitet, sondern eine deklarative Sprache, d.h für jedes Ereignis (besser gesagt: für jeden durchlaufenen DOM Knoten) wird eine gefundene - und vom Programmierer deklarierte - Regel angewendet.</p>
+               </li>
+               <li>
+                  <p>Ausserdem gibt es funktionale Anteile, um bspw. die deklarierten Regeln rekursiv anwenden zu können.</p>
+               </li>
+               <li>
+                  <p>XSLT wird oft mit XSL gleichgesetzt. Aber XSL<footnote>
+                     <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
+                  </footnote>
+                  <footnote>
+                     <desc>W3C Seiten zu The Extensible Stylesheet Language Family (XSL)</desc>
+                  </footnote> ist mehr:</p>
+                  <ul>
+                     <li>
+                        <p>Zum einen kommt noch XPATH hinzu: XPATH erlaubt komplizierte Berechnungen und Selektionen auf den DOM Knoten eines XML Dokuments.</p>
+                     </li>
+                     <li>
+                        <p>Zum anderen ist auch XSL-FO Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+      </column-wide-element>
+         
+      
+      <chapter hyphenation="yes" chapterpage="no" id="5b73f348-0058-45e0-82f7-c3de72ec5d41"
+               ismodule="no">
+         
+            <title>
+               <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
+            </title>
+            
+               <column-wide-element>
+            <p>XSLT ist eine ereignisgesteuerte, regelbasierte Umgebung zur Konvertierung von XML Daten. Gerade der Vorteil des regelbasierten Ansatzes ist vielen Entwicklern nicht bewusst, und es entsteht Quellcode der aussieht, wie mit XPath angereicherter PHP Code.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ich frage mich an dieser Stelle immer, wieso nimmt man dann überhaupt XSLT, wenn man keine Template-Match Regeln verwendet, oder nur spärlich verwendet?</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Um diesen Umstand aufzuklären ist ein bisschen Theorie notwendig:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <figure pdfwidth="page">
+                  <column-wide-element>
+                  <subtitle>Pull Stylesheet</subtitle>
+               </column-wide-element>
+                  <desc id="ca18b259-1ea5-4c9a-ba8d-69c008d85e8fd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
+               </figure>
+         </page-wide-element>
+               <page-wide-element>
+            <figure pdfwidth="page">
+                  <column-wide-element>
+                  <subtitle>Push Stylesheet</subtitle>
+               </column-wide-element>
+                  <desc id="90de28af-fce6-4456-9cc3-058bf16e2c24d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
+               </figure>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Das bisher Gesagte verdeutlicht zwar den "Pull" Ansatz, was genau aber ge"pusht" wird, ist vermutlich noch unklar. Betrachten wir XML in der Baumdarstellung.</p>
+         </column-wide-element>
+               <page-wide-element>
+            <figure pdfwidth="page">
+                  <column-wide-element>
+                  <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
+               </column-wide-element>
+                  <desc id="6895b52a-d955-41fe-851f-5d8dff221aeed6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
+                  <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
+                  <legend>
+                     <leg-entry id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43">
+                        <leg-pos>
+                           <p>Remove</p>
+                        </leg-pos>
+                        <leg-name>
+                           <p>Beim Betreten einer leeren Match-Regel wird ein Teilbaum nicht kopiert</p>
+                        </leg-name>
+                     </leg-entry>
+                     <leg-entry id="4f2540c3-a78f-49dc-a2b3-3e3d5c7d1c16d6e50">
+                        <leg-pos>
+                           <p>Bypass</p>
+                        </leg-pos>
+                        <leg-name>
+                           <p>Beim Betreten einer Match-Regel ohne Kopieranweisung wird der Knoten übersprungen</p>
+                        </leg-name>
+                     </leg-entry>
+                     <leg-entry id="f38f09a2-6878-42f6-bcfe-621ca2fc7fa5d6e57">
+                        <leg-pos>
+                           <p>Push</p>
+                        </leg-pos>
+                        <leg-name>
+                           <p>Durch gezielte Auswahl einer Knotenmenge auf der Descendant-Achse wird der XSLT Prozessor in eine bestimmte Richtung ge"pusht".</p>
+                        </leg-name>
+                     </leg-entry>
+                  </legend>
+               </figure>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Pull-Stylesheets werden gewöhlich mit <b>for-each</b> Loops programmiert. Dieser Ansatz ist meiner Ansicht nach gebräuchlich, wenn keine großen DTD Änderungen zu erwarten sind, der XML Baum flach strukturiert ist und die Anforderungen an die  Knvertierung relativ einfach sind, bspw. beim Auswerten / Konvertieren von Konfigurationsdateien. In alles anderen Fällen sind Push-Stylesheets vorzuziehen, d.h. möglichst wenige <b>for-each</b> loops und möglichst viele <b>Template-Match</b> Regeln.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="db988919-f71e-437e-b699-b6fdd2a32cb9"
+               ismodule="no">
+         
+            <title>
+               <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
+            </title>
+            
+               <column-wide-element>
+            <p>Die Regelbasis der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
+         </column-wide-element>
+               <block-title>
+                  <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
+               </block-title>
+               <column-wide-element>
+            <p>Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei Saxon diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.</p>
+         </column-wide-element>
+               <block-title>
+                  <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
+               </block-title>
+               <column-wide-element>
+            <p>Match-Regeln werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <procedure type="ol">
+                  <step>
+                     <action>
+                        <p>Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Templates mit einem höheren Priority Attribut haben Vorrang.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</p>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p>
+                        <ul>
+                           <li>
+                              <p>Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</p>
+                           </li>
+                           <li>
+                              <p>Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</p>
+                           </li>
+                           <li>
+                              <p>Einfache Elementnamen (z.B. "para") haben Prio 0.</p>
+                           </li>
+                           <li>
+                              <p>Wildcards (z.B. *, @*) haben Priorität -0.25</p>
+                           </li>
+                           <li>
+                              <p>Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</p>
+                           </li>
+                           <li>
+                              <p>In allen anderen Fällen ist die Prio 0.5.</p>
+                           </li>
+                        </ul>
+                        <p>Beispiele:</p>
+                        <ul>
+                           <li>
+                              <p>para -&gt; 0</p>
+                           </li>
+                           <li>
+                              <p>h:* -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>* -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>node() -&gt; -0.25</p>
+                           </li>
+                           <li>
+                              <p>contents/para -&gt; 0.5</p>
+                           </li>
+                           <li>
+                              <p>contents/* -&gt; 0.5</p>
+                           </li>
+                        </ul>
+                     </action>
+                  </step>
+                  <step>
+                     <action>
+                        <p>Mit einer Kommandozeilen-Option kann bei Saxon festgelegt werden, dass die Transformation abbricht, sobald es einen Konflikt bei der Regelauswertung gibt.</p>
+                     </action>
+                  </step>
+               </procedure>
+         </column-wide-element>
+               <block-title>
+                  <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
+               </block-title>
+               <column-wide-element>
+            <p>Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel einzubinden, bspw:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="*" mode="#all"/&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer XML-2-XML Migration automatisch Knoten im XML Baum abgetrennt werden sollen, für die keine Match-Regel existiert.</p>
+         </column-wide-element>
+               <block-title>
+                  <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
+               </block-title>
+               <column-wide-element>
+            <p>Wie oben schon verdeutlicht werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</p>
+                  </li>
+                  <li>
+                     <p>Dabei sollen Seminar-Elemente markiert werden, die nicht besonderen Bedingungen entsprechen:</p>
+                     <ul>
+                        <li>
+                           <p>Das Seminar-Element hat ein Feld "Ende-Datum" das abgelaufen ist.</p>
+                        </li>
+                        <li>
+                           <p>Am Seminar-Element sind mehrere Dozenten angestellt, obwohl das Seminar-Element vom Type "Single" ist.</p>
+                        </li>
+                        <li>
+                           <p>em Seminar-Element ist kein Dozent zugeordnet.</p>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <p>Sicherlich kann es Seminar-Elemente geben, die alle drei Bedingungen erfüllen. Um das Error-Log aber nicht zu überfüllen, sollen die Filter nach ihren Prioritäten ausgeführt werden.</p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>In Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
+              priority="30" mode="filter-network"&gt; 
+  &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt; 
+
+&lt;xsl:template match="Seminar[Type eq 'SINGLE' and count(dozenten/dozent) gt 1]"
+              priority="20" mode="filter-network"&gt; 
+  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;dozenten-count&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt; 
+
+&lt;xsl:template match="Seminar[not(dozenten/dozent)]" mode="filter-network"&gt; 
+  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
+    &lt;xsl:attribute name="reason"&gt;dozenten-missing&lt;/xsl:attribute&gt; 
+    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
+  &lt;/xsl:element&gt; 
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <block-title>
+                  <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
+               </block-title>
+               <column-wide-element>
+            <p>An allen Templates hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
+                        id="5c94c28f-26eb-4c44-88ca-72a736b38ea1">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
+  &lt;div class="toc-entry"&gt;
+    &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
+  &lt;/div&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match="title"&gt;
+  &lt;h1&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/h1&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:for-each select="chapter"&gt;
+  &lt;xsl:apply-templates select="title" mode="toc"&gt;
+&lt;/xsl:for-each&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
+   </chapter>
+   <chapter hyphenation="yes" chapterpage="no" id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
+            ismodule="no">
+      
+         <title>
+            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
+         </title>
+         
+            <column-wide-element>
+         <p>Hands-on Materiel mit Beispielquelltexten.</p>
+      </column-wide-element>
+         
+      
       <chapter hyphenation="yes" chapterpage="no" id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
                ismodule="no">
          
@@ -1723,12 +1780,174 @@ würde.</p>
             
          
       </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+               ismodule="no">
+         
+            <title>
+               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+            </title>
+            
+               <column-wide-element>
+            <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
+oder übel mit dem Thema Namespaces (NS) auseinander setzen müssen, um Konflikte in den 
+Elementselektoren zu vermeiden.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
+dass unerwartet ein Namespace in die Ausgabe generiert wird,
+den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wurde.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
+dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
+wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:stylesheet version="2.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:tektur="https://namespace-eigener-xslt-funktionen"
+  xmlns="http://namespace-in-der-xml-eingabe.com/"
+  xpath-default-namespace="https://namespace-der-konfigdatei.com/"
+  exclude-result-prefixes="#all"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>Der <b>xsl</b> Namespace ist klar</p>
+                  </li>
+                  <li>
+                     <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
+nach der XML Schema Spezifikation<footnote>
+                        <desc>https://de.wikipedia.org/wiki/XML_Schema</desc>
+                     </footnote> und somit die 
+bessere Validierung des Stylesheets zur Compile-Zeit.</p>
+                  </li>
+                  <li>
+                     <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
+wie z.B. auch das Einbinden der FunctX Bibliothek<footnote>
+                        <desc>http://www.xsltfunctions.com/</desc>
+                     </footnote>
+                  </p>
+                  </li>
+                  <li>
+                     <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
+                  </li>
+                  <li>
+                     <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
+In diesem Feld würde ich den NS einer Konfigurations- oder separaten Datendatei angeben.</p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
+GGf. empfiehlt es sich, die Eingabe vor der Verabeitung zu normalisieren und Elemente ggf. umzubennen.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <danger>
+                  <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
+an einem ganz bestimmten Element hängen - so kannp bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</cause>
+                  <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
+               </danger>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Namespaces in der Eingabe werden über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namspace
+schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten Kontextknoten ab:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
+                  </li>
+                  <li>
+                     <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
+Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
+dass der Default NAmespace auch tatsächlich in die Ausgabe kommt.</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:element name="meinelement" namespace=""&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird ein Element ohne Namespace Angabe in die Ausgabe geschrieben. Es würde dann
+den Default-Namespace der Ausgabe erben. Es gibt auch ein Attribut am xsl:copy Element,
+das den Vorgang des Namespace-Kopierens steuern kann:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="p"&gt;
+  &lt;xsl:copy copy-namespaces="no"&gt;
+     &lt;xsl:apply-templates/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
+Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich nicht darauf verlassen.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
+weiterzuvererben:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="@* | node()"&gt;
+   &lt;xsl:copy inherit-namespaces="no"&gt;
+     &lt;xsl:apply-templates select="@* | node()"/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <block-title>
+                  <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
+               </block-title>
+               <column-wide-element>
+            <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
+z.B. dazu auf einer NoSQL Datenbank Daten aus unterschiedlichen Quellen
+zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
+funktioniert.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
+kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>xquery version "1.0-ml";
+
+import module namespace tektur = "http://www.teturcms.de/xquery/common" 
+                                  at "common.xqy";
+import module namespace mem = "http://xqdev.com/in-mem-update" 
+                                  at '/MarkLogic/appservices/utils/in-mem-update.xqy';
+declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
+declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
+declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
+im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
+Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
+eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
+vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
             ismodule="no">
       
          <title>
-            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Sonstiges </title>
+            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
          </title>
          
             <column-wide-element>

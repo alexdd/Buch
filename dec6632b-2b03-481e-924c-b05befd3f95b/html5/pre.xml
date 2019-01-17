@@ -4,9 +4,9 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Jan 16 2019 20:01:39 </date-of-last-change>
+      <date-of-last-change>Thu Jan 17 2019 16:26:40 </date-of-last-change>
       <language>de-DE</language>
-      <status>21</status>
+      <status>28</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -65,11 +65,475 @@ www.github.com/alexdd/Buch</cover-text>
          
       
    </chapter>
+   <chapter hyphenation="yes" chapterpage="no" id="792c9845-7c63-4a18-8aee-1878763200b5"
+            ismodule="no">
+      
+         <title>
+            <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete</title>
+         </title>
+         
+            <p>
+               <b>XML,</b>
+               <b>XSLT</b>, <b>XPATH</b>, <b>XSL-FO</b> und <b>XQuery</b> sind Techniken um baumstrukturierte Daten - im Vergleich zu relationalen Daten - aus verschiedenen Quellen ineinader zu überführen, abzuspeichern, zu versenden, darzustellen und auszuwerten. Einfach gesprochen geht es um die Weiterverarbeitung solcher Daten - das XML kann dabei sowohl die Nutzdaten als auch die Steuerdaten tragen.</p>
+            <p>Vom Aussehen her sind XML Daten im Prinzip Textdaten. Sie können sehr einfach mit einem Texteditor erstellt werden. Im Gegensatz zu Multimedia-Daten sind keine komplexen Tools, wie z.B. ein Grafikeditor, erforderlich.</p>
+            <p>Auch relationale Daten können in Form von Tabellen, als Excel Tabelle oder bspw. als kommaseparierte Textdatei, aus einem System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und weiterer Kategorisierung dieser Informationseinheiten mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein Baum, der die Hierarchische Ordnung der Daten widerspiegeln sollte.</p>
+            <p>Diese Baumstrukturen sind maschinell lesbar und die Daten können, bevor sie von einem Versender zu einem Empfänger gehen, mittels eines automatischen Prozesses validiert werden. Dabei können sowohl der Inhalt als auch die Syntax anhand von definierten Regeln (Schemas) genau überprüft werden.</p>
+            <p>Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubt.</p>
+            <p>Der Übergang von SGML zu XML hat die Sache ein bisschen vereinfacht, eine weitere Vereinfachung brachte JSON als Standard. JSON wird gerne im Webbereich eingesetzt um baumstrukturierte Daten zu verarbeiten. JSON ist jedoch nicht so gut maschinenlesbar und es gibt noch nicht so viele Werkzeuge wie z.B. Code Editoren dafür.</p>
+            <p>Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern, um die es sich im weiteren Text drehen wird:</p>
+            <ul>
+               <li>
+                  <p>
+                     <b>XML</b> ist das Datenformat. Auf XML arbeiten die anderen Technologien. XML ist immer Input für diese Tools.</p>
+               </li>
+               <li>
+                  <p>
+                     <b>XSLT</b> transformiert eine XML Instanz in eine andere. Plain Text ist eine Aneinanderreihung von Text Knoten</p>
+               </li>
+               <li>
+                  <p>
+                     <b>XPATH</b> erlaubt es, bestimmte Knoten in einem XML Dokument über bedingte Pfadausdrücke zu selektieren.</p>
+               </li>
+               <li>
+                  <p>
+                     <b>XSL-FO</b> ist eine weitere XML basierte Auszeichnungssprache, die ein XSL-FO Prozessor einlesen kann, um daraus z.B. ein PDF zu generieren. </p>
+               </li>
+               <li>
+                  <p>
+                     <b>XQuery</b> ist eine Abfragesprache ählich zu SQL, jedoch werden damit nicht relationale Daten abgefragt sondern baumstrukturierte.</p>
+               </li>
+            </ul>
+         
+      
+      <chapter hyphenation="yes" chapterpage="no" id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
+               ismodule="no">
+         
+            <title>
+               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Einige aktuelle und vergangene Szenarien</title>
+            </title>
+            
+               <p>Einige Beispiele - aktuell und aus vergangenen Tagen:</p>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="41d79ec9-92fe-4046-b268-15f23250b908d6e6">
+                  
+                     <title>
+                        <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
+                     </title>
+                     <p>Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre.Ich denke, u.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
+                     <p>Betrachten wir das folgende einfache XML Beispiel:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;document&gt;
+&lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Kapitel 1&lt;/title&gt;
+    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
+    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Kapitel 2&lt;/title&gt;
+    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
+    &lt;content&gt;Im Prinzip ist es ganz einfach.&lt;/content&gt;
+  &lt;/chapter&gt;
+&lt;/document&gt;</verbatim>
+                     <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen.Fügt man eine Processing Instruction<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/Verarbeitungsanweisung">
+                  <sup>↗↗</sup>
+               </url> am Anfang ein, wird ein XSLT Stylesheet vom Browser herangezogen und vor der Darstellung im Browser wird die so deklarierte XML Transformation ausgeführt:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="formatiermich.xsl" ?&gt;
+&lt;document&gt;
+  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
+  &lt;chapter&gt;
+[...]</verbatim>
+                     <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
+                     <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="document"&gt;
+  &lt;body&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/body&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="document/title"&gt;     
+    &lt;h1&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/h1&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="chapter"&gt;
+    &lt;div class="chapter"&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/div&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="chapter/title"&gt;
+    &lt;h2&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/h2&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="chapter/intro"&gt;
+    &lt;div class="intro"&gt;
+      &lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;      
+    &lt;/div&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="chapter/content"&gt;
+    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;    
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</verbatim>
+                     <p>Die Processing Instruction hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="622039ee-1eee-40ec-8f6e-307fd4efe268d6e25">
+                  
+                     <title>
+                        <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
+                     </title>
+                     <p>Auch eine serverseitige Konvertierung ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/Wireless_Application_Protocol">
+                  <sup>↗↗</sup>
+               </url> für unterschiedliche Handy-Modelle.</p>
+                     <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
+                     <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wap.org/DTD/wml_1.1.xml"&gt;
+&lt;wml&gt;
+  &lt;head&gt;
+    &lt;meta name="title" content="Das ultimative Zwei-Kapitel Dokument"/&gt;   
+  &lt;/head&gt; 
+  &lt;card id="chapter1" title="Kapitel 1"&gt;
+    &lt;p&gt;&lt;i&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/i&gt;&lt;/p&gt;        
+    &lt;p&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/p&gt;  
+  &lt;/card&gt;
+  &lt;card id="chapter2" title="Kapitel 2"&gt;
+    &lt;p&gt;&lt;i&gt;Hier wird erklärt, wie der Hase läuft.&lt;/i&gt;&lt;/p&gt;
+    &lt;p&gt;Im Prinzip ist es ganz einfach.&lt;/p&gt;
+  &lt;/card&gt;
+&lt;/wml&gt;</verbatim>
+                     <p>Eine XSLT Transformation, die die XML Daten von oben in diese WML Darstellung überführt, könnte z.B. so implementiert werden:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:output
+    doctype-public="-//WAPFORUM//DTD WML 1.2//EN" 
+    doctype-system="http://www.wapforum.org/DTD/wml12.dtd"
+    indent="yes"/&gt;
+    
+  &lt;xsl:template match="document"&gt;
+    &lt;wml&gt;
+      &lt;xsl:apply-templates/&gt;
+    &lt;/wml&gt;
+  &lt;/xsl:template&gt;
+    
+  &lt;xsl:template match="document/title"&gt;
+    &lt;head&gt;
+      &lt;meta name="title"&gt;
+        &lt;xsl:attribute name="content"&gt;
+          &lt;xsl:value-of select="."/&gt;               
+        &lt;/xsl:attribute&gt;
+      &lt;/meta&gt;      
+    &lt;/head&gt;
+  &lt;/xsl:template&gt;
+    
+  &lt;xsl:template match="chapter"&gt;
+    &lt;card id="{concat('chapter',count(preceding-sibling::chapter)+1)}"&gt;
+      &lt;xsl:attribute name="title"&gt;
+        &lt;xsl:value-of select="title"/&gt;
+      &lt;/xsl:attribute&gt;
+      &lt;xsl:apply-templates select="*[not(self::title)]"/&gt;
+    &lt;/card&gt;
+  &lt;/xsl:template&gt;
+  
+  &lt;xsl:template match="node()|@*"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="node()|@*"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
+  
+  &lt;xsl:template match="processing-instruction()"/&gt;
+  
+  &lt;xsl:template match="intro"&gt;
+    &lt;p&gt;&lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+  
+  &lt;xsl:template match="content"&gt;
+    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</verbatim>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="954beb06-1ccc-493b-b5b3-89569d9c4ce0d6e40">
+                  
+                     <title>
+                        <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
+                     </title>
+                     <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/EPUB">
+                  <sup>↗↗</sup>
+               </url> ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
+                     <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/CHM_(Dateiformat)">
+                  <sup>↗↗</sup>
+               </url>, EclipseHelp<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.ibm.com/developerworks/library/os-echelp/index.html">
+                  <sup>↗↗</sup>
+               </url>, JavaHelp<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://en.wikipedia.org/wiki/JavaHelp">
+                  <sup>↗↗</sup>
+               </url>, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/FrameMaker">
+                  <sup>↗↗</sup>
+               </url>,  oder XML Standard Austauschformate, wie DITA, S1000D<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/S1000D">
+                  <sup>↗↗</sup>
+               </url>, PI-MOD<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.i4icm.de/forschungstransfer/pi-mod/">
+                  <sup>↗↗</sup>
+               </url>, JATS<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite">
+                  <sup>↗↗</sup>
+               </url> oder TEI<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.wikipedia.org/wiki/Text_Encoding_Initiative">
+                  <sup>↗↗</sup>
+               </url>.</p>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="e941fdee-d46c-41ab-ae2c-a5b4797b92d7d6e47">
+                  
+                     <title>
+                        <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
+                     </title>
+                     <p>Kryptische XML Log-, Daten- oder Konfigurationsfiles können leicht mit XSLT menschenlesbar formatiert werden&#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;?&lt;?xml-stylesheet type="text/xsl" href="de.xsl"?&gt;
+&lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+  xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+  xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:language="de"
+  jcr:mixinTypes="[mix:language]"
+  jcr:primaryType="sling:Folder"&gt;
+&lt;b_manual 
+  jcr:primaryType="sling:MessageEntry"
+  sling:message="Bedienungsanleitung"/&gt;
+  &lt;b_warning
+    jcr:primaryType="sling:MessageEntry"
+    sling:message="Warnung"/&gt;
+  &lt;b_danger
+    jcr:primaryType="sling:MessageEntry"
+    sling:message="Vorsicht"/&gt;
+  &lt;b_note
+    jcr:primaryType="sling:MessageEntry"
+    sling:message="Notiz"/&gt;
+  &lt;b_notice
+    jcr:primaryType="sling:MessageEntry"
+    sling:message="Hinweis"/&gt;
+  [...]</verbatim>
+                     <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+&lt;xsl:stylesheet version="1.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  xmlns:sling="http://sling.apache.org/jcr/sling/1.0"&gt;
+  
+  &lt;xsl:template match="jcr:root"&gt;
+    &lt;html&gt;
+      &lt;table border="1" cellpadding="5" cellspacing="5"&gt;
+        &lt;xsl:apply-templates/&gt;
+      &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+  
+  &lt;xsl:template match="*"&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;xsl:value-of select="concat(count(preceding::*[@sling:message]) + 1,'.')"/&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;xsl:value-of select="name()"/&gt;
+      &lt;/td&gt;
+      &lt;td contenteditable="true"&gt;
+        &lt;xsl:value-of select="@sling:message"/&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</verbatim>
+                     <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="1d822914-5d25-47a8-baf6-4ca9d9e01dd6d6e60">
+                  
+                     <title>
+                        <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
+                     </title>
+                     <p>Nachdem eine SVG Grafik im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden.&#8232;Über das HTML5 &lt;svg&gt; Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
+                     <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="chart.xsl" ?&gt;
+&lt;document&gt;
+  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Kapitel 1&lt;/title&gt;
+    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
+    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Kapitel 2&lt;/title&gt;
+    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
+    &lt;content&gt;Im Prinzip ist es ganz einfach. Betrachten wir doch drei gelbe Blöcke:
+    &lt;/content&gt;
+    &lt;block/&gt;
+    &lt;block/&gt;
+    &lt;block/&gt;
+  &lt;/chapter&gt;
+&lt;/document&gt;</verbatim>
+                     <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
+                     <verbatim>&lt;xsl:template match="block"&gt;
+   &lt;svg style="background-color:yellow" width="30" height="30" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+     xmlns="http://www.w3.org/2000/svg"/&gt;
+  &lt;br/&gt;
+  &lt;br/&gt;
+&lt;/xsl:template&gt;</verbatim>
+                     <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
+                     <p>
+                        <b>Weiterführende Links:</b>
+                     </p>
+                     <ul>
+                        <li>
+                           <p>Client-side image generation with SVG and XSLT<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                          address="http://surguy.net/articles/client-side-svg.xml">
+                        <sup>↗↗</sup>
+                     </url>
+                  </p>
+                        </li>
+                        <li>
+                           <p>Knotentyp Visualisierung im Apache Jack Rabbit Projekt<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                          address="http://jackrabbit.apache.org/jcr/node-type-visualization.html">
+                        <sup>↗↗</sup>
+                     </url>
+                  </p>
+                        </li>
+                     </ul>
+                  
+               </chapter>
+            
+         
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="151a9719-a32a-4fca-a55c-769b47a73b34"
+               ismodule="no">
+         
+            <title>
+               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
+            </title>
+            
+               <p>Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="101270cc-3e0f-4d54-ac4c-fde924322fb1d6e6">
+                  
+                     <title>
+                        <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
+                     </title>
+                     <p>Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD oder TEI.
+Vorteile:</p>
+                     <ul>
+                        <li>
+                           <p>Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</p>
+                        </li>
+                        <li>
+                           <p>Strikte Trennung von Content ( / Semantik) und Layout/Design.</p>
+                        </li>
+                        <li>
+                           <p>Auf der XML Quelle sind XML Features möglich, wie:
+	
+		Modularisierung: Erlaubt die fein-granulare Wiederverwendung von Content-Bausteinen, sowie das Verlinken, Filtern, Suchen und Exportieren derselben.
+		Generalisierung ist ein DITA Konzept, welches die Wiederverendung von angepassten Topics in anderen DITA Systemen ermöglicht.
+		Gültigkeiten erlauben die bedingte Anwendung von Content-Bestandteilen auf Satz und Wort-Ebene.
+		Versionierung und Diffing - Vergleich von Änderungen zwischen Versionen
+		Intelligente Querverweise: Ein Link zwischen einzelnen XML Topics  bleibt versionstreu.
+		Automatischer Satz, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
+	
+	</p>
+                        </li>
+                        <li>
+                           <p>Veraltete Formate können ausgetauscht werden, ohne dass der Content geändert werden muss oder verlorengeht.</p>
+                        </li>
+                        <li>
+                           <p>Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</p>
+                        </li>
+                        <li>
+                           <p>Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</p>
+                        </li>
+                        <li>
+                           <p>Nur das XML muss in der Datenhaltung persistiert werden</p>
+                        </li>
+                        <li>
+                           <p>Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
+                        </li>
+                     </ul>
+                     <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die Single-Source-Multi-Channel Strategie.</p>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="60cb4615-e72f-44cc-87ad-1080d73d6715d6e38">
+                  
+                     <title>
+                        <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
+                     </title>
+                     <p>Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.</p>
+                     <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>
+               <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://argouml.tigris.org">
+                  <sup>↗↗</sup>
+               </url>.</p>
+                     <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) :
+<b>Butterfly Code Generator</b>
+               <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://butterflycode.sourceforge.net">
+                  <sup>↗↗</sup>
+               </url>
+            </p>
+                     <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html">
+                  <sup>↗↗</sup>
+               </url>.</p>
+                  
+               </chapter>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="54c0579c-77db-423f-878e-a939c5b076bcd6e55">
+                  
+                     <title>
+                        <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
+                     </title>
+                     <p>Für jede erdenkliche Art der Migration eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen und komplexen Transformation an.</p>
+                     <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
+Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://www.saxonica.com/html/documentation/sourcedocs/streaming/">
+                  <sup>↗↗</sup>
+               </url>.</p>
+                  
+               </chapter>
+            
+         
+      </chapter>
+   </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="31a92dc0-959c-49a1-b06e-01e2369e050e"
             ismodule="no">
       
          <title>
-            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Theorie </title>
+            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
          </title>
          
             <p>XSL Stylesheets finden hauptsächlich Anwendung in der Technischen Dokumentation. Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert.</p>
@@ -365,435 +829,12 @@ www.github.com/alexdd/Buch</cover-text>
             ismodule="no">
       
          <title>
-            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Praxis </title>
+            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
          </title>
          
             <p>Hands-on Materiel mit Beispielquelltexten.</p>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-               ismodule="no">
-         
-            <title>
-               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Anwendungsbeispiele</title>
-            </title>
-            
-               <p>Einige Beispiele - aktuell und aus vergangenen Tagen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="4bf2b25f-e483-4835-b734-2668331d5b0bd6e6">
-                  
-                     <title>
-                        <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
-                     </title>
-                     <p>Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre.Ich denke, u.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
-                     <p>Betrachten wir das folgende einfache XML Beispiel:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;document&gt;
-&lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 1&lt;/title&gt;
-    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
-    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
-  &lt;/chapter&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 2&lt;/title&gt;
-    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
-    &lt;content&gt;Im Prinzip ist es ganz einfach.&lt;/content&gt;
-  &lt;/chapter&gt;
-&lt;/document&gt;</verbatim>
-                     <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen.Fügt man eine Processing Instruction<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/Verarbeitungsanweisung">
-                  <sup>↗↗</sup>
-               </url> am Anfang ein, wird ein XSLT Stylesheet vom Browser herangezogen und vor der Darstellung im Browser wird die so deklarierte XML Transformation ausgeführt:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="formatiermich.xsl" ?&gt;
-&lt;document&gt;
-  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
-[...]</verbatim>
-                     <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
-                     <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
-
-  &lt;xsl:template match="/"&gt;
-    &lt;html&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="document"&gt;
-  &lt;body&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/body&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="document/title"&gt;     
-    &lt;h1&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/h1&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="chapter"&gt;
-    &lt;div class="chapter"&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/div&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="chapter/title"&gt;
-    &lt;h2&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/h2&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="chapter/intro"&gt;
-    &lt;div class="intro"&gt;
-      &lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;      
-    &lt;/div&gt;
-  &lt;/xsl:template&gt;
-
-  &lt;xsl:template match="chapter/content"&gt;
-    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;    
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;
-</verbatim>
-                     <p>Die Processing Instruction hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="0a5be3cb-7fee-4448-8eaa-33cec9c28221d6e25">
-                  
-                     <title>
-                        <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
-                     </title>
-                     <p>Auch eine serverseitige Konvertierung ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/Wireless_Application_Protocol">
-                  <sup>↗↗</sup>
-               </url> für unterschiedliche Handy-Modelle.</p>
-                     <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
-                     <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wap.org/DTD/wml_1.1.xml"&gt;
-&lt;wml&gt;
-  &lt;head&gt;
-    &lt;meta name="title" content="Das ultimative Zwei-Kapitel Dokument"/&gt;   
-  &lt;/head&gt; 
-  &lt;card id="chapter1" title="Kapitel 1"&gt;
-    &lt;p&gt;&lt;i&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/i&gt;&lt;/p&gt;        
-    &lt;p&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/p&gt;  
-  &lt;/card&gt;
-  &lt;card id="chapter2" title="Kapitel 2"&gt;
-    &lt;p&gt;&lt;i&gt;Hier wird erklärt, wie der Hase läuft.&lt;/i&gt;&lt;/p&gt;
-    &lt;p&gt;Im Prinzip ist es ganz einfach.&lt;/p&gt;
-  &lt;/card&gt;
-&lt;/wml&gt;</verbatim>
-                     <p>Eine XSLT Transformation, die die XML Daten von oben in diese WML Darstellung überführt, könnte z.B. so implementiert werden:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
-
-  &lt;xsl:output
-    doctype-public="-//WAPFORUM//DTD WML 1.2//EN" 
-    doctype-system="http://www.wapforum.org/DTD/wml12.dtd"
-    indent="yes"/&gt;
-    
-  &lt;xsl:template match="document"&gt;
-    &lt;wml&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/wml&gt;
-  &lt;/xsl:template&gt;
-    
-  &lt;xsl:template match="document/title"&gt;
-    &lt;head&gt;
-      &lt;meta name="title"&gt;
-        &lt;xsl:attribute name="content"&gt;
-          &lt;xsl:value-of select="."/&gt;               
-        &lt;/xsl:attribute&gt;
-      &lt;/meta&gt;      
-    &lt;/head&gt;
-  &lt;/xsl:template&gt;
-    
-  &lt;xsl:template match="chapter"&gt;
-    &lt;card id="{concat('chapter',count(preceding-sibling::chapter)+1)}"&gt;
-      &lt;xsl:attribute name="title"&gt;
-        &lt;xsl:value-of select="title"/&gt;
-      &lt;/xsl:attribute&gt;
-      &lt;xsl:apply-templates select="*[not(self::title)]"/&gt;
-    &lt;/card&gt;
-  &lt;/xsl:template&gt;
-  
-  &lt;xsl:template match="node()|@*"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="node()|@*"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
-  
-  &lt;xsl:template match="processing-instruction()"/&gt;
-  
-  &lt;xsl:template match="intro"&gt;
-    &lt;p&gt;&lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;&lt;/p&gt;
-  &lt;/xsl:template&gt;
-  
-  &lt;xsl:template match="content"&gt;
-    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</verbatim>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="d30a54b4-a08c-40b9-b701-91be5bb340cdd6e40">
-                  
-                     <title>
-                        <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
-                     </title>
-                     <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/EPUB">
-                  <sup>↗↗</sup>
-               </url> ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
-                     <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/CHM_(Dateiformat)">
-                  <sup>↗↗</sup>
-               </url>, EclipseHelp<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://www.ibm.com/developerworks/library/os-echelp/index.html">
-                  <sup>↗↗</sup>
-               </url>, JavaHelp<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://en.wikipedia.org/wiki/JavaHelp">
-                  <sup>↗↗</sup>
-               </url>, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/FrameMaker">
-                  <sup>↗↗</sup>
-               </url>,  oder XML Standard Austauschformate, wie DITA, S1000D<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/S1000D">
-                  <sup>↗↗</sup>
-               </url>, PI-MOD<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://www.i4icm.de/forschungstransfer/pi-mod/">
-                  <sup>↗↗</sup>
-               </url>, JATS<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite">
-                  <sup>↗↗</sup>
-               </url> oder TEI<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://de.wikipedia.org/wiki/Text_Encoding_Initiative">
-                  <sup>↗↗</sup>
-               </url>.</p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="7c613c35-961e-46a6-af57-6778858a71bcd6e47">
-                  
-                     <title>
-                        <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
-                     </title>
-                     <p>Kryptische XML Log-, Daten- oder Konfigurationsfiles können leicht mit XSLT menschenlesbar formatiert werden&#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;?&lt;?xml-stylesheet type="text/xsl" href="de.xsl"?&gt;
-&lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-  xmlns:jcr="http://www.jcp.org/jcr/1.0" 
-  xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
-  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-  jcr:language="de"
-  jcr:mixinTypes="[mix:language]"
-  jcr:primaryType="sling:Folder"&gt;
-&lt;b_manual 
-  jcr:primaryType="sling:MessageEntry"
-  sling:message="Bedienungsanleitung"/&gt;
-  &lt;b_warning
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Warnung"/&gt;
-  &lt;b_danger
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Vorsicht"/&gt;
-  &lt;b_note
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Notiz"/&gt;
-  &lt;b_notice
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Hinweis"/&gt;
-  [...]</verbatim>
-                     <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;xsl:stylesheet version="1.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:jcr="http://www.jcp.org/jcr/1.0"
-  xmlns:sling="http://sling.apache.org/jcr/sling/1.0"&gt;
-  
-  &lt;xsl:template match="jcr:root"&gt;
-    &lt;html&gt;
-      &lt;table border="1" cellpadding="5" cellspacing="5"&gt;
-        &lt;xsl:apply-templates/&gt;
-      &lt;/table&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
-  
-  &lt;xsl:template match="*"&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;xsl:value-of select="concat(count(preceding::*[@sling:message]) + 1,'.')"/&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;xsl:value-of select="name()"/&gt;
-      &lt;/td&gt;
-      &lt;td contenteditable="true"&gt;
-        &lt;xsl:value-of select="@sling:message"/&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</verbatim>
-                     <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="e2d39407-3980-4050-86fa-aa653f737cd2d6e60">
-                  
-                     <title>
-                        <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
-                     </title>
-                     <p>Nachdem eine SVG Grafik im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden.&#8232;Über das HTML5 &lt;svg&gt; Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
-                     <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
-                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="chart.xsl" ?&gt;
-&lt;document&gt;
-  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 1&lt;/title&gt;
-    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
-    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
-  &lt;/chapter&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 2&lt;/title&gt;
-    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
-    &lt;content&gt;Im Prinzip ist es ganz einfach. Betrachten wir doch drei gelbe Blöcke:
-    &lt;/content&gt;
-    &lt;block/&gt;
-    &lt;block/&gt;
-    &lt;block/&gt;
-  &lt;/chapter&gt;
-&lt;/document&gt;</verbatim>
-                     <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
-                     <verbatim>&lt;xsl:template match="block"&gt;
-   &lt;svg style="background-color:yellow" width="30" height="30" 
-     xmlns:xlink="http://www.w3.org/1999/xlink" 
-     xmlns="http://www.w3.org/2000/svg"/&gt;
-  &lt;br/&gt;
-  &lt;br/&gt;
-&lt;/xsl:template&gt;</verbatim>
-                     <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
-                     <p>
-                        <b>Weiterführende Links:</b>
-                     </p>
-                     <ul>
-                        <li>
-                           <p>Client-side image generation with SVG and XSLT<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                          address="http://surguy.net/articles/client-side-svg.xml">
-                        <sup>↗↗</sup>
-                     </url>
-                  </p>
-                        </li>
-                        <li>
-                           <p>Knotentyp Visualisierung im Apache Jack Rabbit Projekt<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                          address="http://jackrabbit.apache.org/jcr/node-type-visualization.html">
-                        <sup>↗↗</sup>
-                     </url>
-                  </p>
-                        </li>
-                     </ul>
-                  
-               </chapter>
-            
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="151a9719-a32a-4fca-a55c-769b47a73b34"
-               ismodule="no">
-         
-            <title>
-               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Komplexe Anwendung</title>
-            </title>
-            
-               <p>Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="0010aab5-f425-4968-bf0b-f22bc59159b1d6e6">
-                  
-                     <title>
-                        <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
-                     </title>
-                     <p>Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD oder TEI.
-Vorteile:</p>
-                     <ul>
-                        <li>
-                           <p>Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</p>
-                        </li>
-                        <li>
-                           <p>Strikte Trennung von Content ( / Semantik) und Layout/Design.</p>
-                        </li>
-                        <li>
-                           <p>Auf der XML Quelle sind XML Features möglich, wie:
-	
-		Modularisierung: Erlaubt die fein-granulare Wiederverwendung von Content-Bausteinen, sowie das Verlinken, Filtern, Suchen und Exportieren derselben.
-		Generalisierung ist ein DITA Konzept, welches die Wiederverendung von angepassten Topics in anderen DITA Systemen ermöglicht.
-		Gültigkeiten erlauben die bedingte Anwendung von Content-Bestandteilen auf Satz und Wort-Ebene.
-		Versionierung und Diffing - Vergleich von Änderungen zwischen Versionen
-		Intelligente Querverweise: Ein Link zwischen einzelnen XML Topics  bleibt versionstreu.
-		Automatischer Satz, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
-	
-	</p>
-                        </li>
-                        <li>
-                           <p>Veraltete Formate können ausgetauscht werden, ohne dass der Content geändert werden muss oder verlorengeht.</p>
-                        </li>
-                        <li>
-                           <p>Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</p>
-                        </li>
-                        <li>
-                           <p>Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</p>
-                        </li>
-                        <li>
-                           <p>Nur das XML muss in der Datenhaltung persistiert werden</p>
-                        </li>
-                        <li>
-                           <p>Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
-                        </li>
-                     </ul>
-                     <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die Single-Source-Multi-Channel Strategie.</p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="ddc898c3-a0c6-45e4-8470-f04e3ccb9603d6e38">
-                  
-                     <title>
-                        <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
-                     </title>
-                     <p>Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.</p>
-                     <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>
-               <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="http://argouml.tigris.org">
-                  <sup>↗↗</sup>
-               </url>.</p>
-                     <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) :
-<b>Butterfly Code Generator</b>
-               <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="http://butterflycode.sourceforge.net">
-                  <sup>↗↗</sup>
-               </url>
-            </p>
-                     <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html">
-                  <sup>↗↗</sup>
-               </url>.</p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="30786084-ece7-4b45-a77b-88512e4fe461d6e55">
-                  
-                     <title>
-                        <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
-                     </title>
-                     <p>Für jede erdenkliche Art der Migration eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen und komplexen Transformation an.</p>
-                     <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
-Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="http://www.saxonica.com/html/documentation/sourcedocs/streaming/">
-                  <sup>↗↗</sup>
-               </url>.</p>
-                  
-               </chapter>
-            
-         
-      </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
                ismodule="no">
          
@@ -1450,12 +1491,135 @@ würde.</p>
             
          
       </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+               ismodule="no">
+         
+            <title>
+               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+            </title>
+            
+               <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
+oder übel mit dem Thema Namespaces (NS) auseinander setzen müssen, um Konflikte in den 
+Elementselektoren zu vermeiden.</p>
+               <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
+dass unerwartet ein Namespace in die Ausgabe generiert wird,
+den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wurde.</p>
+               <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
+dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
+wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
+               <verbatim>&lt;xsl:stylesheet version="2.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:tektur="https://namespace-eigener-xslt-funktionen"
+  xmlns="http://namespace-in-der-xml-eingabe.com/"
+  xpath-default-namespace="https://namespace-der-konfigdatei.com/"
+  exclude-result-prefixes="#all"&gt;</verbatim>
+               <ul>
+                  <li>
+                     <p>Der <b>xsl</b> Namespace ist klar</p>
+                  </li>
+                  <li>
+                     <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
+nach der XML Schema Spezifikation<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                       address="https://de.wikipedia.org/wiki/XML_Schema">
+                     <sup>↗↗</sup>
+                  </url> und somit die 
+bessere Validierung des Stylesheets zur Compile-Zeit.</p>
+                  </li>
+                  <li>
+                     <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
+wie z.B. auch das Einbinden der FunctX Bibliothek<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                       address="http://www.xsltfunctions.com/">
+                     <sup>↗↗</sup>
+                  </url>
+               </p>
+                  </li>
+                  <li>
+                     <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
+                  </li>
+                  <li>
+                     <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
+In diesem Feld würde ich den NS einer Konfigurations- oder separaten Datendatei angeben.</p>
+                  </li>
+               </ul>
+               <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
+GGf. empfiehlt es sich, die Eingabe vor der Verabeitung zu normalisieren und Elemente ggf. umzubennen.</p>
+               <danger>
+                  <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
+an einem ganz bestimmten Element hängen - so kannp bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</cause>
+                  <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
+               </danger>
+               <p>Namespaces in der Eingabe werden über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namspace
+schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten Kontextknoten ab:</p>
+               <ul>
+                  <li>
+                     <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
+                  </li>
+                  <li>
+                     <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
+                  </li>
+               </ul>
+               <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
+               <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
+               <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
+Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
+dass der Default NAmespace auch tatsächlich in die Ausgabe kommt.</p>
+               <verbatim>&lt;xsl:element name="meinelement" namespace=""&gt;</verbatim>
+               <p>Hier wird ein Element ohne Namespace Angabe in die Ausgabe geschrieben. Es würde dann
+den Default-Namespace der Ausgabe erben. Es gibt auch ein Attribut am xsl:copy Element,
+das den Vorgang des Namespace-Kopierens steuern kann:</p>
+               <verbatim>&lt;xsl:template match="p"&gt;
+  &lt;xsl:copy copy-namespaces="no"&gt;
+     &lt;xsl:apply-templates/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+               <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
+Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich nicht darauf verlassen.</p>
+               <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
+weiterzuvererben:</p>
+               <verbatim>&lt;xsl:template match="@* | node()"&gt;
+   &lt;xsl:copy inherit-namespaces="no"&gt;
+     &lt;xsl:apply-templates select="@* | node()"/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                  id="1b347b68-65a9-4f77-b6b4-fed71175cd11d6e73">
+                  
+                     <title>
+                        <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
+                     </title>
+                     <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
+z.B. dazu auf einer NoSQL Datenbank Daten aus unterschiedlichen Quellen
+zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p>
+                     <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
+funktioniert.</p>
+                     <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
+kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p>
+                     <verbatim>xquery version "1.0-ml";
+
+import module namespace tektur = "http://www.teturcms.de/xquery/common" 
+                                  at "common.xqy";
+import module namespace mem = "http://xqdev.com/in-mem-update" 
+                                  at '/MarkLogic/appservices/utils/in-mem-update.xqy';
+declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
+declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
+declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
+                     <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
+im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
+Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
+eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
+vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
+                  
+               </chapter>
+            
+         
+      </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
             ismodule="no">
       
          <title>
-            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Sonstiges </title>
+            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
          </title>
          
             <p>Unsortierte Notizen, die für jeden XSLT-Programmierer interessant sein könnten.</p>

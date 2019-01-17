@@ -1,0 +1,287 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-tektur-document-version="0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>XSLT Hands-On</title>
+      <link>
+         <link rel="stylesheet" type="text/css" href="/html5/css/site.css">
+         <link rel="stylesheet" type="text/css" href="/html5/css/elements.css">
+         <link rel="stylesheet" type="text/css" href="/html5/css/prettify.css"><script type="text/javascript" src="/html5/js/jquery.js"></script><script type="text/javascript" src="/html5/js/jquery.cookie.js"></script><script type="text/javascript" src="/html5/js/jquery.treeview.js"></script><script type="text/javascript" src="/html5/js/jquery.mark.min.js"></script><script type="text/javascript" src="/html5/js/prettify.js"></script><script type="text/javascript" src="/dist/site.js"></script>
+   </head>
+   <body>
+      <div id="bar"></div>
+      <div id="header">
+         <h1>
+            <div id="header-text">XSLT Hands-On</div>
+         </h1>
+      </div>
+      <div id="nav">
+         <div class="buttons" style="width:100%">
+            <ul>
+               <li><a href="#" class="info menu"><img id="tocbutton" src="/images/toc_open.png" border="0"><span>hide sidebar</span></a></li>
+               <li><a href="../result.pdf" target="_blank" class="info menu"><img id="pdfbutton" style="margin-top:3px" src="/images/pdficon.png" border="0"><span>Show PDF</span></a></li>
+            </ul>
+         </div>
+      </div>
+      <div id="sidebar"><a href="/tektur.html" title="Go to Tektur CCMS"><img id="logo-image" src="../logo.png"></a><div id="scrollarea">
+            <div id="toc-panel"><a class="cover-link" href="book.html">Cover</a><ul id="navigation" class="treeview-gray">
+                  <li class="toc-level-1"><a href="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88.html" class="toc-entry" id="chapter-link_c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88" data-level="1"><span class="chapter-link1">1&nbsp;&nbsp;
+                           Intro
+                           </span></a></li>
+                  <li class="toc-level-1"><a href="792c9845-7c63-4a18-8aee-1878763200b5.html" class="toc-entry" id="chapter-link_792c9845-7c63-4a18-8aee-1878763200b5" data-level="1"><span class="chapter-link1">2&nbsp;&nbsp;
+                           Anwendungsgebiete
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" class="toc-entry" id="chapter-link_3c090c4b-2d46-459c-87ba-60a824bf5aa5" data-level="2"><span class="chapter-link2">2.1&nbsp;&nbsp;
+                                 Einige aktuelle und vergangene Szenarien
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_41d79ec9-92fe-4046-b268-15f23250b908d6e6" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.1.1</span>&nbsp;&nbsp;<span class="text">
+                                          XML Webseiten
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_622039ee-1eee-40ec-8f6e-307fd4efe268d6e25" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.1.2</span>&nbsp;&nbsp;<span class="text">
+                                          Serverseitige Konvertierung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_954beb06-1ccc-493b-b5b3-89569d9c4ce0d6e40" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.1.3</span>&nbsp;&nbsp;<span class="text">
+                                          Ausgabeformate
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_e941fdee-d46c-41ab-ae2c-a5b4797b92d7d6e47" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.1.4</span>&nbsp;&nbsp;<span class="text">
+                                          Menschenlesbar machen
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="3c090c4b-2d46-459c-87ba-60a824bf5aa5.html" id="chapter-link_1d822914-5d25-47a8-baf6-4ca9d9e01dd6d6e60" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.1.5</span>&nbsp;&nbsp;<span class="text">
+                                          Diagramme
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" class="toc-entry" id="chapter-link_151a9719-a32a-4fca-a55c-769b47a73b34" data-level="2"><span class="chapter-link2">2.2&nbsp;&nbsp;
+                                 Professionelle XML Verarbeitung
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_101270cc-3e0f-4d54-ac4c-fde924322fb1d6e6" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          Single Source Publishing
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_60cb4615-e72f-44cc-87ad-1080d73d6715d6e38" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          Code Generierung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="151a9719-a32a-4fca-a55c-769b47a73b34.html" id="chapter-link_54c0579c-77db-423f-878e-a939c5b076bcd6e55" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">2.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          Migrationen und Konvertierungen
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="31a92dc0-959c-49a1-b06e-01e2369e050e.html" class="toc-entry" id="chapter-link_31a92dc0-959c-49a1-b06e-01e2369e050e" data-level="1"><span class="chapter-link1">3&nbsp;&nbsp;
+                           Wichtige Konzepte
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="5b73f348-0058-45e0-82f7-c3de72ec5d41.html" class="toc-entry" id="chapter-link_5b73f348-0058-45e0-82f7-c3de72ec5d41" data-level="2"><span class="chapter-link2">3.1&nbsp;&nbsp;
+                                 Push vs. Pull Stylesheets 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" class="toc-entry" id="chapter-link_db988919-f71e-437e-b699-b6fdd2a32cb9" data-level="2"><span class="chapter-link2">3.2&nbsp;&nbsp;
+                                 Eindeutigkeit der Regelbasis
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_4e789913-7860-4c4e-b618-01dced6b6b2ed6e8" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          Reihenfolge der Match-Regeln
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_5f870821-8ca8-44f0-b676-57793dedc2c6d6e15" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          Präzedenz der Auswertung
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_ea722739-d975-4b73-b56c-f72818cd84c4d6e76" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          Import Präzendenz und Default-Regel
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_c5374863-4a57-4e82-bd14-1ba9cbc97c0fd6e89" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.4</span>&nbsp;&nbsp;<span class="text">
+                                          Prioritäten
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="db988919-f71e-437e-b699-b6fdd2a32cb9.html" id="chapter-link_8b11fd3b-f9f9-446d-a9a5-a799dc909169d6e118" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">3.2.5</span>&nbsp;&nbsp;<span class="text">
+                                          Modus Attribute
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="f838f9be-97bf-44a4-ac63-2e813a87f2ea.html" class="toc-entry" id="chapter-link_f838f9be-97bf-44a4-ac63-2e813a87f2ea" data-level="1"><span class="chapter-link1">4&nbsp;&nbsp;
+                           Ausgewählte Themen
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="ceed4546-a60b-4d5f-a625-6e79c180cc13.html" class="toc-entry" id="chapter-link_ceed4546-a60b-4d5f-a625-6e79c180cc13" data-level="2"><span class="chapter-link2">4.1&nbsp;&nbsp;
+                                 Vortransformationen 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" class="toc-entry" id="chapter-link_6fd7b270-9d1f-4f8e-996f-13b5862956a9" data-level="2"><span class="chapter-link2">4.2&nbsp;&nbsp;
+                                 Validierung mit Schematron
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" id="chapter-link_ac6fc705-65f7-4476-b83d-78df36629ccad6e14" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          Schematron ist XSLT
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="6fd7b270-9d1f-4f8e-996f-13b5862956a9.html" id="chapter-link_5bb03dd6-9311-4d44-822f-d819372c5e67d6e30" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          CLI Verwendung
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="cc183707-5352-4c9c-9c31-68047a882d0f.html" class="toc-entry" id="chapter-link_cc183707-5352-4c9c-9c31-68047a882d0f" data-level="2"><span class="chapter-link2">4.3&nbsp;&nbsp;
+                                 Erste Schritte mit Xspec
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="888d37da-0dbe-4fae-bec9-2ad1e99f7818.html" class="toc-entry" id="chapter-link_888d37da-0dbe-4fae-bec9-2ad1e99f7818" data-level="2"><span class="chapter-link2">4.4&nbsp;&nbsp;
+                                 Vererbung 
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="888d37da-0dbe-4fae-bec9-2ad1e99f7818.html" id="chapter-link_2840fc03-3cdf-4021-93af-6642965cc464d6e8" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.4.1</span>&nbsp;&nbsp;<span class="text">
+                                          Beispiel: Parameterisierung
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" class="toc-entry" id="chapter-link_0846d6a2-6999-42ab-9e83-55bc197fc11c" data-level="2"><span class="chapter-link2">4.5&nbsp;&nbsp;
+                                 Abfragen mit XQuery
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_a6cdc20a-412c-457c-853f-4ab49dd104fdd6e19" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.5.1</span>&nbsp;&nbsp;<span class="text">
+                                          XQuery Builder
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ca0cf1e-9923-45a8-b96c-c6bfafaa777cd6e32" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.5.2</span>&nbsp;&nbsp;<span class="text">
+                                          FLOWR Expression
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_42a793a1-c0ba-4529-8448-9e1117810149d6e44" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.5.3</span>&nbsp;&nbsp;<span class="text">
+                                          XML per XQuery
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="0846d6a2-6999-42ab-9e83-55bc197fc11c.html" id="chapter-link_5ef6f61d-594e-4159-9fae-be74401b0613d6e55" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.5.4</span>&nbsp;&nbsp;<span class="text">
+                                          Document Projection
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                        <li class="toc-level-2"><a href="51bec5b9-1207-45cc-9bf2-b6ce3e300547.html" class="toc-entry" id="chapter-link_51bec5b9-1207-45cc-9bf2-b6ce3e300547" data-level="2"><span class="chapter-link2">4.6&nbsp;&nbsp;
+                                 XSLT Streaming
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="3e443c28-8698-470b-b443-f286ff7ed2d5.html" class="toc-entry" id="chapter-link_3e443c28-8698-470b-b443-f286ff7ed2d5" data-level="2"><span class="chapter-link2">4.7&nbsp;&nbsp;
+                                 Namespaces
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="3e443c28-8698-470b-b443-f286ff7ed2d5.html" id="chapter-link_1b347b68-65a9-4f77-b6b4-fed71175cd11d6e73" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.7.1</span>&nbsp;&nbsp;<span class="text">
+                                          Namespaces in XQuery
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="f606e9c6-3d46-48f3-8de4-46e13dc7d055.html" class="toc-entry" id="chapter-link_f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-level="1"><span class="chapter-link1">5&nbsp;&nbsp;
+                           Zusätzliches Know-How
+                           </span></a><ul>
+                        <li class="toc-level-2"><a href="7dbb15ce-bbc5-4d91-b977-ed7e8117730e.html" class="toc-entry" id="chapter-link_7dbb15ce-bbc5-4d91-b977-ed7e8117730e" data-level="2"><span class="chapter-link2">5.1&nbsp;&nbsp;
+                                 GIT Einmaleins 
+                                 </span></a></li>
+                        <li class="toc-level-2"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" class="toc-entry" id="chapter-link_4100d43a-5b71-43ba-a05f-1063fcee8679" data-level="2"><span class="chapter-link2">5.2&nbsp;&nbsp;
+                                 XML Editoren 
+                                 </span></a><ul>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_498cf31b-9271-4bd5-99c3-267338011c2bd6e52" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">5.2.1</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYM Desktop
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_bedf667b-7726-4999-881b-891f147ff923d6e73" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">5.2.2</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYG Desktop
+                                          </span></span></a></li>
+                              <li class="toc-level-3"><a href="4100d43a-5b71-43ba-a05f-1063fcee8679.html" id="chapter-link_eea96007-349a-4143-b26d-aea0617aa994d6e78" data-level="3" data-is-section="true" class="toc-entry"><span class="chapter-link3"><span class="number">└</span>&nbsp;&nbsp;<span class="number">5.2.3</span>&nbsp;&nbsp;<span class="text">
+                                          WYSIWYM Online
+                                          </span></span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="toc-level-1"><a href="3dfad2c2-2299-461a-9d80-42237bbb5e89.html" class="toc-entry" id="chapter-link_3dfad2c2-2299-461a-9d80-42237bbb5e89" data-level="1"><span class="chapter-link1">6&nbsp;&nbsp;
+                           Glossar 
+                           </span></a></li>
+                  <li class="toc-level-1"><a href="dac12b19-ef37-4e41-b88c-6f0ce7becbb8.html" class="toc-entry" id="chapter-link_dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-level="1"><span class="chapter-link1">7&nbsp;&nbsp;
+                           Tektur CCMS
+                           </span></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div id="main">
+         <div id="content-wrapper">
+            <div id="792c9845-7c63-4a18-8aee-1878763200b5-target" class="chapter first" data-element-name="chapter">
+               <h2 id="" data-element-name="title"><span class="number">2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                        
+                        <div class="title" data-tektur-reviewer-number="" id="a01d7a84-023f-4c62-ab06-1e8e8b069bed" data-element-name="title">Anwendungsgebiete</div>
+                        </span></span></h2>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                     <b id="" data-element-name="b" data-is-inline-element="yes">XML,</b>
+                     <b id="" data-element-name="b" data-is-inline-element="yes">XSLT</b>, <b id="" data-element-name="b" data-is-inline-element="yes">XPATH</b>, <b id="" data-element-name="b" data-is-inline-element="yes">XSL-FO</b> und <b id="" data-element-name="b" data-is-inline-element="yes">XQuery</b> sind Techniken um baumstrukturierte Daten - im Vergleich zu relationalen Daten - aus verschiedenen Quellen ineinader zu überführen,
+                     abzuspeichern, zu versenden, darzustellen und auszuwerten. Einfach gesprochen geht es um die Weiterverarbeitung solcher Daten
+                     - das XML kann dabei sowohl die Nutzdaten als auch die Steuerdaten tragen.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Vom Aussehen her sind XML Daten im Prinzip Textdaten. Sie können sehr einfach mit einem Texteditor erstellt werden. Im Gegensatz
+                     zu Multimedia-Daten sind keine komplexen Tools, wie z.B. ein Grafikeditor, erforderlich.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Auch relationale Daten können in Form von Tabellen, als Excel Tabelle oder bspw. als kommaseparierte Textdatei, aus einem
+                     System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch
+                     das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und weiterer Kategorisierung dieser Informationseinheiten
+                     mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein
+                     Baum, der die Hierarchische Ordnung der Daten widerspiegeln sollte.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Diese Baumstrukturen sind maschinell lesbar und die Daten können, bevor sie von einem Versender zu einem Empfänger gehen,
+                     mittels eines automatischen Prozesses validiert werden. Dabei können sowohl der Inhalt als auch die Syntax anhand von definierten
+                     Regeln (Schemas) genau überprüft werden.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubt.</div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Der Übergang von SGML zu XML hat die Sache ein bisschen vereinfacht, eine weitere Vereinfachung brachte JSON als Standard.
+                     JSON wird gerne im Webbereich eingesetzt um baumstrukturierte Daten zu verarbeiten. JSON ist jedoch nicht so gut maschinenlesbar
+                     und es gibt noch nicht so viele Werkzeuge wie z.B. Code Editoren dafür.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern, um die es sich im weiteren Text drehen wird:</div>
+               </div>
+               <div class="margin">
+                  <ul id="" data-element-name="ul">
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                           <b id="" data-element-name="b" data-is-inline-element="yes">XML</b> ist das Datenformat. Auf XML arbeiten die anderen Technologien. XML ist immer Input für diese Tools.
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                           <b id="" data-element-name="b" data-is-inline-element="yes">XSLT</b> transformiert eine XML Instanz in eine andere. Plain Text ist eine Aneinanderreihung von Text Knoten
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                           <b id="" data-element-name="b" data-is-inline-element="yes">XPATH</b> erlaubt es, bestimmte Knoten in einem XML Dokument über bedingte Pfadausdrücke zu selektieren.
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                           <b id="" data-element-name="b" data-is-inline-element="yes">XSL-FO</b> ist eine weitere XML basierte Auszeichnungssprache, die ein XSL-FO Prozessor einlesen kann, um daraus z.B. ein PDF zu generieren.
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">
+                           <b id="" data-element-name="b" data-is-inline-element="yes">XQuery</b> ist eine Abfragesprache ählich zu SQL, jedoch werden damit nicht relationale Daten abgefragt sondern baumstrukturierte.
+                        </div>
+                        
+                     </li>
+                     
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="date-version">Version: 28<br>Jan 17 2019
+      </div>
+   </body>
+</html>
