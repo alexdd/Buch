@@ -1,0 +1,100 @@
+<div data-attribute-id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="aca53b15-d2ea-4ea8-ae9c-8b81dab96178"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="6e53fba3-c83c-4a92-8cea-170e5781324c" class="title pmarker tags" data-element="title" data-tektur-editor-id="91eaeded-885f-4727-8cb2-deb7de4f51bc" contenteditable="true">Identifikation mit generate-id()</div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="0a59df51-d186-4f3b-bb32-ed7f0be61d7c"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="9da36fb6-9f75-445d-96e1-91213dd7f17f" contenteditable="true"></div></div><div data-attribute-id="2df0bd9e-ed7e-4325-b00f-adf034e6d3b4" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="fff4fe30-8c63-4967-a069-5c93d14badfe"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="bcf4122a-ec48-450a-83f9-9fe4b107668b"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="3cd96c4e-4783-468f-a32c-5a009e3cd115" class="p pmarker tags" data-element="p" data-tektur-editor-id="19472b6f-80d9-41ed-a17f-908bb078a272" contenteditable="true">Die generate-id() Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="ec777147-e5f9-4922-90d7-da6edb3ba4e4d6e6" class="p pmarker tags" data-element="p" data-tektur-editor-id="85423500-acfe-4a72-a966-945cefe83078" contenteditable="true">Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
+der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</div></div><div data-element="section" class="section optional show_menu tags" data-tektur-editor-id="b4ba7cfb-be61-4786-8f45-9e75d2bf5d29"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9" class="title pmarker tags placeholder" data-element="title" data-tektur-editor-id="a299f0fc-d9d5-4539-a3fb-7a3f7ffb96b4" contenteditable="true">Beispiel Stückliste</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10" class="p pmarker tags" data-element="p" data-tektur-editor-id="0c26abc3-3fb3-4d5e-bb24-fe127c79b97d" contenteditable="true">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
+System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in die Ausgabe (Eine Dokumentation für eine Maschine)
+generiert werden.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="8168234a-94fe-432e-900c-567faf2a8552d6e12" class="p pmarker tags" data-element="p" data-tektur-editor-id="bccbcc02-b097-4ce2-8566-2de9d9b195b8" contenteditable="true">Die Id an einem Element &#x3C;part id=“1234”&#x3E; würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
+mit den folgenden Templates (vereinfacht) passieren:</div><div class="pre"><div data-attribute-id="2b80b13b-9f2b-4980-9f98-335b1c588c23d6e14" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="2ed681fa-3f1d-42b2-b8e2-d26f29856c1f" contenteditable="true">&#x3C;xsl:key name="parts" match="part" use="@id"/&#x3E;
+  
+&#x3C;xsl:template match=“part” mode=“content"&#x3E;
+  &#x3C;!-- Ausgabe des Bauteils im Content Bereich --&#x3E;
+  &#x3C;fo:block id="{generate-id()}"&#x3E;
+    &#x3C;fo:external-graphic xsl:use-attribute-sets="part.img"/&#x3E;  
+  &#x3C;/fo:block&#x3E;
+&#x3C;/xsl:template&#x3E;
+    
+&#x3C;xsl:template match=“part” mode=“part-list"&#x3E;
+  &#x3C;!-- Ausgabe einer Liste mit allen Verweisen an unterschiedicher Stelle --&#x3E;
+  &#x3C;fo:block&#x3E;
+    &#x3C;xsl:for-each select="key('parts',@id)"&#x3E;
+      &#x3C;fo:page-number-citation ref-id="{generate-id()}"/&#x3E;
+    &#x3C;/xsl:for-each&#x3E;
+  &#x3C;/fo:block&#x3E;
+&#x3C;/xsl:template&#x3E;</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="60f0d280-3614-4553-b128-288b612de622" contenteditable="true"></div></div><div data-element="section" class="section optional show_menu tags" data-tektur-editor-id="4b086107-52de-409b-b0da-0e88d23e1878"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17" class="title pmarker tags" data-element="title" data-tektur-editor-id="a516829e-e584-4636-9779-327792d879fc" contenteditable="true">Beispiel Mantel Dokument</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18" class="p pmarker tags" data-element="p" data-tektur-editor-id="2e319369-a2d4-438e-ae4d-dabe417363ef" contenteditable="true">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
+aufsplitten will, um sie in einer XML Datenbank abspeichern zu können. Die Struktur einer Datenübertragung
+könnte folgendermassen aussehen:</div><div class="pre"><div data-attribute-id="a0ea1385-5d02-481f-bccb-b42cc666c826d6e20" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="a02f64ec-30e3-4f55-bc00-9fbe0bedb093" contenteditable="true">WRAPPER1
+  SEQUENZ1
+  SEQUENZ2
+  SEQUENZ3
+  WRAPPER2
+    SEQUENZ1
+    SEQUENZ2
+    SEQUENZ3
+    SEQUENZ4
+    WRAPPER3
+      SEQUENZ1
+      SEQUENZ2
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      WRAPPER4
+        SEQUENZ1
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      [...]</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="30f17d4c-717b-4778-ad02-1d6a5f41c443d6e22" class="p pmarker tags" data-element="p" data-tektur-editor-id="3f327f40-cde6-47eb-84df-8b4c48bff89e" contenteditable="true">Jedes einzelne CONTENT Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
+Descendant-Achse bis zum Element WRAPPER3, ausserdem noch die Elemente SEQUENZ1 und SEQUENZ2,
+sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</div><div class="pre"><div data-attribute-id="b40fca54-c7e3-4454-ae84-860e11b531e3d6e24" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="a073aa26-adc8-496f-b810-517f92b01366" contenteditable="true">&#x3C;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&#x3E;
+    
+  &#x3C;xsl:output method="xml" indent="yes"/&#x3E;
+  &#x3C;xsl:strip-space elements="*"/&#x3E;
+  
+  &#x3C;xsl:template match="/"&#x3E;
+    &#x3C;xsl:apply-templates select="/WRAPPER1/WRAPPER2/WRAPPER3/CONTENT" mode="umschlag"/&#x3E;
+  &#x3C;/xsl:template&#x3E;
+    
+  &#x3C;xsl:template match="CONTENT" mode="umschlag"&#x3E;
+    &#x3C;xsl:result-document href="{concat(@id,'.xml')}"&#x3E;
+      &#x3C;umschlag&#x3E;
+        &#x3C;metadaten&#x3E;&#x3C;!-- einige Metadaten --&#x3E;&#x3C;/env:metadata&#x3E;
+        &#x3C;nutzdaten&#x3E;
+            &#x3C;xsl:apply-templates select="ancestor::WRAPPER1"&#x3E;
+              &#x3C;xsl:with-param name="this-id" select="generate-id()" tunnel="yes"/&#x3E;
+            &#x3C;/xsl:apply-templates&#x3E;
+        &#x3C;/nutzdaten&#x3E;
+      &#x3C;/umschlag&#x3E;
+    &#x3C;/xsl:result-document&#x3E;
+  &#x3C;/xsl:template&#x3E;
+
+  &#x3C;xsl:template match="node()|@*"&#x3E;
+    &#x3C;xsl:copy&#x3E;
+      &#x3C;xsl:apply-templates select="node()|@*"/&#x3E;
+    &#x3C;/xsl:copy&#x3E;
+  &#x3C;/xsl:template&#x3E;
+    
+  &#x3C;xsl:template match="CONTENT"&#x3E;
+    &#x3C;xsl:param name="this-element" tunnel="yes"/&#x3E;
+    &#x3C;xsl:if test="$this-id = generate-id()"&#x3E;
+      &#x3C;xsl:copy&#x3E;
+        &#x3C;xsl:apply-templates select="node()|@*"/&#x3E;
+      &#x3C;/xsl:copy&#x3E;
+    &#x3C;/xsl:if&#x3E;
+  &#x3C;/xsl:template&#x3E;
+    
+&#x3C;/xsl:stylesheet&#x3E;</div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="a7ab8655-d9eb-4343-bebf-c4d8850cb2c6d6e26" class="p pmarker tags" data-element="p" data-tektur-editor-id="1adcc3b3-3b40-451f-acca-3f414e176905" contenteditable="true">Im rekursiven Abstieg wird im Modus "umschlag" jedes CONTENT Element selektiert und
+in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element &#x3C;nutzdaten&#x3E;
+gesetzt wird. Dabei wird aber nur derjenige CONTENT Abschnitt evaluiert, der
+zu der als Parameter übergebenen generierten Id passt.</div></div></div></div>
