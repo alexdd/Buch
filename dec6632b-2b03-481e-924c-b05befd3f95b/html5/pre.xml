@@ -4,9 +4,9 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Fri Jan 18 2019 12:32:18 </date-of-last-change>
+      <date-of-last-change>Fri Jan 25 2019 14:31:03 </date-of-last-change>
       <language>de-DE</language>
-      <status>32</status>
+      <status>34</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -872,39 +872,49 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>Hands-on Materiel mit Beispielquelltexten.</p>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
+      <chapter hyphenation="yes" chapterpage="no" id="c20c1e01-1175-4664-a26a-71317760930f"
                ismodule="no">
          
             <title>
-               <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
+               <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">XSLT Uses Cases und Lösung</title>
             </title>
             
-               <p>Bei einer komplexen Transformation ist es ratsam und sogar manchmal unabdingbar die Konvertierung in einzelne Stufen aufzuteilen. Das hat folgende Vorteile:</p>
-               <ul>
-                  <li>
-                     <p>Der Prozess ist transparenter, da die einzelnen Stufen leichter überschaubar sind.</p>
-                  </li>
-                  <li>
-                     <p>Die Zwischenergebnisse können für Debug-Zwecke ausgewertet werde oder dienen als Eingabe für andere Prozesse.</p>
-                  </li>
-                  <li>
-                     <p>Nicht-relevante oder invalide Teilbäume können aus der Eingabeinstanz gefiltert werden, um so die weitere Verarbeitung zu beschleunigen.</p>
-                  </li>
-                  <li>
-                     <p>Hilfskonstrukte können erzeugt werden. Diese erleichtern die weitere Verarbeitung.</p>
-                  </li>
-               </ul>
-               <p>Es gibt zwei Möglichkeiten, wie eine Vortransformation eingebunden werden kann:</p>
-               <ul>
-                  <li>
-                     <p>In einem separaten File bzw. einer XML Instanz, die vom XSLT Prozessor vor der eigentlichen Transformation aufgerufen wird uns einen Zwischenstand produziert, der als Eingabe für den Haupttransformationsschritt dient.</p>
-                  </li>
-                  <li>
-                     <p>Innerhalb des eigentlichen XSLT Stylesheets. Hier wird das Ergebnis der Vortransformation in einer Variablen erzeugt.</p>
-                  </li>
-               </ul>
-               <p>Den zweiten Punkt möchte ich anhand einer Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
-               <verbatim>&lt;education-system&gt;
+               <p>In diese Kapitel werden einige ausgewählte Themen zu XSLT dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
+            
+         
+         <chapter hyphenation="yes" chapterpage="no" id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
+                  ismodule="no">
+            
+               <title>
+                  <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
+               </title>
+               
+                  <p>Bei einer komplexen Transformation ist es ratsam und sogar manchmal unabdingbar die Konvertierung in einzelne Stufen aufzuteilen. Das hat folgende Vorteile:</p>
+                  <ul>
+                     <li>
+                        <p>Der Prozess ist transparenter, da die einzelnen Stufen leichter überschaubar sind.</p>
+                     </li>
+                     <li>
+                        <p>Die Zwischenergebnisse können für Debug-Zwecke ausgewertet werde oder dienen als Eingabe für andere Prozesse.</p>
+                     </li>
+                     <li>
+                        <p>Nicht-relevante oder invalide Teilbäume können aus der Eingabeinstanz gefiltert werden, um so die weitere Verarbeitung zu beschleunigen.</p>
+                     </li>
+                     <li>
+                        <p>Hilfskonstrukte können erzeugt werden. Diese erleichtern die weitere Verarbeitung.</p>
+                     </li>
+                  </ul>
+                  <p>Es gibt zwei Möglichkeiten, wie eine Vortransformation eingebunden werden kann:</p>
+                  <ul>
+                     <li>
+                        <p>In einem separaten File bzw. einer XML Instanz, die vom XSLT Prozessor vor der eigentlichen Transformation aufgerufen wird uns einen Zwischenstand produziert, der als Eingabe für den Haupttransformationsschritt dient.</p>
+                     </li>
+                     <li>
+                        <p>Innerhalb des eigentlichen XSLT Stylesheets. Hier wird das Ergebnis der Vortransformation in einer Variablen erzeugt.</p>
+                     </li>
+                  </ul>
+                  <p>Den zweiten Punkt möchte ich anhand einer Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
+                  <verbatim>&lt;education-system&gt;
   &lt;administrative-regions&gt;
     [...]
     &lt;dministrative-region id="31" name="Bavaria"&gt;
@@ -928,8 +938,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
     [...]
   &lt;/administrative-regions&gt;
 &lt;/education-system&gt;</verbatim>
-               <p>Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
-               <verbatim>&lt;teachers&gt;
+                  <p>Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
+                  <verbatim>&lt;teachers&gt;
   [...]
   &lt;teacher id="576"&gt;
     &lt;first-name&gt;Alfons&lt;/first-name&gt;
@@ -944,8 +954,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
   &lt;/teacher&gt;
   [...]
 &lt;/teachers&gt;</verbatim>
-               <p>Und die Datei, welche die Schulen auflistet:</p>
-               <verbatim>&lt;schools&gt;
+                  <p>Und die Datei, welche die Schulen auflistet:</p>
+                  <verbatim>&lt;schools&gt;
   [...]
   &lt;school id="45"&gt;
     &lt;name&gt;Gymnasium Bad Aibling&lt;/name&gt;
@@ -954,8 +964,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
   &lt;/school&gt;
   [...]
 &lt;/schools&gt;</verbatim>
-               <p>Um diese Daten verarbeiten zu können ist es sinnvoll, die drei Dateien in einem ersten "Resolver" Schritt zusammenzuführen und ggf. irrelevante Strukturen zu entfernen. Lehrer aus obigem Beispiel können beispielsweise suspendiert worden sein. Das folgende Skript erledigt dies mittels einer zusätzlichen Transformation in eine Variable:</p>
-               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                  <p>Um diese Daten verarbeiten zu können ist es sinnvoll, die drei Dateien in einem ersten "Resolver" Schritt zusammenzuführen und ggf. irrelevante Strukturen zu entfernen. Lehrer aus obigem Beispiel können beispielsweise suspendiert worden sein. Das folgende Skript erledigt dies mittels einer zusätzlichen Transformation in eine Variable:</p>
+                  <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="#all"&gt;
@@ -1004,225 +1014,33 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
   &lt;/xsl:template&gt;
   
 &lt;/xsl:stylesheet&gt;</verbatim>
-               <p>Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
-               <p>Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören, was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus.</p>
+                  <p>Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
+                  <p>Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören, was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus.</p>
+               
             
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
-               ismodule="no">
-         
-            <title>
-               <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
-            </title>
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
+                  ismodule="no">
             
-               <p>Um die Korrektheit einer XML Instanz zu prüfen, gib es verschiedene Schemata, wie XSD, RNG oder DTD, welche der Parser beim Aufbau des DOM Baums heranzieht. Eine Validierung mit Apache Xerces könnte beispielsweise als Java Code folgendermaßen angestossen werden:</p>
-               <verbatim>URL schemaFile = new URL("http://host:port/filename.xsd");
-Source xmlFile = new StreamSource(new File("web.xml"));
-SchemaFactory schemaFactory = SchemaFactory
-    .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-try {
-  Schema schema = schemaFactory.newSchema(schemaFile);
-  Validator validator = schema.newValidator();
-  validator.validate(xmlFile);
-  System.out.println(xmlFile.getSystemId() + " is valid");
-} catch (SAXException e) {
-  System.out.println(xmlFile.getSystemId() + " is NOT valid reason:" + e);
-} catch (IOException e) {</verbatim>
-               <p>Schema Dateien können aber auch in XML Editoren eingebunden werden, um schon während der Eingabe der XML Instanz die Korrektheit zu überprüfen. </p>
-               <p>Das geht einerseits über die Angabe des Doctypes in der XML Instanz, anderseits bieten auch alle Editoren die Möglichkeit ein bestimmtes Schema explizit auszuwählen, um gegen dieses auf Anforderung zu validieren.</p>
-               <p>Gilt es komplexere Businessregeln zu überprüfen, die über Syntax-, Konsistenz- und einfache Korrektheitschecks hinausgehen, empfiehlt sich eine Validierung mit Schematron Regeln.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="21e887d9-7aeb-43cc-a506-ed4ebb9b66d8d6e14">
-                  
-                     <title>
-                        <title id="c802dd14-5953-4c24-8637-f7552d107e57d6e13">Schematron ist XSLT</title>
-                     </title>
-                     <p>Bei einer Schematron Validierung wird eine XML Instanz mit Hilfe eines automatisch generierten XSLT Stylesheets überprüft. Dieses kontextabhängige Stylesheet wird aus einer in der Schematron Syntax vom Autor verfassten Regelbasis, die wiederum in XML vorliegt, über ein zweites XSLT Stylesheet generiert - Dieses zweite XSLT Stylesheet ist sozusagen das eigentliche Schematron Programm. </p>
-                     <p>Das folgende Diagramm veranschaulicht die Vorgehensweise anhand eines Filter-Szenarios, bei dem ein XML Dokument mit einigen ungültigen Passagen in eine gefilterte Darstellung überführt wird.</p>
-                     <figure pdfwidth="page">
-                        <subtitle>Schematron Validierung mit Filter</subtitle>
-                        <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
-                     </figure>
-                     <p>Zu finden ist das Schematron Programm auf Github: https://github.com/Schematron/schematron. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
-                     </p>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="f3496d06-b1ea-4959-8e31-db0afc948b52d6e30">
-                  
-                     <title>
-                        <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
-                     </title>
-                     <p>Um die Schematron XSLT Skripte in eine eigene XSLT Anwendung per Kommandozeile einzubinden, könnte man folgendermassen vorgehen: </p>
-                     <ul>
-                        <li>
-                           <p>Im eigenen GIT Projekt das Schematron Projekt als Submodule referenzieren.</p>
-                        </li>
-                        <li>
-                           <p>Eine Regelbasis anlegen, beispielsweise <b>$project_name.sch</b>.</p>
-                        </li>
-                        <li>
-                           <p>Zwei Batch-Skripte anlegen, beispielsweise <b>generate_schema.sh</b> und <b>validate.sh</b>.</p>
-                        </li>
-                     </ul>
-                     <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
-                     <verbatim>saxon $script_dir/$project_name_validation.sch $script_dir/schematron/iso_dsdl_include.xsl
- | \ saxon -s:- $script_dir/schematron/iso_abstract_expand.xsl | \
-saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
-  <b>generate-fired-rule</b>=false &gt; $script_dir/$project_name_validation.xsl</verbatim>
-                     <p>Der Prozess zum Erzeugen des projektspezifischen Validerungs-XSLT-Skripts ist dreistufig und wird über die folgenden XSLT Schritte abgearbeitet.</p>
-                     <ul>
-                        <li>
-                           <p>iso_dsdl_include.xsl</p>
-                        </li>
-                        <li>
-                           <p>iso_abstract_expand.xsl</p>
-                        </li>
-                        <li>
-                           <p>iso_svrl_for_xslt2.xsl</p>
-                        </li>
-                     </ul>
-                     <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <b>$project_name_validation.xsl.</b>
-                     </p>
-                     <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
-                     <verbatim>saxon $xml_instance_to_check.xml $script_dir/$project_name_validation.xsl \
-  &gt; $validation-result.xml</verbatim>
-                     <p>Die Ausgabe dieses Prüfprozesses ist eine XML Datei mit den Fehlern in der Eingabe-XML-Instanz, die weiterverarbeitet werden kann, beispielsweise als Filterkriterium für einen nachfolgenden Prozessschritt. Ihr Inhalt dieser Datei sieht z.B. wie folgt aus:</p>
-                     <verbatim>&lt;svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" [...]
-  &lt;svrl:active-pattern document="file:/Users/alex/xml_instance_to_check.xml" 
-   id="default" name="default"/&gt;
-  &lt;svrl:failed-assert test="count(key('unique-ids', current()))=1"&gt;
-    &lt;svrl:text&gt;ID is not unique!&lt;/svrl:text&gt;
-    &lt;svrl:diagnostic-reference diagnostic="default"&gt;
-      &lt;bk:id xmlns:bk="http://tekturcms/namespaces/book"&gt;1234-5678-9&lt;/my:id&gt;
-    &lt;/svrl:diagnostic-reference&gt;
-  &lt;/svrl:failed-assert&gt;
-  [...]</verbatim>
-                     <p>Neben den <b>svrl:failed-assert</b> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <b>svrl:successful-report</b>.</p>
-                     <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
-                     <verbatim>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
-  &lt;xsl:key name="unique-ids" match="bk:id" use="."/&gt;
-  &lt;sch:let name="date-regex" value="'^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])
-                                     -(0[1-9]|[12][0-9]|3[01])$'"/&gt;
-  &lt;sch:pattern id="default"&gt;
-    &lt;sch:rule context="book"&gt;
-      &lt;sch:assert id="check-book-id" role="error" test="count(key('unique-ids', bk:id))=1" 
-                  diagnostics="default"&gt;ID is not unique!&lt;/sch:assert&gt;
-      &lt;sch:assert id="check-book-published" role="error" 
-                  test="matches(bk:published,$date-regex)
-    &lt;/sch:rule&gt;
-    [...]
-  &lt;/sch:pattern&gt;
-  &lt;sch:diagnostics&gt;
-    &lt;sch:diagnostic id="default"&gt;
-      &lt;xsl:element name="bk:id"&gt;
-        &lt;xsl:value-of select="bk:id"/&gt;
-      &lt;/xsl:element&gt;
-    &lt;/sch:diagnostic&gt;
-  &lt;/sch:diagnostics&gt;</verbatim>
-                     <p>Neben der "successful" und "failed" Regeln ist auch die Deklaration von Funktionen und Variablen im Body der Regelbasis erlaubt. Dies ermöglicht komplexe Bedingungen, bespw. durch das Nachschlagen in einer Lookup-Tabelle abzuprüfen. </p>
-                  
-               </chapter>
-            
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="cc183707-5352-4c9c-9c31-68047a882d0f"
-               ismodule="no">
-         
-            <title>
-               <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
-            </title>
-            
-               <p>XSpec ist ein <b>Test-Framework</b>
-            <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://github.com/xspec">
-               <sup>↗↗</sup>
-            </url> für XSLT, XQuery und Schematron. 
-Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b>Test-Szenario</b> 
-Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p>
-               <verbatim>&lt;test-szenario&gt;
-  &lt;testfall&gt;
-    &lt;personen&gt;
-      &lt;person&gt;
-        &lt;vorname&gt;Horst&lt;/vorname&gt;
-        &lt;<b>nachname</b>&gt;Schlämmer&lt;/<b>nachname</b>&gt;
-        &lt;gewicht&gt;100&lt;/gewicht&gt;
-      &lt;/person&gt;
-      &lt;person&gt;
-        &lt;vorname&gt;Gundula&lt;/vorname&gt;
-        &lt;<b>nachname</b>&gt;&lt;/<b>nachname</b>&gt;
-        &lt;gewicht&gt;60&lt;/gewicht&gt;
-      &lt;/person&gt;
-    &lt;/personen&gt;
-  &lt;/testfall&gt;
-&lt;/test-szenario&gt;</verbatim>
-               <p>in einer XSpec Datei *. werden <b>Assert- und Not-Assert-Methoden</b> deklariert:</p>
-               <verbatim>&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
-               schematron="test.sch"&gt;
-  &lt;x:scenario label="ALL"&gt;
-    &lt;x:context href="test.xml"/&gt;
-    &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b>nachname</b>"/&gt;
-    &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b>nachname</b>"/&gt;
-  &lt;/x:scenario&gt;
-&lt;/x:description&gt;</verbatim>
-               <p>Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
-Testfalls positiv erfüllt ist. Beim Not-Assert ist das Gegenteil der Fall. Im obigen Beispiel
-reichen zwei Regeln, um den Testfall vollständig abzudecken.</p>
-               <p>Wenn man Schematron Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
-die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p>
-               <verbatim>&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
-            xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
-  &lt;sch:pattern id="main"&gt;
-    &lt;sch:rule context="<b>nachname</b>"&gt;
-      &lt;sch:assert id="person-nachname-rule" role="error" test="normalize-space(.)"&gt;
-        Der Nachname der Person mit ID: &lt;sch:value-of select="@id"/&gt; fehlt! 
-      &lt;/sch:assert&gt;
-    &lt;/sch:rule&gt;
-  &lt;/sch:pattern&gt;
-&lt;/sch:schema&gt;</verbatim>
-               <p>In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p>
-               <p>Hat sie keinen Nachnamen so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
-geschrieben. Diese Datei wertet nun Xspec aus.</p>
-               <note>
-                  <consequence>
-                     <p>Erscheint ein Fehler (= das Feld <b>nachname</b> ist leer), so greift bei Xspec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p>
-                  </consequence>
-               </note>
-               <p>Als Eselsbrücke kann man
-ein Assert in der Xspec Datei gleichsetzen mit <b>Appear</b> und ein Not-Assert mit
-<b>Not-Appear</b>. </p>
-               <p>Ein Assert sichert also zu, dass sich ein Fehlerbericht in der
-Schematron Ergebnisdatei zum Testfall befindet. Ein Not-Assert sichert zu, dass
-sich kein Fehlerbericht befindet. </p>
-               <p> Wie man sich leicht vorstellen kann, sind Assert-Regeln in diesem Fall leicht zu finden,
-dazu muss man nur die Schematron Testregeln ins Leere zeigen lassen. Alles ist grün
-und alles ist gut - dem Augenschein nach.</p>
-            
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
-               ismodule="no">
-         
-            <title>
-               <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
-            </title>
-            
-               <p>Mit XSLT kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
-               <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="8fab78d2-ad49-4d07-91a1-a757172fbe25d6e8">
-                  
-                     <title>
-                        <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
-                     </title>
-                     <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
-                     <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
-                     <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
-                     <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                        id="ba4a6a74-bad9-4ea7-8917-529625d32b86">Eindeutigkeit der Regelbasis</doclink> .</p>
-                     <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
-                     <verbatim>&lt;xsl:choose&gt;
+               <title>
+                  <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
+               </title>
+               
+                  <p>Mit XSLT kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
+                  <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="8fab78d2-ad49-4d07-91a1-a757172fbe25d6e8">
+                     
+                        <title>
+                           <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
+                        </title>
+                        <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
+                        <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
+                        <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
+                        <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
+                           id="ba4a6a74-bad9-4ea7-8917-529625d32b86">Eindeutigkeit der Regelbasis</doclink> .</p>
+                        <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
+                        <verbatim>&lt;xsl:choose&gt;
     &lt;xsl:when test="$myParameter='this_option'"&gt;
         &lt;!-- do this --&gt;
     &lt;/xsl:when&gt;
@@ -1231,232 +1049,80 @@ und alles ist gut - dem Augenschein nach.</p>
     &lt;/xsl:when&gt;
         [...]
 &lt;/xsl:choose&gt;</verbatim>
-                     <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung" überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
-                     <verbatim>&lt;xsl:template name="render-header"&gt;
+                        <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung" überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
+                        <verbatim>&lt;xsl:template name="render-header"&gt;
     &lt;!-- print logo on the left side spanning two rows--&gt;
     &lt;!-- print some metadata right side first row --&gt;
     &lt;!-- print a running header right side second row --&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
-                     <verbatim>&lt;xsl:choose&gt;
+                        <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
+                        <verbatim>&lt;xsl:choose&gt;
 &lt;xsl:template name="render-header"&gt;
     &lt;!-- print a running header on left side --&gt;
     &lt;!-- print logo on right side --&gt;
 &lt;/xsl:template&gt;</verbatim>
-                     <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates" ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
-                     <verbatim>&lt;xsl:variable name="margin-width"&gt;
+                        <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates" ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
+                        <verbatim>&lt;xsl:variable name="margin-width"&gt;
     &lt;xsl:call-template name="get-margin-width"/&gt;
 &lt;/xsl:variable&gt;</verbatim>
-                     <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
-                     <verbatim>width="{$margin-width}"</verbatim>
-                     <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
-                  
-               </chapter>
+                        <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
+                        <verbatim>width="{$margin-width}"</verbatim>
+                        <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
+                     
+                  </chapter>
+               
             
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-               ismodule="no">
-         
-            <title>
-               <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
-            </title>
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+                  ismodule="no">
             
-               <p>Xquery führt im Publishing-Bereich ein Schattendasein. In meiner Zeit als XSL Programmierer für zwei Publishing  Firmen hatte ich damit nie zu tun. Erst als ich näher an den eigentlichen Daten war und mit XML Datenbanken zu tun hatte, kam ich mit XQuery in Berührung.</p>
-               <p>Während relationale Datenbanken mit SQL abgefragt werden, verwendet man bei XML Datenbanken, wie eXist<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="http://exist-db.org/exist/apps/homepage/index.html">
-               <sup>↗↗</sup>
-            </url> oder Marklogic<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://de.marklogic.com/">
-               <sup>↗↗</sup>
-            </url>, XQuery als Abfragesprache.</p>
-               <p>Aber auch einzelne XML Dokumente können z.B. in Oxygen XML Editor mit dem XQuery Builder Tool<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://www.oxygenxml.com/xml_editor/xquery_builder.html">
-               <sup>↗↗</sup>
-            </url> oder auch per Saxon Kommandozeile abgefragt werden:</p>
-               <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query 
-     -s:"schulen.xml" 
-     -qs:"/schulen/schule[id='6']" 
-     -o:"/Users/Alex/Desktop/schule_6.xml"</verbatim>
-               <p>Mit der Option <b>-qs </b>kann hier der Querystring angebenen werden. </p>
-               <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="http://cs.au.dk/~amoeller/XML/querying/flwrexp.html">
-               <sup>↗↗</sup>
-            </url> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="dbd25cc4-675f-4327-bec1-f80457cd9986d6e19">
-                  
-                     <title>
-                        <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
-                     </title>
-                     <p>Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
-auf einem geladenen XML Dokument auszuführen. Dazu kann man 
-seine Query in das betreffende Eingabefenster schreiben.</p>
-                     <figure pdfwidth="page">
-                        <subtitle>oXygen XQuery Builder</subtitle>
-                        <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
-                     </figure>
-                     <p>Mit folgendem Ergebnis:</p>
-                     <verbatim>&lt;dates&gt;
-  &lt;today&gt;2019-01-16+01:00&lt;/today&gt;
-  &lt;formatted&gt;Wednesday, 16th January 2019&lt;/formatted&gt;
-&lt;/dates&gt;</verbatim>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="7955ea5d-939e-47ca-8b87-de752d45673dd6e32">
-                  
-                     <title>
-                        <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
-                     </title>
-                     <p>FLOWR steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
-dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
-                     <verbatim>let $bibliothek := .
-for $x in $bibliothek//buecher,
-    $y in $bibliothek//autoren/autor
-where starts-with($autor, 'Grass')
-    and $x/@autorId = $y/@id
-return $x/titel</verbatim>
-                     <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
-Bemerkenswert ist hier die Syntax.</p>
-                     <note>
-                        <consequence>
-                           <p>Normalerweise würde man zwischen den
-einzelnen Anweisungen einen Blockabschluss, wie ein Semikolon erwarten.
-Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
-                        </consequence>
-                     </note>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="d4cc18f7-ad32-40d9-b0ed-abc2fe654b98d6e44">
-                  
-                     <title>
-                        <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
-                     </title>
-                     <p>Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
-vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:</p>
-                     <verbatim>declare variable $nachname as xs:string external;
-&lt;buecher autor="{$nachname}"&gt;
-{
-  let $bibliothek := .
-  for $x in $bibliothek/buecher//buch,
-      $y in $bibliothek/autoren//autor
-  where starts-with($y, $nachname)
-      and $x/@autorId = $y/@id
-  order by $x/ausgabe
-  return
-  &lt;buch ausgabe="{$x/ausgabe}"&gt;
-    {$x/titel}
-  &lt;/buch&gt;
-}
-&lt;/buecher&gt;</verbatim>
-                     <p>Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
-so kann man mit der folgenden Kommandozeile auf einer buecher.xml
-Datei als Eingabe suchen:</p>
-                     <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
-                                                       -q:buecher.xquery 
-                                                       -o:ergebnis.xml 
-                                                       nachname=grass</verbatim>
-                  
-               </chapter>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="05c40eea-5e6f-4a74-9e6b-fb569fc33d29d6e55">
-                  
-                     <title>
-                        <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
-                     </title>
-                     <p>Document Projection<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                    address="http://www.saxonica.com/documentation/#!sourcedocs/projection">
+               <title>
+                  <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming</title>
+               </title>
+               
+                  <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
+                  <procedure type="ol">
+                     <step>
+                        <action>
+                           <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python sgmllib<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                             address="https://docs.python.org/2/library/sgmllib.html">
+                           <sup>↗↗</sup>
+                        </url>.</p>
+                        </action>
+                     </step>
+                     <step>
+                        <action>
+                           <p>Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p>
+                        </action>
+                     </step>
+                  </procedure>
+                  <p>XSLT Streaming ist in der XSLT Version 3.0 neu hinzugekommen<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html">
                   <sup>↗↗</sup>
-               </url>  ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
-Das kann schon recht hilfreich sein, wenn man ein mehrere 100MB großes Dokument durchsuchen
-will.</p>
-                     <p>Ohne Projection würde das Beispiel von oben so verarbeitet:</p>
-                     <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
-     -s:buecher.xml 
-     -q:buecher.xquery 
-     -o:ergebnis.xml 
-     -projection:off 
-     nachname=grass
-Saxon-EE 9.7.0.20J from Saxonica
-Java version 1.8.0_60
-Using license serial number V005095
-Analyzing query from Desktop/buecher.xquery
-Generating byte code...
-Analysis time: 201.10095 milliseconds
-Processing file:/Users/Alex/buecher.xml
-Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
-Building tree for file:/Users/Alex/buecher.xml 
-using class net.sf.saxon.tree.tiny.TinyBuilder
-Tree built in 3.482278ms
-Tree size: 46 nodes, 58 characters, 6 attributes
-Execution time: 27.137589ms
-Memory used: 67031664</verbatim>
-                     <p>Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</p>
-                     <verbatim>[...]
-
-Document projection for file:/Users/Alex/buecher.xml
--- Input nodes 50; output nodes 27; reduction = 46%
-Tree built in 3.80615ms
-Tree size: 26 nodes, 58 characters, 3 attributes
-Execution time: 15.83463ms
-Memory used: 64339064</verbatim>
-                  
-               </chapter>
-            
-         
-      </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-               ismodule="no">
-         
-            <title>
-               <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming</title>
-            </title>
-            
-               <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
-               <procedure type="ol">
-                  <step>
-                     <action>
-                        <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python sgmllib<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                          address="https://docs.python.org/2/library/sgmllib.html">
-                        <sup>↗↗</sup>
-                     </url>.</p>
-                     </action>
-                  </step>
-                  <step>
-                     <action>
-                        <p>Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p>
-                     </action>
-                  </step>
-               </procedure>
-               <p>XSLT Streaming ist in der XSLT Version 3.0 neu hinzugekommen<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html">
-               <sup>↗↗</sup>
-            </url> und in der
+               </url> und in der
 kommerziellen Saxon-EE Löusug implementiert<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://www.saxonica.com/html/documentation/sourcedocs/streaming/">
-               <sup>↗↗</sup>
-            </url>. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung führt.</p>
-               <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
-               <ul>
-                  <li>
-                     <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>
-                  </li>
-                  <li>
-                     <p>Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</p>
-                  </li>
-                  <li>
-                     <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
-                  </li>
-                  <li>
-                     <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
-                  </li>
-               </ul>
-               <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
+                    address="https://www.saxonica.com/html/documentation/sourcedocs/streaming/">
+                  <sup>↗↗</sup>
+               </url>. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung führt.</p>
+                  <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
+                  <ul>
+                     <li>
+                        <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>
+                     </li>
+                     <li>
+                        <p>Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</p>
+                     </li>
+                     <li>
+                        <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
+                     </li>
+                     <li>
+                        <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
+                     </li>
+                  </ul>
+                  <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
 in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p>
-               <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
-               <verbatim>&lt;xsl:stylesheet version="3.0"
+                  <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
+                  <verbatim>&lt;xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   exclude-result-prefixes="#all"&gt;
@@ -1480,157 +1146,303 @@ in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. f�
   &lt;/xsl:template&gt;
   
 &lt;/xsl:stylesheet&gt;</verbatim>
-               <p>Diese Stylesheet hat einige Besonderheiten:</p>
-               <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
+                  <p>Diese Stylesheet hat einige Besonderheiten:</p>
+                  <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
 eine implizite Identity-Transformation (shallow-copy)<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                 address="https://www.saxonica.com/html/documentation/xsl-elements/mode.html">
-               <sup>↗↗</sup>
-            </url> in die Ausgabeinstanz kopiert.</p>
-               <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
-               <verbatim>&lt;xsl:template match="node()|@*"
+                    address="https://www.saxonica.com/html/documentation/xsl-elements/mode.html">
+                  <sup>↗↗</sup>
+               </url> in die Ausgabeinstanz kopiert.</p>
+                  <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
+                  <verbatim>&lt;xsl:template match="node()|@*"
   &lt;xsl:copy&gt;
     &lt;xsl:apply-templates select="node()|@*"/&gt;
   &lt;/xsl:copy&gt;
 &lt;/xsl:template&gt;</verbatim>
-               <p>Zum anderen wird ein Akkumulator verwendet. Normalerweise gibt es in XSLT keine Variablen,
+                  <p>Zum anderen wird ein Akkumulator verwendet. Normalerweise gibt es in XSLT keine Variablen,
 sondern nur Konstanten, so wie das auch bei funktionalen Programmiersprachen der Fall ist.</p>
-               <p>Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
+                  <p>Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
 an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.</p>
-               <p>Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
+                  <p>Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
 würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p>
-               <p>Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
+                  <p>Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
 wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
 bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur 
 späteren Auswertung bzw. Gruppierung der Key-Elemente.</p>
-               <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
+                  <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
 Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
 wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
-               <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
+                  <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
 einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
 Prozessor allerdings nicht akzeptiert.</p>
-               <verbatim>Cannot call accumulator-after except during the post-descent 
+                  <verbatim>Cannot call accumulator-after except during the post-descent 
 phase of a streaming template</verbatim>
-               <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
+                  <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
 wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
 kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
-               <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
-               <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
-               <verbatim>on-no-match="deep-copy"</verbatim>
-               <p>wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+                  <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
+                  <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
+                  <verbatim>on-no-match="deep-copy"</verbatim>
+                  <p>wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
 Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
 am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
 Arten realisieren.</p>
-               <p>Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
+                  <p>Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
 werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
 würde.</p>
+               
             
-         
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
+                  ismodule="no">
+            
+               <title>
+                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id()</title>
+               </title>
+               
+                  <p>Die generate-id() Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p>
+                  <p>Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
+der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="e8ec86c2-690d-4e7b-a0e5-be6d7297a7fad6e8">
+                     
+                        <title>
+                           <title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title>
+                        </title>
+                        <p>Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
+System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in die Ausgabe (Eine Dokumentation für eine Maschine)
+generiert werden.</p>
+                        <p>Die Id an einem Element &lt;part id=“1234”&gt; würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
+mit den folgenden Templates (vereinfacht) passieren:</p>
+                        <verbatim>&lt;xsl:key name="parts" match="part" use="@id"/&gt;
+  
+&lt;xsl:template match=“part” mode=“content"&gt;
+  &lt;!-- Ausgabe des Bauteils im Content Bereich --&gt;
+  &lt;fo:block id="{generate-id()}"&gt;
+    &lt;fo:external-graphic xsl:use-attribute-sets="part.img"/&gt;  
+  &lt;/fo:block&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match=“part” mode=“part-list"&gt;
+  &lt;!-- Ausgabe einer Liste mit allen Verweisen an unterschiedicher Stelle --&gt;
+  &lt;fo:block&gt;
+    &lt;xsl:for-each select="key('parts',@id)"&gt;
+      &lt;fo:page-number-citation ref-id="{generate-id()}"/&gt;
+    &lt;/xsl:for-each&gt;
+  &lt;/fo:block&gt;
+&lt;/xsl:template&gt;</verbatim>
+                     
+                  </chapter>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="93c4b796-1c96-41a7-b9b4-1e80170d1cd6d6e17">
+                     
+                        <title>
+                           <title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title>
+                        </title>
+                        <p>Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
+aufsplitten will, um sie in einer XML Datenbank abspeichern zu können. Die Struktur einer Datenübertragung
+könnte folgendermassen aussehen:</p>
+                        <verbatim>WRAPPER1
+  SEQUENZ1
+  SEQUENZ2
+  SEQUENZ3
+  WRAPPER2
+    SEQUENZ1
+    SEQUENZ2
+    SEQUENZ3
+    SEQUENZ4
+    WRAPPER3
+      SEQUENZ1
+      SEQUENZ2
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      WRAPPER4
+        SEQUENZ1
+      CONTENT
+        DATA1
+        DATA2
+        DATA3
+        DATA4
+        DATA5
+      [...]</verbatim>
+                        <p>Jedes einzelne CONTENT Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
+Descendant-Achse bis zum Element WRAPPER3, ausserdem noch die Elemente SEQUENZ1 und SEQUENZ2,
+sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
+                        <verbatim>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+    
+  &lt;xsl:output method="xml" indent="yes"/&gt;
+  &lt;xsl:strip-space elements="*"/&gt;
+  
+  &lt;xsl:template match="/"&gt;
+    &lt;xsl:apply-templates select="/WRAPPER1/WRAPPER2/WRAPPER3/CONTENT" mode="umschlag"/&gt;
+  &lt;/xsl:template&gt;
+    
+  &lt;xsl:template match="CONTENT" mode="umschlag"&gt;
+    &lt;xsl:result-document href="{concat(@id,'.xml')}"&gt;
+      &lt;umschlag&gt;
+        &lt;metadaten&gt;&lt;!-- einige Metadaten --&gt;&lt;/env:metadata&gt;
+        &lt;nutzdaten&gt;
+            &lt;xsl:apply-templates select="ancestor::WRAPPER1"&gt;
+              &lt;xsl:with-param name="this-id" select="generate-id()" tunnel="yes"/&gt;
+            &lt;/xsl:apply-templates&gt;
+        &lt;/nutzdaten&gt;
+      &lt;/umschlag&gt;
+    &lt;/xsl:result-document&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="node()|@*"&gt;
+    &lt;xsl:copy&gt;
+      &lt;xsl:apply-templates select="node()|@*"/&gt;
+    &lt;/xsl:copy&gt;
+  &lt;/xsl:template&gt;
+    
+  &lt;xsl:template match="CONTENT"&gt;
+    &lt;xsl:param name="this-element" tunnel="yes"/&gt;
+    &lt;xsl:if test="$this-id = generate-id()"&gt;
+      &lt;xsl:copy&gt;
+        &lt;xsl:apply-templates select="node()|@*"/&gt;
+      &lt;/xsl:copy&gt;
+    &lt;/xsl:if&gt;
+  &lt;/xsl:template&gt;
+    
+&lt;/xsl:stylesheet&gt;</verbatim>
+                        <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes CONTENT Element selektiert und
+in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element &lt;nutzdaten&gt;
+gesetzt wird. Dabei wird aber nur derjenige CONTENT Abschnitt evaluiert, der
+zu der als Parameter übergebenen generierten Id passt.</p>
+                     
+                  </chapter>
+               
+            
+         </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+      <chapter hyphenation="yes" chapterpage="no" id="8969a5d0-6c34-4bc8-8b60-3a070bc123d7"
                ismodule="no">
          
             <title>
-               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+               <title id="79507fbb-caa9-4316-8097-2d7e55208d81">XQuery Use Cases und Lösung</title>
             </title>
             
-               <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
+               <p>In diese Kapitel werden einige ausgewählte Themen zu XSLT dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
+            
+         
+         <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+                  ismodule="no">
+            
+               <title>
+                  <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+               </title>
+               
+                  <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
 oder übel mit dem Thema Namespaces (NS) auseinander setzen müssen, um Konflikte in den 
 Elementselektoren zu vermeiden.</p>
-               <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
+                  <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
 dass unerwartet ein Namespace in die Ausgabe generiert wird,
 den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wurde.</p>
-               <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
+                  <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
 dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
 wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
-               <verbatim>&lt;xsl:stylesheet version="2.0" 
+                  <verbatim>&lt;xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
   xmlns:tektur="https://namespace-eigener-xslt-funktionen"
   xmlns="http://namespace-in-der-xml-eingabe.com/"
   xpath-default-namespace="https://namespace-der-konfigdatei.com/"
   exclude-result-prefixes="#all"&gt;</verbatim>
-               <ul>
-                  <li>
-                     <p>Der <b>xsl</b> Namespace ist klar</p>
-                  </li>
-                  <li>
-                     <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
+                  <ul>
+                     <li>
+                        <p>Der <b>xsl</b> Namespace ist klar</p>
+                     </li>
+                     <li>
+                        <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
 nach der XML Schema Spezifikation<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                       address="https://de.wikipedia.org/wiki/XML_Schema">
-                     <sup>↗↗</sup>
-                  </url> und somit die 
+                          address="https://de.wikipedia.org/wiki/XML_Schema">
+                        <sup>↗↗</sup>
+                     </url> und somit die 
 bessere Validierung des Stylesheets zur Compile-Zeit.</p>
-                  </li>
-                  <li>
-                     <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
+                     </li>
+                     <li>
+                        <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
 wie z.B. auch das Einbinden der FunctX Bibliothek<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
-                       address="http://www.xsltfunctions.com/">
-                     <sup>↗↗</sup>
-                  </url>
-               </p>
-                  </li>
-                  <li>
-                     <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
-                  </li>
-                  <li>
-                     <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
+                          address="http://www.xsltfunctions.com/">
+                        <sup>↗↗</sup>
+                     </url>
+                  </p>
+                     </li>
+                     <li>
+                        <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
+                     </li>
+                     <li>
+                        <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
 In diesem Feld würde ich den NS einer Konfigurations- oder separaten Datendatei angeben.</p>
-                  </li>
-               </ul>
-               <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
+                     </li>
+                  </ul>
+                  <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
 GGf. empfiehlt es sich, die Eingabe vor der Verabeitung zu normalisieren und Elemente ggf. umzubennen.</p>
-               <danger>
-                  <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
+                  <danger>
+                     <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
 an einem ganz bestimmten Element hängen - so kannp bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</cause>
-                  <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
-               </danger>
-               <p>Namespaces in der Eingabe werden über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namespace
+                     <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
+                  </danger>
+                  <p>Namespaces in der Eingabe werden über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namespace
 schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten Kontextknoten ab:</p>
-               <ul>
-                  <li>
-                     <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
-                  </li>
-                  <li>
-                     <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
-                  </li>
-               </ul>
-               <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
-               <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
-               <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
+                  <ul>
+                     <li>
+                        <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
+                     </li>
+                     <li>
+                        <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
+                     </li>
+                  </ul>
+                  <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
+                  <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
+                  <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
 Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
 dass der Default Namespace auch tatsächlich in die Ausgabe kommt.</p>
-               <verbatim>&lt;xsl:element name="meinelement" namespace=""&gt;</verbatim>
-               <p>Hier wird ein Element ohne Namespace Angabe in die Ausgabe geschrieben. Es würde dann
+                  <verbatim>&lt;xsl:element name="meinelement" namespace=""&gt;</verbatim>
+                  <p>Hier wird ein Element ohne Namespace Angabe in die Ausgabe geschrieben. Es würde dann
 den Default-Namespace der Ausgabe erben. Es gibt auch ein Attribut am xsl:copy Element,
 das den Vorgang des Namespace-Kopierens steuern kann:</p>
-               <verbatim>&lt;xsl:template match="p"&gt;
+                  <verbatim>&lt;xsl:template match="p"&gt;
   &lt;xsl:copy copy-namespaces="no"&gt;
      &lt;xsl:apply-templates/&gt;
    &lt;/xsl:copy&gt;
 &lt;/xsl:template&gt;</verbatim>
-               <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
+                  <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
 Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich nicht darauf verlassen.</p>
-               <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
+                  <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
 weiterzuvererben:</p>
-               <verbatim>&lt;xsl:template match="@* | node()"&gt;
+                  <verbatim>&lt;xsl:template match="@* | node()"&gt;
    &lt;xsl:copy inherit-namespaces="no"&gt;
      &lt;xsl:apply-templates select="@* | node()"/&gt;
    &lt;/xsl:copy&gt;
 &lt;/xsl:template&gt;</verbatim>
-               <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                  id="0087e948-91f4-4a6f-a7a5-27cc1593d170d6e73">
-                  
-                     <title>
-                        <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
-                     </title>
-                     <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="0087e948-91f4-4a6f-a7a5-27cc1593d170d6e73">
+                     
+                        <title>
+                           <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
+                        </title>
+                        <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
 z.B. dazu auf einer NoSQL Datenbank Daten aus unterschiedlichen Quellen
 zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p>
-                     <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
+                        <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
 funktioniert.</p>
-                     <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
+                        <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
 kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p>
-                     <verbatim>xquery version "1.0-ml";
+                        <verbatim>xquery version "1.0-ml";
 
 import module namespace tektur = "http://www.teturcms.de/xquery/common" 
                                   at "common.xqy";
@@ -1639,15 +1451,422 @@ import module namespace mem = "http://xqdev.com/in-mem-update"
 declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
 declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
 declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
-                     <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
+                        <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
 im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
 Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
 eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
 vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
-                  
-               </chapter>
+                     
+                  </chapter>
+               
+            
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
+                  ismodule="no">
+            
+               <title>
+                  <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
+               </title>
+               
+                  <p>Xquery führt im Publishing-Bereich ein Schattendasein. In meiner Zeit als XSL Programmierer für zwei Publishing  Firmen hatte ich damit nie zu tun. Erst als ich näher an den eigentlichen Daten war und mit XML Datenbanken zu tun hatte, kam ich mit XQuery in Berührung.</p>
+                  <p>Während relationale Datenbanken mit SQL abgefragt werden, verwendet man bei XML Datenbanken, wie eXist<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://exist-db.org/exist/apps/homepage/index.html">
+                  <sup>↗↗</sup>
+               </url> oder Marklogic<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://de.marklogic.com/">
+                  <sup>↗↗</sup>
+               </url>, XQuery als Abfragesprache.</p>
+                  <p>Aber auch einzelne XML Dokumente können z.B. in Oxygen XML Editor mit dem XQuery Builder Tool<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.oxygenxml.com/xml_editor/xquery_builder.html">
+                  <sup>↗↗</sup>
+               </url> oder auch per Saxon Kommandozeile abgefragt werden:</p>
+                  <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query 
+     -s:"schulen.xml" 
+     -qs:"/schulen/schule[id='6']" 
+     -o:"/Users/Alex/Desktop/schule_6.xml"</verbatim>
+                  <p>Mit der Option <b>-qs </b>kann hier der Querystring angebenen werden. </p>
+                  <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="http://cs.au.dk/~amoeller/XML/querying/flwrexp.html">
+                  <sup>↗↗</sup>
+               </url> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="dbd25cc4-675f-4327-bec1-f80457cd9986d6e19">
+                     
+                        <title>
+                           <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
+                        </title>
+                        <p>Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
+auf einem geladenen XML Dokument auszuführen. Dazu kann man 
+seine Query in das betreffende Eingabefenster schreiben.</p>
+                        <figure pdfwidth="page">
+                           <subtitle>oXygen XQuery Builder</subtitle>
+                           <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
+                        </figure>
+                        <p>Mit folgendem Ergebnis:</p>
+                        <verbatim>&lt;dates&gt;
+  &lt;today&gt;2019-01-16+01:00&lt;/today&gt;
+  &lt;formatted&gt;Wednesday, 16th January 2019&lt;/formatted&gt;
+&lt;/dates&gt;</verbatim>
+                     
+                  </chapter>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="7955ea5d-939e-47ca-8b87-de752d45673dd6e32">
+                     
+                        <title>
+                           <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
+                        </title>
+                        <p>FLOWR steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
+dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
+                        <verbatim>let $bibliothek := .
+for $x in $bibliothek//buecher,
+    $y in $bibliothek//autoren/autor
+where starts-with($autor, 'Grass')
+    and $x/@autorId = $y/@id
+return $x/titel</verbatim>
+                        <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
+Bemerkenswert ist hier die Syntax.</p>
+                        <note>
+                           <consequence>
+                              <p>Normalerweise würde man zwischen den
+einzelnen Anweisungen einen Blockabschluss, wie ein Semikolon erwarten.
+Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
+                           </consequence>
+                        </note>
+                     
+                  </chapter>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="d4cc18f7-ad32-40d9-b0ed-abc2fe654b98d6e44">
+                     
+                        <title>
+                           <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
+                        </title>
+                        <p>Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
+vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:</p>
+                        <verbatim>declare variable $nachname as xs:string external;
+&lt;buecher autor="{$nachname}"&gt;
+{
+  let $bibliothek := .
+  for $x in $bibliothek/buecher//buch,
+      $y in $bibliothek/autoren//autor
+  where starts-with($y, $nachname)
+      and $x/@autorId = $y/@id
+  order by $x/ausgabe
+  return
+  &lt;buch ausgabe="{$x/ausgabe}"&gt;
+    {$x/titel}
+  &lt;/buch&gt;
+}
+&lt;/buecher&gt;</verbatim>
+                        <p>Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
+so kann man mit der folgenden Kommandozeile auf einer buecher.xml
+Datei als Eingabe suchen:</p>
+                        <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
+                                                       -q:buecher.xquery 
+                                                       -o:ergebnis.xml 
+                                                       nachname=grass</verbatim>
+                     
+                  </chapter>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="05c40eea-5e6f-4a74-9e6b-fb569fc33d29d6e55">
+                     
+                        <title>
+                           <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
+                        </title>
+                        <p>Document Projection<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                       address="http://www.saxonica.com/documentation/#!sourcedocs/projection">
+                     <sup>↗↗</sup>
+                  </url>  ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
+Das kann schon recht hilfreich sein, wenn man ein mehrere 100MB großes Dokument durchsuchen
+will.</p>
+                        <p>Ohne Projection würde das Beispiel von oben so verarbeitet:</p>
+                        <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
+     -s:buecher.xml 
+     -q:buecher.xquery 
+     -o:ergebnis.xml 
+     -projection:off 
+     nachname=grass
+Saxon-EE 9.7.0.20J from Saxonica
+Java version 1.8.0_60
+Using license serial number V005095
+Analyzing query from Desktop/buecher.xquery
+Generating byte code...
+Analysis time: 201.10095 milliseconds
+Processing file:/Users/Alex/buecher.xml
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Building tree for file:/Users/Alex/buecher.xml 
+using class net.sf.saxon.tree.tiny.TinyBuilder
+Tree built in 3.482278ms
+Tree size: 46 nodes, 58 characters, 6 attributes
+Execution time: 27.137589ms
+Memory used: 67031664</verbatim>
+                        <p>Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</p>
+                        <verbatim>[...]
+
+Document projection for file:/Users/Alex/buecher.xml
+-- Input nodes 50; output nodes 27; reduction = 46%
+Tree built in 3.80615ms
+Tree size: 26 nodes, 58 characters, 3 attributes
+Execution time: 15.83463ms
+Memory used: 64339064</verbatim>
+                     
+                  </chapter>
+               
+            
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
+                  ismodule="no">
+            
+               <title>
+                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
+               </title>
+               
+                  <p>Marklogic bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
+                  <figure pdfwidth="page">
+                     <desc id="9ec26a70-15c4-41e3-804e-2e53b5ab8ef6d6e10">oXygen Data Source Explorer View öffnen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
+                  </figure>
+                  <p>und konfiguriert eine neue Datenquelle:</p>
+                  <figure pdfwidth="page">
+                     <desc id="3f850e7f-8aa0-4afa-b743-7307baaaebc7d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
+                  </figure>
+                  <p>Dazu muss man den Marklogic Treiber installieren<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html">
+                  <sup>↗↗</sup>
+               </url> und diesen im folgenden Screen verfügbar machen.</p>
+                  <caution>
+                     <cause>Das Jar sollte an einem soliden Ort abgespeichert werden, da hier nur ein Verweis auf diesen Ort gesetzt wird.</cause>
+                     <consequence/>
+                  </caution>
+                  <figure pdfwidth="page">
+                     <desc id="c2e5f47b-55e4-42dd-adcf-3e393d9b4fd4d6e27">Marklogic Treiber auswählen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
+                  </figure>
+                  <p>Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b>  hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
+                  <figure pdfwidth="page">
+                     <desc id="3edc02e3-2d0c-4a8a-9461-09f0769f96d0d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
+                  </figure>
+                  <figure pdfwidth="page">
+                     <desc id="1c0476fc-2a67-47eb-96c1-ff65bdd9fd53d6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
+                  </figure>
+                  <p>Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
+                  <figure pdfwidth="page">
+                     <desc id="fa00df67-2ba2-447d-b9be-04cb1e142f79d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
+                  </figure>
+                  <p>Schliesslich hat man im Data Source Explorer in oxygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
+                  <figure pdfwidth="page">
+                     <desc id="0729c1e0-91c9-472d-bc9f-a33e8a77d5abd6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
+                  </figure>
+               
+            
+         </chapter>
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
+               ismodule="no">
+         
+            <title>
+               <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
+            </title>
+            
+               <p>In diese Kapitel werden einige ausgewählte Themen zum Testing von XSLT und XQuery Programmen dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
             
          
+         <chapter hyphenation="yes" chapterpage="no" id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
+                  ismodule="no">
+            
+               <title>
+                  <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
+               </title>
+               
+                  <p>Um die Korrektheit einer XML Instanz zu prüfen, gib es verschiedene Schemata, wie XSD, RNG oder DTD, welche der Parser beim Aufbau des DOM Baums heranzieht. Eine Validierung mit Apache Xerces könnte beispielsweise als Java Code folgendermaßen angestossen werden:</p>
+                  <verbatim>URL schemaFile = new URL("http://host:port/filename.xsd");
+Source xmlFile = new StreamSource(new File("web.xml"));
+SchemaFactory schemaFactory = SchemaFactory
+    .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+try {
+  Schema schema = schemaFactory.newSchema(schemaFile);
+  Validator validator = schema.newValidator();
+  validator.validate(xmlFile);
+  System.out.println(xmlFile.getSystemId() + " is valid");
+} catch (SAXException e) {
+  System.out.println(xmlFile.getSystemId() + " is NOT valid reason:" + e);
+} catch (IOException e) {</verbatim>
+                  <p>Schema Dateien können aber auch in XML Editoren eingebunden werden, um schon während der Eingabe der XML Instanz die Korrektheit zu überprüfen. </p>
+                  <p>Das geht einerseits über die Angabe des Doctypes in der XML Instanz, anderseits bieten auch alle Editoren die Möglichkeit ein bestimmtes Schema explizit auszuwählen, um gegen dieses auf Anforderung zu validieren.</p>
+                  <p>Gilt es komplexere Businessregeln zu überprüfen, die über Syntax-, Konsistenz- und einfache Korrektheitschecks hinausgehen, empfiehlt sich eine Validierung mit Schematron Regeln.</p>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="21e887d9-7aeb-43cc-a506-ed4ebb9b66d8d6e14">
+                     
+                        <title>
+                           <title id="c802dd14-5953-4c24-8637-f7552d107e57d6e13">Schematron ist XSLT</title>
+                        </title>
+                        <p>Bei einer Schematron Validierung wird eine XML Instanz mit Hilfe eines automatisch generierten XSLT Stylesheets überprüft. Dieses kontextabhängige Stylesheet wird aus einer in der Schematron Syntax vom Autor verfassten Regelbasis, die wiederum in XML vorliegt, über ein zweites XSLT Stylesheet generiert - Dieses zweite XSLT Stylesheet ist sozusagen das eigentliche Schematron Programm. </p>
+                        <p>Das folgende Diagramm veranschaulicht die Vorgehensweise anhand eines Filter-Szenarios, bei dem ein XML Dokument mit einigen ungültigen Passagen in eine gefilterte Darstellung überführt wird.</p>
+                        <figure pdfwidth="page">
+                           <subtitle>Schematron Validierung mit Filter</subtitle>
+                           <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
+                        </figure>
+                        <p>Zu finden ist das Schematron Programm auf Github: https://github.com/Schematron/schematron. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
+                        </p>
+                     
+                  </chapter>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="f3496d06-b1ea-4959-8e31-db0afc948b52d6e30">
+                     
+                        <title>
+                           <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
+                        </title>
+                        <p>Um die Schematron XSLT Skripte in eine eigene XSLT Anwendung per Kommandozeile einzubinden, könnte man folgendermassen vorgehen: </p>
+                        <ul>
+                           <li>
+                              <p>Im eigenen GIT Projekt das Schematron Projekt als Submodule referenzieren.</p>
+                           </li>
+                           <li>
+                              <p>Eine Regelbasis anlegen, beispielsweise <b>$project_name.sch</b>.</p>
+                           </li>
+                           <li>
+                              <p>Zwei Batch-Skripte anlegen, beispielsweise <b>generate_schema.sh</b> und <b>validate.sh</b>.</p>
+                           </li>
+                        </ul>
+                        <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
+                        <verbatim>saxon $script_dir/$project_name_validation.sch $script_dir/schematron/iso_dsdl_include.xsl
+ | \ saxon -s:- $script_dir/schematron/iso_abstract_expand.xsl | \
+saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
+  <b>generate-fired-rule</b>=false &gt; $script_dir/$project_name_validation.xsl</verbatim>
+                        <p>Der Prozess zum Erzeugen des projektspezifischen Validerungs-XSLT-Skripts ist dreistufig und wird über die folgenden XSLT Schritte abgearbeitet.</p>
+                        <ul>
+                           <li>
+                              <p>iso_dsdl_include.xsl</p>
+                           </li>
+                           <li>
+                              <p>iso_abstract_expand.xsl</p>
+                           </li>
+                           <li>
+                              <p>iso_svrl_for_xslt2.xsl</p>
+                           </li>
+                        </ul>
+                        <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <b>$project_name_validation.xsl.</b>
+                        </p>
+                        <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
+                        <verbatim>saxon $xml_instance_to_check.xml $script_dir/$project_name_validation.xsl \
+  &gt; $validation-result.xml</verbatim>
+                        <p>Die Ausgabe dieses Prüfprozesses ist eine XML Datei mit den Fehlern in der Eingabe-XML-Instanz, die weiterverarbeitet werden kann, beispielsweise als Filterkriterium für einen nachfolgenden Prozessschritt. Ihr Inhalt dieser Datei sieht z.B. wie folgt aus:</p>
+                        <verbatim>&lt;svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" [...]
+  &lt;svrl:active-pattern document="file:/Users/alex/xml_instance_to_check.xml" 
+   id="default" name="default"/&gt;
+  &lt;svrl:failed-assert test="count(key('unique-ids', current()))=1"&gt;
+    &lt;svrl:text&gt;ID is not unique!&lt;/svrl:text&gt;
+    &lt;svrl:diagnostic-reference diagnostic="default"&gt;
+      &lt;bk:id xmlns:bk="http://tekturcms/namespaces/book"&gt;1234-5678-9&lt;/my:id&gt;
+    &lt;/svrl:diagnostic-reference&gt;
+  &lt;/svrl:failed-assert&gt;
+  [...]</verbatim>
+                        <p>Neben den <b>svrl:failed-assert</b> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <b>svrl:successful-report</b>.</p>
+                        <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
+                        <verbatim>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
+  &lt;xsl:key name="unique-ids" match="bk:id" use="."/&gt;
+  &lt;sch:let name="date-regex" value="'^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])
+                                     -(0[1-9]|[12][0-9]|3[01])$'"/&gt;
+  &lt;sch:pattern id="default"&gt;
+    &lt;sch:rule context="book"&gt;
+      &lt;sch:assert id="check-book-id" role="error" test="count(key('unique-ids', bk:id))=1" 
+                  diagnostics="default"&gt;ID is not unique!&lt;/sch:assert&gt;
+      &lt;sch:assert id="check-book-published" role="error" 
+                  test="matches(bk:published,$date-regex)
+    &lt;/sch:rule&gt;
+    [...]
+  &lt;/sch:pattern&gt;
+  &lt;sch:diagnostics&gt;
+    &lt;sch:diagnostic id="default"&gt;
+      &lt;xsl:element name="bk:id"&gt;
+        &lt;xsl:value-of select="bk:id"/&gt;
+      &lt;/xsl:element&gt;
+    &lt;/sch:diagnostic&gt;
+  &lt;/sch:diagnostics&gt;</verbatim>
+                        <p>Neben der "successful" und "failed" Regeln ist auch die Deklaration von Funktionen und Variablen im Body der Regelbasis erlaubt. Dies ermöglicht komplexe Bedingungen, bespw. durch das Nachschlagen in einer Lookup-Tabelle abzuprüfen. </p>
+                     
+                  </chapter>
+               
+            
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="cc183707-5352-4c9c-9c31-68047a882d0f"
+                  ismodule="no">
+            
+               <title>
+                  <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
+               </title>
+               
+                  <p>XSpec ist ein <b>Test-Framework</b>
+               <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://github.com/xspec">
+                  <sup>↗↗</sup>
+               </url> für XSLT, XQuery und Schematron. 
+Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b>Test-Szenario</b> 
+Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p>
+                  <verbatim>&lt;test-szenario&gt;
+  &lt;testfall&gt;
+    &lt;personen&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Horst&lt;/vorname&gt;
+        &lt;<b>nachname</b>&gt;Schlämmer&lt;/<b>nachname</b>&gt;
+        &lt;gewicht&gt;100&lt;/gewicht&gt;
+      &lt;/person&gt;
+      &lt;person&gt;
+        &lt;vorname&gt;Gundula&lt;/vorname&gt;
+        &lt;<b>nachname</b>&gt;&lt;/<b>nachname</b>&gt;
+        &lt;gewicht&gt;60&lt;/gewicht&gt;
+      &lt;/person&gt;
+    &lt;/personen&gt;
+  &lt;/testfall&gt;
+&lt;/test-szenario&gt;</verbatim>
+                  <p>in einer XSpec Datei *. werden <b>Assert- und Not-Assert-Methoden</b> deklariert:</p>
+                  <verbatim>&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+               schematron="test.sch"&gt;
+  &lt;x:scenario label="ALL"&gt;
+    &lt;x:context href="test.xml"/&gt;
+    &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b>nachname</b>"/&gt;
+    &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b>nachname</b>"/&gt;
+  &lt;/x:scenario&gt;
+&lt;/x:description&gt;</verbatim>
+                  <p>Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
+Testfalls positiv erfüllt ist. Beim Not-Assert ist das Gegenteil der Fall. Im obigen Beispiel
+reichen zwei Regeln, um den Testfall vollständig abzudecken.</p>
+                  <p>Wenn man Schematron Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
+die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p>
+                  <verbatim>&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
+  &lt;sch:pattern id="main"&gt;
+    &lt;sch:rule context="<b>nachname</b>"&gt;
+      &lt;sch:assert id="person-nachname-rule" role="error" test="normalize-space(.)"&gt;
+        Der Nachname der Person mit ID: &lt;sch:value-of select="@id"/&gt; fehlt! 
+      &lt;/sch:assert&gt;
+    &lt;/sch:rule&gt;
+  &lt;/sch:pattern&gt;
+&lt;/sch:schema&gt;</verbatim>
+                  <p>In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p>
+                  <p>Hat sie keinen Nachnamen so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
+geschrieben. Diese Datei wertet nun Xspec aus.</p>
+                  <note>
+                     <consequence>
+                        <p>Erscheint ein Fehler (= das Feld <b>nachname</b> ist leer), so greift bei Xspec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p>
+                     </consequence>
+                  </note>
+                  <p>Als Eselsbrücke kann man
+ein Assert in der Xspec Datei gleichsetzen mit <b>Appear</b> und ein Not-Assert mit
+<b>Not-Appear</b>. </p>
+                  <p>Ein Assert sichert also zu, dass sich ein Fehlerbericht in der
+Schematron Ergebnisdatei zum Testfall befindet. Ein Not-Assert sichert zu, dass
+sich kein Fehlerbericht befindet. </p>
+                  <p> Wie man sich leicht vorstellen kann, sind Assert-Regeln in diesem Fall leicht zu finden,
+dazu muss man nur die Schematron Testregeln ins Leere zeigen lassen. Alles ist grün
+und alles ist gut - dem Augenschein nach.</p>
+               
+            
+         </chapter>
       </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
@@ -1901,6 +2120,40 @@ git log --diff-filter=D --summary</verbatim>
                         <entry>
                            <p>Bei der Parameterisierung wird ein bestehendes Stylesheet mit Parametern versehen, um für möglichst viele Produktvarianten und Ausgabeformate die gleiche Codebasis wiederverwenden zu können. Dadurch soll Redundanz eingespart werden und der Aufruf vereinfacht werden.</p>
                         </entry>
+                     </row>
+                     <row>
+                        <entry>Topic Based Authoring</entry>
+                        <entry>
+                           <p>Beim Topic Based Authoring steht nicht das gesamte Buch im Vordergrund, sondern der Inhalt wird in wiederverwendbare Topics aufgeteilt, die dann in verschiedenen Publikationen wiederverwendet werden können. </p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>DITA</entry>
+                        <entry>
+                           <p>DITA ist ein Informationsmodell für die Technische Dokumentation.</p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>SGML</entry>
+                        <entry>
+                           <p>SGML ist der Vorläufer von XML.</p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>TIOBE Index</entry>
+                        <entry>
+                           <p>Im TIOBE Index wird jährlich die Beliebtheit von Programmiersprachen erfasst.</p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>Single Source Publishing</entry>
+                        <entry>
+                           <p>Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt.</p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>Pull Stylesheets</entry>
+                        <entry/>
                      </row>
                   </tbody>
                </tgroup>
