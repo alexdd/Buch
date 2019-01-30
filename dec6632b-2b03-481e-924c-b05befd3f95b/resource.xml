@@ -66,6 +66,9 @@
          <topicref id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
                    href="38f7a676-cbef-4a69-9ae9-d89bddde2719/resource.xml"
                    navtitle="Connector zu Marklogic in Oxygen"/>
+         <topicref id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
+                   href="98665bd9-d40d-4fc7-ab7a-e340be6190a6/resource.xml"
+                   navtitle="XQuery als Programmiersprache"/>
       </topicref>
       <topicref id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
                 href="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936/resource.xml"
