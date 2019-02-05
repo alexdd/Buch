@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><topic id="06abe1b7-21be-4794-bec6-c28732cf6cbf"><title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title><body id="ae4f3c4a-54be-4671-bba8-047bdf24b1d7"><p id="1e9a3c95-15bd-4eb0-89b8-59c8784a5425">Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
 Hat man parallel auch noch oXygen offen, kann man die Testergbnisse
-aus der Konsole direkt in ein XQuery Server Skript packen.</p><section id="8eccf2de-8fa7-476b-bf36-184dbbcf1a52d6e6"><title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title><p id="5fdff6dd-6c8a-467c-880d-33c88f7de0ded6e9">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:</p><pre id="a96cc2a2-8aa8-4265-8fa4-0c68f1e999bbd6e11" xml:space="preserve">(doc())[position() lt 11]</pre><p id="b3785b18-f654-4483-85a6-bdbb21caa0e1d6e13">Die Zahlen von 1 bis 100 mit:</p><pre id="7c356cda-0100-4a6c-8c96-4e35d08c05b7d6e15" xml:space="preserve">(for $i in (1 to 100) return $i)</pre><p id="7558c943-b4af-4b14-acf0-fc84efcebb90d6e17">Wenn man diese beide Anweisungen untereinander in die Konsole
+aus der Konsole direkt in ein XQuery Server Skript packen.</p><section id="936b2da2-86e2-4412-92ba-8957551903e2d6e6"><title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title><p id="5fdff6dd-6c8a-467c-880d-33c88f7de0ded6e9">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:[[xe1:Programmierkonstrukte;xe2:Schleifen - for]]</p><pre id="bf38c6ee-7277-4e19-8356-c68469fa9297d6e11" xml:space="preserve">(doc())[position() lt 11]</pre><p id="b3785b18-f654-4483-85a6-bdbb21caa0e1d6e13">Die Zahlen von 1 bis 100 mit:</p><pre id="7053f796-7599-4552-97b3-bf8fdf82ada9d6e15" xml:space="preserve">(for $i in (1 to 100) return $i)</pre><p id="7558c943-b4af-4b14-acf0-fc84efcebb90d6e17">Wenn man diese beide Anweisungen untereinander in die Konsole
 schreibt bekommt man einen Fehler. Trennt man sie mit einem 
-Komma - ein Tupel wird erzeugt - dann klappt es.</p></section><section id="88b4c67c-bc62-40d6-bc74-f9485f2e9253d6e19"><title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title><p id="68e15e0c-efc5-472f-87fe-4d2dd4352485d6e22">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
-folgendermassen aus[[fn:https://docs.marklogic.com/xdmp:document-insert]]:</p><pre id="a7335af4-9c7a-4f20-9d7f-1c9a8fc36944d6e24" xml:space="preserve">xdmp:document-insert(
+Komma - ein Tupel wird erzeugt - dann klappt es.</p></section><section id="78519ecd-7983-488b-adcd-7d94d3a8bd13d6e19"><title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title><p id="68e15e0c-efc5-472f-87fe-4d2dd4352485d6e22">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
+folgendermassen aus[[fn:https://docs.marklogic.com/xdmp:document-insert]]:[[xe1:Programmierkonstrukte;xe2:DB insert]]</p><pre id="e52e01ac-67ef-47a0-8b02-3293e0dfe5d7d6e24" xml:space="preserve">xdmp:document-insert(
   "/alex-test/example-alex.xml",
   &lt;root&gt;Hier steht der Content&lt;/root&gt;, 
   &lt;options xmlns="xdmp:document-insert"&gt;  
@@ -12,7 +12,7 @@ folgendermassen aus[[fn:https://docs.marklogic.com/xdmp:document-insert]]:</p><p
       map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
       =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
       }&lt;/metadata&gt;
-  &lt;/options&gt;)</pre><p id="0db3e46f-54fa-4858-b85d-ad36ded2bf2ad6e26">Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p><pre id="7c636703-1910-4bab-9fd9-fd7747a1f8cbd6e28" xml:space="preserve">(for $i in (1 to 10) return 
+  &lt;/options&gt;)</pre><p id="0db3e46f-54fa-4858-b85d-ad36ded2bf2ad6e26">Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p><pre id="fdae76be-1095-41e7-bdc8-78f87dc3c5b8d6e28" xml:space="preserve">(for $i in (1 to 10) return 
   xdmp:document-insert(
   concat("/alex-test/example-alex-",$i,".xml"),
   &lt;root&gt;Hier steht der Content {$i}&lt;/root&gt;, 
@@ -22,7 +22,7 @@ folgendermassen aus[[fn:https://docs.marklogic.com/xdmp:document-insert]]:</p><p
       =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
       }&lt;/metadata&gt;
   &lt;/options&gt;)
-)</pre><p id="ccd162ef-82c4-45f2-8a4d-a72e51647514d6e30">Dokumente kann man einer Collection zuweisen, um sie leichter finden und auswerten
-zu können. Das geht mit dem folgenden Befehl[[fn:https://docs.marklogic.com/xdmp:document-add-collections]]:</p><pre id="39fc48d3-bb27-4b25-bdf2-3727da4cfdfad6e32" xml:space="preserve">for $x in collection("http://www.tekturcms.de/alex-test")
+)</pre><p id="ccd162ef-82c4-45f2-8a4d-a72e51647514d6e30">Dokumente kann man einer Collection[[xe1:Programmierkonstrukte;xe2:DB Collection]] zuweisen, um sie leichter finden und auswerten
+zu können. Das geht mit dem folgenden Befehl[[fn:https://docs.marklogic.com/xdmp:document-add-collections]]:</p><pre id="dcf5142a-c780-4539-81b3-6d9875cf4524d6e32" xml:space="preserve">for $x in collection("http://www.tekturcms.de/alex-test")
   return
     fn:document-uri($x)</pre></section></body></topic>

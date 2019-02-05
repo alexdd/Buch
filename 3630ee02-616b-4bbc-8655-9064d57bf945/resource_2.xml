@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="51a4584a-9a43-4f8f-ad89-d1c2d88ab6e6"><title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Erweiterte Konstrukte</title><body id="55287d31-0b28-41fc-a844-f9f51bdf389d"><section id="983f2ff3-2f8f-4077-aac5-3868c300b518d6e4"><title id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5">Funktionen</title><p id="5de561e1-87c3-4f46-b36e-c5db56d9ae27d6e7">Um bestimmte Abschnitte des XQuery Programm wiederverwendbar zu machen, stehen Funktionsdeklarationen[[xe1:Programmierkonstrukte;xe2:Funktionen]] zur verfügung. Eine einfache Funktion wäre z.B. diese hier:</p><pre id="aa85304f-bcb6-40c9-b52b-139e8f20153fd6e9" xml:space="preserve">declare function local:wrap-header($json) {
+  xdmp:add-response-header("Pragma", "no-cache"),
+  xdmp:add-response-header("Cache-Control", "no-cache"),
+  xdmp:add-response-header("Expires", "0"),
+  xdmp:set-response-content-type('text/json; charset=utf-8'),
+  $json
+};</pre><p id="285caf33-98eb-4945-acad-961bc509ce0cd6e11">Sie wickelt um einen JSON String eine passende Header Information.</p><p id="df24cc6b-17ff-486d-827c-9cec00d4a33bd6e13">Damit die Funktion eingebunden werden kann, muss ein passender Namespace[[xe1:XML Konstrukte;xe2:Namespace]] deklariert werden:</p><pre id="8c0db90d-7c0c-4269-b1c9-272f6814201ad6e15" xml:space="preserve">declare namespace local = 'local:';</pre><p id="bc7c92a6-2eae-47e2-973b-904415f3fc0ed6e17">Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
+um ganz elementare Konstrukte, wie while...do[[xe1:Programmierkonstrukte;xe2:Schleifen - while..do]] Schleifen, zu realisieren.</p><p id="6ec7b350-f2e7-4922-9e96-9c12fd07957ad6e19">Dazu nutzt man, wie in der funktionalen Programmierung üblich, die Rekursion:</p><pre id="0b0363a0-ddf5-4235-bdc5-6132d2e09dfad6e21" xml:space="preserve">declare function local:ist-letzter-wert-in-kette($glied) {
+  let $wert := local:komplizierte-berechnung($glied),
+    $naechstes-glied := local:komplizierte-berechnung-der-position($glied),
+  return
+    if ($naechstes-glied and not($wert = 'foobar')) then
+      local:durchlaufe-kette($naechstes-glied)
+    else
+      $wert = 'foobar'
+};</pre><p id="844b5256-5000-436c-bca3-c8f1c31f3ffed6e23">In diesem kleinen Schnippsel sind schon einige Besonderheiten von 
+XQuery zu sehen. Variablenzuweisungen geschehen mit einem Doppelpunkt,
+Vergleiche dagegen nur mit einem einfachen "=". Statements werden mit einem
+Komma getrennt.</p></section><section id="7b11336e-bd01-49ca-98f7-3efa54e54f38d6e25"><title id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26">Module</title><p id="2cc3effd-16fe-42c0-9fbd-bfa92cb6d10bd6e28">Um eine XQuery Anwendung zu modularisieren[[xe1:Programmierkonstrukte;xe2:Module]], können einzelne Skripte in
+Module ausgelagert werden. Ein Modul, z.B. common.xqy, wird dabei über einen eigenen
+Namespace deklariert:</p><pre id="894633c9-dac8-4384-9388-274970c06b2dd6e30" xml:space="preserve">module namespace common = "https://www.tekturcms.de/common";</pre><p id="86f1276d-3550-4da6-887d-58012231ea7cd6e32">Dieses Modul kann dann in anderen Skripten eingebunden werden:</p><pre id="b3c2a7f7-34df-4566-8df4-54a5782edbd3d6e34" xml:space="preserve">import module namespace common = "https://www.tekturcms.de/common" at "common.xqy";</pre><p id="d3d6ab20-364a-45c0-b0fa-e2e4578331bcd6e36">Funktionen und Variablen werden dann mir dem Namespace[[xe1:XML Konstrukte;xe2:Namespaces]] geprefixt aufgerufen:</p><pre id="0d402b7d-265b-41c1-beb0-c35a2767501dd6e38" xml:space="preserve">Funktionsaufruf: common:wrap-response-header(...)
+Variablenauswertung: $common:collection-books</pre></section></body></topic>

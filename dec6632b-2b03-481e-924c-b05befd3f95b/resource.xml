@@ -34,6 +34,9 @@
       <topicref id="db988919-f71e-437e-b699-b6fdd2a32cb9"
                 href="db988919-f71e-437e-b699-b6fdd2a32cb9/resource.xml"
                 navtitle="Eindeutigkeit der Regelbasis"/>
+      <topicref id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+                href="3e443c28-8698-470b-b443-f286ff7ed2d5/resource.xml"
+                navtitle="Namespaces"/>
    </topicref>
    <topicref id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
              href="f838f9be-97bf-44a4-ac63-2e813a87f2ea/resource.xml"
@@ -57,9 +60,6 @@
       <topicref id="8969a5d0-6c34-4bc8-8b60-3a070bc123d7"
                 href="8969a5d0-6c34-4bc8-8b60-3a070bc123d7/resource.xml"
                 navtitle="XQuery Use Cases und Lösung">
-         <topicref id="3e443c28-8698-470b-b443-f286ff7ed2d5"
-                   href="3e443c28-8698-470b-b443-f286ff7ed2d5/resource.xml"
-                   navtitle="Namespaces in XQuery"/>
          <topicref id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
                    href="0846d6a2-6999-42ab-9e83-55bc197fc11c/resource.xml"
                    navtitle="Document Projection"/>
@@ -68,7 +68,14 @@
                    navtitle="Connector zu Marklogic in Oxygen"/>
          <topicref id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
                    href="98665bd9-d40d-4fc7-ab7a-e340be6190a6/resource.xml"
-                   navtitle="XQuery als Programmiersprache"/>
+                   navtitle="XQuery als Programmiersprache">
+            <topicref id="3630ee02-616b-4bbc-8655-9064d57bf945"
+                      href="3630ee02-616b-4bbc-8655-9064d57bf945/resource.xml"
+                      navtitle="Erweiterte Konstrukte"/>
+            <topicref id="382bb96a-5a06-460c-8d69-4c4cd613297c"
+                      href="382bb96a-5a06-460c-8d69-4c4cd613297c/resource.xml"
+                      navtitle="XQuery in der MarkLogic Konsole"/>
+         </topicref>
       </topicref>
       <topicref id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
                 href="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936/resource.xml"
