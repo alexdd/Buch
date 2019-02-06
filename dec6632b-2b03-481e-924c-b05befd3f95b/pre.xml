@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Fri Jan 25 2019 14:30:48 </date-of-last-change>
+      <date-of-last-change>Wed Feb 06 2019 14:05:58 </date-of-last-change>
       <language>de-DE</language>
-      <status>34</status>
+      <status>44</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -1041,7 +1041,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <first criterion="00000000"/>
                   <second criterion="00000000"/>
                </xe> hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="5a4424c5-7875-412e-baae-e86b1db64e51">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                        id="f9c8ddc2-d09d-4e8d-a369-ecff178c84ce">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
@@ -1075,6 +1075,182 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
          </column-wide-element>
                <column-wide-element>
             <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
+         </column-wide-element>
+            
+         
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
+               ismodule="no">
+         
+            <title>
+               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+            </title>
+            
+               <column-wide-element>
+            <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
+oder übel mit dem Thema Namespaces<xe>
+                  <first criterion="XML Konstrukte">XML Konstrukte</first>
+                  <second criterion="Namespaces">Namespaces</second>
+               </xe> (NS) auseinander setzen müssen, um Konflikte in den 
+Elementselektoren zu vermeiden.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
+dass unerwartet ein Namespace in die Ausgabe generiert wird,
+den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wurde.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
+dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
+wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:stylesheet version="2.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:tektur="https://namespace-eigener-xslt-funktionen"
+  xmlns="http://namespace-in-der-xml-eingabe.com/"
+  xpath-default-namespace="https://namespace-der-konfigdatei.com/"
+  exclude-result-prefixes="#all"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>Der <b>xsl</b> Namespace ist klar</p>
+                  </li>
+                  <li>
+                     <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
+nach der XML Schema Spezifikation<footnote>
+                        <desc>https://de.wikipedia.org/wiki/XML_Schema</desc>
+                     </footnote> und somit die 
+bessere Validierung des Stylesheets zur Compile-Zeit.</p>
+                  </li>
+                  <li>
+                     <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
+wie z.B. auch das Einbinden der FunctX Bibliothek<footnote>
+                        <desc>http://www.xsltfunctions.com/</desc>
+                     </footnote>
+                  </p>
+                  </li>
+                  <li>
+                     <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
+                  </li>
+                  <li>
+                     <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
+In diesem Feld würde ich den NS einer Konfigurations- oder separaten Datendatei angeben.</p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
+GGf. empfiehlt es sich, die Eingabe vor der Verabeitung zu normalisieren und Elemente ggf. umzubennen. Ansonsten kann man auch eigene Namespace-Prefixes deklarieren, wie z.B.:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>xmlns:ext="https://www.tekturcms.de/external-tools"</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>und diese in XPATH Selektionen und Match-Regeln verwenden.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <danger>
+                  <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
+an einem ganz bestimmten Element hängen - so kann es bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</cause>
+                  <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
+               </danger>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Namespaces in der Eingabe werden also meistens über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namespace
+schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten Kontextknoten ab:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
+                  </li>
+                  <li>
+                     <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
+Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
+dass der Default Namespace auch tatsächlich in die Ausgabe kommt.</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:element name="meinelement" namespace="mein-namespace"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird ein Element mit eigener Namespace Angabe in die Ausgabe geschrieben. Einfacher geschrieben:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;mein-element xmlns="mein-namespace"&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Es gibt auch ein Attribut am xsl:copy Element,
+das den Vorgang des Namespace-Kopierens steuern kann:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="p"&gt;
+  &lt;xsl:copy copy-namespaces="no"&gt;
+     &lt;xsl:apply-templates/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
+Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich ohne genauen Test nicht darauf verlassen.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
+weiterzuvererben:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>&lt;xsl:template match="@* | node()"&gt;
+   &lt;xsl:copy inherit-namespaces="no"&gt;
+     &lt;xsl:apply-templates select="@* | node()"/&gt;
+   &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+         </page-wide-element>
+               <block-title>
+                  <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
+               </block-title>
+               <column-wide-element>
+            <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
+z.B. dazu auf einer NoSQL Datenbank Daten aus unterschiedlichen Quellen
+zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
+funktioniert.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
+kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>xquery version "1.0-ml";
+
+import module namespace tektur = "http://www.teturcms.de/xquery/common" 
+                                  at "common.xqy";
+import module namespace mem = "http://xqdev.com/in-mem-update" 
+                                  at '/MarkLogic/appservices/utils/in-mem-update.xqy';
+declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
+declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
+declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
+im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
+Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
+eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
+vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
          </column-wide-element>
             
          
@@ -1700,175 +1876,10 @@ zu der als Parameter übergebenen generierten Id passt.</p>
             </title>
             
                <column-wide-element>
-            <p>In diese Kapitel werden einige ausgewählte Themen zu XSLT dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
+            <p>In diese Kapitel werden einige ausgewählte Themen zu XQuery dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
-                  ismodule="no">
-            
-               <title>
-                  <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
-               </title>
-               
-                  <column-wide-element>
-               <p>Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
-oder übel mit dem Thema Namespaces<xe>
-                     <first criterion="XML Konstrukte">XML Konstrukte</first>
-                     <second criterion="Namespaces">Namespaces</second>
-                  </xe> (NS) auseinander setzen müssen, um Konflikte in den 
-Elementselektoren zu vermeiden.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Gerade bei hintereinandergeschalteten Transformationen kann es auch passieren, 
-dass unerwartet ein Namespace in die Ausgabe generiert wird,
-den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wurde.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
-dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
-wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>&lt;xsl:stylesheet version="2.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:tektur="https://namespace-eigener-xslt-funktionen"
-  xmlns="http://namespace-in-der-xml-eingabe.com/"
-  xpath-default-namespace="https://namespace-der-konfigdatei.com/"
-  exclude-result-prefixes="#all"&gt;</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <ul>
-                     <li>
-                        <p>Der <b>xsl</b> Namespace ist klar</p>
-                     </li>
-                     <li>
-                        <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
-nach der XML Schema Spezifikation<footnote>
-                           <desc>https://de.wikipedia.org/wiki/XML_Schema</desc>
-                        </footnote> und somit die 
-bessere Validierung des Stylesheets zur Compile-Zeit.</p>
-                     </li>
-                     <li>
-                        <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
-wie z.B. auch das Einbinden der FunctX Bibliothek<footnote>
-                           <desc>http://www.xsltfunctions.com/</desc>
-                        </footnote>
-                     </p>
-                     </li>
-                     <li>
-                        <p>Der Nicht-geprefixte Namespace ist der Default-Namespace und kann einen NS aus der Eingabe handeln</p>
-                     </li>
-                     <li>
-                        <p>Das Attribut <b>xpath-default-namespace</b> gibt einen weiteren NS an, der in XPATH Funktionen verwendet werden kann.
-In diesem Feld würde ich den NS einer Konfigurations- oder separaten Datendatei angeben.</p>
-                     </li>
-                  </ul>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Mehr als einen NS in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung nit XSLT vermeiden wenn es geht.
-GGf. empfiehlt es sich, die Eingabe vor der Verabeitung zu normalisieren und Elemente ggf. umzubennen.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <danger>
-                     <cause>Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
-an einem ganz bestimmten Element hängen - so kannp bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</cause>
-                     <consequence>Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</consequence>
-                  </danger>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Namespaces in der Eingabe werden über die Kopfdeklaration in der Stylesheetdatei gehandelt, welcher Namespace
-schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten Kontextknoten ab:</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <ul>
-                     <li>
-                        <p>Elemente, die man erzeugt, erhalten automatisch den Default-Namespace, wenn man nicht explizit einen NS angibt.</p>
-                     </li>
-                     <li>
-                        <p>Elemente, die man kopiert, transportieren den Namespace, den sie in der Eingabe hatten, wenn man dies nicht explizit verhindert.</p>
-                     </li>
-                  </ul>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
-Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
-dass der Default Namespace auch tatsächlich in die Ausgabe kommt.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>&lt;xsl:element name="meinelement" namespace=""&gt;</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Hier wird ein Element ohne Namespace Angabe in die Ausgabe geschrieben. Es würde dann
-den Default-Namespace der Ausgabe erben. Es gibt auch ein Attribut am xsl:copy Element,
-das den Vorgang des Namespace-Kopierens steuern kann:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>&lt;xsl:template match="p"&gt;
-  &lt;xsl:copy copy-namespaces="no"&gt;
-     &lt;xsl:apply-templates/&gt;
-   &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
-Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich nicht darauf verlassen.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
-weiterzuvererben:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>&lt;xsl:template match="@* | node()"&gt;
-   &lt;xsl:copy inherit-namespaces="no"&gt;
-     &lt;xsl:apply-templates select="@* | node()"/&gt;
-   &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
-            </page-wide-element>
-                  <block-title>
-                     <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
-                  </block-title>
-                  <column-wide-element>
-               <p>Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
-z.B. dazu auf einer NoSQL Datenbank Daten aus unterschiedlichen Quellen
-zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
-funktioniert.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
-kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>xquery version "1.0-ml";
-
-import module namespace tektur = "http://www.teturcms.de/xquery/common" 
-                                  at "common.xqy";
-import module namespace mem = "http://xqdev.com/in-mem-update" 
-                                  at '/MarkLogic/appservices/utils/in-mem-update.xqy';
-declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
-declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
-declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
-im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
-Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
-eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
-vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
-            </column-wide-element>
-               
-            
-         </chapter>
          <chapter hyphenation="yes" chapterpage="no" id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
                   ismodule="no">
             
@@ -2143,6 +2154,231 @@ Memory used: 64339064</verbatim>
             </page-wide-element>
                
             
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
+                  ismodule="no">
+            
+               <title>
+                  <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
+               </title>
+               
+                  <column-wide-element>
+               <p>Erste Schritte in XQuery gehen sehr schön  
+mit der Query Konsole auf dem Marklogic Server (Port 8000).
+Hat man parallel auch noch oXygen offen, kann man die Testergbnisse
+aus der Konsole direkt in ein XQuery Server Skript packen.</p>
+            </column-wide-element>
+                  <block-title>
+                     <title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title>
+                  </block-title>
+                  <column-wide-element>
+               <p>Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:<xe>
+                     <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                     <second criterion="Schleifen - for">Schleifen - for</second>
+                  </xe>
+               </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>(doc())[position() lt 11]</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Die Zahlen von 1 bis 100 mit:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>(for $i in (1 to 100) return $i)</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Wenn man diese beide Anweisungen untereinander in die Konsole
+schreibt bekommt man einen Fehler. Trennt man sie mit einem 
+Komma - ein Tupel wird erzeugt - dann klappt es.</p>
+            </column-wide-element>
+                  <block-title>
+                     <title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title>
+                  </block-title>
+                  <column-wide-element>
+               <p>Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
+folgendermassen aus<footnote>
+                     <desc>https://docs.marklogic.com/xdmp:document-insert</desc>
+                  </footnote>:<xe>
+                     <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                     <second criterion="DB insert">DB insert</second>
+                  </xe>
+               </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xdmp:document-insert(
+  "/alex-test/example-alex.xml",
+  &lt;root&gt;Hier steht der Content&lt;/root&gt;, 
+  &lt;options xmlns="xdmp:document-insert"&gt;  
+    &lt;metadata&gt;{
+      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
+      }&lt;/metadata&gt;
+  &lt;/options&gt;)</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>(for $i in (1 to 10) return 
+  xdmp:document-insert(
+  concat("/alex-test/example-alex-",$i,".xml"),
+  &lt;root&gt;Hier steht der Content {$i}&lt;/root&gt;, 
+  &lt;options xmlns="xdmp:document-insert"&gt;  
+    &lt;metadata&gt;{
+      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
+      }&lt;/metadata&gt;
+  &lt;/options&gt;)
+)</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Dokumente kann man einer Collection<xe>
+                     <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                     <second criterion="DB Collection">DB Collection</second>
+                  </xe> zuweisen, um sie leichter finden und auswerten
+zu können. Das geht mit dem folgenden Befehl<footnote>
+                     <desc>https://docs.marklogic.com/xdmp:document-add-collections</desc>
+                  </footnote> und diesem Schnippsel:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>let $root :=
+&lt;mein-test&gt;
+   &lt;id&gt;{$id}&lt;/id&gt;
+   &lt;content&gt;Hallo Welt!&lt;/content&gt;
+&lt;/mein-test&gt;,
+$options :=
+&lt;options xmlns="xdmp:document-insert"&gt;  
+  &lt;permissions&gt;{xdmp:default-permissions()}&lt;/permissions&gt;
+  &lt;collections&gt;
+    &lt;collection&gt;/alex-test&lt;/collection&gt;
+  &lt;/collections&gt;
+&lt;/options&gt;,
+$fname := concat('/',$id,'_','.xml'),
+$td := xdmp:document-insert($fname,$root,$options)
+return 
+  [...]</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Die Dokumente, die mit der Collection alex-test getaggt wurden, kann man sich mit der folgenden Schleife ausgeben lassen:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>for $x in collection("/alex-test")
+  return
+    fn:document-uri($x)</verbatim>
+            </page-wide-element>
+               
+            
+            <chapter hyphenation="yes" chapterpage="no" id="3630ee02-616b-4bbc-8655-9064d57bf945"
+                     ismodule="no">
+               
+                  <title>
+                     <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Erweiterte Konstrukte</title>
+                  </title>
+                  
+                     <block-title>
+                        <title id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5">Funktionen</title>
+                     </block-title>
+                     <column-wide-element>
+                  <p>Um bestimmte Abschnitte des XQuery Programm wiederverwendbar zu machen, stehen Funktionsdeklarationen<xe>
+                        <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                        <second criterion="Funktionen">Funktionen</second>
+                     </xe> zur verfügung. Eine einfache Funktion wäre z.B. diese hier:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>declare function local:wrap-header($json) {
+  xdmp:add-response-header("Pragma", "no-cache"),
+  xdmp:add-response-header("Cache-Control", "no-cache"),
+  xdmp:add-response-header("Expires", "0"),
+  xdmp:set-response-content-type('text/json; charset=utf-8'),
+  $json
+};</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Sie wickelt um einen JSON String eine passende Header Information.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Damit die Funktion eingebunden werden kann, muss ein passender Namespace<xe>
+                        <first criterion="XML Konstrukte">XML Konstrukte</first>
+                        <second criterion="Namespaces">Namespaces</second>
+                     </xe> deklariert werden:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>declare namespace local = 'local:';</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
+um ganz elementare Konstrukte, wie while...do<xe>
+                        <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                        <second criterion="Schleifen - while..do">Schleifen - while..do</second>
+                     </xe> Schleifen, zu realisieren.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Dazu nutzt man, wie in der funktionalen Programmierung üblich, die Rekursion:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>declare function local:ist-letzter-wert-in-kette($glied) {
+  let $wert := local:komplizierte-berechnung($glied),
+    $naechstes-glied := local:komplizierte-berechnung-der-position($glied),
+  return
+    if ($naechstes-glied and not($wert = 'foobar')) then
+      local:durchlaufe-kette($naechstes-glied)
+    else
+      $wert = 'foobar'
+};</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>In diesem kleinen Schnippsel sind schon einige Besonderheiten von 
+XQuery zu sehen. Variablenzuweisungen geschehen mit einem Doppelpunkt,
+Vergleiche dagegen nur mit einem einfachen "=". Statements werden mit einem
+Komma getrennt.</p>
+               </column-wide-element>
+                     <block-title>
+                        <title id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26">Module</title>
+                     </block-title>
+                     <column-wide-element>
+                  <p>Um eine XQuery Anwendung zu modularisieren<xe>
+                        <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
+                        <second criterion="Module">Module</second>
+                     </xe>, können einzelne Skripte in
+Module ausgelagert werden. Ein Modul, z.B. common.xqy, wird dabei über einen eigenen
+Namespace deklariert:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>module namespace common = "https://www.tekturcms.de/common";</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Dieses Modul kann dann in anderen Skripten eingebunden werden:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>import module namespace common = "https://www.tekturcms.de/common" at "common.xqy";</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Funktionen und Variablen werden dann mir dem Namespace<xe>
+                        <first criterion="XML Konstrukte">XML Konstrukte</first>
+                        <second criterion="Namespaces">Namespaces</second>
+                     </xe> geprefixt aufgerufen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>Funktionsaufruf: common:wrap-response-header(...)
+Variablenauswertung: $common:collection-books</verbatim>
+               </page-wide-element>
+                  
+               
+            </chapter>
+            <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
+                     ismodule="no">
+               
+                  <title>
+                     <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
+                  </title>
+                  
+                     <column-wide-element>
+                  <p>Die Konsole des MarkLogic Server auf Port 8000 lädt zum Ausprobieren ein. Hier kann man schnell und unkompliziert XQuery Skripte testen. Sie bleiben persistent gespeichert und die Leiste auf der rechten Seite des Browserfensters erlaubt eine Kategorisierung und Verwaltung der bisherigen Skripte.</p>
+               </column-wide-element>
+                  
+               
+            </chapter>
          </chapter>
       </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
@@ -2760,12 +2996,20 @@ git log --diff-filter=D --summary</verbatim>
                      <row>
                         <entry>Single Source Publishing</entry>
                         <entry>
-                           <p>Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt.</p>
+                           <p>Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt</p>
                         </entry>
                      </row>
                      <row>
-                        <entry>Pull Stylesheets</entry>
-                        <entry/>
+                        <entry>Structured Content Authoring</entry>
+                        <entry>
+                           <p>Der Content wird hierbei semantisch mittels XML Tags ausgezeichnet. Bei einem WYSIWYG Ansatz sind die meisten Tags nur optional sichtbar.</p>
+                        </entry>
+                     </row>
+                     <row>
+                        <entry>XML Datenbanken</entry>
+                        <entry>
+                           <p>XML Datenbanken sind NoSQL Datenbanken, d.h. "Not only SQL" oder auch tatsächlich "No SQL" wird unterstützt. Die Spezialisierung erfolgt auf XML Daten. Wie sich aber zeigt, ist eine relationale Sicht auf die Daten meistens auch notwendig, so dass DB wie Marklogic diese Funktionalität mittels Erweiterungen unterstützt. </p>
+                        </entry>
                      </row>
                   </tbody>
                </tgroup>

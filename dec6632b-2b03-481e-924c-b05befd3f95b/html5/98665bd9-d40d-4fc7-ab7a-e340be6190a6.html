@@ -1,6 +1,6 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html data-tct-document-version="none-is-cover-page">
+<html data-tektur-document-version="0">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <title>XSLT Hands-On</title>
@@ -25,7 +25,7 @@
          </div>
       </div>
       <div id="sidebar"><a href="/tektur.html" title="Go to Tektur CCMS"><img id="logo-image" src="../logo.png"></a><div id="scrollarea">
-            <div id="toc-panel"><a class="cover-link" style="color: #C6000A">Cover</a><ul id="navigation" class="treeview-gray">
+            <div id="toc-panel"><a class="cover-link" href="book.html">Cover</a><ul id="navigation" class="treeview-gray">
                   <li class="toc-level-1"><a href="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88.html" class="toc-entry" id="chapter-link_c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88" data-level="1"><span class="chapter-link1">1&nbsp;&nbsp;
                            Intro
                            </span></a></li>
@@ -245,31 +245,83 @@
       </div>
       <div id="main">
          <div id="content-wrapper">
-            <div id="-target" class="chapter first" data-element-name="">
-               <div class="document" data-tektur-reviewer-number="" id="" data-element-name="document">
-                  
-                  <div class="title" data-tektur-reviewer-number="" id="" data-element-name="title">Entwickler Handbuch</div>
-                  
-                  <div xmlns:tektur="http://www.stylesheet-entwicklung.de" class="head" id="" data-element-name="meta"><img id="cover-image" src="../cover.png"><div class="cover">
-                        <div class="main-title" data-tektur-reviewer-number="" id="" data-element-name="main-title">XSLT Hands-On</div>
-                        <div class="subtitle" data-tektur-reviewer-number="" id="" data-element-name="subtitle">XML - XSLT - XQuery</div>
-                        <p class="cover-text"><b>(c) Alex Düsel 2019</b></p>
-                        <p class="cover-text">Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License</p>
-                        <p class="cover-text">www.github.com/alexdd/Buch</p>
-                     </div>
-                     <div class="cover-footer">
-                        <div class="version"><b>Version: </b>44 / de-DE<br>Wed Feb 06 2019 10:26:37 
-                        </div>
+            <div id="98665bd9-d40d-4fc7-ab7a-e340be6190a6-target" class="chapter first" data-element-name="chapter">
+               <h2 id="" data-element-name="title"><span class="number">4.2.3&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                        
+                        <div class="title" data-tektur-reviewer-number="" id="8c5a4500-d080-4910-b4cd-529caeb12ae3" data-element-name="title">XQuery als Programmiersprache</div>
+                        </span></span></h2>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Erste Schritte in XQuery gehen sehr schön  
+                     mit der Query Konsole auf dem Marklogic Server (Port 8000).
+                     Hat man parallel auch noch oXygen offen, kann man die Testergbnisse
+                     aus der Konsole direkt in ein XQuery Server Skript packen.
+                  </div>
+               </div>
+               <div id="936b2da2-86e2-4412-92ba-8957551903e2d6e6-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">4.2.3.1&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7" data-element-name="title">Schleifen</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">(doc())[position() lt 11]</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Zahlen von 1 bis 100 mit:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">(for $i in (1 to 100) return $i)</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Wenn man diese beide Anweisungen untereinander in die Konsole
+                        schreibt bekommt man einen Fehler. Trennt man sie mit einem 
+                        Komma - ein Tupel wird erzeugt - dann klappt es.
                      </div>
                   </div>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+               </div>
+               <div id="78519ecd-7983-488b-adcd-7d94d3a8bd13d6e19-target" class="chapter" data-element-name="chapter">
+                  <h2 id="" data-element-name="title"><span class="number">4.2.3.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+                           
+                           <div class="title" data-tektur-reviewer-number="" id="0bbb962d-b38e-431a-855a-294425a5a016d6e20" data-element-name="title">Dokumente in der DB anlegen</div>
+                           </span></span></h2>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
+                        folgendermassen aus<a href="https://docs.marklogic.com/xdmp:document-insert" title="https://docs.marklogic.com/xdmp:document-insert" target="_blank">
+                           <sup id="" data-element-name="sup">↗↗</sup>
+                           </a>:
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">xdmp:document-insert(
+  "/alex-test/example-alex.xml",
+  &lt;root&gt;Hier steht der Content&lt;/root&gt;, 
+  &lt;options xmlns="xdmp:document-insert"&gt;  
+    &lt;metadata&gt;{
+      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
+      }&lt;/metadata&gt;
+  &lt;/options&gt;)</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">(for $i in (1 to 10) return 
+  xdmp:document-insert(
+  concat("/alex-test/example-alex-",$i,".xml"),
+  &lt;root&gt;Hier steht der Content {$i}&lt;/root&gt;, 
+  &lt;options xmlns="xdmp:document-insert"&gt;  
+    &lt;metadata&gt;{
+      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
+      }&lt;/metadata&gt;
+  &lt;/options&gt;)
+)</pre></div>
+                  <div class="margin">
+                     <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Dokumente kann man einer Collection zuweisen, um sie leichter finden und auswerten
+                        zu können. Das geht mit dem folgenden Befehl<a href="https://docs.marklogic.com/xdmp:document-add-collections" title="https://docs.marklogic.com/xdmp:document-add-collections" target="_blank">
+                           <sup id="" data-element-name="sup">↗↗</sup>
+                           </a>:
+                     </div>
+                  </div>
+                  <div class="margin"><pre class="prettyprint">for $x in collection("http://www.tekturcms.de/alex-test")
+  return
+    fn:document-uri($x)</pre></div>
                </div>
             </div>
          </div>
