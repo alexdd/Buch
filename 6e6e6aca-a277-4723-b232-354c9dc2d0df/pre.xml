@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document>
+   <title>
+      <translation lang="en">User Manual</translation>
+   </title>
+   <meta>
+      <owner>tamirhassan</owner>
+      <date-of-creation>Thu Feb 07 2019 12:11:12 </date-of-creation>
+      <date-of-last-change>Thu Feb 07 2019 12:16:46 </date-of-last-change>
+      <language>en-GB</language>
+      <status>1</status>
+      <description>Short Description</description>
+      <logo-image>././client/data/6e6e6aca-a277-4723-b232-354c9dc2d0df/logo.png</logo-image>
+      <cover-image>././client/data/6e6e6aca-a277-4723-b232-354c9dc2d0df/cover.png</cover-image>
+      <main-title>New Map</main-title>
+      <subtitle>New Subtitle</subtitle>
+      <cover-text>n/a</cover-text>
+      <structure>
+         <format>info</format>
+         <chapter-on-right-page/>
+         <cover-backpage/>
+      </structure>
+      <design>
+         <layout>columns</layout>
+         <paper-format>A4</paper-format>
+         <page-margin>leftright</page-margin>
+         <spaces>large</spaces>
+         <header>longheader</header>
+         <footer>shortfooter</footer>
+         <look-and-feel>fashion</look-and-feel>
+         <table-layout>simple</table-layout>
+      </design>
+   </meta>
+   <toc/>
+   <chapter hyphenation="yes" chapterpage="no" id="615a8921-7d8a-4859-b4bd-58250d42c622"
+            ismodule="no">
+      
+         <title>
+            <title id="b4b08f9e-d370-4392-8e5d-8d70e257cb57">ICDAR 2013 Table Competition</title>
+         </title>
+         
+            <column-wide-element>
+         <p>Abstract—Table understanding is a well studied problem in
+document analysis, and many academic and commercial approaches have been developed to recognize tables in several
+document formats, including plain text, scanned page images
+and born-digital, object-based formats such as PDF. Despite the
+abundance of these techniques, an objective comparison of their
+performance is still missing. The Table Competition held in
+the context of ICDAR 2013 is our first attempt at objectively
+evaluating these techniques against each other in a standardized
+way, across several input formats. The competition independently
+addresses three problems: (i) table location, (ii) table structure
+recognition, and (iii) these two tasks combined. We received
+results from seven academic systems, which we have also compared against four commercial products. This paper presents our
+findings</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p>The problem of analysing tables in documents has been
+dealt with in many academic publications over the previous
+two decades. The systems reported in the literature vary
+according to the input document format (ASCII text, HTML,
+image, PDF) and the type of structure that is recognized and
+output by the system.
+Table understanding has been gaining traction since the
+beginning of the big data era due to the massive amounts
+of tabular data in documents on the Web. In addition, private,
+public and governmental institutions often publish reports in
+PDF format. Such data is immensely valuable for decision support and object search, but without reliable table understanding
+techniques, it cannot be easily indexed by search engines or
+used by automatic data processing applications.
+In our previous work [1], we proposed a methodology for
+evaluating these approaches independently from the format of
+the input and of the output. In particular, the problem of table
+understanding was split up into three tasks:</p>
+      </column-wide-element>
+         
+      
+   </chapter>
+   <figure-index/>
+   <footnote-index/>
+   <index/>
+</document>

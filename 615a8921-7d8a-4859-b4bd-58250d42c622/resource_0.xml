@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="daa3df75-aad4-45b1-b24b-2f8bc842c6e0"><title id="b4b08f9e-d370-4392-8e5d-8d70e257cb57">ICDAR 2013 Table Competition</title><body id="745855a9-1f95-4988-88f5-0cfc48152c7f"><p id="f121f91a-7391-4318-a029-d73790eea853">Abstract—Table understanding is a well studied problem in
+document analysis, and many academic and commercial approaches have been developed to recognize tables in several
+document formats, including plain text, scanned page images
+and born-digital, object-based formats such as PDF. Despite the
+abundance of these techniques, an objective comparison of their
+performance is still missing. The Table Competition held in
+the context of ICDAR 2013 is our first attempt at objectively
+evaluating these techniques against each other in a standardized
+way, across several input formats. The competition independently
+addresses three problems: (i) table location, (ii) table structure
+recognition, and (iii) these two tasks combined. We received
+results from seven academic systems, which we have also compared against four commercial products. This paper presents our
+findings</p></body></topic>

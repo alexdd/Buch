@@ -1,0 +1,77 @@
+
+         <tbody>
+            <tr class="root initialized parent ui-droppable selected" id="document-root">
+               <td>
+                  <div class="header document ui-draggable">
+                     <span class="header_text">
+                        <a id="change_map_title" class="edit_map" title="Edit Map Data" href="#">New Map</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;cursor:pointer"></td>
+               <td width="30px" style="padding:0;cursor:pointer">
+                  <span class="new" title="Add Topic Reference" style="display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span id="docdelete">
+                     <a href="#"></a>
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+            </tr>
+            <tr style="display:none" class="initialized">
+               <td colspan="5">
+                  <div id="topicmeta" original-id="3790dd3a-7536-4b6c-a6e5-f6f8cf51c64a" style="display:none">    
+                     <div id="navtitle" original-id="730f29b0-2434-4098-9ce7-476996c833c2" style="display:none">New Subtitle</div>    
+                     <div id="shortdesc" original-id="d5435561-463f-4a86-8ac5-c83a5adf27ec" style="display:none">Short Description</div>    
+                     <div id="keywords" original-id="456c59e5-bf3e-4ad6-b3e2-f2f0e6ed6fce" style="display:none">      
+                        <div id="keyword1" original-id="83d4297f-530e-4c0f-bf0c-2bcbc13002ab" style="display:none">Keyword 1</div>      
+                        <div id="keyword2" original-id="2bf7bc4b-7b4b-48ab-a43a-3a418d02fca2" style="display:none">Keyword 2</div>      
+                        <div id="keyword3" original-id="7f86b1d2-1373-43c1-b0fa-198058d860e2" style="display:none">Keyword 3</div>    
+                     </div>  
+                  </div>
+               </td>
+            </tr>
+            <tr id="new_2dd61731-71a6-498b-af58-17031eda0d11" href="none" class="child-of-document-root chapter initialized ui-droppable" new-id="615a8921-7d8a-4859-b4bd-58250d42c622">
+               <td style="padding-left: 43px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">1.</span>
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="display: inline; color: black;">ICDAR 2013 Table Competition</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="cursor: pointer; display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+         </tbody>
+      

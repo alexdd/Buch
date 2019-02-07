@@ -4,9 +4,9 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Feb 06 2019 10:26:37 </date-of-last-change>
+      <date-of-last-change>Thu Feb 07 2019 16:49:05 </date-of-last-change>
       <language>de-DE</language>
-      <status>44</status>
+      <status>46</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -499,6 +499,90 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                </chapter>
             
          
+         <chapter hyphenation="yes" chapterpage="no" id="672a5a26-e4f7-456b-ba65-13f330f5da3a"
+                  ismodule="no">
+            
+               <title>
+                  <title id="d53414e0-f609-48ab-b00a-bac9ec362c31">Klaus Task</title>
+               </title>
+               
+                  
+                     <abstract id="1feebc0e-b646-4b9d-a150-f97d2d8c1dd7d6e3">
+                        <p>1q1wqw1</p>
+                        <table pdfwidth="page" id="d37e5013-f1a3-44a5-a114-55f69adfe717d6e6" pgwide="1"
+                      frame="all">
+                           <desc id="9a6a1097-9ea7-445a-9ecb-9acaabae75f8d6e7">hhhhhhh</desc>
+                           <tgroup id="5193831b-3837-42d7-86e1-10af627a6b7cd6e9" cols="3">
+                              <colspec id="04257f0a-cfd4-4e2e-997b-143f3db59b52d6e10" colwidth="0.14085820895522388*"
+                              colname="col0"/>
+                              <colspec id="7e18acef-1566-4f7c-9994-68b0e1d5053dd6e11" colwidth="0.5251865671641791*"
+                              colname="col1"/>
+                              <colspec id="301ce06c-d2d7-48d7-8aad-a078f620af79d6e12" colwidth="0.333955223880597*"
+                              colname="col2"/>
+                              <thead id="7026477b-c9b7-43fe-b1d4-2b0abee2780dd6e13">
+                                 <row id="f14564cf-2999-48ec-8250-1783776a8017d6e14">
+                                    <entry id="6d72b571-2711-4175-ade4-cc67f7d28a8cd6e15" colname="col0" width="151px">
+                                       <p>qsa</p>
+                                    </entry>
+                                    <entry id="ad964540-046d-4f37-9848-ed54ef0e0041d6e18" colname="col1" width="563px"/>
+                                    <entry id="fbdffda1-0206-4224-9194-7f4de26f9b70d6e19" colname="col2" width="358px"/>
+                                 </row>
+                              </thead>
+                              <tbody id="4f851836-42c2-49fa-b2ad-c6f22a74f24bd6e20">
+                                 <row id="90dec00f-990e-4f24-ac0a-f3bbc78bf74cd6e21">
+                                    <entry id="d7f0c960-d8d0-4eef-a2f1-ecbd1b8d9315d6e22" colname="col0" width="151px">
+                                       <p>s</p>
+                                    </entry>
+                                    <entry id="c65888f9-af81-4c2c-a873-e972ecfad6f8d6e25" colname="col1" width="563px">
+                                       <p>qs</p>
+                                    </entry>
+                                    <entry id="863771e6-53ce-4fe6-892b-f301e74a38a5d6e28" colname="col2" width="358px">
+                                       <p>q</p>
+                                    </entry>
+                                 </row>
+                                 <row id="adba4c5c-589b-490a-be09-5d9377cc08f4d6e31">
+                                    <entry id="e09cd7b3-447f-45e2-9998-40ba05be5eefd6e32" colname="col0" width="151px"/>
+                                    <entry id="689b2fe6-9ca6-4a63-9e0c-c9fb4c00d4bcd6e33" colname="col1" width="563px"/>
+                                    <entry id="ceb6ca43-f3eb-4616-91f8-36e70864c47ed6e34" colname="col2" width="358px"/>
+                                 </row>
+                                 <row id="ae8266db-da50-447c-9787-4dffccb3a7f4d6e35">
+                                    <entry id="2a177e7f-ff9e-4b49-8a8c-d69ba7d5c1d1d6e36" colname="col0" width="151px"/>
+                                    <entry id="6f14679c-4635-46f3-9da3-544b8560e9a5d6e37" colname="col1" width="563px"/>
+                                    <entry id="2d8d58a9-f543-4fc2-ab97-9bd4ad9ed800d6e38" colname="col2" width="358px"/>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                        <p/>
+                     </abstract>
+                  
+                  <procedure type="steps">
+                     <step type="steps">
+                        <action>
+                           <p>sqsqqs</p>
+                        </action>
+                     </step>
+                     <procedure type="substeps">
+                        <step type="steps">
+                           <action>
+                              <p>qsqsqs</p>
+                           </action>
+                        </step>
+                        <step type="steps">
+                           <action>
+                              <p>sqsq</p>
+                           </action>
+                        </step>
+                     </procedure>
+                     <step type="steps">
+                        <action>
+                           <p>sqsqsq</p>
+                        </action>
+                     </step>
+                  </procedure>
+               
+            
+         </chapter>
       </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="151a9719-a32a-4fca-a55c-769b47a73b34"
                ismodule="no">
@@ -595,6 +679,39 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                </chapter>
             
          
+         <chapter hyphenation="yes" chapterpage="no" id="c000591d-f816-4b1e-9a79-c72b220ac175"
+                  ismodule="no">
+            
+               <title>
+                  <title id="f5dd5a77-092a-4980-ad6d-28e1d77acdd5">uhhu</title>
+               </title>
+               
+                  <procedure type="steps">
+                     <step type="steps">
+                        <action>
+                           <p>uhuh</p>
+                        </action>
+                     </step>
+                     <table type="choicetable">
+                        <tgroup>
+                           <colspec colwidth="0.5*"/>
+                           <colspec colwidth="0.5*"/>
+                           <tbody>
+                              <row>
+                                 <entry>
+                                    <p>iuhiuh</p>
+                                 </entry>
+                                 <entry/>
+                              </row>
+                           </tbody>
+                        </tgroup>
+                     </table>
+                  </procedure>
+               
+            
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="chapter_201917154953778720984390371"
+                  ismodule="no"/>
       </chapter>
    </chapter>
    <chapter hyphenation="yes" chapterpage="no" id="31a92dc0-959c-49a1-b06e-01e2369e050e"
@@ -1676,10 +1793,29 @@ Memory used: 64339064</verbatim>
                
                   <p>Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
-Hat man parallel auch noch oXygen offen, kann man die Testergbnisse
-aus der Konsole direkt in ein XQuery Server Skript packen.</p>
+Hat man parallel auch noch oXygen offen, kann man die Testergb</p>
+                  <p>nisse
+aus der Konsole direkt in ein XQuery Server Skript packen.dwawqdqd</p>
+                  <ul>
+                     <li>
+                        <p>ewwqeqe</p>
+                     </li>
+                     <li>
+                        <p>qweqwe</p>
+                     </li>
+                     <li>
+                        <p>qweqeq</p>
+                     </li>
+                  </ul>
+                  <p>wqdqwd</p>
+                  <notice>
+                     <cause>qwqw</cause>
+                     <consequence>qwqw</consequence>
+                     <consequence>qwqwqw</consequence>
+                     <consequence>wq</consequence>
+                  </notice>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                     id="936b2da2-86e2-4412-92ba-8957551903e2d6e6">
+                     id="5adeb465-617a-45ed-b1dd-8097cd8ce9d8d6e30">
                      
                         <title>
                            <title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title>
@@ -1694,7 +1830,7 @@ Komma - ein Tupel wird erzeugt - dann klappt es.</p>
                      
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                     id="78519ecd-7983-488b-adcd-7d94d3a8bd13d6e19">
+                     id="d9f7def2-f3e2-42cf-a944-a4b8fc2118ffd6e43">
                      
                         <title>
                            <title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title>
@@ -1729,8 +1865,25 @@ folgendermassen aus<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
 zu können. Das geht mit dem folgenden Befehl<url xmlns:tektur="http://www.stylesheet-entwicklung.de"
                        address="https://docs.marklogic.com/xdmp:document-add-collections">
                      <sup>↗↗</sup>
-                  </url>:</p>
-                        <verbatim>for $x in collection("http://www.tekturcms.de/alex-test")
+                  </url> und diesem Schnippsel:</p>
+                        <verbatim>let $root :=
+&lt;mein-test&gt;
+   &lt;id&gt;{$id}&lt;/id&gt;
+   &lt;content&gt;Hallo Welt!&lt;/content&gt;
+&lt;/mein-test&gt;,
+$options :=
+&lt;options xmlns="xdmp:document-insert"&gt;  
+  &lt;permissions&gt;{xdmp:default-permissions()}&lt;/permissions&gt;
+  &lt;collections&gt;
+    &lt;collection&gt;/alex-test&lt;/collection&gt;
+  &lt;/collections&gt;
+&lt;/options&gt;,
+$fname := concat('/',$id,'_','.xml'),
+$td := xdmp:document-insert($fname,$root,$options)
+return 
+  [...]</verbatim>
+                        <p>Die Dokumente, die mit der Collection alex-test getaggt wurden, kann man sich mit der folgenden Schleife ausgeben lassen:</p>
+                        <verbatim>for $x in collection("/alex-test")
   return
     fn:document-uri($x)</verbatim>
                      
@@ -1803,7 +1956,7 @@ Variablenauswertung: $common:collection-books</verbatim>
                      ismodule="no">
                
                   <title>
-                     <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">XQuery in der MarkLogic Konsole</title>
+                     <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
                   </title>
                   
                      <p>Die Konsole des MarkLogic Server auf Port 8000 lädt zum Ausprobieren ein. Hier kann man schnell und unkompliziert XQuery Skripte testen. Sie bleiben persistent gespeichert und die Leiste auf der rechten Seite des Browserfensters erlaubt eine Kategorisierung und Verwaltung der bisherigen Skripte.</p>

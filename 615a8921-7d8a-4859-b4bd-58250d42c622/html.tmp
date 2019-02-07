@@ -1,0 +1,29 @@
+<div data-attribute-id="daa3df75-aad4-45b1-b24b-2f8bc842c6e0" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="5020fe3f-3048-4a08-b0ff-4431606cf818"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="b4b08f9e-d370-4392-8e5d-8d70e257cb57" class="title pmarker tags" data-element="title" data-tektur-editor-id="a7684f08-04d2-48b8-8677-e79284f81a9d" contenteditable="true">ICDAR 2013 Table Competition</div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="6d800e75-ce57-4457-8388-c589bfd6fe44"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="3844d542-091d-4e12-a0fc-b229efad7de7" contenteditable="true"></div></div><div data-attribute-id="745855a9-1f95-4988-88f5-0cfc48152c7f" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="3472917e-00d3-48d2-ac6b-841e028a99d9"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="a30df5b1-2793-43c0-85d9-82472458802a"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="f121f91a-7391-4318-a029-d73790eea853" class="p pmarker tags" data-element="p" data-tektur-editor-id="237bbfb5-6199-4d89-9f3b-396d0624bc11" contenteditable="true">Abstract—Table understanding is a well studied problem in
+document analysis, and many academic and commercial approaches have been developed to recognize tables in several
+document formats, including plain text, scanned page images
+and born-digital, object-based formats such as PDF. Despite the
+abundance of these techniques, an objective comparison of their
+performance is still missing. The Table Competition held in
+the context of ICDAR 2013 is our first attempt at objectively
+evaluating these techniques against each other in a standardized
+way, across several input formats. The competition independently
+addresses three problems: (i) table location, (ii) table structure
+recognition, and (iii) these two tasks combined. We received
+results from seven academic systems, which we have also compared against four commercial products. This paper presents our
+findings</div><div class="p tags pmarker placeholder" data-element="p" contenteditable="true" data-tektur-editor-id="86778ecd-925e-4090-b79b-e9264f3d1d8b">The problem of analysing tables in documents has been
+dealt with in many academic publications over the previous
+two decades. The systems reported in the literature vary
+according to the input document format (ASCII text, HTML,
+image, PDF) and the type of structure that is recognized and
+output by the system.
+Table understanding has been gaining traction since the
+beginning of the big data era due to the massive amounts
+of tabular data in documents on the Web. In addition, private,
+public and governmental institutions often publish reports in
+PDF format. Such data is immensely valuable for decision support and object search, but without reliable table understanding
+techniques, it cannot be easily indexed by search engines or
+used by automatic data processing applications.
+In our previous work [1], we proposed a methodology for
+evaluating these approaches independently from the format of
+the input and of the output. In particular, the problem of table
+understanding was split up into three tasks:</div></div></div></div>

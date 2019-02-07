@@ -1,0 +1,85 @@
+
+         <tbody>
+            <tr class="root initialized parent ui-droppable" id="document-root">
+               <td>
+                  <div class="header document ui-draggable">
+                     <span class="header_text">
+                        <a id="change_map_title" class="edit_map" title="Edit Map Data" href="#">New Map</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;cursor:pointer"></td>
+               <td width="30px" style="padding:0;cursor:pointer">
+                  <span class="new" title="Add Topic Reference" style="display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span id="docdelete">
+                     <a href="#"></a>
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+            </tr>
+            <tr style="display:none" class="initialized">
+               <td colspan="5">
+                  <div id="topicmeta" original-id="848e7405-c3e8-454e-837e-365aa708395d" style="display:none">
+                     
+                     <div id="navtitle" original-id="9dcf2308-f8a5-4516-a15b-6b5ea0b4e775" style="display:none">New Subtitle</div>
+                     
+                     <div id="shortdesc" original-id="2d304e9e-fcba-4571-8209-15aae720f492" style="display:none">Short Description</div>
+                     
+                     <div id="keywords" original-id="5fb30343-4527-40ba-8c79-e077e5ebd1a7" style="display:none">
+                        
+                        <div id="keyword1" original-id="3fd58838-b281-4328-8439-81b17ed64f2b" style="display:none">Keyword 1</div>
+                        
+                        <div id="keyword2" original-id="048f165a-dfdb-40a2-9c72-2b7ee3bfe397" style="display:none">Keyword 2</div>
+                        
+                        <div id="keyword3" original-id="8f28360f-ab50-4d54-a844-56194fabe598" style="display:none">Keyword 3</div>
+                        
+                     </div>
+                     
+                  </div>
+               </td>
+            </tr>
+            <tr id="f7e319c1-7707-40a2-9bb3-e9791324a6f5" href="f7e319c1-7707-40a2-9bb3-e9791324a6f5/resource.xml" class="child-of-document-root chapter initialized ui-droppable selected">
+               <td style="padding-left: 43px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">1.</span>
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Klausens Titel</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="cursor: pointer; display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+         </tbody>
+      

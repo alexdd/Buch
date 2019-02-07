@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map title="New Map">
+   <topicmeta id="848e7405-c3e8-454e-837e-365aa708395d">
+      <navtitle id="9dcf2308-f8a5-4516-a15b-6b5ea0b4e775">New Subtitle</navtitle>
+      <shortdesc id="2d304e9e-fcba-4571-8209-15aae720f492">Short Description</shortdesc>
+      <keywords id="5fb30343-4527-40ba-8c79-e077e5ebd1a7">
+         <keyword id="3fd58838-b281-4328-8439-81b17ed64f2b">Keyword 1</keyword>
+         <keyword id="048f165a-dfdb-40a2-9c72-2b7ee3bfe397">Keyword 2</keyword>
+         <keyword id="8f28360f-ab50-4d54-a844-56194fabe598">Keyword 3</keyword>
+      </keywords>
+   </topicmeta>
+   <topicref id="f7e319c1-7707-40a2-9bb3-e9791324a6f5"
+             href="f7e319c1-7707-40a2-9bb3-e9791324a6f5/resource.xml"
+             navtitle="Klausens Titel"/>
+</map>

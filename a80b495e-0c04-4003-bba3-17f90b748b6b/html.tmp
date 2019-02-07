@@ -1,0 +1,77 @@
+
+         <tbody>
+            <tr class="root initialized parent ui-droppable" id="document-root">
+               <td>
+                  <div class="header document ui-draggable">
+                     <span class="header_text">
+                        <a id="change_map_title" class="edit_map" title="Edit Map Data" href="#">New Map</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;cursor:pointer"></td>
+               <td width="30px" style="padding:0;cursor:pointer">
+                  <span class="new" title="Add Topic Reference" style="display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span id="docdelete">
+                     <a href="#"></a>
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span></span>
+               </td>
+            </tr>
+            <tr style="display:none" class="initialized">
+               <td colspan="5">
+                  <div id="topicmeta" original-id="6543479b-1862-4020-87a2-2dc8d1f1bf8c" style="display:none">    
+                     <div id="navtitle" original-id="2e5470ec-6639-4510-ace0-eb7d5697d952" style="display:none">New Subtitle</div>    
+                     <div id="shortdesc" original-id="ba8c6191-48bc-4ca8-bffb-506dba7907f0" style="display:none">Short Description</div>    
+                     <div id="keywords" original-id="f2879ddf-ecba-4065-b6ed-db0682d8b3d7" style="display:none">      
+                        <div id="keyword1" original-id="5bb026d9-3d1f-49b0-99a4-7481f8c5a560" style="display:none">Keyword 1</div>      
+                        <div id="keyword2" original-id="64b5e026-32bb-46a0-8bad-8437163069f3" style="display:none">Keyword 2</div>      
+                        <div id="keyword3" original-id="276d9cc9-b57c-462c-b1c5-c6983c56fb0f" style="display:none">Keyword 3</div>    
+                     </div>  
+                  </div>
+               </td>
+            </tr>
+            <tr class="chapter child-of-document-root ui-droppable expanded" id="chapter_201917154955532321748125811" new-id="5545b27b-e7d8-4a72-a5bc-91c77c6b0d10">             <td style="padding-left: 43px;">                <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">1.</span>                   <span class="header_text">                      <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="color: black;">AXAX</a>                   </span>                </div>                <div class="editor_panel">                   <div class="editor_content"></div>                </div>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="show-topic" title="Show Topic" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="new" title="Add Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="delete" title="Delete Topic Reference" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="up" title="Move Topic Reference Up" style="display: none;">                                   </span>             </td>             <td width="30px" style="padding:0;cursor:pointer">                <span class="down" title="Move Topic Reference Down" style="display: none;">                                   </span>             </td>          </tr><tr id="new_7b65d612-1205-476a-ba9d-ff4a296d076c" href="none" class="chapter initialized ui-droppable selected expanded child-of-chapter_201917154955532321748125811" new-id="f7e319c1-7707-40a2-9bb3-e9791324a6f5">
+               <td style="padding-left: 62px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">1.1.</span>
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="display: inline; color: black;">qqdqw</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="cursor: pointer; display: none;">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+         </tbody>
+      
