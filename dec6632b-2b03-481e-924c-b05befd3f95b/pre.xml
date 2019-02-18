@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Feb 06 2019 14:05:58 </date-of-last-change>
+      <date-of-last-change>Sun Feb 17 2019 18:00:44 </date-of-last-change>
       <language>de-DE</language>
-      <status>44</status>
+      <status>83</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -48,17 +48,21 @@ www.github.com/alexdd/Buch</cover-text>
             <p>Dieses Buch wurde mit Tektur CCMS erstellt. Tektur ist ein einfach zu bedienender kollaborativer Editor um <b>DITA</b>
                <footnote>
                   <desc>https://de.wikipedia.org/wiki/Darwin_Information_Typing_Architecture</desc>
+                  <add>DITA ist ein Standard im Bereich Publishing und löst ältere Dokumenttypen, wie z.B. Docbook ab. Beispielsweise ist DITA ein gutes Modell für Softwarehandbücher und zugehörige Online-Dokumentation.</add>
                </footnote> Inhalte erstellen, als PDF ausgeben und pflegen zu können. Die Eingabe erfolgt dabei per <b>WYSIWYG</b>
                <footnote>
                   <desc>https://de.wikipedia.org/wiki/WYSIWYG</desc>
+                  <add>What You See Is What You Get - Mit dieser Eingabemethode hat der Autor schon ein Bild davon, wie sein Text gedruckt werden kann.</add>
                </footnote> mit geführter Benutzerinteraktion. Die Inhalte werden als einzelne Topics verwaltet, die in verschiedenen Maps referenziert werden können; Stichwort: <b>Topic Based Authoring</b>
                <footnote>
                   <desc>https://en.wikipedia.org/wiki/Topic-based_authoring</desc>
+                  <add>Beim Topic Based Authoring wird der Content feingranular in Informationseinheiten aufgegliedert, die sich dann über Referenzen in verschiedene Publikationen einbinden lassen.</add>
                </footnote>.</p>
          </column-wide-element>
             <column-wide-element>
             <p>Sonstige Features: Rechte- und Rollensystem, Versionskontrolle, konfigurerierbarer Workflow mit Review &amp; Approval Fuktionen. Auf dem Entwicklerblog<footnote>
                   <desc>http://www.tekturcms.de</desc>
+                  <add>Das ist die private Homepage des Autors mit einer kompletten Liste seiner Hobby-Projekte seit 2000.</add>
                </footnote> kann man sich über den Fortschritt informieren.</p>
          </column-wide-element>
             <column-wide-element>
@@ -141,6 +145,7 @@ www.github.com/alexdd/Buch</cover-text>
             <p>Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im <b>TIOBE Index</b>
                <footnote>
                   <desc>https://de.wikipedia.org/wiki/TIOBE-Index</desc>
+                  <add>Im TIOBE Index werden jährlich die populärsten Programmiersprachen aufgelistet</add>
                </footnote>
                <xe>
                   <first criterion="TIOBE Index">TIOBE Index</first>
@@ -157,6 +162,7 @@ mit <b>LISP</b>
                </xe>Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML konvertierten, <b>EDI X12</b>
                <footnote>
                   <desc>https://en.wikipedia.org/wiki/ASC_X12</desc>
+                  <add>X12 ist ein amerikanischer Standard wie Nachrichten im Textformat zwischen Informationssystemen verschiedener Unternehmungen ausgetauscht werden. Beispielsweise werden in der Gesundheitsbranche Informationen über Arztbesuche von den Versicherungen an die Staaten geschickt.</add>
                </footnote>
                <xe>
                   <first criterion="Standards">Standards</first>
@@ -166,6 +172,7 @@ mit <b>LISP</b>
                <column-wide-element>
             <p>Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im <b>S1000D</b> Standard<footnote>
                   <desc>https://en.wikipedia.org/wiki/S1000D</desc>
+                  <add>Das sehr komplexe Informationsmodell im militärischen Bereich wird z.B. über diesen Standard verwaltet. Teilweise sind die Daten noch im SGML Format vorhanden, da die verarbeitenden System aus den 80er Jahren stammen.</add>
                </footnote>
                <xe>
                   <first criterion="Standards">Standards</first>
@@ -178,6 +185,7 @@ mit <b>LISP</b>
                <column-wide-element>
             <p>Alternativen zu XSLT finden sich im entsprechendem Wikipedia-Artikel<footnote>
                   <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
+                  <add>Das ist die Wikipedia Seite zu XSL = XSLT, XPATH und XSL-FO</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
@@ -191,6 +199,7 @@ mit <b>LISP</b>
                   <li>
                      <p>XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine Turing Maschine<footnote>
                         <desc>http://www.unidex.com/turing/utm.htm</desc>
+                        <add>Die Turingmaschine sollte jedem Informatiker aus den ersten Univorlesungen bekannt sein.</add>
                      </footnote> programmieren kann.</p>
                   </li>
                   <li>
@@ -210,9 +219,6 @@ mit <b>LISP</b>
                   </li>
                   <li>
                      <p>XSLT wird oft mit XSL gleichgesetzt. Aber XSL<footnote>
-                        <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
-                     </footnote>
-                     <footnote>
                         <desc>W3C Seiten zu The Extensible Stylesheet Language Family (XSL)</desc>
                      </footnote> ist mehr:</p>
                      <ul>
@@ -270,6 +276,7 @@ mit <b>LISP</b>
                <column-wide-element>
             <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen. Fügt man eine Processing Instruction<footnote>
                   <desc>https://de.wikipedia.org/wiki/Verarbeitungsanweisung</desc>
+                  <add>Die Processing Instruction wertet der Parser als Kommando aus und nicht als Teil des XML Contents</add>
                </footnote>
                <xe>
                   <first criterion="XML Konstrukte">XML Konstrukte</first>
@@ -345,6 +352,7 @@ mit <b>LISP</b>
                   <second criterion="Serverseitige Konvertierung">Serverseitige Konvertierung</second>
                </xe> ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten<footnote>
                   <desc>https://de.wikipedia.org/wiki/Wireless_Application_Protocol</desc>
+                  <add>Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones</add>
                </footnote> für unterschiedliche Handy-Modelle.</p>
          </column-wide-element>
                <column-wide-element>
@@ -430,23 +438,28 @@ mit <b>LISP</b>
                <column-wide-element>
             <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB<footnote>
                   <desc>https://de.wikipedia.org/wiki/EPUB</desc>
+                  <add>EPUB ist ein Dokumentformat für Ebook-Reader.</add>
                </footnote> ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM<footnote>
-                  <desc>https://de.wikipedia.org/wiki/CHM_(Dateiformat)</desc>
+                  <desc>https://de.wikipedia.org/wiki/CHM_(Dateiformat</desc>
+                  <add>Die alte Windows-Hilfe. Läuft immer noch im Bereich Maschinenbau auf gekoppelten Rechnern mit alter Windows Software)</add>
                </footnote>, EclipseHelp<footnote>
                   <desc>https://www.ibm.com/developerworks/library/os-echelp/index.html</desc>
+                  <add>Das Hilfe-Format der Eclipse Rich Client Plattform. Eclipse wird hauptsächlich von Programmierern als Editor benutzt</add>
                </footnote>, JavaHelp<footnote>
                   <desc>https://en.wikipedia.org/wiki/JavaHelp</desc>
+                  <add>Damit wird bspw. das Java API formatiert als Webseite ausgegeben</add>
                </footnote>, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker<footnote>
                   <desc>https://de.wikipedia.org/wiki/FrameMaker</desc>
-               </footnote>,  oder XML Standard Austauschformate, wie DITA, S1000D<footnote>
-                  <desc>https://de.wikipedia.org/wiki/S1000D</desc>
-               </footnote>, PI-MOD<footnote>
+                  <add>Mit Framemaker kann man manuell gesetzte Publikationen erstellen. Über Templates lässt sich das Layout aber auch automatisieren</add>
+               </footnote>,  oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD<footnote>
                   <desc>https://www.i4icm.de/forschungstransfer/pi-mod/</desc>
+                  <add>PI-Mod ist ein Informationsmodell, das am KIT (Uni Karlsruhe) entwickelt wird/wurde</add>
                </footnote>, JATS<footnote>
                   <desc>https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite</desc>
+                  <add>JATS ist ein sehr verbreitetes Informationsmodell im Bereich wissenschaftlicher Artikel und Fachliteratur</add>
                </footnote>
                <xe>
                   <first criterion="Standards">Standards</first>
@@ -700,6 +713,7 @@ Vorteile:</p>
             <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>
                <footnote>
                   <desc>http://argouml.tigris.org</desc>
+                  <add>ArgoUML ist ein freier UML Editor</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
@@ -707,12 +721,14 @@ Vorteile:</p>
 <b>Butterfly Code Generator</b>
                <footnote>
                   <desc>http://butterflycode.sourceforge.net</desc>
+                  <add>Damit kann man sich Code aus UMl Klassendiagrammen generieren lassen, natürlich XSLT basiert</add>
                </footnote>
             </p>
          </column-wide-element>
                <column-wide-element>
             <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal<footnote>
                   <desc>https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html</desc>
+                  <add>Weiterführende Lektüre zum Thema Code-Generierung mit XSLT</add>
                </footnote>.</p>
          </column-wide-element>
                <block-title>
@@ -728,6 +744,7 @@ Vorteile:</p>
             <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
 Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option<footnote>
                   <desc>http://www.saxonica.com/html/documentation/sourcedocs/streaming/</desc>
+                  <add>Streaming ist eine Technik zur Verarbeitung großer XML Daten - Stichwort Big Data - mit XSLT3.0</add>
                </footnote>.</p>
          </column-wide-element>
             
@@ -779,7 +796,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Pull Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="9b276ccd-3607-44dc-a111-5a5981c182ebd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <desc id="1c6a4dfa-2780-413e-a7c4-2d4020d117afd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
          </page-wide-element>
@@ -788,7 +805,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Push Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="8e12fa0b-87a4-4ec6-aefc-4d0040437679d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <desc id="ff349564-5831-4788-9926-6203204a9db4d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
          </page-wide-element>
@@ -800,7 +817,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
                </column-wide-element>
-                  <desc id="d9aa7ef1-76e0-4ef2-983d-e34cfe5ee1fcd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
+                  <desc id="b32ef812-1872-40d5-818d-ef089c06192dd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
                      <first criterion="Tiefensuchlauf">Tiefensuchlauf</first>
                   </xe> und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
@@ -1041,7 +1058,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <first criterion="00000000"/>
                   <second criterion="00000000"/>
                </xe> hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="f9c8ddc2-d09d-4e8d-a369-ecff178c84ce">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                        id="9e0a1b8f-8e28-4976-a9b7-49b1ad340b58"
+                        type="topic">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
@@ -1122,6 +1140,7 @@ wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
                      <p>Der <b>xs</b> Namespace ist notwendig, wenn man typisiert arbeiten will. Er erlaubt das Einbinden von Datentypen
 nach der XML Schema Spezifikation<footnote>
                         <desc>https://de.wikipedia.org/wiki/XML_Schema</desc>
+                        <add>XML Schema ist der Nachfolger der DTD, ist XML basiert und erlaubt auch die die Content-Validierung in einem bestimmten Umfang</add>
                      </footnote> und somit die 
 bessere Validierung des Stylesheets zur Compile-Zeit.</p>
                   </li>
@@ -1129,6 +1148,7 @@ bessere Validierung des Stylesheets zur Compile-Zeit.</p>
                      <p>Die Deklaration eines eigenen geprefixten Namespaces erlaubt das Einbinden von eigenen XSLT Funktionen, 
 wie z.B. auch das Einbinden der FunctX Bibliothek<footnote>
                         <desc>http://www.xsltfunctions.com/</desc>
+                        <add>Sehr gut gegliederte Funktionsbibliothek von Priscilla Walmsley</add>
                      </footnote>
                   </p>
                   </li>
@@ -1478,7 +1498,8 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                           id="ba4a6a74-bad9-4ea7-8917-529625d32b86">Eindeutigkeit der Regelbasis</doclink> .</p>
+                           id="200d932e-be64-4c4e-ba6a-ab077288fcba"
+                           type="none">Eindeutigkeit der Regelbasis</doclink> .</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
@@ -1561,6 +1582,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                               <second criterion="Python">Python</second>
                            </xe> sgmllib<footnote>
                               <desc>https://docs.python.org/2/library/sgmllib.html</desc>
+                              <add>Einfacher SGML Parser der Python Standard Bibliothek</add>
                            </footnote>.</p>
                         </action>
                      </step>
@@ -1577,6 +1599,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                      <second criterion="XSLT Streaming">XSLT Streaming</second>
                   </xe> ist in der XSLT Version 3.0 neu hinzugekommen<footnote>
                      <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html</desc>
+                     <add>XSLT3.0 Streaming API</add>
                   </footnote> und in der
 kommerziellen Saxon-EE Löusug implementiert<footnote>
                      <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/</desc>
@@ -1643,6 +1666,7 @@ in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. f�
                <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
 eine implizite Identity-Transformation (shallow-copy)<footnote>
                      <desc>https://www.saxonica.com/html/documentation/xsl-elements/mode.html</desc>
+                     <add>Mode Optionen in XSLT3.0</add>
                   </footnote> 
                   <xe>
                      <first criterion="Verarbeitungsmethoden">Verarbeitungsmethoden</first>
@@ -1896,8 +1920,10 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                   <column-wide-element>
                <p>Während relationale Datenbanken mit SQL abgefragt werden, verwendet man bei XML Datenbanken, wie eXist<footnote>
                      <desc>http://exist-db.org/exist/apps/homepage/index.html</desc>
+                     <add>Hompage der eXist XML Datenbank</add>
                   </footnote> oder Marklogic<footnote>
                      <desc>https://de.marklogic.com/</desc>
+                     <add>Hompage der NoSQL/XML Datenbank MarkLogic</add>
                   </footnote>, XQuery als Abfragesprache.</p>
             </column-wide-element>
                   <column-wide-element>
@@ -1906,6 +1932,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                      <second criterion="oXygen XML Editor">oXygen XML Editor</second>
                   </xe> mit dem XQuery Builder Tool<footnote>
                      <desc>https://www.oxygenxml.com/xml_editor/xquery_builder.html</desc>
+                     <add>Tool zur einfachen Eingabe von XQuery Test-Skripten im oXygen XML Editor</add>
                   </footnote> oder auch per Saxon Kommandozeile abgefragt werden:</p>
             </column-wide-element>
                   <page-wide-element>
@@ -1920,6 +1947,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                   <column-wide-element>
                <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<footnote>
                      <desc>http://cs.au.dk/~amoeller/XML/querying/flwrexp.html</desc>
+                     <add>XQuery Extensions für mächtigere Funktionen</add>
                   </footnote> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
             </column-wide-element>
                   <block-title>
@@ -1935,6 +1963,7 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                      <column-wide-element>
                      <subtitle>oXygen XQuery Builder</subtitle>
                   </column-wide-element>
+                     <desc id="c8cfeda4-d917-45c0-b0fd-662dc79ec262d6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
                      <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
                   </figure>
             </page-wide-element>
@@ -2018,6 +2047,7 @@ Datei als Eingabe suchen:</p>
                   <column-wide-element>
                <p>Document Projection<footnote>
                      <desc>http://www.saxonica.com/documentation/#!sourcedocs/projection</desc>
+                     <add>Verstecktes Saxon Feature: Dokument Projektion bei einer XQuery Abfrage</add>
                   </footnote>
                   <xe>
                      <first criterion="Tipps und Tricks">Tipps und Tricks</first>
@@ -2085,7 +2115,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="9ec26a70-15c4-41e3-804e-2e53b5ab8ef6d6e10">oXygen Data Source Explorer View öffnen</desc>
+                     <desc id="ec1c62e0-ede4-40eb-a620-7c6abc1383ded6e10">oXygen Data Source Explorer View öffnen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
                   </figure>
             </page-wide-element>
@@ -2094,13 +2124,14 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="3f850e7f-8aa0-4afa-b743-7307baaaebc7d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <desc id="feacbb20-0b3d-4ca9-b36e-533b5a38cde1d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
                   </figure>
             </page-wide-element>
                   <column-wide-element>
                <p>Dazu muss man den Marklogic Treiber installieren<footnote>
                      <desc>https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html</desc>
+                     <add>MarkLogic Datenquelle in oXygen konfigurieren</add>
                   </footnote> und diesen im folgenden Screen verfügbar machen.</p>
             </column-wide-element>
                   <column-wide-element>
@@ -2111,7 +2142,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="c2e5f47b-55e4-42dd-adcf-3e393d9b4fd4d6e27">Marklogic Treiber auswählen</desc>
+                     <desc id="95e426c3-54fd-4849-bd65-7226b77211e2d6e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
             </page-wide-element>
@@ -2124,13 +2155,13 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="3edc02e3-2d0c-4a8a-9461-09f0769f96d0d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="38718434-5e52-4aa7-9b33-3702e1f0c4c5d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
             </page-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="1c0476fc-2a67-47eb-96c1-ff65bdd9fd53d6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="fbe1e282-9e00-4983-b301-8c7e27fd6e6dd6e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
             </page-wide-element>
@@ -2139,16 +2170,16 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="fa00df67-2ba2-447d-b9be-04cb1e142f79d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="50db5608-88c2-42e0-b6ed-fb44ed7f8841d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
             </page-wide-element>
                   <column-wide-element>
-               <p>Schliesslich hat man im Data Source Explorer in oxygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
+               <p>Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="0729c1e0-91c9-472d-bc9f-a33e8a77d5abd6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="f33247ba-6e19-43b4-9972-116d461d8bfdd6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
             </page-wide-element>
@@ -2165,8 +2196,27 @@ Memory used: 64339064</verbatim>
                   <column-wide-element>
                <p>Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
-Hat man parallel auch noch oXygen offen, kann man die Testergbnisse
-aus der Konsole direkt in ein XQuery Server Skript packen.</p>
+Hat man parallel auch noch oXygen offen, kann man die Testergb</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>nisse
+aus der Konsole direkt in ein XQuery Server Skript packen.dwawqdqd</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <ul>
+                     <li>
+                        <p>ewwqeqe</p>
+                     </li>
+                     <li>
+                        <p>qweqwe</p>
+                     </li>
+                     <li>
+                        <p>qweqeq</p>
+                     </li>
+                  </ul>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>wqdqwd</p>
             </column-wide-element>
                   <block-title>
                      <title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title>
@@ -2199,6 +2249,7 @@ Komma - ein Tupel wird erzeugt - dann klappt es.</p>
                <p>Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
 folgendermassen aus<footnote>
                      <desc>https://docs.marklogic.com/xdmp:document-insert</desc>
+                     <add>Doku zu xdmp:documen-insert Funktion auf den MarkLogic Webseiten</add>
                   </footnote>:<xe>
                      <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
                      <second criterion="DB insert">DB insert</second>
@@ -2239,6 +2290,7 @@ folgendermassen aus<footnote>
                   </xe> zuweisen, um sie leichter finden und auswerten
 zu können. Das geht mit dem folgenden Befehl<footnote>
                      <desc>https://docs.marklogic.com/xdmp:document-add-collections</desc>
+                     <add>Dokumentation zur xdmp:document-add-collections Funktion auf den MarkLogic Webseiten</add>
                   </footnote> und diesem Schnippsel:</p>
             </column-wide-element>
                   <page-wide-element>
@@ -2451,11 +2503,15 @@ try {
                      <column-wide-element>
                      <subtitle>Schematron Validierung mit Filter</subtitle>
                   </column-wide-element>
+                     <desc id="70b1fb39-5f41-4889-952c-5ab7a7c131fbd6e25">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
                      <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
                   </figure>
             </page-wide-element>
                   <column-wide-element>
-               <p>Zu finden ist das Schematron Programm auf Github: https://github.com/Schematron/schematron. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
+               <p>Zu finden ist das Schematron Programm auf Github<footnote>
+                     <desc>https://github.com/Schematron/schematron</desc>
+                     <add>Schematron auf GitHub</add>
+                  </footnote>. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
                   </p>
             </column-wide-element>
                   <block-title>
@@ -2576,6 +2632,7 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                   </xe> ist ein <b>Test-Framework</b>
                   <footnote>
                      <desc>https://github.com/xspec</desc>
+                     <add>XSpec auf GitHub</add>
                   </footnote>
                   <xe>
                      <first criterion="Test-Framework">Test-Framework</first>
@@ -2815,6 +2872,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>XMetal<footnote>
                               <key>XM</key>
                               <desc>https://xmetal.com/</desc>
+                              <add>Homepage des Desktop XML Editors XMetal</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2828,6 +2886,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>Arbortext XML Editor<footnote>
                               <key>EP</key>
                               <desc>https://www.ptc.com/en/products/service-lifecycle-management/arbortext/editor</desc>
+                              <add>Website zum Arbortext XML Editor</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2868,6 +2927,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>Oxygen XML WebAuthor<footnote>
                               <key>OX</key>
                               <desc>https://www.oxygenxml.com/oxygen-xml-web-author/app/oxygen.html</desc>
+                              <add>Der oXygen XML Web Editor im Web</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2878,6 +2938,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>FontoXML<footnote>
                               <key>FX</key>
                               <desc>https://www.fontoxml.com/</desc>
+                              <add>FontoXML Webeditor</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2891,6 +2952,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>XEditor<footnote>
                               <key>XE</key>
                               <desc>http://www.xeditor.com/portal</desc>
+                              <add>Homepage des webbasierten XEditors</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2904,6 +2966,7 @@ git log --diff-filter=D --summary</verbatim>
                            <entry>Xopus<footnote>
                               <key>XO</key>
                               <desc>http://xopusfiddle.net/VT7T/3/</desc>
+                              <add>Homepage des veralteten Xopus XML Editors</add>
                            </footnote>
                         </entry>
                            <entry>
@@ -2934,86 +2997,210 @@ git log --diff-filter=D --summary</verbatim>
             ismodule="no">
       
          <title>
-            <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">Glossar </title>
+            <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
+            <glossary/>
+         </title>
          </title>
          
-            <column-wide-element>
+            <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>C</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
          <table type="dl">
-               <tgroup>
-                  <colspec colwidth="0.25*"/>
-                  <colspec colwidth="0.75*"/>
-                  <tbody>
-                     <row>
-                        <entry>
-                           <b>Begriff</b>
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Core-Stylesheet</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           In einem Stylesheet-Projekt bezeichnet das Core-Stylesheet eine bereits ausgiebig getestete Variante, die mittels Sub-Stylesheet unter Ausnutzung der XSLT Import Präzedenz überschrieben wird.
                         </entry>
-                        <entry>
-                           <b>Beschreibung</b>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </column-wide-element>
+      <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>D</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
+         <table type="dl">
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>DITA</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           DITA ist ein Informationsmodell für die Technische Dokumentation.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Core-Stylesheet</entry>
-                        <entry>
-                           <p>In einem Stylesheet-Projekt bezeichnet das Core-Stylesheet eine bereits ausgiebig getestete Variante, die mittels Sub-Stylesheet unter Ausnutzung der XSLT Import Präzedenz überschrieben wird.</p>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </column-wide-element>
+      <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>P</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
+         <table type="dl">
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Parameterisierung</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Bei der Parameterisierung wird ein bestehendes Stylesheet mit Parametern versehen, um für möglichst viele Produktvarianten und Ausgabeformate die gleiche Codebasis wiederverwenden zu können. Dadurch soll Redundanz eingespart werden und der Aufruf vereinfacht werden.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Sub-Stylesheet</entry>
-                        <entry>
-                           <p>Ein Sub-Stylesheet spezialisiert das Core-Stylesheet, damit Redundanz vermieden wird und somit die Wartbarkeit gewährleistet werden kann.</p>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </column-wide-element>
+      <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>S</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
+         <table type="dl">
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Sub-Stylesheet</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Ein Sub-Stylesheet spezialisiert das Core-Stylesheet, damit Redundanz vermieden wird und somit die Wartbarkeit gewährleistet werden kann.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Parameterisierung</entry>
-                        <entry>
-                           <p>Bei der Parameterisierung wird ein bestehendes Stylesheet mit Parametern versehen, um für möglichst viele Produktvarianten und Ausgabeformate die gleiche Codebasis wiederverwenden zu können. Dadurch soll Redundanz eingespart werden und der Aufruf vereinfacht werden.</p>
+                  </row>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>SGML</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           SGML ist der Vorläufer von XML.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Topic Based Authoring</entry>
-                        <entry>
-                           <p>Beim Topic Based Authoring steht nicht das gesamte Buch im Vordergrund, sondern der Inhalt wird in wiederverwendbare Topics aufgeteilt, die dann in verschiedenen Publikationen wiederverwendet werden können. </p>
+                  </row>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Single Source Publishing</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt
                         </entry>
-                     </row>
-                     <row>
-                        <entry>DITA</entry>
-                        <entry>
-                           <p>DITA ist ein Informationsmodell für die Technische Dokumentation.</p>
+                  </row>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Structured Content Authoring</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Der Content wird hierbei semantisch mittels XML Tags ausgezeichnet. Bei einem WYSIWYG Ansatz sind die meisten Tags nur optional sichtbar.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>SGML</entry>
-                        <entry>
-                           <p>SGML ist der Vorläufer von XML.</p>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </column-wide-element>
+      <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>T</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
+         <table type="dl">
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>Topic Based Authoring</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Beim Topic Based Authoring steht nicht das gesamte Buch im Vordergrund, sondern der Inhalt wird in wiederverwendbare Topics aufgeteilt, die dann in verschiedenen Publikationen wiederverwendet werden können. 
                         </entry>
-                     </row>
-                     <row>
-                        <entry>TIOBE Index</entry>
-                        <entry>
-                           <p>Im TIOBE Index wird jährlich die Beliebtheit von Programmiersprachen erfasst.</p>
+                  </row>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>TIOBE Index</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           Im TIOBE Index wird jährlich die Beliebtheit von Programmiersprachen erfasst.
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Single Source Publishing</entry>
-                        <entry>
-                           <p>Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt</p>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </column-wide-element>
+      <block-title xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                   xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                   xmlns:xe="http://www.xes.future"
+                   style="larger">
+         <title>
+            <b>X</b>
+         </title>
+      </block-title>
+      <column-wide-element xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                           xmlns:fo="http://www.w3.org/1999/XSL/Format"
+                           xmlns:xe="http://www.xes.future">
+         <table type="dl">
+            <tgroup>
+               <colspec colwidth="1*"/>
+               <colspec colwidth="4*"/>
+               <tbody>
+                  <row>
+                     <entry htmlwidth="30%">
+                        <b>XML Datenbanken</b>
+                     </entry>
+                     <entry htmlwidth="70%">
+                           XML Datenbanken sind NoSQL Datenbanken, d.h. "Not only SQL" oder auch tatsächlich "No SQL" wird unterstützt. Die Spezialisierung erfolgt auf XML Daten. Wie sich aber zeigt, ist eine relationale Sicht auf die Daten meistens auch notwendig, so dass DB wie Marklogic diese Funktionalität mittels Erweiterungen unterstützt. 
                         </entry>
-                     </row>
-                     <row>
-                        <entry>Structured Content Authoring</entry>
-                        <entry>
-                           <p>Der Content wird hierbei semantisch mittels XML Tags ausgezeichnet. Bei einem WYSIWYG Ansatz sind die meisten Tags nur optional sichtbar.</p>
-                        </entry>
-                     </row>
-                     <row>
-                        <entry>XML Datenbanken</entry>
-                        <entry>
-                           <p>XML Datenbanken sind NoSQL Datenbanken, d.h. "Not only SQL" oder auch tatsächlich "No SQL" wird unterstützt. Die Spezialisierung erfolgt auf XML Daten. Wie sich aber zeigt, ist eine relationale Sicht auf die Daten meistens auch notwendig, so dass DB wie Marklogic diese Funktionalität mittels Erweiterungen unterstützt. </p>
-                        </entry>
-                     </row>
-                  </tbody>
-               </tgroup>
-            </table>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
       </column-wide-element>
          
       
