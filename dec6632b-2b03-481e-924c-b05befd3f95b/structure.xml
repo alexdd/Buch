@@ -5,7 +5,7 @@
    <tr data-tt-id="Manual" data-chapter-link-id="../index">
       <td>
          <span class="text">
-            <div id="header-text">XSLT Hands-On</div>
+            <div id="header-text">XML Hands On</div>
          </span>
          <div id="tektur-document-" style="display:none"> </div>
       </td>
@@ -735,7 +735,7 @@
       <td>
          <span class="number">43  </span>
          <span class="text">
-                     Erweiterte Konstrukte
+                     Funktionen und Module
                   </span>
          <div data-element-name="commentable-element"
               id="3630ee02-616b-4bbc-8655-9064d57bf945"
@@ -745,35 +745,51 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="06aafa53-2750-43ab-8c47-0809e27c7e36d6e4"
+   <tr data-tt-id="f15026e0-db8c-48a0-a852-d5eff6d2d0ddd6e4"
        data-tt-parent-id="3630ee02-616b-4bbc-8655-9064d57bf945"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 06aafa53-2750-43ab-8c47-0809e27c7e36d6e4">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 f15026e0-db8c-48a0-a852-d5eff6d2d0ddd6e4">
       <td>
          <span class="number">44  </span>
          <span class="text">
                               Funktionen
                            </span>
          <div data-element-name="commentable-element"
-              id="06aafa53-2750-43ab-8c47-0809e27c7e36d6e4"
+              id="f15026e0-db8c-48a0-a852-d5eff6d2d0ddd6e4"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5"
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="8c5183b4-5607-4645-9d6e-4075cff93ea8d6e25"
+   <tr data-tt-id="24aa4a1f-5622-4721-a7f5-e83bbe8804acd6e25"
        data-tt-parent-id="3630ee02-616b-4bbc-8655-9064d57bf945"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 8c5183b4-5607-4645-9d6e-4075cff93ea8d6e25">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 24aa4a1f-5622-4721-a7f5-e83bbe8804acd6e25">
       <td>
          <span class="number">45  </span>
          <span class="text">
                               Module
                            </span>
          <div data-element-name="commentable-element"
-              id="8c5183b4-5607-4645-9d6e-4075cff93ea8d6e25"
+              id="24aa4a1f-5622-4721-a7f5-e83bbe8804acd6e25"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26"
+              style="display:none"> </div>
+      </td>
+   </tr>
+   <tr data-tt-id="d9cd641f-29f4-485d-8e67-32519d422b08"
+       data-tt-parent-id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 d9cd641f-29f4-485d-8e67-32519d422b08">
+      <td>
+         <span class="number">46  </span>
+         <span class="text">
+                     If..then..else Ausdrücke
+                  </span>
+         <div data-element-name="commentable-element"
+              id="d9cd641f-29f4-485d-8e67-32519d422b08"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd"
               style="display:none"> </div>
       </td>
    </tr>
@@ -781,7 +797,7 @@
        data-tt-parent-id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 8969a5d0-6c34-4bc8-8b60-3a070bc123d7 98665bd9-d40d-4fc7-ab7a-e340be6190a6 382bb96a-5a06-460c-8d69-4c4cd613297c">
       <td>
-         <span class="number">46  </span>
+         <span class="number">47  </span>
          <span class="text">
                      SQL Views in MarkLogic
                   </span>
@@ -797,7 +813,7 @@
        data-tt-parent-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936">
       <td>
-         <span class="number">47  </span>
+         <span class="number">48  </span>
          <span class="text">
                Testing
             </span>
@@ -813,7 +829,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9">
       <td>
-         <span class="number">48  </span>
+         <span class="number">49  </span>
          <span class="text">
                   Validierung mit Schematron
                </span>
@@ -829,7 +845,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 068ab39f-539e-4327-8131-08e0aff0c9e9d6e14">
       <td>
-         <span class="number">49  </span>
+         <span class="number">50  </span>
          <span class="text">
                            Schematron ist XSLT
                      ...</span>
@@ -848,7 +864,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 51b05301-481d-49df-b450-c35261dd74ead6e32">
       <td>
-         <span class="number">50  </span>
+         <span class="number">51  </span>
          <span class="text">
                            CLI Verwendung
                         </span>
@@ -864,7 +880,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 cc183707-5352-4c9c-9c31-68047a882d0f">
       <td>
-         <span class="number">51  </span>
+         <span class="number">52  </span>
          <span class="text">
                   Erste Schritte mit Xspec
                </span>
@@ -879,7 +895,7 @@
    <tr data-tt-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-tt-parent-id="Manual"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055">
       <td>
-         <span class="number">52  </span>
+         <span class="number">53  </span>
          <span class="text">
             Zusätzliches Know-How
          </span>
@@ -895,7 +911,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 7dbb15ce-bbc5-4d91-b977-ed7e8117730e">
       <td>
-         <span class="number">53  </span>
+         <span class="number">54  </span>
          <span class="text">
                GIT Einmaleins 
             </span>
@@ -911,7 +927,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679">
       <td>
-         <span class="number">54  </span>
+         <span class="number">55  </span>
          <span class="text">
                XML Editoren 
             </span>
@@ -927,7 +943,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 c2d11c3f-da3d-4dce-be4b-44c357c2eb57d6e52">
       <td>
-         <span class="number">55  </span>
+         <span class="number">56  </span>
          <span class="text">
                         WYSIWYM Desktop
                      </span>
@@ -943,7 +959,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 7b502f11-69c5-44a7-a88b-7d44e30f5d6ad6e73">
       <td>
-         <span class="number">56  </span>
+         <span class="number">57  </span>
          <span class="text">
                         WYSIWYG Desktop
                      </span>
@@ -959,7 +975,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 ac0bd3ba-817b-4ee4-b5d7-7f26a7ba13f9d6e78">
       <td>
-         <span class="number">57  </span>
+         <span class="number">58  </span>
          <span class="text">
                         WYSIWYM Online
                      </span>
@@ -974,7 +990,7 @@
    <tr data-tt-id="3dfad2c2-2299-461a-9d80-42237bbb5e89" data-tt-parent-id="Manual"
        data-chapter-link-id="3dfad2c2-2299-461a-9d80-42237bbb5e89">
       <td>
-         <span class="number">58  </span>
+         <span class="number">59  </span>
          <span class="text">
             Glossar
          </span>
@@ -989,7 +1005,7 @@
    <tr data-tt-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-tt-parent-id="Manual"
        data-chapter-link-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8">
       <td>
-         <span class="number">59  </span>
+         <span class="number">60  </span>
          <span class="text">
             Tektur CCMS
          </span>
