@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sat Feb 23 2019 22:24:40 </date-of-last-change>
+      <date-of-last-change>Thu Feb 28 2019 19:46:15 </date-of-last-change>
       <language>de-DE</language>
-      <status>93</status>
+      <status>112</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -226,7 +226,9 @@ mit <b>LISP</b>
                            <p>Zum einen kommt noch XPATH hinzu: XPATH erlaubt komplizierte Berechnungen und Selektionen auf den DOM Knoten eines XML Dokuments.</p>
                         </li>
                         <li>
-                           <p>Zum anderen ist auch XSL-FO Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
+                           <p>Zum anderen ist auch XSL-FO<footnote>
+                              <desc>https://www.w3.org/TR/xsl/</desc>
+                           </footnote> Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
                         </li>
                      </ul>
                   </li>
@@ -292,10 +294,10 @@ mit <b>LISP</b>
 [...]</verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
+            <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in  gesetzt sind - angezeigt:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+            <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
 &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
 
   &lt;xsl:template match="/"&gt;
@@ -350,7 +352,7 @@ mit <b>LISP</b>
             <p>Auch eine serverseitige Konvertierung<xe>
                   <first criterion="Anwendungsgebiete">Anwendungsgebiete</first>
                   <second criterion="Serverseitige Konvertierung">Serverseitige Konvertierung</second>
-               </xe> ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten<footnote>
+               </xe> ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - WAP-Seiten<footnote>
                   <desc>https://de.wikipedia.org/wiki/Wireless_Application_Protocol</desc>
                   <add>Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones</add>
                </footnote> für unterschiedliche Handy-Modelle.</p>
@@ -436,7 +438,7 @@ mit <b>LISP</b>
                   <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
                </block-title>
                <column-wide-element>
-            <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB<footnote>
+            <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. EPUB<footnote>
                   <desc>https://de.wikipedia.org/wiki/EPUB</desc>
                   <add>EPUB ist ein Dokumentformat für Ebook-Reader.</add>
                </footnote> ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
@@ -796,7 +798,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Pull Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="1c6a4dfa-2780-413e-a7c4-2d4020d117afd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <desc id="a9881b7f-2dd8-4c82-90e3-94ca2f4518d0d6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
          </page-wide-element>
@@ -805,7 +807,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Push Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="ff349564-5831-4788-9926-6203204a9db4d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <desc id="00525628-43b6-4f5d-8a30-803c0695a264d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
          </page-wide-element>
@@ -817,7 +819,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
                </column-wide-element>
-                  <desc id="b32ef812-1872-40d5-818d-ef089c06192dd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
+                  <desc id="acae0d21-2f0b-40f6-8f64-5c3fa3f0bf59d6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
                      <first criterion="Tiefensuchlauf">Tiefensuchlauf</first>
                   </xe> und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
@@ -997,7 +999,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>Wie oben schon verdeutlicht<xe>
                   <first criterion="Konzepte">Konzepte</first>
                   <second criterion="Priorität">Priorität</second>
-               </xe> werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
+               </xe> werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wäre bspw. folgendes Szenario:</p>
          </column-wide-element>
                <column-wide-element>
             <ul>
@@ -1058,8 +1060,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <first criterion="00000000"/>
                   <second criterion="00000000"/>
                </xe> hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="9e0a1b8f-8e28-4976-a9b7-49b1ad340b58"
-                        type="topic">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                        id="41345870-4165-4a45-9ea5-e2c80dd1bf0a"
+                        type="topic">Push vs. Pull Stylesheets</doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
@@ -1498,8 +1500,8 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                           id="200d932e-be64-4c4e-ba6a-ab077288fcba"
-                           type="none">Eindeutigkeit der Regelbasis</doclink> .</p>
+                           id="ec4e438f-b6cc-4f50-b903-bda598a9003c"
+                           type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
@@ -1745,6 +1747,179 @@ würde.</p>
             </column-wide-element>
                
             
+            <chapter hyphenation="yes" chapterpage="no" id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
+                     ismodule="no">
+               
+                  <title>
+                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
+                  </title>
+                  
+                     <column-wide-element>
+                  <p>XSLT Streaming<xe>
+                        <first criterion="XSLT Streaming">XSLT Streaming</first>
+                     </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>&lt;status-report&gt;
+  &lt;status-change&gt;
+    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
+    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
+    &lt;status&gt;open&lt;/status&gt;
+    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
+  &lt;/status-change&gt;
+  &lt;status-change&gt;
+    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
+    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
+    &lt;status&gt;open&lt;/status&gt;
+    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
+  &lt;/status-change&gt;
+  [...]</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Mit einer  Loop und einem Named-Template würde das so gehen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+&lt;xsl:template name="main"&gt;
+  &lt;xsl:for-each select="$input-file/status-report/status-change"&gt;
+    &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+    &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+    &lt;xsl:value-of select="concat(status,',')"/&gt;
+    &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+  &lt;/xsl:for-each&gt;
+&lt;/xsl:template&gt;</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p>Named-Templates, die direkt über den Saxon Aufruf  aufgerufen werden, sind dann
+brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
+Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
+vom XSLT Skript selbst erzeugt wird.</p>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
+verlassen, was den Code weiter vereinfacht:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+&lt;xsl:template match="/status-report/status-change"&gt;
+  &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+  &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+  &lt;xsl:value-of select="concat(status,',')"/&gt;
+  &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+&lt;/xsl:template&gt;</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
+auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
+aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+                              id="e78aa311-072e-49b7-8248-47e00991e0c7"
+                              type="topic">XSLT Streaming</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Wir betrachten hier das <footnote>
+                        <desc>https://www.saxonica.com/html/documentation/xsl-elements/iterate.html</desc>
+                        <add>Der Iterator ist ein Konzept um XSLT Streaming zu realisieren</add>
+                     </footnote>
+ Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <ul>
+                        <li>
+                           <p>Wir benutzen  in Verbindung mit dem  Attribut,
+um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p>
+                        </li>
+                        <li>
+                           <p>Wenn wir die Quelle über einen Parameter einlesen, dann müssen wir auch die Transformation über ein Named-Template
+starten.</p>
+                        </li>
+                     </ul>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von  statements in den Iterator:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+&lt;xsl:template name="main"&gt;
+  &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+    &lt;xsl:iterate select="status-report/status-change"&gt;
+      &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+      &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+      &lt;xsl:value-of select="concat(status,',')"/&gt;
+      &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+    &lt;/xsl:iterate&gt;
+  &lt;/xsl:source-document&gt; 
+&lt;/xsl:template&gt;</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>und werden dafür prompt mit einer Fehlermeldung belohnt:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>Static error on line 16 column 64 of report.xsl:
+  XTSE3430: The body of the xsl:stream instruction is not streamable
+  *  There is more than one consuming operand: {xsl:value-of} on line 18, and
+  {xsl:value-of} on line 19</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>In diesem Iterator ist also nur eine "konsumierende"  Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="xs"
+  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
+  version="3.0"&gt;
+   
+  &lt;xsl:param name="input-file" required="yes"/&gt;
+  
+  &lt;xsl:output method="text"/&gt;
+ 
+  &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
+
+  &lt;xsl:template name="main"&gt;
+    &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+      &lt;xsl:iterate select="status-report/status-change/*"&gt;
+        &lt;xsl:choose&gt;
+          &lt;xsl:when test="name()='time_stamp'"&gt;
+            &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+          &lt;/xsl:when&gt;
+          &lt;xsl:otherwise&gt;
+            &lt;xsl:value-of select="concat(.,',')"/&gt;
+          &lt;/xsl:otherwise&gt;
+        &lt;/xsl:choose&gt;
+      &lt;/xsl:iterate&gt;
+    &lt;/xsl:source-document&gt;
+  &lt;/xsl:template&gt;  
+&lt;/xsl:stylesheet&gt;
+</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten () wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p>Logisch wird beim XSLT Streaming auf einer niedrigeren Abstraktionsebene programmiert, um den Anforderungen des Prozessors gerecht zu werden.</p>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Für eine <b>1.6 GB Datei</b> benötigt das obige Skript auf meinem Rechner gute<b> drei Minuten</b>. Der traditionelle temlate-match Ansatz bricht mit einer Out-of-Memory Exception ab, selbst wenn man den Java Heap Size auf 4GB einstellt.</p>
+               </column-wide-element>
+                  
+               
+            </chapter>
          </chapter>
          <chapter hyphenation="yes" chapterpage="no" id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
                   ismodule="no">
@@ -1769,7 +1944,7 @@ System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in di
 generiert werden.</p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Die Id an einem Element &lt;part id=“1234”&gt; würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+               <p>Die Id an einem Element  würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
 für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
 mit den folgenden Templates (vereinfacht) passieren:</p>
             </column-wide-element>
@@ -1836,10 +2011,10 @@ könnte folgendermassen aussehen:</p>
       [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Jedes einzelne CONTENT Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+               <p>Jedes einzelne  Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
 Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
-Descendant-Achse bis zum Element WRAPPER3, ausserdem noch die Elemente SEQUENZ1 und SEQUENZ2,
-sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
+Descendant-Achse bis zum Element , ausserdem noch die Elemente  und ,
+sowie das Element  mit Kind  .Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
@@ -1882,10 +2057,9 @@ sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu ac
 &lt;/xsl:stylesheet&gt;</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes CONTENT Element selektiert und
+               <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes  Element selektiert und
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
-indem der gesamte XML Baum über die Standard-Kopierregel in das Element &lt;nutzdaten&gt;
-gesetzt wird. Dabei wird aber nur derjenige CONTENT Abschnitt evaluiert, der
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element  gesetzt wird. Dabei wird aber nur derjenige  Abschnitt evaluiert, der
 zu der als Parameter übergebenen generierten Id passt.</p>
             </column-wide-element>
                
@@ -1963,7 +2137,7 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                      <column-wide-element>
                      <subtitle>oXygen XQuery Builder</subtitle>
                   </column-wide-element>
-                     <desc id="c8cfeda4-d917-45c0-b0fd-662dc79ec262d6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
+                     <desc id="71e42e88-d6ac-4fca-9bae-a4d2919b818cd6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
                      <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
                   </figure>
             </page-wide-element>
@@ -1982,7 +2156,7 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                   <column-wide-element>
                <p>FLOWR<xe>
                      <first criterion="FLOWR Expression">FLOWR Expression</first>
-                  </xe> steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
+                  </xe> steht für . Das sind die Query-Anweisungen, die in 
 dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
             </column-wide-element>
                   <page-wide-element>
@@ -2031,9 +2205,8 @@ vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B.
 &lt;/buecher&gt;</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
-so kann man mit der folgenden Kommandozeile auf einer buecher.xml
-Datei als Eingabe suchen:</p>
+               <p>Speichert man dieses Schnippsel in einer Datei  ab,
+so kann man mit der folgenden Kommandozeile auf einer  Datei als Eingabe suchen:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
@@ -2082,7 +2255,7 @@ Execution time: 27.137589ms
 Memory used: 67031664</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</p>
+               <p>Mit der Option  verändert sich die Ausführungszeit signifikant:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>[...]
@@ -2115,7 +2288,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="ec1c62e0-ede4-40eb-a620-7c6abc1383ded6e10">oXygen Data Source Explorer View öffnen</desc>
+                     <desc id="6f6f78fc-76e7-496e-a509-60ae08c0f6afd6e10">oXygen Data Source Explorer View öffnen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
                   </figure>
             </page-wide-element>
@@ -2124,7 +2297,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="feacbb20-0b3d-4ca9-b36e-533b5a38cde1d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <desc id="56e5bbeb-575d-4df1-b392-a30865bf534fd6e16">Neue Datenquelle in oXygen konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
                   </figure>
             </page-wide-element>
@@ -2142,7 +2315,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="95e426c3-54fd-4849-bd65-7226b77211e2d6e27">Marklogic Treiber auswählen</desc>
+                     <desc id="36195db5-65ff-4426-b863-06a72fa91351d6e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
             </page-wide-element>
@@ -2155,13 +2328,13 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="38718434-5e52-4aa7-9b33-3702e1f0c4c5d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="9a38a110-c4b8-4efa-95e5-bcba44278512d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
             </page-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="fbe1e282-9e00-4983-b301-8c7e27fd6e6dd6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="993f9c35-b441-42cf-87fb-63980a4554b7d6e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
             </page-wide-element>
@@ -2170,7 +2343,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="50db5608-88c2-42e0-b6ed-fb44ed7f8841d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="f355add5-223f-475a-a976-cd7d1d45602cd6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
             </page-wide-element>
@@ -2179,7 +2352,7 @@ Memory used: 64339064</verbatim>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="f33247ba-6e19-43b4-9972-116d461d8bfdd6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="54149835-7759-4782-aa85-5d9f8a767aa2d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
             </page-wide-element>
@@ -2196,24 +2369,7 @@ Memory used: 64339064</verbatim>
                   <column-wide-element>
                <p>Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
-Hat man parallel auch noch oXygen offen, kann man die Testergb</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>nisse
-aus der Konsole direkt in ein XQuery Server Skript packen.dwawqdqd</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <ul>
-                     <li>
-                        <p>ewwqeqe</p>
-                     </li>
-                     <li>
-                        <p>qweqwe</p>
-                     </li>
-                     <li>
-                        <p>qweqeq</p>
-                     </li>
-                  </ul>
+Hat man parallel auch noch oXygen offen, kann man die Testergbnisse aus der Konsole direkt in ein XQuery Server Skript packen.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>wqdqwd</p>
@@ -2360,7 +2516,7 @@ return
                </page-wide-element>
                      <column-wide-element>
                   <p>Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
-um ganz elementare Konstrukte, wie while...do<xe>
+um ganz elementare Konstrukte, wie <xe>
                         <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
                         <second criterion="Schleifen - while..do">Schleifen - while..do</second>
                      </xe> Schleifen, zu realisieren.</p>
@@ -2426,10 +2582,10 @@ Variablenauswertung: $common:collection-books</verbatim>
                   </title>
                   
                      <column-wide-element>
-                  <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter <b>if</b> und <b>then</b> dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
+                  <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter  und  dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery <b>if..then</b> als Ausdrücke ausgewertet werden.</p>
+                  <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery  als Ausdrücke ausgewertet werden.</p>
                </column-wide-element>
                      <column-wide-element>
                   <p>Das ist einerseits sehr praktisch, weil es richtig angewandt den Code verkürzt und damit das Wesentliche herausstellt, kann aber auch weiter zur allg. Verwirrung bzgl. des kryptischen XQuery Codes beitragen.</p>
@@ -2437,31 +2593,32 @@ Variablenauswertung: $common:collection-books</verbatim>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
-                     ismodule="no">
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
+                  ismodule="no">
+            
+               <title>
+                  <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
+               </title>
                
-                  <title>
-                     <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
-                  </title>
-                  
-                     <column-wide-element>
-                  <p>Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
+                  <column-wide-element>
+               <p>Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
 XML Datenbank rasend schnell geht, weil jeder Knoten des Baums initial in einen Index
 aufgenommen wird. So gibt es doch Anwendungsfälle bei denen man lieber eine relationale
 Sicht auf die Daten hätte.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>In MarkLogic heisst die Lösung dazu SQL Views.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Bspw. benötigt man eine relationale Sicht auf die Daten,
+            </column-wide-element>
+                  <column-wide-element>
+               <p>In MarkLogic heisst die Lösung dazu SQL Views.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Bspw. benötigt man eine relationale Sicht auf die Daten,
 wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>&lt;k:kunde&gt;
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>&lt;k:kunde&gt;
   &lt;k:id&gt;1&lt;/k:id&gt;
   &lt;k:name&gt;Alex&lt;/k:name&gt;
   &lt;k:eMail&gt;tekturcms@gmail.com&lt;/k:eMail&gt;
@@ -2492,40 +2649,40 @@ wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
   &lt;b:preis&gt;68.90&lt;/b:preis&gt;
   &lt;b:kunde-id&gt;1&lt;/b:kunde-id&gt;
 &lt;/b:bestellung&gt;</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
 abgegeben haben - das sind Alex und Horst - so würde man bei
 einem relationalen Ansatz einen JOIN verwenden, so wie:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>SELECT name, datum, preis
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>SELECT name, datum, preis
 FROM kunden k
 INNER JOIN bestellungen b
 ON k.id = b.kunde_id</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>name, datum, preis
+            </page-wide-element>
+                  <column-wide-element>
+               <p>In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>name, datum, preis
 Alex, 03.01.2019, 68.90
 Horst, 02.01.2019, 99.90</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
 der da heisst: Template Driven Extraction<footnote>
-                        <desc>https://docs.marklogic.com/guide/app-dev/TDE</desc>
-                        <add>Template Driven Extraction wird verwendet um in MarkLogic eine relationale Sicht auf die baumstrukturierten Daten zu setzen</add>
-                     </footnote>
-                  </p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
+                     <desc>https://docs.marklogic.com/guide/app-dev/TDE</desc>
+                     <add>Template Driven Extraction wird verwendet um in MarkLogic eine relationale Sicht auf die baumstrukturierten Daten zu setzen</add>
+                  </footnote>
+               </p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
 würden wir zwei Templates brauchen, die so aussehen:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>xquery version "1.0-ml";
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";
 
 import module namespace tde = "http://marklogic.com/xdmp/tde" 
                             at "/MarkLogic/tde.xqy";
@@ -2575,12 +2732,12 @@ return(
   tde:template-insert(concat('/templates/', $sql-view-name), 
                       $sql-view, xdmp:default-permissions())
 )</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>und analog für die Bestellungen:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>[...]
+            </page-wide-element>
+                  <column-wide-element>
+               <p>und analog für die Bestellungen:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>[...]
    &lt;rows&gt;
       &lt;row&gt;
          &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
@@ -2609,19 +2766,19 @@ return(
          &lt;/columns&gt;
       &lt;/row&gt;
 [...]</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
+            </page-wide-element>
+                  <column-wide-element>
+               <p>In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
           INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>xquery version "1.0-ml";
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";
 
 declare namespace k = 'http://www.tekturcms.de/kunden';
 declare namespace b = 'http://www.tekturcms.de/bestellungen';
@@ -2771,12 +2928,12 @@ local:insertBestellungenSchema(),
 
 xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
           bestellungen_view b ON k.id = b.kunde_id")</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>[
+            </page-wide-element>
+                  <column-wide-element>
+               <p>... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>[
   [
     "k.name", 
     "b.datum", 
@@ -2793,10 +2950,9 @@ xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN
     "99.90"
   ]
 ]</verbatim>
-               </page-wide-element>
-                  
+            </page-wide-element>
                
-            </chapter>
+            
          </chapter>
       </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"

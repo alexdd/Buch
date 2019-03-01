@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sat Feb 23 2019 22:24:59 </date-of-last-change>
+      <date-of-last-change>Thu Feb 28 2019 19:46:29 </date-of-last-change>
       <language>de-DE</language>
-      <status>93</status>
+      <status>112</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -127,7 +127,7 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
                            <p>Zum einen kommt noch XPATH hinzu: XPATH erlaubt komplizierte Berechnungen und Selektionen auf den DOM Knoten eines XML Dokuments.</p>
                         </li>
                         <li>
-                           <p>Zum anderen ist auch XSL-FO[[fnhttps://www.w3.org/TR/xsl/]] Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
+                           <p>Zum anderen ist auch XSL-FO[[fn:https://www.w3.org/TR/xsl/]] Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
                         </li>
                      </ul>
                   </li>
@@ -144,7 +144,7 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
             <block>
                <p>Einige Beispiele - aktuell und aus vergangenen Tagen:</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="62189109-9b23-4cfb-841c-6e0d2c6dba40d6e6">
+                        id="6de19f8a-d057-4328-8fdd-1d2f7aa0162fd6e6">
                   <content>
                      <title>
                         <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
@@ -172,8 +172,8 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
   &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
   &lt;chapter&gt;
 [...]</verbatim>
-                     <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in formatiermich.xsl gesetzt sind - angezeigt:</p>
-                     <verbatim>&#8232;&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
+                     <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in [[code:formatiermich.xsl]] gesetzt sind - angezeigt:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
 &lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
 
   &lt;xsl:template match="/"&gt;
@@ -221,12 +221,12 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="b7375dd4-61b3-49d4-bec0-e8cb7bf12a14d6e25">
+                        id="9434d120-e2ed-464a-82c6-9372b56df404d6e25">
                   <content>
                      <title>
                         <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
                      </title>
-                     <p>Auch eine serverseitige Konvertierung[[xe1:Anwendungsgebiete;xe2:Serverseitige Konvertierung]] ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - &#8232;WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol*Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones]] für unterschiedliche Handy-Modelle.</p>
+                     <p>Auch eine serverseitige Konvertierung[[xe1:Anwendungsgebiete;xe2:Serverseitige Konvertierung]] ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol*Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones]] für unterschiedliche Handy-Modelle.</p>
                      <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
                      <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
                      <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -297,17 +297,17 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="a4fc61a0-1652-4ecd-bf01-8624f29de458d6e40">
+                        id="e29cac40-a83c-4768-9165-debd6b5dc004d6e40">
                   <content>
                      <title>
                         <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
                      </title>
-                     <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. &#8232;EPUB[[fn:https://de.wikipedia.org/wiki/EPUB*EPUB ist ein Dokumentformat für Ebook-Reader.]] ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
+                     <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. EPUB[[fn:https://de.wikipedia.org/wiki/EPUB*EPUB ist ein Dokumentformat für Ebook-Reader.]] ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
                      <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM[[fn:https://de.wikipedia.org/wiki/CHM_(Dateiformat*Die alte Windows-Hilfe. Läuft immer noch im Bereich Maschinenbau auf gekoppelten Rechnern mit alter Windows Software)]], EclipseHelp[[fn:https://www.ibm.com/developerworks/library/os-echelp/index.html*Das Hilfe-Format der Eclipse Rich Client Plattform. Eclipse wird hauptsächlich von Programmierern als Editor benutzt]], JavaHelp[[fn:https://en.wikipedia.org/wiki/JavaHelp*Damit wird bspw. das Java API formatiert als Webseite ausgegeben]], ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker[[fn:https://de.wikipedia.org/wiki/FrameMaker*Mit Framemaker kann man manuell gesetzte Publikationen erstellen. Über Templates lässt sich das Layout aber auch automatisieren]],  oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD[[fn:https://www.i4icm.de/forschungstransfer/pi-mod/*PI-Mod ist ein Informationsmodell, das am KIT (Uni Karlsruhe) entwickelt wird/wurde]], JATS[[fn:https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite*JATS ist ein sehr verbreitetes Informationsmodell im Bereich wissenschaftlicher Artikel und Fachliteratur]][[xe1:Standards;xe2:JAT]] oder TEI[[fn:https://de.wikipedia.org/wiki/Text_Encoding_Initiative]][[xe1:Standards;xe2:TEI]].</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="95756305-f05c-400b-9b4f-9deca92e32f8d6e47">
+                        id="a14faa96-d86b-4432-8291-e619da8989a8d6e47">
                   <content>
                      <title>
                         <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
@@ -370,7 +370,7 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="cea575aa-a98a-4cc3-82b1-67c0e9dbcb04d6e60">
+                        id="6c2ad096-d310-41a1-9648-cf267b4a601bd6e60">
                   <content>
                      <title>
                         <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
@@ -430,7 +430,7 @@ mit <b>LISP</b> [[xe1:Programmiersprachen;xe2:LISP]]Dialekten verarbeitet wird, 
             <block>
                <p>Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="c7c234a7-6cda-41c4-b5a9-8eadc4d99755d6e6">
+                        id="c4d4986c-7f5d-4c75-992d-f21d9f94f1ded6e6">
                   <content>
                      <title>
                         <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
@@ -476,7 +476,7 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="092d2bac-9cdc-4b0b-90f7-36e9eff75147d6e38">
+                        id="85f16122-2344-43fa-b01e-f7990ceda6c7d6e38">
                   <content>
                      <title>
                         <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
@@ -489,7 +489,7 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="7070e1f5-5c1a-43d2-b1ba-2c60b19e7f8dd6e55">
+                        id="df844c85-cf67-4bb4-aab3-60c95620e160d6e55">
                   <content>
                      <title>
                         <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
@@ -528,18 +528,18 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                <p>Um diesen Umstand aufzuklären ist ein bisschen Theorie notwendig:</p>
                <figure pdfwidth="page">
                   <subtitle>Pull Stylesheet</subtitle>
-                  <desc id="1c6a4dfa-2780-413e-a7c4-2d4020d117afd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <desc id="a9881b7f-2dd8-4c82-90e3-94ca2f4518d0d6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
                <figure pdfwidth="page">
                   <subtitle>Push Stylesheet</subtitle>
-                  <desc id="ff349564-5831-4788-9926-6203204a9db4d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <desc id="00525628-43b6-4f5d-8a30-803c0695a264d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
                <p>Das bisher Gesagte verdeutlicht zwar den "Pull" Ansatz, was genau aber ge"pusht" wird, ist vermutlich noch unklar. Betrachten wir XML in der Baumdarstellung.</p>
                <figure pdfwidth="page">
                   <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
-                  <desc id="b32ef812-1872-40d5-818d-ef089c06192dd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf[[xe1:Tiefensuchlauf]] und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
+                  <desc id="acae0d21-2f0b-40f6-8f64-5c3fa3f0bf59d6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf[[xe1:Tiefensuchlauf]] und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
                   <legend>
                      <leg-entry id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43">
@@ -582,7 +582,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                <p>Die Regelbasis[[xe1:Konzepte;xe2:Regelbasis]] der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
                <p>Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="365c2f40-8cad-48e7-8df5-b8f9b005585cd6e8">
+                        id="1290e2d3-36b1-47c7-9ea9-1231cbd21822d6e8">
                   <content>
                      <title>
                         <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
@@ -592,7 +592,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="00c58f07-8771-4c5d-9086-0538cb8f5a3fd6e15">
+                        id="f41bdb30-3ad1-4288-883e-f6538b6c7fbfd6e15">
                   <content>
                      <title>
                         <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
@@ -669,7 +669,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="df7e31eb-919a-4bed-a4fe-5ab471125262d6e76">
+                        id="a2a2dd57-e7a9-4a19-b402-70930a54ce3ad6e76">
                   <content>
                      <title>
                         <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
@@ -682,12 +682,12 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="45287e88-b5a0-4ce0-9661-101c980cb27fd6e89">
+                        id="91eff378-b652-470d-b4e7-2b1f6fcd0711d6e89">
                   <content>
                      <title>
                         <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
                      </title>
-                     <p>Wie oben schon verdeutlicht[[xe1:Konzepte;xe2:Priorität]] werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wÃ¤re bspw. folgendes Szenario:</p>
+                     <p>Wie oben schon verdeutlicht[[xe1:Konzepte;xe2:Priorität]] werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wäre bspw. folgendes Szenario:</p>
                      <ul>
                         <li>
                            <p>Die Eingabeinstanz soll in einer Vorprozessierung gefiltert werden.</p>
@@ -736,14 +736,14 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="dad500fc-24d1-40b1-bfe8-eea4d890d305d6e118">
+                        id="1b656433-c943-45fa-9eb0-2c9069f72295d6e118">
                   <content>
                      <title>
                         <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
                      </title>
                      <p>An allen Templates[[xe1:Konzepte:xe2:Modus]] hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                                 id="9e0a1b8f-8e28-4976-a9b7-49b1ad340b58"
-                                 type="topic">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                                 id="41345870-4165-4a45-9ea5-e2c80dd1bf0a"
+                                 type="topic">Push vs. Pull Stylesheets</doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
                      <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
                      <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
                      <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
@@ -1055,7 +1055,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   <p>Mit XSLT[[xe1:Konzepte;xe2:Vererbung]] kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
                   <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="6a52da4c-93bd-4190-bcd3-cedb639484f3d6e8">
+                           id="944c84ea-be4e-4206-9063-472e32bee149d6e8">
                      <content>
                         <title>
                            <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
@@ -1064,8 +1064,8 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                         <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
                         <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
                         <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                                    id="200d932e-be64-4c4e-ba6a-ab077288fcba"
-                                    type="none">Eindeutigkeit der Regelbasis</doclink> .</p>
+                                    id="ec4e438f-b6cc-4f50-b903-bda598a9003c"
+                                    type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
                         <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
                         <verbatim>&lt;xsl:choose&gt;
     &lt;xsl:when test="$myParameter='this_option'"&gt;
@@ -1206,6 +1206,134 @@ werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungs
 würde.</p>
                </block>
             </content>
+            <chapter hyphenation="yes" chapterpage="no" id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
+                     ismodule="no">
+               <content>
+                  <title>
+                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
+                  </title>
+                  <block>
+                     <p>XSLT Streaming[[xe1:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
+                     <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden:</p>
+                     <verbatim>&lt;status-report&gt;
+  &lt;status-change&gt;
+    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
+    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
+    &lt;status&gt;open&lt;/status&gt;
+    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
+  &lt;/status-change&gt;
+  &lt;status-change&gt;
+    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
+    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
+    &lt;status&gt;open&lt;/status&gt;
+    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
+  &lt;/status-change&gt;
+  [...]</verbatim>
+                     <p>Mit einer [[code:for-each]] Loop und einem Named-Template würde das so gehen:</p>
+                     <verbatim>
+&lt;xsl:template name="main"&gt;
+  &lt;xsl:for-each select="$input-file/status-report/status-change"&gt;
+    &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+    &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+    &lt;xsl:value-of select="concat(status,',')"/&gt;
+    &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+  &lt;/xsl:for-each&gt;
+&lt;/xsl:template&gt;</verbatim>
+                     <note>
+                        <consequence>
+                           <p>Named-Templates, die direkt über den Saxon Aufruf [[code:saxon -it:main]] aufgerufen werden, sind dann
+brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
+Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
+vom XSLT Skript selbst erzeugt wird.</p>
+                        </consequence>
+                     </note>
+                     <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der [[:code]]for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
+verlassen, was den Code weiter vereinfacht:</p>
+                     <verbatim>
+&lt;xsl:template match="/status-report/status-change"&gt;
+  &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+  &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+  &lt;xsl:value-of select="concat(status,',')"/&gt;
+  &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+&lt;/xsl:template&gt;</verbatim>
+                     <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
+auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
+aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+                                 id="e78aa311-072e-49b7-8248-47e00991e0c7"
+                                 type="topic">XSLT Streaming</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
+                     <p>Wir betrachten hier das [[code:xsl:iterator]][[fn:https://www.saxonica.com/html/documentation/xsl-elements/iterate.html*Der Iterator ist ein Konzept um XSLT Streaming zu realisieren]]
+ Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
+                     <ul>
+                        <li>
+                           <p>Wir benutzen [[code:xsl:source-document]] in Verbindung mit dem [[code:streamable='yes']] Attribut,
+um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p>
+                        </li>
+                        <li>
+                           <p>Wenn wir die Quelle über einen Parameter einlesen, dann müssen wir auch die Transformation über ein Named-Template
+starten.</p>
+                        </li>
+                     </ul>
+                     <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von [[code:value-of select]] statements in den Iterator:</p>
+                     <verbatim>
+&lt;xsl:template name="main"&gt;
+  &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+    &lt;xsl:iterate select="status-report/status-change"&gt;
+      &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
+      &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
+      &lt;xsl:value-of select="concat(status,',')"/&gt;
+      &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+    &lt;/xsl:iterate&gt;
+  &lt;/xsl:source-document&gt; 
+&lt;/xsl:template&gt;</verbatim>
+                     <p>und werden dafür prompt mit einer Fehlermeldung belohnt:</p>
+                     <verbatim>Static error on line 16 column 64 of report.xsl:
+  XTSE3430: The body of the xsl:stream instruction is not streamable
+  *  There is more than one consuming operand: {xsl:value-of} on line 18, and
+  {xsl:value-of} on line 19</verbatim>
+                     <p>In diesem Iterator ist also nur eine "konsumierende" [[code:value-of]] Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
+                     <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="xs"
+  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
+  version="3.0"&gt;
+   
+  &lt;xsl:param name="input-file" required="yes"/&gt;
+  
+  &lt;xsl:output method="text"/&gt;
+ 
+  &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
+
+  &lt;xsl:template name="main"&gt;
+    &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+      &lt;xsl:iterate select="status-report/status-change/*"&gt;
+        &lt;xsl:choose&gt;
+          &lt;xsl:when test="name()='time_stamp'"&gt;
+            &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+          &lt;/xsl:when&gt;
+          &lt;xsl:otherwise&gt;
+            &lt;xsl:value-of select="concat(.,',')"/&gt;
+          &lt;/xsl:otherwise&gt;
+        &lt;/xsl:choose&gt;
+      &lt;/xsl:iterate&gt;
+    &lt;/xsl:source-document&gt;
+  &lt;/xsl:template&gt;  
+&lt;/xsl:stylesheet&gt;
+</verbatim>
+                     <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten ([[code:&amp;#10;]]) wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
+                     <note>
+                        <consequence>
+                           <p>Logisch wird beim XSLT Streaming auf einer niedrigeren Abstraktionsebene programmiert, um den Anforderungen des Prozessors gerecht zu werden.</p>
+                        </consequence>
+                     </note>
+                     <p>Für eine <b>1.6 GB Datei</b> benötigt das obige Skript auf meinem Rechner gute<b> drei Minuten</b>. Der traditionelle temlate-match Ansatz bricht mit einer Out-of-Memory Exception ab, selbst wenn man den Java Heap Size auf 4GB einstellt.</p>
+                  </block>
+               </content>
+            </chapter>
          </chapter>
          <chapter hyphenation="yes" chapterpage="no" id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
                   ismodule="no">
@@ -1218,7 +1346,7 @@ würde.</p>
                   <p>Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
 der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="e8ec86c2-690d-4e7b-a0e5-be6d7297a7fad6e8">
+                           id="aa4099db-74ce-4f2c-8881-f62a279d29aed6e8">
                      <content>
                         <title>
                            <title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title>
@@ -1226,7 +1354,7 @@ der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als ders
                         <p>Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
 System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in die Ausgabe (Eine Dokumentation für eine Maschine)
 generiert werden.</p>
-                        <p>Die Id an einem Element &lt;part id=“1234”&gt; würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+                        <p>Die Id an einem Element [[code:&lt;part id=“1234”&gt;]] würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
 für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
 mit den folgenden Templates (vereinfacht) passieren:</p>
                         <verbatim>&lt;xsl:key name="parts" match="part" use="@id"/&gt;
@@ -1249,7 +1377,7 @@ mit den folgenden Templates (vereinfacht) passieren:</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="93c4b796-1c96-41a7-b9b4-1e80170d1cd6d6e17">
+                           id="144a1f98-64d3-4cbd-b7b9-e565a5dc0a2dd6e17">
                      <content>
                         <title>
                            <title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title>
@@ -1290,10 +1418,10 @@ könnte folgendermassen aussehen:</p>
         DATA4
         DATA5
       [...]</verbatim>
-                        <p>Jedes einzelne CONTENT Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+                        <p>Jedes einzelne [[code:CONTENT]] Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
 Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
-Descendant-Achse bis zum Element WRAPPER3, ausserdem noch die Elemente SEQUENZ1 und SEQUENZ2,
-sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
+Descendant-Achse bis zum Element [[code:WRAPPER3]], ausserdem noch die Elemente [[code:SEQUENZ1]] und [[code:SEQUENZ2]],
+sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]] .Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
                         <verbatim>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
     
   &lt;xsl:output method="xml" indent="yes"/&gt;
@@ -1332,10 +1460,9 @@ sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu ac
   &lt;/xsl:template&gt;
     
 &lt;/xsl:stylesheet&gt;</verbatim>
-                        <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes CONTENT Element selektiert und
+                        <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes [[code:CONTENT]] Element selektiert und
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
-indem der gesamte XML Baum über die Standard-Kopierregel in das Element &lt;nutzdaten&gt;
-gesetzt wird. Dabei wird aber nur derjenige CONTENT Abschnitt evaluiert, der
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:&lt;nutzdaten&gt;]] gesetzt wird. Dabei wird aber nur derjenige [[code:CONTENT]] Abschnitt evaluiert, der
 zu der als Parameter übergebenen generierten Id passt.</p>
                      </content>
                   </chapter>
@@ -1370,7 +1497,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                   <p>Mit der Option <b>-qs </b>kann hier der Querystring angebenen werden. </p>
                   <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR[[https://en.wikipedia.org/wiki/FLWOR*FLOWR steht für FOR LET WHERE ORDERBY RETURN]] Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions[[fn:http://cs.au.dk/~amoeller/XML/querying/flwrexp.html*XQuery Extensions für mächtigere Funktionen]] können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="7567b805-95ea-42ba-babd-bf8d4b02a724d6e19">
+                           id="d54b3687-4800-456d-8153-f0b83aa927d5d6e19">
                      <content>
                         <title>
                            <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
@@ -1380,7 +1507,7 @@ auf einem geladenen XML Dokument auszuführen. Dazu kann man
 seine Query in das betreffende Eingabefenster schreiben.</p>
                         <figure pdfwidth="page">
                            <subtitle>oXygen XQuery Builder</subtitle>
-                           <desc id="c8cfeda4-d917-45c0-b0fd-662dc79ec262d6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
+                           <desc id="71e42e88-d6ac-4fca-9bae-a4d2919b818cd6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
                            <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
                         </figure>
                         <p>Mit folgendem Ergebnis:</p>
@@ -1391,12 +1518,12 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="8b8c1a50-7d86-4236-85b7-b65064122b92d6e34">
+                           id="95511190-85d0-4745-ac2f-c3ab6125cd3ed6e34">
                      <content>
                         <title>
                            <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
                         </title>
-                        <p>FLOWR[[xe1:FLOWR Expression]] steht für for, let, where, order by, return. Das sind die Query-Anweisungen, die in 
+                        <p>FLOWR[[xe1:FLOWR Expression]] steht für [[code:for, let, where, order by, return]]. Das sind die Query-Anweisungen, die in 
 dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
                         <verbatim>let $bibliothek := .
 for $x in $bibliothek//buecher,
@@ -1416,7 +1543,7 @@ Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="245c0ba2-051a-4cb6-9ad3-7f9d02e12be5d6e46">
+                           id="d80239d8-d644-4cb8-9fb2-daef10ea125cd6e46">
                      <content>
                         <title>
                            <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
@@ -1438,9 +1565,8 @@ vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B.
   &lt;/buch&gt;
 }
 &lt;/buecher&gt;</verbatim>
-                        <p>Speichert man dieses Schnippsel in einer Datei buecher.xquery ab,
-so kann man mit der folgenden Kommandozeile auf einer buecher.xml
-Datei als Eingabe suchen:</p>
+                        <p>Speichert man dieses Schnippsel in einer Datei [[code:buecher.xquery]] ab,
+so kann man mit der folgenden Kommandozeile auf einer [[code:buecher.xml]] Datei als Eingabe suchen:</p>
                         <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
                                                        -q:buecher.xquery 
                                                        -o:ergebnis.xml 
@@ -1448,7 +1574,7 @@ Datei als Eingabe suchen:</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="e6e07196-ec25-442d-8463-6cd6baf84bfad6e57">
+                           id="2a4b6466-60af-4bca-b0a9-df9ec213d4fed6e57">
                      <content>
                         <title>
                            <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
@@ -1477,7 +1603,7 @@ Tree built in 3.482278ms
 Tree size: 46 nodes, 58 characters, 6 attributes
 Execution time: 27.137589ms
 Memory used: 67031664</verbatim>
-                        <p>Mit der Option -projection:on verändert sich die Ausführungszeit signifikant:</p>
+                        <p>Mit der Option [[code:-projection:on]] verändert sich die Ausführungszeit signifikant:</p>
                         <verbatim>[...]
 
 Document projection for file:/Users/Alex/buecher.xml
@@ -1500,12 +1626,12 @@ Memory used: 64339064</verbatim>
                <block>
                   <p>Marklogic[[xe1:Software;xe2:Marklogic]] bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector[[xe1:Tools;xe2:oXygen-Connector]]. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
                   <figure pdfwidth="page">
-                     <desc id="ec1c62e0-ede4-40eb-a620-7c6abc1383ded6e10">oXygen Data Source Explorer View öffnen</desc>
+                     <desc id="6f6f78fc-76e7-496e-a509-60ae08c0f6afd6e10">oXygen Data Source Explorer View öffnen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
                   </figure>
                   <p>und konfiguriert eine neue Datenquelle:</p>
                   <figure pdfwidth="page">
-                     <desc id="feacbb20-0b3d-4ca9-b36e-533b5a38cde1d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <desc id="56e5bbeb-575d-4df1-b392-a30865bf534fd6e16">Neue Datenquelle in oXygen konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
                   </figure>
                   <p>Dazu muss man den Marklogic Treiber installieren[[fn:https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html*MarkLogic Datenquelle in oXygen konfigurieren]] und diesen im folgenden Screen verfügbar machen.</p>
@@ -1514,26 +1640,26 @@ Memory used: 64339064</verbatim>
                      <consequence/>
                   </caution>
                   <figure pdfwidth="page">
-                     <desc id="95e426c3-54fd-4849-bd65-7226b77211e2d6e27">Marklogic Treiber auswählen</desc>
+                     <desc id="36195db5-65ff-4426-b863-06a72fa91351d6e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
                   <p>Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b> [[xe1:Tools;xe2:Marklogic WebDAV Server]] hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
                   <figure pdfwidth="page">
-                     <desc id="38718434-5e52-4aa7-9b33-3702e1f0c4c5d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="9a38a110-c4b8-4efa-95e5-bcba44278512d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
                   <figure pdfwidth="page">
-                     <desc id="fbe1e282-9e00-4983-b301-8c7e27fd6e6dd6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="993f9c35-b441-42cf-87fb-63980a4554b7d6e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
                   <p>Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
                   <figure pdfwidth="page">
-                     <desc id="50db5608-88c2-42e0-b6ed-fb44ed7f8841d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="f355add5-223f-475a-a976-cd7d1d45602cd6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
                   <p>Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
                   <figure pdfwidth="page">
-                     <desc id="f33247ba-6e19-43b4-9972-116d461d8bfdd6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="54149835-7759-4782-aa85-5d9f8a767aa2d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
                </block>
@@ -1548,23 +1674,10 @@ Memory used: 64339064</verbatim>
                <block>
                   <p>Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
-Hat man parallel auch noch oXygen offen, kann man die Testergb</p>
-                  <p>nisse
-aus der Konsole direkt in ein XQuery Server Skript packen.dwawqdqd</p>
-                  <ul>
-                     <li>
-                        <p>ewwqeqe</p>
-                     </li>
-                     <li>
-                        <p>qweqwe</p>
-                     </li>
-                     <li>
-                        <p>qweqeq</p>
-                     </li>
-                  </ul>
+Hat man parallel auch noch oXygen offen, kann man die Testergbnisse aus der Konsole direkt in ein XQuery Server Skript packen.</p>
                   <p>wqdqwd</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="29e8de4f-47fc-4a6c-a8d6-7bdc5aae67d1d6e20">
+                           id="8535b0cd-9b72-43e4-8899-ef673e35f57bd6e8">
                      <content>
                         <title>
                            <title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title>
@@ -1579,7 +1692,7 @@ Komma - ein Tupel wird erzeugt - dann klappt es.</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="7655b8d8-698e-45d9-9c33-9dfaba55a38ed6e33">
+                           id="ca6dd787-a16a-4366-b361-3d1272261e82d6e21">
                      <content>
                         <title>
                            <title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title>
@@ -1641,7 +1754,7 @@ return
                   </title>
                   <block>
                      <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                              id="f15026e0-db8c-48a0-a852-d5eff6d2d0ddd6e4">
+                              id="1c4b477f-6013-406a-8319-1a6ff8194606d6e4">
                         <content>
                            <title>
                               <title id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5">Funktionen</title>
@@ -1658,7 +1771,7 @@ return
                            <p>Damit die Funktion eingebunden werden kann, muss ein passender Namespace[[xe1:XML Konstrukte;xe2:Namespaces]] deklariert werden:</p>
                            <verbatim>declare namespace local = 'local:';</verbatim>
                            <p>Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
-um ganz elementare Konstrukte, wie while...do[[xe1:Programmierkonstrukte;xe2:Schleifen - while..do]] Schleifen, zu realisieren.</p>
+um ganz elementare Konstrukte, wie [[code:while...do]][[xe1:Programmierkonstrukte;xe2:Schleifen - while..do]] Schleifen, zu realisieren.</p>
                            <p>Dazu nutzt man, wie in der funktionalen Programmierung üblich, die Rekursion:</p>
                            <verbatim>declare function local:ist-letzter-wert-in-kette($glied) {
   let $wert := local:komplizierte-berechnung($glied),
@@ -1676,7 +1789,7 @@ Komma getrennt.</p>
                         </content>
                      </chapter>
                      <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                              id="24aa4a1f-5622-4721-a7f5-e83bbe8804acd6e25">
+                              id="68184ae0-c86e-40b4-b562-b920095a0693d6e25">
                         <content>
                            <title>
                               <title id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26">Module</title>
@@ -1702,28 +1815,29 @@ Variablenauswertung: $common:collection-books</verbatim>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
                   </title>
                   <block>
-                     <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter <b>if</b> und <b>then</b> dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
-                     <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery <b>if..then</b> als Ausdrücke ausgewertet werden.</p>
+                     <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter [[code:if]] und [[code:then]] dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
+                     <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery [[code:if..then]] als Ausdrücke ausgewertet werden.</p>
                      <p>Das ist einerseits sehr praktisch, weil es richtig angewandt den Code verkürzt und damit das Wesentliche herausstellt, kann aber auch weiter zur allg. Verwirrung bzgl. des kryptischen XQuery Codes beitragen.</p>
                   </block>
                </content>
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
-                     ismodule="no">
-               <content>
-                  <title>
-                     <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
-                  </title>
-                  <block>
-                     <p>Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
+                  ismodule="no">
+            <content>
+               <title>
+                  <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
+               </title>
+               <block>
+                  <p>Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
 XML Datenbank rasend schnell geht, weil jeder Knoten des Baums initial in einen Index
 aufgenommen wird. So gibt es doch Anwendungsfälle bei denen man lieber eine relationale
 Sicht auf die Daten hätte.</p>
-                     <p>In MarkLogic heisst die Lösung dazu SQL Views.</p>
-                     <p>Bspw. benötigt man eine relationale Sicht auf die Daten,
+                  <p>In MarkLogic heisst die Lösung dazu SQL Views.</p>
+                  <p>Bspw. benötigt man eine relationale Sicht auf die Daten,
 wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
-                     <p>Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</p>
-                     <verbatim>&lt;k:kunde&gt;
+                  <p>Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</p>
+                  <verbatim>&lt;k:kunde&gt;
   &lt;k:id&gt;1&lt;/k:id&gt;
   &lt;k:name&gt;Alex&lt;/k:name&gt;
   &lt;k:eMail&gt;tekturcms@gmail.com&lt;/k:eMail&gt;
@@ -1754,22 +1868,22 @@ wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
   &lt;b:preis&gt;68.90&lt;/b:preis&gt;
   &lt;b:kunde-id&gt;1&lt;/b:kunde-id&gt;
 &lt;/b:bestellung&gt;</verbatim>
-                     <p>Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
+                  <p>Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
 abgegeben haben - das sind Alex und Horst - so würde man bei
 einem relationalen Ansatz einen JOIN verwenden, so wie:</p>
-                     <verbatim>SELECT name, datum, preis
+                  <verbatim>SELECT name, datum, preis
 FROM kunden k
 INNER JOIN bestellungen b
 ON k.id = b.kunde_id</verbatim>
-                     <p>In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</p>
-                     <verbatim>name, datum, preis
+                  <p>In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</p>
+                  <verbatim>name, datum, preis
 Alex, 03.01.2019, 68.90
 Horst, 02.01.2019, 99.90</verbatim>
-                     <p>Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
+                  <p>Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
 der da heisst: Template Driven Extraction[[fn:https://docs.marklogic.com/guide/app-dev/TDE*Template Driven Extraction wird verwendet um in MarkLogic eine relationale Sicht auf die baumstrukturierten Daten zu setzen]]</p>
-                     <p>Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
+                  <p>Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
 würden wir zwei Templates brauchen, die so aussehen:</p>
-                     <verbatim>xquery version "1.0-ml";
+                  <verbatim>xquery version "1.0-ml";
 
 import module namespace tde = "http://marklogic.com/xdmp/tde" 
                             at "/MarkLogic/tde.xqy";
@@ -1819,8 +1933,8 @@ return(
   tde:template-insert(concat('/templates/', $sql-view-name), 
                       $sql-view, xdmp:default-permissions())
 )</verbatim>
-                     <p>und analog für die Bestellungen:</p>
-                     <verbatim>[...]
+                  <p>und analog für die Bestellungen:</p>
+                  <verbatim>[...]
    &lt;rows&gt;
       &lt;row&gt;
          &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
@@ -1849,11 +1963,11 @@ return(
          &lt;/columns&gt;
       &lt;/row&gt;
 [...]</verbatim>
-                     <p>In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
-                     <verbatim>xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
+                  <p>In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
+                  <verbatim>xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
           INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</verbatim>
-                     <p>Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</p>
-                     <verbatim>xquery version "1.0-ml";
+                  <p>Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</p>
+                  <verbatim>xquery version "1.0-ml";
 
 declare namespace k = 'http://www.tekturcms.de/kunden';
 declare namespace b = 'http://www.tekturcms.de/bestellungen';
@@ -2003,8 +2117,8 @@ local:insertBestellungenSchema(),
 
 xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
           bestellungen_view b ON k.id = b.kunde_id")</verbatim>
-                     <p>... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</p>
-                     <verbatim>[
+                  <p>... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</p>
+                  <verbatim>[
   [
     "k.name", 
     "b.datum", 
@@ -2021,9 +2135,8 @@ xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN
     "99.90"
   ]
 ]</verbatim>
-                  </block>
-               </content>
-            </chapter>
+               </block>
+            </content>
          </chapter>
       </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
