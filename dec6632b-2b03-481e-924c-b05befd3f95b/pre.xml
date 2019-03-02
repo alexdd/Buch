@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Thu Feb 28 2019 19:46:15 </date-of-last-change>
+      <date-of-last-change>Sat Mar 02 2019 12:50:15 </date-of-last-change>
       <language>de-DE</language>
       <status>112</status>
       <description>Short Description</description>
@@ -32,8 +32,7 @@ www.github.com/alexdd/Buch</cover-text>
       </design>
    </meta>
    <supplemental-directives>
-      <chapter hyphenation="yes" chapterpage="no" id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e93" ismodule="no">
       
          <title>
             <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro</title>
@@ -78,8 +77,7 @@ www.github.com/alexdd/Buch</cover-text>
       </chapter>
    </supplemental-directives>
    <toc/>
-   <chapter hyphenation="yes" chapterpage="no" id="792c9845-7c63-4a18-8aee-1878763200b5"
-            ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e143" ismodule="no">
       
          <title>
             <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete</title>
@@ -134,8 +132,7 @@ www.github.com/alexdd/Buch</cover-text>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="a264856d-c5d5-4d7b-993f-421bf222db76"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e242" ismodule="no">
          
             <title>
                <title id="1ea26780-291c-470f-9559-616cfb744574">Führende Technologie XSLT</title>
@@ -237,8 +234,7 @@ mit <b>LISP</b>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e343" ismodule="no">
          
             <title>
                <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Einige aktuelle und vergangene Szenarien</title>
@@ -260,20 +256,20 @@ mit <b>LISP</b>
             <p>Betrachten wir das folgende einfache XML Beispiel:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;document&gt;
-&lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 1&lt;/title&gt;
-    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
-    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
-  &lt;/chapter&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 2&lt;/title&gt;
-    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
-    &lt;content&gt;Im Prinzip ist es ganz einfach.&lt;/content&gt;
-  &lt;/chapter&gt;
-&lt;/document&gt;</verbatim>
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green">&lt;document&gt;</color>
+<color name="green">&lt;title&gt;</color>Das ultimative Zwei-Kapitel Dokument<color name="green">&lt;/title&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Kapitel 1<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;intro&gt;</color>In Kapitel 1 wird kurz gesagt was Sache ist.<color name="green">&lt;/intro&gt;</color>
+    <color name="green">&lt;content&gt;</color>Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Kapitel 2<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;intro&gt;</color>Hier wird erklärt, wie der Hase läuft.<color name="green">&lt;/intro&gt;</color>
+    <color name="green">&lt;content&gt;</color>Im Prinzip ist es ganz einfach.<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+<color name="green">&lt;/document&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Ohne XSLT Stylesheet Zuweisung wird der Browser eine Datei mit diesem Inhalt als eingerücktes XML anzeigen - oder die Tags einfach ignorieren und den Textinhalt in einer Zeile darstellen. Fügt man eine Processing Instruction<footnote>
@@ -286,60 +282,62 @@ mit <b>LISP</b>
                </xe> am Anfang ein, wird ein XSLT Stylesheet vom Browser herangezogen und vor der Darstellung im Browser wird die so deklarierte XML Transformation ausgeführt:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="formatiermich.xsl" ?&gt;
-&lt;document&gt;
-  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green">&lt;?xml-stylesheet </color><color name="green">type</color>="text/xsl" <color name="green">href</color>="formatiermich.xsl" <color name="green"></color>=<color name="green">&gt;</color>
+<color name="green">&lt;document&gt;</color>
+  <color name="green">&lt;title&gt;</color>Das ultimative Zwei-Kapitel Dokument<color name="green">&lt;/title&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
 [...]</verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in  gesetzt sind - angezeigt:</p>
+            <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in <code>
+                  <nb>formatiermich.xsl</nb>
+               </code> gesetzt sind - angezeigt:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="iso-8859-1"?<color name="green">&gt;</color>
+<color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">version</color>="1.0" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform"<color name="green">&gt;</color>
 
-  &lt;xsl:template match="/"&gt;
-    &lt;html&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="/"<color name="green">&gt;</color>
+    <color name="green">&lt;html&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/html&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="document"&gt;
-  &lt;body&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/body&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="document"<color name="green">&gt;</color>
+  <color name="green">&lt;body&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/body&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="document/title"&gt;     
-    &lt;h1&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/h1&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="document/title"<color name="green">&gt;</color>     
+    <color name="green">&lt;h1&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/h1&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="chapter"&gt;
-    &lt;div class="chapter"&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/div&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="chapter"<color name="green">&gt;</color>
+    <color name="green">&lt;div </color><color name="green">class</color>="chapter"<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/div&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="chapter/title"&gt;
-    &lt;h2&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/h2&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="chapter/title"<color name="green">&gt;</color>
+    <color name="green">&lt;h2&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/h2&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="chapter/intro"&gt;
-    &lt;div class="intro"&gt;
-      &lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;      
-    &lt;/div&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="chapter/intro"<color name="green">&gt;</color>
+    <color name="green">&lt;div </color><color name="green">class</color>="intro"<color name="green">&gt;</color>
+      <color name="green">&lt;i&gt;</color><color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color><color name="green">&lt;/i&gt;</color>      
+    <color name="green">&lt;/div&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="chapter/content"&gt;
-    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;    
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="chapter/content"<color name="green">&gt;</color>
+    <color name="green">&lt;p&gt;</color><color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color><color name="green">&lt;/p&gt;</color>    
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color>
 </verbatim>
          </page-wide-element>
                <column-wide-element>
@@ -364,75 +362,72 @@ mit <b>LISP</b>
             <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
 &lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wap.org/DTD/wml_1.1.xml"&gt;
-&lt;wml&gt;
-  &lt;head&gt;
-    &lt;meta name="title" content="Das ultimative Zwei-Kapitel Dokument"/&gt;   
-  &lt;/head&gt; 
-  &lt;card id="chapter1" title="Kapitel 1"&gt;
-    &lt;p&gt;&lt;i&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/i&gt;&lt;/p&gt;        
-    &lt;p&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/p&gt;  
-  &lt;/card&gt;
-  &lt;card id="chapter2" title="Kapitel 2"&gt;
-    &lt;p&gt;&lt;i&gt;Hier wird erklärt, wie der Hase läuft.&lt;/i&gt;&lt;/p&gt;
-    &lt;p&gt;Im Prinzip ist es ganz einfach.&lt;/p&gt;
-  &lt;/card&gt;
-&lt;/wml&gt;</verbatim>
+<color name="green">&lt;wml&gt;</color>
+  <color name="green">&lt;head&gt;</color>
+    <color name="green">&lt;meta </color><color name="green">name</color>="title" <color name="green">content</color>="Das <color name="green"></color>= <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>   
+  <color name="green">&lt;/head&gt;</color> 
+  <color name="green">&lt;card </color><color name="green">id</color>="chapter1" <color name="green">title</color>="Kapitel <color name="green"></color>=<color name="green">&gt;</color>
+    <color name="green">&lt;p&gt;</color><color name="green">&lt;i&gt;</color>In Kapitel 1 wird kurz gesagt was Sache ist.<color name="green">&lt;/i&gt;</color><color name="green">&lt;/p&gt;</color>        
+    <color name="green">&lt;p&gt;</color>Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.<color name="green">&lt;/p&gt;</color>  
+  <color name="green">&lt;/card&gt;</color>
+  <color name="green">&lt;card </color><color name="green">id</color>="chapter2" <color name="green">title</color>="Kapitel <color name="green"></color>=<color name="green">&gt;</color>
+    <color name="green">&lt;p&gt;</color><color name="green">&lt;i&gt;</color>Hier wird erklärt, wie der Hase läuft.<color name="green">&lt;/i&gt;</color><color name="green">&lt;/p&gt;</color>
+    <color name="green">&lt;p&gt;</color>Im Prinzip ist es ganz einfach.<color name="green">&lt;/p&gt;</color>
+  <color name="green">&lt;/card&gt;</color>
+<color name="green">&lt;/wml&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Eine XSLT Transformation, die die XML Daten von oben in diese WML Darstellung überführt, könnte z.B. so implementiert werden:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">version</color>="1.0"<color name="green">&gt;</color>
 
-  &lt;xsl:output
-    doctype-public="-//WAPFORUM//DTD WML 1.2//EN" 
-    doctype-system="http://www.wapforum.org/DTD/wml12.dtd"
-    indent="yes"/&gt;
+  <color name="green"><bg>&lt;xsl:output</bg> </color><color name="green">doctype-public</color>="-//WAPFORUM//DTD <color name="green"></color>= <color name="green"></color>= <color name="green">doctype-system</color>="http://www.wapforum.org/DTD/wml12.dtd" <color name="green">indent</color>="yes"/<color name="green">&gt;</color>
     
-  &lt;xsl:template match="document"&gt;
-    &lt;wml&gt;
-      &lt;xsl:apply-templates/&gt;
-    &lt;/wml&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="document"<color name="green">&gt;</color>
+    <color name="green">&lt;wml&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+    <color name="green">&lt;/wml&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-  &lt;xsl:template match="document/title"&gt;
-    &lt;head&gt;
-      &lt;meta name="title"&gt;
-        &lt;xsl:attribute name="content"&gt;
-          &lt;xsl:value-of select="."/&gt;               
-        &lt;/xsl:attribute&gt;
-      &lt;/meta&gt;      
-    &lt;/head&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="document/title"<color name="green">&gt;</color>
+    <color name="green">&lt;head&gt;</color>
+      <color name="green">&lt;meta </color><color name="green">name</color>="title"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:attribute</bg> </color><color name="green">name</color>="content"<color name="green">&gt;</color>
+          <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="."/<color name="green">&gt;</color>               
+        <color name="green"><bg>&lt;/xsl:attribute&gt;</bg></color>
+      <color name="green">&lt;/meta&gt;</color>      
+    <color name="green">&lt;/head&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-  &lt;xsl:template match="chapter"&gt;
-    &lt;card id="{concat('chapter',count(preceding-sibling::chapter)+1)}"&gt;
-      &lt;xsl:attribute name="title"&gt;
-        &lt;xsl:value-of select="title"/&gt;
-      &lt;/xsl:attribute&gt;
-      &lt;xsl:apply-templates select="*[not(self::title)]"/&gt;
-    &lt;/card&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="chapter"<color name="green">&gt;</color>
+    <color name="green">&lt;card </color><color name="green">id</color>="{concat('chapter',count(preceding-sibling::chapter)+1)}"<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:attribute</bg> </color><color name="green">name</color>="title"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="title"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;/xsl:attribute&gt;</bg></color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="*[not(self::title)]"/<color name="green">&gt;</color>
+    <color name="green">&lt;/card&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-  &lt;xsl:template match="node()|@*"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="node()|@*"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="node()|@*"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:copy&gt;</bg></color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-  &lt;xsl:template match="processing-instruction()"/&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="processing-instruction()"/<color name="green">&gt;</color>
   
-  &lt;xsl:template match="intro"&gt;
-    &lt;p&gt;&lt;i&gt;&lt;xsl:apply-templates/&gt;&lt;/i&gt;&lt;/p&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="intro"<color name="green">&gt;</color>
+    <color name="green">&lt;p&gt;</color><color name="green">&lt;i&gt;</color><color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color><color name="green">&lt;/i&gt;</color><color name="green">&lt;/p&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-  &lt;xsl:template match="content"&gt;
-    &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</verbatim>
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="content"<color name="green">&gt;</color>
+    <color name="green">&lt;p&gt;</color><color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color><color name="green">&lt;/p&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color></verbatim>
          </page-wide-element>
                <block-title>
                   <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
@@ -484,63 +479,44 @@ mit <b>LISP</b>
                </xe> können leicht mit XSLT menschenlesbar formatiert werden. &#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;?&lt;?xml-stylesheet type="text/xsl" href="de.xsl"?&gt;
-&lt;jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-  xmlns:jcr="http://www.jcp.org/jcr/1.0" 
-  xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
-  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-  jcr:language="de"
-  jcr:mixinTypes="[mix:language]"
-  jcr:primaryType="sling:Folder"&gt;
-&lt;b_manual 
-  jcr:primaryType="sling:MessageEntry"
-  sling:message="Bedienungsanleitung"/&gt;
-  &lt;b_warning
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Warnung"/&gt;
-  &lt;b_danger
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Vorsicht"/&gt;
-  &lt;b_note
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Notiz"/&gt;
-  &lt;b_notice
-    jcr:primaryType="sling:MessageEntry"
-    sling:message="Hinweis"/&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>?<color name="green">&lt;?xml-stylesheet </color><color name="green">type</color>="text/xsl" <color name="green">href</color>="de.xsl"?<color name="green">&gt;</color>
+<color name="green">&lt;jcr:root </color><color name="green">xmlns:sling</color>="http://sling.apache.org/jcr/sling/1.0" <color name="green">xmlns:jcr</color>="http://www.jcp.org/jcr/1.0" <color name="green">xmlns:mix</color>="http://www.jcp.org/jcr/mix/1.0" <color name="green">xmlns:nt</color>="http://www.jcp.org/jcr/nt/1.0" <color name="green">jcr:language</color>="de" <color name="green">jcr:mixinTypes</color>="[mix:language]" <color name="green">jcr:primaryType</color>="sling:Folder"<color name="green">&gt;</color>
+<color name="green">&lt;b_manual </color><color name="green">jcr:primaryType</color>="sling:MessageEntry" <color name="green">sling:message</color>="Bedienungsanleitung"/<color name="green">&gt;</color>
+  <color name="green">&lt;b_warning </color><color name="green">jcr:primaryType</color>="sling:MessageEntry" <color name="green">sling:message</color>="Warnung"/<color name="green">&gt;</color>
+  <color name="green">&lt;b_danger </color><color name="green">jcr:primaryType</color>="sling:MessageEntry" <color name="green">sling:message</color>="Vorsicht"/<color name="green">&gt;</color>
+  <color name="green">&lt;b_note </color><color name="green">jcr:primaryType</color>="sling:MessageEntry" <color name="green">sling:message</color>="Notiz"/<color name="green">&gt;</color>
+  <color name="green">&lt;b_notice </color><color name="green">jcr:primaryType</color>="sling:MessageEntry" <color name="green">sling:message</color>="Hinweis"/<color name="green">&gt;</color>
   [...]</verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;
-&lt;xsl:stylesheet version="1.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:jcr="http://www.jcp.org/jcr/1.0"
-  xmlns:sling="http://sling.apache.org/jcr/sling/1.0"&gt;
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="iso-8859-1"?<color name="green">&gt;</color>
+<color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">version</color>="1.0" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">xmlns:jcr</color>="http://www.jcp.org/jcr/1.0" <color name="green">xmlns:sling</color>="http://sling.apache.org/jcr/sling/1.0"<color name="green">&gt;</color>
   
-  &lt;xsl:template match="jcr:root"&gt;
-    &lt;html&gt;
-      &lt;table border="1" cellpadding="5" cellspacing="5"&gt;
-        &lt;xsl:apply-templates/&gt;
-      &lt;/table&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="jcr:root"<color name="green">&gt;</color>
+    <color name="green">&lt;html&gt;</color>
+      <color name="green">&lt;table </color><color name="green">border</color>="1" <color name="green">cellpadding</color>="5" <color name="green">cellspacing</color>="5"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+      <color name="green">&lt;/table&gt;</color>
+    <color name="green">&lt;/html&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-  &lt;xsl:template match="*"&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;xsl:value-of select="concat(count(preceding::*[@sling:message]) + 1,'.')"/&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;xsl:value-of select="name()"/&gt;
-      &lt;/td&gt;
-      &lt;td contenteditable="true"&gt;
-        &lt;xsl:value-of select="@sling:message"/&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</verbatim>
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="*"<color name="green">&gt;</color>
+    <color name="green">&lt;tr&gt;</color>
+      <color name="green">&lt;td&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(count(preceding::*[@sling:message]) <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+      <color name="green">&lt;/td&gt;</color>
+      <color name="green">&lt;td&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="name()"/<color name="green">&gt;</color>
+      <color name="green">&lt;/td&gt;</color>
+      <color name="green">&lt;td </color><color name="green">contenteditable</color>="true"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="@sling:message"/<color name="green">&gt;</color>
+      <color name="green">&lt;/td&gt;</color>
+    <color name="green">&lt;/tr&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
@@ -561,37 +537,35 @@ mit <b>LISP</b>
             <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-stylesheet type="text/xsl" href="chart.xsl" ?&gt;
-&lt;document&gt;
-  &lt;title&gt;Das ultimative Zwei-Kapitel Dokument&lt;/title&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 1&lt;/title&gt;
-    &lt;intro&gt;In Kapitel 1 wird kurz gesagt was Sache ist.&lt;/intro&gt;
-    &lt;content&gt;Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.&lt;/content&gt;
-  &lt;/chapter&gt;
-  &lt;chapter&gt;
-    &lt;title&gt;Kapitel 2&lt;/title&gt;
-    &lt;intro&gt;Hier wird erklärt, wie der Hase läuft.&lt;/intro&gt;
-    &lt;content&gt;Im Prinzip ist es ganz einfach. Betrachten wir doch drei gelbe Blöcke:
-    &lt;/content&gt;
-    &lt;block/&gt;
-    &lt;block/&gt;
-    &lt;block/&gt;
-  &lt;/chapter&gt;
-&lt;/document&gt;</verbatim>
+            <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green">&lt;?xml-stylesheet </color><color name="green">type</color>="text/xsl" <color name="green">href</color>="chart.xsl" <color name="green"></color>=<color name="green">&gt;</color>
+<color name="green">&lt;document&gt;</color>
+  <color name="green">&lt;title&gt;</color>Das ultimative Zwei-Kapitel Dokument<color name="green">&lt;/title&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Kapitel 1<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;intro&gt;</color>In Kapitel 1 wird kurz gesagt was Sache ist.<color name="green">&lt;/intro&gt;</color>
+    <color name="green">&lt;content&gt;</color>Um es kurz zu machen, wie der Hase läuft steht in Kapitel 2.<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Kapitel 2<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;intro&gt;</color>Hier wird erklärt, wie der Hase läuft.<color name="green">&lt;/intro&gt;</color>
+    <color name="green">&lt;content&gt;</color>Im Prinzip ist es ganz einfach. Betrachten wir doch drei gelbe Blöcke:
+    <color name="green">&lt;/content&gt;</color>
+    <color name="green">&lt;block/&gt;</color>
+    <color name="green">&lt;block/&gt;</color>
+    <color name="green">&lt;block/&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+<color name="green">&lt;/document&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="block"&gt;
-   &lt;svg style="background-color:yellow" width="30" height="30" 
-     xmlns:xlink="http://www.w3.org/1999/xlink" 
-     xmlns="http://www.w3.org/2000/svg"/&gt;
-  &lt;br/&gt;
-  &lt;br/&gt;
-&lt;/xsl:template&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="block"<color name="green">&gt;</color>
+   <color name="green">&lt;svg </color><color name="green">style</color>="background-color:yellow" <color name="green">width</color>="30" <color name="green">height</color>="30" <color name="green">xmlns:xlink</color>="http://www.w3.org/1999/xlink" <color name="green">xmlns</color>="http://www.w3.org/2000/svg"/<color name="green">&gt;</color>
+  <color name="green">&lt;br/&gt;</color>
+  <color name="green">&lt;br/&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
@@ -620,8 +594,7 @@ mit <b>LISP</b>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="151a9719-a32a-4fca-a55c-769b47a73b34"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e498" ismodule="no">
          
             <title>
                <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
@@ -753,8 +726,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="31a92dc0-959c-49a1-b06e-01e2369e050e"
-            ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e619" ismodule="no">
       
          <title>
             <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
@@ -774,8 +746,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e645" ismodule="no">
          
             <title>
                <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
@@ -857,8 +828,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e766" ismodule="no">
          
             <title>
                <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
@@ -981,7 +951,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                </xe> einzubinden, bspw:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="*" mode="#all"/&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="*" <color name="green">mode</color>="#all"/<color name="green">&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Da sie sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine andere Match-Regel definiert ist.</p>
@@ -1029,28 +999,26 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>In Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
-              priority="30" mode="filter-network"&gt; 
-  &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt; 
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="Seminar[Ende-Datum/xs:date(.) <color name="green"></color>= <color name="green"></color>= <color name="green">priority</color>="30" <color name="green">mode</color>="filter-network"<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="Filtered-Seminar" <color name="green">namespace</color>="{namespace-uri()}"<color name="green">&gt;</color> 
+    <color name="green"><bg>&lt;xsl:attribute</bg> </color><color name="green">name</color>="reason"<color name="green">&gt;</color>termed-seminar<color name="green"><bg>&lt;/xsl:attribute&gt;</bg></color> 
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*" <color name="green">mode</color>="filter-network"/<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;/xsl:element&gt;</bg></color> 
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color> 
 
-&lt;xsl:template match="Seminar[Type eq 'SINGLE' and count(dozenten/dozent) gt 1]"
-              priority="20" mode="filter-network"&gt; 
-  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;dozenten-count&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt; 
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="Seminar[Type <color name="green"></color>= <color name="green"></color>= <color name="green"></color>= <color name="green"></color>= <color name="green"></color>= <color name="green"></color>= <color name="green">priority</color>="20" <color name="green">mode</color>="filter-network"<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="filtered-Seminar" <color name="green">namespace</color>="{namespace-uri()}"<color name="green">&gt;</color> 
+    <color name="green"><bg>&lt;xsl:attribute</bg> </color><color name="green">name</color>="reason"<color name="green">&gt;</color>dozenten-count<color name="green"><bg>&lt;/xsl:attribute&gt;</bg></color> 
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*" <color name="green">mode</color>="filter-network"/<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;/xsl:element&gt;</bg></color> 
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color> 
 
-&lt;xsl:template match="Seminar[not(dozenten/dozent)]" mode="filter-network"&gt; 
-  &lt;xsl:element name="filtered-Seminar" namespace="{namespace-uri()}"&gt; 
-    &lt;xsl:attribute name="reason"&gt;dozenten-missing&lt;/xsl:attribute&gt; 
-    &lt;xsl:apply-templates select="node()|@*" mode="filter-network"/&gt; 
-  &lt;/xsl:element&gt; 
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="Seminar[not(dozenten/dozent)]" <color name="green">mode</color>="filter-network"<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="filtered-Seminar" <color name="green">namespace</color>="{namespace-uri()}"<color name="green">&gt;</color> 
+    <color name="green"><bg>&lt;xsl:attribute</bg> </color><color name="green">name</color>="reason"<color name="green">&gt;</color>dozenten-missing<color name="green"><bg>&lt;/xsl:attribute&gt;</bg></color> 
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*" <color name="green">mode</color>="filter-network"/<color name="green">&gt;</color> 
+  <color name="green"><bg>&lt;/xsl:element&gt;</bg></color> 
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
          </page-wide-element>
                <block-title>
                   <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
@@ -1070,25 +1038,25 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>In Templates formuliert würde diese Anweisung folgendermassen aussehen:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="title" mode="toc"&gt;
-  &lt;div class="toc-entry"&gt;
-    &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
-  &lt;/div&gt;
-&lt;/xsl:template&gt;
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="title" <color name="green">mode</color>="toc"<color name="green">&gt;</color>
+  <color name="green">&lt;div </color><color name="green">class</color>="toc-entry"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="*[not(self::footnote)]"/<color name="green">&gt;</color>
+  <color name="green">&lt;/div&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-&lt;xsl:template match="title"&gt;
-  &lt;h1&gt;
-    &lt;xsl:apply-templates/&gt;
-  &lt;/h1&gt;
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="title"<color name="green">&gt;</color>
+  <color name="green">&lt;h1&gt;</color>
+    <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+  <color name="green">&lt;/h1&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:for-each select="chapter"&gt;
-  &lt;xsl:apply-templates select="title" mode="toc"&gt;
-&lt;/xsl:for-each&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:for-each</bg> </color><color name="green">select</color>="chapter"<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="title" <color name="green">mode</color>="toc"<color name="green">&gt;</color>
+<color name="green"><bg>&lt;/xsl:for-each&gt;</bg></color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
@@ -1099,8 +1067,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="3e443c28-8698-470b-b443-f286ff7ed2d5"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1054" ismodule="no">
          
             <title>
                <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
@@ -1125,13 +1092,7 @@ dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurati
 wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:stylesheet version="2.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-  xmlns:tektur="https://namespace-eigener-xslt-funktionen"
-  xmlns="http://namespace-in-der-xml-eingabe.com/"
-  xpath-default-namespace="https://namespace-der-konfigdatei.com/"
-  exclude-result-prefixes="#all"&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">version</color>="2.0" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">xmlns:xs</color>="http://www.w3.org/2001/XMLSchema" <color name="green">xmlns:tektur</color>="https://namespace-eigener-xslt-funktionen" <color name="green">xmlns</color>="http://namespace-in-der-xml-eingabe.com/" <color name="green">xpath-default-namespace</color>="https://namespace-der-konfigdatei.com/" <color name="green">exclude-result-prefixes</color>="#all"<color name="green">&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <ul>
@@ -1198,7 +1159,7 @@ schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten K
             <p>Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="{local-name()}" <color name="green">namespace</color>="{namespace-uri()}"<color name="green">&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
@@ -1206,24 +1167,24 @@ Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sicherges
 dass der Default Namespace auch tatsächlich in die Ausgabe kommt.</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:element name="meinelement" namespace="mein-namespace"&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="meinelement" <color name="green">namespace</color>="mein-namespace"<color name="green">&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Hier wird ein Element mit eigener Namespace Angabe in die Ausgabe geschrieben. Einfacher geschrieben:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;mein-element xmlns="mein-namespace"&gt;</verbatim>
+            <verbatim><color name="green">&lt;mein-element </color><color name="green">xmlns</color>="mein-namespace"<color name="green">&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Es gibt auch ein Attribut am xsl:copy Element,
 das den Vorgang des Namespace-Kopierens steuern kann:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="p"&gt;
-  &lt;xsl:copy copy-namespaces="no"&gt;
-     &lt;xsl:apply-templates/&gt;
-   &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="p"<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:copy</bg> </color><color name="green">copy-namespaces</color>="no"<color name="green">&gt;</color>
+     <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+   <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
@@ -1234,11 +1195,11 @@ Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich ohne genauen
 weiterzuvererben:</p>
          </column-wide-element>
                <page-wide-element>
-            <verbatim>&lt;xsl:template match="@* | node()"&gt;
-   &lt;xsl:copy inherit-namespaces="no"&gt;
-     &lt;xsl:apply-templates select="@* | node()"/&gt;
-   &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
+            <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="@* <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+   <color name="green"><bg>&lt;xsl:copy</bg> </color><color name="green">inherit-namespaces</color>="no"<color name="green">&gt;</color>
+     <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="@* <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+   <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
          </page-wide-element>
                <block-title>
                   <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
@@ -1259,13 +1220,13 @@ kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, da
                <page-wide-element>
             <verbatim>xquery version "1.0-ml";
 
-import module namespace tektur = "http://www.teturcms.de/xquery/common" 
+import <color name="brown">module </color><color name="brown">namespace </color>tektur = "http://www.teturcms.de/xquery/common" 
                                   at "common.xqy";
-import module namespace mem = "http://xqdev.com/in-mem-update" 
+import <color name="brown">module </color><color name="brown">namespace </color>mem = "http://xqdev.com/in-mem-update" 
                                   at '/MarkLogic/appservices/utils/in-mem-update.xqy';
-declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
-declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
-declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
+<color name="brown">declare </color><color name="brown">namespace </color>local = "https://lambdawerk.com/code/alex-sandbox/1.0";
+<color name="brown">declare </color><color name="brown">namespace </color>weiredns = "https://weired-ns-in-input-data.com/weired/ns";
+<color name="brown">declare </color><color name="brown">namespace </color>xs = "http://www.w3.org/2001/XMLSchema"; </verbatim>
          </page-wide-element>
                <column-wide-element>
             <p>Hier werden zuerst Funktionen aus anderen Modulen eingebunden, nämlich die in einer Datei common.xqy
@@ -1278,8 +1239,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
-            ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e1219" ismodule="no">
       
          <title>
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
@@ -1290,8 +1250,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="c20c1e01-1175-4664-a26a-71317760930f"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1236" ismodule="no">
          
             <title>
                <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">XSLT Uses Cases und Lösung</title>
@@ -1302,8 +1261,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1253" ismodule="no">
             
                <title>
                   <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
@@ -1348,118 +1306,115 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                <p>Den zweiten Punkt möchte ich anhand einer Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;education-system&gt;
-  &lt;administrative-regions&gt;
+               <verbatim><color name="green">&lt;education-system&gt;</color>
+  <color name="green">&lt;administrative-regions&gt;</color>
     [...]
-    &lt;dministrative-region id="31" name="Bavaria"&gt;
-      &lt;shools&gt;
-        &lt;school id="45"&gt;
-          &lt;teachers&gt;
-            &lt;teacher id="576"/&gt;
-            &lt;teacher id="345"/&gt;
-            &lt;teacher id="12"/&gt;
-          &lt;/teachers&gt;
-        &lt;/school&gt;
-        &lt;school id="36"&gt;
-          &lt;teachers&gt;
-            &lt;teacher id="576"/&gt;
-            &lt;teacher id="8"/&gt;
-          &lt;/teachers&gt;
-        &lt;/school&gt;
+    <color name="green">&lt;dministrative-region </color><color name="green">id</color>="31" <color name="green">name</color>="Bavaria"<color name="green">&gt;</color>
+      <color name="green">&lt;shools&gt;</color>
+        <color name="green">&lt;school </color><color name="green">id</color>="45"<color name="green">&gt;</color>
+          <color name="green">&lt;teachers&gt;</color>
+            <color name="green">&lt;teacher </color><color name="green">id</color>="576"/<color name="green">&gt;</color>
+            <color name="green">&lt;teacher </color><color name="green">id</color>="345"/<color name="green">&gt;</color>
+            <color name="green">&lt;teacher </color><color name="green">id</color>="12"/<color name="green">&gt;</color>
+          <color name="green">&lt;/teachers&gt;</color>
+        <color name="green">&lt;/school&gt;</color>
+        <color name="green">&lt;school </color><color name="green">id</color>="36"<color name="green">&gt;</color>
+          <color name="green">&lt;teachers&gt;</color>
+            <color name="green">&lt;teacher </color><color name="green">id</color>="576"/<color name="green">&gt;</color>
+            <color name="green">&lt;teacher </color><color name="green">id</color>="8"/<color name="green">&gt;</color>
+          <color name="green">&lt;/teachers&gt;</color>
+        <color name="green">&lt;/school&gt;</color>
         [...]
-      &lt;/shools&gt;
-    &lt;/dministrative-region&gt;
+      <color name="green">&lt;/shools&gt;</color>
+    <color name="green">&lt;/dministrative-region&gt;</color>
     [...]
-  &lt;/administrative-regions&gt;
-&lt;/education-system&gt;</verbatim>
+  <color name="green">&lt;/administrative-regions&gt;</color>
+<color name="green">&lt;/education-system&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;teachers&gt;
+               <verbatim><color name="green">&lt;teachers&gt;</color>
   [...]
-  &lt;teacher id="576"&gt;
-    &lt;first-name&gt;Alfons&lt;/first-name&gt;
-    &lt;last-name&gt;Blimetsrieder&lt;/last-name&gt;
-    &lt;subjects&gt;
-      &lt;subject&gt;Biology&lt;/subject&gt;
-      &lt;subject&gt;Math&lt;/subject&gt;
-      &lt;subject&gt;Sport&lt;/subject&gt;
-    &lt;/subjects&gt;
-    &lt;suspended&gt;2017-12-31&lt;/suspended&gt;
+  <color name="green">&lt;teacher </color><color name="green">id</color>="576"<color name="green">&gt;</color>
+    <color name="green">&lt;first-name&gt;</color>Alfons<color name="green">&lt;/first-name&gt;</color>
+    <color name="green">&lt;last-name&gt;</color>Blimetsrieder<color name="green">&lt;/last-name&gt;</color>
+    <color name="green">&lt;subjects&gt;</color>
+      <color name="green">&lt;subject&gt;</color>Biology<color name="green">&lt;/subject&gt;</color>
+      <color name="green">&lt;subject&gt;</color>Math<color name="green">&lt;/subject&gt;</color>
+      <color name="green">&lt;subject&gt;</color>Sport<color name="green">&lt;/subject&gt;</color>
+    <color name="green">&lt;/subjects&gt;</color>
+    <color name="green">&lt;suspended&gt;</color>2017-12-31<color name="green">&lt;/suspended&gt;</color>
     [...]
-  &lt;/teacher&gt;
+  <color name="green">&lt;/teacher&gt;</color>
   [...]
-&lt;/teachers&gt;</verbatim>
+<color name="green">&lt;/teachers&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Und die Datei, welche die Schulen auflistet:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;schools&gt;
+               <verbatim><color name="green">&lt;schools&gt;</color>
   [...]
-  &lt;school id="45"&gt;
-    &lt;name&gt;Gymnasium Bad Aibling&lt;/name&gt;
-    &lt;type&gt;Oberschule&lt;/type&gt;
+  <color name="green">&lt;school </color><color name="green">id</color>="45"<color name="green">&gt;</color>
+    <color name="green">&lt;name&gt;</color>Gymnasium Bad Aibling<color name="green">&lt;/name&gt;</color>
+    <color name="green">&lt;type&gt;</color>Oberschule<color name="green">&lt;/type&gt;</color>
     [...]
-  &lt;/school&gt;
+  <color name="green">&lt;/school&gt;</color>
   [...]
-&lt;/schools&gt;</verbatim>
+<color name="green">&lt;/schools&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Um diese Daten verarbeiten zu können ist es sinnvoll, die drei Dateien in einem ersten "Resolver" Schritt zusammenzuführen und ggf. irrelevante Strukturen zu entfernen. Lehrer aus obigem Beispiel können beispielsweise suspendiert worden sein. Das folgende Skript erledigt dies mittels einer zusätzlichen Transformation in eine Variable:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet version="2.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  exclude-result-prefixes="#all"&gt;
+               <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">version</color>="2.0" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">exclude-result-prefixes</color>="#all"<color name="green">&gt;</color>
   
-  &lt;xsl:output indent="yes" method="xml"/&gt;
+  <color name="green"><bg>&lt;xsl:output</bg> </color><color name="green">indent</color>="yes" <color name="green">method</color>="xml"/<color name="green">&gt;</color>
   
-  &lt;xsl:strip-space elements="*"/&gt;
+  <color name="green"><bg>&lt;xsl:strip-space</bg> </color><color name="green">elements</color>="*"/<color name="green">&gt;</color>
   
-  &lt;xsl:param name="file-1" required="yes"/&gt;
-  &lt;xsl:param name="file-2" required="yes"/&gt;
-  &lt;xsl:param name="file-3" required="yes"/&gt;
+  <color name="green"><bg>&lt;xsl:param</bg> </color><color name="green">name</color>="file-1" <color name="green">required</color>="yes"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:param</bg> </color><color name="green">name</color>="file-2" <color name="green">required</color>="yes"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:param</bg> </color><color name="green">name</color>="file-3" <color name="green">required</color>="yes"/<color name="green">&gt;</color>
   
-  &lt;xsl:variable name="files" select="(doc($file-1), doc($file-2), doc($file-3))"/&gt;
-  &lt;xsl:variable name="bavaria-region-ids" select="(31, 58)"/&gt;
+  <color name="green"><bg>&lt;xsl:variable</bg> </color><color name="green">name</color>="files" <color name="green">select</color>="(doc($file-1), <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:variable</bg> </color><color name="green">name</color>="bavaria-region-ids" <color name="green">select</color>="(31, <color name="green"></color>=<color name="green">&gt;</color>
   
-  &lt;xsl:key name="teachers" match="teacher" use="@id"/&gt;
-  &lt;xsl:key name="schools" match="school" use="@id"/&gt;
+  <color name="green"><bg>&lt;xsl:key</bg> </color><color name="green">name</color>="teachers" <color name="green">match</color>="teacher" <color name="green">use</color>="@id"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:key</bg> </color><color name="green">name</color>="schools" <color name="green">match</color>="school" <color name="green">use</color>="@id"/<color name="green">&gt;</color>
   
-  &lt;xsl:template name="main"&gt;
-    &lt;xsl:variable name="resolve-result"&gt;
-      &lt;xsl:apply-templates select="$files/administrative-regions" mode="resolve"/&gt;
-    &lt;/xsl:variable&gt;
-    &lt;xsl:apply-templates select="$resolve-result/administrative-regions"/&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="main"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:variable</bg> </color><color name="green">name</color>="resolve-result"<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="$files/administrative-regions" <color name="green">mode</color>="resolve"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:variable&gt;</bg></color>
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="$resolve-result/administrative-regions"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-  &lt;xsl:template match="administrative-region[not(@id = $bavaria-region-ids)]" 
-                mode="resolve"/&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="administrative-region[not(@id <color name="green"></color>= <color name="green"></color>= <color name="green">mode</color>="resolve"/<color name="green">&gt;</color>
 
-  &lt;xsl:template match="school" mode="resolve"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:copy-of select="key('schools',@id, $files/schools[1]/root())/node()"/&gt;
-      &lt;xsl:apply-templates select="node()|@*" mode="resolve"/&gt;      
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="school" <color name="green">mode</color>="resolve"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:copy&gt;</bg></color>
+      <color name="green"><bg>&lt;xsl:copy-of</bg> </color><color name="green">select</color>="key('schools',@id, <color name="green"></color>=<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*" <color name="green">mode</color>="resolve"/<color name="green">&gt;</color>      
+    <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="teacher" mode="resolve"&gt;
-    &lt;xsl:copy-of select="key('teachers',@id, $files/teachers[1]/root())/node()"/&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="teacher" <color name="green">mode</color>="resolve"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:copy-of</bg> </color><color name="green">select</color>="key('teachers',@id, <color name="green"></color>=<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-  &lt;xsl:template match="teacher[suspended/xs:date(.) le current-date()]"/&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="teacher[suspended/xs:date(.) <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
   
-  &lt;xsl:template match="node()|@*" mode="#all"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates mode="#current"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="node()|@*" <color name="green">mode</color>="#all"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:copy&gt;</bg></color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">mode</color>="#current"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-&lt;/xsl:stylesheet&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
@@ -1470,8 +1425,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1348" ismodule="no">
             
                <title>
                   <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
@@ -1507,15 +1461,15 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:choose&gt;
-    &lt;xsl:when test="$myParameter='this_option'"&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:choose&gt;</bg></color>
+    <color name="green"><bg>&lt;xsl:when</bg> </color><color name="green">test</color>="$myParameter='this_option'"<color name="green">&gt;</color>
         &lt;!-- do this --&gt;
-    &lt;/xsl:when&gt;
-    &lt;xsl:when test="$myParameter='that_option'"&gt;
+    <color name="green"><bg>&lt;/xsl:when&gt;</bg></color>
+    <color name="green"><bg>&lt;xsl:when</bg> </color><color name="green">test</color>="$myParameter='that_option'"<color name="green">&gt;</color>
         &lt;!-- do that --&gt;
-    &lt;/xsl:when&gt;
+    <color name="green"><bg>&lt;/xsl:when&gt;</bg></color>
         [...]
-&lt;/xsl:choose&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:choose&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante<xe>
@@ -1526,21 +1480,21 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   </xe> überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:template name="render-header"&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="render-header"<color name="green">&gt;</color>
     &lt;!-- print logo on the left side spanning two rows--&gt;
     &lt;!-- print some metadata right side first row --&gt;
     &lt;!-- print a running header right side second row --&gt;
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:choose&gt;
-&lt;xsl:template name="render-header"&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:choose&gt;</bg></color>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="render-header"<color name="green">&gt;</color>
     &lt;!-- print a running header on left side --&gt;
     &lt;!-- print logo on right side --&gt;
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates"<xe>
@@ -1549,15 +1503,15 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   </xe> ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:variable name="margin-width"&gt;
-    &lt;xsl:call-template name="get-margin-width"/&gt;
-&lt;/xsl:variable&gt;</verbatim>
+               <verbatim><color name="green"><bg>&lt;xsl:variable</bg> </color><color name="green">name</color>="margin-width"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:call-template</bg> </color><color name="green">name</color>="get-margin-width"/<color name="green">&gt;</color>
+<color name="green"><bg>&lt;/xsl:variable&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>width="{$margin-width}"</verbatim>
+               <verbatim>width="{<color name="red">$margin-width</color>}"</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
@@ -1565,8 +1519,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1426" ismodule="no">
             
                <title>
                   <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming</title>
@@ -1636,30 +1589,26 @@ in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. f�
                <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:stylesheet version="3.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  exclude-result-prefixes="#all"&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">version</color>="3.0" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">xmlns:xs</color>="http://www.w3.org/2001/XMLSchema" <color name="green">exclude-result-prefixes</color>="#all"<color name="green">&gt;</color>
   
-  &lt;xsl:output method="xml" indent="yes"/&gt;
+  <color name="green"><bg>&lt;xsl:output</bg> </color><color name="green">method</color>="xml" <color name="green">indent</color>="yes"/<color name="green">&gt;</color>
   
-  &lt;xsl:mode on-no-match="shallow-copy" use-accumulators="entry-count" streamable="true"/&gt;
+  <color name="green"><bg>&lt;xsl:mode</bg> </color><color name="green">on-no-match</color>="shallow-copy" <color name="green">use-accumulators</color>="entry-count" <color name="green">streamable</color>="true"/<color name="green">&gt;</color>
   
-  &lt;xsl:accumulator name="entry-count" as="xs:integer" initial-value="0" 
-                   streamable="yes"&gt;
-    &lt;xsl:accumulator-rule match="entry" select="$value + 1"/&gt;
-  &lt;/xsl:accumulator&gt;
+  <color name="green"><bg>&lt;xsl:accumulator</bg> </color><color name="green">name</color>="entry-count" <color name="green">as</color>="xs:integer" <color name="green">initial-value</color>="0" <color name="green">streamable</color>="yes"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:accumulator-rule</bg> </color><color name="green">match</color>="entry" <color name="green">select</color>="$value <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:accumulator&gt;</bg></color>
   
-  &lt;xsl:template match="/"&gt;
-    &lt;result&gt;
-      &lt;xsl:apply-templates/&gt;
-      &lt;count&gt;
-        &lt;xsl:value-of select="accumulator-after('entry-count')"/&gt; 
-      &lt;/count&gt;
-    &lt;/result&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="/"<color name="green">&gt;</color>
+    <color name="green">&lt;result&gt;</color>
+      <color name="green"><bg>&lt;xsl:apply-templates/&gt;</bg></color>
+      <color name="green">&lt;count&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="accumulator-after('entry-count')"/<color name="green">&gt;</color> 
+      <color name="green">&lt;/count&gt;</color>
+    <color name="green">&lt;/result&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
   
-&lt;/xsl:stylesheet&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Diese Stylesheet hat einige Besonderheiten:</p>
@@ -1679,11 +1628,10 @@ eine implizite Identity-Transformation (shallow-copy)<footnote>
                <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:template match="node()|@*"
-  &lt;xsl:copy&gt;
-    &lt;xsl:apply-templates select="node()|@*"/&gt;
-  &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
+               <verbatim><color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="node()|@*" <color name="green"></color>=<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Zum anderen wird ein Akkumulator<xe>
@@ -1726,7 +1674,7 @@ wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Du
 kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
+               <verbatim><color name="green"><bg>&lt;xsl:copy-of</bg> </color><color name="green">select</color>="."/<color name="green">&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
@@ -1747,8 +1695,7 @@ würde.</p>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
-                     ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1561" ismodule="no">
                
                   <title>
                      <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
@@ -1763,40 +1710,43 @@ würde.</p>
                   <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>&lt;status-report&gt;
-  &lt;status-change&gt;
-    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
-    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
-    &lt;status&gt;open&lt;/status&gt;
-    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
-  &lt;/status-change&gt;
-  &lt;status-change&gt;
-    &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
-    &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
-    &lt;status&gt;open&lt;/status&gt;
-    &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
-  &lt;/status-change&gt;
+                  <verbatim><color name="green">&lt;status-report&gt;</color>
+  <color name="green">&lt;status-change&gt;</color>
+    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
+    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
+    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
+  <color name="green">&lt;/status-change&gt;</color>
+  <color name="green">&lt;status-change&gt;</color>
+    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
+    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
+    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
+  <color name="green">&lt;/status-change&gt;</color>
   [...]</verbatim>
                </page-wide-element>
                      <column-wide-element>
-                  <p>Mit einer  Loop und einem Named-Template würde das so gehen:</p>
+                  <p>Mit einer <code>
+                        <nb>for-each</nb>
+                     </code> Loop und einem Named-Template würde das so gehen:</p>
                </column-wide-element>
                      <page-wide-element>
                   <verbatim>
-&lt;xsl:template name="main"&gt;
-  &lt;xsl:for-each select="$input-file/status-report/status-change"&gt;
-    &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
-    &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
-    &lt;xsl:value-of select="concat(status,',')"/&gt;
-    &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
-  &lt;/xsl:for-each&gt;
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="main"<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:for-each</bg> </color><color name="green">select</color>="$input-file/status-report/status-change"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(billing_id,',')"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(claim_ids,',')"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(status,',')"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(format-dateTime(xs:dateTime(time_stamp), <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:for-each&gt;</bg></color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <note>
                         <consequence>
-                           <p>Named-Templates, die direkt über den Saxon Aufruf  aufgerufen werden, sind dann
+                           <p>Named-Templates, die direkt über den Saxon Aufruf <code>
+                              <nb>saxon -it:main</nb>
+                           </code> aufgerufen werden, sind dann
 brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
 Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
 vom XSLT Skript selbst erzeugt wird.</p>
@@ -1809,13 +1759,12 @@ verlassen, was den Code weiter vereinfacht:</p>
                </column-wide-element>
                      <page-wide-element>
                   <verbatim>
-&lt;xsl:template match="/status-report/status-change"&gt;
-  &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
-  &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
-  &lt;xsl:value-of select="concat(status,',')"/&gt;
-  &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="/status-report/status-change"<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(billing_id,',')"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(claim_ids,',')"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(status,',')"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(format-dateTime(xs:dateTime(time_stamp), <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
@@ -1825,7 +1774,10 @@ aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6c
                               type="topic">XSLT Streaming</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Wir betrachten hier das <footnote>
+                  <p>Wir betrachten hier das <code>
+                        <nb>xsl:iterator</nb>
+                     </code>
+                     <footnote>
                         <desc>https://www.saxonica.com/html/documentation/xsl-elements/iterate.html</desc>
                         <add>Der Iterator ist ein Konzept um XSLT Streaming zu realisieren</add>
                      </footnote>
@@ -1834,7 +1786,11 @@ aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6c
                      <column-wide-element>
                   <ul>
                         <li>
-                           <p>Wir benutzen  in Verbindung mit dem  Attribut,
+                           <p>Wir benutzen <code>
+                              <nb>xsl:source-document</nb>
+                           </code> in Verbindung mit dem <code>
+                              <nb>streamable='yes'</nb>
+                           </code> Attribut,
 um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p>
                         </li>
                         <li>
@@ -1844,21 +1800,22 @@ starten.</p>
                      </ul>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von  statements in den Iterator:</p>
+                  <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von <code>
+                        <nb>value-of select</nb>
+                     </code> statements in den Iterator:</p>
                </column-wide-element>
                      <page-wide-element>
                   <verbatim>
-&lt;xsl:template name="main"&gt;
-  &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
-    &lt;xsl:iterate select="status-report/status-change"&gt;
-      &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
-      &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
-      &lt;xsl:value-of select="concat(status,',')"/&gt;
-      &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
-    &lt;/xsl:iterate&gt;
-  &lt;/xsl:source-document&gt; 
-&lt;/xsl:template&gt;</verbatim>
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="main"<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:source-document</bg> </color><color name="green">href</color>="{$input-file}" <color name="green">streamable</color>='yes'<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:iterate</bg> </color><color name="green">select</color>="status-report/status-change"<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(billing_id,',')"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(claim_ids,',')"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(status,',')"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(format-dateTime(xs:dateTime(time_stamp), <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:iterate&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:source-document&gt;</bg></color> 
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <p>und werden dafür prompt mit einer Fehlermeldung belohnt:</p>
@@ -1870,42 +1827,41 @@ starten.</p>
   {xsl:value-of} on line 19</verbatim>
                </page-wide-element>
                      <column-wide-element>
-                  <p>In diesem Iterator ist also nur eine "konsumierende"  Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
+                  <p>In diesem Iterator ist also nur eine "konsumierende" <code>
+                        <nb>value-of</nb>
+                     </code> Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  exclude-result-prefixes="xs"
-  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
-  version="3.0"&gt;
+                  <verbatim><color name="green">&lt;?xml </color><color name="green">version</color>="1.0" <color name="green">encoding</color>="UTF-8"?<color name="green">&gt;</color>
+<color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">xmlns:xs</color>="http://www.w3.org/2001/XMLSchema" <color name="green">exclude-result-prefixes</color>="xs" <color name="green">xpath-default-namespace</color>="https://tekturcms.de/schema/status-report/1.0" <color name="green">version</color>="3.0"<color name="green">&gt;</color>
    
-  &lt;xsl:param name="input-file" required="yes"/&gt;
+  <color name="green"><bg>&lt;xsl:param</bg> </color><color name="green">name</color>="input-file" <color name="green">required</color>="yes"/<color name="green">&gt;</color>
   
-  &lt;xsl:output method="text"/&gt;
+  <color name="green"><bg>&lt;xsl:output</bg> </color><color name="green">method</color>="text"/<color name="green">&gt;</color>
  
   &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
 
-  &lt;xsl:template name="main"&gt;
-    &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
-      &lt;xsl:iterate select="status-report/status-change/*"&gt;
-        &lt;xsl:choose&gt;
-          &lt;xsl:when test="name()='time_stamp'"&gt;
-            &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
-          &lt;/xsl:when&gt;
-          &lt;xsl:otherwise&gt;
-            &lt;xsl:value-of select="concat(.,',')"/&gt;
-          &lt;/xsl:otherwise&gt;
-        &lt;/xsl:choose&gt;
-      &lt;/xsl:iterate&gt;
-    &lt;/xsl:source-document&gt;
-  &lt;/xsl:template&gt;  
-&lt;/xsl:stylesheet&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">name</color>="main"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:source-document</bg> </color><color name="green">href</color>="{$input-file}" <color name="green">streamable</color>='yes'<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:iterate</bg> </color><color name="green">select</color>="status-report/status-change/*"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:choose&gt;</bg></color>
+          <color name="green"><bg>&lt;xsl:when</bg> </color><color name="green">test</color>="name()='time_stamp'"<color name="green">&gt;</color>
+            <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(format-dateTime(xs:dateTime(time_stamp), <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+          <color name="green"><bg>&lt;/xsl:when&gt;</bg></color>
+          <color name="green"><bg>&lt;xsl:otherwise&gt;</bg></color>
+            <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="concat(.,',')"/<color name="green">&gt;</color>
+          <color name="green"><bg>&lt;/xsl:otherwise&gt;</bg></color>
+        <color name="green"><bg>&lt;/xsl:choose&gt;</bg></color>
+      <color name="green"><bg>&lt;/xsl:iterate&gt;</bg></color>
+    <color name="green"><bg>&lt;/xsl:source-document&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>  
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color>
 </verbatim>
                </page-wide-element>
                      <column-wide-element>
-                  <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten () wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
+                  <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten (<code>
+                        <nb>&amp;#10;</nb>
+                     </code>) wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
                </column-wide-element>
                      <column-wide-element>
                   <note>
@@ -1921,8 +1877,7 @@ starten.</p>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1673" ismodule="no">
             
                <title>
                   <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id()</title>
@@ -1944,28 +1899,30 @@ System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in di
 generiert werden.</p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Die Id an einem Element  würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+               <p>Die Id an einem Element <code>
+                     <nb>&lt;part id=“1234”&gt;</nb>
+                  </code> würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
 für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
 mit den folgenden Templates (vereinfacht) passieren:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:key name="parts" match="part" use="@id"/&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:key</bg> </color><color name="green">name</color>="parts" <color name="green">match</color>="part" <color name="green">use</color>="@id"/<color name="green">&gt;</color>
   
-&lt;xsl:template match=“part” mode=“content"&gt;
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>=“part” <color name="green">mode</color>=“content"<color name="green">&gt;</color>
   &lt;!-- Ausgabe des Bauteils im Content Bereich --&gt;
-  &lt;fo:block id="{generate-id()}"&gt;
-    &lt;fo:external-graphic xsl:use-attribute-sets="part.img"/&gt;  
-  &lt;/fo:block&gt;
-&lt;/xsl:template&gt;
+  <color name="green">&lt;fo:block </color><color name="green">id</color>="{generate-id()}"<color name="green">&gt;</color>
+    <color name="green">&lt;fo:external-graphic </color><color name="green">xsl:use-attribute-sets</color>="part.img"/<color name="green">&gt;</color>  
+  <color name="green">&lt;/fo:block&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-&lt;xsl:template match=“part” mode=“part-list"&gt;
+<color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>=“part” <color name="green">mode</color>=“part-list"<color name="green">&gt;</color>
   &lt;!-- Ausgabe einer Liste mit allen Verweisen an unterschiedicher Stelle --&gt;
-  &lt;fo:block&gt;
-    &lt;xsl:for-each select="key('parts',@id)"&gt;
-      &lt;fo:page-number-citation ref-id="{generate-id()}"/&gt;
-    &lt;/xsl:for-each&gt;
-  &lt;/fo:block&gt;
-&lt;/xsl:template&gt;</verbatim>
+  <color name="green">&lt;fo:block&gt;</color>
+    <color name="green"><bg>&lt;xsl:for-each</bg> </color><color name="green">select</color>="key('parts',@id)"<color name="green">&gt;</color>
+      <color name="green">&lt;fo:page-number-citation </color><color name="green">ref-id</color>="{generate-id()}"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:for-each&gt;</bg></color>
+  <color name="green">&lt;/fo:block&gt;</color>
+<color name="green"><bg>&lt;/xsl:template&gt;</bg></color></verbatim>
             </page-wide-element>
                   <block-title>
                      <title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title>
@@ -2011,63 +1968,80 @@ könnte folgendermassen aussehen:</p>
       [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Jedes einzelne  Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+               <p>Jedes einzelne <code>
+                     <nb>CONTENT</nb>
+                  </code> Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
 Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
-Descendant-Achse bis zum Element , ausserdem noch die Elemente  und ,
-sowie das Element  mit Kind  .Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
+Descendant-Achse bis zum Element <code>
+                     <nb>WRAPPER3</nb>
+                  </code>, ausserdem noch die Elemente <code>
+                     <nb>SEQUENZ1</nb>
+                  </code> und <code>
+                     <nb>SEQUENZ2</nb>
+                  </code>,
+sowie das Element <code>
+                     <nb>WRAPPER4</nb>
+                  </code> mit Kind <code>
+                     <nb>SEQUENZ1</nb>
+                  </code> .Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+               <verbatim><color name="green"><bg>&lt;xsl:stylesheet</bg> </color><color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">version</color>="2.0"<color name="green">&gt;</color>
     
-  &lt;xsl:output method="xml" indent="yes"/&gt;
-  &lt;xsl:strip-space elements="*"/&gt;
+  <color name="green"><bg>&lt;xsl:output</bg> </color><color name="green">method</color>="xml" <color name="green">indent</color>="yes"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;xsl:strip-space</bg> </color><color name="green">elements</color>="*"/<color name="green">&gt;</color>
   
-  &lt;xsl:template match="/"&gt;
-    &lt;xsl:apply-templates select="/WRAPPER1/WRAPPER2/WRAPPER3/CONTENT" mode="umschlag"/&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="/"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="/WRAPPER1/WRAPPER2/WRAPPER3/CONTENT" <color name="green">mode</color>="umschlag"/<color name="green">&gt;</color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-  &lt;xsl:template match="CONTENT" mode="umschlag"&gt;
-    &lt;xsl:result-document href="{concat(@id,'.xml')}"&gt;
-      &lt;umschlag&gt;
-        &lt;metadaten&gt;&lt;!-- einige Metadaten --&gt;&lt;/env:metadata&gt;
-        &lt;nutzdaten&gt;
-            &lt;xsl:apply-templates select="ancestor::WRAPPER1"&gt;
-              &lt;xsl:with-param name="this-id" select="generate-id()" tunnel="yes"/&gt;
-            &lt;/xsl:apply-templates&gt;
-        &lt;/nutzdaten&gt;
-      &lt;/umschlag&gt;
-    &lt;/xsl:result-document&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="CONTENT" <color name="green">mode</color>="umschlag"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:result-document</bg> </color><color name="green">href</color>="{concat(@id,'.xml')}"<color name="green">&gt;</color>
+      <color name="green">&lt;umschlag&gt;</color>
+        <color name="green">&lt;metadaten&gt;</color>&lt;!-- einige Metadaten --&gt;<color name="green">&lt;/env:metadata&gt;</color>
+        <color name="green">&lt;nutzdaten&gt;</color>
+            <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="ancestor::WRAPPER1"<color name="green">&gt;</color>
+              <color name="green"><bg>&lt;xsl:with-param</bg> </color><color name="green">name</color>="this-id" <color name="green">select</color>="generate-id()" <color name="green">tunnel</color>="yes"/<color name="green">&gt;</color>
+            <color name="green"><bg>&lt;/xsl:apply-templates&gt;</bg></color>
+        <color name="green">&lt;/nutzdaten&gt;</color>
+      <color name="green">&lt;/umschlag&gt;</color>
+    <color name="green"><bg>&lt;/xsl:result-document&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
 
-  &lt;xsl:template match="node()|@*"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="node()|@*"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="node()|@*"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:copy&gt;</bg></color>
+      <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-  &lt;xsl:template match="CONTENT"&gt;
-    &lt;xsl:param name="this-element" tunnel="yes"/&gt;
-    &lt;xsl:if test="$this-id = generate-id()"&gt;
-      &lt;xsl:copy&gt;
-        &lt;xsl:apply-templates select="node()|@*"/&gt;
-      &lt;/xsl:copy&gt;
-    &lt;/xsl:if&gt;
-  &lt;/xsl:template&gt;
+  <color name="green"><bg>&lt;xsl:template</bg> </color><color name="green">match</color>="CONTENT"<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:param</bg> </color><color name="green">name</color>="this-element" <color name="green">tunnel</color>="yes"/<color name="green">&gt;</color>
+    <color name="green"><bg>&lt;xsl:if</bg> </color><color name="green">test</color>="$this-id <color name="green"></color>= <color name="green"></color>=<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:copy&gt;</bg></color>
+        <color name="green"><bg>&lt;xsl:apply-templates</bg> </color><color name="green">select</color>="node()|@*"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;/xsl:copy&gt;</bg></color>
+    <color name="green"><bg>&lt;/xsl:if&gt;</bg></color>
+  <color name="green"><bg>&lt;/xsl:template&gt;</bg></color>
     
-&lt;/xsl:stylesheet&gt;</verbatim>
+<color name="green"><bg>&lt;/xsl:stylesheet&gt;</bg></color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes  Element selektiert und
+               <p>Im rekursiven Abstieg wird im Modus "umschlag" jedes <code>
+                     <nb>CONTENT</nb>
+                  </code> Element selektiert und
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
-indem der gesamte XML Baum über die Standard-Kopierregel in das Element  gesetzt wird. Dabei wird aber nur derjenige  Abschnitt evaluiert, der
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element <code>
+                     <nb>&lt;nutzdaten&gt;</nb>
+                  </code> gesetzt wird. Dabei wird aber nur derjenige <code>
+                     <nb>CONTENT</nb>
+                  </code> Abschnitt evaluiert, der
 zu der als Parameter übergebenen generierten Id passt.</p>
             </column-wide-element>
                
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="8969a5d0-6c34-4bc8-8b60-3a070bc123d7"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1733" ismodule="no">
          
             <title>
                <title id="79507fbb-caa9-4316-8097-2d7e55208d81">XQuery Use Cases und Lösung</title>
@@ -2078,8 +2052,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1750" ismodule="no">
             
                <title>
                   <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
@@ -2145,10 +2118,10 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                <p>Mit folgendem Ergebnis:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;dates&gt;
-  &lt;today&gt;2019-01-16+01:00&lt;/today&gt;
-  &lt;formatted&gt;Wednesday, 16th January 2019&lt;/formatted&gt;
-&lt;/dates&gt;</verbatim>
+               <verbatim><color name="green">&lt;dates&gt;</color>
+  <color name="green">&lt;today&gt;</color>2019-01-16+01:00<color name="green">&lt;/today&gt;</color>
+  <color name="green">&lt;formatted&gt;</color>Wednesday, 16th January 2019<color name="green">&lt;/formatted&gt;</color>
+<color name="green">&lt;/dates&gt;</color></verbatim>
             </page-wide-element>
                   <block-title>
                      <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
@@ -2156,16 +2129,18 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                   <column-wide-element>
                <p>FLOWR<xe>
                      <first criterion="FLOWR Expression">FLOWR Expression</first>
-                  </xe> steht für . Das sind die Query-Anweisungen, die in 
+                  </xe> steht für <code>
+                     <nb>for, let, where, order by, return</nb>
+                  </code>. Das sind die Query-Anweisungen, die in 
 dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>let $bibliothek := .
-for $x in $bibliothek//buecher,
-    $y in $bibliothek//autoren/autor
-where starts-with($autor, 'Grass')
-    and $x/@autorId = $y/@id
-return $x/titel</verbatim>
+               <verbatim><color name="brown">let </color><color name="red">$bibliothek</color> := .
+<color name="brown">for </color><color name="red">$x</color> in <color name="red">$bibliothek</color>//buecher,
+    <color name="red">$y</color> in <color name="red">$bibliothek</color>//autoren/autor
+<color name="brown">where </color>starts-with(<color name="red">$autor</color>, 'Grass')
+    and <color name="red">$x</color>/@autorId = <color name="red">$y</color>/@id
+<color name="brown">return </color><color name="red">$x</color>/titel</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
@@ -2188,25 +2163,29 @@ Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
 vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>declare variable $nachname as xs:string external;
-&lt;buecher autor="{$nachname}"&gt;
+               <verbatim><color name="brown">declare </color><color name="brown">variable </color><color name="red">$nachname</color> as xs:string external;
+<color name="green">&lt;buecher </color><color name="green">autor</color>="{$nachname}"<color name="green">&gt;</color>
 {
-  let $bibliothek := .
-  for $x in $bibliothek/buecher//buch,
-      $y in $bibliothek/autoren//autor
-  where starts-with($y, $nachname)
-      and $x/@autorId = $y/@id
-  order by $x/ausgabe
+  <color name="brown">let </color><color name="red">$bibliothek</color> := .
+  <color name="brown">for </color><color name="red">$x</color> in <color name="red">$bibliothek</color>/buecher//buch,
+      <color name="red">$y</color> in <color name="red">$bibliothek</color>/autoren//autor
+  <color name="brown">where </color>starts-with(<color name="red">$y</color>, <color name="red">$nachname</color>)
+      and <color name="red">$x</color>/@autorId = <color name="red">$y</color>/@id
+  <color name="brown">order </color>by <color name="red">$x</color>/ausgabe
   return
-  &lt;buch ausgabe="{$x/ausgabe}"&gt;
-    {$x/titel}
-  &lt;/buch&gt;
+  <color name="green">&lt;buch </color><color name="green">ausgabe</color>="{$x/ausgabe}"<color name="green">&gt;</color>
+    {<color name="red">$x</color>/titel}
+  <color name="green">&lt;/buch&gt;</color>
 }
-&lt;/buecher&gt;</verbatim>
+<color name="green">&lt;/buecher&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Speichert man dieses Schnippsel in einer Datei  ab,
-so kann man mit der folgenden Kommandozeile auf einer  Datei als Eingabe suchen:</p>
+               <p>Speichert man dieses Schnippsel in einer Datei <code>
+                     <nb>buecher.xquery</nb>
+                  </code> ab,
+so kann man mit der folgenden Kommandozeile auf einer <code>
+                     <nb>buecher.xml</nb>
+                  </code> Datei als Eingabe suchen:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
@@ -2246,8 +2225,8 @@ Analyzing query from Desktop/buecher.xquery
 Generating byte code...
 Analysis time: 201.10095 milliseconds
 Processing file:/Users/Alex/buecher.xml
-Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
-Building tree for file:/Users/Alex/buecher.xml 
+Using parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl<color name="red">$JAXPSAXParser</color>
+Building tree <color name="brown">for </color>file:/Users/Alex/buecher.xml 
 using class net.sf.saxon.tree.tiny.TinyBuilder
 Tree built in 3.482278ms
 Tree size: 46 nodes, 58 characters, 6 attributes
@@ -2255,12 +2234,14 @@ Execution time: 27.137589ms
 Memory used: 67031664</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Mit der Option  verändert sich die Ausführungszeit signifikant:</p>
+               <p>Mit der Option <code>
+                     <nb>-projection:on</nb>
+                  </code> verändert sich die Ausführungszeit signifikant:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>[...]
 
-Document projection for file:/Users/Alex/buecher.xml
+Document projection <color name="brown">for </color>file:/Users/Alex/buecher.xml
 -- Input nodes 50; output nodes 27; reduction = 46%
 Tree built in 3.80615ms
 Tree size: 26 nodes, 58 characters, 3 attributes
@@ -2270,8 +2251,7 @@ Memory used: 64339064</verbatim>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1879" ismodule="no">
             
                <title>
                   <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
@@ -2359,8 +2339,7 @@ Memory used: 64339064</verbatim>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1987" ismodule="no">
             
                <title>
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
@@ -2391,7 +2370,7 @@ Hat man parallel auch noch oXygen offen, kann man die Testergbnisse aus der Kons
                <p>Die Zahlen von 1 bis 100 mit:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>(for $i in (1 to 100) return $i)</verbatim>
+               <verbatim>(<color name="brown">for </color><color name="red">$i</color> in (1 to 100) <color name="brown">return </color><color name="red">$i</color>)</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Wenn man diese beide Anweisungen untereinander in die Konsole
@@ -2413,30 +2392,30 @@ folgendermassen aus<footnote>
                </p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>xdmp:document-insert(
+               <verbatim><color name="blue">xdmp:document-insert</color>(
   "/alex-test/example-alex.xml",
-  &lt;root&gt;Hier steht der Content&lt;/root&gt;, 
-  &lt;options xmlns="xdmp:document-insert"&gt;  
-    &lt;metadata&gt;{
-      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
-      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
-      }&lt;/metadata&gt;
-  &lt;/options&gt;)</verbatim>
+  <color name="green">&lt;root&gt;</color>Hier steht der Content<color name="green">&lt;/root&gt;</color>, 
+  <color name="green">&lt;options </color><color name="green">xmlns</color>="xdmp:document-insert"<color name="green">&gt;</color>  
+    <color name="green">&lt;metadata&gt;</color>{
+      <color name="blue">map:map</color>() =&gt; <color name="blue">map:with</color>("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; <color name="blue">map:with</color>("valid-end", "9999-12-31T11:59:59Z")
+      }<color name="green">&lt;/metadata&gt;</color>
+  <color name="green">&lt;/options&gt;</color>)</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>(for $i in (1 to 10) return 
-  xdmp:document-insert(
-  concat("/alex-test/example-alex-",$i,".xml"),
-  &lt;root&gt;Hier steht der Content {$i}&lt;/root&gt;, 
-  &lt;options xmlns="xdmp:document-insert"&gt;  
-    &lt;metadata&gt;{
-      map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
-      =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
-      }&lt;/metadata&gt;
-  &lt;/options&gt;)
+               <verbatim>(<color name="brown">for </color><color name="red">$i</color> in (1 to 10) <color name="brown">return </color>
+  <color name="blue">xdmp:document-insert</color>(
+  concat("/alex-test/example-alex-",<color name="red">$i</color>,".xml"),
+  <color name="green">&lt;root&gt;</color>Hier steht der Content {<color name="red">$i</color>}<color name="green">&lt;/root&gt;</color>, 
+  <color name="green">&lt;options </color><color name="green">xmlns</color>="xdmp:document-insert"<color name="green">&gt;</color>  
+    <color name="green">&lt;metadata&gt;</color>{
+      <color name="blue">map:map</color>() =&gt; <color name="blue">map:with</color>("valid-start", "2014-06-03T14:13:05.472585-07:00")
+      =&gt; <color name="blue">map:with</color>("valid-end", "9999-12-31T11:59:59Z")
+      }<color name="green">&lt;/metadata&gt;</color>
+  <color name="green">&lt;/options&gt;</color>)
 )</verbatim>
             </page-wide-element>
                   <column-wide-element>
@@ -2450,35 +2429,34 @@ zu können. Das geht mit dem folgenden Befehl<footnote>
                   </footnote> und diesem Schnippsel:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>let $root :=
-&lt;mein-test&gt;
-   &lt;id&gt;{$id}&lt;/id&gt;
-   &lt;content&gt;Hallo Welt!&lt;/content&gt;
-&lt;/mein-test&gt;,
-$options :=
-&lt;options xmlns="xdmp:document-insert"&gt;  
-  &lt;permissions&gt;{xdmp:default-permissions()}&lt;/permissions&gt;
-  &lt;collections&gt;
-    &lt;collection&gt;/alex-test&lt;/collection&gt;
-  &lt;/collections&gt;
-&lt;/options&gt;,
-$fname := concat('/',$id,'_','.xml'),
-$td := xdmp:document-insert($fname,$root,$options)
-return 
+               <verbatim><color name="brown">let </color><color name="red">$root</color> :=
+<color name="green">&lt;mein-test&gt;</color>
+   <color name="green">&lt;id&gt;</color>{<color name="red">$id</color>}<color name="green">&lt;/id&gt;</color>
+   <color name="green">&lt;content&gt;</color>Hallo Welt!<color name="green">&lt;/content&gt;</color>
+<color name="green">&lt;/mein-test&gt;</color>,
+<color name="red">$options</color> :=
+<color name="green">&lt;options </color><color name="green">xmlns</color>="xdmp:document-insert"<color name="green">&gt;</color>  
+  <color name="green">&lt;permissions&gt;</color><color name="blue">{xdmp:default-permissions</color>()}<color name="green">&lt;/permissions&gt;</color>
+  <color name="green">&lt;collections&gt;</color>
+    <color name="green">&lt;collection&gt;</color>/alex-test<color name="green">&lt;/collection&gt;</color>
+  <color name="green">&lt;/collections&gt;</color>
+<color name="green">&lt;/options&gt;</color>,
+<color name="red">$fname</color> := concat('/',<color name="red">$id</color>,'_','.xml'),
+<color name="red">$td</color> := <color name="blue">xdmp:document-insert</color>(<color name="red">$fname</color>,<color name="red">$root</color>,<color name="red">$options</color>)
+<color name="brown">return </color>
   [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Die Dokumente, die mit der Collection alex-test getaggt wurden, kann man sich mit der folgenden Schleife ausgeben lassen:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>for $x in collection("/alex-test")
+               <verbatim><color name="brown">for </color><color name="red">$x</color> in collection("/alex-test")
   return
-    fn:document-uri($x)</verbatim>
+    <color name="blue">fn:document-uri</color>(<color name="red">$x</color>)</verbatim>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="3630ee02-616b-4bbc-8655-9064d57bf945"
-                     ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2060" ismodule="no">
                
                   <title>
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
@@ -2494,12 +2472,12 @@ return
                      </xe> zur verfügung. Eine einfache Funktion wäre z.B. diese hier:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>declare function local:wrap-header($json) {
-  xdmp:add-response-header("Pragma", "no-cache"),
-  xdmp:add-response-header("Cache-Control", "no-cache"),
-  xdmp:add-response-header("Expires", "0"),
-  xdmp:set-response-content-type('text/json; charset=utf-8'),
-  $json
+                  <verbatim><color name="brown">declare </color><color name="brown">function </color><color name="blue">local:wrap-header</color>(<color name="red">$json</color>) {
+  <color name="blue">xdmp:add-response-header</color>("Pragma", "no-cache"),
+  <color name="blue">xdmp:add-response-header</color>("Cache-Control", "no-cache"),
+  <color name="blue">xdmp:add-response-header</color>("Expires", "0"),
+  <color name="blue">xdmp:set-response-content-type</color>('text/json; charset=utf-8'),
+  <color name="red">$json</color>
 };</verbatim>
                </page-wide-element>
                      <column-wide-element>
@@ -2512,11 +2490,14 @@ return
                      </xe> deklariert werden:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>declare namespace local = 'local:';</verbatim>
+                  <verbatim><color name="brown">declare </color><color name="brown">namespace </color>local = 'local:';</verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <p>Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
-um ganz elementare Konstrukte, wie <xe>
+um ganz elementare Konstrukte, wie <code>
+                        <nb>while...do</nb>
+                     </code>
+                     <xe>
                         <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
                         <second criterion="Schleifen - while..do">Schleifen - while..do</second>
                      </xe> Schleifen, zu realisieren.</p>
@@ -2525,14 +2506,14 @@ um ganz elementare Konstrukte, wie <xe>
                   <p>Dazu nutzt man, wie in der funktionalen Programmierung üblich, die Rekursion:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>declare function local:ist-letzter-wert-in-kette($glied) {
-  let $wert := local:komplizierte-berechnung($glied),
-    $naechstes-glied := local:komplizierte-berechnung-der-position($glied),
+                  <verbatim><color name="brown">declare </color><color name="brown">function </color><color name="blue">local:ist-letzter-wert-in-kette</color>(<color name="red">$glied</color>) {
+  <color name="brown">let </color><color name="red">$wert</color> := <color name="blue">local:komplizierte-berechnung</color>(<color name="red">$glied</color>),
+    <color name="red">$naechstes-glied</color> := <color name="blue">local:komplizierte-berechnung-der-position</color>(<color name="red">$glied</color>),
   return
-    if ($naechstes-glied and not($wert = 'foobar')) then
-      local:durchlaufe-kette($naechstes-glied)
+    <color name="brown">if </color>(<color name="red">$naechstes-glied</color> and not(<color name="red">$wert</color> = 'foobar')) then
+      <color name="blue">local:durchlaufe-kette</color>(<color name="red">$naechstes-glied</color>)
     else
-      $wert = 'foobar'
+      <color name="red">$wert</color> = 'foobar'
 };</verbatim>
                </page-wide-element>
                      <column-wide-element>
@@ -2553,13 +2534,13 @@ Module ausgelagert werden. Ein Modul, z.B. common.xqy, wird dabei über einen ei
 Namespace deklariert:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>module namespace common = "https://www.tekturcms.de/common";</verbatim>
+                  <verbatim><color name="brown">module </color><color name="brown">namespace </color>common = "https://www.tekturcms.de/common";</verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <p>Dieses Modul kann dann in anderen Skripten eingebunden werden:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>import module namespace common = "https://www.tekturcms.de/common" at "common.xqy";</verbatim>
+                  <verbatim>import <color name="brown">module </color><color name="brown">namespace </color>common = "https://www.tekturcms.de/common" at "common.xqy";</verbatim>
                </page-wide-element>
                      <column-wide-element>
                   <p>Funktionen und Variablen werden dann mir dem Namespace<xe>
@@ -2568,24 +2549,29 @@ Namespace deklariert:</p>
                      </xe> geprefixt aufgerufen:</p>
                </column-wide-element>
                      <page-wide-element>
-                  <verbatim>Funktionsaufruf: common:wrap-response-header(...)
-Variablenauswertung: $common:collection-books</verbatim>
+                  <verbatim>Funktionsaufruf: <color name="blue">common:wrap-response-header</color>(...)
+Variablenauswertung: <color name="red">$common</color>:collection-books</verbatim>
                </page-wide-element>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d9cd641f-29f4-485d-8e67-32519d422b08"
-                     ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2134" ismodule="no">
                
                   <title>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
                   </title>
                   
                      <column-wide-element>
-                  <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter  und  dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
+                  <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter <code>
+                        <nb>if</nb>
+                     </code> und <code>
+                        <nb>then</nb>
+                     </code> dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery  als Ausdrücke ausgewertet werden.</p>
+                  <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery <code>
+                        <nb>if..then</nb>
+                     </code> als Ausdrücke ausgewertet werden.</p>
                </column-wide-element>
                      <column-wide-element>
                   <p>Das ist einerseits sehr praktisch, weil es richtig angewandt den Code verkürzt und damit das Wesentliche herausstellt, kann aber auch weiter zur allg. Verwirrung bzgl. des kryptischen XQuery Codes beitragen.</p>
@@ -2594,8 +2580,7 @@ Variablenauswertung: $common:collection-books</verbatim>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="382bb96a-5a06-460c-8d69-4c4cd613297c"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2159" ismodule="no">
             
                <title>
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
@@ -2618,37 +2603,37 @@ wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
                <p>Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;k:kunde&gt;
-  &lt;k:id&gt;1&lt;/k:id&gt;
-  &lt;k:name&gt;Alex&lt;/k:name&gt;
-  &lt;k:eMail&gt;tekturcms@gmail.com&lt;/k:eMail&gt;
-&lt;/k:kunde&gt;
+               <verbatim><color name="green">&lt;k:kunde&gt;</color>
+  <color name="green">&lt;k:id&gt;</color>1<color name="green">&lt;/k:id&gt;</color>
+  <color name="green">&lt;k:name&gt;</color>Alex<color name="green">&lt;/k:name&gt;</color>
+  <color name="green">&lt;k:eMail&gt;</color>tekturcms@gmail.com<color name="green">&lt;/k:eMail&gt;</color>
+<color name="green">&lt;/k:kunde&gt;</color>
 
-&lt;k:kunde&gt;
-  &lt;k:id&gt;2&lt;/k:id&gt;
-  &lt;k:name&gt;Horst&lt;/k:name&gt;
-  &lt;k:eMail&gt;horst@horst.de&lt;/k:eMail&gt;
-&lt;/k:kunde&gt;
+<color name="green">&lt;k:kunde&gt;</color>
+  <color name="green">&lt;k:id&gt;</color>2<color name="green">&lt;/k:id&gt;</color>
+  <color name="green">&lt;k:name&gt;</color>Horst<color name="green">&lt;/k:name&gt;</color>
+  <color name="green">&lt;k:eMail&gt;</color>horst@horst.de<color name="green">&lt;/k:eMail&gt;</color>
+<color name="green">&lt;/k:kunde&gt;</color>
 
-&lt;k:kunde&gt;
-  &lt;k:id&gt;3&lt;/k:id&gt;
-  &lt;k:name&gt;Gundula&lt;/k:name&gt;
-  &lt;k:eMail&gt;gundl@gundula.de&lt;/k:eMail&gt;
-&lt;/k:kunde&gt;
+<color name="green">&lt;k:kunde&gt;</color>
+  <color name="green">&lt;k:id&gt;</color>3<color name="green">&lt;/k:id&gt;</color>
+  <color name="green">&lt;k:name&gt;</color>Gundula<color name="green">&lt;/k:name&gt;</color>
+  <color name="green">&lt;k:eMail&gt;</color>gundl@gundula.de<color name="green">&lt;/k:eMail&gt;</color>
+<color name="green">&lt;/k:kunde&gt;</color>
 
-&lt;b:bestellung&gt;
-  &lt;b:id&gt;1&lt;/b:id&gt;
-  &lt;b:datum&gt;02.01.2019&lt;/b:datum&gt;
-  &lt;b:preis&gt;99.90&lt;/b:preis&gt;
-  &lt;kunde-id&gt;2&lt;/kunde-id&gt;
-&lt;/b:bestellung&gt;
+<color name="green">&lt;b:bestellung&gt;</color>
+  <color name="green">&lt;b:id&gt;</color>1<color name="green">&lt;/b:id&gt;</color>
+  <color name="green">&lt;b:datum&gt;</color>02.01.2019<color name="green">&lt;/b:datum&gt;</color>
+  <color name="green">&lt;b:preis&gt;</color>99.90<color name="green">&lt;/b:preis&gt;</color>
+  <color name="green">&lt;kunde-id&gt;</color>2<color name="green">&lt;/kunde-id&gt;</color>
+<color name="green">&lt;/b:bestellung&gt;</color>
 
-&lt;b:bestellung&gt;
-  &lt;b:id&gt;2&lt;/b:id&gt;
-  &lt;b:datum&gt;03.01.2019&lt;/b:datum&gt;
-  &lt;b:preis&gt;68.90&lt;/b:preis&gt;
-  &lt;b:kunde-id&gt;1&lt;/b:kunde-id&gt;
-&lt;/b:bestellung&gt;</verbatim>
+<color name="green">&lt;b:bestellung&gt;</color>
+  <color name="green">&lt;b:id&gt;</color>2<color name="green">&lt;/b:id&gt;</color>
+  <color name="green">&lt;b:datum&gt;</color>03.01.2019<color name="green">&lt;/b:datum&gt;</color>
+  <color name="green">&lt;b:preis&gt;</color>68.90<color name="green">&lt;/b:preis&gt;</color>
+  <color name="green">&lt;b:kunde-id&gt;</color>1<color name="green">&lt;/b:kunde-id&gt;</color>
+<color name="green">&lt;/b:bestellung&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
@@ -2684,53 +2669,53 @@ würden wir zwei Templates brauchen, die so aussehen:</p>
                   <page-wide-element>
                <verbatim>xquery version "1.0-ml";
 
-import module namespace tde = "http://marklogic.com/xdmp/tde" 
+import <color name="brown">module </color><color name="brown">namespace </color>tde = "http://marklogic.com/xdmp/tde" 
                             at "/MarkLogic/tde.xqy";
 
-let $sql-view-name := 'kunden-view.xml'
-let $sql-view := &lt;template xmlns="http://marklogic.com/xdmp/tde"&gt;
-   &lt;path-namespaces&gt;
-      &lt;path-namespace&gt;
-         &lt;prefix&gt;k&lt;/prefix&gt;
-         &lt;namespace-uri&gt;https://tekturcms.de/schema/kunde/1.0&lt;/namespace-uri&gt;
-      &lt;/path-namespace&gt;
-   &lt;/path-namespaces&gt;
-   &lt;context&gt;/k:kunde&lt;/context&gt;
-   &lt;collections&gt;
-      &lt;collections-and&gt;
-         &lt;collection&gt;/kunden&lt;/collection&gt;
-      &lt;/collections-and&gt;
-   &lt;/collections&gt;
-   &lt;rows&gt;
-      &lt;row&gt;
-         &lt;schema-name&gt;kunden_schema&lt;/schema-name&gt;
-         &lt;view-name&gt;kunden_view&lt;/view-name&gt;
-         &lt;columns&gt;
-            &lt;column&gt;
-               &lt;name&gt;id&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;k:id&lt;/val&gt;
-               &lt;nullable&gt;true&lt;/nullable&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;datum&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;k:datum&lt;/val&gt;
-               &lt;nullable&gt;true&lt;/nullable&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;eMail&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;k:eMail&lt;/val&gt;
-               &lt;nullable&gt;true&lt;/nullable&gt;
-            &lt;/column&gt;
-         &lt;/columns&gt;
-      &lt;/row&gt;
-   &lt;/rows&gt;
-&lt;/template&gt;
+<color name="brown">let </color><color name="red">$sql-view-name</color> := 'kunden-view.xml'
+<color name="brown">let </color><color name="red">$sql-view</color> := <color name="green">&lt;template </color><color name="green">xmlns</color>="http://marklogic.com/xdmp/tde"<color name="green">&gt;</color>
+   <color name="green">&lt;path-namespaces&gt;</color>
+      <color name="green">&lt;path-namespace&gt;</color>
+         <color name="green">&lt;prefix&gt;</color>k<color name="green">&lt;/prefix&gt;</color>
+         <color name="green">&lt;namespace-uri&gt;</color>https://tekturcms.de/schema/kunde/1.0<color name="green">&lt;/namespace-uri&gt;</color>
+      <color name="green">&lt;/path-namespace&gt;</color>
+   <color name="green">&lt;/path-namespaces&gt;</color>
+   <color name="green">&lt;context&gt;</color>/k:kunde<color name="green">&lt;/context&gt;</color>
+   <color name="green">&lt;collections&gt;</color>
+      <color name="green">&lt;collections-and&gt;</color>
+         <color name="green">&lt;collection&gt;</color>/kunden<color name="green">&lt;/collection&gt;</color>
+      <color name="green">&lt;/collections-and&gt;</color>
+   <color name="green">&lt;/collections&gt;</color>
+   <color name="green">&lt;rows&gt;</color>
+      <color name="green">&lt;row&gt;</color>
+         <color name="green">&lt;schema-name&gt;</color>kunden_schema<color name="green">&lt;/schema-name&gt;</color>
+         <color name="green">&lt;view-name&gt;</color>kunden_view<color name="green">&lt;/view-name&gt;</color>
+         <color name="green">&lt;columns&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>id<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>k:id<color name="green">&lt;/val&gt;</color>
+               <color name="green">&lt;nullable&gt;</color>true<color name="green">&lt;/nullable&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>datum<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>k:datum<color name="green">&lt;/val&gt;</color>
+               <color name="green">&lt;nullable&gt;</color>true<color name="green">&lt;/nullable&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>eMail<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>k:eMail<color name="green">&lt;/val&gt;</color>
+               <color name="green">&lt;nullable&gt;</color>true<color name="green">&lt;/nullable&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+         <color name="green">&lt;/columns&gt;</color>
+      <color name="green">&lt;/row&gt;</color>
+   <color name="green">&lt;/rows&gt;</color>
+<color name="green">&lt;/template&gt;</color>
 return(
-  tde:template-insert(concat('/templates/', $sql-view-name), 
-                      $sql-view, xdmp:default-permissions())
+  <color name="blue">tde:template-insert</color>(concat('/templates/', <color name="red">$sql-view-name</color>), 
+                      <color name="red">$sql-view</color>, <color name="blue">xdmp:default-permissions</color>())
 )</verbatim>
             </page-wide-element>
                   <column-wide-element>
@@ -2738,40 +2723,40 @@ return(
             </column-wide-element>
                   <page-wide-element>
                <verbatim>[...]
-   &lt;rows&gt;
-      &lt;row&gt;
-         &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
-         &lt;view-name&gt;bestellungen_view&lt;/view-name&gt;
-         &lt;columns&gt;
-            &lt;column&gt;
-               &lt;name&gt;id&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:id&lt;/val&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;datum&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:datum&lt;/val&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;preis&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:preis&lt;/val&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;kunde_id&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:kunde-id&lt;/val&gt;
-            &lt;/column&gt;
-         &lt;/columns&gt;
-      &lt;/row&gt;
+   <color name="green">&lt;rows&gt;</color>
+      <color name="green">&lt;row&gt;</color>
+         <color name="green">&lt;schema-name&gt;</color>bestellungen_schema<color name="green">&lt;/schema-name&gt;</color>
+         <color name="green">&lt;view-name&gt;</color>bestellungen_view<color name="green">&lt;/view-name&gt;</color>
+         <color name="green">&lt;columns&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>id<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:id<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>datum<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:datum<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>preis<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:preis<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>kunde_id<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:kunde-id<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+         <color name="green">&lt;/columns&gt;</color>
+      <color name="green">&lt;/row&gt;</color>
 [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
+               <verbatim><color name="blue">xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k 
           INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</verbatim>
             </page-wide-element>
                   <column-wide-element>
@@ -2780,153 +2765,153 @@ return(
                   <page-wide-element>
                <verbatim>xquery version "1.0-ml";
 
-declare namespace k = 'http://www.tekturcms.de/kunden';
-declare namespace b = 'http://www.tekturcms.de/bestellungen';
+<color name="brown">declare </color><color name="brown">namespace </color>k = 'http://www.tekturcms.de/kunden';
+<color name="brown">declare </color><color name="brown">namespace </color>b = 'http://www.tekturcms.de/bestellungen';
 
-import module namespace tde = "http://marklogic.com/xdmp/tde" at "/MarkLogic/tde.xqy";
+import <color name="brown">module </color><color name="brown">namespace </color>tde = "http://marklogic.com/xdmp/tde" at "/MarkLogic/tde.xqy";
 
-declare function local:loadKunde($id, $name, $eMail)
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:loadKunde</color>(<color name="red">$id</color>, <color name="red">$name</color>, <color name="red">$eMail</color>)
 {
-  let $root :=
-  &lt;k:kunde&gt;
-    &lt;k:id&gt;{ $id }&lt;/k:id&gt;
-    &lt;k:name&gt;{ $name }&lt;/k:name&gt;
-    &lt;k:eMail&gt;{ $eMail }&lt;/k:eMail&gt;
-  &lt;/k:kunde&gt;,
-  $options :=
-  &lt;options xmlns="xdmp:document-insert"&gt;  
-    &lt;permissions&gt;{ xdmp:default-permissions() }&lt;/permissions&gt;
-    &lt;collections&gt;
-      &lt;collection&gt;/kunden&lt;/collection&gt;
-    &lt;/collections&gt;
-  &lt;/options&gt;,
-  $fname := concat('/kunden/',$id,".xml")
-  return xdmp:document-insert($fname,$root,$options)
+  <color name="brown">let </color><color name="red">$root</color> :=
+  <color name="green">&lt;k:kunde&gt;</color>
+    <color name="green">&lt;k:id&gt;</color>{ <color name="red">$id</color> }<color name="green">&lt;/k:id&gt;</color>
+    <color name="green">&lt;k:name&gt;</color>{ <color name="red">$name</color> }<color name="green">&lt;/k:name&gt;</color>
+    <color name="green">&lt;k:eMail&gt;</color>{ <color name="red">$eMail</color> }<color name="green">&lt;/k:eMail&gt;</color>
+  <color name="green">&lt;/k:kunde&gt;</color>,
+  <color name="red">$options</color> :=
+  <color name="green">&lt;options </color><color name="green">xmlns</color>="xdmp:document-insert"<color name="green">&gt;</color>  
+    <color name="green">&lt;permissions&gt;</color>{ <color name="blue">xdmp:default-permissions</color>() }<color name="green">&lt;/permissions&gt;</color>
+    <color name="green">&lt;collections&gt;</color>
+      <color name="green">&lt;collection&gt;</color>/kunden<color name="green">&lt;/collection&gt;</color>
+    <color name="green">&lt;/collections&gt;</color>
+  <color name="green">&lt;/options&gt;</color>,
+  <color name="red">$fname</color> := concat('/kunden/',<color name="red">$id</color>,".xml")
+  <color name="brown">return </color><color name="blue">xdmp:document-insert</color>(<color name="red">$fname</color>,<color name="red">$root</color>,<color name="red">$options</color>)
 };
 
-declare function local:loadBestellung($id, $datum, $preis, $kunde-id)
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:loadBestellung</color>(<color name="red">$id</color>, <color name="red">$datum</color>, <color name="red">$preis</color>, <color name="red">$kunde-id</color>)
 {
-  let $root :=
-  &lt;b:bestellung&gt;
-    &lt;b:id&gt;{ $id }&lt;/b:id&gt;
-    &lt;b:datum&gt;{ $datum }&lt;/b:datum&gt;
-    &lt;b:preis&gt;{ $preis }&lt;/b:preis&gt;
-    &lt;b:kunde-id&gt;{ $kunde-id }&lt;/b:kunde-id&gt;
-  &lt;/b:bestellung&gt;,
-  $options :=
-  &lt;options xmlns="xdmp:document-insert"&gt;  
-    &lt;permissions&gt;{ xdmp:default-permissions() }&lt;/permissions&gt;
-    &lt;collections&gt;
-      &lt;collection&gt;/bestellungen&lt;/collection&gt;
-    &lt;/collections&gt;
-  &lt;/options&gt;,
-  $fname := concat('/bestellungen/',$id,".xml")
-  return xdmp:document-insert($fname,$root,$options)
+  <color name="brown">let </color><color name="red">$root</color> :=
+  <color name="green">&lt;b:bestellung&gt;</color>
+    <color name="green">&lt;b:id&gt;</color>{ <color name="red">$id</color> }<color name="green">&lt;/b:id&gt;</color>
+    <color name="green">&lt;b:datum&gt;</color>{ <color name="red">$datum</color> }<color name="green">&lt;/b:datum&gt;</color>
+    <color name="green">&lt;b:preis&gt;</color>{ <color name="red">$preis</color> }<color name="green">&lt;/b:preis&gt;</color>
+    <color name="green">&lt;b:kunde-id&gt;</color>{ <color name="red">$kunde-id</color> }<color name="green">&lt;/b:kunde-id&gt;</color>
+  <color name="green">&lt;/b:bestellung&gt;</color>,
+  <color name="red">$options</color> :=
+  <color name="green">&lt;options </color><color name="green">xmlns</color>="xdmp:document-insert"<color name="green">&gt;</color>  
+    <color name="green">&lt;permissions&gt;</color>{ <color name="blue">xdmp:default-permissions</color>() }<color name="green">&lt;/permissions&gt;</color>
+    <color name="green">&lt;collections&gt;</color>
+      <color name="green">&lt;collection&gt;</color>/bestellungen<color name="green">&lt;/collection&gt;</color>
+    <color name="green">&lt;/collections&gt;</color>
+  <color name="green">&lt;/options&gt;</color>,
+  <color name="red">$fname</color> := concat('/bestellungen/',<color name="red">$id</color>,".xml")
+  <color name="brown">return </color><color name="blue">xdmp:document-insert</color>(<color name="red">$fname</color>,<color name="red">$root</color>,<color name="red">$options</color>)
 };
 
-declare function local:insertKundenSchema()
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:insertKundenSchema</color>()
 {
-  let $sql-view-name := 'kunden-view.xml',
-      $sql-view := &lt;template xmlns="http://marklogic.com/xdmp/tde"&gt;
-    &lt;path-namespaces&gt;
-      &lt;path-namespace&gt;
-        &lt;prefix&gt;k&lt;/prefix&gt;
-        &lt;namespace-uri&gt;http://www.tekturcms.de/kunden&lt;/namespace-uri&gt;
-       &lt;/path-namespace&gt;
-    &lt;/path-namespaces&gt;
-    &lt;context&gt;/k:kunde&lt;/context&gt;
-     &lt;collections&gt;
-       &lt;collections-and&gt;
-         &lt;collection&gt;/kunden&lt;/collection&gt;
-      &lt;/collections-and&gt;
-     &lt;/collections&gt;
-     &lt;rows&gt;
-       &lt;row&gt;
-         &lt;schema-name&gt;kunden_schema&lt;/schema-name&gt;
-         &lt;view-name&gt;kunden_view&lt;/view-name&gt;
-         &lt;columns&gt;
-            &lt;column&gt;
-               &lt;name&gt;id&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;k:id&lt;/val&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;name&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;k:name&lt;/val&gt;
-            &lt;/column&gt;
-          &lt;column&gt;
-             &lt;name&gt;eMail&lt;/name&gt;
-             &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-             &lt;val&gt;k:eMail&lt;/val&gt;
-          &lt;/column&gt;
-        &lt;/columns&gt;
-      &lt;/row&gt;
-    &lt;/rows&gt;
-  &lt;/template&gt;
+  <color name="brown">let </color><color name="red">$sql-view-name</color> := 'kunden-view.xml',
+      <color name="red">$sql-view</color> := <color name="green">&lt;template </color><color name="green">xmlns</color>="http://marklogic.com/xdmp/tde"<color name="green">&gt;</color>
+    <color name="green">&lt;path-namespaces&gt;</color>
+      <color name="green">&lt;path-namespace&gt;</color>
+        <color name="green">&lt;prefix&gt;</color>k<color name="green">&lt;/prefix&gt;</color>
+        <color name="green">&lt;namespace-uri&gt;</color>http://www.tekturcms.de/kunden<color name="green">&lt;/namespace-uri&gt;</color>
+       <color name="green">&lt;/path-namespace&gt;</color>
+    <color name="green">&lt;/path-namespaces&gt;</color>
+    <color name="green">&lt;context&gt;</color>/k:kunde<color name="green">&lt;/context&gt;</color>
+     <color name="green">&lt;collections&gt;</color>
+       <color name="green">&lt;collections-and&gt;</color>
+         <color name="green">&lt;collection&gt;</color>/kunden<color name="green">&lt;/collection&gt;</color>
+      <color name="green">&lt;/collections-and&gt;</color>
+     <color name="green">&lt;/collections&gt;</color>
+     <color name="green">&lt;rows&gt;</color>
+       <color name="green">&lt;row&gt;</color>
+         <color name="green">&lt;schema-name&gt;</color>kunden_schema<color name="green">&lt;/schema-name&gt;</color>
+         <color name="green">&lt;view-name&gt;</color>kunden_view<color name="green">&lt;/view-name&gt;</color>
+         <color name="green">&lt;columns&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>id<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>k:id<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>name<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>k:name<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+          <color name="green">&lt;column&gt;</color>
+             <color name="green">&lt;name&gt;</color>eMail<color name="green">&lt;/name&gt;</color>
+             <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+             <color name="green">&lt;val&gt;</color>k:eMail<color name="green">&lt;/val&gt;</color>
+          <color name="green">&lt;/column&gt;</color>
+        <color name="green">&lt;/columns&gt;</color>
+      <color name="green">&lt;/row&gt;</color>
+    <color name="green">&lt;/rows&gt;</color>
+  <color name="green">&lt;/template&gt;</color>
   return
-    tde:template-insert(concat('/templates/', 
-                        $sql-view-name), $sql-view, xdmp:default-permissions())
+    <color name="blue">tde:template-insert</color>(concat('/templates/', 
+                        <color name="red">$sql-view-name</color>), <color name="red">$sql-view</color>, <color name="blue">xdmp:default-permissions</color>())
 };
 
-declare function local:insertBestellungenSchema()
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:insertBestellungenSchema</color>()
 {
-  let $sql-view-name := 'bestellungen-view.xml',
-      $sql-view := &lt;template xmlns="http://marklogic.com/xdmp/tde"&gt;
-    &lt;path-namespaces&gt;
-      &lt;path-namespace&gt;
-        &lt;prefix&gt;b&lt;/prefix&gt;
-        &lt;namespace-uri&gt;http://www.tekturcms.de/bestellungen&lt;/namespace-uri&gt;
-       &lt;/path-namespace&gt;
-    &lt;/path-namespaces&gt;
-    &lt;context&gt;/b:bestellung&lt;/context&gt;
-     &lt;collections&gt;
-       &lt;collections-and&gt;
-         &lt;collection&gt;/bestellungen&lt;/collection&gt;
-      &lt;/collections-and&gt;
-     &lt;/collections&gt;
-     &lt;rows&gt;
-       &lt;row&gt;
-         &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
-         &lt;view-name&gt;bestellungen_view&lt;/view-name&gt;
-         &lt;columns&gt;
-            &lt;column&gt;
-               &lt;name&gt;id&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:id&lt;/val&gt;
-            &lt;/column&gt;
-            &lt;column&gt;
-               &lt;name&gt;datum&lt;/name&gt;
-               &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-               &lt;val&gt;b:datum&lt;/val&gt;
-            &lt;/column&gt;
-          &lt;column&gt;
-             &lt;name&gt;preis&lt;/name&gt;
-             &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-             &lt;val&gt;b:preis&lt;/val&gt;
-          &lt;/column&gt;
-          &lt;column&gt;
-             &lt;name&gt;kunde_id&lt;/name&gt;
-             &lt;scalar-type&gt;string&lt;/scalar-type&gt;
-             &lt;val&gt;b:kunde-id&lt;/val&gt;
-          &lt;/column&gt;
-        &lt;/columns&gt;
-      &lt;/row&gt;
-    &lt;/rows&gt;
-  &lt;/template&gt;
+  <color name="brown">let </color><color name="red">$sql-view-name</color> := 'bestellungen-view.xml',
+      <color name="red">$sql-view</color> := <color name="green">&lt;template </color><color name="green">xmlns</color>="http://marklogic.com/xdmp/tde"<color name="green">&gt;</color>
+    <color name="green">&lt;path-namespaces&gt;</color>
+      <color name="green">&lt;path-namespace&gt;</color>
+        <color name="green">&lt;prefix&gt;</color>b<color name="green">&lt;/prefix&gt;</color>
+        <color name="green">&lt;namespace-uri&gt;</color>http://www.tekturcms.de/bestellungen<color name="green">&lt;/namespace-uri&gt;</color>
+       <color name="green">&lt;/path-namespace&gt;</color>
+    <color name="green">&lt;/path-namespaces&gt;</color>
+    <color name="green">&lt;context&gt;</color>/b:bestellung<color name="green">&lt;/context&gt;</color>
+     <color name="green">&lt;collections&gt;</color>
+       <color name="green">&lt;collections-and&gt;</color>
+         <color name="green">&lt;collection&gt;</color>/bestellungen<color name="green">&lt;/collection&gt;</color>
+      <color name="green">&lt;/collections-and&gt;</color>
+     <color name="green">&lt;/collections&gt;</color>
+     <color name="green">&lt;rows&gt;</color>
+       <color name="green">&lt;row&gt;</color>
+         <color name="green">&lt;schema-name&gt;</color>bestellungen_schema<color name="green">&lt;/schema-name&gt;</color>
+         <color name="green">&lt;view-name&gt;</color>bestellungen_view<color name="green">&lt;/view-name&gt;</color>
+         <color name="green">&lt;columns&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>id<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:id<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+            <color name="green">&lt;column&gt;</color>
+               <color name="green">&lt;name&gt;</color>datum<color name="green">&lt;/name&gt;</color>
+               <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+               <color name="green">&lt;val&gt;</color>b:datum<color name="green">&lt;/val&gt;</color>
+            <color name="green">&lt;/column&gt;</color>
+          <color name="green">&lt;column&gt;</color>
+             <color name="green">&lt;name&gt;</color>preis<color name="green">&lt;/name&gt;</color>
+             <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+             <color name="green">&lt;val&gt;</color>b:preis<color name="green">&lt;/val&gt;</color>
+          <color name="green">&lt;/column&gt;</color>
+          <color name="green">&lt;column&gt;</color>
+             <color name="green">&lt;name&gt;</color>kunde_id<color name="green">&lt;/name&gt;</color>
+             <color name="green">&lt;scalar-type&gt;</color>string<color name="green">&lt;/scalar-type&gt;</color>
+             <color name="green">&lt;val&gt;</color>b:kunde-id<color name="green">&lt;/val&gt;</color>
+          <color name="green">&lt;/column&gt;</color>
+        <color name="green">&lt;/columns&gt;</color>
+      <color name="green">&lt;/row&gt;</color>
+    <color name="green">&lt;/rows&gt;</color>
+  <color name="green">&lt;/template&gt;</color>
   return
-    tde:template-insert(concat('/templates/', 
-                        $sql-view-name), $sql-view, xdmp:default-permissions())
-};
-local:loadKunde("1","Alex","tekturcms@gmail.com"),
-local:loadKunde("2","Horst","horst@horst.de"),
-local:loadKunde("3","Gundula","gundl@gundula.de"),
-local:loadBestellung("1","02.01.2019","99.90","2"),
-local:loadBestellung("2","03.01.2019","68.90","1"),
-local:insertKundenSchema(),
-local:insertBestellungenSchema(),
-
-xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
+    <color name="blue">tde:template-insert</color>(concat('/templates/', 
+                        <color name="red">$sql-view-name</color>), <color name="red">$sql-view</color>, <color name="blue">xdmp:default-permissions</color>())
+};<color name="blue">
+local:loadKunde</color>("1","Alex","tekturcms@gmail.com"),<color name="blue">
+local:loadKunde</color>("2","Horst","horst@horst.de"),<color name="blue">
+local:loadKunde</color>("3","Gundula","gundl@gundula.de"),<color name="blue">
+local:loadBestellung</color>("1","02.01.2019","99.90","2"),<color name="blue">
+local:loadBestellung</color>("2","03.01.2019","68.90","1"),<color name="blue">
+local:insertKundenSchema</color>(),<color name="blue">
+local:insertBestellungenSchema</color>(),
+<color name="blue">
+xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
           bestellungen_view b ON k.id = b.kunde_id")</verbatim>
             </page-wide-element>
                   <column-wide-element>
@@ -2955,8 +2940,7 @@ xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2238" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -2967,8 +2951,7 @@ xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2255" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -3059,10 +3042,10 @@ try {
                <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>saxon $script_dir/$project_name_validation.sch $script_dir/schematron/iso_dsdl_include.xsl
- | \ saxon -s:- $script_dir/schematron/iso_abstract_expand.xsl | \
-saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
-  <b>generate-fired-rule</b>=false &gt; $script_dir/$project_name_validation.xsl</verbatim>
+               <verbatim>saxon <color name="red">$script</color>_dir/<color name="red">$project</color>_name_validation.sch <color name="red">$script</color>_dir/schematron/iso_dsdl_include.xsl
+ | \ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_abstract_expand.xsl | \
+saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.xsl \
+  <b>generate-fired-rule</b>=false &gt; <color name="red">$script</color>_dir/<color name="red">$project</color>_name_validation.xsl</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Der Prozess zum Erzeugen des projektspezifischen Validerungs-XSLT-Skripts ist dreistufig und wird über die folgenden XSLT Schritte abgearbeitet.</p>
@@ -3088,22 +3071,20 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>saxon $xml_instance_to_check.xml $script_dir/$project_name_validation.xsl \
-  &gt; $validation-result.xml</verbatim>
+               <verbatim>saxon <color name="red">$xml</color>_instance_to_check.xml <color name="red">$script</color>_dir/<color name="red">$project</color>_name_validation.xsl \
+  &gt; <color name="red">$validation-result</color>.xml</verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Die Ausgabe dieses Prüfprozesses ist eine XML Datei mit den Fehlern in der Eingabe-XML-Instanz, die weiterverarbeitet werden kann, beispielsweise als Filterkriterium für einen nachfolgenden Prozessschritt. Ihr Inhalt dieser Datei sieht z.B. wie folgt aus:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl" [...]
-  &lt;svrl:active-pattern document="file:/Users/alex/xml_instance_to_check.xml" 
-   id="default" name="default"/&gt;
-  &lt;svrl:failed-assert test="count(key('unique-ids', current()))=1"&gt;
-    &lt;svrl:text&gt;ID is not unique!&lt;/svrl:text&gt;
-    &lt;svrl:diagnostic-reference diagnostic="default"&gt;
-      &lt;bk:id xmlns:bk="http://tekturcms/namespaces/book"&gt;1234-5678-9&lt;/my:id&gt;
-    &lt;/svrl:diagnostic-reference&gt;
-  &lt;/svrl:failed-assert&gt;
+               <verbatim><color name="green">&lt;svrl:schematron-output </color><color name="green">xmlns:svrl</color>="http://purl.oclc.org/dsdl/svrl" <color name="green"></color>= <color name="green"></color>= <color name="green">document</color>="file:/Users/alex/xml_instance_to_check.xml" <color name="green">id</color>="default" <color name="green">name</color>="default"/<color name="green">&gt;</color>
+  <color name="green">&lt;svrl:failed-assert </color><color name="green">test</color>="count(key('unique-ids', <color name="green">current()))</color>=1"<color name="green">&gt;</color>
+    <color name="green">&lt;svrl:text&gt;</color>ID is not unique!<color name="green">&lt;/svrl:text&gt;</color>
+    <color name="green">&lt;svrl:diagnostic-reference </color><color name="green">diagnostic</color>="default"<color name="green">&gt;</color>
+      <color name="green">&lt;bk:id </color><color name="green">xmlns:bk</color>="http://tekturcms/namespaces/book"<color name="green">&gt;</color>1234-5678-9<color name="green">&lt;/my:id&gt;</color>
+    <color name="green">&lt;/svrl:diagnostic-reference&gt;</color>
+  <color name="green">&lt;/svrl:failed-assert&gt;</color>
   [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
@@ -3113,26 +3094,22 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
-  &lt;xsl:key name="unique-ids" match="bk:id" use="."/&gt;
-  &lt;sch:let name="date-regex" value="'^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])
+               <verbatim><color name="green">&lt;schema </color><color name="green">xmlns:sch</color>="http://purl.oclc.org/dsdl/schematron" <color name="green"></color>= <color name="green"></color>= <color name="green">name</color>="unique-ids" <color name="green">match</color>="bk:id" <color name="green">use</color>="."/<color name="green">&gt;</color>
+  &lt;sch:<color name="brown">let </color>name="date-regex" value="'^((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])
                                      -(0[1-9]|[12][0-9]|3[01])$'"/&gt;
-  &lt;sch:pattern id="default"&gt;
-    &lt;sch:rule context="book"&gt;
-      &lt;sch:assert id="check-book-id" role="error" test="count(key('unique-ids', bk:id))=1" 
-                  diagnostics="default"&gt;ID is not unique!&lt;/sch:assert&gt;
-      &lt;sch:assert id="check-book-published" role="error" 
-                  test="matches(bk:published,$date-regex)
-    &lt;/sch:rule&gt;
+  <color name="green">&lt;sch:pattern </color><color name="green">id</color>="default"<color name="green">&gt;</color>
+    <color name="green">&lt;sch:rule </color><color name="green">context</color>="book"<color name="green">&gt;</color>
+      <color name="green">&lt;sch:assert </color><color name="green">id</color>="check-book-id" <color name="green">role</color>="error" <color name="green">test</color>="count(key('unique-ids', <color name="green">bk:id))</color>=1" <color name="green">diagnostics</color>="default"<color name="green">&gt;</color>ID is not unique!<color name="green">&lt;/sch:assert&gt;</color>
+      <color name="green">&lt;sch:assert </color><color name="green">id</color>="check-book-published" <color name="green">role</color>="error" <color name="green">test</color>="matches(bk:published,$date-regex) <color name="green"></color>=<color name="green">&gt;</color>
     [...]
-  &lt;/sch:pattern&gt;
-  &lt;sch:diagnostics&gt;
-    &lt;sch:diagnostic id="default"&gt;
-      &lt;xsl:element name="bk:id"&gt;
-        &lt;xsl:value-of select="bk:id"/&gt;
-      &lt;/xsl:element&gt;
-    &lt;/sch:diagnostic&gt;
-  &lt;/sch:diagnostics&gt;</verbatim>
+  <color name="green">&lt;/sch:pattern&gt;</color>
+  <color name="green">&lt;sch:diagnostics&gt;</color>
+    <color name="green">&lt;sch:diagnostic </color><color name="green">id</color>="default"<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;xsl:element</bg> </color><color name="green">name</color>="bk:id"<color name="green">&gt;</color>
+        <color name="green"><bg>&lt;xsl:value-of</bg> </color><color name="green">select</color>="bk:id"/<color name="green">&gt;</color>
+      <color name="green"><bg>&lt;/xsl:element&gt;</bg></color>
+    <color name="green">&lt;/sch:diagnostic&gt;</color>
+  <color name="green">&lt;/sch:diagnostics&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Neben der "successful" und "failed" Regeln ist auch die Deklaration von Funktionen und Variablen im Body der Regelbasis erlaubt. Dies ermöglicht komplexe Bedingungen, bespw. durch das Nachschlagen in einer Lookup-Tabelle abzuprüfen. </p>
@@ -3140,8 +3117,7 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="cc183707-5352-4c9c-9c31-68047a882d0f"
-                  ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2438" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -3163,22 +3139,22 @@ Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem 
 Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;test-szenario&gt;
-  &lt;testfall&gt;
-    &lt;personen&gt;
-      &lt;person&gt;
-        &lt;vorname&gt;Horst&lt;/vorname&gt;
+               <verbatim><color name="green">&lt;test-szenario&gt;</color>
+  <color name="green">&lt;testfall&gt;</color>
+    <color name="green">&lt;personen&gt;</color>
+      <color name="green">&lt;person&gt;</color>
+        <color name="green">&lt;vorname&gt;</color>Horst<color name="green">&lt;/vorname&gt;</color>
         &lt;<b>nachname</b>&gt;Schlämmer&lt;/<b>nachname</b>&gt;
-        &lt;gewicht&gt;100&lt;/gewicht&gt;
-      &lt;/person&gt;
-      &lt;person&gt;
-        &lt;vorname&gt;Gundula&lt;/vorname&gt;
+        <color name="green">&lt;gewicht&gt;</color>100<color name="green">&lt;/gewicht&gt;</color>
+      <color name="green">&lt;/person&gt;</color>
+      <color name="green">&lt;person&gt;</color>
+        <color name="green">&lt;vorname&gt;</color>Gundula<color name="green">&lt;/vorname&gt;</color>
         &lt;<b>nachname</b>&gt;&lt;/<b>nachname</b>&gt;
-        &lt;gewicht&gt;60&lt;/gewicht&gt;
-      &lt;/person&gt;
-    &lt;/personen&gt;
-  &lt;/testfall&gt;
-&lt;/test-szenario&gt;</verbatim>
+        <color name="green">&lt;gewicht&gt;</color>60<color name="green">&lt;/gewicht&gt;</color>
+      <color name="green">&lt;/person&gt;</color>
+    <color name="green">&lt;/personen&gt;</color>
+  <color name="green">&lt;/testfall&gt;</color>
+<color name="green">&lt;/test-szenario&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>in einer XSpec Datei *. werden <b>Assert- und Not-Assert-Methoden</b> 
@@ -3187,14 +3163,13 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
                   </xe>deklariert:</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
-               schematron="test.sch"&gt;
-  &lt;x:scenario label="ALL"&gt;
-    &lt;x:context href="test.xml"/&gt;
+               <verbatim><color name="green">&lt;x:description </color><color name="green">xslt-version</color>="2.0" <color name="green">xmlns:x</color>="http://www.jenitennison.com/xslt/xspec" <color name="green">schematron</color>="test.sch"<color name="green">&gt;</color>
+  <color name="green">&lt;x:scenario </color><color name="green">label</color>="ALL"<color name="green">&gt;</color>
+    <color name="green">&lt;x:context </color><color name="green">href</color>="test.xml"/<color name="green">&gt;</color>
     &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b>nachname</b>"/&gt;
     &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b>nachname</b>"/&gt;
-  &lt;/x:scenario&gt;
-&lt;/x:description&gt;</verbatim>
+  <color name="green">&lt;/x:scenario&gt;</color>
+<color name="green">&lt;/x:description&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
@@ -3211,16 +3186,15 @@ reichen zwei Regeln, um den Testfall vollständig abzudecken.</p>
 die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p>
             </column-wide-element>
                   <page-wide-element>
-               <verbatim>&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
-            xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
-  &lt;sch:pattern id="main"&gt;
+               <verbatim><color name="green">&lt;sch:schema </color><color name="green">xmlns:sch</color>="http://purl.oclc.org/dsdl/schematron" <color name="green">xmlns:xsl</color>="http://www.w3.org/1999/XSL/Transform" <color name="green">queryBinding</color>="xslt2"<color name="green">&gt;</color>
+  <color name="green">&lt;sch:pattern </color><color name="green">id</color>="main"<color name="green">&gt;</color>
     &lt;sch:rule context="<b>nachname</b>"&gt;
-      &lt;sch:assert id="person-nachname-rule" role="error" test="normalize-space(.)"&gt;
-        Der Nachname der Person mit ID: &lt;sch:value-of select="@id"/&gt; fehlt! 
-      &lt;/sch:assert&gt;
-    &lt;/sch:rule&gt;
-  &lt;/sch:pattern&gt;
-&lt;/sch:schema&gt;</verbatim>
+      <color name="green">&lt;sch:assert </color><color name="green">id</color>="person-nachname-rule" <color name="green">role</color>="error" <color name="green">test</color>="normalize-space(.)"<color name="green">&gt;</color>
+        Der Nachname der Person mit ID: <color name="green">&lt;sch:value-of </color><color name="green">select</color>="@id"/<color name="green">&gt;</color> fehlt! 
+      <color name="green">&lt;/sch:assert&gt;</color>
+    <color name="green">&lt;/sch:rule&gt;</color>
+  <color name="green">&lt;/sch:pattern&gt;</color>
+<color name="green">&lt;/sch:schema&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
                <p>In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p>
@@ -3260,8 +3234,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
-            ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e2541" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -3272,8 +3245,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="7dbb15ce-bbc5-4d91-b977-ed7e8117730e"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2558" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -3355,8 +3327,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="4100d43a-5b71-43ba-a05f-1063fcee8679"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2585" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -3515,8 +3486,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="3dfad2c2-2299-461a-9d80-42237bbb5e89"
-            ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e2810" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -3731,8 +3701,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8"
-               ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2974" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
