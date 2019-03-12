@@ -2,11 +2,11 @@
 <document>
    <title>Entwicklerhandbuch</title>
    <meta>
-      <owner>alex</owner>
-      <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sat Mar 02 2019 17:14:16 </date-of-last-change>
-      <language>de-DE</language>
-      <status>112</status>
+      <owner/>
+      <date-of-creation/>
+      <date-of-last-change/>
+      <language/>
+      <status>UNDEFINED</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -16,24 +16,17 @@
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
 www.github.com/alexdd/Buch</cover-text>
       <structure>
-         <format>book</format>
-         <supplemental-directives/>
-         <toc/>
-         <index/>
-         <footnote-index/>
-         <figure-index/>
-         <chapter-on-right-page/>
-         <cover-backpage/>
+         <format>UNDEFINED</format>
       </structure>
       <design>
-         <layout>margin</layout>
-         <paper-format>A4</paper-format>
-         <page-margin>leftgap</page-margin>
-         <spaces>small</spaces>
-         <header>shortheader</header>
-         <footer>longfooter</footer>
-         <look-and-feel>fashion</look-and-feel>
-         <table-layout>simple</table-layout>
+         <layout>rtf</layout>
+         <paper-format>UNDEFINED</paper-format>
+         <page-margin>UNDEFINED</page-margin>
+         <spaces>UNDEFINED</spaces>
+         <header>UNDEFINED</header>
+         <footer>UNDEFINED</footer>
+         <look-and-feel>UNDEFINED</look-and-feel>
+         <table-layout>UNDEFINED</table-layout>
       </design>
    </meta>
    <chapter hyphenation="yes" chapterpage="no" id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
@@ -981,163 +974,6 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   <p>Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören, was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus.</p>
                </block>
             </content>
-         </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
-                  ismodule="no">
-            <content>
-               <title>
-                  <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
-               </title>
-               <block>
-                  <p>Mit XSLT[[xe1:Konzepte;xe2:Vererbung]] kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
-                  <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
-                  <title>
-                     <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
-                  </title>
-                  <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
-                  <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
-                  <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
-                  <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                              id="ec4e438f-b6cc-4f50-b903-bda598a9003c"
-                              type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
-                  <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
-                  <verbatim>&lt;xsl:choose&gt;
-    &lt;xsl:when test="$myParameter='this_option'"&gt;
-        &lt;!-- do this --&gt;
-    &lt;/xsl:when&gt;
-    &lt;xsl:when test="$myParameter='that_option'"&gt;
-        &lt;!-- do that --&gt;
-    &lt;/xsl:when&gt;
-        [...]
-&lt;/xsl:choose&gt;</verbatim>
-                  <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante[[xe1:Format- und Produktvarianten]] gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung"[[xe1:Konzepte;xe2:Generalisierung und Spezialisierung]] überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
-                  <verbatim>&lt;xsl:template name="render-header"&gt;
-    &lt;!-- print logo on the left side spanning two rows--&gt;
-    &lt;!-- print some metadata right side first row --&gt;
-    &lt;!-- print a running header right side second row --&gt;
-&lt;/xsl:template&gt;</verbatim>
-                  <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
-                  <verbatim>&lt;xsl:choose&gt;
-&lt;xsl:template name="render-header"&gt;
-    &lt;!-- print a running header on left side --&gt;
-    &lt;!-- print logo on right side --&gt;
-&lt;/xsl:template&gt;</verbatim>
-                  <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates"[[xe1:Konzepte;xe2:Named Template]] ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
-                  <verbatim>&lt;xsl:variable name="margin-width"&gt;
-    &lt;xsl:call-template name="get-margin-width"/&gt;
-&lt;/xsl:variable&gt;</verbatim>
-                  <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
-                  <verbatim>width="{$margin-width}"</verbatim>
-                  <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
-               </block>
-            </content>
-         </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                  ismodule="no">
-            <content>
-               <title>
-                  <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming</title>
-               </title>
-               <block>
-                  <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
-                  <procedure type="ol">
-                     <step>
-                        <action>
-                           <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python[[xe1:Programmiersprachen;xe2:Python]] sgmllib[[fn:https://docs.python.org/2/library/sgmllib.html*Einfacher SGML Parser der Python Standard Bibliothek]].</p>
-                        </action>
-                     </step>
-                     <step>
-                        <action>
-                           <p>Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p>
-                        </action>
-                     </step>
-                  </procedure>
-                  <p>XSLT Streaming[[xe1:Verarbeitungsmethoden;xe2:XSLT Streaming]] ist in der XSLT Version 3.0 neu hinzugekommen[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html*XSLT3.0 Streaming API]] und in der
-kommerziellen Saxon-EE Löusug implementiert[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/]]. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung[[xe1:Performanzsteigerung]] führt.</p>
-                  <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
-                  <ul>
-                     <li>
-                        <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>
-                     </li>
-                     <li>
-                        <p>Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</p>
-                     </li>
-                     <li>
-                        <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
-                     </li>
-                     <li>
-                        <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
-                     </li>
-                  </ul>
-                  <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
-in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p>
-                  <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
-                  <verbatim>&lt;xsl:stylesheet version="3.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  exclude-result-prefixes="#all"&gt;
-  
-  &lt;xsl:output method="xml" indent="yes"/&gt;
-  
-  &lt;xsl:mode on-no-match="shallow-copy" use-accumulators="entry-count" streamable="true"/&gt;
-  
-  &lt;xsl:accumulator name="entry-count" as="xs:integer" initial-value="0" 
-                   streamable="yes"&gt;
-    &lt;xsl:accumulator-rule match="entry" select="$value + 1"/&gt;
-  &lt;/xsl:accumulator&gt;
-  
-  &lt;xsl:template match="/"&gt;
-    &lt;result&gt;
-      &lt;xsl:apply-templates/&gt;
-      &lt;count&gt;
-        &lt;xsl:value-of select="accumulator-after('entry-count')"/&gt; 
-      &lt;/count&gt;
-    &lt;/result&gt;
-  &lt;/xsl:template&gt;
-  
-&lt;/xsl:stylesheet&gt;</verbatim>
-                  <p>Diese Stylesheet hat einige Besonderheiten:</p>
-                  <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
-eine implizite Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]] [[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p>
-                  <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
-                  <verbatim>&lt;xsl:template match="node()|@*"
-  &lt;xsl:copy&gt;
-    &lt;xsl:apply-templates select="node()|@*"/&gt;
-  &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</verbatim>
-                  <p>Zum anderen wird ein Akkumulator[[xe1:Verarbeitungsmethoden;xe2:Akkumulator]] verwendet. Normalerweise gibt es in XSLT keine Variablen,
-sondern nur Konstanten, so wie das auch bei funktionalen Programmiersprachen der Fall ist.</p>
-                  <p>Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
-an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.</p>
-                  <p>Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
-würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p>
-                  <p>Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
-wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
-bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur 
-späteren Auswertung bzw. Gruppierung der Key-Elemente.</p>
-                  <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
-Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
-wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
-                  <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
-einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
-Prozessor allerdings nicht akzeptiert.</p>
-                  <verbatim>Cannot call accumulator-after except during the post-descent 
-phase of a streaming template</verbatim>
-                  <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
-wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
-kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
-                  <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
-                  <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
-                  <verbatim>on-no-match="deep-copy"</verbatim>
-                  <p>wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
-Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
-am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
-Arten realisieren.</p>
-                  <p>Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
-werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
-würde.</p>
-               </block>
-            </content>
             <chapter hyphenation="yes" chapterpage="no" id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
                      ismodule="no">
                <content>
@@ -1145,9 +981,10 @@ würde.</p>
                      <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
                   </title>
                   <block>
-                     <p>XSLT Streaming[[xe1:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
-                     <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden:</p>
-                     <verbatim>&lt;status-report&gt;
+                     <p>XSLT Streaming[[xe1:Verarbeitungsmethode; xe2:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
+                     <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generierijuij</p>
+                     <p>t werden:i9i09i</p>
+                     <p>9i9</p> |   |                                                    Rejected by , .       <verbatim>&lt;status-report&gt;
   &lt;status-change&gt;
     &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
     &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
@@ -1193,10 +1030,15 @@ verlassen, was den Code weiter vereinfacht:</p>
                      <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
 aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                                 id="e78aa311-072e-49b7-8248-47e00991e0c7"
-                                 type="topic">XSLT Streaming</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
+                                 id="aafa321b-b1d9-44cc-b1c0-ea614a1af10e"
+                                 type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                      <p>Wir betrachten hier das [[code:xsl:iterator]][[fn:https://www.saxonica.com/html/documentation/xsl-elements/iterate.html*Der Iterator ist ein Konzept um XSLT Streaming zu realisieren]]
  Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
+                     <danger>
+                        <cause>32rr</cause>
+                        <consequence>r23r232</consequence>
+                        <consequence>fwef</consequence>
+                     </danger>
                      <ul>
                         <li>
                            <p>Wir benutzen [[code:xsl:source-document]] in Verbindung mit dem [[code:streamable='yes']] Attribut,
@@ -1267,11 +1109,177 @@ starten.</p>
                </content>
             </chapter>
          </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
+                  ismodule="no">
+            <content>
+               <title>
+                  <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
+               </title>
+               <block>
+                  <p>Mit XSLT[[xe1:Konzepte;xe2:Vererbung]] kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind. Bspw. die Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
+                  <p>Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
+                  <title>
+                     <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
+                  </title>
+                  <p>Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
+                  <p>Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
+                  <p>Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
+                  <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
+                              id="ec4e438f-b6cc-4f50-b903-bda598a9003c"
+                              type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
+                  <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
+                  <verbatim>&lt;xsl:choose&gt;
+    &lt;xsl:when test="$myParameter='this_option'"&gt;
+        &lt;!-- do this --&gt;
+    &lt;/xsl:when&gt;
+    &lt;xsl:when test="$myParameter='that_option'"&gt;
+        &lt;!-- do that --&gt;
+    &lt;/xsl:when&gt;
+        [...]
+&lt;/xsl:choose&gt;</verbatim>
+                  <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante[[xe1:Format- und Produktvarianten]] gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung"[[xe1:Konzepte;xe2:Generalisierung und Spezialisierung]] überschrieben. Beispielsweise könnte eine Regel zum Setzen des Headers auf jeder Seite so implementiert sein:</p>
+                  <verbatim>&lt;xsl:template name="render-header"&gt;
+    &lt;!-- print logo on the left side spanning two rows--&gt;
+    &lt;!-- print some metadata right side first row --&gt;
+    &lt;!-- print a running header right side second row --&gt;
+&lt;/xsl:template&gt;</verbatim>
+                  <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
+                  <verbatim>&lt;xsl:choose&gt;
+&lt;xsl:template name="render-header"&gt;
+    &lt;!-- print a running header on left side --&gt;
+    &lt;!-- print logo on right side --&gt;
+&lt;/xsl:template&gt;</verbatim>
+                  <p>Dieses Template hat nun Vorrang und wird zur Auswertung herangezogen, mit der Konsequenz, dass der Header nur einzeilig gedruckt wird. Das schöne an diesen "Named-Templates"[[xe1:Konzepte;xe2:Named Template]] ist auch, dass man sie innerhalb von Variablen verwenden kann:</p>
+                  <verbatim>&lt;xsl:variable name="margin-width"&gt;
+    &lt;xsl:call-template name="get-margin-width"/&gt;
+&lt;/xsl:variable&gt;</verbatim>
+                  <p>Das Template "get-margin-width" kann in einem "Sub"-Stylesheet überschrieben werden ohne dass die Variablen-Zugriffe im Core-Stylesheet angepasst werden müssten. Eine Zuweisung, wie:</p>
+                  <verbatim>width="{$margin-width}"</verbatim>
+                  <p>müsste nirgendwo im Code nochmal angefasst werden.</p>
+               </block>
+            </content>
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="1f8595d0-4ed9-4070-8cff-c5c59f690093"
+                  ismodule="no">
+            <content>
+               <title>
+                  <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming</title>
+               </title>
+               <block>
+                  <p>Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
+                  <procedure type="ol">
+                     <step>
+                        <action>
+                           <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python[[xe1:Programmiersprachen;xe2:Python]] sgmllib[[fn:https://docs.python.org/2/library/sgmllib.html*Einfacher SGML Parser der Python Standard Bibliothek]].</p>
+                        </action>
+                     </step>
+                     <step>
+                        <action>
+                           <p>Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p>
+                        </action>
+                     </step>
+                  </procedure>
+                  <p>XSLT Streaming[[xe1:Verarbeitungsmethoden;xe2:XSLT Streaming]] ist in der XSLT Version 3.0 neu hinzugekommen[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html*XSLT3.0 Streaming API]] und in der
+kommerziellen Saxon-EE Löusug implementiert[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/]]. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung[[xe1:Performanzsteigerung]] führt.</p>
+                  <p>Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
+                  <ul>
+                     <li>
+                        <p>Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>
+                     </li>
+                     <li>
+                        <p>Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.</p>
+                     </li>
+                     <li>
+                        <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
+                     </li>
+                     <li>
+                        <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
+                     </li>
+                  </ul>
+                  <p>Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p>
+               </block>
+            </content>
+            <chapter hyphenation="yes" chapterpage="no" id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+                     ismodule="no">
+               <content>
+                  <title>
+                     <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title>
+                  </title>
+                  <block>
+                     <p>Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
+                     <verbatim>&lt;xsl:stylesheet version="3.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="#all"&gt;
+  
+  &lt;xsl:output method="xml" indent="yes"/&gt;
+  
+  &lt;xsl:mode on-no-match="shallow-copy" use-accumulators="entry-count" streamable="true"/&gt;
+  
+  &lt;xsl:accumulator name="entry-count" as="xs:integer" initial-value="0" 
+                   streamable="yes"&gt;
+    &lt;xsl:accumulator-rule match="entry" select="$value + 1"/&gt;
+  &lt;/xsl:accumulator&gt;
+  
+  &lt;xsl:template match="/"&gt;
+    &lt;result&gt;
+      &lt;xsl:apply-templates/&gt;
+      &lt;count&gt;
+        &lt;xsl:value-of select="accumulator-after('entry-count')"/&gt; 
+      &lt;/count&gt;
+    &lt;/result&gt;
+  &lt;/xsl:template&gt;
+  
+&lt;/xsl:stylesheet&gt;</verbatim>
+                     <p>Diese Stylesheet hat einige Besonderheiten:</p>
+                     <p>Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
+eine implizite Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]] [[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p>
+                     <p>Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p>
+                     <verbatim>&lt;xsl:template match="node()|@*"
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="node()|@*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</verbatim>
+                     <p>Zum anderen wird ein Akkumulator[[xe1:Verarbeitungsmethoden;xe2:Akkumulator]] verwendet. Normalerweise gibt es in XSLT keine Variablen,
+sondern nur Konstanten, so wie das auch bei funktionalen Programmiersprachen der Fall ist.</p>
+                     <p>Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
+an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.</p>
+                     <p>Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
+würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p>
+                     <p>Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
+wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
+bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur 
+späteren Auswertung bzw. Gruppierung der Key-Elemente.</p>
+                     <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
+Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
+wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
+                     <p>Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
+einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
+Prozessor allerdings nicht akzeptiert.</p>
+                     <verbatim>Cannot call accumulator-after except during the post-descent 
+phase of a streaming template</verbatim>
+                     <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
+wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
+kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
+                     <verbatim>&lt;xsl:copy-of select="."/&gt;</verbatim>
+                     <p>ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
+                     <verbatim>on-no-match="deep-copy"</verbatim>
+                     <p>wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
+am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
+Arten realisieren.</p>
+                     <p>Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
+werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
+würde.</p>
+                  </block>
+               </content>
+            </chapter>
+         </chapter>
          <chapter hyphenation="yes" chapterpage="no" id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
                   ismodule="no">
             <content>
                <title>
-                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id()</title>
+                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id() </title>
                </title>
                <block>
                   <p>Die generate-id() Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p>
@@ -1388,6 +1396,50 @@ sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]] .Ohne groß auf d
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
 indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:&lt;nutzdaten&gt;]] gesetzt wird. Dabei wird aber nur derjenige [[code:CONTENT]] Abschnitt evaluiert, der
 zu der als Parameter übergebenen generierten Id passt.</p>
+               </block>
+            </content>
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="12f4b667-2093-456b-8986-d269a6375d60"
+                  ismodule="no">
+            <content>
+               <title>
+                  <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke</title>
+               </title>
+               <block>
+                  <p>Manchmal reicht für das Durchsuchen des XML Baums XPATH nicht mehr aus und man will auf den Textknoten reguläre Ausdrücke aufrufen. Mir sind derzeit drei XPATH Funktionen bekannt, in denen man XPATH angeben kann:</p>
+                  <ul>
+                     <li>
+                        <p>[[code:fn:matches(subject, pattern, flags)]]</p>
+                     </li>
+                     <li>
+                        <p>[[code:fn:replace(subject, pattern, replacement, flags)]]</p>
+                     </li>
+                     <li>
+                        <p>[[code:fn:tokenize(subject, pattern, flags)]]</p>
+                     </li>
+                  </ul>
+                  <p>Bei der EIngabe des regulaären Ausdrucks muss man natürlich Zeichen, wie &gt;,&lt;,&amp; maskieren, was den Ausdruck im Gegensatz zur herkömmlichen Nicht-XML Programmierung noch ein bisschen komplizierter macht.</p>
+                  <p>Der Audruck, der bspw. auf alle XML Tags matched ist folgender: [[code:&amp;lt;[^&amp;gt;^!]+&amp;gt;]]. Hier sind die für XML reservierten Zeichen bereits maskiert.</p>
+                  <title>
+                     <title id="055ae7ca-d2b1-41e4-be84-675e3e8827bdd6e21">XSLT Analyze String</title>
+                  </title>
+                  <p>Es gibt aber auch ein eigenes XSLT Konstrukt, unabhängig von XPATH, um reguläre Ausdrücke anwenden zu können. Der Quelltext dazu sieht so aus:</p>
+                  <verbatim>&lt;xsl:template match="text()[parent::xml-code]"&gt;
+  &lt;xsl:analyze-string select="." regex="&amp;lt;[^&amp;gt;^!]+&amp;gt;"&gt;
+    &lt;xsl:matching-substring&gt;
+      &lt;b&gt;&lt;xsl:value-of select="."/&gt;&lt;/b&gt;     
+    &lt;/xsl:matching-substring&gt;
+    &lt;xsl:non-matching-substring&gt;
+      &lt;xsl:value-of select="."/&gt;
+    &lt;/xsl:non-matching-substring&gt;
+&lt;/xsl:template&gt;</verbatim>
+                  <p>Hier wird jeder Textknoten eines Elements [[code:&lt;xml-code&gt;}} untersucht und falls ein XML-Tag enthalten ist, so wird dieses über die [[code:xsl:matching-substring]] Anweisung in ein [[code:&lt;b&gt;]] Tag gewrapped. Im nächsten Transformationsschritt wird dieses wiederum in Fettschrift dargestellt.</p>
+                  <p>Das ist ein einfacher Syntax-Highlighter für XML Quelltexte. Auf diese Weise ist der Syntax-Highlighter für dieses PDF realisiert.</p>
+                  <note>
+                     <consequence>
+                        <p>Man kann auch die [[code:xsl:analyze-string]] Elemente in den [[code:xsl:matching-substring]] und [[code:xsl:non-matching-substring]] Elementen verschachteln, was natürlich noch wesentlich kompliziertere Problemstellungen erlaubt.</p>
+                     </consequence>
+                  </note>
                </block>
             </content>
          </chapter>
@@ -1697,9 +1749,62 @@ Variablenauswertung: $common:collection-books</verbatim>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
                   </title>
                   <block>
-                     <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter [[code:if]] und [[code:then]] dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
+                     <p>In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter [[code:if]] und [[code:then]][[xe1:Programmierkonstrukte;xe2:Bedingte Anweisung - if..then..else]] dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
                      <p>Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery [[code:if..then]] als Ausdrücke ausgewertet werden.</p>
                      <p>Das ist einerseits sehr praktisch, weil es richtig angewandt den Code verkürzt und damit das Wesentliche herausstellt, kann aber auch weiter zur allg. Verwirrung bzgl. des kryptischen XQuery Codes beitragen.</p>
+                     <title>
+                        <title id="b0df228c-1f72-4a12-9302-805fa0022b03d6e11">XQuery Server Application</title>
+                     </title>
+                     <p>Betrachten wir ein einfaches Beispiel: Wir generieren auf einer Marklogic-Webapp eine JSON Response. Da wir diesen Mechanismus an mehreren Stellen im Code einsetzen, empfiehlt es sich das Rendern des Headers in eine Funktion auszulagern.</p>
+                     <verbatim>declare function common:wrap-response($json)
+{
+  xdmp:add-response-header("Pragma", "no-cache"),
+  xdmp:add-response-header("Cache-Control", "no-cache"),
+  xdmp:add-response-header("Expires", "0"),
+  xdmp:set-response-content-type('text/json; charset=utf-8'),
+  $json
+};</verbatim>
+                     <p>In unserem Request-Handler wird je nach Auswertung einer Variablen eine 
+bedingte Anweisung ausgeführt, diese sieht bspw. so aus:</p>
+                     <verbatim>let $name := xdmp:get-request-field('name'),
+    $is-afternoon := xs:time(current-dateTime()) gt xs:time('12:00:00')
+return 
+  if ($is-afternoon) then 
+   common:wrap-response(xdmp:unquote(concat('{"greeting":"Good Afternoon! ',$name,'!"}')))
+  else
+   common:wrap-response(xdmp:unquote(concat('{"greeting":"Good Morning! ',$name,'!"}')))</verbatim>
+                     <p>Als prozeduraler Programmierer wäre ich mit diesem Switch voll und ganz zufrieden, 
+der funktionale Programmier erkennt abaer sofort einen Optimierungsbedarf.</p>
+                     <p>Da es sich bei der bedingten Anweisung auch um einen Ausdruck handelt, der [[code:true}} oder [[code:false}} zurückgibt, können wir die gleichen Funktionsaufrufe herausziehen:</p>
+                     <verbatim>ommon:wrap-response(xdmp:unquote(
+    let $is-afternoon := xs:time(current-dateTime()) gt xs:time('12:00:00')
+        return 
+            if ($is-afternoon) then concat('{"greeting":"Good Afternoon! ',$name,'!"}') 
+            else concat('{"greeting":"Good Morning! ',$name,'!"}')
+)</verbatim>
+                     <p>Hier wird der abstrakt denkende Programmierer aber einwenden, dass eine abstrakte
+Logik nicht in eine Low-Level Funktion, wie [code:xsdmp:unquote] gewrapped werden sollte.</p>
+                     <p>Das stimmt - und mehr noch, die Maskierung mit [[code:xsdmp:unquote]] sollte auch noch in unsere 
+Funktion gepackt werden. So dass der Code schliesslich so aussehen würde:</p>
+                     <verbatim>declare function common:render-response($json)
+{
+  xdmp:add-response-header("Pragma", "no-cache"),
+  xdmp:add-response-header("Cache-Control", "no-cache"),
+  xdmp:add-response-header("Expires", "0"),
+  xdmp:set-response-content-type('text/json; charset=utf-8'),
+  xdmp:unquote($json)
+};
+
+common:render-response(
+    let $is-afternoon := xs:time(current-dateTime()) gt xs:time('12:00:00')
+        return 
+            if ($is-afternoon) then concat('{"greeting":"Good Afternoon! ',$name,'!"}') 
+            else concat('{"greeting":"Good Morning! ',$name,'!"}')
+)</verbatim>
+                     <p>Sicherlich lässt sich darüber streiten, ob nun der funktionale Ansatz besser lesbar ist als
+der prozedurale ganz oben.</p>
+                     <p>Ich denke jeder Programmierer hat hier seinen eigenen, individuellen
+und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                   </block>
                </content>
             </chapter>
@@ -2322,7 +2427,7 @@ git log --diff-filter=D --summary</verbatim>
                         <row>
                            <entry>XMetal[[fn:XM;https://xmetal.com/*Homepage des Desktop XML Editors XMetal]]</entry>
                            <entry>
-                              <p>XMetal[[xe1:Tools;xe2:XMetal]] ist wahrscheinlich der am weitesten verbreitete reine WYSIWYM Editor. Er hat Schnittstellen zu COM und Java und kann daher in eigene CMS integriert werden.</p>
+                              <p>XMetal ist wahrscheinlich der am weitesten verbreitete reine WYSIWYM Editor. Er hat Schnittstellen zu COM und Java und kann daher in eigene CMS integriert werden.</p>
                            </entry>
                         </row>
                         <row>
@@ -2363,19 +2468,19 @@ git log --diff-filter=D --summary</verbatim>
                         <row>
                            <entry>FontoXML[[fn:FX;https://www.fontoxml.com/*FontoXML Webeditor]]</entry>
                            <entry>
-                              <p>FontoXML[[xe1:Tools;xe2:FontoXML]] sieht schon fast aus wie Word. Neben der WYSWYG/M Darstellung, kann auch die XML Struktur in einem Seitenpanel angezeigt werden.</p>
+                              <p>FontoXML sieht schon fast aus wie Word. Neben der WYSWYG/M Darstellung, kann auch die XML Struktur in einem Seitenpanel angezeigt werden.</p>
                            </entry>
                         </row>
                         <row>
                            <entry>XEditor[[fn:XE;http://www.xeditor.com/portal*Homepage des webbasierten XEditors]]</entry>
                            <entry>
-                              <p>Xeditor[[xe1:Tools;xe2:Xeditor]] benutzt XSLT Transformationen, um aus der Eingabe die Editoransicht zu generieren. Beim Abspeichern wird der umgekehrte Weg bestritten. Das mag zwar auf den ersten Blick etwas holprig erscheinen, wie aber auch Tektur beweist, funktioniert das ganze recht gut und schnell.</p>
+                              <p>Xeditor benutzt XSLT Transformationen, um aus der Eingabe die Editoransicht zu generieren. Beim Abspeichern wird der umgekehrte Weg bestritten. Das mag zwar auf den ersten Blick etwas holprig erscheinen, wie aber auch Tektur beweist, funktioniert das ganze recht gut und schnell.</p>
                            </entry>
                         </row>
                         <row>
                            <entry>Xopus[[fn:XO;http://xopusfiddle.net/VT7T/3/*Homepage des veralteten Xopus XML Editors]]</entry>
                            <entry>
-                              <p>Xopus[[xe1:Tools;xe2:Xopus]] ist wohl der älteste web-basierte XML Editor. Ich hatte damit schon 2008 zu tun, als er für ein Redaktionssystem evaluiert wurde. Wir haben uns dann für eine eigene nicht-generische Lösung basierend auf dem Webeditor CKEditor entschieden.</p>
+                              <p>Xopus ist wohl der älteste web-basierte XML Editor. Ich hatte damit schon 2008 zu tun, als er für ein Redaktionssystem evaluiert wurde. Wir haben uns dann für eine eigene nicht-generische Lösung basierend auf dem Webeditor CKEditor entschieden.</p>
                            </entry>
                         </row>
                      </tbody>
