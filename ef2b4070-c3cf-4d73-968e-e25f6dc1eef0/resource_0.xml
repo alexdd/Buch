@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="7ca48bd5-7f2e-44cd-aacd-c15f7618b43e"><title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title><body id="631dac5b-f444-4489-896e-cfc73963b9c5"><p id="fd257336-1ea5-47eb-8795-ac4f22576a8e">Wenn wir zwischen der Zeit in der das Dokument, bspw. ein Vetrag 
+in der DB angelegt wird, und der Zeit in der ein Vetrag zwischen zwei 
+Vetragspartnern abgeschlossen wird unterscheiden, dann betrachten
+wir zwei Zeitachsen.</p><ul id="d4916e18-adeb-49ee-8153-3b978adbc1afd6e6"><li id="a68bfa03-4a70-4f8e-b66b-250de1496fc6d6e7"><p id="46d3aa4f-711a-488f-bf81-077849243208d6e8">die gültige Zeit (Valid Time)</p></li><li id="d8139f88-a56e-4e2a-9d68-5ccdfe70de4ad6e10"><p id="4163702b-b6e9-40ec-b389-2a8af0afae33d6e11">die Systemzeit (System Time)</p></li></ul><p id="fab57861-93d5-47d3-8046-7b0d2c180b5cd6e13">Für die Vetragspartner ist nur die gültige Zeit relevant. Das Zeitfenster
+zwischen gültiger Zeit und Systemzeit ist jedoch in manchen Fällen
+ausschlaggebend.</p><p id="50e4e500-a66d-4744-9730-1e4da489e1f8d6e15">Bsp: Kürzlich wurde
+meine Geldbörse mit meinem Perso geklaut. Beim Austellen eines vorläufigen
+Ausweises wurde ich schriftlich darauf hingewiesen, dass nun mein Perso
+bei Interpol zur Fahndung ausgeschrieben ist.</p><p id="93133dc8-bb02-4da9-b779-64955be86d07d6e17">Kurze Zeit später fand ein netter Herr die Geldbörse ohne Geld aber 
+mit allen Papieren in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
+Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da die Systemzeit
+des Vorgangs im System der Polizei noch nicht aktualisiert war.</p><p id="1fee1c3d-dd8b-4649-85ce-5b3d23ecec18d6e19">Ich nehme an, dass nach meiner Unschuldsbekundung der Vorgang auch
+auf Seiten des Polizeicomputers aktualisiert wurde. Nun könnte man zwei Fragen
+stellen:</p><ol id="6adc97a7-ba28-4619-ba64-bbb29b702aded6e21"><li id="602e5f1b-90a5-40c2-a2cf-a89803cf1153d6e22"><p id="5664c21f-b0b1-4c4f-a8f1-251415142a7cd6e23">Ist das Festhalten seitens der Zollbeamten rechtens?</p></li><li id="8d9e0d92-4a1a-4a08-a08c-1f1d7f212bd6d6e25"><p id="94fb012d-2fbb-4d68-b285-c05ccb98f507d6e26">Habe ich mich durch ein verspätetes Anzeigen des Funds schuldig gemacht?</p></li></ol><note id="8a1fe499-0f53-4c97-b726-598bdda5c128d6e28"><p id="f93b1ee9-1f0e-4d60-a375-7e32300f4d41d6e29">Beachte, dass man diese Fragen auch noch nach 10 Jahren stellen
+könnte und das - bei meinem Pech in diesen Angelegenheiten - auch
+so ein Vorfall noch öfters passieren könnte.</p></note><p id="19976305-dbf8-447b-bf4e-b0e849b7e741d6e31">Um diese Fragen zu beantworten, müsste unsere Datenbank in der Lage sein,
+eine bitemporäre Query auszuführen. Zunächst registerieren wir den Vorgang
+des Persoverlustes in unserer Marklogic Datenbank:</p><note id="374b7fe5-5ff6-4984-884a-2c85c183f700d6e33"><p id="bc4e68d9-d093-46bc-bf26-de40abdc0486d6e34">Da wir hier auf einer XML Datenbank arbeiten, sprechen wir von einem Dokument,
+wenn einen Datensatz meinen. Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. Auf diese Weise bleibt die Änderungshistorie erhalten.</p></note><pre id="880df44b-f179-4f87-85ef-22157deb09c2d6e36" xml:space="preserve">xquery version "1.0-ml";
+import module namespace temporal = 
+       "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";   
+let $root :=    
+  &lt;vorgang&gt;     
+    &lt;perso-id&gt;XYZ&lt;/perso-id&gt;    
+    &lt;name&gt;Alex Düsel&lt;/name&gt;   
+    &lt;status&gt;gestohlen&lt;/status&gt;
+  &lt;/vorgang&gt;
+let $options :=   
+  &lt;options xmlns="xdmp:document-insert"&gt;     
+    &lt;metadata&gt;        
+      &lt;map:map xmlns:map="http://marklogic.com/xdmp/map"&gt;          
+        &lt;map:entry key="validStart"&gt;            
+	  &lt;map:value&gt;2019-02-01T08:23:11&lt;/map:value&gt;          
+	&lt;/map:entry&gt;          
+	&lt;map:entry key="validEnd"&gt;            
+	  &lt;map:value&gt;9999-12-31T11:59:59Z&lt;/map:value&gt;          
+	&lt;/map:entry&gt;         
+      &lt;/map:map&gt;    
+    &lt;/metadata&gt;  
+
+return  temporal:document-insert("/perso-verluste", 
+                                 "duesel_alex_270774.xml", 
+                                 $root, $options)</pre></body></topic>

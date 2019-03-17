@@ -2,11 +2,11 @@
 <document>
    <title>Entwicklerhandbuch</title>
    <meta>
-      <owner/>
-      <date-of-creation/>
-      <date-of-last-change/>
-      <language/>
-      <status>UNDEFINED</status>
+      <owner>alex</owner>
+      <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
+      <date-of-last-change>Sun Mar 17 2019 18:52:52 </date-of-last-change>
+      <language>de-DE</language>
+      <status>163</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -16,63 +16,65 @@
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
 www.github.com/alexdd/Buch</cover-text>
       <structure>
-         <format>UNDEFINED</format>
+         <format>book</format>
+         <chapter-on-right-page/>
+         <cover-backpage/>
       </structure>
       <design>
-         <layout>rtf</layout>
-         <paper-format>UNDEFINED</paper-format>
-         <page-margin>leftright</page-margin>
-         <spaces>UNDEFINED</spaces>
-         <header>UNDEFINED</header>
-         <footer>UNDEFINED</footer>
-         <look-and-feel>UNDEFINED</look-and-feel>
-         <table-layout>UNDEFINED</table-layout>
+         <layout>margin</layout>
+         <paper-format>A4</paper-format>
+         <page-margin>leftgap</page-margin>
+         <spaces>small</spaces>
+         <header>shortheader</header>
+         <footer>longfooter</footer>
+         <look-and-feel>fashion</look-and-feel>
+         <table-layout>simple</table-layout>
       </design>
    </meta>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e74" ismodule="no">
+   <supplemental-directives>
+      <chapter hyphenation="yes" chapterpage="no" id="d2e93" ismodule="no">
       
          <title>
             <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro</title>
          </title>
          
             <page-wide-element>
-         <figure pdfwidth="margin">
+            <figure pdfwidth="margin">
                <img src="./client/data/c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88/dita-logo.jpg"/>
             </figure>
-      </page-wide-element>
+         </page-wide-element>
             <column-wide-element>
-         <p>Dieses Buch wurde mit Tektur CCMS erstellt. Tektur ist ein einfach zu bedienender kollaborativer Editor um <b>DITA</b>
-            <footnote>
-               <desc>https://de.wikipedia.org/wiki/Darwin_Information_Typing_Architecture</desc>
-               <add>DITA ist ein Standard im Bereich Publishing und löst ältere Dokumenttypen, wie z.B. Docbook ab. Beispielsweise ist DITA ein gutes Modell für Softwarehandbücher und zugehörige Online-Dokumentation.</add>
-            </footnote> Inhalte erstellen, als PDF ausgeben und pflegen zu können. Die Eingabe erfolgt dabei per <b>WYSIWYG</b>
-            <footnote>
-               <desc>https://de.wikipedia.org/wiki/WYSIWYG</desc>
-               <add>What You See Is What You Get - Mit dieser Eingabemethode hat der Autor schon ein Bild davon, wie sein Text gedruckt werden kann.</add>
-            </footnote> mit geführter Benutzerinteraktion. Die Inhalte werden als einzelne Topics verwaltet, die in verschiedenen Maps referenziert werden können; Stichwort: <b>Topic Based Authoring</b>
-            <footnote>
-               <desc>https://en.wikipedia.org/wiki/Topic-based_authoring</desc>
-               <add>Beim Topic Based Authoring wird der Content feingranular in Informationseinheiten aufgegliedert, die sich dann über Referenzen in verschiedene Publikationen einbinden lassen.</add>
-            </footnote>.</p>
-      </column-wide-element>
+            <p>Dieses Buch wurde mit Tektur CCMS erstellt. Tektur ist ein einfach zu bedienender kollaborativer Editor um DITA<footnote>
+                  <desc>https://de.wikipedia.org/wiki/Darwin_Information_Typing_Architecture</desc>
+                  <add>DITA ist ein Standard im Bereich Publishing und löst ältere Dokumenttypen, wie z.B. Docbook ab. Beispielsweise ist DITA ein gutes Modell für Softwarehandbücher und zugehörige Online-Dokumentation.</add>
+               </footnote> Inhalte erstellen, als PDF ausgeben und pflegen zu können. Die Eingabe erfolgt dabei per WYSIWYG<footnote>
+                  <desc>https://de.wikipedia.org/wiki/WYSIWYG</desc>
+                  <add>What You See Is What You Get - Mit dieser Eingabemethode hat der Autor schon ein Bild davon, wie sein Text gedruckt werden kann.</add>
+               </footnote> mit geführter Benutzerinteraktion. Die Inhalte werden als einzelne Topics verwaltet, die in verschiedenen Maps referenziert werden können; Stichwort: Topic Based Authoring<footnote>
+                  <desc>https://en.wikipedia.org/wiki/Topic-based_authoring</desc>
+                  <add>Beim Topic Based Authoring wird der Content feingranular in Informationseinheiten aufgegliedert, die sich dann über Referenzen in verschiedene Publikationen einbinden lassen.</add>
+               </footnote>.</p>
+         </column-wide-element>
             <column-wide-element>
-         <p>Sonstige Features: Rechte- und Rollensystem, Versionskontrolle, konfigurerierbarer Workflow mit Review &amp; Approval Fuktionen. Auf dem Entwicklerblog<footnote>
-               <desc>http://www.tekturcms.de</desc>
-               <add>Das ist die private Homepage des Autors mit einer kompletten Liste seiner Hobby-Projekte seit 2000.</add>
-            </footnote> kann man sich über den Fortschritt informieren.</p>
-      </column-wide-element>
+            <p>Sonstige Features: Rechte- und Rollensystem, Versionskontrolle, konfigurerierbarer Workflow mit Review &amp; Approval Fuktionen. Auf dem Entwicklerblog<footnote>
+                  <desc>http://www.tekturcms.de</desc>
+                  <add>Das ist die private Homepage des Autors mit einer kompletten Liste seiner Hobby-Projekte seit 2000.</add>
+               </footnote> kann man sich über den Fortschritt informieren.</p>
+         </column-wide-element>
             <column-wide-element>
-         <note>
+            <note>
                <consequence>
                   <p>Dieses Buch ist <b>WORK IN PROGRESS</b> und dient in erster Linie als Test für Tektur CCMS. Der Feinschliff kommt noch! Momentan schreibe ich alles was mir irgendwie interessant erscheint - je nach zeitlicher Möglichkeit mehr oder weniger umfangreich - auf und binde die Topics in eine Map ein, um ein PDF erzeugen zu können.</p>
                   <p>Wie schliesslich Struktur und Inhalt genau aussehen sollen, werde ich mir zu einem späteren Zeitpunkt noch genau überlegen :-]</p>
                </consequence>
             </note>
-      </column-wide-element>
+         </column-wide-element>
          
       
-   </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e124" ismodule="no">
+      </chapter>
+   </supplemental-directives>
+   <toc/>
+   <chapter hyphenation="yes" chapterpage="no" id="d2e134" ismodule="no">
       
          <title>
             <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete</title>
@@ -127,57 +129,33 @@ www.github.com/alexdd/Buch</cover-text>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e223" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e233" ismodule="no">
          
             <title>
                <title id="1ea26780-291c-470f-9559-616cfb744574">Führende Technologie XSLT</title>
             </title>
             
                <column-wide-element>
-            <p>Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im <b>TIOBE Index</b>
-               <footnote>
+            <p>Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im TIOBE Index<footnote>
                   <desc>https://de.wikipedia.org/wiki/TIOBE-Index</desc>
-                  <add>Im TIOBE Index werden jährlich die populärsten Programmiersprachen aufgelistet</add>
-               </footnote>
-               <xe>
-                  <first criterion="TIOBE Index">TIOBE Index</first>
-               </xe> von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der Liste<footnote>
+               </footnote> von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der Liste<footnote>
                   <desc>https://bit.ly/2ARgKCJ</desc>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Im Bereich XML würde aber ohne XSLT nicht viel gehen. Es gibt einige exotische Anwendungsgebiete in denen XML effizient 
-mit <b>LISP</b> 
-               <xe>
-                  <first criterion="Programmiersprachen">Programmiersprachen</first>
-                  <second criterion="LISP">LISP</second>
-               </xe>Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML konvertierten, <b>EDI X12</b>
-               <footnote>
+mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML konvertierten, EDI X12<footnote>
                   <desc>https://en.wikipedia.org/wiki/ASC_X12</desc>
-                  <add>X12 ist ein amerikanischer Standard wie Nachrichten im Textformat zwischen Informationssystemen verschiedener Unternehmungen ausgetauscht werden. Beispielsweise werden in der Gesundheitsbranche Informationen über Arztbesuche von den Versicherungen an die Staaten geschickt.</add>
-               </footnote>
-               <xe>
-                  <first criterion="Standards">Standards</first>
-                  <second criterion="X12">X12</second>
-               </xe> Nachrichten.</p>
+               </footnote> Nachrichten.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im <b>S1000D</b> Standard<footnote>
+            <p>Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im S1000D Standard<footnote>
                   <desc>https://en.wikipedia.org/wiki/S1000D</desc>
-                  <add>Das sehr komplexe Informationsmodell im militärischen Bereich wird z.B. über diesen Standard verwaltet. Teilweise sind die Daten noch im SGML Format vorhanden, da die verarbeitenden System aus den 80er Jahren stammen.</add>
-               </footnote>
-               <xe>
-                  <first criterion="Standards">Standards</first>
-                  <second criterion="S1000D">S1000D</second>
-               </xe> wacker gehalten. Hier wird teilweise noch mit proprietäre Programmiersprachen, wie Metamorphosis<xe>
-                  <first criterion="Programmiersprachen">Programmiersprachen</first>
-                  <second criterion="Metamorphosis">Metamorphosis</second>
-               </xe> gearbeitet.</p>
+               </footnote> wacker gehalten. Hier wird teilweise noch mit proprietäre Programmiersprachen, wie Metamorphosis gearbeitet.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Alternativen zu XSLT finden sich im entsprechendem Wikipedia-Artikel<footnote>
                   <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
-                  <add>Das ist die Wikipedia Seite zu XSL = XSLT, XPATH und XSL-FO</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
@@ -191,14 +169,10 @@ mit <b>LISP</b>
                   <li>
                      <p>XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine Turing Maschine<footnote>
                         <desc>http://www.unidex.com/turing/utm.htm</desc>
-                        <add>Die Turingmaschine sollte jedem Informatiker aus den ersten Univorlesungen bekannt sein.</add>
                      </footnote> programmieren kann.</p>
                   </li>
                   <li>
-                     <p>Mit HTML oder einer Templater Sprache (z.B. JSP)<xe>
-                        <first criterion="Programmiersprachen">Programmiersprachen</first>
-                        <second criterion="JSP">JSP</second>
-                     </xe> würde das nicht funktionieren.</p>
+                     <p>Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
                   </li>
                   <li>
                      <p>XSLT benötigt normalerweise immer eine XML Eingabe. Zumindest ein XML Knoten muss verarbeitet werden. Es gibt aber auch den Spezialfall, dass bspw. mit dem XSLT Prozessor Saxon keine Eingabe notwendig ist, bzw. diese vom XSLT Stylesheet selbst erzeugt wird.</p>
@@ -211,7 +185,8 @@ mit <b>LISP</b>
                   </li>
                   <li>
                      <p>XSLT wird oft mit XSL gleichgesetzt. Aber XSL<footnote>
-                        <desc>W3C Seiten zu The Extensible Stylesheet Language Family (XSL)</desc>
+                        <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
+                        <add>W3C Seiten zu The Extensible Stylesheet Language Family (XSL)</add>
                      </footnote> ist mehr:</p>
                      <ul>
                         <li>
@@ -220,6 +195,7 @@ mit <b>LISP</b>
                         <li>
                            <p>Zum anderen ist auch XSL-FO<footnote>
                               <desc>https://www.w3.org/TR/xsl/</desc>
+                              <add>Spezifikation der Auszeichnungssprache XSL-FO für die Formatierung als PDF</add>
                            </footnote> Bestandteil der XSL Spezifikation. XSL-FO Tags sind Anweisungen für einen XSL-FO Prozessor, der aus einem XSL-FO Dokument ein PDF Dokument generiert. Es sind auch andere Ausgabe-Formate, wie bspw. RTF möglich.</p>
                         </li>
                      </ul>
@@ -229,7 +205,7 @@ mit <b>LISP</b>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e324" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e325" ismodule="no">
          
             <title>
                <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Einige aktuelle und vergangene Szenarien</title>
@@ -613,7 +589,7 @@ mit <b>LISP</b>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e479" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e480" ismodule="no">
          
             <title>
                <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
@@ -704,16 +680,13 @@ Vorteile:</p>
             </p>
          </column-wide-element>
                <column-wide-element>
-            <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. <b>ArgoUML</b>
-               <footnote>
+            <p>Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. ArgoUML<footnote>
                   <desc>http://argouml.tigris.org</desc>
                   <add>ArgoUML ist ein freier UML Editor</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) :
-<b>Butterfly Code Generator</b>
-               <footnote>
+            <p>Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) : Butterfly Code Generator<footnote>
                   <desc>http://butterflycode.sourceforge.net</desc>
                   <add>Damit kann man sich Code aus UMl Klassendiagrammen generieren lassen, natürlich XSLT basiert</add>
                </footnote>
@@ -745,7 +718,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e600" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e595" ismodule="no">
       
          <title>
             <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
@@ -765,7 +738,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e626" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e621" ismodule="no">
          
             <title>
                <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
@@ -788,7 +761,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Pull Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="a9881b7f-2dd8-4c82-90e3-94ca2f4518d0d6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <desc id="d41a22de-6300-42ba-921c-adbca1e54d4cd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
          </page-wide-element>
@@ -797,7 +770,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Push Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="00525628-43b6-4f5d-8a30-803c0695a264d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <desc id="180ddf48-0fdc-47d1-86ea-f2b562017254d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
          </page-wide-element>
@@ -809,7 +782,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
                </column-wide-element>
-                  <desc id="acae0d21-2f0b-40f6-8f64-5c3fa3f0bf59d6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
+                  <desc id="8f0155c6-89fe-4ed7-abf2-b503254aa28fd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
                      <first criterion="Tiefensuchlauf">Tiefensuchlauf</first>
                   </xe> und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
@@ -847,7 +820,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e747" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e742" ismodule="no">
          
             <title>
                <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
@@ -1049,8 +1022,8 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <first criterion="00000000"/>
                   <second criterion="00000000"/>
                </xe> hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="41345870-4165-4a45-9ea5-e2c80dd1bf0a"
-                        type="topic">Push vs. Pull Stylesheets</doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                        id="e48d65f5-bb6e-4dcb-b1f9-99f2ee11d2e6"
+                        type="topic">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
@@ -1088,7 +1061,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1035" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1030" ismodule="no">
          
             <title>
                <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
@@ -1266,7 +1239,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e1200" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e1195" ismodule="no">
       
          <title>
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
@@ -1277,10 +1250,10 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1217" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1212" ismodule="no">
          
             <title>
-               <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">XSLT Uses Cases und Lösung</title>
+               <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT</title>
             </title>
             
                <column-wide-element>
@@ -1288,7 +1261,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1234" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1229" ismodule="no">
             
                <title>
                   <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
@@ -1454,210 +1427,8 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1328" ismodule="no">
-               
-                  <title>
-                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
-                  </title>
-                  
-                     <column-wide-element>
-                  <p>XSLT Streaming<xe>
-                        <first criterion="Verarbeitungsmethode">Verarbeitungsmethode</first>
-                        <second criterion="XSLT Streaming">XSLT Streaming</second>
-                     </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generierijuij</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>t werden:i9i09i</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>9i9</p>
-               </column-wide-element> |   |                                                    Rejected by , .       <page-wide-element>
-                  <verbatim><color name="green">&lt;status-report&gt;</color>
-  <color name="green">&lt;status-change&gt;</color>
-    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
-    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
-    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
-    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
-  <color name="green">&lt;/status-change&gt;</color>
-  <color name="green">&lt;status-change&gt;</color>
-    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
-    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
-    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
-    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
-  <color name="green">&lt;/status-change&gt;</color>
-  [...]</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Mit einer <code>
-                        <nb>for-each</nb>
-                     </code> Loop und einem Named-Template würde das so gehen:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>
-<color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
-  <color name="green">&lt;xsl:for-each</color> select="$input-file/status-report/status-change"<color name="green">&gt;</color>
-    <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
-    <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
-    <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
-    <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
-  <color name="green">&lt;/xsl:for-each&gt;</color>
-<color name="green">&lt;/xsl:template&gt;</color></verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <note>
-                        <consequence>
-                           <p>Named-Templates, die direkt über den Saxon Aufruf <code>
-                              <nb>saxon -it:main</nb>
-                           </code> aufgerufen werden, sind dann
-brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
-Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
-vom XSLT Skript selbst erzeugt wird.</p>
-                        </consequence>
-                     </note>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
-verlassen, was den Code weiter vereinfacht:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>
-<color name="green">&lt;xsl:template</color> match="/status-report/status-change"<color name="green">&gt;</color>
-  <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
-  <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
-  <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
-  <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
-<color name="green">&lt;/xsl:template&gt;</color></verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
-auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
-aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                              id="aafa321b-b1d9-44cc-b1c0-ea614a1af10e"
-                              type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Wir betrachten hier das <code>
-                        <nb>xsl:iterator</nb>
-                     </code>
-                     <footnote>
-                        <desc>https://www.saxonica.com/html/documentation/xsl-elements/iterate.html</desc>
-                        <add>Der Iterator ist ein Konzept um XSLT Streaming zu realisieren</add>
-                     </footnote>
- Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <danger>
-                        <cause>32rr</cause>
-                        <consequence>r23r232</consequence>
-                        <consequence>fwef</consequence>
-                     </danger>
-               </page-wide-element>
-                     <column-wide-element>
-                  <ul>
-                        <li>
-                           <p>Wir benutzen <code>
-                              <nb>xsl:source-document</nb>
-                           </code> in Verbindung mit dem <code>
-                              <nb>streamable='yes'</nb>
-                           </code> Attribut,
-um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p>
-                        </li>
-                        <li>
-                           <p>Wenn wir die Quelle über einen Parameter einlesen, dann müssen wir auch die Transformation über ein Named-Template
-starten.</p>
-                        </li>
-                     </ul>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von <code>
-                        <nb>value-of select</nb>
-                     </code> statements in den Iterator:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>
-<color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
-  <color name="green">&lt;xsl:source-document</color> href="{$input-file}" streamable='yes'<color name="green">&gt;</color>
-    <color name="green">&lt;xsl:iterate</color> select="status-report/status-change"<color name="green">&gt;</color>
-      <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
-      <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
-      <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
-      <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
-    <color name="green">&lt;/xsl:iterate&gt;</color>
-  <color name="green">&lt;/xsl:source-document&gt;</color> 
-<color name="green">&lt;/xsl:template&gt;</color></verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>und werden dafür prompt mit einer Fehlermeldung belohnt:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim>Static error on line 16 column 64 of report.xsl:
-  XTSE3430: The body of the xsl:stream instruction is not streamable
-  *  There is more than one consuming operand: {xsl:value-of} on line 18, and
-  {xsl:value-of} on line 19</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>In diesem Iterator ist also nur eine "konsumierende" <code>
-                        <nb>value-of</nb>
-                     </code> Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
-               </column-wide-element>
-                     <page-wide-element>
-                  <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="UTF-8"?<color name="green">&gt;</color>
-<color name="green">&lt;xsl:stylesheet</color> xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  exclude-result-prefixes="xs"
-  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
-  version="3.0"<color name="green">&gt;</color>
-   
-  <color name="green">&lt;xsl:param</color> name="input-file" required="yes"<color name="green">/&gt;</color>
-  
-  <color name="green">&lt;xsl:output</color> method="text"<color name="green">/&gt;</color>
- 
-  &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
-
-  <color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
-    <color name="green">&lt;xsl:source-document</color> href="{$input-file}" streamable='yes'<color name="green">&gt;</color>
-      <color name="green">&lt;xsl:iterate</color> select="status-report/status-change/*"<color name="green">&gt;</color>
-        <color name="green">&lt;xsl:choose&gt;</color>
-          <color name="green">&lt;xsl:when</color> test="name()='time_stamp'"<color name="green">&gt;</color>
-            <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
-          <color name="green">&lt;/xsl:when&gt;</color>
-          <color name="green">&lt;xsl:otherwise&gt;</color>
-            <color name="green">&lt;xsl:value-of</color> select="concat(.,',')"<color name="green">/&gt;</color>
-          <color name="green">&lt;/xsl:otherwise&gt;</color>
-        <color name="green">&lt;/xsl:choose&gt;</color>
-      <color name="green">&lt;/xsl:iterate&gt;</color>
-    <color name="green">&lt;/xsl:source-document&gt;</color>
-  <color name="green">&lt;/xsl:template&gt;</color>  
-<color name="green">&lt;/xsl:stylesheet&gt;</color>
-</verbatim>
-               </page-wide-element>
-                     <column-wide-element>
-                  <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten (<code>
-                        <nb>&amp;#10;</nb>
-                     </code>) wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <note>
-                        <consequence>
-                           <p>Logisch wird beim XSLT Streaming auf einer niedrigeren Abstraktionsebene programmiert, um den Anforderungen des Prozessors gerecht zu werden.</p>
-                        </consequence>
-                     </note>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Für eine <b>1.6 GB Datei</b> benötigt das obige Skript auf meinem Rechner gute<b> drei Minuten</b>. Der traditionelle temlate-match Ansatz bricht mit einer Out-of-Memory Exception ab, selbst wenn man den Java Heap Size auf 4GB einstellt.</p>
-               </column-wide-element>
-                  
-               
-            </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1458" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1324" ismodule="no">
             
                <title>
                   <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
@@ -1686,7 +1457,7 @@ starten.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                           id="ec4e438f-b6cc-4f50-b903-bda598a9003c"
+                           id="6900420f-7f27-4782-bab3-9459d95de662"
                            type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
             </column-wide-element>
                   <column-wide-element>
@@ -1751,7 +1522,7 @@ starten.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1536" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1402" ismodule="no">
             
                <title>
                   <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming</title>
@@ -1784,13 +1555,13 @@ starten.</p>
                <p>XSLT Streaming<xe>
                      <first criterion="Verarbeitungsmethoden">Verarbeitungsmethoden</first>
                      <second criterion="XSLT Streaming">XSLT Streaming</second>
-                  </xe> ist in der XSLT Version 3.0 neu hinzugekommen<footnote>
+                  </xe> ist in der XSLT Version 3.0<footnote>
                      <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html</desc>
                      <add>XSLT3.0 Streaming API</add>
-                  </footnote> und in der
-kommerziellen Saxon-EE Löusug implementiert<footnote>
+                  </footnote> neu hinzugekommen und in der
+kommerziellen Saxon-EE Löusug <footnote>
                      <desc>https://www.saxonica.com/html/documentation/sourcedocs/streaming/</desc>
-                  </footnote>. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung<xe>
+                  </footnote> implementiert. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung<xe>
                      <first criterion="Performanzsteigerung">Performanzsteigerung</first>
                   </xe> führt.</p>
             </column-wide-element>
@@ -1818,7 +1589,7 @@ kommerziellen Saxon-EE Löusug implementiert<footnote>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1611" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1477" ismodule="no">
                
                   <title>
                      <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title>
@@ -1940,8 +1711,203 @@ würde.</p>
                   
                
             </chapter>
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1552" ismodule="no">
+               
+                  <title>
+                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
+                  </title>
+                  
+                     <column-wide-element>
+                  <p>XSLT Streaming<xe>
+                        <first criterion="Verarbeitungsmethode">Verarbeitungsmethode</first>
+                        <second criterion="XSLT Streaming">XSLT Streaming</second>
+                     </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generierijuij</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>t werden:i9i09i</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>9i9</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim><color name="green">&lt;status-report&gt;</color>
+  <color name="green">&lt;status-change&gt;</color>
+    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
+    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
+    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
+  <color name="green">&lt;/status-change&gt;</color>
+  <color name="green">&lt;status-change&gt;</color>
+    <color name="green">&lt;billing_id&gt;</color>360788<color name="green">&lt;/dentaltrac_encounter_id&gt;</color>
+    <color name="green">&lt;claim_ids&gt;</color>967382,673647<color name="green">&lt;/claim_ids&gt;</color>
+    <color name="green">&lt;status&gt;</color>open<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;time_stamp&gt;</color>2019-02-22T13:53:34.605Z<color name="green">&lt;/status_time&gt;</color>
+  <color name="green">&lt;/status-change&gt;</color>
+  [...]</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Mit einer <code>
+                        <nb>for-each</nb>
+                     </code> Loop und einem Named-Template würde das so gehen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+<color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
+  <color name="green">&lt;xsl:for-each</color> select="$input-file/status-report/status-change"<color name="green">&gt;</color>
+    <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
+    <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
+    <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
+    <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
+  <color name="green">&lt;/xsl:for-each&gt;</color>
+<color name="green">&lt;/xsl:template&gt;</color></verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p>Named-Templates, die direkt über den Saxon Aufruf <code>
+                              <nb>saxon -it:main</nb>
+                           </code> aufgerufen werden, sind dann
+brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
+Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
+vom XSLT Skript selbst erzeugt wird.</p>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
+verlassen, was den Code weiter vereinfacht:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+<color name="green">&lt;xsl:template</color> match="/status-report/status-change"<color name="green">&gt;</color>
+  <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
+  <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
+  <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
+  <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
+<color name="green">&lt;/xsl:template&gt;</color></verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
+auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
+aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
+                              id="08b9f2b5-f282-43f1-8206-8a83b6fdedc2"
+                              type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Wir betrachten hier das <code>
+                        <nb>xsl:iterator</nb>
+                     </code> (Doku)<footnote>
+                        <desc>https://www.saxonica.com/html/documentation/xsl-elements/iterate.html</desc>
+                        <add>Der Iterator ist ein Konzept um XSLT Streaming zu realisieren</add>
+                     </footnote>
+ Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <ul>
+                        <li>
+                           <p>Wir benutzen <code>
+                              <nb>xsl:source-document</nb>
+                           </code> in Verbindung mit dem <code>
+                              <nb>streamable='yes'</nb>
+                           </code> Attribut,
+um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p>
+                        </li>
+                        <li>
+                           <p>Wenn wir die Quelle über einen Parameter einlesen, dann müssen wir auch die Transformation über ein Named-Template
+starten.</p>
+                        </li>
+                     </ul>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von <code>
+                        <nb>value-of select</nb>
+                     </code> statements in den Iterator:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>
+<color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
+  <color name="green">&lt;xsl:source-document</color> href="{$input-file}" streamable='yes'<color name="green">&gt;</color>
+    <color name="green">&lt;xsl:iterate</color> select="status-report/status-change"<color name="green">&gt;</color>
+      <color name="green">&lt;xsl:value-of</color> select="concat(billing_id,',')"<color name="green">/&gt;</color>
+      <color name="green">&lt;xsl:value-of</color> select="concat(claim_ids,',')"<color name="green">/&gt;</color>
+      <color name="green">&lt;xsl:value-of</color> select="concat(status,',')"<color name="green">/&gt;</color>
+      <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
+    <color name="green">&lt;/xsl:iterate&gt;</color>
+  <color name="green">&lt;/xsl:source-document&gt;</color> 
+<color name="green">&lt;/xsl:template&gt;</color></verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>und werden dafür prompt mit einer Fehlermeldung belohnt:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>Static error on line 16 column 64 of report.xsl:
+  XTSE3430: The body of the xsl:stream instruction is not streamable
+  *  There is more than one consuming operand: {xsl:value-of} on line 18, and
+  {xsl:value-of} on line 19</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>In diesem Iterator ist also nur eine "konsumierende" <code>
+                        <nb>value-of</nb>
+                     </code> Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="UTF-8"?<color name="green">&gt;</color>
+<color name="green">&lt;xsl:stylesheet</color> xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="xs"
+  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
+  version="3.0"<color name="green">&gt;</color>
+   
+  <color name="green">&lt;xsl:param</color> name="input-file" required="yes"<color name="green">/&gt;</color>
+  
+  <color name="green">&lt;xsl:output</color> method="text"<color name="green">/&gt;</color>
+ 
+  &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
+
+  <color name="green">&lt;xsl:template</color> name="main"<color name="green">&gt;</color>
+    <color name="green">&lt;xsl:source-document</color> href="{$input-file}" streamable='yes'<color name="green">&gt;</color>
+      <color name="green">&lt;xsl:iterate</color> select="status-report/status-change/*"<color name="green">&gt;</color>
+        <color name="green">&lt;xsl:choose&gt;</color>
+          <color name="green">&lt;xsl:when</color> test="name()='time_stamp'"<color name="green">&gt;</color>
+            <color name="green">&lt;xsl:value-of</color> select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"<color name="green">/&gt;</color>
+          <color name="green">&lt;/xsl:when&gt;</color>
+          <color name="green">&lt;xsl:otherwise&gt;</color>
+            <color name="green">&lt;xsl:value-of</color> select="concat(.,',')"<color name="green">/&gt;</color>
+          <color name="green">&lt;/xsl:otherwise&gt;</color>
+        <color name="green">&lt;/xsl:choose&gt;</color>
+      <color name="green">&lt;/xsl:iterate&gt;</color>
+    <color name="green">&lt;/xsl:source-document&gt;</color>
+  <color name="green">&lt;/xsl:template&gt;</color>  
+<color name="green">&lt;/xsl:stylesheet&gt;</color>
+</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten (<code>
+                        <nb>&amp;#10;</nb>
+                     </code>) wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p>Logisch wird beim XSLT Streaming auf einer niedrigeren Abstraktionsebene programmiert, um den Anforderungen des Prozessors gerecht zu werden.</p>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Für eine <b>1.6 GB Datei</b> benötigt das obige Skript auf meinem Rechner gute<b> drei Minuten</b>. Der traditionelle temlate-match Ansatz bricht mit einer Out-of-Memory Exception ab, selbst wenn man den Java Heap Size auf 4GB einstellt.</p>
+               </column-wide-element>
+                  
+               
+            </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1687" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1670" ismodule="no">
             
                <title>
                   <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id() </title>
@@ -2104,7 +2070,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1747" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1730" ismodule="no">
             
                <title>
                   <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke</title>
@@ -2164,8 +2130,8 @@ zu der als Parameter übergebenen generierten Id passt.</p>
 <color name="green">&lt;/xsl:template&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Hier wird jeder Textknoten eines Elements <code>
-                     <nb>&lt;xml-code&gt;}} untersucht und falls ein XML-Tag enthalten ist, so wird dieses über die [[code:xsl:matching-substring</nb>
+               <p>Hier wird jeder Textknoten eines Elements untersucht und falls ein XML-Tag enthalten ist, so wird dieses über die <code>
+                     <nb>xsl:matching-substring</nb>
                   </code> Anweisung in ein <code>
                      <nb>&lt;b&gt;</nb>
                   </code> Tag gewrapped. Im nächsten Transformationsschritt wird dieses wiederum in Fettschrift dargestellt.</p>
@@ -2190,129 +2156,118 @@ zu der als Parameter übergebenen generierten Id passt.</p>
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1821" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1804" ismodule="no">
          
             <title>
-               <title id="79507fbb-caa9-4316-8097-2d7e55208d81">XQuery Use Cases und Lösung</title>
+               <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery </title>
             </title>
             
                <column-wide-element>
-            <p>In diese Kapitel werden einige ausgewählte Themen zu XQuery dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
+            <p>Xquery<xe>
+                  <first criterion="Programmiersprachen">Programmiersprachen</first>
+                  <second criterion="XQuery">XQuery</second>
+               </xe> führt im Publishing-Bereich ein Schattendasein. In meiner Zeit als XSL Programmierer für zwei Publishing  Firmen hatte ich damit nie zu tun. Erst als ich näher an den eigentlichen Daten war und mit XML Datenbanken zu tun hatte, kam ich mit XQuery in Berührung.</p>
          </column-wide-element>
-            
-         
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1838" ismodule="no">
-            
-               <title>
-                  <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
-               </title>
-               
-                  <column-wide-element>
-               <p>Xquery<xe>
-                     <first criterion="Programmiersprachen">Programmiersprachen</first>
-                     <second criterion="XQuery">XQuery</second>
-                  </xe> führt im Publishing-Bereich ein Schattendasein. In meiner Zeit als XSL Programmierer für zwei Publishing  Firmen hatte ich damit nie zu tun. Erst als ich näher an den eigentlichen Daten war und mit XML Datenbanken zu tun hatte, kam ich mit XQuery in Berührung.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Während relationale Datenbanken mit SQL abgefragt werden, verwendet man bei XML Datenbanken, wie eXist<footnote>
-                     <desc>http://exist-db.org/exist/apps/homepage/index.html</desc>
-                     <add>Hompage der eXist XML Datenbank</add>
-                  </footnote> oder Marklogic<footnote>
-                     <desc>https://de.marklogic.com/</desc>
-                     <add>Hompage der NoSQL/XML Datenbank MarkLogic</add>
-                  </footnote>, XQuery als Abfragesprache.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Aber auch einzelne XML Dokumente können z.B. in Oxygen XML Editor<xe>
-                     <first criterion="Tools">Tools</first>
-                     <second criterion="oXygen XML Editor">oXygen XML Editor</second>
-                  </xe> mit dem XQuery Builder Tool<footnote>
-                     <desc>https://www.oxygenxml.com/xml_editor/xquery_builder.html</desc>
-                     <add>Tool zur einfachen Eingabe von XQuery Test-Skripten im oXygen XML Editor</add>
-                  </footnote> oder auch per Saxon Kommandozeile abgefragt werden:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query 
+               <column-wide-element>
+            <p>Während relationale Datenbanken mit SQL abgefragt werden, verwendet man bei XML Datenbanken, wie eXist<footnote>
+                  <desc>http://exist-db.org/exist/apps/homepage/index.html</desc>
+                  <add>Hompage der eXist XML Datenbank</add>
+               </footnote> oder Marklogic<footnote>
+                  <desc>https://de.marklogic.com/</desc>
+                  <add>Hompage der NoSQL/XML Datenbank MarkLogic</add>
+               </footnote>, XQuery als Abfragesprache.</p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Aber auch einzelne XML Dokumente können z.B. in Oxygen XML Editor<xe>
+                  <first criterion="Tools">Tools</first>
+                  <second criterion="oXygen XML Editor">oXygen XML Editor</second>
+               </xe> mit dem XQuery Builder Tool<footnote>
+                  <desc>https://www.oxygenxml.com/xml_editor/xquery_builder.html</desc>
+                  <add>Tool zur einfachen Eingabe von XQuery Test-Skripten im oXygen XML Editor</add>
+               </footnote> oder auch per Saxon Kommandozeile abgefragt werden:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query 
      -s:"schulen.xml" 
      -qs:"/schulen/schule[id='6']" 
      -o:"/Users/Alex/Desktop/schule_6.xml"</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Mit der Option <b>-qs </b>kann hier der Querystring angebenen werden. </p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<footnote>
-                     <desc>http://cs.au.dk/~amoeller/XML/querying/flwrexp.html</desc>
-                     <add>XQuery Extensions für mächtigere Funktionen</add>
-                  </footnote> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
-            </column-wide-element>
-                  <block-title>
-                     <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
-                  </block-title>
-                  <column-wide-element>
-               <p>Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
+         </page-wide-element>
+               <column-wide-element>
+            <p>Mit der Option <b>-qs </b>kann hier der Querystring angebenen werden. </p>
+         </column-wide-element>
+               <column-wide-element>
+            <p>Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPATH verwandt. XQuery umfasst den Sprachumfang von XPATH bietet aber zusätzlich die FLOWR Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer Extensions<footnote>
+                  <desc>http://cs.au.dk/~amoeller/XML/querying/flwrexp.html</desc>
+                  <add>XQuery Extensions für mächtigere Funktionen</add>
+               </footnote> können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
+         </column-wide-element>
+               <block-title>
+                  <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
+               </block-title>
+               <column-wide-element>
+            <p>Oxygen XML Editor bietet eine schöne Möglichkeit XQuery-Abfragen 
 auf einem geladenen XML Dokument auszuführen. Dazu kann man 
 seine Query in das betreffende Eingabefenster schreiben.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <column-wide-element>
-                     <subtitle>oXygen XQuery Builder</subtitle>
-                  </column-wide-element>
-                     <desc id="71e42e88-d6ac-4fca-9bae-a4d2919b818cd6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
-                     <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
-                  </figure>
-            </page-wide-element>
+         </column-wide-element>
+               <page-wide-element>
+            <figure pdfwidth="page">
                   <column-wide-element>
-               <p>Mit folgendem Ergebnis:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim><color name="green">&lt;dates&gt;</color>
+                  <subtitle>oXygen XQuery Builder</subtitle>
+               </column-wide-element>
+                  <desc id="ea069e8a-c165-414e-a888-67e68b8876fbd6e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
+                  <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
+               </figure>
+         </page-wide-element>
+               <column-wide-element>
+            <p>Mit folgendem Ergebnis:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim><color name="green">&lt;dates&gt;</color>
   <color name="green">&lt;today&gt;</color>2019-01-16+01:00<color name="green">&lt;/today&gt;</color>
   <color name="green">&lt;formatted&gt;</color>Wednesday, 16th January 2019<color name="green">&lt;/formatted&gt;</color>
 <color name="green">&lt;/dates&gt;</color></verbatim>
-            </page-wide-element>
-                  <block-title>
-                     <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
-                  </block-title>
-                  <column-wide-element>
-               <p>FLOWR<xe>
-                     <first criterion="FLOWR Expression">FLOWR Expression</first>
-                  </xe> steht für <code>
-                     <nb>for, let, where, order by, return</nb>
-                  </code>. Das sind die Query-Anweisungen, die in 
+         </page-wide-element>
+               <block-title>
+                  <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
+               </block-title>
+               <column-wide-element>
+            <p>FLOWR<xe>
+                  <first criterion="FLOWR Expression">FLOWR Expression</first>
+               </xe> steht für <code>
+                  <nb>for, let, where, order by, return</nb>
+               </code>. Das sind die Query-Anweisungen, die in 
 dem Ausdruck erlaubt sind - in genau dieser Reihenfolge.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim><color name="brown">let </color><color name="red">$bibliothek</color> := .
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim><color name="brown">let </color><color name="red">$bibliothek</color> := .
 <color name="brown">for </color><color name="red">$x</color><color name="brown"> in </color><color name="red">$bibliothek</color>//buecher,
     <color name="red">$y</color><color name="brown"> in </color><color name="red">$bibliothek</color>//autoren/autor
 <color name="brown">where </color>starts-with(<color name="red">$autor</color>, 'Grass')
     and <color name="red">$x</color>/@autorId = <color name="red">$y</color>/@id
 <color name="brown">return </color><color name="red">$x</color>/titel</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
+         </page-wide-element>
+               <column-wide-element>
+            <p>In dieser Query werden die Titel aller Bücher von Grass zurückgeliefert.
 Bemerkenswert ist hier die Syntax.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <note>
-                     <consequence>
-                        <p>Normalerweise würde man zwischen den
+         </column-wide-element>
+               <column-wide-element>
+            <note>
+                  <consequence>
+                     <p>Normalerweise würde man zwischen den
 einzelnen Anweisungen einen Blockabschluss, wie ein Semikolon erwarten.
 Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
-                     </consequence>
-                  </note>
-            </column-wide-element>
-                  <block-title>
-                     <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
-                  </block-title>
-                  <column-wide-element>
-               <p>Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
+                  </consequence>
+               </note>
+         </column-wide-element>
+               <block-title>
+                  <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
+               </block-title>
+               <column-wide-element>
+            <p>Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
 vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B. hier:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim><color name="brown">declare </color><color name="brown">variable </color><color name="red">$nachname</color> as xs:string external;
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim><color name="brown">declare </color><color name="brown">variable </color><color name="red">$nachname</color> as xs:string external;
 <color name="green">&lt;buecher</color> autor="{$nachname}"<color name="green">&gt;</color>
 {
   <color name="brown">let </color><color name="red">$bibliothek</color> := .
@@ -2327,41 +2282,41 @@ vorzuziehen ist. Dazu werden Tags direkt in die Expression geschrieben, wie z.B.
   <color name="green">&lt;/buch&gt;</color>
 }
 <color name="green">&lt;/buecher&gt;</color></verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Speichert man dieses Schnippsel in einer Datei <code>
-                     <nb>buecher.xquery</nb>
-                  </code> ab,
+         </page-wide-element>
+               <column-wide-element>
+            <p>Speichert man dieses Schnippsel in einer Datei <code>
+                  <nb>buecher.xquery</nb>
+               </code> ab,
 so kann man mit der folgenden Kommandozeile auf einer <code>
-                     <nb>buecher.xml</nb>
-                  </code> Datei als Eingabe suchen:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
+                  <nb>buecher.xml</nb>
+               </code> Datei als Eingabe suchen:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t -s:buecher.xml 
                                                        -q:buecher.xquery 
                                                        -o:ergebnis.xml 
                                                        nachname=grass</verbatim>
-            </page-wide-element>
-                  <block-title>
-                     <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
-                  </block-title>
-                  <column-wide-element>
-               <p>Document Projection<footnote>
-                     <desc>http://www.saxonica.com/documentation/#!sourcedocs/projection</desc>
-                     <add>Verstecktes Saxon Feature: Dokument Projektion bei einer XQuery Abfrage</add>
-                  </footnote>
-                  <xe>
-                     <first criterion="Tipps und Tricks">Tipps und Tricks</first>
-                     <second criterion="Document Projection">Document Projection</second>
-                  </xe>  ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
+         </page-wide-element>
+               <block-title>
+                  <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
+               </block-title>
+               <column-wide-element>
+            <p>Document Projection<footnote>
+                  <desc>http://www.saxonica.com/documentation/#!sourcedocs/projection</desc>
+                  <add>Verstecktes Saxon Feature: Dokument Projektion bei einer XQuery Abfrage</add>
+               </footnote>
+               <xe>
+                  <first criterion="Tipps und Tricks">Tipps und Tricks</first>
+                  <second criterion="Document Projection">Document Projection</second>
+               </xe>  ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
 Das kann schon recht hilfreich sein, wenn man ein mehrere 100MB großes Dokument durchsuchen
 will.</p>
-            </column-wide-element>
-                  <column-wide-element>
-               <p>Ohne Projection würde das Beispiel von oben so verarbeitet:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
+         </column-wide-element>
+               <column-wide-element>
+            <p>Ohne Projection würde das Beispiel von oben so verarbeitet:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>java -cp usr/lib/saxon/saxon.jar net.sf.saxon.Query -t 
      -s:buecher.xml 
      -q:buecher.xquery 
      -o:ergebnis.xml 
@@ -2381,14 +2336,14 @@ Tree built<color name="brown"> in </color>3.482278ms
 Tree size: 46 nodes, 58 characters, 6 attributes
 Execution time: 27.137589ms
 Memory used: 67031664</verbatim>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Mit der Option <code>
-                     <nb>-projection:on</nb>
-                  </code> verändert sich die Ausführungszeit signifikant:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <verbatim>[...]
+         </page-wide-element>
+               <column-wide-element>
+            <p>Mit der Option <code>
+                  <nb>-projection:on</nb>
+               </code> verändert sich die Ausführungszeit signifikant:</p>
+         </column-wide-element>
+               <page-wide-element>
+            <verbatim>[...]
 
 Document projection <color name="brown">for </color>file:/Users/Alex/buecher.xml
 -- Input nodes 50; output nodes 27; reduction = 46%
@@ -2396,99 +2351,10 @@ Tree built<color name="brown"> in </color>3.80615ms
 Tree size: 26 nodes, 58 characters, 3 attributes
 Execution time: 15.83463ms
 Memory used: 64339064</verbatim>
-            </page-wide-element>
-               
+         </page-wide-element>
             
-         </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1967" ismodule="no">
-            
-               <title>
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
-               </title>
-               
-                  <column-wide-element>
-               <p>Marklogic<xe>
-                     <first criterion="Software">Software</first>
-                     <second criterion="Marklogic">Marklogic</second>
-                  </xe> bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector<xe>
-                     <first criterion="Tools">Tools</first>
-                     <second criterion="oXygen-Connector">oXygen-Connector</second>
-                  </xe>. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="6f6f78fc-76e7-496e-a509-60ae08c0f6afd6e10">oXygen Data Source Explorer View öffnen</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>und konfiguriert eine neue Datenquelle:</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="56e5bbeb-575d-4df1-b392-a30865bf534fd6e16">Neue Datenquelle in oXygen konfigurieren</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Dazu muss man den Marklogic Treiber installieren<footnote>
-                     <desc>https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html</desc>
-                     <add>MarkLogic Datenquelle in oXygen konfigurieren</add>
-                  </footnote> und diesen im folgenden Screen verfügbar machen.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <caution>
-                     <cause>Das Jar sollte an einem soliden Ort abgespeichert werden, da hier nur ein Verweis auf diesen Ort gesetzt wird.</cause>
-                     <consequence/>
-                  </caution>
-            </page-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="36195db5-65ff-4426-b863-06a72fa91351d6e27">Marklogic Treiber auswählen</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b> 
-                  <xe>
-                     <first criterion="Tools">Tools</first>
-                     <second criterion="Marklogic WebDAV Server">Marklogic WebDAV Server</second>
-                  </xe> hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="9a38a110-c4b8-4efa-95e5-bcba44278512d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
-                  </figure>
-            </page-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="993f9c35-b441-42cf-87fb-63980a4554b7d6e43">WebDAV in Marklogic konfigurieren</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="f355add5-223f-475a-a976-cd7d1d45602cd6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
-                  </figure>
-            </page-wide-element>
-                  <column-wide-element>
-               <p>Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
-            </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="54149835-7759-4782-aa85-5d9f8a767aa2d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
-                  </figure>
-            </page-wide-element>
-               
-            
-         </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2075" ismodule="no">
+         
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1932" ismodule="no">
             
                <title>
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
@@ -2531,7 +2397,7 @@ Komma - ein Tupel wird erzeugt - dann klappt es.</p>
                   </block-title>
                   <column-wide-element>
                <p>Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
-folgendermassen aus<footnote>
+folgendermassen aus (Doku)<footnote>
                      <desc>https://docs.marklogic.com/xdmp:document-insert</desc>
                      <add>Doku zu xdmp:documen-insert Funktion auf den MarkLogic Webseiten</add>
                   </footnote>:<xe>
@@ -2572,7 +2438,7 @@ folgendermassen aus<footnote>
                      <first criterion="Programmierkonstrukte">Programmierkonstrukte</first>
                      <second criterion="DB Collection">DB Collection</second>
                   </xe> zuweisen, um sie leichter finden und auswerten
-zu können. Das geht mit dem folgenden Befehl<footnote>
+zu können. Das geht mit dem folgenden Befehl (Doku)<footnote>
                      <desc>https://docs.marklogic.com/xdmp:document-add-collections</desc>
                      <add>Dokumentation zur xdmp:document-add-collections Funktion auf den MarkLogic Webseiten</add>
                   </footnote> und diesem Schnippsel:</p>
@@ -2605,7 +2471,7 @@ zu können. Das geht mit dem folgenden Befehl<footnote>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2148" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2005" ismodule="no">
                
                   <title>
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
@@ -2704,7 +2570,7 @@ Variablenauswertung: <color name="red">$common</color>:collection-books</verbati
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2222" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2079" ismodule="no">
                
                   <title>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
@@ -2812,7 +2678,107 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2291" ismodule="no">
+      </chapter>
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2149" ismodule="no">
+         
+            <title>
+               <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title>
+            </title>
+            
+               <column-wide-element>
+            <p>bla bla</p>
+         </column-wide-element>
+            
+         
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2166" ismodule="no">
+            
+               <title>
+                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
+               </title>
+               
+                  <column-wide-element>
+               <p>Marklogic<xe>
+                     <first criterion="Software">Software</first>
+                     <second criterion="Marklogic">Marklogic</second>
+                  </xe> bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector<xe>
+                     <first criterion="Tools">Tools</first>
+                     <second criterion="oXygen-Connector">oXygen-Connector</second>
+                  </xe>. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="fc6998b3-6529-4e08-89a7-e4078f68c9bbd6e10">oXygen Data Source Explorer View öffnen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
+                  </figure>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>und konfiguriert eine neue Datenquelle:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="065e81ab-8f84-4976-853d-8062d6229699d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
+                  </figure>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Dazu muss man den Marklogic Treiber installieren<footnote>
+                     <desc>https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html</desc>
+                     <add>MarkLogic Datenquelle in oXygen konfigurieren</add>
+                  </footnote> und diesen im folgenden Screen verfügbar machen.</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <caution>
+                     <cause>Das Jar sollte an einem soliden Ort abgespeichert werden, da hier nur ein Verweis auf diesen Ort gesetzt wird.</cause>
+                     <consequence/>
+                  </caution>
+            </page-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="08c55599-b8eb-4de1-a1cc-3fcb0c066113d6e27">Marklogic Treiber auswählen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
+                  </figure>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b> 
+                  <xe>
+                     <first criterion="Tools">Tools</first>
+                     <second criterion="Marklogic WebDAV Server">Marklogic WebDAV Server</second>
+                  </xe> hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="4bad64f7-b111-446f-994c-2566811d15acd6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
+                  </figure>
+            </page-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="7aea80d2-c765-49ab-973c-10425b9fa565d6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
+                  </figure>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="71c031e2-3c76-431b-8a7b-ba6e9d79d9b0d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
+                  </figure>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="330c123f-ece6-49a2-944b-bf1a4df30d43d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
+                  </figure>
+            </page-wide-element>
+               
+            
+         </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2274" ismodule="no">
             
                <title>
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
@@ -3171,8 +3137,203 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                
             
          </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2352" ismodule="no">
+            
+               <title>
+                  <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title>
+               </title>
+               
+                  <column-wide-element>
+               <p>Wenn wir zwischen der Zeit in der das Dokument, bspw. ein Vetrag 
+in der DB angelegt wird, und der Zeit in der ein Vetrag zwischen zwei 
+Vetragspartnern abgeschlossen wird unterscheiden, dann betrachten
+wir zwei Zeitachsen.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <ul>
+                     <li>
+                        <p>die gültige Zeit (Valid Time)</p>
+                     </li>
+                     <li>
+                        <p>die Systemzeit (System Time)</p>
+                     </li>
+                  </ul>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Für die Vetragspartner ist nur die gültige Zeit relevant. Das Zeitfenster
+zwischen gültiger Zeit und Systemzeit ist jedoch in manchen Fällen
+ausschlaggebend.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Bsp: Kürzlich wurde
+meine Geldbörse mit meinem Perso geklaut. Beim Austellen eines vorläufigen
+Ausweises wurde ich schriftlich darauf hingewiesen, dass nun mein Perso
+bei Interpol zur Fahndung ausgeschrieben ist.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Kurze Zeit später fand ein netter Herr die Geldbörse ohne Geld aber 
+mit allen Papieren in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
+Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da die Systemzeit
+des Vorgangs im System der Polizei noch nicht aktualisiert war.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Ich nehme an, dass nach meiner Unschuldsbekundung der Vorgang auch
+auf Seiten des Polizeicomputers aktualisiert wurde. Nun könnte man zwei Fragen
+stellen:</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <procedure type="ol">
+                     <step>
+                        <action>
+                           <p>Ist das Festhalten seitens der Zollbeamten rechtens?</p>
+                        </action>
+                     </step>
+                     <step>
+                        <action>
+                           <p>Habe ich mich durch ein verspätetes Anzeigen des Funds schuldig gemacht?</p>
+                        </action>
+                     </step>
+                  </procedure>
+            </column-wide-element>
+                  <column-wide-element>
+               <note>
+                     <consequence>
+                        <p>Beachte, dass man diese Fragen auch noch nach 10 Jahren stellen
+könnte und das - bei meinem Pech in diesen Angelegenheiten - auch
+so ein Vorfall noch öfters passieren könnte.</p>
+                     </consequence>
+                  </note>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Um diese Fragen zu beantworten, müsste unsere Datenbank in der Lage sein,
+eine bitemporäre Query auszuführen. Zunächst registerieren wir den Vorgang
+des Persoverlustes in unserer Marklogic Datenbank:</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <note>
+                     <consequence>
+                        <p>Da wir hier auf einer XML Datenbank arbeiten, sprechen wir von einem Dokument,
+wenn einen Datensatz meinen. Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. Auf diese Weise bleibt die Änderungshistorie erhalten.</p>
+                     </consequence>
+                  </note>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";
+import <color name="brown">module </color><color name="brown">namespace </color>temporal = 
+       "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";   
+<color name="brown">let </color><color name="red">$root</color> :=    
+  <color name="green">&lt;vorgang&gt;</color>     
+    <color name="green">&lt;perso-id&gt;</color>XYZ<color name="green">&lt;/perso-id&gt;</color>    
+    <color name="green">&lt;name&gt;</color>Alex Düsel<color name="green">&lt;/name&gt;</color>   
+    <color name="green">&lt;status&gt;</color>gestohlen<color name="green">&lt;/status&gt;</color>
+  <color name="green">&lt;/vorgang&gt;</color>
+<color name="brown">let </color><color name="red">$options</color> :=   
+  <color name="green">&lt;options</color> xmlns="xdmp:document-insert"<color name="green">&gt;</color>     
+    <color name="green">&lt;metadata&gt;</color>        
+      <color name="green">&lt;map:map</color> xmlns:map="http://marklogic.com/xdmp/map"<color name="green">&gt;</color>          
+        <color name="green">&lt;map:entry</color> key="validStart"<color name="green">&gt;</color>            
+	  <color name="green">&lt;map:value&gt;</color>2019-02-01T08:23:11<color name="green">&lt;/map:value&gt;</color>          
+	<color name="green">&lt;/map:entry&gt;</color>          
+	<color name="green">&lt;map:entry</color> key="validEnd"<color name="green">&gt;</color>            
+	  <color name="green">&lt;map:value&gt;</color>9999-12-31T11:59:59Z<color name="green">&lt;/map:value&gt;</color>          
+	<color name="green">&lt;/map:entry&gt;</color>         
+      <color name="green">&lt;/map:map&gt;</color>    
+    <color name="green">&lt;/metadata&gt;</color>  
+
+<color name="brown">return </color> <color name="blue">temporal:document-insert</color>("/perso-verluste", 
+                                 "duesel_alex_270774.xml", 
+                                 <color name="red">$root</color>, <color name="red">$options</color>)</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Unser Enddatum liegt in ferner Zukunft sicherzustellen, dass der Vorgang auf unbestimmte Zeit
+im System bleibt.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Drei Tage später hatte ich meinen Ausweis wieder und der Vorgang wurde vier Tage später,
+mit dem Status "gefunden" im Polizeicomputer aktualisiert:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";
+import <color name="brown">module </color><color name="brown">namespace </color>temporal = 
+       "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";   
+<color name="brown">let </color><color name="red">$root</color> :=    
+  <color name="green">&lt;vorgang&gt;</color>     
+    <color name="green">&lt;perso-id&gt;</color>XYZ<color name="green">&lt;/perso-id&gt;</color>    
+    <color name="green">&lt;name&gt;</color>Alex Düsel<color name="green">&lt;/name&gt;</color>   
+    <color name="green">&lt;status&gt;</color><b>gefunden</b><color name="green">&lt;/status&gt;</color>
+  <color name="green">&lt;/vorgang&gt;</color>
+<color name="brown">let </color><color name="red">$options</color> :=   
+  <color name="green">&lt;options</color> xmlns="xdmp:document-insert"<color name="green">&gt;</color>     
+    <color name="green">&lt;metadata&gt;</color>        
+      <color name="green">&lt;map:map</color> xmlns:map="http://marklogic.com/xdmp/map"<color name="green">&gt;</color>          
+        <color name="green">&lt;map:entry</color> key="validStart"<color name="green">&gt;</color>            
+	  <color name="green">&lt;map:value&gt;</color>2019-02-06T08:00:00<color name="green">&lt;map:value&gt;</color>          
+	<color name="green">&lt;/map:entry&gt;</color>          
+	<color name="green">&lt;map:entry</color> key="validEnd"<color name="green">&gt;</color>            
+	  <color name="green">&lt;map:value&gt;</color>9999-12-31T11:59:59Z<color name="green">&lt;/map:value&gt;</color>          
+	<color name="green">&lt;/map:entry&gt;</color>         
+      <color name="green">&lt;/map:map&gt;</color>    
+    <color name="green">&lt;/metadata&gt;</color>  
+
+<color name="brown">return </color> <color name="blue">temporal:document-insert</color>("/perso-verluste", 
+                                 "duesel_alex_270774.xml", 
+                                 <color name="red">$root</color>, <color name="red">$options</color>)</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Nach der Aktualisierung enthält unsere Datenbank logisch gesehen drei Dokumente zu diesem Vorgang, 
+die über eine Query gesucht werden können:</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <procedure type="ol">
+                     <step>
+                        <action>
+                           <p>Das Originaldokument, es ist vom 1.2.2019 bis zum 5.2.2019 im System aktiv</p>
+                        </action>
+                     </step>
+                     <step>
+                        <action>
+                           <p>Die Aktualisierung, sie ist ab dem 6.2.2019 aktiv</p>
+                        </action>
+                     </step>
+                     <step>
+                        <action>
+                           <p>Ein "Split"-Dokument, das aus der verspäteten Aktualisierung resultiert. Es ist ab dem 6.2.2019 im System aktiv, 
+und zeigt den Zeitraum über einen Tag, vom 4.2.2019 bis 5.2.2019, in dem ich ohne Perso registriert war, aber tatsächlich
+schon einen hatte.</p>
+                        </action>
+                     </step>
+                  </procedure>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Im Gegensatz zu einer herkömmlichen Datenhaltung, bei der ein Datensatz aktualisiert wird - ggf. noch eine neue
+Version angelegt wird, wird beim Dokument-basierten Ansatz mit bi-temporaler Datenhaltung jede Transaktion separat
+abgespeichert. Das ist vergleichbar mit einer Simulation des tatsächlichen Papierverkehrs bei buchhalterischen Tätigkeiten.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Die Abfrage so einer Datenbank ist natürlich dadurch nicht einfacher. Drei Queries, die jeweils eines dieser drei
+Dokumente zurückgeben, könnten bspw. so aussehen:</p>
+            </column-wide-element>
+                  <block-title>
+                     <title id="89540fb7-314d-4f40-81ce-500c9e144128d6e65">Rückgabe des Originals:</title>
+                  </block-title>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
+  "system",     
+  "ISO_CONTAINS",     
+  <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-02T00:00:00"),                
+             <color name="blue">xs:dateTime</color>("2019-02-03T23:59:59")) )</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Hier wird geprüft, ob ein Dokument im System aktiv war, dass den Zeitraum vom 2.3. bis zum 3.3 umfasste.
+Diese Query ist erfolgreich und gibt das Original-Dokument des Vorgangs zurück: In diesem Zeitraum
+war ich mit gestohlenem Perso registriert.</p>
+            </column-wide-element>
+               
+            
+         </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2370" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2509" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -3183,7 +3344,7 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2387" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2526" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -3240,16 +3401,18 @@ try {
                      <column-wide-element>
                      <subtitle>Schematron Validierung mit Filter</subtitle>
                   </column-wide-element>
-                     <desc id="70b1fb39-5f41-4889-952c-5ab7a7c131fbd6e25">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
+                     <desc id="d65d8a95-ace6-4cbd-9511-7c1401841a92d6e25">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
                      <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
                   </figure>
             </page-wide-element>
                   <column-wide-element>
-               <p>Zu finden ist das Schematron Programm auf Github<footnote>
+               <p>Zu finden ist das Schematron Repo auf Github<footnote>
                      <desc>https://github.com/Schematron/schematron</desc>
                      <add>Schematron auf GitHub</add>
-                  </footnote>. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <b>schematron/code</b>
-                  </p>
+                  </footnote>. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: <code>
+                     <nb>schematron/code</nb>
+                  </code>
+               </p>
             </column-wide-element>
                   <block-title>
                      <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
@@ -3263,15 +3426,23 @@ try {
                         <p>Im eigenen GIT Projekt das Schematron Projekt als Submodule referenzieren.</p>
                      </li>
                      <li>
-                        <p>Eine Regelbasis anlegen, beispielsweise <b>$project_name.sch</b>.</p>
+                        <p>Eine Regelbasis anlegen, beispielsweise <code>
+                           <nb>$project_name.sch</nb>
+                        </code>.</p>
                      </li>
                      <li>
-                        <p>Zwei Batch-Skripte anlegen, beispielsweise <b>generate_schema.sh</b> und <b>validate.sh</b>.</p>
+                        <p>Zwei Batch-Skripte anlegen, beispielsweise <code>
+                           <nb>generate_schema.sh</nb>
+                        </code> und <code>
+                           <nb>validate.sh</nb>
+                        </code>.</p>
                      </li>
                   </ul>
             </column-wide-element>
                   <column-wide-element>
-               <p>Mittels des Skripts <b>generate_schema.sh</b> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
+               <p>Mittels des Skripts <code>
+                     <nb>generate_schema.sh</nb>
+                  </code> wird aus der Schematron Regelbasis das Schematron XSLT Stylesheet generiert. Der Inhalt dieser Batchdatei könnte zum Beispiel so aussehen:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>saxon <color name="red">$script</color>_dir/<color name="red">$project</color>_name_validation.sch <color name="red">$script</color>_dir/schematron/iso_dsdl_include.xsl
@@ -3296,11 +3467,14 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                   </ul>
             </column-wide-element>
                   <column-wide-element>
-               <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <b>$project_name_validation.xsl.</b>
-                  </p>
+               <p>Herauszufinden, was in diesen Skripten passiert, sei dem geneigten Leser selbst überlassen. Uns interessiert an dieser Stelle nur das Resultat, nämlich das XSLT Stylesheet <code>
+                     <nb>$project_name_validation.xsl</nb>
+                  </code>.</p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Dieses Skript wird in der Batchdatei <b>validate.sh</b> aufgerufen:</p>
+               <p>Dieses Skript wird in der Batchdatei <code>
+                     <nb>validate.sh</nb>
+                  </code> aufgerufen:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim>saxon <color name="red">$xml</color>_instance_to_check.xml <color name="red">$script</color>_dir/<color name="red">$project</color>_name_validation.xsl \
@@ -3322,10 +3496,18 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
   [...]</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Neben den <b>svrl:failed-assert</b> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <b>svrl:successful-report</b>.</p>
+               <p>Neben den <code>
+                     <nb>svrl:failed-assert</nb>
+                  </code> Elementen, die angeben, was bei der überprüften XML-Instanz fehlgeschlagen ist, gibt es auch die Möglichkeit sich positive Ergebnisse anzeigen zu lassen - über das Element <code>
+                     <nb>svrl:successful-report</nb>
+                  </code>.</p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <b>id</b> mit dem Wert <b>1234-5688-9</b> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
+               <p>Konkret bedeutet das obige XML Schnipsel, dass unsere <code>
+                     <nb>id</nb>
+                  </code> mit dem Wert <code>
+                     <nb>1234-5688-9</nb>
+                  </code> im geprüften XML Dokument nicht eindeutig ist. Die Schematron Regelbasis, die wir zur Überprüfung angegebenen haben, sieht so aus:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim><color name="green">&lt;schema</color> xmlns:sch="http://purl.oclc.org/dsdl/schematron" [...]
@@ -3355,7 +3537,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2570" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2676" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -3365,8 +3547,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                <p>XSpec<xe>
                      <first criterion="Tools">Tools</first>
                      <second criterion="XSpec">XSpec</second>
-                  </xe> ist ein <b>Test-Framework</b>
-                  <footnote>
+                  </xe> ist ein Test-Framework<footnote>
                      <desc>https://github.com/xspec</desc>
                      <add>XSpec auf GitHub</add>
                   </footnote>
@@ -3382,12 +3563,12 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
     <color name="green">&lt;personen&gt;</color>
       <color name="green">&lt;person&gt;</color>
         <color name="green">&lt;vorname&gt;</color>Horst<color name="green">&lt;/vorname&gt;</color>
-        &lt;<b>nachname</b>&gt;Schlämmer&lt;/<b>nachname</b>&gt;
+        <color name="green">&lt;nachname&gt;</color>Schlämmer<color name="green">&lt;/nachname&gt;</color>
         <color name="green">&lt;gewicht&gt;</color>100<color name="green">&lt;/gewicht&gt;</color>
       <color name="green">&lt;/person&gt;</color>
       <color name="green">&lt;person&gt;</color>
         <color name="green">&lt;vorname&gt;</color>Gundula<color name="green">&lt;/vorname&gt;</color>
-        &lt;<b>nachname</b>&gt;&lt;/<b>nachname</b>&gt;
+        <color name="green">&lt;nachname&gt;</color><color name="green">&lt;/nachname&gt;</color>
         <color name="green">&lt;gewicht&gt;</color>60<color name="green">&lt;/gewicht&gt;</color>
       <color name="green">&lt;/person&gt;</color>
     <color name="green">&lt;/personen&gt;</color>
@@ -3405,8 +3586,8 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
                schematron="test.sch"<color name="green">&gt;</color>
   <color name="green">&lt;x:scenario</color> label="ALL"<color name="green">&gt;</color>
     <color name="green">&lt;x:context</color> href="test.xml"<color name="green">/&gt;</color>
-    &lt;x:expect-not-assert id="person-nachname-rule" location="//person[1]/<b>nachname</b>"/&gt;
-    &lt;x:expect-assert id="person-nachname-rule" location="//person[2]/<b>nachname</b>"/&gt;
+    <color name="green">&lt;x:expect-not-assert</color> id="person-nachname-rule" location="//person[1]/nachname"<color name="green">/&gt;</color>
+    <color name="green">&lt;x:expect-assert</color> id="person-nachname-rule" location="//person[2]/nachname"<color name="green">/&gt;</color>
   <color name="green">&lt;/x:scenario&gt;</color>
 <color name="green">&lt;/x:description&gt;</color></verbatim>
             </page-wide-element>
@@ -3428,7 +3609,7 @@ die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert mod
                <verbatim><color name="green">&lt;sch:schema</color> xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"<color name="green">&gt;</color>
   <color name="green">&lt;sch:pattern</color> id="main"<color name="green">&gt;</color>
-    &lt;sch:rule context="<b>nachname</b>"&gt;
+    <color name="green">&lt;sch:rule</color> context="nachname"<color name="green">&gt;</color>
       <color name="green">&lt;sch:assert</color> id="person-nachname-rule" role="error" test="normalize-space(.)"<color name="green">&gt;</color>
         Der Nachname der Person mit ID: <color name="green">&lt;sch:value-of</color> select="@id"<color name="green">/&gt;</color> fehlt! 
       <color name="green">&lt;/sch:assert&gt;</color>
@@ -3474,7 +3655,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e2673" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e2755" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -3485,7 +3666,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2690" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2772" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -3567,7 +3748,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2717" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2799" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -3714,7 +3895,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e2942" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3024" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -3925,23 +4106,27 @@ git log --diff-filter=D --summary</verbatim>
          
       
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3106" ismodule="no">
+   <figure-index/>
+   <footnote-index/>
+   <index/>
+   <cover-backpage>
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3188" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
          </title>
          
             <column-wide-element>
-         <p>Tekur CCMS<xe>
-               <first criterion="Tektur CCMS">Tektur CCMS</first>
-            </xe> ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung. Blog: <b>www.tekturcms.de</b>
+            <p>Tekur CCMS<xe>
+                  <first criterion="Tektur CCMS">Tektur CCMS</first>
+               </xe> ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung. Blog: <b>www.tekturcms.de</b>
             </p>
-      </column-wide-element>
+         </column-wide-element>
             <column-wide-element>
-         <p>Hier sind einige Random Features:</p>
-      </column-wide-element>
+            <p>Hier sind einige Random Features:</p>
+         </column-wide-element>
             <column-wide-element>
-         <ul>
+            <ul>
                <li>
                   <p>Die Inhalte werden nach dem DITA Content Model eingegeben. Die Ausgabe erfolgt über ein automatisches Satzsystem.</p>
                </li>
@@ -3979,8 +4164,9 @@ git log --diff-filter=D --summary</verbatim>
                   <p>Topics, Tasks und Maps können vom Autor an Reviewer und Approver für einen Kommentar- und Freigabeprozess überwiesen werden.</p>
                </li>
             </ul>
-      </column-wide-element>
+         </column-wide-element>
          
       
-   </chapter>
+      </chapter>
+   </cover-backpage>
 </document>
