@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 17 2019 18:52:52 </date-of-last-change>
+      <date-of-last-change>Sun Mar 17 2019 19:27:35 </date-of-last-change>
       <language>de-DE</language>
       <status>163</status>
       <description>Short Description</description>
@@ -1719,7 +1719,7 @@ würde.</p>
                   
                      <column-wide-element>
                   <p>XSLT Streaming<xe>
-                        <first criterion="Verarbeitungsmethode">Verarbeitungsmethode</first>
+                        <first criterion="Verarbeitungsmethoden">Verarbeitungsmethoden</first>
                         <second criterion="XSLT Streaming">XSLT Streaming</second>
                      </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
                </column-wide-element>
@@ -1795,7 +1795,7 @@ verlassen, was den Code weiter vereinfacht:</p>
                   <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
 aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                              id="08b9f2b5-f282-43f1-8206-8a83b6fdedc2"
+                              id="0b9bc714-4a63-4837-ae83-8c68ee890d92"
                               type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                </column-wide-element>
                      <column-wide-element>
@@ -3147,7 +3147,11 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                <p>Wenn wir zwischen der Zeit in der das Dokument, bspw. ein Vetrag 
 in der DB angelegt wird, und der Zeit in der ein Vetrag zwischen zwei 
 Vetragspartnern abgeschlossen wird unterscheiden, dann betrachten
-wir zwei Zeitachsen.</p>
+wir zwei Zeitachsen.<xe>
+                     <first criterion="Konzepte">Konzepte</first>
+                     <second criterion="Bi-Temporale Dokumente">Bi-Temporale Dokumente</second>
+                  </xe>
+               </p>
             </column-wide-element>
                   <column-wide-element>
                <ul>
