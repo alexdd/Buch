@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 17 2019 19:27:35 </date-of-last-change>
+      <date-of-last-change>Mon Mar 18 2019 15:27:48 </date-of-last-change>
       <language>de-DE</language>
-      <status>163</status>
+      <status>165</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -3169,16 +3169,19 @@ zwischen gültiger Zeit und Systemzeit ist jedoch in manchen Fällen
 ausschlaggebend.</p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Bsp: Kürzlich wurde
+               <p>
+                     <i id="e607c6b2-4d9a-4652-b8d8-26fc098c3bd7d6e16">Bsp: Kürzlich wurde
 meine Geldbörse mit meinem Perso geklaut. Beim Austellen eines vorläufigen
 Ausweises wurde ich schriftlich darauf hingewiesen, dass nun mein Perso
-bei Interpol zur Fahndung ausgeschrieben ist.</p>
+bei Interpol zur Fahndung ausgeschrieben ist.</i>
+                  </p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Kurze Zeit später fand ein netter Herr die Geldbörse ohne Geld aber 
-mit allen Papieren in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
-Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da die Systemzeit
-des Vorgangs im System der Polizei noch nicht aktualisiert war.</p>
+               <p>
+                     <i id="96689113-3ef6-49b3-9c2c-dab8e0489a27d6e19">Kurze Zeit später fand ein netter Herr die Geldbörse (ohne Geld aber 
+mit allen Papieren) in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
+Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da das System der Polizei noch nicht aktualisiert war.</i>
+                  </p>
             </column-wide-element>
                   <column-wide-element>
                <p>Ich nehme an, dass nach meiner Unschuldsbekundung der Vorgang auch
@@ -3203,21 +3206,25 @@ stellen:</p>
                <note>
                      <consequence>
                         <p>Beachte, dass man diese Fragen auch noch nach 10 Jahren stellen
-könnte und das - bei meinem Pech in diesen Angelegenheiten - auch
-so ein Vorfall noch öfters passieren könnte.</p>
+könnte und das - bei meinem Pech in diesen Angelegenheiten - so ein Vorfall auch noch öfters passieren könnte.</p>
                      </consequence>
                   </note>
             </column-wide-element>
                   <column-wide-element>
                <p>Um diese Fragen zu beantworten, müsste unsere Datenbank in der Lage sein,
-eine bitemporäre Query auszuführen. Zunächst registerieren wir den Vorgang
+eine bitemporale Query<footnote>
+                     <desc>https://en.wikipedia.org/wiki/Temporal_database</desc>
+                     <add>Wikipedia Eintrag zum Thema Temporal Databases mit einer Begriffserklärung</add>
+                  </footnote> auszuführen. Zunächst registerieren wir den Vorgang
 des Persoverlustes in unserer Marklogic Datenbank:</p>
             </column-wide-element>
                   <column-wide-element>
                <note>
                      <consequence>
                         <p>Da wir hier auf einer XML Datenbank arbeiten, sprechen wir von einem Dokument,
-wenn einen Datensatz meinen. Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. Auf diese Weise bleibt die Änderungshistorie erhalten.</p>
+wenn wir einen Datensatz meinen. </p>
+                        <p>Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. </p>
+                        <p>Auf diese Weise bleibt die Änderungshistorie erhalten.</p>
                      </consequence>
                   </note>
             </column-wide-element>
@@ -3302,24 +3309,29 @@ die über eine Query gesucht werden können:</p>
                      <step>
                         <action>
                            <p>Ein "Split"-Dokument, das aus der verspäteten Aktualisierung resultiert. Es ist ab dem 6.2.2019 im System aktiv, 
-und zeigt den Zeitraum über einen Tag, vom 4.2.2019 bis 5.2.2019, in dem ich ohne Perso registriert war, aber tatsächlich
-schon einen hatte.</p>
+und zeigt den Zeitraum über einen Tag, vom 4.2.2019 bis 5.2.2019 - in dem ich ohne Perso registriert war, ihn aber tatsächlich
+schon wieder hatte.</p>
                         </action>
                      </step>
                   </procedure>
             </column-wide-element>
                   <column-wide-element>
                <p>Im Gegensatz zu einer herkömmlichen Datenhaltung, bei der ein Datensatz aktualisiert wird - ggf. noch eine neue
-Version angelegt wird, wird beim Dokument-basierten Ansatz mit bi-temporaler Datenhaltung jede Transaktion separat
-abgespeichert. Das ist vergleichbar mit einer Simulation des tatsächlichen Papierverkehrs bei buchhalterischen Tätigkeiten.</p>
+Version angelegt wird - wird beim Dokument-basierten Ansatz mit bi-temporaler Datenhaltung jede Transaktion separat
+abgespeichert. </p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Die Abfrage so einer Datenbank ist natürlich dadurch nicht einfacher. Drei Queries, die jeweils eines dieser drei
+               <p>Das ist vergleichbar mit einer Simulation des tatsächlichen Papierverkehrs bei buchhalterischen Tätigkeiten.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Die Abfrage so einer Datenbank ist dadurch nicht einfacher. Drei Queries, die jeweils eines dieser drei
 Dokumente zurückgeben, könnten bspw. so aussehen:</p>
             </column-wide-element>
-                  <block-title>
-                     <title id="89540fb7-314d-4f40-81ce-500c9e144128d6e65">Rückgabe des Originals:</title>
-                  </block-title>
+                  <column-wide-element>
+               <p>
+                  <subtitle>Rückgabe des Originals</subtitle>
+               </p>
+            </column-wide-element>
                   <page-wide-element>
                <verbatim>xquery version "1.0-ml";<color name="blue">
 cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
@@ -3329,15 +3341,119 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:p
              <color name="blue">xs:dateTime</color>("2019-02-03T23:59:59")) )</verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Hier wird geprüft, ob ein Dokument im System aktiv war, dass den Zeitraum vom 2.3. bis zum 3.3 umfasste.
-Diese Query ist erfolgreich und gibt das Original-Dokument des Vorgangs zurück: In diesem Zeitraum
-war ich mit gestohlenem Perso registriert.</p>
+               <p>Hier wird geprüft, ob ein Dokument im System aktiv war, dass den Zeitraum vom 2.3. bis zum 3.3. umfasste (<code>
+                     <nb>ISO_CONTAINS</nb>
+                  </code>). Diese Query ist erfolgreich und gibt das Original-Dokument des Vorgangs zurück: In diesem Zeitraum war ich also mit gestohlenem Perso registriert.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>
+                  <subtitle>Rückgabe des Split-Dokuments</subtitle>
+               </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
+   "valid",
+   "ALN_FINISHES",
+   <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-06T08:00:00"),
+              <color name="blue">xs:dateTime</color>("2019-02-06T08:00:00")) ))</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Bei dieser Query wird geprüft, ob es ein Dokument gibt, dass zu einem bestimmten Datum auf inaktiv gesetzt wurde (<code>
+                     <nb>ALN_FINISHES</nb>
+                  </code>) - Das Split-Dokument wird automatisch auf inaktiv gesetzt, wenn die neue Version angelegt wird. Unser Suchdatum wäre also folgendes <code>
+                     <nb>2019-02-06T08:00:00</nb>
+                  </code>.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>
+                  <subtitle>Rückgabe von Split und neuer Version</subtitle>
+               </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
+   "system",
+   "ALN_AFTER",
+   <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-05T11:00:00"),
+              <color name="blue">xs:dateTime</color>("2019-02-05T11:20:00")) ))</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Hier wird geprüft ob es Dokumente gibt, die nach einer bestimmten Zeitspanne im System aktiv waren. Man beachte hier, dass eine Periode angegeben ist, obwohl nur ein Datum notwendig wäre. Der Vergleichsoperator hierzu heisst <code>
+                     <nb>ALN_AFTER</nb>
+                  </code>.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>
+                  <subtitle>Rückgabe von aktueller Version</subtitle>
+               </p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-compare-query</color>(
+   "system",
+   "ISO_CONTAINS",
+   "valid" ))</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Die aktuelle Version kann in Erfahrung gebracht werden, indem geprüft wird, welche gültigen Dokumente innerhalb der Systemzeitspanne liegen. Das kann nur die aktuelle Version sein. Frühere gültige Versionen und Split-Dokumente wären vor der Systemzeit-Spanne.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Die letzte Version eines Dokuments kann aber auch einfach über ein <code>
+                     <nb>latest</nb>
+                  </code> flag in Erfahrung gebracht werden:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:and-query</color>((
+    <color name="blue">cts:collection-query</color>(("koolorder.xml")),
+    <color name="blue">cts:collection-query</color>(("latest")))))</verbatim>
+            </page-wide-element>
+                  <block-title>
+                     <title id="3a3120bb-da56-419a-832d-856ceead990ed6e106">Weiterführende Links</title>
+                  </block-title>
+                  <column-wide-element>
+               <ul>
+                     <li>
+                        <p>Temporal Developer's Guide auf den MarkLogic Doku-Seiten<footnote>
+                           <desc>https://docs.marklogic.com/guide/temporal</desc>
+                           <add>Quickstart Dokumentation, Understanding, Managing and Searching Temporal Documents</add>
+                        </footnote>
+                     </p>
+                     </li>
+                     <li>
+                        <p>A Deep Dive into Bitemporal<footnote>
+                           <desc>https://www.marklogic.com/blog/bitemporal/</desc>
+                           <add>Weiterführender Link zum Thema Bitemporale Dokumente in MarkLogic</add>
+                        </footnote>
+                     </p>
+                     </li>
+                     <li>
+                        <p>Temporale Datenhaltung in der Praxis mit Java<footnote>
+                           <desc>https://www.heise.de/developer/artikel/Temporale-Datenhaltung-in-der-Praxis-mit-Java-2100268.html?seite=all</desc>
+                           <add>Temporale Datenhaltung in der Praxis mit Java</add>
+                        </footnote>
+                     </p>
+                     </li>
+                  </ul>
             </column-wide-element>
                
             
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2581" ismodule="no">
+               
+                  <title>
+                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Bi-Temporales Beispiel für die ML Konsole</title>
+                  </title>
+                  
+                     <column-wide-element>
+                  <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </p>
+               </column-wide-element>
+                  
+               
+            </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2509" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2601" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -3348,7 +3464,7 @@ war ich mit gestohlenem Perso registriert.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2526" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2618" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -3541,7 +3657,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2676" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2768" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -3659,7 +3775,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e2755" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e2847" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -3670,7 +3786,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2772" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2864" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -3752,7 +3868,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2799" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2891" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -3899,7 +4015,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3024" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3116" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -4114,7 +4230,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3188" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3280" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>

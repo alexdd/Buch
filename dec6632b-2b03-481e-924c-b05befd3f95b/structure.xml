@@ -525,7 +525,7 @@
               id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="08b9f2b5-f282-43f1-8206-8a83b6fdedc2"
+              id="0b9bc714-4a63-4837-ae83-8c68ee890d92"
               style="display:none"> </div>
       </td>
    </tr>
@@ -906,21 +906,43 @@
          <div data-element-name="commentable-element"
               id="ba9dfb96-d3dd-49c8-9008-8476c0e59728"
               style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="e607c6b2-4d9a-4652-b8d8-26fc098c3bd7d6e16"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="96689113-3ef6-49b3-9c2c-dab8e0489a27d6e19"
+              style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="6ba81d36-d72d-425f-8d20-91110224e891d6e64"
+   <tr data-tt-id="323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102"
        data-tt-parent-id="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ef2b4070-c3cf-4d73-968e-e25f6dc1eef0 6ba81d36-d72d-425f-8d20-91110224e891d6e64">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ef2b4070-c3cf-4d73-968e-e25f6dc1eef0 323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102">
       <td>
          <span class="number">54  </span>
          <span class="text">
-                           Rückgabe des Originals:
-                 ...</span>
+                           Weiterführende Links
+                    ...</span>
          <div data-element-name="commentable-element"
-              id="6ba81d36-d72d-425f-8d20-91110224e891d6e64"
+              id="323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="89540fb7-314d-4f40-81ce-500c9e144128d6e65"
+              id="3a3120bb-da56-419a-832d-856ceead990ed6e106"
+              style="display:none"> </div>
+      </td>
+   </tr>
+   <tr data-tt-id="7c58baac-7b83-41b9-adf6-12f63539cbb6"
+       data-tt-parent-id="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0"
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ef2b4070-c3cf-4d73-968e-e25f6dc1eef0 7c58baac-7b83-41b9-adf6-12f63539cbb6">
+      <td>
+         <span class="number">55  </span>
+         <span class="text">
+                     Bi-Temporales Beispiel für die ML Konsole
+     ...</span>
+         <div data-element-name="commentable-element"
+              id="7c58baac-7b83-41b9-adf6-12f63539cbb6"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="a1776d29-3de4-4aeb-9f82-1718bfdb333e"
               style="display:none"> </div>
       </td>
    </tr>
@@ -928,7 +950,7 @@
        data-tt-parent-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936">
       <td>
-         <span class="number">55  </span>
+         <span class="number">56  </span>
          <span class="text">
                Testing
             </span>
@@ -944,7 +966,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9">
       <td>
-         <span class="number">56  </span>
+         <span class="number">57  </span>
          <span class="text">
                   Validierung mit Schematron
                </span>
@@ -960,7 +982,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 a99e14e5-6fc7-44a9-9692-cdf9799bf8bcd6e14">
       <td>
-         <span class="number">57  </span>
+         <span class="number">58  </span>
          <span class="text">
                            Schematron ist XSLT
                      ...</span>
@@ -979,7 +1001,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 2b2ab092-e67f-4ed4-bbed-89270aead234d6e30">
       <td>
-         <span class="number">58  </span>
+         <span class="number">59  </span>
          <span class="text">
                            CLI Verwendung
                         </span>
@@ -995,7 +1017,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 cc183707-5352-4c9c-9c31-68047a882d0f">
       <td>
-         <span class="number">59  </span>
+         <span class="number">60  </span>
          <span class="text">
                   Erste Schritte mit Xspec
                </span>
@@ -1010,7 +1032,7 @@
    <tr data-tt-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-tt-parent-id="Manual"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055">
       <td>
-         <span class="number">60  </span>
+         <span class="number">61  </span>
          <span class="text">
             Zusätzliches Know-How
          </span>
@@ -1026,7 +1048,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 7dbb15ce-bbc5-4d91-b977-ed7e8117730e">
       <td>
-         <span class="number">61  </span>
+         <span class="number">62  </span>
          <span class="text">
                GIT Einmaleins 
             </span>
@@ -1042,7 +1064,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679">
       <td>
-         <span class="number">62  </span>
+         <span class="number">63  </span>
          <span class="text">
                XML Editoren 
             </span>
@@ -1058,7 +1080,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 45392571-40bf-42cc-91a8-73db7cc25bced6e52">
       <td>
-         <span class="number">63  </span>
+         <span class="number">64  </span>
          <span class="text">
                         WYSIWYM Desktop
                      </span>
@@ -1074,7 +1096,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 31915e1f-7aa0-4ad3-b409-699f176fb8b9d6e73">
       <td>
-         <span class="number">64  </span>
+         <span class="number">65  </span>
          <span class="text">
                         WYSIWYG Desktop
                      </span>
@@ -1090,7 +1112,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 b919f7f3-3120-40b9-8c25-d2879cf6fa4fd6e78">
       <td>
-         <span class="number">65  </span>
+         <span class="number">66  </span>
          <span class="text">
                         WYSIWYM Online
                      </span>
@@ -1105,7 +1127,7 @@
    <tr data-tt-id="3dfad2c2-2299-461a-9d80-42237bbb5e89" data-tt-parent-id="Manual"
        data-chapter-link-id="3dfad2c2-2299-461a-9d80-42237bbb5e89">
       <td>
-         <span class="number">66  </span>
+         <span class="number">67  </span>
          <span class="text">
             Glossar
          </span>
@@ -1121,7 +1143,7 @@
    <tr data-tt-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-tt-parent-id="Manual"
        data-chapter-link-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8">
       <td>
-         <span class="number">67  </span>
+         <span class="number">68  </span>
          <span class="text">
             Tektur CCMS
          </span>

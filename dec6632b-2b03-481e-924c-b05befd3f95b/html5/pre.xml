@@ -4,9 +4,9 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 17 2019 18:56:11 </date-of-last-change>
+      <date-of-last-change>Mon Mar 18 2019 15:28:46 </date-of-last-change>
       <language>de-DE</language>
-      <status>163</status>
+      <status>165</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -1307,7 +1307,7 @@ verlassen, was den Code weiter vereinfacht:</p>
                      <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
 aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                           id="08b9f2b5-f282-43f1-8206-8a83b6fdedc2"
+                           id="0b9bc714-4a63-4837-ae83-8c68ee890d92"
                            type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                      <p>Wir betrachten hier das <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
                      <nb>xsl:iterator</nb>
@@ -2400,14 +2400,17 @@ wir zwei Zeitachsen.</p>
                   <p>Für die Vetragspartner ist nur die gültige Zeit relevant. Das Zeitfenster
 zwischen gültiger Zeit und Systemzeit ist jedoch in manchen Fällen
 ausschlaggebend.</p>
-                  <p>Bsp: Kürzlich wurde
+                  <p>
+                     <i id="e607c6b2-4d9a-4652-b8d8-26fc098c3bd7d6e16">Bsp: Kürzlich wurde
 meine Geldbörse mit meinem Perso geklaut. Beim Austellen eines vorläufigen
 Ausweises wurde ich schriftlich darauf hingewiesen, dass nun mein Perso
-bei Interpol zur Fahndung ausgeschrieben ist.</p>
-                  <p>Kurze Zeit später fand ein netter Herr die Geldbörse ohne Geld aber 
-mit allen Papieren in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
-Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da die Systemzeit
-des Vorgangs im System der Polizei noch nicht aktualisiert war.</p>
+bei Interpol zur Fahndung ausgeschrieben ist.</i>
+                  </p>
+                  <p>
+                     <i id="96689113-3ef6-49b3-9c2c-dab8e0489a27d6e19">Kurze Zeit später fand ein netter Herr die Geldbörse (ohne Geld aber 
+mit allen Papieren) in seinem Garten. Bei einer anschliessenden Busfahrt mit einem
+Fernbus, wurde ich bei einer Zollkontrolle festgehalten, da das System der Polizei noch nicht aktualisiert war.</i>
+                  </p>
                   <p>Ich nehme an, dass nach meiner Unschuldsbekundung der Vorgang auch
 auf Seiten des Polizeicomputers aktualisiert wurde. Nun könnte man zwei Fragen
 stellen:</p>
@@ -2426,17 +2429,19 @@ stellen:</p>
                   <note>
                      <consequence>
                         <p>Beachte, dass man diese Fragen auch noch nach 10 Jahren stellen
-könnte und das - bei meinem Pech in diesen Angelegenheiten - auch
-so ein Vorfall noch öfters passieren könnte.</p>
+könnte und das - bei meinem Pech in diesen Angelegenheiten - so ein Vorfall auch noch öfters passieren könnte.</p>
                      </consequence>
                   </note>
                   <p>Um diese Fragen zu beantworten, müsste unsere Datenbank in der Lage sein,
-eine bitemporäre Query auszuführen. Zunächst registerieren wir den Vorgang
+eine <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                    address="https://en.wikipedia.org/wiki/Temporal_database">bitemporale Query</url> auszuführen. Zunächst registerieren wir den Vorgang
 des Persoverlustes in unserer Marklogic Datenbank:</p>
                   <note>
                      <consequence>
                         <p>Da wir hier auf einer XML Datenbank arbeiten, sprechen wir von einem Dokument,
-wenn einen Datensatz meinen. Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. Auf diese Weise bleibt die Änderungshistorie erhalten.</p>
+wenn wir einen Datensatz meinen. </p>
+                        <p>Der Datensatz bzw. das Dokument wird nicht aktualisiert, sondern stattdessen das Dokument mit den aktualisierten Daten in einer neuen Version angelegt. </p>
+                        <p>Auf diese Weise bleibt die Änderungshistorie erhalten.</p>
                      </consequence>
                   </note>
                   <verbatim>xquery version "1.0-ml";
@@ -2509,35 +2514,112 @@ die über eine Query gesucht werden können:</p>
                      <step>
                         <action>
                            <p>Ein "Split"-Dokument, das aus der verspäteten Aktualisierung resultiert. Es ist ab dem 6.2.2019 im System aktiv, 
-und zeigt den Zeitraum über einen Tag, vom 4.2.2019 bis 5.2.2019, in dem ich ohne Perso registriert war, aber tatsächlich
-schon einen hatte.</p>
+und zeigt den Zeitraum über einen Tag, vom 4.2.2019 bis 5.2.2019 - in dem ich ohne Perso registriert war, ihn aber tatsächlich
+schon wieder hatte.</p>
                         </action>
                      </step>
                   </procedure>
                   <p>Im Gegensatz zu einer herkömmlichen Datenhaltung, bei der ein Datensatz aktualisiert wird - ggf. noch eine neue
-Version angelegt wird, wird beim Dokument-basierten Ansatz mit bi-temporaler Datenhaltung jede Transaktion separat
-abgespeichert. Das ist vergleichbar mit einer Simulation des tatsächlichen Papierverkehrs bei buchhalterischen Tätigkeiten.</p>
-                  <p>Die Abfrage so einer Datenbank ist natürlich dadurch nicht einfacher. Drei Queries, die jeweils eines dieser drei
+Version angelegt wird - wird beim Dokument-basierten Ansatz mit bi-temporaler Datenhaltung jede Transaktion separat
+abgespeichert. </p>
+                  <p>Das ist vergleichbar mit einer Simulation des tatsächlichen Papierverkehrs bei buchhalterischen Tätigkeiten.</p>
+                  <p>Die Abfrage so einer Datenbank ist dadurch nicht einfacher. Drei Queries, die jeweils eines dieser drei
 Dokumente zurückgeben, könnten bspw. so aussehen:</p>
-                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                     id="6ba81d36-d72d-425f-8d20-91110224e891d6e64">
-                     
-                        <title>
-                           <title id="89540fb7-314d-4f40-81ce-500c9e144128d6e65">Rückgabe des Originals:</title>
-                        </title>
-                        <verbatim>xquery version "1.0-ml";<color name="blue">
+                  <p>
+               <subtitle xmlns:tektur="http://www.stylesheet-entwicklung.de">Rückgabe des Originals</subtitle>
+            </p>
+                  <verbatim>xquery version "1.0-ml";<color name="blue">
 cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
   "system",     
   "ISO_CONTAINS",     
   <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-02T00:00:00"),                
              <color name="blue">xs:dateTime</color>("2019-02-03T23:59:59")) )</verbatim>
-                        <p>Hier wird geprüft, ob ein Dokument im System aktiv war, dass den Zeitraum vom 2.3. bis zum 3.3 umfasste.
-Diese Query ist erfolgreich und gibt das Original-Dokument des Vorgangs zurück: In diesem Zeitraum
-war ich mit gestohlenem Perso registriert.</p>
+                  <p>Hier wird geprüft, ob ein Dokument im System aktiv war, dass den Zeitraum vom 2.3. bis zum 3.3. umfasste (<code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                  <nb>ISO_CONTAINS</nb>
+               </code>). Diese Query ist erfolgreich und gibt das Original-Dokument des Vorgangs zurück: In diesem Zeitraum war ich also mit gestohlenem Perso registriert.</p>
+                  <p>
+               <subtitle xmlns:tektur="http://www.stylesheet-entwicklung.de">Rückgabe des Split-Dokuments</subtitle>
+            </p>
+                  <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
+   "valid",
+   "ALN_FINISHES",
+   <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-06T08:00:00"),
+              <color name="blue">xs:dateTime</color>("2019-02-06T08:00:00")) ))</verbatim>
+                  <p>Bei dieser Query wird geprüft, ob es ein Dokument gibt, dass zu einem bestimmten Datum auf inaktiv gesetzt wurde (<code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                  <nb>ALN_FINISHES</nb>
+               </code>) - Das Split-Dokument wird automatisch auf inaktiv gesetzt, wenn die neue Version angelegt wird. Unser Suchdatum wäre also folgendes <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                  <nb>2019-02-06T08:00:00</nb>
+               </code>.</p>
+                  <p>
+               <subtitle xmlns:tektur="http://www.stylesheet-entwicklung.de">Rückgabe von Split und neuer Version</subtitle>
+            </p>
+                  <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-range-query</color>(
+   "system",
+   "ALN_AFTER",
+   <color name="blue">cts:period</color>(<color name="blue">xs:dateTime</color>("2019-02-05T11:00:00"),
+              <color name="blue">xs:dateTime</color>("2019-02-05T11:20:00")) ))</verbatim>
+                  <p>Hier wird geprüft ob es Dokumente gibt, die nach einer bestimmten Zeitspanne im System aktiv waren. Man beachte hier, dass eine Periode angegeben ist, obwohl nur ein Datum notwendig wäre. Der Vergleichsoperator hierzu heisst <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                  <nb>ALN_AFTER</nb>
+               </code>.</p>
+                  <p>
+               <subtitle xmlns:tektur="http://www.stylesheet-entwicklung.de">Rückgabe von aktueller Version</subtitle>
+            </p>
+                  <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:period-compare-query</color>(
+   "system",
+   "ISO_CONTAINS",
+   "valid" ))</verbatim>
+                  <p>Die aktuelle Version kann in Erfahrung gebracht werden, indem geprüft wird, welche gültigen Dokumente innerhalb der Systemzeitspanne liegen. Das kann nur die aktuelle Version sein. Frühere gültige Versionen und Split-Dokumente wären vor der Systemzeit-Spanne.</p>
+                  <p>Die letzte Version eines Dokuments kann aber auch einfach über ein <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                  <nb>latest</nb>
+               </code> flag in Erfahrung gebracht werden:</p>
+                  <verbatim>xquery version "1.0-ml";<color name="blue">
+cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:and-query</color>((
+    <color name="blue">cts:collection-query</color>(("koolorder.xml")),
+    <color name="blue">cts:collection-query</color>(("latest")))))</verbatim>
+                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
+                     id="323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102">
+                     
+                        <title>
+                           <title id="3a3120bb-da56-419a-832d-856ceead990ed6e106">Weiterführende Links</title>
+                        </title>
+                        <ul>
+                           <li>
+                              <p>
+                        <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                             address="https://docs.marklogic.com/guide/temporal">Temporal Developer's Guide auf den MarkLogic Doku-Seiten</url>
+                     </p>
+                           </li>
+                           <li>
+                              <p>
+                        <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                             address="https://www.marklogic.com/blog/bitemporal/">A Deep Dive into Bitemporal</url>
+                     </p>
+                           </li>
+                           <li>
+                              <p>
+                        <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                             address="https://www.heise.de/developer/artikel/Temporale-Datenhaltung-in-der-Praxis-mit-Java-2100268.html?seite=all">Temporale Datenhaltung in der Praxis mit Java</url>
+                     </p>
+                           </li>
+                        </ul>
                      
                   </chapter>
                
             
+            <chapter hyphenation="yes" chapterpage="no" id="7c58baac-7b83-41b9-adf6-12f63539cbb6"
+                     ismodule="no">
+               
+                  <title>
+                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Bi-Temporales Beispiel für die ML Konsole</title>
+                  </title>
+                  
+                     <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </p>
+                  
+               
+            </chapter>
          </chapter>
       </chapter>
       <chapter hyphenation="yes" chapterpage="no" id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
