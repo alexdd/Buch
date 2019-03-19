@@ -1,1 +1,133 @@
-<div data-attribute-id="61bcaead-35e5-4f94-b719-e7708391915f" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="60a3e8d2-4e37-4515-ba88-a947764e50c1"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="a1776d29-3de4-4aeb-9f82-1718bfdb333e" class="title pmarker tags" data-element="title" data-tektur-editor-id="d3a1e308-1e41-4f54-bb12-b0101b6074b2" contenteditable="true">Bi-Temporales Beispiel für die ML Konsole</div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="cc75e331-3451-4d16-bc73-9e423d5c25d9"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="316fa7fa-5a50-4871-a42a-cf5da0166978" contenteditable="true"></div></div><div data-attribute-id="daa84b7b-0e02-4448-adfa-1cd9e6b3e289" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="c8ff97be-c053-43cb-b490-1677fb669929"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="03af62ca-514f-48b3-9a69-3147b49d5a00"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="2104ae8b-6b06-4e0c-902d-b3dcaca2482b" class="p pmarker tags" data-element="p" data-tektur-editor-id="d25fa878-37fb-49ef-95be-eb13c20ff593" contenteditable="true">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </div></div></div></div>
+<div data-attribute-id="61bcaead-35e5-4f94-b719-e7708391915f" class="topic show_menu tags" data-element="topic" data-deletable="false" data-tektur-editor-id="e9780041-e9be-4ca2-9102-df5bdf92c486"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div data-attribute-id="a1776d29-3de4-4aeb-9f82-1718bfdb333e" class="title pmarker tags" data-element="title" data-tektur-editor-id="72262b0c-fb65-435d-99ed-b6accd375edc" contenteditable="true">Anlegen des Testszenarios auf der ML Konsole</div><div class="abstract optional show_menu tags" data-element="abstract" data-excluding="shortdesc" style="display:none" data-tektur-editor-id="d2ac4b55-ce03-47ab-9f0b-68d831dd8ba9"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="a674d908-b4b5-45f6-bbf7-8a87942c07e6" contenteditable="true"></div></div><div data-attribute-id="daa84b7b-0e02-4448-adfa-1cd9e6b3e289" class="body show_menu tags" data-element="body" data-deletable="false" data-tektur-editor-id="eccb59a8-78b5-47e3-94ff-048df8df6521"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="section tektur-wrapper tags" data-element="section" data-tektur-editor-id="cb815952-c6f9-45e0-8cb3-7ccdaa3f02d1"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="2104ae8b-6b06-4e0c-902d-b3dcaca2482b" class="p pmarker tags" data-element="p" data-tektur-editor-id="6fa47b11-458f-4de5-b1f3-b0e151c6bc80" contenteditable="true">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet:</div><ul data-attribute-id="30e67061-8ce2-46f0-9f22-1a2383c198dbd6e8" class="ul tags" data-element="ul" data-tektur-editor-id="56eb757f-83a9-43a4-a733-61d02e1470e0"><li data-attribute-id="ee196cb3-bf51-41e8-99bb-598d51581f38d6e9" class="li tags" data-element="li" data-tektur-editor-id="f72eaab4-83d5-490d-9a57-b9728bf7c862"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="a626e0cb-bd49-489b-8765-cdb123a70a52d6e10" class="p pmarker tags" data-element="p" data-tektur-editor-id="312f7993-6169-43a9-a4dc-85f590e0c807" contenteditable="true">Anlegen der temporalen Properties: [[code:validStart]], [[code:validEnd]], [[code:systemStart]], [[code:systemEnd]]</div></li><li data-attribute-id="7274f315-72f7-4da1-9f05-e20309215803d6e12" class="li tags" data-element="li" data-tektur-editor-id="3cfd3a34-d907-4d7a-bc09-6111a767aebc"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="7690410f-a848-48ac-9ac1-d2b0c3a7cbf5d6e13" class="p pmarker tags" data-element="p" data-tektur-editor-id="f899adcf-91b4-4b1c-8470-7214c1069c15" contenteditable="true">Anlegen der Indizes zum Suchen über Zeitbereiche: [[code:database-range-field-index("dateTime", "systemStart",...]]</div></li><li data-attribute-id="e705edf3-6040-481a-ae1c-765a8a7d690cd6e15" class="li tags" data-element="li" data-tektur-editor-id="88d04a6b-8641-42a8-a275-2344c975d12d"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="8659af6f-9564-4553-a739-941223db12d0d6e16" class="p pmarker tags" data-element="p" data-tektur-editor-id="f34a6a21-00ff-4488-b68a-799f2b8e5d01" contenteditable="true">Anlegen der zwei Zeitachsen [[code:system]] und [[code:valid]]</div></li><li data-attribute-id="9a60750c-65ee-48ce-9c7c-f2a1a7239f3ad6e18" class="li tags" data-element="li" data-tektur-editor-id="84edde53-4f98-4092-9ab5-750372fa23b1"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="fc9beb7e-9542-46c0-ae1b-b797b1b3df50d6e19" class="p pmarker tags" data-element="p" data-tektur-editor-id="b12399f4-19e2-42a4-8293-9c4f809564e7" contenteditable="true">Anlegen der temporalen Collection [[code:/perso-verluste]]</div></li><li data-attribute-id="d96c5d9a-ca6f-415c-b4d8-b656361f8e44d6e19" class="li tags" data-element="li" data-tektur-editor-id="fd6e3f2b-3da6-4181-a182-fe717d88fac6"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="f7340d19-8dc9-4530-a6b8-40eab7f87459d6e20" class="p pmarker tags" data-element="p" data-tektur-editor-id="5a20094d-bc18-4ec9-a5fd-4223d34e45b0" contenteditable="true">Anlegen des Originals am 1.2.2019</div></li><li data-attribute-id="c3fd928f-428c-45b7-bb43-ffc9b7c4ed39d6e22" class="li tags" data-element="li" data-tektur-editor-id="274d6dd1-8bfc-41c3-8802-2ff605809501"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="ded7a86f-a732-45dd-841d-ad7155ce16dad6e23" class="p pmarker tags" data-element="p" data-tektur-editor-id="72435523-4194-4275-aa92-98fbc51b979f" contenteditable="true">Aktualisierung am 6.2.2019</div></li></ul><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="833a0bb1-92a2-4947-bb68-c48a4c3390cf" contenteditable="true"></div><div class="pre"><div data-attribute-id="961dd642-711b-4718-91e9-5eb393523078d6e25" data-attribute-xml_space="preserve" class="pre-content pmarker tags" data-element="pre" data-tektur-editor-id="df9850ba-75d6-40ab-8ccc-763a9510c79c" contenteditable="true">xquery version "1.0-ml";
+
+import module namespace admin = 
+  "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import module namespace temporal = 
+  "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";
+
+declare namespace local = 'local:';
+declare variable $db := "alex-test";
+
+declare function local:create-temporal-fields()
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return 
+    try {
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validEnd"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemEnd")))
+    } catch ($err) {}
+};
+
+declare function local:create-range-index-fields() 
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return
+    try {
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validEnd", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemEnd", "", fn:true())))
+    } catch ($err) {}  
+};
+
+declare function local:create-axes()
+{
+  try {
+    let $t1 := temporal:axis-create(
+          "valid",
+          cts:field-reference("validStart", "type=dateTime"),
+          cts:field-reference("validEnd", "type=dateTime")),
+        $t2 := temporal:axis-create(
+          "system",
+          cts:field-reference("systemStart", "type=dateTime"),
+          cts:field-reference("systemEnd", "type=dateTime"))
+     return ()
+   } catch ($err) {}
+};
+
+declare function local:create-temporal-collection() 
+{
+  try {
+    let $t:= temporal:collection-create("/perso-verluste", "system", "valid")
+    return ()
+  } catch ($err) {}
+};
+
+declare function local:insert-original()
+{
+  let $root := 
+    &#x3C;vorgang&#x3E;     
+      &#x3C;perso-id&#x3E;XYZ&#x3C;/perso-id&#x3E;    
+      &#x3C;name&#x3E;Alex Düsel&#x3C;/name&#x3E;   
+      &#x3C;status&#x3E;gestohlen&#x3C;/status&#x3E;
+    &#x3C;/vorgang&#x3E;,
+     $options :=   
+    &#x3C;options xmlns="xdmp:document-insert"&#x3E;     
+      &#x3C;metadata&#x3E;        
+        &#x3C;map:map xmlns:map="http://marklogic.com/xdmp/map"&#x3E;          
+          &#x3C;map:entry key="validStart"&#x3E;            
+	          &#x3C;map:value&#x3E;2019-02-01T08:23:11&#x3C;/map:value&#x3E;          
+	        &#x3C;/map:entry&#x3E;          
+	        &#x3C;map:entry key="validEnd"&#x3E;            
+	          &#x3C;map:value&#x3E;9999-12-31T11:59:59Z&#x3C;/map:value&#x3E;          
+	        &#x3C;/map:entry&#x3E;         
+         &#x3C;/map:map&#x3E;    
+      &#x3C;/metadata&#x3E;  
+    &#x3C;/options&#x3E;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+declare function local:insert-update()
+{
+  let $root :=    
+    &#x3C;vorgang&#x3E;     
+      &#x3C;perso-id&#x3E;XYZ&#x3C;/perso-id&#x3E;    
+      &#x3C;name&#x3E;Alex Düsel&#x3C;/name&#x3E;   
+      &#x3C;status&#x3E;gefunden&#x3C;/status&#x3E;
+    &#x3C;/vorgang&#x3E;,
+    $options :=   
+    &#x3C;options xmlns="xdmp:document-insert"&#x3E;     
+      &#x3C;metadata&#x3E;        
+        &#x3C;map:map xmlns:map="http://marklogic.com/xdmp/map"&#x3E;          
+          &#x3C;map:entry key="validStart"&#x3E;            
+	          &#x3C;map:value&#x3E;2019-02-06T08:00:00&#x3C;/map:value&#x3E;          
+	        &#x3C;/map:entry&#x3E;          
+	        &#x3C;map:entry key="validEnd"&#x3E;            
+	          &#x3C;map:value&#x3E;9999-12-31T11:59:59Z&#x3C;/map:value&#x3E;          
+	        &#x3C;/map:entry&#x3E;         
+         &#x3C;/map:map&#x3E;    
+      &#x3C;/metadata&#x3E;  
+    &#x3C;/options&#x3E;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+( xdmp:invoke-function(local:create-temporal-fields#0),
+  xdmp:invoke-function(local:create-range-index-fields#0),
+  xdmp:invoke-function(local:create-axes#0),
+  xdmp:invoke-function(local:create-temporal-collection#0),
+  xdmp:invoke-function(local:insert-original#0),
+  xdmp:invoke-function(local:insert-update#0))</div></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="14959a29-fd5d-4ec6-81fb-e852a503aa3f" contenteditable="true"></div><div data-element="note" class="show_menu tags" data-tektur-editor-id="c6c61473-8880-4a12-99b2-a6a2af3a6fe4"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="note"><div class="signal-word">NOTE</div><div class="hcontent"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="5a2c0418-3a17-42dc-a27e-78dda31bc7f6d6e35" class="p pmarker tags" data-element="p" data-tektur-editor-id="234cf6de-cbbe-483c-8caf-d32155fb5544" contenteditable="true">Beachtenswert ist hier,</div><ol data-attribute-id="6b0d4055-b7e6-481d-bbc4-c4976f167cc1d6e30" class="ol tags" data-element="ol" data-tektur-editor-id="ab5c410a-e9e2-4019-a79b-84bbf9d2f35c"><li data-attribute-id="7eea5145-1440-4422-a42d-51ebb42a4983d6e31" class="li tags" data-element="li" data-tektur-editor-id="875179e8-453b-4079-a71e-86414d829930"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="0d69c9fe-a968-4023-919f-a333ec8d1b7dd6e32" class="p pmarker tags" data-element="p" data-tektur-editor-id="cd17d79f-6d47-4b40-a995-870c8bb21ffb" contenteditable="true">dass die einzelnen Schritte als Funktion über [[code:xdmp:invoke-function]] aufgerufen werden. Dieses Konstrukt wird normalerweise benutzt um eine Funktion [[link]]anonym[[fn:https://de.wikipedia.org/wiki/Anonyme_Funktion*Wikipedia Artikel zum Begriff Anonyme Funktion]] zu deklarieren und als Transaktion aufzurufen. Marklogic bietet [[link]]weitere Möglichkeiten[[fn:https://docs.marklogic.com/guide/app-dev/transactions*Arbeiten mit Transaktionen in MarkLogic Server]] transaktional zu arbeiten.</div></li><li data-attribute-id="5f188393-90f6-432c-b146-b4ebd9582927d6e34" class="li tags" data-element="li" data-tektur-editor-id="ccf62e68-15fa-49bc-96db-6c8bf68709b2"><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="da016534-d98c-4116-addc-a8933d7b4e5cd6e35" class="p pmarker tags" data-element="p" data-tektur-editor-id="3283dd23-475e-45da-be25-25d457fc766c" contenteditable="true">Um die 5 Tage zwiachen Verlustmeldung und Wiederauffinden zu simulieren, wurde zwischem dem Anlegen der Dokumente ein [[code:xdmp:sleep]] Statement eingefügt.</div></li></ol><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="c1820ede-c143-49aa-a17d-415dbd3ae93e" contenteditable="true"></div></div></div></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="48ff0142-18b5-4135-986c-b4f3baf3550ed6e37" class="p pmarker tags" data-element="p" data-tektur-editor-id="67a00be7-d24f-4517-97a5-7f15fa7bdbce" contenteditable="true">Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</div><div data-attribute-id="fe12f3f3-03bd-4499-a987-303d3a478839d6e41" class="fig show_menu tags" data-element="fig" data-tektur-editor-id="c1940e52-4fdd-482b-a2ae-426f3a93bc50"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><div class="desc optional pmarker tags" data-element="desc" data-tektur-editor-id="615a7392-b3ad-4e51-b6c0-342e3143b70a" contenteditable="true">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.</div><div class="image tags" data-element="image" style="display:none" data-attribute-id="f4142d58-43e9-4a0b-a131-4f8cd7f25551d6e45" data-attribute-href="temporal-documents.png" data-tektur-editor-id="672790ad-62e1-4ab1-a8e5-735416f39bbd"></div><div class="title optional pmarker tags" data-element="title" style="display:none" data-tektur-editor-id="b7249ead-f2af-402c-860a-06d3fb86bc88" contenteditable="true"></div><table class="legend optional show_menu tags" data-element="legend" width="100%" style="display:none" data-tektur-editor-id="9bbd7458-f1ac-4c2d-8826-6fb661ad0ee8"><div class="gui-optional-elements-button" contenteditable="false"><div class="menu-icon" style="display:none">+</div></div><tbody><tr class="legentry tags" data-element="legentry" data-tektur-editor-id="3a2880a5-3b4c-4259-8478-932b366cac7e"><td valign="top" class="leg-pos tags" data-element="leg-pos" width="10%" data-tektur-editor-id="01f57fc6-524f-4886-a36e-3890b1ab3fcb"><div class="pmarker placeholder text tags" data-element="p" data-tektur-editor-id="45e49b72-7a7c-42ee-aa17-f776a6565205" contenteditable="true"></div></td><td valign="top" class="leg-name tags" data-element="leg-name" width="90%" data-tektur-editor-id="b5e846d0-275f-4ea3-9192-5d3724b89846"><div class="pmarker placeholder text tags" data-element="p" data-tektur-editor-id="2c1d4f07-c2d5-488d-95c4-7023c4d90a44" contenteditable="true"></div></td></tr></tbody></table></div><div class="placeholder text pmarker tags" data-element="p" data-tektur-editor-id="7226f8e2-1f2a-49ed-bebe-8fdbdbf7104f" contenteditable="true"></div></div></div></div>

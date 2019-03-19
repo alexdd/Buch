@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Mon Mar 18 2019 15:27:48 </date-of-last-change>
+      <date-of-last-change>Tue Mar 19 2019 17:04:21 </date-of-last-change>
       <language>de-DE</language>
-      <status>165</status>
+      <status>168</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -3409,9 +3409,11 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
     <color name="blue">cts:collection-query</color>(("koolorder.xml")),
     <color name="blue">cts:collection-query</color>(("latest")))))</verbatim>
             </page-wide-element>
-                  <block-title>
-                     <title id="3a3120bb-da56-419a-832d-856ceead990ed6e106">Weiterführende Links</title>
-                  </block-title>
+                  <column-wide-element>
+               <p>
+                  <subtitle>Weiterführende Links</subtitle>
+               </p>
+            </column-wide-element>
                   <column-wide-element>
                <ul>
                      <li>
@@ -3439,21 +3441,401 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2581" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2578" ismodule="no">
                
                   <title>
-                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Bi-Temporales Beispiel für die ML Konsole</title>
+                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
                   </title>
                   
                      <column-wide-element>
-                  <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </p>
+                  <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet:</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <ul>
+                        <li>
+                           <p>Anlegen der temporalen Properties: <code>
+                              <nb>validStart</nb>
+                           </code>, <code>
+                              <nb>validEnd</nb>
+                           </code>, <code>
+                              <nb>systemStart</nb>
+                           </code>, <code>
+                              <nb>systemEnd</nb>
+                           </code>
+                        </p>
+                        </li>
+                        <li>
+                           <p>Anlegen der Indizes zum Suchen über Zeitbereiche: <code>
+                              <nb>database-range-field-index("dateTime", "systemStart",...</nb>
+                           </code>
+                        </p>
+                        </li>
+                        <li>
+                           <p>Anlegen der zwei Zeitachsen <code>
+                              <nb>system</nb>
+                           </code> und <code>
+                              <nb>valid</nb>
+                           </code>
+                        </p>
+                        </li>
+                        <li>
+                           <p>Anlegen der temporalen Collection <code>
+                              <nb>/perso-verluste</nb>
+                           </code>
+                        </p>
+                        </li>
+                        <li>
+                           <p>Anlegen des Originals am 1.2.2019</p>
+                        </li>
+                        <li>
+                           <p>Aktualisierung am 6.2.2019</p>
+                        </li>
+                     </ul>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>xquery version "1.0-ml";
+
+import <color name="brown">module </color><color name="brown">namespace </color>admin = 
+  "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import <color name="brown">module </color><color name="brown">namespace </color>temporal = 
+  "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";
+
+<color name="brown">declare </color><color name="brown">namespace </color>local = 'local:';
+<color name="brown">declare </color><color name="brown">variable </color><color name="red">$db</color> := "alex-test";
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:create-temporal-fields</color>()
+{
+  <color name="brown">let </color><color name="red">$config</color> := <color name="blue">admin:get-configuration</color>(),
+      <color name="red">$dbid</color> := <color name="blue">xdmp:database</color>(<color name="red">$db</color>)
+  <color name="brown">return </color>
+    try {
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-field</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-metadata-field</color>("validStart"))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-field</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-metadata-field</color>("validEnd"))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-field</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-metadata-field</color>("systemStart"))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-field</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-metadata-field</color>("systemEnd")))
+    } catch (<color name="red">$err</color>) {}
+};
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:create-range-index-fields</color>() 
+{
+  <color name="brown">let </color><color name="red">$config</color> := <color name="blue">admin:get-configuration</color>(),
+      <color name="red">$dbid</color> := <color name="blue">xdmp:database</color>(<color name="red">$db</color>)
+  return
+    try {
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-range-field-index</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-range-field-index</color>("dateTime", "validStart", "", <color name="blue">fn:true</color>()))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-range-field-index</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-range-field-index</color>("dateTime", "validEnd", "", <color name="blue">fn:true</color>()))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-range-field-index</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-range-field-index</color>("dateTime", "systemStart", "", <color name="blue">fn:true</color>()))),
+      <color name="blue">admin:save-configuration</color>(
+        <color name="blue">admin:database-add-range-field-index</color>(<color name="red">$config</color>, <color name="red">$dbid</color>, 
+        <color name="blue">admin:database-range-field-index</color>("dateTime", "systemEnd", "", <color name="blue">fn:true</color>())))
+    } catch (<color name="red">$err</color>) {}  
+};
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:create-axes</color>()
+{
+  try {
+    <color name="brown">let </color><color name="red">$t</color>1 := <color name="blue">temporal:axis-create</color>(
+          "valid",
+          <color name="blue">cts:field-reference</color>("validStart", "type=dateTime"),
+          <color name="blue">cts:field-reference</color>("validEnd", "type=dateTime")),
+        <color name="red">$t</color>2 := <color name="blue">temporal:axis-create</color>(
+          "system",
+          <color name="blue">cts:field-reference</color>("systemStart", "type=dateTime"),
+          <color name="blue">cts:field-reference</color>("systemEnd", "type=dateTime"))
+     <color name="brown">return </color>()
+   } catch (<color name="red">$err</color>) {}
+};
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:create-temporal-collection</color>() 
+{
+  try {
+    <color name="brown">let </color><color name="red">$t</color>:= <color name="blue">temporal:collection-create</color>("/perso-verluste", "system", "valid")
+    <color name="brown">return </color>()
+  } catch (<color name="red">$err</color>) {}
+};
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:insert-original</color>()
+{
+  <color name="brown">let </color><color name="red">$root</color> := 
+    <color name="green">&lt;vorgang&gt;</color>     
+      <color name="green">&lt;perso-id&gt;</color>XYZ<color name="green">&lt;/perso-id&gt;</color>    
+      <color name="green">&lt;name&gt;</color>Alex Düsel<color name="green">&lt;/name&gt;</color>   
+      <color name="green">&lt;status&gt;</color>gestohlen<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;/vorgang&gt;</color>,
+     <color name="red">$options</color> :=   
+    <color name="green">&lt;options</color> xmlns="xdmp:document-insert"<color name="green">&gt;</color>     
+      <color name="green">&lt;metadata&gt;</color>        
+        <color name="green">&lt;map:map</color> xmlns:map="http://marklogic.com/xdmp/map"<color name="green">&gt;</color>          
+          <color name="green">&lt;map:entry</color> key="validStart"<color name="green">&gt;</color>            
+	          <color name="green">&lt;map:value&gt;</color>2019-02-01T08:23:11<color name="green">&lt;/map:value&gt;</color>          
+	        <color name="green">&lt;/map:entry&gt;</color>          
+	        <color name="green">&lt;map:entry</color> key="validEnd"<color name="green">&gt;</color>            
+	          <color name="green">&lt;map:value&gt;</color>9999-12-31T11:59:59Z<color name="green">&lt;/map:value&gt;</color>          
+	        <color name="green">&lt;/map:entry&gt;</color>         
+         <color name="green">&lt;/map:map&gt;</color>    
+      <color name="green">&lt;/metadata&gt;</color>  
+    <color name="green">&lt;/options&gt;</color>
+  <color name="brown">return </color> <color name="blue">temporal:document-insert</color>("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   <color name="red">$root</color>, <color name="red">$options</color>)
+};
+
+<color name="brown">declare </color><color name="brown">function </color><color name="blue">local:insert-update</color>()
+{
+  <color name="brown">let </color><color name="red">$root</color> :=    
+    <color name="green">&lt;vorgang&gt;</color>     
+      <color name="green">&lt;perso-id&gt;</color>XYZ<color name="green">&lt;/perso-id&gt;</color>    
+      <color name="green">&lt;name&gt;</color>Alex Düsel<color name="green">&lt;/name&gt;</color>   
+      <color name="green">&lt;status&gt;</color>gefunden<color name="green">&lt;/status&gt;</color>
+    <color name="green">&lt;/vorgang&gt;</color>,
+    <color name="red">$options</color> :=   
+    <color name="green">&lt;options</color> xmlns="xdmp:document-insert"<color name="green">&gt;</color>     
+      <color name="green">&lt;metadata&gt;</color>        
+        <color name="green">&lt;map:map</color> xmlns:map="http://marklogic.com/xdmp/map"<color name="green">&gt;</color>          
+          <color name="green">&lt;map:entry</color> key="validStart"<color name="green">&gt;</color>            
+	          <color name="green">&lt;map:value&gt;</color>2019-02-06T08:00:00<color name="green">&lt;/map:value&gt;</color>          
+	        <color name="green">&lt;/map:entry&gt;</color>          
+	        <color name="green">&lt;map:entry</color> key="validEnd"<color name="green">&gt;</color>            
+	          <color name="green">&lt;map:value&gt;</color>9999-12-31T11:59:59Z<color name="green">&lt;/map:value&gt;</color>          
+	        <color name="green">&lt;/map:entry&gt;</color>         
+         <color name="green">&lt;/map:map&gt;</color>    
+      <color name="green">&lt;/metadata&gt;</color>  
+    <color name="green">&lt;/options&gt;</color>
+  <color name="brown">return </color> <color name="blue">temporal:document-insert</color>("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   <color name="red">$root</color>, <color name="red">$options</color>)
+};
+
+( <color name="blue">xdmp:invoke-function</color>(local:create-temporal-fields#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-range-index-fields#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-axes#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-temporal-collection#0),
+  <color name="blue">xdmp:invoke-function</color>(local:insert-original#0),
+  <color name="blue">xdmp:invoke-function</color>(local:insert-update#0))</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p>Beachtenswert ist hier,</p>
+                           <procedure type="ol">
+                              <step>
+                                 <action>
+                                    <p>dass die einzelnen Schritte als Funktion über <code>
+                                       <nb>xdmp:invoke-function</nb>
+                                    </code> aufgerufen werden. Dieses Konstrukt wird normalerweise benutzt um eine Funktion anonym<footnote>
+                                       <desc>https://de.wikipedia.org/wiki/Anonyme_Funktion</desc>
+                                       <add>Wikipedia Artikel zum Begriff Anonyme Funktion</add>
+                                    </footnote> zu deklarieren und als Transaktion aufzurufen. Marklogic bietet weitere Möglichkeiten<footnote>
+                                       <desc>https://docs.marklogic.com/guide/app-dev/transactions</desc>
+                                       <add>Arbeiten mit Transaktionen in MarkLogic Server</add>
+                                    </footnote> transaktional zu arbeiten.</p>
+                                 </action>
+                              </step>
+                              <step>
+                                 <action>
+                                    <p>Um die 5 Tage zwiachen Verlustmeldung und Wiederauffinden zu simulieren, wurde zwischem dem Anlegen der Dokumente ein <code>
+                                       <nb>xdmp:sleep</nb>
+                                    </code> Statement eingefügt.</p>
+                                 </action>
+                              </step>
+                           </procedure>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <desc id="5a4adb20-3373-4d88-a8ea-64496c188ba9d6e40">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.</desc>
+                        <img src="./client/data/7c58baac-7b83-41b9-adf6-12f63539cbb6/temporal-documents.png"/>
+                     </figure>
+               </page-wide-element>
+                  
+               
+            </chapter>
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2681" ismodule="no">
+               
+                  <title>
+                     <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
+                  </title>
+                  
+                     <column-wide-element>
+                  <p>Wie im vorherigen Kapitel beschrieben, muss in der Konsolensitzung zwischen Anlegen der Originalversion und der Aktualisierung eine Verzögerung eingebaut werden, um irgendwie das "Zeitloch" zu simulieren, in dem - wenn wir bei dem vorherigen Beispiel bleiben -  der Personalausweis als Verlust gemeldet war, aber tatsächlich schon wieder in meinem Besitz war.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Ohne jetzt groß <code>
+                        <nb>validStart</nb>
+                     </code> und <code>
+                        <nb>validEnd</nb>
+                     </code> anzupassen, habe ich das Bespiel mit einer Verzögerung von 50 Sekunden lassen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>( <color name="blue">xdmp:invoke-function</color>(local:create-temporal-fields#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-range-index-fields#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-axes#0),
+  <color name="blue">xdmp:invoke-function</color>(local:create-temporal-collection#0),
+  <color name="blue">xdmp:invoke-function</color>(local:insert-original#0),
+  <b><color name="blue">xdmp:sleep</color>(50000),</b>
+  <color name="blue">xdmp:invoke-function</color>(local:insert-update#0))</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Und bekomme folgendes Ergebnis:</p>
+               </column-wide-element>
+                     
+                        <desc id="c9f9a817-bd04-4c51-b674-aff9d624910ad6e16">Diese Daten wurde aus der Exploreransicht der Konsolensitzung entnommen. </desc>
+                        <tgroup id="ed9f621b-580a-4835-9918-e8b0e37b27b3d6e18" cols="5">
+                           <colspec id="0bd1123d-0710-47b7-bb32-58b88e9fb48ad6e19" colwidth="0.1755868544600939*"
+                           colname="col0"/>
+                           <colspec id="f5fb8991-0743-486e-8ffd-b8bfd9c184e7d6e20" colwidth="0.20657276995305165*"
+                           colname="col1"/>
+                           <colspec id="d8ba94ee-5b95-4961-bae5-ef607980b0e8d6e21" colwidth="0.2084507042253521*"
+                           colname="col2"/>
+                           <colspec id="ea6524bc-efe0-47c0-a1ae-0489d608c869d6e22" colwidth="0.19812206572769953*"
+                           colname="col3"/>
+                           <colspec id="ef30e259-dfe5-4bd7-b5a5-1a470482aad3d6e23" colwidth="0.2112676056338028*"
+                           colname="col4"/>
+                           <thead id="6df8094a-e3e2-446e-896a-b71cf939e68ad6e24">
+                              <row id="bcb710f7-39f6-479a-87bf-5e2f1ecb831ad6e25">
+                                 <entry id="c9df43bc-5b23-4bbe-9fbd-478e0ba05f46d6e26" colname="col0" width="187px">
+                                    <p>Document</p>
+                                 </entry>
+                                 <entry id="be563aa7-0032-43fd-b8d3-613f9a5fcabdd6e29" colname="col1" width="220px">
+                                    <p>validStart</p>
+                                 </entry>
+                                 <entry id="a23d1533-a934-4bca-84d8-faff3f96b36ad6e32" colname="col2" width="222px">
+                                    <p>validEnd</p>
+                                 </entry>
+                                 <entry id="c7353438-27fb-4e0c-a477-5574dc60a25bd6e35" colname="col3" width="211px">
+                                    <p>systemStart</p>
+                                 </entry>
+                                 <entry id="97cdacde-ce0e-43c2-b964-5622878a8cc5d6e38" colname="col4" width="225px">
+                                    <p>systemEnd</p>
+                                 </entry>
+                              </row>
+                           </thead>
+                           <tbody id="910ef5da-7de1-4a3f-b25a-1444b73c2e79d6e41">
+                              <row id="8f761634-5c0f-4c50-a9fd-3315eb5d02b2d6e42">
+                                 <entry id="50288d8d-201e-412f-bebe-de49495a3230d6e43" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.2462380991258156208.xml</p>
+                                 </entry>
+                                 <entry id="a4f70a60-ce85-4069-91c6-82cc2f88dd1bd6e46" colname="col1" width="220px">
+                                    <p>2019-03-19T14:17:00</p>
+                                 </entry>
+                                 <entry id="e95d50a5-0cd4-4892-b5fb-4b79d6086f3ed6e49" colname="col2" width="222px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                                 <entry id="cfcd7481-88f5-4a56-9c8c-b21f1b02f344d6e53" colname="col3" width="211px">
+                                    <p>2019-03-19T13:18:28</p>
+                                 </entry>
+                                 <entry id="062c0f74-66c3-408b-a97f-68fe66391787d6e56" colname="col4" width="225px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                              </row>
+                              <row id="0f0acc7d-fbc5-4ed8-bf3a-aa7d71c45c16d6e59">
+                                 <entry id="ced3e165-c30d-40db-88d3-5de4303d69fad6e60" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.819911042637597172.xml</p>
+                                 </entry>
+                                 <entry id="92915b35-f9a7-46cd-b022-93fda2455e03d6e63" colname="col1" width="220px">
+                                    <p>2019-03-19T14:17:00</p>
+                                 </entry>
+                                 <entry id="53c77cfc-70aa-4ba9-ab5d-5b8da37e236fd6e66" colname="col2" width="222px">
+                                    <p>2019-03-19T14:18:00</p>
+                                 </entry>
+                                 <entry id="d4549540-1af3-4af0-a99e-35a53d587661d6e69" colname="col3" width="211px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                                 <entry id="02e0f4a3-6d16-407b-8ab3-bdba061d6756d6e72" colname="col4" width="225px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                              </row>
+                              <row id="a29a76b9-ae67-49fe-aa13-f3f9c891df32d6e76">
+                                 <entry id="a6ac34a0-c09a-4f08-a742-abe594c3f3d7d6e77" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.xml</p>
+                                 </entry>
+                                 <entry id="4c61ff2f-43fa-4297-b294-d064bc7494bed6e80" colname="col1" width="220px">
+                                    <p>2019-03-19T14:18:00</p>
+                                 </entry>
+                                 <entry id="3de568cd-4fb7-4eec-98be-3615d03bcbc1d6e83" colname="col2" width="222px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                                 <entry id="c73a2c96-c3a4-4bc0-b845-7a76dcd0b58cd6e87" colname="col3" width="211px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                                 <entry id="f21bb120-dcb4-44b4-b45f-e6aacaba39ead6e90" colname="col4" width="225px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                              </row>
+                           </tbody>
+                        </tgroup>
+                     
+                     <column-wide-element>
+                  <p/>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Wie man sieht, müsste sich jetzt das Zeitloch von 50 Sekunden der Systemzeiten innerhalb der gültigen Zeiten befinden, um das Beispiel mit dem verlorenen Ausweis zumindest für die Zeitspanne von 50 Sekunden simulieren zu können. </p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Das korrekte Setup bleibt an dieser Stelle dem geneigten Leser selbst überlassen.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p>Zwei Queries, die die Werte in der Tabelle illustriere sind bspw. folgende:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <desc id="ae543abd-7d24-405f-958b-88a6401e4d56d6e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide mit dem Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result1.png"/>
+                     </figure>
+               </page-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <desc id="6806771c-51d2-4b4a-af44-7bf208f6be23d6e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result2.png"/>
+                     </figure>
+               </page-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <desc id="b7fb0954-5511-4436-ab96-dd71fa39a8ddd6e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "<i id="5fb358f2-9a8a-48ce-b92e-2732bb8a695dd6e111">latest</i>" gespeichert.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result_3.png"/>
+                     </figure>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p>Wie man sie kann man - ausreichend Lösungsphantasie vorausgesetzt - einiges mit diesen Queries anstellen. Hilfreich ist sicherlich auch die umfangreiche Liste der Vergleichsoperatoren, die MarkLogic zum Vergleichen von Zeiträumen bereitstellt: ISO Operator<footnote>
+                        <desc>https://docs.marklogic.com/guide/temporal/searching#id_92200</desc>
+                        <add>ISO normierte Operatoren in MarkLogic zum Vergleichen von Zeiträumen</add>
+                     </footnote> und ALLEN Operators<footnote>
+                        <desc>https://docs.marklogic.com/guide/temporal/searching#id_98704</desc>
+                        <add>Allen (ALN) Vergleichsoperatoren für Zeiträume</add>
+                     </footnote>.</p>
                </column-wide-element>
                   
                
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2601" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2926" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -3464,7 +3846,7 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2618" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2943" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -3657,7 +4039,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2768" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3093" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -3775,7 +4157,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e2847" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3172" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -3786,7 +4168,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2864" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3189" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -3868,7 +4250,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2891" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3216" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -4015,7 +4397,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3116" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3441" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -4230,7 +4612,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3280" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3605" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>

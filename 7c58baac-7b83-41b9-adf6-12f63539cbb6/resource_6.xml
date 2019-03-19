@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="61bcaead-35e5-4f94-b719-e7708391915f"><title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Beispiel auf der ML Konsole</title><body id="daa84b7b-0e02-4448-adfa-1cd9e6b3e289"><p id="2104ae8b-6b06-4e0c-902d-b3dcaca2482b">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet.</p><p id="fcf64a3b-7230-407c-8c27-f0d5e275ef90d6e6">[[subtitle:Herstellen der notwendigen Vorbedingungen]]</p><ul id="30e67061-8ce2-46f0-9f22-1a2383c198dbd6e8"><li id="ee196cb3-bf51-41e8-99bb-598d51581f38d6e9"><p id="a626e0cb-bd49-489b-8765-cdb123a70a52d6e10">Anlegen der temporalen Properties: [[code:validStart]], [[code:validEnd]], [[code:systemStart]], [[code:systemEnd]]</p></li><li id="7274f315-72f7-4da1-9f05-e20309215803d6e12"><p id="7690410f-a848-48ac-9ac1-d2b0c3a7cbf5d6e13">Anlegen der Indizes zum Suchen über Zeitbereiche: [[code:database-range-field-index("dateTime", "systemStart",...]]</p></li><li id="e705edf3-6040-481a-ae1c-765a8a7d690cd6e15"><p id="8659af6f-9564-4553-a739-941223db12d0d6e16">Anlegen der zwei Zeitachsen [[code:system]] und [[code:valid]]</p></li><li id="9a60750c-65ee-48ce-9c7c-f2a1a7239f3ad6e18"><p id="fc9beb7e-9542-46c0-ae1b-b797b1b3df50d6e19">Anlegen der temporalen Collection [[code:/perso-verluste]]</p></li></ul><p id="96e0245b-8a4e-4744-8409-91b0357395ced6e21">[[subtitle:Anlegen des Testdokuments]]</p><ul id="e0082600-bb06-4271-82e7-64a92a655bb8d6e23"><li id="bd5a3852-d6ee-4a52-8af8-5239288fc2f4d6e24"><p id="dde0fd56-0f28-4ec5-aded-313b4db864a9d6e25">Anlegen des Originals am 1.2.2019</p></li><li id="273e9ce3-8f0b-4b5d-a0e1-fa9226e44ff3d6e27"><p id="48d57bca-203b-41f6-ae53-cd473383b905d6e28">Aktualisierung am 6.2.2019</p></li></ul><p id="9396ed88-3053-4ca3-af76-fffa83e1ba68d6e30">[[subtitle:Quellcode für diese Schritte]]</p><pre id="dc79c693-0d63-4d7b-b789-f4a319df5b1dd6e32" xml:space="preserve">xquery version "1.0-ml";
+
+import module namespace admin = 
+  "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import module namespace temporal = 
+  "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";
+
+declare namespace local = 'local:';
+declare variable $db := "alex-test";
+
+declare function local:create-temporal-fields()
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return 
+    try {
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validEnd"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemEnd")))
+    } catch ($err) {}
+};
+
+declare function local:create-range-index-fields() 
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return
+    try {
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validEnd", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemEnd", "", fn:true())))
+    } catch ($err) {}  
+};
+
+declare function local:create-axes()
+{
+  try {
+    let $t1 := temporal:axis-create(
+          "valid",
+          cts:field-reference("validStart", "type=dateTime"),
+          cts:field-reference("validEnd", "type=dateTime")),
+        $t2 := temporal:axis-create(
+          "system",
+          cts:field-reference("systemStart", "type=dateTime"),
+          cts:field-reference("systemEnd", "type=dateTime"))
+     return ()
+   } catch ($err) {}
+};
+
+declare function local:create-temporal-collection() 
+{
+  try {
+    let $t:= temporal:collection-create("/perso-verluste", "system", "valid")
+    return ()
+  } catch ($err) {}
+};
+
+declare function local:insert-original()
+{
+  let $root := 
+    &lt;vorgang&gt;     
+      &lt;perso-id&gt;XYZ&lt;/perso-id&gt;    
+      &lt;name&gt;Alex Düsel&lt;/name&gt;   
+      &lt;status&gt;gestohlen&lt;/status&gt;
+    &lt;/vorgang&gt;,
+     $options :=   
+    &lt;options xmlns="xdmp:document-insert"&gt;     
+      &lt;metadata&gt;        
+        &lt;map:map xmlns:map="http://marklogic.com/xdmp/map"&gt;          
+          &lt;map:entry key="validStart"&gt;            
+	          &lt;map:value&gt;2019-02-01T08:23:11&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;          
+	        &lt;map:entry key="validEnd"&gt;            
+	          &lt;map:value&gt;9999-12-31T11:59:59Z&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;         
+         &lt;/map:map&gt;    
+      &lt;/metadata&gt;  
+    &lt;/options&gt;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+declare function local:insert-update()
+{
+  let $root :=    
+    &lt;vorgang&gt;     
+      &lt;perso-id&gt;XYZ&lt;/perso-id&gt;    
+      &lt;name&gt;Alex Düsel&lt;/name&gt;   
+      &lt;status&gt;gefunden&lt;/status&gt;
+    &lt;/vorgang&gt;,
+    $options :=   
+    &lt;options xmlns="xdmp:document-insert"&gt;     
+      &lt;metadata&gt;        
+        &lt;map:map xmlns:map="http://marklogic.com/xdmp/map"&gt;          
+          &lt;map:entry key="validStart"&gt;            
+	          &lt;map:value&gt;2019-02-06T08:00:00&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;          
+	        &lt;map:entry key="validEnd"&gt;            
+	          &lt;map:value&gt;9999-12-31T11:59:59Z&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;         
+         &lt;/map:map&gt;    
+      &lt;/metadata&gt;  
+    &lt;/options&gt;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+( xdmp:invoke-function(local:create-temporal-fields#0),
+  xdmp:invoke-function(local:create-range-index-fields#0),
+  xdmp:invoke-function(local:create-axes#0),
+  xdmp:invoke-function(local:create-temporal-collection#0),
+  xdmp:invoke-function(local:insert-original#0),
+  xdmp:invoke-function(local:insert-update#0))</pre><note id="f1fb920a-b214-4ac9-911f-2e793909b52dd6e34"><p id="5a2c0418-3a17-42dc-a27e-78dda31bc7f6d6e35">Beachtenswert ist hier, dass die einzelnen Schritte als Funktion über [[code:xdmp:invoke-function]] aufgerufen werden. Dieses Konstrukt wird normalerweise benutzt um eine Funktion [[link]]anonym[[fn:https://de.wikipedia.org/wiki/Anonyme_Funktion*Wikipedia Artikel zum Begriff Anonyme Funktion]] zu deklarieren und als Transaktion aufzurufen. MArklogic bietet [[link]]weitere Möglichkeiten[[fn:https://docs.marklogic.com/guide/app-dev/transactions*Arbeiten mit Transaktionen in MarkLogic Server]] transaktional zu arbeiten.</p></note><p id="48ff0142-18b5-4135-986c-b4f3baf3550ed6e37">Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgenden Dokumente als Ergebnis:</p><fig id="fe12f3f3-03bd-4499-a987-303d3a478839d6e41"><desc id="1cba06ab-47ca-47c1-81e7-084bbad93521d6e40">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgängerversionen mit einer eindeutigen Nummer im Dateinamen gesuffixt</desc><image id="62aba64f-2331-425e-9339-2ca09195c399d6e42" href="temporal-documents.png"/></fig></body></topic>

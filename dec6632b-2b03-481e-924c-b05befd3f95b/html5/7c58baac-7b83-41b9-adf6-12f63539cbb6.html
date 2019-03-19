@@ -216,11 +216,11 @@
                               <li class="toc-level-3"><a href="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0.html" class="toc-entry" id="chapter-link_ef2b4070-c3cf-4d73-968e-e25f6dc1eef0" data-level="3"><span class="chapter-link3">4.3.3&nbsp;&nbsp;
                                        Bi-Temporale Dokumente
                                        </span></a><ul>
-                                    <li class="toc-level-4"><a href="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0.html" id="chapter-link_323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102" data-level="4" data-is-section="true" class="toc-entry"><span class="chapter-link4"><span class="number">└</span>&nbsp;&nbsp;<span class="number">4.3.3.1</span>&nbsp;&nbsp;<span class="text">
-                                                Weiterführende Links
-                                                </span></span></a></li>
-                                    <li class="toc-level-4"><a href="7c58baac-7b83-41b9-adf6-12f63539cbb6.html" class="toc-entry" id="chapter-link_7c58baac-7b83-41b9-adf6-12f63539cbb6" data-level="4"><span class="chapter-link4">4.3.3.2&nbsp;&nbsp;
-                                             Bi-Temporales Beispiel für die ML Konsole
+                                    <li class="toc-level-4"><a href="7c58baac-7b83-41b9-adf6-12f63539cbb6.html" class="toc-entry" id="chapter-link_7c58baac-7b83-41b9-adf6-12f63539cbb6" data-level="4"><span class="chapter-link4">4.3.3.1&nbsp;&nbsp;
+                                             Anlegen des Testszenarios auf der ML Konsole
+                                             </span></a></li>
+                                    <li class="toc-level-4"><a href="62faa067-ecd5-4053-8388-e7e151f04542.html" class="toc-entry" id="chapter-link_62faa067-ecd5-4053-8388-e7e151f04542" data-level="4"><span class="chapter-link4">4.3.3.2&nbsp;&nbsp;
+                                             Ausführen einiger Beispiel-Queries
                                              </span></a></li>
                                  </ul>
                               </li>
@@ -282,17 +282,278 @@
       <div id="main">
          <div id="content-wrapper">
             <div id="7c58baac-7b83-41b9-adf6-12f63539cbb6-target" class="chapter first" data-element-name="chapter">
-               <h2 id="" data-element-name="title"><span class="number">4.3.3.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+               <h2 id="" data-element-name="title"><span class="number">4.3.3.1&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
                         
-                        <div class="title" data-tektur-reviewer-number="" id="a1776d29-3de4-4aeb-9f82-1718bfdb333e" data-element-name="title">Bi-Temporales Beispiel für die ML Konsole</div>
+                        <div class="title" data-tektur-reviewer-number="" id="a1776d29-3de4-4aeb-9f82-1718bfdb333e" data-element-name="title">Anlegen des Testszenarios auf der ML Konsole</div>
                         </span></span></h2>
                <div class="margin">
-                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </div>
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet:</div>
+               </div>
+               <div class="margin">
+                  <ul id="" data-element-name="ul">
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Anlegen der temporalen Properties: <span style="font-family:Courier New, monospace">
+                              validStart
+                              </span>, <span style="font-family:Courier New, monospace">
+                              validEnd
+                              </span>, <span style="font-family:Courier New, monospace">
+                              systemStart
+                              </span>, <span style="font-family:Courier New, monospace">
+                              systemEnd
+                              </span>
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Anlegen der Indizes zum Suchen über Zeitbereiche: <span style="font-family:Courier New, monospace">
+                              database-range-field-index("dateTime",&nbsp;"systemStart",...
+                              </span>
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Anlegen der zwei Zeitachsen <span style="font-family:Courier New, monospace">
+                              system
+                              </span> und <span style="font-family:Courier New, monospace">
+                              valid
+                              </span>
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Anlegen der temporalen Collection <span style="font-family:Courier New, monospace">
+                              /perso-verluste
+                              </span>
+                           
+                        </div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Anlegen des Originals am 1.2.2019</div>
+                        
+                     </li>
+                     
+                     <li id="" data-element-name="li">
+                        
+                        <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Aktualisierung am 6.2.2019</div>
+                        
+                     </li>
+                     
+                  </ul>
+               </div>
+               <div class="no-margin"><pre class="verbatim">xquery version "1.0-ml";
+
+import <span style="color:#7F3300">module </span><span style="color:#7F3300">namespace </span>admin = 
+  "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import <span style="color:#7F3300">module </span><span style="color:#7F3300">namespace </span>temporal = 
+  "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">namespace </span>local = 'local:';
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">variable </span><span style="color:#7F0037">$db</span> := "alex-test";
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:create-temporal-fields</span>()
+{
+  <span style="color:#7F3300">let </span><span style="color:#7F0037">$config</span> := <span style="color:#000099">admin:get-configuration</span>(),
+      <span style="color:#7F0037">$dbid</span> := <span style="color:#000099">xdmp:database</span>(<span style="color:#7F0037">$db</span>)
+  <span style="color:#7F3300">return </span>
+    try {
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-field</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-metadata-field</span>("validStart"))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-field</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-metadata-field</span>("validEnd"))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-field</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-metadata-field</span>("systemStart"))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-field</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-metadata-field</span>("systemEnd")))
+    } catch (<span style="color:#7F0037">$err</span>) {}
+};
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:create-range-index-fields</span>() 
+{
+  <span style="color:#7F3300">let </span><span style="color:#7F0037">$config</span> := <span style="color:#000099">admin:get-configuration</span>(),
+      <span style="color:#7F0037">$dbid</span> := <span style="color:#000099">xdmp:database</span>(<span style="color:#7F0037">$db</span>)
+  return
+    try {
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-range-field-index</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-range-field-index</span>("dateTime", "validStart", "", <span style="color:#000099">fn:true</span>()))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-range-field-index</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-range-field-index</span>("dateTime", "validEnd", "", <span style="color:#000099">fn:true</span>()))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-range-field-index</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-range-field-index</span>("dateTime", "systemStart", "", <span style="color:#000099">fn:true</span>()))),
+      <span style="color:#000099">admin:save-configuration</span>(
+        <span style="color:#000099">admin:database-add-range-field-index</span>(<span style="color:#7F0037">$config</span>, <span style="color:#7F0037">$dbid</span>, 
+        <span style="color:#000099">admin:database-range-field-index</span>("dateTime", "systemEnd", "", <span style="color:#000099">fn:true</span>())))
+    } catch (<span style="color:#7F0037">$err</span>) {}  
+};
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:create-axes</span>()
+{
+  try {
+    <span style="color:#7F3300">let </span><span style="color:#7F0037">$t</span>1 := <span style="color:#000099">temporal:axis-create</span>(
+          "valid",
+          <span style="color:#000099">cts:field-reference</span>("validStart", "type=dateTime"),
+          <span style="color:#000099">cts:field-reference</span>("validEnd", "type=dateTime")),
+        <span style="color:#7F0037">$t</span>2 := <span style="color:#000099">temporal:axis-create</span>(
+          "system",
+          <span style="color:#000099">cts:field-reference</span>("systemStart", "type=dateTime"),
+          <span style="color:#000099">cts:field-reference</span>("systemEnd", "type=dateTime"))
+     <span style="color:#7F3300">return </span>()
+   } catch (<span style="color:#7F0037">$err</span>) {}
+};
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:create-temporal-collection</span>() 
+{
+  try {
+    <span style="color:#7F3300">let </span><span style="color:#7F0037">$t</span>:= <span style="color:#000099">temporal:collection-create</span>("/perso-verluste", "system", "valid")
+    <span style="color:#7F3300">return </span>()
+  } catch (<span style="color:#7F0037">$err</span>) {}
+};
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:insert-original</span>()
+{
+  <span style="color:#7F3300">let </span><span style="color:#7F0037">$root</span> := 
+    <span style="color:#527F3F">&lt;vorgang&gt;</span>     
+      <span style="color:#527F3F">&lt;perso-id&gt;</span>XYZ<span style="color:#527F3F">&lt;/perso-id&gt;</span>    
+      <span style="color:#527F3F">&lt;name&gt;</span>Alex Düsel<span style="color:#527F3F">&lt;/name&gt;</span>   
+      <span style="color:#527F3F">&lt;status&gt;</span>gestohlen<span style="color:#527F3F">&lt;/status&gt;</span>
+    <span style="color:#527F3F">&lt;/vorgang&gt;</span>,
+     <span style="color:#7F0037">$options</span> :=   
+    <span style="color:#527F3F">&lt;options</span> xmlns="xdmp:document-insert"<span style="color:#527F3F">&gt;</span>     
+      <span style="color:#527F3F">&lt;metadata&gt;</span>        
+        <span style="color:#527F3F">&lt;map:map</span> xmlns:map="http://marklogic.com/xdmp/map"<span style="color:#527F3F">&gt;</span>          
+          <span style="color:#527F3F">&lt;map:entry</span> key="validStart"<span style="color:#527F3F">&gt;</span>            
+	          <span style="color:#527F3F">&lt;map:value&gt;</span>2019-02-01T08:23:11<span style="color:#527F3F">&lt;/map:value&gt;</span>          
+	        <span style="color:#527F3F">&lt;/map:entry&gt;</span>          
+	        <span style="color:#527F3F">&lt;map:entry</span> key="validEnd"<span style="color:#527F3F">&gt;</span>            
+	          <span style="color:#527F3F">&lt;map:value&gt;</span>9999-12-31T11:59:59Z<span style="color:#527F3F">&lt;/map:value&gt;</span>          
+	        <span style="color:#527F3F">&lt;/map:entry&gt;</span>         
+         <span style="color:#527F3F">&lt;/map:map&gt;</span>    
+      <span style="color:#527F3F">&lt;/metadata&gt;</span>  
+    <span style="color:#527F3F">&lt;/options&gt;</span>
+  <span style="color:#7F3300">return </span> <span style="color:#000099">temporal:document-insert</span>("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   <span style="color:#7F0037">$root</span>, <span style="color:#7F0037">$options</span>)
+};
+
+<span style="color:#7F3300">declare </span><span style="color:#7F3300">function </span><span style="color:#000099">local:insert-update</span>()
+{
+  <span style="color:#7F3300">let </span><span style="color:#7F0037">$root</span> :=    
+    <span style="color:#527F3F">&lt;vorgang&gt;</span>     
+      <span style="color:#527F3F">&lt;perso-id&gt;</span>XYZ<span style="color:#527F3F">&lt;/perso-id&gt;</span>    
+      <span style="color:#527F3F">&lt;name&gt;</span>Alex Düsel<span style="color:#527F3F">&lt;/name&gt;</span>   
+      <span style="color:#527F3F">&lt;status&gt;</span>gefunden<span style="color:#527F3F">&lt;/status&gt;</span>
+    <span style="color:#527F3F">&lt;/vorgang&gt;</span>,
+    <span style="color:#7F0037">$options</span> :=   
+    <span style="color:#527F3F">&lt;options</span> xmlns="xdmp:document-insert"<span style="color:#527F3F">&gt;</span>     
+      <span style="color:#527F3F">&lt;metadata&gt;</span>        
+        <span style="color:#527F3F">&lt;map:map</span> xmlns:map="http://marklogic.com/xdmp/map"<span style="color:#527F3F">&gt;</span>          
+          <span style="color:#527F3F">&lt;map:entry</span> key="validStart"<span style="color:#527F3F">&gt;</span>            
+	          <span style="color:#527F3F">&lt;map:value&gt;</span>2019-02-06T08:00:00<span style="color:#527F3F">&lt;/map:value&gt;</span>          
+	        <span style="color:#527F3F">&lt;/map:entry&gt;</span>          
+	        <span style="color:#527F3F">&lt;map:entry</span> key="validEnd"<span style="color:#527F3F">&gt;</span>            
+	          <span style="color:#527F3F">&lt;map:value&gt;</span>9999-12-31T11:59:59Z<span style="color:#527F3F">&lt;/map:value&gt;</span>          
+	        <span style="color:#527F3F">&lt;/map:entry&gt;</span>         
+         <span style="color:#527F3F">&lt;/map:map&gt;</span>    
+      <span style="color:#527F3F">&lt;/metadata&gt;</span>  
+    <span style="color:#527F3F">&lt;/options&gt;</span>
+  <span style="color:#7F3300">return </span> <span style="color:#000099">temporal:document-insert</span>("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   <span style="color:#7F0037">$root</span>, <span style="color:#7F0037">$options</span>)
+};
+
+( <span style="color:#000099">xdmp:invoke-function</span>(local:create-temporal-fields#0),
+  <span style="color:#000099">xdmp:invoke-function</span>(local:create-range-index-fields#0),
+  <span style="color:#000099">xdmp:invoke-function</span>(local:create-axes#0),
+  <span style="color:#000099">xdmp:invoke-function</span>(local:create-temporal-collection#0),
+  <span style="color:#000099">xdmp:invoke-function</span>(local:insert-original#0),
+  <span style="color:#000099">xdmp:invoke-function</span>(local:insert-update#0))</pre></div>
+               <div class="no-margin">
+                  <div class="note" id="" data-element-name="note">
+                     <div class="signal-word">NOTE</div>
+                     <div class="content">
+                        
+                        <div class="consequence" data-tektur-reviewer-number="" id="" data-element-name="consequence">
+                           
+                           <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Beachtenswert ist hier,</div>
+                           
+                           <div class="procedure" id="" data-element-name="procedure">
+                              
+                              <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                                 
+                                 <div class="action" id="" data-element-name="action">
+                                    
+                                    <table class="CmdStep-Table">
+                                       <tr>
+                                          <td class="CmdStep-Icon" valign="top">1.</td>
+                                          <td>dass die einzelnen Schritte als Funktion über <span style="font-family:Courier New, monospace">
+                                                xdmp:invoke-function
+                                                </span> aufgerufen werden. Dieses Konstrukt wird normalerweise benutzt um eine Funktion <a href="https://de.wikipedia.org/wiki/Anonyme_Funktion" title="https://de.wikipedia.org/wiki/Anonyme_Funktion" target="_blank">anonym</a> zu deklarieren und als Transaktion aufzurufen. Marklogic bietet <a href="https://docs.marklogic.com/guide/app-dev/transactions" title="https://docs.marklogic.com/guide/app-dev/transactions" target="_blank">weitere Möglichkeiten</a> transaktional zu arbeiten.
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    
+                                 </div>
+                                 
+                              </div>
+                              
+                              <div class="step" data-tektur-reviewer-number="" id="" data-element-name="step">
+                                 
+                                 <div class="action" id="" data-element-name="action">
+                                    
+                                    <table class="CmdStep-Table">
+                                       <tr>
+                                          <td class="CmdStep-Icon" valign="top">2.</td>
+                                          <td>Um die 5 Tage zwiachen Verlustmeldung und Wiederauffinden zu simulieren, wurde zwischem dem Anlegen der Dokumente ein <span style="font-family:Courier New, monospace">
+                                                xdmp:sleep
+                                                </span> Statement eingefügt.
+                                          </td>
+                                       </tr>
+                                    </table>
+                                    
+                                 </div>
+                                 
+                              </div>
+                              
+                           </div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</div>
+               </div>
+               <div class="no-margin">
+                  <div class="desc" data-tektur-reviewer-number="" id="5a4adb20-3373-4d88-a8ea-64496c188ba9d6e40" data-element-name="desc">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung.
+                     Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.
+                  </div>
+                  <div style="width:100%;text-align:center"><img src="../..//7c58baac-7b83-41b9-adf6-12f63539cbb6/temporal-documents.png" id="" data-element-name="img"></div>
                </div>
             </div>
          </div>
       </div>
-      <div id="date-version">Version: 165<br>Mar 18 2019
+      <div id="date-version">Version: 168<br>Mar 19 2019
       </div>
    </body>
 </html>

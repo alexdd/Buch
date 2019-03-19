@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Mon Mar 18 2019 15:28:46 </date-of-last-change>
+      <date-of-last-change>Tue Mar 19 2019 17:04:38 </date-of-last-change>
       <language>de-DE</language>
-      <status>165</status>
+      <status>168</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -2437,35 +2437,333 @@ cts:search(fn:doc(), cts:period-compare-query(
 cts:search(fn:doc(), cts:and-query((
     cts:collection-query(("koolorder.xml")),
     cts:collection-query(("latest")))))</verbatim>
-                  <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="323cfbfe-9fa4-4294-bf19-3e6171695ad3d6e102">
-                     <content>
-                        <title>
-                           <title id="3a3120bb-da56-419a-832d-856ceead990ed6e106">Weiterführende Links</title>
-                        </title>
-                        <ul>
-                           <li>
-                              <p>[[link]]Temporal Developer's Guide auf den MarkLogic Doku-Seiten[[fn:https://docs.marklogic.com/guide/temporal*Quickstart Dokumentation, Understanding, Managing and Searching Temporal Documents]]</p>
-                           </li>
-                           <li>
-                              <p>[[link]]A Deep Dive into Bitemporal[[fn:https://www.marklogic.com/blog/bitemporal/*Weiterführender Link zum Thema Bitemporale Dokumente in MarkLogic]]</p>
-                           </li>
-                           <li>
-                              <p>[[link]]Temporale Datenhaltung in der Praxis mit Java[[fn:https://www.heise.de/developer/artikel/Temporale-Datenhaltung-in-der-Praxis-mit-Java-2100268.html?seite=all*Temporale Datenhaltung in der Praxis mit Java]]</p>
-                           </li>
-                        </ul>
-                     </content>
-                  </chapter>
+                  <p>[[subtitle:Weiterführende Links]]</p>
+                  <ul>
+                     <li>
+                        <p>[[link]]Temporal Developer's Guide auf den MarkLogic Doku-Seiten[[fn:https://docs.marklogic.com/guide/temporal*Quickstart Dokumentation, Understanding, Managing and Searching Temporal Documents]]</p>
+                     </li>
+                     <li>
+                        <p>[[link]]A Deep Dive into Bitemporal[[fn:https://www.marklogic.com/blog/bitemporal/*Weiterführender Link zum Thema Bitemporale Dokumente in MarkLogic]]</p>
+                     </li>
+                     <li>
+                        <p>[[link]]Temporale Datenhaltung in der Praxis mit Java[[fn:https://www.heise.de/developer/artikel/Temporale-Datenhaltung-in-der-Praxis-mit-Java-2100268.html?seite=all*Temporale Datenhaltung in der Praxis mit Java]]</p>
+                     </li>
+                  </ul>
                </block>
             </content>
             <chapter hyphenation="yes" chapterpage="no" id="7c58baac-7b83-41b9-adf6-12f63539cbb6"
                      ismodule="no">
                <content>
                   <title>
-                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Bi-Temporales Beispiel für die ML Konsole</title>
+                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
                   </title>
                   <block>
-                     <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet. </p>
+                     <p>Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet:</p>
+                     <ul>
+                        <li>
+                           <p>Anlegen der temporalen Properties: [[code:validStart]], [[code:validEnd]], [[code:systemStart]], [[code:systemEnd]]</p>
+                        </li>
+                        <li>
+                           <p>Anlegen der Indizes zum Suchen über Zeitbereiche: [[code:database-range-field-index("dateTime", "systemStart",...]]</p>
+                        </li>
+                        <li>
+                           <p>Anlegen der zwei Zeitachsen [[code:system]] und [[code:valid]]</p>
+                        </li>
+                        <li>
+                           <p>Anlegen der temporalen Collection [[code:/perso-verluste]]</p>
+                        </li>
+                        <li>
+                           <p>Anlegen des Originals am 1.2.2019</p>
+                        </li>
+                        <li>
+                           <p>Aktualisierung am 6.2.2019</p>
+                        </li>
+                     </ul>
+                     <verbatim>xquery version "1.0-ml";
+
+import module namespace admin = 
+  "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+import module namespace temporal = 
+  "http://marklogic.com/xdmp/temporal" at "/MarkLogic/temporal.xqy";
+
+declare namespace local = 'local:';
+declare variable $db := "alex-test";
+
+declare function local:create-temporal-fields()
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return 
+    try {
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("validEnd"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemStart"))),
+      admin:save-configuration(
+        admin:database-add-field($config, $dbid, 
+        admin:database-metadata-field("systemEnd")))
+    } catch ($err) {}
+};
+
+declare function local:create-range-index-fields() 
+{
+  let $config := admin:get-configuration(),
+      $dbid := xdmp:database($db)
+  return
+    try {
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "validEnd", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemStart", "", fn:true()))),
+      admin:save-configuration(
+        admin:database-add-range-field-index($config, $dbid, 
+        admin:database-range-field-index("dateTime", "systemEnd", "", fn:true())))
+    } catch ($err) {}  
+};
+
+declare function local:create-axes()
+{
+  try {
+    let $t1 := temporal:axis-create(
+          "valid",
+          cts:field-reference("validStart", "type=dateTime"),
+          cts:field-reference("validEnd", "type=dateTime")),
+        $t2 := temporal:axis-create(
+          "system",
+          cts:field-reference("systemStart", "type=dateTime"),
+          cts:field-reference("systemEnd", "type=dateTime"))
+     return ()
+   } catch ($err) {}
+};
+
+declare function local:create-temporal-collection() 
+{
+  try {
+    let $t:= temporal:collection-create("/perso-verluste", "system", "valid")
+    return ()
+  } catch ($err) {}
+};
+
+declare function local:insert-original()
+{
+  let $root := 
+    &lt;vorgang&gt;     
+      &lt;perso-id&gt;XYZ&lt;/perso-id&gt;    
+      &lt;name&gt;Alex Düsel&lt;/name&gt;   
+      &lt;status&gt;gestohlen&lt;/status&gt;
+    &lt;/vorgang&gt;,
+     $options :=   
+    &lt;options xmlns="xdmp:document-insert"&gt;     
+      &lt;metadata&gt;        
+        &lt;map:map xmlns:map="http://marklogic.com/xdmp/map"&gt;          
+          &lt;map:entry key="validStart"&gt;            
+	          &lt;map:value&gt;2019-02-01T08:23:11&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;          
+	        &lt;map:entry key="validEnd"&gt;            
+	          &lt;map:value&gt;9999-12-31T11:59:59Z&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;         
+         &lt;/map:map&gt;    
+      &lt;/metadata&gt;  
+    &lt;/options&gt;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+declare function local:insert-update()
+{
+  let $root :=    
+    &lt;vorgang&gt;     
+      &lt;perso-id&gt;XYZ&lt;/perso-id&gt;    
+      &lt;name&gt;Alex Düsel&lt;/name&gt;   
+      &lt;status&gt;gefunden&lt;/status&gt;
+    &lt;/vorgang&gt;,
+    $options :=   
+    &lt;options xmlns="xdmp:document-insert"&gt;     
+      &lt;metadata&gt;        
+        &lt;map:map xmlns:map="http://marklogic.com/xdmp/map"&gt;          
+          &lt;map:entry key="validStart"&gt;            
+	          &lt;map:value&gt;2019-02-06T08:00:00&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;          
+	        &lt;map:entry key="validEnd"&gt;            
+	          &lt;map:value&gt;9999-12-31T11:59:59Z&lt;/map:value&gt;          
+	        &lt;/map:entry&gt;         
+         &lt;/map:map&gt;    
+      &lt;/metadata&gt;  
+    &lt;/options&gt;
+  return  temporal:document-insert("/perso-verluste", 
+                                   "duesel_alex_270774.xml", 
+                                   $root, $options)
+};
+
+( xdmp:invoke-function(local:create-temporal-fields#0),
+  xdmp:invoke-function(local:create-range-index-fields#0),
+  xdmp:invoke-function(local:create-axes#0),
+  xdmp:invoke-function(local:create-temporal-collection#0),
+  xdmp:invoke-function(local:insert-original#0),
+  xdmp:invoke-function(local:insert-update#0))</verbatim>
+                     <note>
+                        <consequence>
+                           <p>Beachtenswert ist hier,</p>
+                           <procedure type="ol">
+                              <step>
+                                 <action>
+                                    <p>dass die einzelnen Schritte als Funktion über [[code:xdmp:invoke-function]] aufgerufen werden. Dieses Konstrukt wird normalerweise benutzt um eine Funktion [[link]]anonym[[fn:https://de.wikipedia.org/wiki/Anonyme_Funktion*Wikipedia Artikel zum Begriff Anonyme Funktion]] zu deklarieren und als Transaktion aufzurufen. Marklogic bietet [[link]]weitere Möglichkeiten[[fn:https://docs.marklogic.com/guide/app-dev/transactions*Arbeiten mit Transaktionen in MarkLogic Server]] transaktional zu arbeiten.</p>
+                                 </action>
+                              </step>
+                              <step>
+                                 <action>
+                                    <p>Um die 5 Tage zwiachen Verlustmeldung und Wiederauffinden zu simulieren, wurde zwischem dem Anlegen der Dokumente ein [[code:xdmp:sleep]] Statement eingefügt.</p>
+                                 </action>
+                              </step>
+                           </procedure>
+                        </consequence>
+                     </note>
+                     <p>Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</p>
+                     <figure pdfwidth="page">
+                        <desc id="5a4adb20-3373-4d88-a8ea-64496c188ba9d6e40">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.</desc>
+                        <img src="./client/data/7c58baac-7b83-41b9-adf6-12f63539cbb6/temporal-documents.png"/>
+                     </figure>
+                  </block>
+               </content>
+            </chapter>
+            <chapter hyphenation="yes" chapterpage="no" id="62faa067-ecd5-4053-8388-e7e151f04542"
+                     ismodule="no">
+               <content>
+                  <title>
+                     <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
+                  </title>
+                  <block>
+                     <p>Wie im vorherigen Kapitel beschrieben, muss in der Konsolensitzung zwischen Anlegen der Originalversion und der Aktualisierung eine Verzögerung eingebaut werden, um irgendwie das "Zeitloch" zu simulieren, in dem - wenn wir bei dem vorherigen Beispiel bleiben -  der Personalausweis als Verlust gemeldet war, aber tatsächlich schon wieder in meinem Besitz war.</p>
+                     <p>Ohne jetzt groß [[code:validStart]] und [[code:validEnd]] anzupassen, habe ich das Bespiel mit einer Verzögerung von 50 Sekunden lassen:</p>
+                     <verbatim>( xdmp:invoke-function(local:create-temporal-fields#0),
+  xdmp:invoke-function(local:create-range-index-fields#0),
+  xdmp:invoke-function(local:create-axes#0),
+  xdmp:invoke-function(local:create-temporal-collection#0),
+  xdmp:invoke-function(local:insert-original#0),
+  <b>xdmp:sleep(50000),</b>
+  xdmp:invoke-function(local:insert-update#0))</verbatim>
+                     <p>Und bekomme folgendes Ergebnis:</p>
+                     <table pdfwidth="page" id="c4bd0531-72dc-4551-9712-58a21abef158d6e12" pgwide="1"
+                            frame="all"
+                            scale="50"
+                            status="changed">
+                        <desc id="c9f9a817-bd04-4c51-b674-aff9d624910ad6e16">Diese Daten wurde aus der Exploreransicht der Konsolensitzung entnommen. </desc>
+                        <tgroup id="ed9f621b-580a-4835-9918-e8b0e37b27b3d6e18" cols="5">
+                           <colspec id="0bd1123d-0710-47b7-bb32-58b88e9fb48ad6e19" colwidth="187" colname="col0"/>
+                           <colspec id="f5fb8991-0743-486e-8ffd-b8bfd9c184e7d6e20" colwidth="220" colname="col1"/>
+                           <colspec id="d8ba94ee-5b95-4961-bae5-ef607980b0e8d6e21" colwidth="222" colname="col2"/>
+                           <colspec id="ea6524bc-efe0-47c0-a1ae-0489d608c869d6e22" colwidth="211" colname="col3"/>
+                           <colspec id="ef30e259-dfe5-4bd7-b5a5-1a470482aad3d6e23" colwidth="225" colname="col4"/>
+                           <thead id="6df8094a-e3e2-446e-896a-b71cf939e68ad6e24">
+                              <row id="bcb710f7-39f6-479a-87bf-5e2f1ecb831ad6e25">
+                                 <entry id="c9df43bc-5b23-4bbe-9fbd-478e0ba05f46d6e26" colname="col0" width="187px">
+                                    <p>Document</p>
+                                 </entry>
+                                 <entry id="be563aa7-0032-43fd-b8d3-613f9a5fcabdd6e29" colname="col1" width="220px">
+                                    <p>validStart</p>
+                                 </entry>
+                                 <entry id="a23d1533-a934-4bca-84d8-faff3f96b36ad6e32" colname="col2" width="222px">
+                                    <p>validEnd</p>
+                                 </entry>
+                                 <entry id="c7353438-27fb-4e0c-a477-5574dc60a25bd6e35" colname="col3" width="211px">
+                                    <p>systemStart</p>
+                                 </entry>
+                                 <entry id="97cdacde-ce0e-43c2-b964-5622878a8cc5d6e38" colname="col4" width="225px">
+                                    <p>systemEnd</p>
+                                 </entry>
+                              </row>
+                           </thead>
+                           <tbody id="910ef5da-7de1-4a3f-b25a-1444b73c2e79d6e41">
+                              <row id="8f761634-5c0f-4c50-a9fd-3315eb5d02b2d6e42">
+                                 <entry id="50288d8d-201e-412f-bebe-de49495a3230d6e43" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.2462380991258156208.xml</p>
+                                 </entry>
+                                 <entry id="a4f70a60-ce85-4069-91c6-82cc2f88dd1bd6e46" colname="col1" width="220px">
+                                    <p>2019-03-19T14:17:00</p>
+                                 </entry>
+                                 <entry id="e95d50a5-0cd4-4892-b5fb-4b79d6086f3ed6e49" colname="col2" width="222px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                                 <entry id="cfcd7481-88f5-4a56-9c8c-b21f1b02f344d6e53" colname="col3" width="211px">
+                                    <p>2019-03-19T13:18:28</p>
+                                 </entry>
+                                 <entry id="062c0f74-66c3-408b-a97f-68fe66391787d6e56" colname="col4" width="225px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                              </row>
+                              <row id="0f0acc7d-fbc5-4ed8-bf3a-aa7d71c45c16d6e59">
+                                 <entry id="ced3e165-c30d-40db-88d3-5de4303d69fad6e60" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.819911042637597172.xml</p>
+                                 </entry>
+                                 <entry id="92915b35-f9a7-46cd-b022-93fda2455e03d6e63" colname="col1" width="220px">
+                                    <p>2019-03-19T14:17:00</p>
+                                 </entry>
+                                 <entry id="53c77cfc-70aa-4ba9-ab5d-5b8da37e236fd6e66" colname="col2" width="222px">
+                                    <p>2019-03-19T14:18:00</p>
+                                 </entry>
+                                 <entry id="d4549540-1af3-4af0-a99e-35a53d587661d6e69" colname="col3" width="211px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                                 <entry id="02e0f4a3-6d16-407b-8ab3-bdba061d6756d6e72" colname="col4" width="225px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                              </row>
+                              <row id="a29a76b9-ae67-49fe-aa13-f3f9c891df32d6e76">
+                                 <entry id="a6ac34a0-c09a-4f08-a742-abe594c3f3d7d6e77" colname="col0" width="187px">
+                                    <p>duesel_alex_270774.xml</p>
+                                 </entry>
+                                 <entry id="4c61ff2f-43fa-4297-b294-d064bc7494bed6e80" colname="col1" width="220px">
+                                    <p>2019-03-19T14:18:00</p>
+                                 </entry>
+                                 <entry id="3de568cd-4fb7-4eec-98be-3615d03bcbc1d6e83" colname="col2" width="222px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                                 <entry id="c73a2c96-c3a4-4bc0-b845-7a76dcd0b58cd6e87" colname="col3" width="211px">
+                                    <p>2019-03-19T13:19:18</p>
+                                 </entry>
+                                 <entry id="f21bb120-dcb4-44b4-b45f-e6aacaba39ead6e90" colname="col4" width="225px">
+                                    <p>
+                                       <b>unendlich</b>
+                                    </p>
+                                 </entry>
+                              </row>
+                           </tbody>
+                        </tgroup>
+                     </table>
+                     <p/>
+                     <p>Wie man sieht, müsste sich jetzt das Zeitloch von 50 Sekunden der Systemzeiten innerhalb der gültigen Zeiten befinden, um das Beispiel mit dem verlorenen Ausweis zumindest für die Zeitspanne von 50 Sekunden simulieren zu können. </p>
+                     <p>Das korrekte Setup bleibt an dieser Stelle dem geneigten Leser selbst überlassen.</p>
+                     <p>Zwei Queries, die die Werte in der Tabelle illustriere sind bspw. folgende:</p>
+                     <figure pdfwidth="page">
+                        <desc id="ae543abd-7d24-405f-958b-88a6401e4d56d6e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide mit dem Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result1.png"/>
+                     </figure>
+                     <figure pdfwidth="page">
+                        <desc id="6806771c-51d2-4b4a-af44-7bf208f6be23d6e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result2.png"/>
+                     </figure>
+                     <figure pdfwidth="page">
+                        <desc id="b7fb0954-5511-4436-ab96-dd71fa39a8ddd6e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "<i id="5fb358f2-9a8a-48ce-b92e-2732bb8a695dd6e111">latest</i>" gespeichert.</desc>
+                        <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result_3.png"/>
+                     </figure>
+                     <p>Wie man sie kann man - ausreichend Lösungsphantasie vorausgesetzt - einiges mit diesen Queries anstellen. Hilfreich ist sicherlich auch die umfangreiche Liste der Vergleichsoperatoren, die MarkLogic zum Vergleichen von Zeiträumen bereitstellt: [[link]]ISO Operator[[fn:https://docs.marklogic.com/guide/temporal/searching#id_92200*ISO normierte Operatoren in MarkLogic zum Vergleichen von Zeiträumen]] und [[link]]ALLEN Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_98704*Allen (ALN) Vergleichsoperatoren für Zeiträume]].</p>
                   </block>
                </content>
             </chapter>
