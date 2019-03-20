@@ -2,7 +2,7 @@
 XML Datenbank rasend schnell geht, weil jeder Knoten des Baums initial in einen Index
 aufgenommen wird. So gibt es doch Anwendungsfälle bei denen man lieber eine relationale
 Sicht auf die Daten hätte.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="fa6fb1a1-78b4-4a46-9b1e-ba2328fdd2f3d6e6" class="p" data-element="p">In MarkLogic heisst die Lösung dazu SQL Views.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="8029ae2f-5b5a-4df5-97c1-aad92ac65df2d6e8" class="p" data-element="p">Bspw. benötigt man eine relationale Sicht auf die Daten,
-wenn über verschiedene Datensätze ein Report generiert werden soll.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="93e04ead-905f-488b-a0bc-d024c912fc35d6e10" class="p" data-element="p">Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</div><div class="pre"><div data-attribute-id="6d7fad8e-dc88-40ff-8267-38a670794a87d6e12" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">&lt;k:kunde&gt;
+wenn über verschiedene Datensätze ein Report generiert werden soll.</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="93e04ead-905f-488b-a0bc-d024c912fc35d6e10" class="p" data-element="p">Nehmen wir an es gibt im Datenbestand die folgenden Dokumente:</div><div class="pre"><div data-attribute-id="db2cbd11-15f0-426c-b988-4c0c50758dc2d6e12" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">&lt;k:kunde&gt;
   &lt;k:id&gt;1&lt;/k:id&gt;
   &lt;k:name&gt;Alex&lt;/k:name&gt;
   &lt;k:eMail&gt;tekturcms@gmail.com&lt;/k:eMail&gt;
@@ -34,14 +34,14 @@ wenn über verschiedene Datensätze ein Report generiert werden soll.</div><div 
   &lt;b:kunde-id&gt;1&lt;/b:kunde-id&gt;
 &lt;/b:bestellung&gt;</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="2328ace1-a84c-4d9b-839c-e81962bff15ed6e14" class="p" data-element="p">Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
 abgegeben haben - das sind Alex und Horst - so würde man bei
-einem relationalen Ansatz einen JOIN verwenden, so wie:</div><div class="pre"><div data-attribute-id="fee01771-5dd3-4608-8e75-20582ecf5926d6e16" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">SELECT name, datum, preis
+einem relationalen Ansatz einen JOIN verwenden, so wie:</div><div class="pre"><div data-attribute-id="4358925a-d7c3-450d-961c-bcdf0fc83317d6e16" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">SELECT name, datum, preis
 FROM kunden k
 INNER JOIN bestellungen b
-ON k.id = b.kunde_id</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="634aa470-0b4d-4ef9-ad31-e23e72e82857d6e18" class="p" data-element="p">In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</div><div class="pre"><div data-attribute-id="8cc8f210-5379-4fe3-be86-db0986c77ff7d6e20" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">name, datum, preis
+ON k.id = b.kunde_id</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="634aa470-0b4d-4ef9-ad31-e23e72e82857d6e18" class="p" data-element="p">In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</div><div class="pre"><div data-attribute-id="5864b6d5-3fa5-4698-a8b7-5d5a4613c7a2d6e20" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">name, datum, preis
 Alex, 03.01.2019, 68.90
 Horst, 02.01.2019, 99.90</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="32221bf5-8e13-4057-90ab-06577e278a90d6e22" class="p" data-element="p">Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
 der da heisst: [[link]]Template Driven Extraction[[fn:https://docs.marklogic.com/guide/app-dev/TDE*Template Driven Extraction wird verwendet um in MarkLogic eine relationale Sicht auf die baumstrukturierten Daten zu setzen]]</div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="300d1425-14e5-4fe0-b486-327254ed8cf0d6e24" class="p" data-element="p">Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
-würden wir zwei Templates brauchen, die so aussehen:</div><div class="pre"><div data-attribute-id="74121c39-6f77-42d7-b378-4d1d6c6c3d79d6e27" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xquery version "1.0-ml";
+würden wir zwei Templates brauchen, die so aussehen:</div><div class="pre"><div data-attribute-id="6dedb087-2cd7-49e7-a198-ecd283d33673d6e27" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xquery version "1.0-ml";
 
 import module namespace tde = "http://marklogic.com/xdmp/tde" 
                             at "/MarkLogic/tde.xqy";
@@ -90,7 +90,7 @@ let $sql-view := &lt;template xmlns="http://marklogic.com/xdmp/tde"&gt;
 return(
   tde:template-insert(concat('/templates/', $sql-view-name), 
                       $sql-view, xdmp:default-permissions())
-)</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="1b5ad441-b64a-48a5-beaf-fcb03b693c17d6e29" class="p" data-element="p">und analog für die Bestellungen:</div><div class="pre"><div data-attribute-id="d7378039-37d5-4cdf-b46d-44f8ed884352d6e31" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">[...]
+)</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="1b5ad441-b64a-48a5-beaf-fcb03b693c17d6e29" class="p" data-element="p">und analog für die Bestellungen:</div><div class="pre"><div data-attribute-id="b9a8a6a8-4448-4ee6-8237-95a74bea8ae1d6e31" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">[...]
    &lt;rows&gt;
       &lt;row&gt;
          &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
@@ -118,8 +118,8 @@ return(
             &lt;/column&gt;
          &lt;/columns&gt;
       &lt;/row&gt;
-[...]</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="beda4ca5-f41c-4fbd-834a-6a375127725dd6e33" class="p" data-element="p">In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</div><div class="pre"><div data-attribute-id="a74f8274-9f20-4148-bab6-6993a1b13eadd6e35" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
-          INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="30ca1f15-55f4-4eba-9f9f-eff3c661f764d6e37" class="p" data-element="p">Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</div><div class="pre"><div data-attribute-id="d0d93557-545a-4535-ac8b-9b5fb873df14d6e39" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xquery version "1.0-ml";
+[...]</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="beda4ca5-f41c-4fbd-834a-6a375127725dd6e33" class="p" data-element="p">In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</div><div class="pre"><div data-attribute-id="2485bc4a-a3af-492b-8f37-7b728803160ed6e35" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
+          INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="30ca1f15-55f4-4eba-9f9f-eff3c661f764d6e37" class="p" data-element="p">Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</div><div class="pre"><div data-attribute-id="d3116afd-80a8-48f6-9034-17e42c7d9de5d6e39" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">xquery version "1.0-ml";
 
 declare namespace k = 'http://www.tekturcms.de/kunden';
 declare namespace b = 'http://www.tekturcms.de/bestellungen';
@@ -259,16 +259,24 @@ declare function local:insertBestellungenSchema()
     tde:template-insert(concat('/templates/', 
                         $sql-view-name), $sql-view, xdmp:default-permissions())
 };
+
+
 local:loadKunde("1","Alex","tekturcms@gmail.com"),
+
 local:loadKunde("2","Horst","horst@horst.de"),
+
 local:loadKunde("3","Gundula","gundl@gundula.de"),
+
 local:loadBestellung("1","02.01.2019","99.90","2"),
+
 local:loadBestellung("2","03.01.2019","68.90","1"),
+
 local:insertKundenSchema(),
+
 local:insertBestellungenSchema(),
 
 xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
-          bestellungen_view b ON k.id = b.kunde_id")</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="af0bb509-8735-46fb-8e48-918f1d3f8f15d6e41" class="p" data-element="p">... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</div><div class="pre"><div data-attribute-id="71d3890d-57a1-4861-a0a7-373c1ef77ae9d6e43" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">[
+          bestellungen_view b ON k.id = b.kunde_id")</div></div><div class="placeholder text" data-element="p"></div><div xmlns:xr="http://www.tekturcms.de/2012/xr/common" xmlns:xlink="http://www.w3.org/1999/xlink" data-attribute-id="af0bb509-8735-46fb-8e48-918f1d3f8f15d6e41" class="p" data-element="p">... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</div><div class="pre"><div data-attribute-id="4adb998b-bb00-4916-91b3-f9e4d1c61023d6e43" data-attribute-xml_space="preserve" class="pre-content" data-element="pre">[
   [
     "k.name", 
     "b.datum", 

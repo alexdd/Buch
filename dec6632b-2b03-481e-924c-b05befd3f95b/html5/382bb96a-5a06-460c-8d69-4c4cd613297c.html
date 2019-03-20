@@ -208,7 +208,7 @@
                                  XML Datenbanken
                                  </span></a><ul>
                               <li class="toc-level-3"><a href="38f7a676-cbef-4a69-9ae9-d89bddde2719.html" class="toc-entry" id="chapter-link_38f7a676-cbef-4a69-9ae9-d89bddde2719" data-level="3"><span class="chapter-link3">4.3.1&nbsp;&nbsp;
-                                       Connector zu Marklogic in Oxygen
+                                       Connector zu Marklogic in Oxygen Test
                                        </span></a></li>
                               <li class="toc-level-3"><a href="382bb96a-5a06-460c-8d69-4c4cd613297c.html" class="toc-entry" id="chapter-link_382bb96a-5a06-460c-8d69-4c4cd613297c" data-level="3"><span class="chapter-link3">4.3.2&nbsp;&nbsp;
                                        SQL Views in MarkLogic
@@ -591,13 +591,21 @@ import <span style="color:#7F3300">module </span><span style="color:#7F3300">nam
   return
     <span style="color:#000099">tde:template-insert</span>(concat('/templates/', 
                         <span style="color:#7F0037">$sql-view-name</span>), <span style="color:#7F0037">$sql-view</span>, <span style="color:#000099">xdmp:default-permissions</span>())
-};<span style="color:#000099">
-local:loadKunde</span>("1","Alex","tekturcms@gmail.com"),<span style="color:#000099">
-local:loadKunde</span>("2","Horst","horst@horst.de"),<span style="color:#000099">
-local:loadKunde</span>("3","Gundula","gundl@gundula.de"),<span style="color:#000099">
-local:loadBestellung</span>("1","02.01.2019","99.90","2"),<span style="color:#000099">
-local:loadBestellung</span>("2","03.01.2019","68.90","1"),<span style="color:#000099">
-local:insertKundenSchema</span>(),<span style="color:#000099">
+};
+
+<span style="color:#000099">
+local:loadKunde</span>("1","Alex","tekturcms@gmail.com"),
+<span style="color:#000099">
+local:loadKunde</span>("2","Horst","horst@horst.de"),
+<span style="color:#000099">
+local:loadKunde</span>("3","Gundula","gundl@gundula.de"),
+<span style="color:#000099">
+local:loadBestellung</span>("1","02.01.2019","99.90","2"),
+<span style="color:#000099">
+local:loadBestellung</span>("2","03.01.2019","68.90","1"),
+<span style="color:#000099">
+local:insertKundenSchema</span>(),
+<span style="color:#000099">
 local:insertBestellungenSchema</span>(),
 <span style="color:#000099">
 xdmp:sql</span>("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
@@ -624,8 +632,16 @@ xdmp:sql</span>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
 ]</pre></div>
             </div>
          </div>
+         <div id="page-browser-arrows">
+            <table>
+               <tr>
+                  <td><a href="#" class="info menu" id="prev-page"><img src="/images/arrow_left.png" border="0"><span>Previous Page</span></a></td>
+                  <td><a href="#" class="info menu" id="next-page"><img src="/images/arrow_right.png" border="0"><span>Next Page</span></a></td>
+               </tr>
+            </table>
+         </div>
       </div>
-      <div id="date-version">Version: 168<br>Mar 19 2019
+      <div id="date-version">Version: 168<br>Mar 20 2019
       </div>
    </body>
 </html>

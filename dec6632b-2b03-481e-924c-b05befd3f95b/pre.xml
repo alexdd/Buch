@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Mar 19 2019 17:04:21 </date-of-last-change>
+      <date-of-last-change>Wed Mar 20 2019 10:12:11 </date-of-last-change>
       <language>de-DE</language>
       <status>168</status>
       <description>Short Description</description>
@@ -2693,7 +2693,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
          <chapter hyphenation="yes" chapterpage="no" id="d2e2166" ismodule="no">
             
                <title>
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
+                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen Test</title>
                </title>
                
                   <column-wide-element>
@@ -2705,19 +2705,13 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                      <second criterion="oXygen-Connector">oXygen-Connector</second>
                   </xe>. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
             </column-wide-element>
-                  <page-wide-element>
-               <figure pdfwidth="page">
-                     <desc id="fc6998b3-6529-4e08-89a7-e4078f68c9bbd6e10">oXygen Data Source Explorer View öffnen</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
-                  </figure>
-            </page-wide-element>
                   <column-wide-element>
                <p>und konfiguriert eine neue Datenquelle:</p>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="065e81ab-8f84-4976-853d-8062d6229699d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
+                     <desc id="b41efc60-b68d-4e9a-b659-363ecbea1d66d6e12">oXygen Data Source Explorer View öffnen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-1.png"/>
                   </figure>
             </page-wide-element>
                   <column-wide-element>
@@ -2727,6 +2721,12 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                   </footnote> und diesen im folgenden Screen verfügbar machen.</p>
             </column-wide-element>
                   <page-wide-element>
+               <figure pdfwidth="page">
+                     <desc id="4ac1ff51-23a5-45c8-9044-89ffb6f8816cd6e18">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-2.png"/>
+                  </figure>
+            </page-wide-element>
+                  <page-wide-element>
                <caution>
                      <cause>Das Jar sollte an einem soliden Ort abgespeichert werden, da hier nur ein Verweis auf diesen Ort gesetzt wird.</cause>
                      <consequence/>
@@ -2734,7 +2734,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </page-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="08c55599-b8eb-4de1-a1cc-3fcb0c066113d6e27">Marklogic Treiber auswählen</desc>
+                     <desc id="9cb017ac-29d4-4449-a705-a48768bcca40d6e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
             </page-wide-element>
@@ -2747,13 +2747,13 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="4bad64f7-b111-446f-994c-2566811d15acd6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="3d85ad8f-310f-41a3-a5b0-c8758ffad484d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
             </page-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="7aea80d2-c765-49ab-973c-10425b9fa565d6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="a718f7dc-2ba9-4243-b9e3-afa1a7541143d6e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
             </page-wide-element>
@@ -2762,7 +2762,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="71c031e2-3c76-431b-8a7b-ba6e9d79d9b0d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="6597d0b8-1ff1-4dd4-8c14-d99b5011aca5d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
             </page-wide-element>
@@ -2771,7 +2771,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </column-wide-element>
                   <page-wide-element>
                <figure pdfwidth="page">
-                     <desc id="330c123f-ece6-49a2-944b-bf1a4df30d43d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="902cb29c-0bfb-4708-aa7d-c3fbffb4c6d0d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
             </page-wide-element>
@@ -3100,13 +3100,21 @@ import <color name="brown">module </color><color name="brown">namespace </color>
   return
     <color name="blue">tde:template-insert</color>(concat('/templates/', 
                         <color name="red">$sql-view-name</color>), <color name="red">$sql-view</color>, <color name="blue">xdmp:default-permissions</color>())
-};<color name="blue">
-local:loadKunde</color>("1","Alex","tekturcms@gmail.com"),<color name="blue">
-local:loadKunde</color>("2","Horst","horst@horst.de"),<color name="blue">
-local:loadKunde</color>("3","Gundula","gundl@gundula.de"),<color name="blue">
-local:loadBestellung</color>("1","02.01.2019","99.90","2"),<color name="blue">
-local:loadBestellung</color>("2","03.01.2019","68.90","1"),<color name="blue">
-local:insertKundenSchema</color>(),<color name="blue">
+};
+
+<color name="blue">
+local:loadKunde</color>("1","Alex","tekturcms@gmail.com"),
+<color name="blue">
+local:loadKunde</color>("2","Horst","horst@horst.de"),
+<color name="blue">
+local:loadKunde</color>("3","Gundula","gundl@gundula.de"),
+<color name="blue">
+local:loadBestellung</color>("1","02.01.2019","99.90","2"),
+<color name="blue">
+local:loadBestellung</color>("2","03.01.2019","68.90","1"),
+<color name="blue">
+local:insertKundenSchema</color>(),
+<color name="blue">
 local:insertBestellungenSchema</color>(),
 <color name="blue">
 xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN 

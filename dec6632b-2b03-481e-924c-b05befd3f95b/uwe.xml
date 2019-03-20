@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Mar 19 2019 17:04:38 </date-of-last-change>
+      <date-of-last-change>Wed Mar 20 2019 15:45:59 </date-of-last-change>
       <language>de-DE</language>
       <status>168</status>
       <description>Short Description</description>
@@ -1895,45 +1895,45 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                   ismodule="no">
             <content>
                <title>
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
+                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen Test</title>
                </title>
                <block>
                   <p>Marklogic[[xe1:Software;xe2:Marklogic]] bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector[[xe1:Tools;xe2:oXygen-Connector]]. Dazu öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
-                  <figure pdfwidth="page">
-                     <desc id="fc6998b3-6529-4e08-89a7-e4078f68c9bbd6e10">oXygen Data Source Explorer View öffnen</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/show-view-data-source-explorer.png"/>
-                  </figure>
                   <p>und konfiguriert eine neue Datenquelle:</p>
                   <figure pdfwidth="page">
-                     <desc id="065e81ab-8f84-4976-853d-8062d6229699d6e16">Neue Datenquelle in oXygen konfigurieren</desc>
-                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/configure-data-sources.png"/>
+                     <desc id="b41efc60-b68d-4e9a-b659-363ecbea1d66d6e12">oXygen Data Source Explorer View öffnen</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-1.png"/>
                   </figure>
                   <p>Dazu muss man den [[link]]Marklogic Treiber installieren[[fn:https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html*MarkLogic Datenquelle in oXygen konfigurieren]] und diesen im folgenden Screen verfügbar machen.</p>
+                  <figure pdfwidth="page">
+                     <desc id="4ac1ff51-23a5-45c8-9044-89ffb6f8816cd6e18">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-2.png"/>
+                  </figure>
                   <caution>
                      <cause>Das Jar sollte an einem soliden Ort abgespeichert werden, da hier nur ein Verweis auf diesen Ort gesetzt wird.</cause>
                      <consequence/>
                   </caution>
                   <figure pdfwidth="page">
-                     <desc id="08c55599-b8eb-4de1-a1cc-3fcb0c066113d6e27">Marklogic Treiber auswählen</desc>
+                     <desc id="9cb017ac-29d4-4449-a705-a48768bcca40d6e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
                   <p>Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b> [[xe1:Tools;xe2:Marklogic WebDAV Server]] hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
                   <figure pdfwidth="page">
-                     <desc id="4bad64f7-b111-446f-994c-2566811d15acd6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="3d85ad8f-310f-41a3-a5b0-c8758ffad484d6e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
                   <figure pdfwidth="page">
-                     <desc id="7aea80d2-c765-49ab-973c-10425b9fa565d6e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="a718f7dc-2ba9-4243-b9e3-afa1a7541143d6e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
                   <p>Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
                   <figure pdfwidth="page">
-                     <desc id="71c031e2-3c76-431b-8a7b-ba6e9d79d9b0d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="6597d0b8-1ff1-4dd4-8c14-d99b5011aca5d6e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
                   <p>Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
                   <figure pdfwidth="page">
-                     <desc id="330c123f-ece6-49a2-944b-bf1a4df30d43d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="902cb29c-0bfb-4708-aa7d-c3fbffb4c6d0d6e56">oXagen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
                </block>
@@ -2224,12 +2224,20 @@ declare function local:insertBestellungenSchema()
     tde:template-insert(concat('/templates/', 
                         $sql-view-name), $sql-view, xdmp:default-permissions())
 };
+
+
 local:loadKunde("1","Alex","tekturcms@gmail.com"),
+
 local:loadKunde("2","Horst","horst@horst.de"),
+
 local:loadKunde("3","Gundula","gundl@gundula.de"),
+
 local:loadBestellung("1","02.01.2019","99.90","2"),
+
 local:loadBestellung("2","03.01.2019","68.90","1"),
+
 local:insertKundenSchema(),
+
 local:insertBestellungenSchema(),
 
 xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
