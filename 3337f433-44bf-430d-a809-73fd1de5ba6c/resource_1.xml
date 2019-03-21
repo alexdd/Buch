@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><topic id="44b03330-885f-4eee-a90b-3235d56161e7">  <title id="b49f74f7-6d65-4672-beef-5fd92c877526"></title>  <body id="72db8e0f-a252-4a9d-ac99-80f159518570">    <p id="23b4fccd-51f9-4064-b7df-46252a40211d"></p>  </body></topic>
+<?xml version="1.0" encoding="UTF-8"?><topic id="44b03330-885f-4eee-a90b-3235d56161e7"><title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title><body id="72db8e0f-a252-4a9d-ac99-80f159518570"><p id="23b4fccd-51f9-4064-b7df-46252a40211d">XML Datenbanken konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
+Datenbanken auf die Struktur eines Dokuments, was abstrakt gesehen einer Baumdarstellung
+entspricht, und weniger auf die Beziehungen zwischen Objekten, die eher einen Graphen aufspannen.</p><p id="01eaca65-7909-46d8-9223-3de00eed2606d6e6">Natürlich ist auch jeder Baum ein Graph ohne Kreise, und sicherlich kann man auch Bäume
+in einer realtionalen Datenbank abspeichern. Eine XML Datenbank ist aber für diese Struktur
+optimiert, sprich Fragen, wie "Welche Hühner legen braune Eier?" müssen eher selten beantwortet
+werden. Vielmehr geht es um die Frage "Wie sieht ein Huhn und wie sieht ein Ei aus?"</p><p id="ded53943-e2b3-4ef2-b8e4-2eee4a93ebb8d6e8">Wir betrachten also Dokumente, wie:</p><pre id="bcc3135a-e09e-46dc-b70a-e68c12d86f38d6e10" xml:space="preserve">&lt;huhn&gt;
+  &lt;name&gt;heiner&lt;/name&gt;
+  &lt;geschlecht&gt;männlich&lt;/geschlecht&gt;
+  &lt;alter&gt;3&lt;/alter&gt;
+  &lt;feder-farbe&gt;weiss&lt;/feder-farbe&gt;
+&lt;/huhn&gt;</pre><pre id="c4790a33-3254-4f44-a017-a199fbaf2e2fd6e12" xml:space="preserve">&lt;huhn&gt;
+  &lt;name&gt;helga&lt;/name&gt;
+  &lt;geschlecht&gt;weiblich&lt;/geschlecht&gt;
+  &lt;alter&gt;3&lt;/alter&gt;
+  &lt;feder-farbe&gt;braun&lt;/feder-farbe&gt;
+&lt;/huhn&gt;</pre><pre id="0aba324a-f371-42e9-91d8-4b25f437fe0fd6e14" xml:space="preserve">&lt;ei&gt;
+  &lt;farbe&gt;braun&lt;/farbe&gt;
+  &lt;gewicht&gt;65g&lt;/gewicht&gt;
+&lt;ei&gt;</pre></body></topic>
