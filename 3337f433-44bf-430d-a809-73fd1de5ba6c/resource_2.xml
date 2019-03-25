@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="44b03330-885f-4eee-a90b-3235d56161e7"><title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title><body id="72db8e0f-a252-4a9d-ac99-80f159518570"><p id="23b4fccd-51f9-4064-b7df-46252a40211d">XML Datenbanken[[xe1:XML Datenbank]] konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
+Datenbanken auf die Struktur eines Dokuments, was abstrakt gesehen einen Baum darstellt, und weniger auf die Beziehungen zwischen Objekten, die eher einen Graphen aufspannen.</p><p id="01eaca65-7909-46d8-9223-3de00eed2606d6e6">Natürlich ist auch jeder Baum ein Graph ohne Kreise, und sicherlich kann man auch Bäume
+in einer realtionalen Datenbank abspeichern. </p><p id="b8e45351-2764-4e0f-9d4a-c78d2e149bced6e8">Eine XML Datenbank ist aber für diese Struktur
+optimiert, sprich: Fragen, wie "Welche Hühner legen braune Eier?" müssen eher selten beantwortet
+werden. Vielmehr geht es um die Frage "Wie sieht ein Huhn und wie sieht ein Ei aus?"</p><p id="ded53943-e2b3-4ef2-b8e4-2eee4a93ebb8d6e8">Wir betrachten also Dokumente, wie:</p><pre id="297ba78d-595c-4e33-b285-ad9535e2c14ad6e12" xml:space="preserve">&lt;huhn&gt;
+  &lt;name&gt;heiner&lt;/name&gt;
+  &lt;geschlecht&gt;männlich&lt;/geschlecht&gt;
+  &lt;alter&gt;3&lt;/alter&gt;
+  &lt;feder-farbe&gt;weiss&lt;/feder-farbe&gt;
+&lt;/huhn&gt;</pre><pre id="aa41a189-56cd-4d6f-987f-3b114a33dc77d6e14" xml:space="preserve">&lt;huhn&gt;
+  &lt;name&gt;helga&lt;/name&gt;
+  &lt;geschlecht&gt;weiblich&lt;/geschlecht&gt;
+  &lt;alter&gt;2&lt;/alter&gt;
+  &lt;feder-farbe&gt;braun&lt;/feder-farbe&gt;
+&lt;/huhn&gt;</pre><pre id="9113e5e6-a4bf-41b3-9762-369181ed8d6ad6e16" xml:space="preserve">&lt;ei&gt;
+  &lt;farbe&gt;braun&lt;/farbe&gt;
+  &lt;gewicht&gt;65g&lt;/gewicht&gt;
+  &lt;legedatum&gt;23.03.2019&lt;/legedatum&gt;
+&lt;ei&gt;</pre><p id="cc774b7e-f0f8-4dca-89d7-1670b34834c7d6e18">Um nun ein Ei einem bestimmtem Huhn zuzuordnen, könnte man die Ei-Struktur innerhalb der Huhn-Struktur ansiedeln, bspw. so:</p><pre id="4e3c09ae-1d27-4beb-be85-b0e97a186cd2d6e20" xml:space="preserve">&lt;huhn&gt;
+  &lt;name&gt;helga&lt;/name&gt;
+  &lt;geschlecht&gt;weiblich&lt;/geschlecht&gt;
+  &lt;alter&gt;2&lt;/alter&gt;
+  &lt;feder-farbe&gt;braun&lt;/feder-farbe&gt;
+&lt;/huhn&gt;</pre></body></topic>

@@ -26,7 +26,15 @@
          </div>
       </div>
       <div id="sidebar"><a href="/tektur.html" title="Go to Tektur CCMS"><img id="logo-image" src="../logo.png"></a><div id="scrollarea">
-            <div id="toc-panel"><a class="cover-link" href="book.html">Cover</a><ul id="navigation" class="treeview-gray">
+            <div id="toc-panel">
+               <table width="100%" border="0" id="toc-links">
+                  <tr>
+                     <td><a class="cover-link" href="book.html">Cover</a></td>
+                     <td style="text-align:right">[ <span id="collapse-link">collapse</span> ]
+                     </td>
+                  </tr>
+               </table>
+               <ul id="navigation" class="treeview-gray">
                   <li class="toc-level-1"><a href="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88.html" class="toc-entry" id="chapter-link_c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88" data-level="1"><span class="chapter-link1">1&nbsp;&nbsp;
                            Intro
                            </span></a></li>
@@ -287,7 +295,121 @@
                         <div class="title" data-tektur-reviewer-number="" id="b49f74f7-6d65-4672-beef-5fd92c877526" data-element-name="title">XML Datenbanken</div>
                         </span></span></h2>
                <div class="margin">
-                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">bla bla</div>
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">XML Datenbanken konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
+                     Datenbanken auf die Struktur eines Dokuments, die abstrakt gesehen einen Baum darstellt, und weniger auf die Beziehungen zwischen
+                     Objekten, die eher einen Graphen aufspannen.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Natürlich ist auch jeder Baum ein Graph ohne Kreise, und sicherlich kann man auch Bäume
+                     in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für diese Struktur optimiert. 
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Es gibt gegenwärtig vier reine XML Datenbanken und einige Erweiterungen für konventionelle SQL Datenbanken:</div>
+               </div>
+               <div class="no-margin">
+                  <div id="" data-element-name="table">
+                     <table cellpadding="0" cellspacing="0" width="100%">
+                        
+                        
+                        
+                        <tbody>
+                           
+                           <tr>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-left: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;border-top: #A0A0A0 1pt solid;">
+                                 <b id="" data-element-name="b">Datenbank</b>
+                                 
+                              </td>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;border-top: #A0A0A0 1pt solid;">
+                                 <b id="" data-element-name="b">Besonderheiten</b>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                           <tr>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-left: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 <a href="http://exist-db.org/exist/apps/homepage/index.html" title="http://exist-db.org/exist/apps/homepage/index.html" target="_blank">eXist DB</a>
+                                 
+                              </td>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">eXist DB ist ein Open Source Projekt. Neben der Datenbank umfasst diese Software eine komplette Entwicklungsumgebung für Webapplikationen.
+                                    Für diese DB xistiert ein 1-Klick Installer in Form eines Java Jars. eXist ist im Bereich Digital Humanities (ein Fachbereich
+                                    der Geschichts- und Kulturwissenschaften) sehr verbreitet.
+                                 </div>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                           <tr>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-left: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 <a href="http://basex.org/" title="http://basex.org/" target="_blank">BaseX</a>
+                                 
+                              </td>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">BaseX ist ebenfalls OpenSource und die Homepage macht einen ordentlichen Eindruck. Bisher bin ich noch nicht dazugekommen,
+                                    BaseX zu evaluieren. Unter meiner Java 10 Installation lief erst einmal nichts - weshalb die erste Kontaktaufnahme scheiterte.
+                                    
+                                 </div>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                           <tr>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-left: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 <a href="https://www.marklogic.com/" title="https://www.marklogic.com/" target="_blank">MarkLogic</a>
+                                 
+                              </td>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">MarkLogic ist der Platzhirsch unter den kommerziellen Anbietern. Hier ist alles "Enterprise"... die Funktionalität, der Support
+                                    und auch der Preis. Obwohl ML viele Erweiterungen für XQuery bietet, ist der XQuery 3.0 Standard noch nicht umgesetzt.
+                                 </div>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                           <tr>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-left: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 <a href="https://www.oracle.com/database/berkeley-db/xml.html" title="https://www.oracle.com/database/berkeley-db/xml.html" target="_blank">Berkely DB XML Datenbank</a>
+                                 
+                              </td>
+                              
+                              <td width="10%" style="vertical-align:top;background: transparent;;padding:2mm;border-right: #A0A0A0 1pt solid;border-bottom: #A0A0A0 1pt solid;">
+                                 
+                                 <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Die gute alte Berkely DB war der Key-Value Unterbau für viele andere Datenbanken, wie auch MySQL. Sicherlich hat auch die
+                                    XML Variante einiges in Petto.
+                                 </div>
+                                 
+                              </td>
+                              
+                           </tr>
+                           
+                        </tbody>
+                        
+                     </table>
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="" data-element-name="p" data-tektur-reviewer-number="">Da ich zur Zeit beruflich mit MarkLogic zu tun habe, lasse ich mir die Gelegenheit nicht nehmen, meine Erfahrungen und Erkenntnisse
+                     dazu in diesem Kapitel zu beschreiben. Es gibt auch eine <a href="https://developer.marklogic.com/free-developer" title="https://developer.marklogic.com/free-developer" target="_blank">Developer License</a> mit der nan die Software ausprobieren kann. Für alle langfristigen XQuery Spielereien ist die eXist DB wohl die erste Wahl,
+                     da hier auch der aktuelle XQuery 3.0 Standard umgesetzt ist.
+                  </div>
                </div>
             </div>
          </div>
@@ -300,7 +422,7 @@
             </table>
          </div>
       </div>
-      <div id="date-version">Version: 168<br>Mar 20 2019
+      <div id="date-version">Version: 169<br>Mar 25 2019
       </div>
    </body>
 </html>
