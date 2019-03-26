@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Mon Mar 25 2019 17:11:10 </date-of-last-change>
+      <date-of-last-change>Tue Mar 26 2019 16:36:20 </date-of-last-change>
       <language>de-DE</language>
-      <status>169</status>
+      <status>195</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -83,13 +83,13 @@ www.github.com/alexdd/Buch</cover-text>
             <column-wide-element>
          <p>
                <b>XML,</b>
-               <b>XSLT</b>, <b>XPATH</b>, <b>XSL-FO</b> und <b>XQuery</b> sind Techniken um baumstrukturierte Daten - im Vergleich zu relationalen Daten - aus verschiedenen Quellen ineinader zu überführen, abzuspeichern, zu versenden, darzustellen und auszuwerten. Einfach gesprochen geht es um die Weiterverarbeitung solcher Daten - das XML kann dabei sowohl die Nutzdaten als auch die Steuerdaten tragen.</p>
+               <b>XSLT</b>, <b>XPATH</b>, <b>XSL-FO</b> und <b>XQuery</b> sind Techniken um baumstrukturierte Daten - im Vergleich zu relationalen Daten - aus verschiedenen Quellen ineinader zu überführen, abzuspeichern, zu versenden, darzustellen und auszuwerten.</p>
       </column-wide-element>
             <column-wide-element>
          <p>Vom Aussehen her sind XML Daten im Prinzip Textdaten. Sie können sehr einfach mit einem Texteditor erstellt werden. Im Gegensatz zu Multimedia-Daten sind keine komplexen Tools, wie z.B. ein Grafikeditor, erforderlich.</p>
       </column-wide-element>
             <column-wide-element>
-         <p>Auch relationale Daten können in Form von Tabellen, als Excel Tabelle oder bspw. als kommaseparierte Textdatei, aus einem System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und weiterer Kategorisierung dieser Informationseinheiten mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein Baum, der die Hierarchische Ordnung der Daten widerspiegeln sollte.</p>
+         <p>Auch relationale Daten können in Form von Tabellen, als Excel Tabelle oder bspw. als kommaseparierte Textdatei, aus einem System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und weiterer Kategorisierung dieser Informationseinheiten mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein Baum, der die Hierarchische Ordnung der Daten widerspiegelt.</p>
       </column-wide-element>
             <column-wide-element>
          <p>Diese Baumstrukturen sind maschinell lesbar und die Daten können, bevor sie von einem Versender zu einem Empfänger gehen, mittels eines automatischen Prozesses validiert werden. Dabei können sowohl der Inhalt als auch die Syntax anhand von definierten Regeln (Schemas) genau überprüft werden.</p>
@@ -98,10 +98,10 @@ www.github.com/alexdd/Buch</cover-text>
          <p>Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubt.</p>
       </column-wide-element>
             <column-wide-element>
-         <p>Der Übergang von SGML zu XML hat die Sache ein bisschen vereinfacht, eine weitere Vereinfachung brachte JSON als Standard. JSON wird gerne im Webbereich eingesetzt um baumstrukturierte Daten zu verarbeiten. JSON ist jedoch nicht so gut maschinenlesbar und es gibt noch nicht so viele Werkzeuge wie z.B. Code Editoren dafür.</p>
+         <p>Der Übergang von SGML zu XML hat die Sache ein bisschen vereinfacht, eine weitere Vereinfachung brachte JSON als Standard. JSON wird gerne im Webbereich eingesetzt um baumstrukturierte Daten auszuzeichnen. JSON ist jedoch nicht so gut maschinenlesbar und es gibt noch nicht so viele Werkzeuge wie z.B. Code Editoren dafür.</p>
       </column-wide-element>
             <column-wide-element>
-         <p>Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern, um die es sich im weiteren Text drehen wird:</p>
+         <p>Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern:</p>
       </column-wide-element>
             <column-wide-element>
          <ul>
@@ -132,7 +132,7 @@ www.github.com/alexdd/Buch</cover-text>
       <chapter hyphenation="yes" chapterpage="no" id="d2e233" ismodule="no">
          
             <title>
-               <title id="1ea26780-291c-470f-9559-616cfb744574">Führende Technologie XSLT</title>
+               <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich</title>
             </title>
             
                <column-wide-element>
@@ -144,14 +144,14 @@ www.github.com/alexdd/Buch</cover-text>
          </column-wide-element>
                <column-wide-element>
             <p>Im Bereich XML würde aber ohne XSLT nicht viel gehen. Es gibt einige exotische Anwendungsgebiete in denen XML effizient 
-mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML konvertierten, EDI X12<footnote>
+mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - EDI X12<footnote>
                   <desc>https://en.wikipedia.org/wiki/ASC_X12</desc>
                </footnote> Nachrichten.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im S1000D Standard<footnote>
                   <desc>https://en.wikipedia.org/wiki/S1000D</desc>
-               </footnote> wacker gehalten. Hier wird teilweise noch mit proprietäre Programmiersprachen, wie Metamorphosis gearbeitet.</p>
+               </footnote> wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Alternativen zu XSLT finden sich im entsprechendem Wikipedia-Artikel<footnote>
@@ -159,10 +159,10 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Wir konzentrieren uns hier also erst einmal auf XSLT und insbesondere XSL Stylesheets.</p>
+            <p>Wir konzentrieren uns hier auf XSLT und XSL Stylesheets.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert.</p>
+            <p>Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert. Ein paar interessante Stichpunkte:</p>
          </column-wide-element>
                <column-wide-element>
             <ul>
@@ -173,9 +173,6 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                   </li>
                   <li>
                      <p>Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
-                  </li>
-                  <li>
-                     <p>XSLT benötigt normalerweise immer eine XML Eingabe. Zumindest ein XML Knoten muss verarbeitet werden. Es gibt aber auch den Spezialfall, dass bspw. mit dem XSLT Prozessor Saxon keine Eingabe notwendig ist, bzw. diese vom XSLT Stylesheet selbst erzeugt wird.</p>
                   </li>
                   <li>
                      <p>XSLT ist keine imperative Sprache, d.h es werden keine Anweisungen der Reihe nach abgearbeitet, sondern eine deklarative Sprache, d.h für jedes Ereignis (besser gesagt: für jeden durchlaufenen DOM Knoten) wird eine gefundene - und vom Programmierer deklarierte - Regel angewendet.</p>
@@ -205,10 +202,10 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e325" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e318" ismodule="no">
          
             <title>
-               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Einige aktuelle und vergangene Szenarien</title>
+               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Aktuelle und vergangene Anwendungen</title>
             </title>
             
                <column-wide-element>
@@ -221,7 +218,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
             <p>Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern<xe>
                   <first criterion="Anwendungsgebiete">Anwendungsgebiete</first>
                   <second criterion="XML Webseiten">XML Webseiten</second>
-               </xe>. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre. Ich denke, u.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
+               </xe>. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre. U.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Betrachten wir das folgende einfache XML Beispiel:</p>
@@ -261,9 +258,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
 [...]</verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Jetzt kann man das XML einfach im Browser öffnen und alles wird schön formatiert - je nachdem welche Regeln in <code>
-                  <nb>formatiermich.xsl</nb>
-               </code> gesetzt sind - angezeigt:</p>
+            <p>Das XML kann nun im Browser geöffnet werden und alles wird schön formatiert angezeigt:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="iso-8859-1"?<color name="green">&gt;</color>
@@ -312,7 +307,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
 </verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Die Processing Instruction hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
+            <p>Die <b>Processing Instruction</b> hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
          </column-wide-element>
                <block-title>
                   <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
@@ -327,7 +322,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                </footnote> für unterschiedliche Handy-Modelle.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Damals hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten noch nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
+            <p>Früher hatten die Handys sehr unterschiedliche Displaygrößen. Handybrowser konnten nicht ausreichend Javascript und die Skalierung der WAP-Seite für das jeweilige Handy passierte nicht im Handy, sondern vor der Auslieferung auf der Serverseite. Dazu wurde eine XML Quelle mittels verschiedener XSLT Stylesheets in unterschiedliche WML WAP Repräsentationen transformiert.</p>
          </column-wide-element>
                <column-wide-element>
             <p>So würde das Zwei-Kapitel Beispiel von oben im WML Format aussehen (recht einfach gehalten):</p>
@@ -407,13 +402,13 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                   <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Ausgabeformate</title>
                </block-title>
                <column-wide-element>
-            <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. ePub. EPUB<footnote>
+            <p>Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. <b>ePub</b>. EPUB<footnote>
                   <desc>https://de.wikipedia.org/wiki/EPUB</desc>
                   <add>EPUB ist ein Dokumentformat für Ebook-Reader.</add>
-               </footnote> ist das Standardformat für eBooks und neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
+               </footnote> ist das Standardformat für eBooks. Neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Weitere gängige Formate sind neben dem oben gezeigten veralteten WML Format, elektronische Ausgabe-Formate wie: CHM<footnote>
+            <p>Weitere gängige Formate sind neben dem oben veralteten WML Format, elektronische Ausgabe-Formate wie: CHM<footnote>
                   <desc>https://de.wikipedia.org/wiki/CHM_(Dateiformat</desc>
                   <add>Die alte Windows-Hilfe. Läuft immer noch im Bereich Maschinenbau auf gekoppelten Rechnern mit alter Windows Software)</add>
                </footnote>, EclipseHelp<footnote>
@@ -444,13 +439,13 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                </xe>.</p>
          </column-wide-element>
                <block-title>
-                  <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbar machen</title>
+                  <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbare Ausgabe</title>
                </block-title>
                <column-wide-element>
             <p>Kryptische XML Log-, Daten- oder Konfigurationsfiles<xe>
                   <first criterion="Anwendungsgebiete">Anwendungsgebiete</first>
                   <second criterion="Log- und Konfigurationsdaten">Log- und Konfigurationsdaten</second>
-               </xe> können leicht mit XSLT menschenlesbar formatiert werden. &#8232;Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst menschenlesbar formatieren könnte - XSLT to the Rescue:</p>
+               </xe> können leicht mit XSLT menschenlesbar formatiert werden. Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst formatieren könnte:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="UTF-8"?<color name="green">&gt;</color>?<color name="green">&lt;?xml-stylesheet</color> type="text/xsl" href="de.xsl"?<color name="green">&gt;</color>
@@ -479,7 +474,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
   [...]</verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Mit einem eingehängten XSLT Stylesheet de.xsl wird so ein XML Datenfile schön formatiert als Tabelle angezeigt:</p>
+            <p>Mit einem eingehängten XSLT Stylesheet <code>
+                  <nb>de.xsl</nb>
+               </code> wird so ein Datenfile als Tabelle formatiert:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="iso-8859-1"?<color name="green">&gt;</color>
@@ -512,10 +509,15 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
 <color name="green">&lt;/xsl:stylesheet&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 contenteditable Attributs editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen webbasierten XML Editor gebaut. Genau nach diesem Prinzip funktionieren einige aktuelle XML Editoren.</p>
+            <p>Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 <code>
+                  <nb>contenteditable</nb>
+               </code> Attributs<xe>
+                  <first criterion="Attribute">Attribute</first>
+                  <second criterion="contenteditable">contenteditable</second>
+               </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in .</p>
          </column-wide-element>
                <block-title>
-                  <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme</title>
+                  <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
                </block-title>
                <column-wide-element>
             <p>Nachdem eine SVG<xe>
@@ -524,10 +526,14 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
                </xe> Grafik<xe>
                   <first criterion="Anwendungsgebiete">Anwendungsgebiete</first>
                   <second criterion="Visualisierung">Visualisierung</second>
-               </xe> im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden.&#8232;Über das HTML5 &lt;svg&gt; Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
+               </xe> im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden. Über das HTML5 <code>
+                  <nb>&lt;svg&gt;</nb>
+               </code> Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue &lt;block&gt; Elemente:</p>
+            <p>Betrachten wir unser Beispiel von oben, erweitert um drei neue <code>
+                  <nb>&lt;block&gt;</nb>
+               </code> Elemente:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;?xml</color> version="1.0" encoding="UTF-8"?<color name="green">&gt;</color>
@@ -551,7 +557,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
 <color name="green">&lt;/document&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Wenn wir das XSLT Stylesheet von oben noch um eine Regel für das neue &lt;block&gt; Element ergänzen, so wie hier:</p>
+            <p>Wenn wir das XSLT Stylesheet noch um eine Regel für das neue <code>
+                  <nb>&lt;block&gt;</nb>
+               </code> Element ergänzen, so wie hier:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;xsl:template</color> match="block"<color name="green">&gt;</color>
@@ -563,7 +571,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
 <color name="green">&lt;/xsl:template&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke.</p>
+            <p>Dann erhalten wir drei schön formatierte gelbe SVG Blöcke ...</p>
          </column-wide-element>
                <column-wide-element>
             <p>
@@ -589,7 +597,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von, nach XML
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e480" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e479" ismodule="no">
          
             <title>
                <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
@@ -617,35 +625,40 @@ Vorteile:</p>
                      <p>Bei einer Änderung in der XML Quelle werden auch automatisch alle anschließenden Formate aktualisiert.</p>
                   </li>
                   <li>
-                     <p>Strikte Trennung von Content ( / Semantik) und Layout/Design.</p>
+                     <p>Strikte Trennung von Content/Semantik und Layout/Design.</p>
                   </li>
                   <li>
                      <p>Auf der XML Quelle sind XML Features möglich, wie:
 	
-		Modularisierung: Erlaubt die fein-granulare Wiederverwendung<xe>
+		<b>Modularisierung</b>: Erlaubt die fein-granulare <b>Wiederverwendung</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Wiederverwendung">Wiederverwendung</second>
                      </xe> von Content-Bausteinen, sowie das Verlinken, Filtern, Suchen und Exportieren derselben.
-		Generalisierung<xe>
+		<b>Generalisierung</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Generalisierung und Spezialisierung">Generalisierung und Spezialisierung</second>
                      </xe> ist ein DITA Konzept, welches die Wiederverendung von angepassten Topics in anderen DITA Systemen ermöglicht.
-		Gültigkeiten<xe>
+		<b>Gültigkeiten</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Gültigkeitem">Gültigkeitem</second>
                      </xe> erlauben die bedingte Anwendung von Content-Bestandteilen auf Satz und Wort-Ebene.
-		Versionierung<xe>
+		<b>Versionierung</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Versionierung">Versionierung</second>
-                     </xe> und Diffing<xe>
+                     </xe> und <b>Diffing</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Diffing">Diffing</second>
-                     </xe> - Vergleich von Änderungen zwischen Versionen
-		Intelligente Querverweise<xe>
+                     </xe> - Vergleich von Änderungen zwischen Versionen. <b>Intelligente Querverweise</b>
+                     <xe>
                         <first criterion="Konzepte">Konzepte</first>
                         <second criterion="Intelligente Querverweise">Intelligente Querverweise</second>
                      </xe>: Ein Link zwischen einzelnen XML Topics  bleibt versionstreu.
-		Automatischer Satz, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
+		<b>Automatischer Satz</b>, inkl. Zusamenhalte- und Trennregeln für Seiten, Absätze und Blöcke (Listen, Tabellen, etc).
 	
 	</p>
                   </li>
@@ -656,18 +669,20 @@ Vorteile:</p>
                      <p>Die XML Quelle kann ohne Aufbereitung in anderen Systemen wiederverwendet werden.</p>
                   </li>
                   <li>
-                     <p>Es gibt weit verbreitete Standards zur Struktur der XML Quelle.</p>
+                     <p>Es gibt weit verbreitete <b>Standards</b> zur Struktur der XML Quelle.</p>
                   </li>
                   <li>
-                     <p>Nur das XML muss in der Datenhaltung persistiert werden</p>
+                     <p>Nur das XML wird in der Datenhaltung persistiert.</p>
                   </li>
                   <li>
-                     <p>Es gibt spezialisierte XML Datenbanken, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
+                     <p>Es gibt spezialisierte <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
+                              id="1b7d4b0c-4559-48b0-9e66-21a243a47897"
+                              type="topic">XML Datenbanken</doclink>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
                   </li>
                </ul>
          </column-wide-element>
                <column-wide-element>
-            <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die Single-Source Strategie.</p>
+            <p>Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die <b>Single-Source Strategie</b>.</p>
          </column-wide-element>
                <block-title>
                   <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
@@ -693,7 +708,7 @@ Vorteile:</p>
             </p>
          </column-wide-element>
                <column-wide-element>
-            <p>Es gibt aber auch einen schönen Artikel dazu im Java World Journal<footnote>
+            <p>Es gibt auch einen schönen Artikel dazu im Java World Journal<footnote>
                   <desc>https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html</desc>
                   <add>Weiterführende Lektüre zum Thema Code-Generierung mit XSLT</add>
                </footnote>.</p>
@@ -705,11 +720,13 @@ Vorteile:</p>
             <p>Für jede erdenkliche Art der Migration<xe>
                   <first criterion="Anwendungsgebiete">Anwendungsgebiete</first>
                   <second criterion="Migration">Migration</second>
-               </xe> eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen bietet sich XSLT als Mittel der Wahl zur schnellen und komplexen Transformation an.</p>
+               </xe> eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen, bietet sich XSLT zur Transformation an.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. 
-Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option<footnote>
+            <p>Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. </p>
+         </column-wide-element>
+               <column-wide-element>
+            <p> Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big Data) verarbeitet werden. Saxon bietet bspw. diese Streaming Option<footnote>
                   <desc>http://www.saxonica.com/html/documentation/sourcedocs/streaming/</desc>
                   <add>Streaming ist eine Technik zur Verarbeitung großer XML Daten - Stichwort Big Data - mit XSLT3.0</add>
                </footnote>.</p>
@@ -718,7 +735,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e595" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e631" ismodule="no">
       
          <title>
             <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
@@ -738,7 +755,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e621" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e657" ismodule="no">
          
             <title>
                <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
@@ -751,7 +768,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                </xe> regelbasierte Umgebung zur Konvertierung von XML Daten. Gerade der Vorteil des regelbasierten Ansatzes ist vielen Entwicklern nicht bewusst, und es entsteht Quellcode der aussieht, wie mit XPath angereicherter PHP Code.</p>
          </column-wide-element>
                <column-wide-element>
-            <p>Ich frage mich an dieser Stelle immer, wieso nimmt man dann überhaupt XSLT, wenn man keine Template-Match Regeln verwendet, oder nur spärlich verwendet?</p>
+            <p>Wieso nimmt man dann überhaupt XSLT, wenn man keine Template-Match Regeln verwendet, oder nur spärlich verwendet?</p>
          </column-wide-element>
                <column-wide-element>
             <p>Um diesen Umstand aufzuklären ist ein bisschen Theorie notwendig:</p>
@@ -761,7 +778,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Pull Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="d41a22de-6300-42ba-921c-adbca1e54d4cd6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <desc id="07322c84-0481-44ab-a799-bf52da6b8dded6e13">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie JSP oder ASP. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
          </page-wide-element>
@@ -770,7 +787,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Push Stylesheet</subtitle>
                </column-wide-element>
-                  <desc id="180ddf48-0fdc-47d1-86ea-f2b562017254d6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke: XSLT steht für eXtensible Stylesheet Transformation.</desc>
+                  <desc id="9a63a604-831f-49cb-81a7-0b79d0c947bdd6e19">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. <b>Merke:</b> XSLT steht für eXtensible Stylesheet Transformation.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
          </page-wide-element>
@@ -782,7 +799,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <column-wide-element>
                   <subtitle>Transformation des Quellbaums in den Zielbaum</subtitle>
                </column-wide-element>
-                  <desc id="8f0155c6-89fe-4ed7-abf2-b503254aa28fd6e27">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
+                  <desc id="b407302b-5344-487c-963d-1bf2e2625dded6e30">Der XSLT Prozessor unternimmt einen Tiefensuchlauf<xe>
                      <first criterion="Tiefensuchlauf">Tiefensuchlauf</first>
                   </xe> und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
@@ -820,7 +837,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e742" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e781" ismodule="no">
          
             <title>
                <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
@@ -830,7 +847,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>Die Regelbasis<xe>
                   <first criterion="Konzepte">Konzepte</first>
                   <second criterion="Regelbasis">Regelbasis</second>
-               </xe> der XSLT ereignisgesteuerten Laufzeitumgebung (Wir erinnern uns: Jedes Mal wenn der XSLT Prozessor einen Knoten betritt, wird ein Event ausgelöst) kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
+               </xe> der XSLT ereignisgesteuerten Laufzeitumgebung kann unendlich viele Regeln aufnehmen. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer selbst verantwortlich.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
@@ -851,7 +868,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>Match-Regeln<xe>
                   <first criterion="Konzepte">Konzepte</first>
                   <second criterion="Match-Regeln">Match-Regeln</second>
-               </xe> werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:<xe>
+               </xe> werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft, wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:<xe>
                   <first criterion="Konzepte">Konzepte</first>
                   <second criterion="Priorität">Priorität</second>
                </xe>
@@ -871,7 +888,9 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   </step>
                   <step>
                      <action>
-                        <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist 0.5.</p>
+                        <p>Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist <code>
+                           <nb>0.5</nb>
+                        </code>.</p>
                      </action>
                   </step>
                   <step>
@@ -885,37 +904,75 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                               <p>Das am meisten spezifische Template wird anhand der Prioritäten berechnet.</p>
                            </li>
                            <li>
-                              <p>Einfache Elementnamen (z.B. "para") haben Prio 0.</p>
+                              <p>Einfache Elementnamen (z.B. "para") haben Prio <code>
+                                 <nb>0</nb>
+                              </code>.</p>
                            </li>
                            <li>
-                              <p>Wildcards (z.B. *, @*) haben Priorität -0.25</p>
+                              <p>Wildcards (z.B. <code>
+                                 <nb>*, @*</nb>
+                              </code>) haben Priorität <code>
+                                 <nb>-0.25</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>Knoten-Tests für andere Knoten (e.g. comment(), node(), etc. ) haben Priorität -0.5</p>
+                              <p>Knoten-Tests für andere Knoten (e.g. <code>
+                                 <nb>comment(), node()</nb>
+                              </code>, etc. ) haben Priorität <code>
+                                 <nb>-0.5</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>In allen anderen Fällen ist die Prio 0.5.</p>
+                              <p>In allen anderen Fällen ist die Prio <code>
+                                 <nb>0.5</nb>
+                              </code>.</p>
                            </li>
                         </ul>
                         <p>Beispiele:</p>
                         <ul>
                            <li>
-                              <p>para -&gt; 0</p>
+                              <p>
+                              <code>
+                                 <nb>para -&gt; 0</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>h:* -&gt; -0.25</p>
+                              <p>
+                              <code>
+                                 <nb>h:* -&gt; -0.25</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>* -&gt; -0.25</p>
+                              <p>
+                              <code>
+                                 <nb>* -&gt; -0.25</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>node() -&gt; -0.25</p>
+                              <p>
+                              <code>
+                                 <nb>node() -&gt; -0.25</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>contents/para -&gt; 0.5</p>
+                              <p>
+                              <code>
+                                 <nb>contents/para -&gt; 0.5</nb>
+                              </code>
+                           </p>
                            </li>
                            <li>
-                              <p>contents/* -&gt; 0.5</p>
+                              <p>
+                              <code>
+                                 <nb>contents/* -&gt; 0.5</nb>
+                              </code>
+                           </p>
                            </li>
                         </ul>
                      </action>
@@ -961,7 +1018,9 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
             <p>Wie oben schon verdeutlicht<xe>
                   <first criterion="Konzepte">Konzepte</first>
                   <second criterion="Priorität">Priorität</second>
-               </xe> werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut @priority an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wäre bspw. folgendes Szenario:</p>
+               </xe> werden alle Match-Regeln mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut <code>
+                  <nb>@priority</nb>
+               </code> an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wäre bspw. folgendes Szenario:</p>
          </column-wide-element>
                <column-wide-element>
             <ul>
@@ -1022,8 +1081,10 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
                   <first criterion="00000000"/>
                   <second criterion="00000000"/>
                </xe> hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
-                        id="e48d65f5-bb6e-4dcb-b1f9-99f2ee11d2e6"
-                        type="topic">Push vs. Pull Stylesheets </doclink>, wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der apply-templates Call.</p>
+                        id="8e5f35b9-8707-4d46-bf49-cfcfbdc2c7c9"
+                        type="none">Push vs. Pull Stylesheets</doclink> , wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der <code>
+                  <nb>apply-templates</nb>
+               </code> Call.</p>
          </column-wide-element>
                <column-wide-element>
             <p>Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
@@ -1045,7 +1106,7 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
 <color name="green">&lt;/xsl:template&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Die Generierung des TOC könnte dann folgendermassen ablaufen:</p>
+            <p>Die Generierung des TOC könnte dann so ablaufen:</p>
          </column-wide-element>
                <page-wide-element>
             <verbatim><color name="green">&lt;xsl:for-each</color> select="chapter"<color name="green">&gt;</color>
@@ -1053,15 +1114,18 @@ Mittels der XSLT3.0 Streaming Option können auch sehr große XML Quellen (Big D
 <color name="green">&lt;/xsl:for-each&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</p>
+            <p>Bzgl. der Eindeutigkeit der Regelbasis kann man also auch noch anhand des Mode-Attributes Ausführungs-Gruppen bilden. </p>
          </column-wide-element>
-               <column-wide-element>
-            <p>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</p>
-         </column-wide-element>
+               <page-wide-element>
+            <warning>
+                  <cause>Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt wurden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen wurden.</cause>
+                  <consequence>Auch das mode-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</consequence>
+               </warning>
+         </page-wide-element>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1030" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1075" ismodule="no">
          
             <title>
                <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
@@ -1187,7 +1251,9 @@ das den Vorgang des Namespace-Kopierens steuern kann:</p>
 <color name="green">&lt;/xsl:template&gt;</color></verbatim>
          </page-wide-element>
                <column-wide-element>
-            <p>Hier wird der Namespace am p Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
+            <p>Hier wird der Namespace am <code>
+                  <nb>p</nb>
+               </code> Element nicht in die Ausgabe geschrieben. Ggf. funktiniert diese
 Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich ohne genauen Test nicht darauf verlassen.</p>
          </column-wide-element>
                <column-wide-element>
@@ -1233,35 +1299,63 @@ import <color name="brown">module </color><color name="brown">namespace </color>
 im selben Verzeichnis aus der eigenen Entwicklung, sowie die Bibliothek mem aus der MArklogic
 Umgebung. Danach wird ein NS local deklariert, den man verwenden wird, wenn im weiteren Verlauf
 eigene XQuery Funktionen verwendet werden sollen, sowie der NS weiredns, der in den Eingabedaten
-vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
+vorhanden ist. Der NS <code>
+                  <nb>xs</nb>
+               </code> ist analog zum XSLT Beispiel gesetzt.</p>
          </column-wide-element>
             
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e1195" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e1240" ismodule="no">
       
          <title>
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
          </title>
          
             <column-wide-element>
-         <p>Hands-on Materiel mit Beispielquelltexten.</p>
+         <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele Sachen, die ich zuvor nicht einsetzen konnte/durfte, die aber jetzt - wo ich mehr mit den Daten an sich beschäftige - umso spannender sind.</p>
+      </column-wide-element>
+            <column-wide-element>
+         <p/>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1212" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1260" ismodule="no">
          
             <title>
                <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT</title>
             </title>
             
                <column-wide-element>
-            <p>In diese Kapitel werden einige ausgewählte Themen zu XSLT dargestellt. Dabei geht es weder um Vollständigkeit noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz.</p>
+            <p>XSLT ist die Standardlösung für XML Transformationen. Es gibt noch einige exotische Lösungen, wie:</p>
+         </column-wide-element>
+               <column-wide-element>
+            <ul>
+                  <li>
+                     <p>
+                        <undefined id="538b0aea-451b-474a-ab72-33a03e5638edd6e9" href="undefined"/>Metamorphosis<undefined id="637314cc-588a-404d-aade-40f6251755a1d6e12" href="undefined">
+                        <footnote>
+                           <desc>https://de.wikipedia.org/wiki/XSL_Transformation#MetaMorphosis</desc>
+                           <add>Wikipedia Eintrag zu dem XML Prozessor Metamorphosis</add>
+                        </footnote> ist eine proprietäre Sprache der Firma Ovidius GmbH in Berlin. Sie findet hauptsächlich Anwendung im Bereich Publishing in der Luftfahrt / Verteidigung.</undefined>
+                     </p>
+                  </li>
+                  <li>
+                     <p>Und auch Spielereien, wie eine Nachbildung der XSLT Syntax in Erlang: xmerl_xs<footnote>
+                        <desc>http://erlang.org/doc/man/xmerl_xs.html</desc>
+                        <add>Dokuseiten zum Modul xmel_xs, mit dem man in Erlang wie in XSLT "programmieren" kann</add>
+                     </footnote>
+                  </p>
+                  </li>
+               </ul>
+         </column-wide-element>
+               <column-wide-element>
+            <p>In diese Kapitel werden einige ausgewählte Themen zur XML Proezessierung mit XSLT dargestellt. Dabei geht es weder um Vollständigkeit, noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz - so wie ich die Sache halt angehen würde ...</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1229" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1301" ismodule="no">
             
                <title>
                   <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
@@ -1295,7 +1389,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   <column-wide-element>
                <ul>
                      <li>
-                        <p>In einem separaten File bzw. einer XML Instanz, die vom XSLT Prozessor vor der eigentlichen Transformation aufgerufen wird uns einen Zwischenstand produziert, der als Eingabe für den Haupttransformationsschritt dient.</p>
+                        <p>In einem separaten File bzw. einer XML Instanz, die vom XSLT Prozessor vor der eigentlichen Transformation aufgerufen wird und einen Zwischenstand produziert. Dieser kann dann als Eingabe für den Haupttransformationsschritt dienen.</p>
                      </li>
                      <li>
                         <p>Innerhalb des eigentlichen XSLT Stylesheets. Hier wird das Ergebnis der Vortransformation in einer Variablen erzeugt.</p>
@@ -1303,7 +1397,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                   </ul>
             </column-wide-element>
                   <column-wide-element>
-               <p>Den zweiten Punkt möchte ich anhand einer Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
+               <p>Den zweiten Punkt möchte ich anhand eines Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim><color name="green">&lt;education-system&gt;</color>
@@ -1332,7 +1426,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
 <color name="green">&lt;/education-system&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
+               <p>Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen, müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim><color name="green">&lt;teachers&gt;</color>
@@ -1420,15 +1514,18 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
 <color name="green">&lt;/xsl:stylesheet&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
+               <p>Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. </p>
             </column-wide-element>
                   <column-wide-element>
-               <p>Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören, was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus.</p>
+               <p>Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören - was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus ...</p>
             </column-wide-element>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1324" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1399" ismodule="no">
             
                <title>
                   <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
@@ -1457,8 +1554,8 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                           id="6900420f-7f27-4782-bab3-9459d95de662"
-                           type="none">Eindeutigkeit der Regelbasis</doclink>.</p>
+                           id="a66a728b-6a98-455a-a8e6-c68417213069"
+                           type="topic">Eindeutigkeit der Regelbasis</doclink>.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
@@ -1475,7 +1572,10 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
 <color name="green">&lt;/xsl:choose&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Besser ist es, wenn man ein Core-Stylesheet pflegt, das für ein Format und eine Produktvariante<xe>
+               <p>Besser ist es, wenn man ein Core-Stylesheet<xe>
+                     <first criterion="Parameterisierung">Parameterisierung</first>
+                     <second criterion="Core-Stylesheet">Core-Stylesheet</second>
+                  </xe> pflegt, das für ein Format und eine Produktvariante<xe>
                      <first criterion="Format- und Produktvarianten">Format- und Produktvarianten</first>
                   </xe> gut ausgetestet ist. Dieses Core-Stylesheet wird dann einfach für eine neue Variante importiert und relevante Teile werden für die neue "Spezialisierung"<xe>
                      <first criterion="Konzepte">Konzepte</first>
@@ -1490,7 +1590,11 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
 <color name="green">&lt;/xsl:template&gt;</color></verbatim>
             </page-wide-element>
                   <column-wide-element>
-               <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert. </p>
+               <p>Will man in einem neuen Format, bspw. A5, diese Logik austauschen und nur eine Zeile drucken, z.B. weil man nicht so viel Platz hat, so würde in einem "abgeleiteten" Stylesheet einfach die Regel noch einmal implementiert.<xe>
+                     <first criterion="Parameterisierung">Parameterisierung</first>
+                     <second criterion="Sub-Stylssheet">Sub-Stylssheet</second>
+                  </xe>
+               </p>
             </column-wide-element>
                   <page-wide-element>
                <verbatim><color name="green">&lt;xsl:choose&gt;</color>
@@ -1522,7 +1626,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1402" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1477" ismodule="no">
             
                <title>
                   <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming</title>
@@ -1538,7 +1642,7 @@ vorhanden ist. Der NS xs ist analog zum XSLT Beispiel gesetzt.</p>
                            <p>Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python<xe>
                               <first criterion="Programmiersprachen">Programmiersprachen</first>
                               <second criterion="Python">Python</second>
-                           </xe> sgmllib<footnote>
+                           </xe>sgmllib<footnote>
                               <desc>https://docs.python.org/2/library/sgmllib.html</desc>
                               <add>Einfacher SGML Parser der Python Standard Bibliothek</add>
                            </footnote>.</p>
@@ -1580,7 +1684,11 @@ kommerziellen Saxon-EE Löusug <footnote>
                         <p>Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.</p>
                      </li>
                      <li>
-                        <p>"Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem Apply-Templates Call.</p>
+                        <p>"Crawler”-Ausdrücke, wie <code>
+                           <nb>//section</nb>
+                        </code> sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg mit Selektion, wie bspw. mit einem <code>
+                           <nb>apply-templates</nb>
+                        </code> Call.</p>
                      </li>
                   </ul>
             </column-wide-element>
@@ -1589,7 +1697,7 @@ kommerziellen Saxon-EE Löusug <footnote>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1477" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1552" ismodule="no">
                
                   <title>
                      <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title>
@@ -1632,7 +1740,7 @@ kommerziellen Saxon-EE Löusug <footnote>
 eine implizite Identity-Transformation (shallow-copy)<footnote>
                         <desc>https://www.saxonica.com/html/documentation/xsl-elements/mode.html</desc>
                         <add>Mode Optionen in XSLT3.0</add>
-                     </footnote> 
+                     </footnote>
                      <xe>
                         <first criterion="Verarbeitungsmethoden">Verarbeitungsmethoden</first>
                         <second criterion="Shallow Copy">Shallow Copy</second>
@@ -1670,7 +1778,9 @@ bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur
 späteren Auswertung bzw. Gruppierung der Key-Elemente.</p>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
+                  <p>Auch im Akkumulator muss das <code>
+                        <nb>streamable="yes"</nb>
+                     </code> Property gesetzt sein, wenn er im 
 Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
 wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
                </column-wide-element>
@@ -1684,9 +1794,13 @@ Prozessor allerdings nicht akzeptiert.</p>
 phase of a streaming template</verbatim>
                </page-wide-element>
                      <column-wide-element>
-                  <p>Diese Fehlermeldung erscheint, wenn man den Apply-Templates Call entfernt. Der Akkumulator
+                  <p>Diese Fehlermeldung erscheint, wenn man den <code>
+                        <nb>apply-templates</nb>
+                     </code> Call entfernt. Der Akkumulator
 wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
-kann auch ein reines Kopieren sein, bspw. kann man den Apply-Templates Call auch durch ein</p>
+kann auch ein reines Kopieren sein, bspw. kann man den <code>
+                        <nb>apply-templates</nb>
+                     </code> Call auch durch ein</p>
                </column-wide-element>
                      <page-wide-element>
                   <verbatim><color name="green">&lt;xsl:copy-of</color> select="."<color name="green">/&gt;</color></verbatim>
@@ -1711,7 +1825,7 @@ würde.</p>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1552" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1627" ismodule="no">
                
                   <title>
                      <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
@@ -1721,16 +1835,7 @@ würde.</p>
                   <p>XSLT Streaming<xe>
                         <first criterion="Verarbeitungsmethoden">Verarbeitungsmethoden</first>
                         <second criterion="XSLT Streaming">XSLT Streaming</second>
-                     </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>Es soll ein kommaseparierter Report aus folgender XML Quelle generierijuij</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>t werden:i9i09i</p>
-               </column-wide-element>
-                     <column-wide-element>
-                  <p>9i9</p>
+                     </xe> ist ziemlich tricky. Betrachten wir ein einfaches Problem. Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden.</p>
                </column-wide-element>
                      <page-wide-element>
                   <verbatim><color name="green">&lt;status-report&gt;</color>
@@ -1778,7 +1883,7 @@ vom XSLT Skript selbst erzeugt wird.</p>
                      </note>
                </column-wide-element>
                      <column-wide-element>
-                  <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
+                  <p>Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der  Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
 verlassen, was den Code weiter vereinfacht:</p>
                </column-wide-element>
                      <page-wide-element>
@@ -1795,13 +1900,13 @@ verlassen, was den Code weiter vereinfacht:</p>
                   <p>Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
 aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                              id="0b9bc714-4a63-4837-ae83-8c68ee890d92"
+                              id="3488cd63-8d28-404a-8c32-6694daa8c6bb"
                               type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                </column-wide-element>
                      <column-wide-element>
                   <p>Wir betrachten hier das <code>
                         <nb>xsl:iterator</nb>
-                     </code> (Doku)<footnote>
+                     </code>(Doku)<footnote>
                         <desc>https://www.saxonica.com/html/documentation/xsl-elements/iterate.html</desc>
                         <add>Der Iterator ist ein Konzept um XSLT Streaming zu realisieren</add>
                      </footnote>
@@ -1907,14 +2012,16 @@ starten.</p>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1670" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1736" ismodule="no">
             
                <title>
                   <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id() </title>
                </title>
                
                   <column-wide-element>
-               <p>Die generate-id() Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p>
+               <p>Die <code>
+                     <nb>generate-id()</nb>
+                  </code> Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
@@ -2070,7 +2177,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1730" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1796" ismodule="no">
             
                <title>
                   <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke</title>
@@ -2105,7 +2212,9 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                   </ul>
             </column-wide-element>
                   <column-wide-element>
-               <p>Bei der EIngabe des regulaären Ausdrucks muss man natürlich Zeichen, wie &gt;,&lt;,&amp; maskieren, was den Ausdruck im Gegensatz zur herkömmlichen Nicht-XML Programmierung noch ein bisschen komplizierter macht.</p>
+               <p>Bei der EIngabe des regulaären Ausdrucks muss man natürlich Zeichen, wie <code>
+                     <nb>&gt;,&lt;,&amp;</nb>
+                  </code> maskieren, was den Ausdruck im Gegensatz zur herkömmlichen Nicht-XML Programmierung noch ein bisschen komplizierter macht.</p>
             </column-wide-element>
                   <column-wide-element>
                <p>Der Audruck, der bspw. auf alle XML Tags matched ist folgender: <code>
@@ -2156,7 +2265,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1804" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1870" ismodule="no">
          
             <title>
                <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery </title>
@@ -2354,7 +2463,7 @@ Memory used: 64339064</verbatim>
          </page-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1932" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1998" ismodule="no">
             
                <title>
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
@@ -2471,7 +2580,7 @@ zu können. Das geht mit dem folgenden Befehl (Doku)<footnote>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2005" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2071" ismodule="no">
                
                   <title>
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
@@ -2570,7 +2679,7 @@ Variablenauswertung: <color name="red">$common</color>:collection-books</verbati
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2079" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2145" ismodule="no">
                
                   <title>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
@@ -2679,7 +2788,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2149" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2215" ismodule="no">
          
             <title>
                <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title>
@@ -2779,11 +2888,11 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                   <key>DL</key>
                   <desc>https://developer.marklogic.com/free-developer</desc>
                   <add>MarkLogic Developer Lizenzvereinbarung</add>
-               </footnote> mit der nan die Software ausprobieren kann. Für alle langfristigen XQuery Spielereien ist die eXist DB wohl die erste Wahl, da hier auch der aktuelle XQuery 3.0 Standard umgesetzt ist.</p>
+               </footnote> mit der man die Software ausprobieren kann. Für alle langfristigen XQuery Spielereien ist die eXist DB wohl die erste Wahl, da hier auch der aktuelle XQuery 3.0 Standard umgesetzt ist.</p>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2251" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2317" ismodule="no">
             
                <title>
                   <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen Test</title>
@@ -2871,7 +2980,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2359" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2425" ismodule="no">
             
                <title>
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
@@ -3238,7 +3347,7 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2437" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2503" ismodule="no">
             
                <title>
                   <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title>
@@ -3544,7 +3653,7 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2663" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2729" ismodule="no">
                
                   <title>
                      <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
@@ -3776,7 +3885,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2766" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2832" ismodule="no">
                
                   <title>
                      <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
@@ -3943,7 +4052,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3011" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3077" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -3954,7 +4063,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3028" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3094" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -4147,7 +4256,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3178" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3244" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -4265,7 +4374,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3257" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3323" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -4276,7 +4385,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3274" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3340" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -4358,7 +4467,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3301" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3367" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -4505,7 +4614,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3526" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3592" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -4720,7 +4829,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3690" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3756" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
