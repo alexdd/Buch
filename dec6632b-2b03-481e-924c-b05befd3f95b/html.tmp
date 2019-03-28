@@ -153,32 +153,32 @@
                <td style="padding-left: 62px;">
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">2.2.</span>
                      <span class="header_text">
-                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Diagramme darstellen</a>
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Multiple Ausgabeformate</a>
                      </span>
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -192,27 +192,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -260,27 +260,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -294,27 +294,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -362,27 +362,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -634,27 +634,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -668,27 +668,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -702,27 +702,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -736,27 +736,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -770,27 +770,27 @@
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -799,32 +799,32 @@
                <td style="padding-left: 100px;">
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">--&#x3E;</span> 
                      <span class="header_text">
-                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">If..then..else Ausdrücke</a>
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">[[code:if..then..else]] Ausdrücke</a>
                      </span>
                   </div>
                </td>
                <td width="30px" style="padding:0;">
-                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                  <span style="cursor: pointer; display: none;" title="Show Topic" class="show-topic">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                  <span class="new" style="cursor: pointer; display: none;" title="Add Topic Reference">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;" title="Delete Topic Reference">
-                  <span class="delete" style="display:none;cursor:pointer">
+                  <span class="delete" style="cursor: pointer; display: none;">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                  <span class="up" style="cursor: pointer; display: none;" title="Move Topic Reference Up">
                      
                   </span>
                </td>
                <td width="30px" style="padding:0;">
-                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                  <span class="down" style="cursor: pointer; display: none;" title="Move Topic Reference Down">
                      
                   </span>
                </td>
@@ -1004,6 +1004,142 @@
                   <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">--&#x3E;</span> 
                      <span class="header_text">
                         <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">Ausführen einiger Beispiel-Queries</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="display:none;cursor:pointer">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+            <tr id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc" href="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc/resource.xml" class="child-of-3337f433-44bf-430d-a809-73fd1de5ba6c chapter initialized parent ui-droppable">
+               <td style="padding-left: 81px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">4.3.4.</span>
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">MarkLogic Tools</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="display:none;cursor:pointer">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+            <tr id="8f729755-73c7-4234-a5b2-77d2ca38a5be" href="8f729755-73c7-4234-a5b2-77d2ca38a5be/resource.xml" class="child-of-ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc chapter initialized ui-droppable">
+               <td style="padding-left: 100px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">--&#x3E;</span> 
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">mlproj - Project and Environment Manager</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="display:none;cursor:pointer">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+            <tr id="7fd62b3e-5e73-4470-ae83-318570ddcb44" href="7fd62b3e-5e73-4470-ae83-318570ddcb44/resource.xml" class="child-of-ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc chapter initialized ui-droppable">
+               <td style="padding-left: 100px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">--&#x3E;</span> 
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">EXPath Konsole</a>
+                     </span>
+                  </div>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span style="display:none;cursor:pointer" title="Show Topic" class="show-topic">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="new" style="display:none;cursor:pointer" title="Add Topic Reference">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;" title="Delete Topic Reference">
+                  <span class="delete" style="display:none;cursor:pointer">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="up" style="display:none;cursor:pointer" title="Move Topic Reference Up">
+                     
+                  </span>
+               </td>
+               <td width="30px" style="padding:0;">
+                  <span class="down" style="display:none;cursor:pointer" title="Move Topic Reference Down">
+                     
+                  </span>
+               </td>
+            </tr>
+            <tr id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb" href="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb/resource.xml" class="child-of-ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc chapter initialized ui-droppable">
+               <td style="padding-left: 100px;">
+                  <div class="header ui-draggable" style="margin-left:10px"><span class="header_number">--&#x3E;</span> 
+                     <span class="header_text">
+                        <a class="edit_map change_topicref" title="Edit Topic Reference" href="#" style="">mlcp - Content Pump</a>
                      </span>
                   </div>
                </td>

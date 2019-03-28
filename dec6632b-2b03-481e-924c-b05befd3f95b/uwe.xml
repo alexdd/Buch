@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Thu Mar 28 2019 13:49:35 </date-of-last-change>
+      <date-of-last-change>Thu Mar 28 2019 14:46:23 </date-of-last-change>
       <language>de-DE</language>
       <status>201</status>
       <description>Short Description</description>
@@ -88,6 +88,7 @@ www.github.com/alexdd/Buch</cover-text>
                      <b>XQuery</b> ist eine Abfragesprache ählich zu SQL, jedoch werden damit nicht relationale Daten abgefragt sondern baumstrukturierte.</p>
                </li>
             </ul>
+            <p>[[chaptertoc]]</p>
          </block>
       </content>
       <chapter hyphenation="yes" chapterpage="no" id="a264856d-c5d5-4d7b-993f-421bf222db76"
@@ -511,6 +512,7 @@ Vorteile:</p>
             <p>Umso wichtiger ist es, sich an allgemeine Konzepte, Muster und Best Practices zu halten, um einen schwer wartbaren Wildwuchs zu vermeiden.</p>
             <p>Auf den folgenden Seiten wird versucht einige dieser Konzepte zusammenzutragen und mit eigenen Erfahrungen und Ideen zu kombinieren.</p>
             <p>Es wird weder der Anspruch auf Vollständigkeit noch auf Korrektheit dieser Informationen erhoben. Das Kapitel soll vielmehr als Denkanstoß mit hoffentlich einigen verwertbaren Ideen dienen.</p>
+            <p>[[chaptertoc]]</p>
          </block>
       </content>
       <chapter hyphenation="yes" chapterpage="no" id="5b73f348-0058-45e0-82f7-c3de72ec5d41"
@@ -895,7 +897,7 @@ vorhanden ist. Der NS [[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p>
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
          </title>
          <block>
-            <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele Sachen, die ich zuvor nicht einsetzen konnte/durfte, die aber jetzt - wo ich mehr mit den Daten an sich beschäftige - umso spannender sind.</p>
+            <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele neue Sachen ...</p>
             <p>[[chaptertoc]]</p>
          </block>
       </content>
@@ -3122,6 +3124,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </title>
          <block>
             <p>Unsortierte Notizen, die für jeden XSLT-Programmierer interessant sein könnten.</p>
+            <p>[[chaptertoc]]</p>
          </block>
       </content>
       <chapter hyphenation="yes" chapterpage="no" id="7dbb15ce-bbc5-4d91-b977-ed7e8117730e"

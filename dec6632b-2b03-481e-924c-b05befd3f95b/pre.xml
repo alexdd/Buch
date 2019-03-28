@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Wed Mar 27 2019 16:26:30 </date-of-last-change>
+      <date-of-last-change>Thu Mar 28 2019 14:43:45 </date-of-last-change>
       <language>de-DE</language>
-      <status>200</status>
+      <status>201</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -127,9 +127,14 @@ www.github.com/alexdd/Buch</cover-text>
                </li>
             </ul>
       </column-wide-element>
+            <column-wide-element>
+         <p>
+            <chapter-toc/>
+         </p>
+      </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e233" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e236" ismodule="no">
          
             <title>
                <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich</title>
@@ -202,7 +207,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e318" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e321" ismodule="no">
          
             <title>
                <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Aktuelle und vergangene Anwendungen</title>
@@ -514,7 +519,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                </code> Attributs<xe>
                   <first criterion="Attribute">Attribute</first>
                   <second criterion="contenteditable">contenteditable</second>
-               </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in <nb>Tektur CCMS</nb>.</p>
+               </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in <nb>Tektur</nb>.</p>
          </column-wide-element>
                <block-title>
                   <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
@@ -597,7 +602,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e479" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e482" ismodule="no">
          
             <title>
                <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
@@ -735,7 +740,7 @@ Vorteile:</p>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e631" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e634" ismodule="no">
       
          <title>
             <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
@@ -753,9 +758,14 @@ Vorteile:</p>
             <column-wide-element>
          <p>Es wird weder der Anspruch auf Vollständigkeit noch auf Korrektheit dieser Informationen erhoben. Das Kapitel soll vielmehr als Denkanstoß mit hoffentlich einigen verwertbaren Ideen dienen.</p>
       </column-wide-element>
+            <column-wide-element>
+         <p>
+            <chapter-toc/>
+         </p>
+      </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e657" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e663" ismodule="no">
          
             <title>
                <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
@@ -837,7 +847,7 @@ Vorteile:</p>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e781" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e787" ismodule="no">
          
             <title>
                <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
@@ -1125,7 +1135,7 @@ Vorteile:</p>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1075" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1081" ismodule="no">
          
             <title>
                <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
@@ -1307,14 +1317,14 @@ vorhanden ist. Der NS <code>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e1240" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e1246" ismodule="no">
       
          <title>
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
          </title>
          
             <column-wide-element>
-         <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele Sachen, die ich zuvor nicht einsetzen konnte/durfte, die aber jetzt - wo ich mehr mit den Daten an sich beschäftige - umso spannender sind.</p>
+         <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele neue Sachen ...</p>
       </column-wide-element>
             <column-wide-element>
          <p>
@@ -1323,7 +1333,7 @@ vorhanden ist. Der NS <code>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1260" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1266" ismodule="no">
          
             <title>
                <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT</title>
@@ -1357,7 +1367,7 @@ vorhanden ist. Der NS <code>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1301" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1307" ismodule="no">
             
                <title>
                   <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
@@ -1527,7 +1537,7 @@ vorhanden ist. Der NS <code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1399" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1405" ismodule="no">
             
                <title>
                   <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
@@ -1628,7 +1638,7 @@ vorhanden ist. Der NS <code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1477" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1483" ismodule="no">
             
                <title>
                   <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming</title>
@@ -1699,7 +1709,7 @@ kommerziellen Saxon-EE Löusug <footnote>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1552" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1558" ismodule="no">
                
                   <title>
                      <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title>
@@ -1827,7 +1837,7 @@ würde.</p>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1627" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1633" ismodule="no">
                
                   <title>
                      <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
@@ -2014,7 +2024,7 @@ starten.</p>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1736" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1742" ismodule="no">
             
                <title>
                   <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit <code>
@@ -2182,7 +2192,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1796" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1802" ismodule="no">
             
                <title>
                   <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke</title>
@@ -2269,7 +2279,7 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1869" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1875" ismodule="no">
             
                <title>
                   <title id="fbbe8267-ed7b-4b78-b547-d00fe41f0b5c">Webservice Calls mit <code>
@@ -2409,7 +2419,7 @@ Element:</p>
                <p>Sicherlich wird der XML Entwicler eine <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
                            id="997e18de-4390-4b97-9f13-5198617f39e4"
                            type="none">XML Datenbank</doclink>, wie MarkLogic, vorziehen
-und sich gleich XML Fragmente ausliefern laasen. <nb>Tektur CCMS</nb> ist aber bspw. mit
+und sich gleich XML Fragmente ausliefern laasen. <nb>Tektur</nb> ist aber bspw. mit
 MongoDB<footnote>
                      <desc>https://www.mongodb.com/</desc>
                      <add>Homepage der NoSQL Datenbank MongoDB</add>
@@ -2421,7 +2431,7 @@ mit XSLT recht spannend.</p>
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1948" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1954" ismodule="no">
          
             <title>
                <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery </title>
@@ -2619,7 +2629,7 @@ Memory used: 64339064</verbatim>
          </page-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2076" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2082" ismodule="no">
             
                <title>
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
@@ -2736,7 +2746,7 @@ zu können. Das geht mit dem folgenden Befehl (Doku)<footnote>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2149" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2155" ismodule="no">
                
                   <title>
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
@@ -2835,7 +2845,7 @@ Variablenauswertung: <color name="red">$common</color>:collection-books</verbati
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2223" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2229" ismodule="no">
                
                   <title>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
@@ -2944,7 +2954,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2293" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2299" ismodule="no">
          
             <title>
                <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title>
@@ -3048,7 +3058,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2395" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2401" ismodule="no">
             
                <title>
                   <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen Test</title>
@@ -3136,7 +3146,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2503" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2509" ismodule="no">
             
                <title>
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
@@ -3503,7 +3513,7 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2581" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2587" ismodule="no">
             
                <title>
                   <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title>
@@ -3809,7 +3819,7 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2807" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2813" ismodule="no">
                
                   <title>
                      <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
@@ -4041,7 +4051,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2910" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2916" ismodule="no">
                
                   <title>
                      <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
@@ -4208,7 +4218,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3155" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3161" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -4219,7 +4229,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3172" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3178" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -4412,7 +4422,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3322" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3328" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -4530,7 +4540,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3401" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3407" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -4539,9 +4549,14 @@ und alles ist gut - dem Augenschein nach.</p>
             <column-wide-element>
          <p>Unsortierte Notizen, die für jeden XSLT-Programmierer interessant sein könnten.</p>
       </column-wide-element>
+            <column-wide-element>
+         <p>
+            <chapter-toc/>
+         </p>
+      </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3418" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3427" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -4623,7 +4638,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3445" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3454" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -4770,7 +4785,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3670" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3679" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -4985,7 +5000,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3834" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3843" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
