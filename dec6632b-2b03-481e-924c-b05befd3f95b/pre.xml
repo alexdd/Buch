@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Mar 26 2019 16:36:20 </date-of-last-change>
+      <date-of-last-change>Wed Mar 27 2019 16:26:30 </date-of-last-change>
       <language>de-DE</language>
-      <status>195</status>
+      <status>200</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -514,7 +514,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                </code> Attributs<xe>
                   <first criterion="Attribute">Attribute</first>
                   <second criterion="contenteditable">contenteditable</second>
-               </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in .</p>
+               </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in <nb>Tektur CCMS</nb>.</p>
          </column-wide-element>
                <block-title>
                   <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
@@ -1317,7 +1317,9 @@ vorhanden ist. Der NS <code>
          <p>Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele Sachen, die ich zuvor nicht einsetzen konnte/durfte, die aber jetzt - wo ich mehr mit den Daten an sich beschäftige - umso spannender sind.</p>
       </column-wide-element>
             <column-wide-element>
-         <p/>
+         <p>
+            <chapter-toc/>
+         </p>
       </column-wide-element>
          
       
@@ -2015,7 +2017,10 @@ starten.</p>
          <chapter hyphenation="yes" chapterpage="no" id="d2e1736" ismodule="no">
             
                <title>
-                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id() </title>
+                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit <code>
+                     <nb>generate-id()</nb>
+                  </code>
+               </title>
                </title>
                
                   <column-wide-element>
@@ -2264,8 +2269,159 @@ zu der als Parameter übergebenen generierten Id passt.</p>
                
             
          </chapter>
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1869" ismodule="no">
+            
+               <title>
+                  <title id="fbbe8267-ed7b-4b78-b547-d00fe41f0b5c">Webservice Calls mit <code>
+                     <nb>doc()</nb>
+                  </code> und <code>
+                     <nb>unparsed-text()</nb>
+                  </code>
+               </title>
+               </title>
+               
+                  <column-wide-element>
+               <p>Eine verbreitete Paxis ist es, mit der Funktion <code>
+                     <nb>document()</nb>
+                  </code> oder kurz <code>
+                     <nb>doc()</nb>
+                  </code> 
+entfernte Ressourcen in die Transformation einzubinden. 
+Bei einer Schematron-Validierung, würde bspw. eine Regel, wie:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim><color name="green">&lt;sch:not-assert</color> id="personal-check"
+    role="error"
+    test="doc(concat('https://tekturcms.de/personal.xqy?personal-id=',personal-id))/kuendigung"<color name="green">&gt;</color>
+        Angestellter mit ID "<color name="green">&lt;sch:value-of</color> select="personal-id"<color name="green">/&gt;</color>" hat gekündigt!
+<color name="green">&lt;/sch:not-assert&gt;</color></verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>einen entferneten Webservice aufrufen und prüfen, ob für den Angestellten mit <code>
+                     <nb>personal-id</nb>
+                  </code>
+eine Kündigung vorliegt. Ist dies der Fall, so ist die negative Zusicherung <code>
+                     <nb>not-assert</nb>
+                  </code> nicht
+erfüllt und die Schematron Regel feuert - was sich wohl im einfachsten Fall in einem 
+Logfile Eintrag äussern sollte.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Was vermutlich viele noch nicht kennen - ich nehme jetzt einfach mal an, dass mein 
+bisheriger Kenntnisstand dem der Mehrheit der XML-Entwickler entspricht - ist der Umstand,
+dass auch die Funktion <code>
+                     <nb>unparsed-text()</nb>
+                  </code> eine URL als Parameter nimmt:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim><color name="green">&lt;xsl:template</color> match="angestellter"
+    &lt;xsl:copy<color name="green">&gt;</color>
+        <color name="green">&lt;xsl:apply-templates</color> select="node()|@*"<color name="green">/&gt;</color>
+        <color name="green">&lt;hat-gekuendigt&gt;</color>
+            <color name="green">&lt;xsl:sequence</color> select="json-to-xml(
+                                  unparsed-text(
+                                  concat('https://tekturcms.de/personal.xqy?personal-id=',
+                                  personal-id))))/descendant::*[@key='gekuendigt']/text()"<color name="green">/&gt;</color>
+        <color name="green">&lt;/hat-gekuendigt&gt;</color>
+    <color name="green">&lt;/xsl:copy&gt;</color>
+<color name="green">&lt;/xsl:template&gt;</color></verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Während mit <code>
+                     <nb>doc()</nb>
+                  </code> oder <code>
+                     <nb>document()</nb>
+                  </code> ein zurückgeliefertes XML Fragment 
+prozessiert wird, erwartet <code>
+                     <nb>unparsed-text()</nb>
+                  </code> z.B. einen JSON-String, der dann mittels
+der Funktion <code>
+                     <nb>json-to-xml()</nb>
+                  </code> nach XML konvertiert werden kann.</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Beispielsweise könnte die Gegenseite zum <code>
+                     <nb>angestellter</nb>
+                  </code> Template mittels XQuery
+folgendermassen realisiert sein:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>xquery version "1.0-ml";
+
+<color name="brown">declare </color><color name="brown">variable </color><color name="red">$personal-id</color> := <color name="blue">xdmp:get-request-field</color>('personal-id');
+
+<color name="brown">let </color><color name="red">$gekuendigt</color> := <color name="brown">if </color>(collection('/personal')/*[personal-id = <color name="red">$personal-id</color> and 
+                                                 <color name="blue">fn:exists</color>(kuendingung)] <color name="brown">then </color>
+                                                 'ja' else 'nein'
+<color name="brown">return </color>
+    <color name="blue">common:render-response</color>(concat('{"gekuendigt":"',<color name="red">$gekuendigt</color>,'",
+                                    "personal-id":"',<color name="red">$personal-id</color>,'"}'))</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>(<doclink class="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
+                           id="86e61dc1-c690-4420-b3ce-83c39c6bf091"
+                           type="none">Mehr zu XQuery und den hier verwendeten Konstrukten</doclink>, wie <code>
+                     <nb>render-response()</nb>
+                  </code>))</p>
+            </column-wide-element>
+                  <column-wide-element>
+               <p>Das zurückgeklieferte JSON Dokument sieht dann so aus:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>{"gekuendig":"ja","personal-id":"q5687500"}</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Konvertiert nach XML erhält man eine Map Struktur:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim><color name="green">&lt;map</color> xmlns="http://www.w3.org/2005/xpath-functions"<color name="green">&gt;</color>
+    <color name="green">&lt;string</color> key="gekuedigt"<color name="green">&gt;</color>ja<color name="green">&lt;/string&gt;</color>
+    <color name="green">&lt;string</color> key="personal-id"<color name="green">&gt;</color>q5687500<color name="green">&lt;/string&gt;</color>
+<color name="green">&lt;/map&gt;</color></verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>was den Selektorausdruck im obigen XPATH erklärt:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim>json-to-xml(
+unparsed-text(
+concat('https://tekturcms.de/personal.xqy?personal-id=',
+personal-id))))/descendant::*[@key='gekuendigt']/text()</verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Resultat der Konvertierung wäre also dann - wie erwartet - ein um 
+das <code>
+                     <nb>gekuendigt</nb>
+                  </code> Flag erweitertes <code>
+                     <nb>&lt;angestellter&gt;</nb>
+                  </code>
+Element:</p>
+            </column-wide-element>
+                  <page-wide-element>
+               <verbatim><color name="green">&lt;angestellter&gt;</color>
+    <color name="green">&lt;perosnal-id&gt;</color>q5687500<color name="green">&lt;/perosnal-id&gt;</color>
+    <color name="green">&lt;name&gt;</color>Alex<color name="green">&lt;/name&gt;</color>
+    [...]
+    <color name="green">&lt;gekuendigt&gt;</color>nein<color name="green">&lt;/gekuendigt&gt;</color>
+<color name="green">&lt;/angestellter&gt;</color></verbatim>
+            </page-wide-element>
+                  <column-wide-element>
+               <p>Sicherlich wird der XML Entwicler eine <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
+                           id="997e18de-4390-4b97-9f13-5198617f39e4"
+                           type="none">XML Datenbank</doclink>, wie MarkLogic, vorziehen
+und sich gleich XML Fragmente ausliefern laasen. <nb>Tektur CCMS</nb> ist aber bspw. mit
+MongoDB<footnote>
+                     <desc>https://www.mongodb.com/</desc>
+                     <add>Homepage der NoSQL Datenbank MongoDB</add>
+                  </footnote>
+realisiert, die auf JSON arbeitet... Nicht zuletzt deshalb finde ich JSON Verarbeitung
+mit XSLT recht spannend.</p>
+            </column-wide-element>
+               
+            
+         </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1870" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1948" ismodule="no">
          
             <title>
                <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery </title>
@@ -2463,7 +2619,7 @@ Memory used: 64339064</verbatim>
          </page-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1998" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2076" ismodule="no">
             
                <title>
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
@@ -2580,7 +2736,7 @@ zu können. Das geht mit dem folgenden Befehl (Doku)<footnote>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2071" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2149" ismodule="no">
                
                   <title>
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
@@ -2679,7 +2835,7 @@ Variablenauswertung: <color name="red">$common</color>:collection-books</verbati
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2145" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2223" ismodule="no">
                
                   <title>
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">If..then..else Ausdrücke</title>
@@ -2788,7 +2944,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2215" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2293" ismodule="no">
          
             <title>
                <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title>
@@ -2892,7 +3048,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2317" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2395" ismodule="no">
             
                <title>
                   <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen Test</title>
@@ -2980,7 +3136,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2425" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2503" ismodule="no">
             
                <title>
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
@@ -3347,7 +3503,7 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2503" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2581" ismodule="no">
             
                <title>
                   <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title>
@@ -3653,7 +3809,7 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2729" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2807" ismodule="no">
                
                   <title>
                      <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
@@ -3885,7 +4041,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2832" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2910" ismodule="no">
                
                   <title>
                      <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
@@ -4052,7 +4208,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3077" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3155" ismodule="no">
          
             <title>
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -4063,7 +4219,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3094" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3172" ismodule="no">
             
                <title>
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -4256,7 +4412,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3244" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3322" ismodule="no">
             
                <title>
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -4374,7 +4530,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3323" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3401" ismodule="no">
       
          <title>
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -4385,7 +4541,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3340" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3418" ismodule="no">
          
             <title>
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -4467,7 +4623,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3367" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3445" ismodule="no">
          
             <title>
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -4614,7 +4770,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3592" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3670" ismodule="no">
       
          <title>
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -4829,7 +4985,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3756" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3834" ismodule="no">
       
          <title>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
