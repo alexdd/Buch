@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 31 2019 19:55:46 </date-of-last-change>
+      <date-of-last-change>Tue Apr 02 2019 12:10:18 </date-of-last-change>
       <language>de-DE</language>
       <status>207</status>
       <description>Short Description</description>
@@ -14,19 +14,27 @@
       <subtitle>XSLT - XQuery - MarkLogic</subtitle>
       <cover-text>(c) Alex Düsel 2019
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
-www.github.com/alexdd/Buch</cover-text>
+www.github.com/alexdd/Buch
+www.tekturcms.de</cover-text>
       <structure>
-         <format>UNDEFINED</format>
+         <format>book</format>
+         <supplemental-directives/>
+         <toc/>
+         <index/>
+         <footnote-index/>
+         <figure-index/>
+         <chapter-on-right-page/>
+         <cover-backpage/>
       </structure>
       <design>
-         <layout>UNDEFINED</layout>
-         <paper-format>UNDEFINED</paper-format>
-         <page-margin>UNDEFINED</page-margin>
-         <spaces>UNDEFINED</spaces>
-         <header>UNDEFINED</header>
-         <footer>UNDEFINED</footer>
-         <look-and-feel>UNDEFINED</look-and-feel>
-         <table-layout>UNDEFINED</table-layout>
+         <layout>margin</layout>
+         <paper-format>A4</paper-format>
+         <page-margin>leftgap</page-margin>
+         <spaces>small</spaces>
+         <header>shortheader</header>
+         <footer>longfooter</footer>
+         <look-and-feel>fashion</look-and-feel>
+         <table-layout>simple</table-layout>
       </design>
    </meta>
    <chapter hyphenation="yes" chapterpage="no" id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
@@ -3301,8 +3309,7 @@ git log --diff-filter=D --summary</verbatim>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
          </title>
          <block>
-            <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS[[xe1:Tektur CCMS]] ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung. Blog: <b>www.tekturcms.de</b>
-            </p>
+            <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS[[xe1:Tektur CCMS]] ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung.</p>
             <p id="38143bbb-a376-4cea-8186-45b1df3cf3fdd6e8">Hier sind einige Random Features:</p>
             <ul>
                <li>

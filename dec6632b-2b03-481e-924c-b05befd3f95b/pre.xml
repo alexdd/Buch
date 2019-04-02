@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 31 2019 19:55:27 </date-of-last-change>
+      <date-of-last-change>Tue Apr 02 2019 12:10:18 </date-of-last-change>
       <language>de-DE</language>
       <status>207</status>
       <description>Short Description</description>
@@ -14,7 +14,8 @@
       <subtitle>XSLT - XQuery - MarkLogic</subtitle>
       <cover-text>(c) Alex Düsel 2019
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
-www.github.com/alexdd/Buch</cover-text>
+www.github.com/alexdd/Buch
+www.tekturcms.de</cover-text>
       <structure>
          <format>book</format>
          <chapter-on-right-page/>
@@ -5102,8 +5103,7 @@ git log --diff-filter=D --summary</verbatim>
             <column-wide-element>
             <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS<xe>
                   <first criterion="Tektur CCMS">Tektur CCMS</first>
-               </xe> ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung. Blog: <b>www.tekturcms.de</b>
-            </p>
+               </xe> ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung.</p>
          </column-wide-element>
             <column-wide-element>
             <p id="38143bbb-a376-4cea-8186-45b1df3cf3fdd6e8">Hier sind einige Random Features:</p>
