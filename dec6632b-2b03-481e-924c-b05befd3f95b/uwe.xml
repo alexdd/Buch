@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Apr 02 2019 12:10:18 </date-of-last-change>
+      <date-of-last-change>Fri Apr 05 2019 21:02:57 </date-of-last-change>
       <language>de-DE</language>
-      <status>207</status>
+      <status>213</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -106,16 +106,16 @@ www.tekturcms.de</cover-text>
                <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich</title>
             </title>
             <block>
-               <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im TIOBE Index[[fn:https://de.wikipedia.org/wiki/TIOBE-Index]] von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der [[link]]Liste[[fn:https://bit.ly/2ARgKCJ]].</p>
+               <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im [[link]]TIOBE Index[[fn:https://de.wikipedia.org/wiki/TIOBE-Index*Jährlicher Inder der beliebtesten Programmiersprachen]] von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der [[link]]Liste[[fn:https://bit.ly/2ARgKCJ*Beleg, dass XSLT einmal im TIOBE Index erschienen ist]].</p>
                <p id="99c64570-4fcf-4448-ba34-59d5cfd8be53d6e9">Im Bereich XML würde aber ohne XSLT nicht viel gehen. Es gibt einige exotische Anwendungsgebiete in denen XML effizient 
-mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - [[link]]EDI X12[[fn:https://en.wikipedia.org/wiki/ASC_X12]] Nachrichten.</p>
-               <p id="28d3fd5c-15c3-4ca9-b908-d747e65b8f28d6e17">Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im [[link]]S1000D Standard[[fn:https://en.wikipedia.org/wiki/S1000D]] wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
-               <p id="d9f3e676-e9d8-4b79-8c92-552355d2ac69d6e22">Alternativen zu XSLT finden sich im entsprechendem [[link]]Wikipedia-Artikel[[fn:https://de.wikipedia.org/wiki/XSL_Transformation]].</p>
+mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - [[link]]EDI X12[[fn:https://en.wikipedia.org/wiki/ASC_X12*Wikipedia Seite zum X12 Standard für Electronic Data Interchange]] Nachrichten.</p>
+               <p id="28d3fd5c-15c3-4ca9-b908-d747e65b8f28d6e17">Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im [[link]]S1000D Standard[[fn:https://en.wikipedia.org/wiki/S1000D*Wikipediaseite zum S1000D Standard]] wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
+               <p id="d9f3e676-e9d8-4b79-8c92-552355d2ac69d6e22">Alternativen zu XSLT finden sich im entsprechendem [[link]]Wikipedia-Artikel[[fn:https://de.wikipedia.org/wiki/XSL_Transformation*Wikipedia Seite zur Programmiersprache XSLT]].</p>
                <p id="d1615c43-ce30-49ce-92ce-e1f918a82108d6e24">Wir konzentrieren uns hier auf XSLT und XSL Stylesheets.</p>
                <p id="40291b73-b2de-452a-b0ab-b965112e44d3">Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert. Ein paar interessante Stichpunkte:</p>
                <ul>
                   <li>
-                     <p id="4bb863fc-d85b-4475-871f-d8d311d34366d6e8">XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine [[link]]Turing Maschine[[fn:http://www.unidex.com/turing/utm.htm]] programmieren kann.</p>
+                     <p id="4bb863fc-d85b-4475-871f-d8d311d34366d6e8">XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine [[link]]Turing Maschine[[fn:http://www.unidex.com/turing/utm.htm*Turing Maschine in XSLT programmiert]] programmieren kann.</p>
                   </li>
                   <li>
                      <p id="411a593d-e4af-4620-a0ab-62959c398660d6e11">Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
@@ -149,7 +149,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
             </title>
             <block>
                <p id="0d86999f-6918-45f8-aa05-ee775429e1db">Einige Beispiele - aktuell und aus vergangenen Tagen:</p>
-               <title id="df972998-fdff-45dd-9394-6508080a897dd6e6">
+               <title id="17ac2070-9a83-4529-bcef-7315ee2183cbd7e6">
                   <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
                </title>
                <p id="d23736ab-93da-4908-83d8-38ffd747db2dd6e9">Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern[[xe1:Anwendungsgebiete;xe2:XML Webseiten]]. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre. U.a. wegen des exzessiven Einsatzes von Javascript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde XHTML spezifiziert und jetzt gibt es HTML5.</p>
@@ -221,7 +221,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
 &lt;/xsl:stylesheet&gt;
 </verbatim>
                <p id="25706f42-0507-45a5-a2cc-66f12f9e87bdd6e30">Die <b>Processing Instruction</b> hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
-               <title id="b77288d2-fa43-40b6-8226-134452b22fc7d6e28">
+               <title id="13038651-a4d7-4748-b9d3-567bed17cf73d7e28">
                   <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
                </title>
                <p id="a476b87f-7491-444d-8668-72f5e5719ebed6e35">Auch eine serverseitige Konvertierung[[xe1:Anwendungsgebiete;xe2:Serverseitige Konvertierung]] ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - [[link]]WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol*Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones]] für unterschiedliche Handy-Modelle.</p>
@@ -292,12 +292,12 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
     &lt;p&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</verbatim>
-               <title id="9c01f236-d070-46db-9fd9-4585808a4401d6e43">
+               <title id="73d34fe9-d986-4a05-a27e-bead0b50df13d7e43">
                   <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Multiple Ausgabeformate</title>
                </title>
                <p id="479bd9ce-f36a-4b96-a291-61f95e4e767dd6e50">Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. <b>ePub</b>. [[link]]EPUB[[fn:https://de.wikipedia.org/wiki/EPUB*EPUB ist ein Dokumentformat für Ebook-Reader.]] ist das Standardformat für eBooks. Neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
-               <p id="e8969256-cea5-4fd0-b7bf-5f9eeb42b148d6e52">Weitere gängige Formate sind neben dem oben veralteten WML Format, elektronische Ausgabe-Formate wie: [[link]]CHM[[fn:https://de.wikipedia.org/wiki/CHM_(Dateiformat*Die alte Windows-Hilfe. Läuft immer noch im Bereich Maschinenbau auf gekoppelten Rechnern mit alter Windows Software)]], [[link]]EclipseHelp[[fn:https://www.ibm.com/developerworks/library/os-echelp/index.html*Das Hilfe-Format der Eclipse Rich Client Plattform. Eclipse wird hauptsächlich von Programmierern als Editor benutzt]], [[link]]JavaHelp[[fn:https://en.wikipedia.org/wiki/JavaHelp*Damit wird bspw. das Java API formatiert als Webseite ausgegeben]], ..., Print-Ausgabe Formate, wie PDF oder [[link]]Adobe Framemaker[[fn:https://de.wikipedia.org/wiki/FrameMaker*Mit Framemaker kann man manuell gesetzte Publikationen erstellen. Über Templates lässt sich das Layout aber auch automatisieren]],  oder XML Standard Austauschformate, wie DITA, S1000D, [[link]]PI-MOD[[fn:https://www.i4icm.de/forschungstransfer/pi-mod/*PI-Mod ist ein Informationsmodell, das am KIT (Uni Karlsruhe) entwickelt wird/wurde]], [[link]]JATS[[fn:https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite*JATS ist ein sehr verbreitetes Informationsmodell im Bereich wissenschaftlicher Artikel und Fachliteratur]][[xe1:Standards;xe2:JAT]] oder [[link]]TEI[[fn:https://de.wikipedia.org/wiki/Text_Encoding_Initiative]][[xe1:Standards;xe2:TEI]].</p>
-               <title id="14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53">
+               <p id="e8969256-cea5-4fd0-b7bf-5f9eeb42b148d6e52">Weitere gängige Formate sind neben dem oben veralteten WML Format, elektronische Ausgabe-Formate wie: [[link]]CHM[[fn:https://de.wikipedia.org/wiki/CHM_(Dateiformat*Die alte Windows-Hilfe. Läuft immer noch im Bereich Maschinenbau auf gekoppelten Rechnern mit alter Windows Software)]], [[link]]EclipseHelp[[fn:https://www.ibm.com/developerworks/library/os-echelp/index.html*Das Hilfe-Format der Eclipse Rich Client Plattform. Eclipse wird hauptsächlich von Programmierern als Editor benutzt]], [[link]]JavaHelp[[fn:https://en.wikipedia.org/wiki/JavaHelp*Damit wird bspw. das Java API formatiert als Webseite ausgegeben]], ..., Print-Ausgabe Formate, wie PDF oder [[link]]Adobe Framemaker[[fn:https://de.wikipedia.org/wiki/FrameMaker*Mit Framemaker kann man manuell gesetzte Publikationen erstellen. Über Templates lässt sich das Layout aber auch automatisieren]],  oder XML Standard Austauschformate, wie DITA, S1000D, [[link]]PI-MOD[[fn:https://www.i4icm.de/forschungstransfer/pi-mod/*PI-Mod ist ein Informationsmodell, das am KIT (Uni Karlsruhe) entwickelt wird/wurde]], [[link]]JATS[[fn:https://de.wikipedia.org/wiki/Journal_Article_Tag_Suite*JATS ist ein sehr verbreitetes Informationsmodell im Bereich wissenschaftlicher Artikel und Fachliteratur]][[xe1:Standards;xe2:JATS]] oder [[link]]TEI[[fn:https://de.wikipedia.org/wiki/Text_Encoding_Initiative*Wikipediaseite zum TEI Standard]][[xe1:Standards;xe2:TEI]].</p>
+               <title id="852b9a96-944a-43a0-8cf6-88fb4bba5a2ed7e53">
                   <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbare Ausgabe</title>
                </title>
                <p id="dc869a54-1cb6-4282-b816-825027432083d6e57">Kryptische XML Log-, Daten- oder Konfigurationsfiles[[xe1:Anwendungsgebiete;xe2:Log- und Konfigurationsdaten]] können leicht mit XSLT menschenlesbar formatiert werden. Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst formatieren könnte:</p>
@@ -355,7 +355,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</verbatim>
                <p id="8306957f-386e-4c63-9c69-ee876511fecbd6e65">Hängt man an dieses Beispiel noch ein bisschen Javascript Logik und macht die Felder für die Übersetzungen mittels des HTML5 [[code:contenteditable]] Attributs[[xe1:Attribute;xe2:contenteditable]] editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in [[$productname]].</p>
-               <title id="2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66">
+               <title id="216a186e-72a0-48c5-9edd-064dc8659791d7e66">
                   <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
                </title>
                <p id="6a649e53-dde4-4e49-8e01-1fb5ad83cf2ed6e70">Nachdem eine SVG[[xe1:Standards;xe2:SVG]] Grafik[[xe1:Anwendungsgebiete;xe2:Visualisierung]] im XML Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden. Über das HTML5 [[code:&lt;svg&gt;]] Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
@@ -393,10 +393,10 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                </p>
                <ul>
                   <li>
-                     <p id="d206a44d-c978-4902-9d62-0d34675e805dd6e87">[[link]]Client-side image generation with SVG and XSLT[[fn:http://surguy.net/articles/client-side-svg.xml]]</p>
+                     <p id="d206a44d-c978-4902-9d62-0d34675e805dd6e87">[[link]]Client-side image generation with SVG and XSLT[[fn:http://surguy.net/articles/client-side-svg.xml*Automatische Image Erzeugung mit XSLT und SVG]]</p>
                   </li>
                   <li>
-                     <p id="5689021e-dff9-4b37-9f33-35a0bb84a3c6d6e90">[[link]]Knotentyp Visualisierung im Apache Jack Rabbit Projekt[[fn:http://jackrabbit.apache.org/jcr/node-type-visualization.html]]</p>
+                     <p id="5689021e-dff9-4b37-9f33-35a0bb84a3c6d6e90">[[link]]Knotentyp Visualisierung im Apache Jack Rabbit Projekt[[fn:http://jackrabbit.apache.org/jcr/node-type-visualization.html*Visualisierung von Knoten im Apache Jack Rabbit Projekt]]</p>
                   </li>
                </ul>
             </block>
@@ -410,7 +410,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
             </title>
             <block>
                <p id="25b21e23-d4ce-4721-a7d1-2c6b83245a70">Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
-               <title id="b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6">
+               <title id="52b70b84-00ae-46e8-83bd-658938847045d7e6">
                   <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
                </title>
                <p id="e88e78e7-d931-45f4-bb7f-0e055e7db65cd6e9">Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: CHM, EclipseHelp, JavaHelp, ePub, ..., Print-Ausgabe Formate, wie PDF oder Adobe Framemaker, oder XML Standard Austauschformate, wie DITA, S1000D, PI-MOD[[xe1:Standards;xe2:PI-MOD]] oder TEI[[xe1:Standards;xe2:TEI]].
@@ -447,19 +447,19 @@ Vorteile:</p>
                   </li>
                   <li>
                      <p id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34">Es gibt spezialisierte <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                                 id="1b7d4b0c-4559-48b0-9e66-21a243a47897"
+                                 id="3c9b0f3e-a382-4369-9719-93d407d17de2"
                                  type="topic">XML Datenbanken</doclink>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
                   </li>
                </ul>
                <p id="df845a80-c690-4551-af36-90a401ff12aed6e36">Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die <b>Single-Source Strategie</b>.</p>
-               <title id="084a7657-95f1-4ade-905e-cada919a0918d6e72">
+               <title id="09892549-081b-47d6-86c5-cab66ade8e3ed7e72">
                   <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
                </title>
                <p id="62ada423-a662-4d08-ba65-63ccadd079ced6e41">Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.[[xe1:Anwendungsgebiete;xe2:Code Generierung]]</p>
                <p id="52746a75-07e2-4452-8f21-1fb22d4e1332d6e43">Beispielsweise speichern gängige CASE Tools (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. [[link]]ArgoUML[[fn:http://argouml.tigris.org*ArgoUML ist ein freier UML Editor]].</p>
                <p id="a655bc68-8f84-470f-ad3f-a5bb41b19aa6d6e48">Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) : [[link]]Butterfly Code Generator[[fn:http://butterflycode.sourceforge.net*Damit kann man sich Code aus UMl Klassendiagrammen generieren lassen, natürlich XSLT basiert]]</p>
                <p id="ba1967f4-d697-4466-8455-dd17d935c68ed6e53">Es gibt auch einen schönen Artikel dazu im [[link]]Java World Journal[[fn:https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html*Weiterführende Lektüre zum Thema Code-Generierung mit XSLT]].</p>
-               <title id="ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83">
+               <title id="9987e686-d07e-43e2-b9b8-6c00b5db4b29d7e83">
                   <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
                </title>
                <p id="b7221c07-bea2-4a1e-a1cd-09318580ea8dd6e58">Für jede erdenkliche Art der Migration[[xe1:Anwendungsgebiete;xe2:Migration]] eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen, bietet sich XSLT zur Transformation an.</p>
@@ -2834,6 +2834,33 @@ declare function local:insert-update()
                         </li>
                      </ul>
                      <p id="cd92c6f4-820e-4500-bc47-9e172f26ba2ad6e19">Im Rahmen dieser Lektüre wird vorrsusichtlich nur der Browser Answendung finden, weil man damit unkompliziert die Daten sichten kann. Diese werden in einem Editorfenster mit Syntaxhighlightiung dargestellt. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</p>
+                     <p id="1c0cb2d0-466d-4489-b5cd-5c0e5e993824d6e21">Zur Installation folgt man am besten der Anleitung auf der Website. Es gibt hier aber einiges zu beachten:</p>
+                     <p id="0d3f48fc-0977-420c-9353-efb3b10d2850d6e23">Da das Projekt über das Installationstool <doclink class="8f729755-73c7-4234-a5b2-77d2ca38a5be"
+                                 id="6bc8210f-e197-42a6-b94b-59ddf148486d"
+                                 type="none">mlproj</doclink> installiert wird, sind Benutzerkennung und Passwort für MarkLogic in einer bestimmten Datei zu setzen:</p>
+                     <figure pdfwidth="column">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/mlproj.png"/>
+                     </figure>
+                     <p id="7c1e52e6-7c2c-4a48-a7c5-b7bfcc10a5d3d6e30">Der Inhalt der Datei [[code:dev.json]] sieht dabei folgendermassen aus:</p>
+                     <verbatim>{
+    "mlproj": {
+        "format": "0.1",
+        "import": "base.json",
+        "connect": {
+            "host": "localhost",
+            "user": "admin",
+            "password": "admin"
+        }
+    }
+}</verbatim>
+                     <caution>
+                        <cause>Wenn der Konfigurationsmanager von MarkLogic unter einem anderen Port läuft, dann hat das Installationstool keinen Zugriff. Wie man die Ports hier einstellt, konnte ich auf die Schnelle nicht herausfinden. </cause>
+                        <consequence>MarkLogic sollte mit den Standardports [[code:8000]],[[code:8001]] und [[code:8002]] konfiguriert sein. Der Zugriff von ausserhalb, sollte wie bei anderen Webanwendungen auch über einen Reverse-Proxy gehandelt werden.</consequence>
+                     </caution>
+                     <p id="16c39fc6-96a7-4643-ae6a-aa3fcb3f85c2d6e40">Hat man alles richtig gemacht und den Befehl [[code:mlproj -e dev setup]] zum Aufsetzen eines Testenvironments abgesetzt, so wird man mit dem Initialisierungsscreen belohnt:</p>
+                     <figure pdfwidth="page">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png"/>
+                     </figure>
                   </block>
                </content>
             </chapter>

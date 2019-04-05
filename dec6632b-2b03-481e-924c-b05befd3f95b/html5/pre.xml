@@ -4,9 +4,9 @@
    <meta xmlns:tektur="http://www.stylesheet-entwicklung.de">
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Sun Mar 31 2019 20:08:12 </date-of-last-change>
+      <date-of-last-change>Fri Apr 05 2019 20:51:30 </date-of-last-change>
       <language>de-DE</language>
-      <status>207</status>
+      <status>208</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -14,7 +14,8 @@
       <subtitle>XSLT - XQuery - MarkLogic</subtitle>
       <cover-text>(c) Alex Düsel 2019
 Creative Commons Namensnennung-Keine Bearbeitungen 4.0 International Public License
-www.github.com/alexdd/Buch</cover-text>
+www.github.com/alexdd/Buch
+www.tekturcms.de</cover-text>
       <structure>
          <format>UNDEFINED</format>
       </structure>
@@ -102,16 +103,22 @@ www.github.com/alexdd/Buch</cover-text>
                <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich</title>
             </title>
             
-               <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im TIOBE Index von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der <url xmlns:tektur="http://www.stylesheet-entwicklung.de" address="">Liste</url>.</p>
+               <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                 address="https://de.wikipedia.org/wiki/TIOBE-Index">TIOBE Index</url> von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                 address="https://bit.ly/2ARgKCJ">Liste</url>.</p>
                <p id="99c64570-4fcf-4448-ba34-59d5cfd8be53d6e9">Im Bereich XML würde aber ohne XSLT nicht viel gehen. Es gibt einige exotische Anwendungsgebiete in denen XML effizient 
-mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - <url xmlns:tektur="http://www.stylesheet-entwicklung.de" address="">EDI X12</url> Nachrichten.</p>
-               <p id="28d3fd5c-15c3-4ca9-b908-d747e65b8f28d6e17">Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im <url xmlns:tektur="http://www.stylesheet-entwicklung.de" address="">S1000D Standard</url> wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
-               <p id="d9f3e676-e9d8-4b79-8c92-552355d2ac69d6e22">Alternativen zu XSLT finden sich im entsprechendem <url xmlns:tektur="http://www.stylesheet-entwicklung.de" address="">Wikipedia-Artikel</url>.</p>
+mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                 address="https://en.wikipedia.org/wiki/ASC_X12">EDI X12</url> Nachrichten.</p>
+               <p id="28d3fd5c-15c3-4ca9-b908-d747e65b8f28d6e17">Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                 address="https://en.wikipedia.org/wiki/S1000D">S1000D Standard</url> wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
+               <p id="d9f3e676-e9d8-4b79-8c92-552355d2ac69d6e22">Alternativen zu XSLT finden sich im entsprechendem <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                 address="https://de.wikipedia.org/wiki/XSL_Transformation">Wikipedia-Artikel</url>.</p>
                <p id="d1615c43-ce30-49ce-92ce-e1f918a82108d6e24">Wir konzentrieren uns hier auf XSLT und XSL Stylesheets.</p>
                <p id="40291b73-b2de-452a-b0ab-b965112e44d3">Beispielsweise werden die Autohandbücher führender Hersteller mittels XSL gesetzt, deren Eingabedaten aufbereitet und zur Weiterverarbeitung transformiert. Ein paar interessante Stichpunkte:</p>
                <ul>
                   <li>
-                     <p id="4bb863fc-d85b-4475-871f-d8d311d34366d6e8">XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine <url xmlns:tektur="http://www.stylesheet-entwicklung.de" address="">Turing Maschine</url> programmieren kann.</p>
+                     <p id="4bb863fc-d85b-4475-871f-d8d311d34366d6e8">XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine <url xmlns:tektur="http://www.stylesheet-entwicklung.de"
+                       address="http://www.unidex.com/turing/utm.htm">Turing Maschine</url> programmieren kann.</p>
                   </li>
                   <li>
                      <p id="411a593d-e4af-4620-a0ab-62959c398660d6e11">Mit HTML oder einer Templater Sprache (z.B. JSP) würde das nicht funktionieren.</p>
@@ -3274,6 +3281,43 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                         </li>
                      </ul>
                      <p id="cd92c6f4-820e-4500-bc47-9e172f26ba2ad6e19">Im Rahmen dieser Lektüre wird vorrsusichtlich nur der Browser Answendung finden, weil man damit unkompliziert die Daten sichten kann. Diese werden in einem Editorfenster mit Syntaxhighlightiung dargestellt. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</p>
+                     <p id="1c0cb2d0-466d-4489-b5cd-5c0e5e993824d6e21">Zur Installation folgt man am besten der Anleitung auf der Website. Es gibt hier aber einiges zu beachten:</p>
+                     <p id="0d3f48fc-0977-420c-9353-efb3b10d2850d6e23">Da das Projekt über das Installationstool <doclink class="8f729755-73c7-4234-a5b2-77d2ca38a5be"
+                           id="6bc8210f-e197-42a6-b94b-59ddf148486d"
+                           type="none">mlproj</doclink> installiert wird, sind Benutzerkennung und Passwort für MarkLogic in einer bestimmten Datei zu setzen:</p>
+                     <figure pdfwidth="column">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/mlproj.png"/>
+                     </figure>
+                     <p id="7c1e52e6-7c2c-4a48-a7c5-b7bfcc10a5d3d6e30">Der Inhalt der Datei <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                     <nb>dev.json</nb>
+                  </code> sieht dabei folgendermassen aus:</p>
+                     <verbatim>{
+    "mlproj": {
+        "format": "0.1",
+        "import": "base.json",
+        "connect": {
+            "host": "localhost",
+            "user": "admin",
+            "password": "admin"
+        }
+    }
+}</verbatim>
+                     <caution>
+                        <cause>Wenn der Konfigurationsmanager von MarkLogic unter einem anderen Port läuft, dann hat das Installationstool keinen Zugriff. Wie man die Ports hier einstellt, konnte ich auf die Schnelle nicht herausfinden. </cause>
+                        <consequence>MarkLogic sollte mit den Standardports <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                        <nb>8000</nb>
+                     </code>,<code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                        <nb>8001</nb>
+                     </code> und <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                        <nb>8002</nb>
+                     </code> konfiguriert sein. Der Zugriff von ausserhalb, sollte wie bei anderen Webanwendungen auch über einen Reverse-Proxy gehandelt werden.</consequence>
+                     </caution>
+                     <p id="16c39fc6-96a7-4643-ae6a-aa3fcb3f85c2d6e40">Hat man alles richtig gemacht und den Befehl <code xmlns:tektur="http://www.stylesheet-entwicklung.de">
+                     <nb>mlproj -e dev setup</nb>
+                  </code> zum Aufsetzen eines Testenvironments abgesetzt, so wird man mit dem Initialisierungsscreen belohnt:</p>
+                     <figure pdfwidth="page">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png"/>
+                     </figure>
                   
                
             </chapter>
@@ -3940,8 +3984,7 @@ git log --diff-filter=D --summary</verbatim>
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
          </title>
          
-            <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung. Blog: <b>www.tekturcms.de</b>
-            </p>
+            <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung.</p>
             <p id="38143bbb-a376-4cea-8186-45b1df3cf3fdd6e8">Hier sind einige Random Features:</p>
             <ul>
                <li>

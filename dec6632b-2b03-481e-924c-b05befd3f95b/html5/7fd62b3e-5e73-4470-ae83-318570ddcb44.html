@@ -364,6 +364,66 @@
                      werden, sondern ist für Entwicklungszwecke gedacht.
                   </div>
                </div>
+               <div class="margin">
+                  <div class="p" id="1c0cb2d0-466d-4489-b5cd-5c0e5e993824d6e21" data-element-name="p" data-tektur-reviewer-number="">Zur Installation folgt man am besten der Anleitung auf der Website. Es gibt hier aber einiges zu beachten:</div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="0d3f48fc-0977-420c-9353-efb3b10d2850d6e23" data-element-name="p" data-tektur-reviewer-number="">Da das Projekt über das Installationstool <a class="ref" id="6bc8210f-e197-42a6-b94b-59ddf148486d" data-id-ref="" data-element-name="doclink" data-is-inline-element="yes">mlproj</a> installiert wird, sind Benutzerkennung und Passwort für MarkLogic in einer bestimmten Datei zu setzen:
+                  </div>
+               </div>
+               <div class="no-margin">
+                  <div style="width:100%;text-align:center"><img src="../../7fd62b3e-5e73-4470-ae83-318570ddcb44/mlproj.png" id="" data-element-name="img"></div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="7c1e52e6-7c2c-4a48-a7c5-b7bfcc10a5d3d6e30" data-element-name="p" data-tektur-reviewer-number="">Der Inhalt der Datei <span style="font-family:Courier New, monospace">
+                        dev.json
+                        </span> sieht dabei folgendermassen aus:
+                  </div>
+               </div>
+               <div class="no-margin"><pre class="verbatim">{
+    "mlproj": {
+        "format": "0.1",
+        "import": "base.json",
+        "connect": {
+            "host": "localhost",
+            "user": "admin",
+            "password": "admin"
+        }
+    }
+}</pre></div>
+               <div class="no-margin">
+                  <div class="caution" id="" data-element-name="caution">
+                     <div class="signal-word">
+                        <div class="translation" data-tektur-reviewer-number="" id="" data-element-name="translation">VORSICHT!</div>
+                     </div>
+                     <div class="content">
+                        
+                        <div class="cause" data-tektur-reviewer-number="" id="" data-element-name="cause">Wenn der Konfigurationsmanager von MarkLogic unter einem anderen Port läuft, dann hat das Installationstool keinen Zugriff.
+                           Wie man die Ports hier einstellt, konnte ich auf die Schnelle nicht herausfinden. 
+                        </div>
+                        
+                        <div class="consequence" data-tektur-reviewer-number="" id="" data-element-name="consequence">MarkLogic sollte mit den Standardports <span style="font-family:Courier New, monospace">
+                              8000
+                              </span>,<span style="font-family:Courier New, monospace">
+                              8001
+                              </span> und <span style="font-family:Courier New, monospace">
+                              8002
+                              </span> konfiguriert sein. Der Zugriff von ausserhalb, sollte wie bei anderen Webanwendungen auch über einen Reverse-Proxy gehandelt
+                           werden.
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="16c39fc6-96a7-4643-ae6a-aa3fcb3f85c2d6e40" data-element-name="p" data-tektur-reviewer-number="">Hat man alles richtig gemacht und den Befehl <span style="font-family:Courier New, monospace">
+                        mlproj&nbsp;-e&nbsp;dev&nbsp;setup
+                        </span> zum Aufsetzen eines Testenvironments abgesetzt, so wird man mit dem Initialisierungsscreen belohnt:
+                  </div>
+               </div>
+               <div class="no-margin">
+                  <div style="width:100%;text-align:center"><img src="../../7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png" id="" data-element-name="img"></div>
+               </div>
             </div>
          </div>
          <div id="page-browser-arrows">
@@ -375,7 +435,7 @@
             </table>
          </div>
       </div>
-      <div id="date-version">Version: 207<br>Mar 31 2019
+      <div id="date-version">Version: 208<br>Apr 05 2019
       </div>
    </body>
 </html>

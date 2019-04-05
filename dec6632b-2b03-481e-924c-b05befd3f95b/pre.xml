@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Tue Dec 25 2018 12:56:30 </date-of-creation>
-      <date-of-last-change>Tue Apr 02 2019 12:10:18 </date-of-last-change>
+      <date-of-last-change>Fri Apr 05 2019 21:02:57 </date-of-last-change>
       <language>de-DE</language>
-      <status>207</status>
+      <status>213</status>
       <description>Short Description</description>
       <logo-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/logo.png</logo-image>
       <cover-image>././client/data/dec6632b-2b03-481e-924c-b05befd3f95b/cover.png</cover-image>
@@ -144,24 +144,29 @@ www.tekturcms.de</cover-text>
                <column-wide-element>
             <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">Ausserhalb der XML Verarbeitung hat XSLT keinen Stellenwert. Im TIOBE Index<footnote>
                   <desc>https://de.wikipedia.org/wiki/TIOBE-Index</desc>
+                  <add>Jährlicher Inder der beliebtesten Programmiersprachen</add>
                </footnote> von 2003 rangierte XSLT einmal auf Platz 60 an letzter Stelle der Liste<footnote>
                   <desc>https://bit.ly/2ARgKCJ</desc>
+                  <add>Beleg, dass XSLT einmal im TIOBE Index erschienen ist</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
             <p id="99c64570-4fcf-4448-ba34-59d5cfd8be53d6e9">Im Bereich XML würde aber ohne XSLT nicht viel gehen. Es gibt einige exotische Anwendungsgebiete in denen XML effizient 
 mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XML konvertierten - EDI X12<footnote>
                   <desc>https://en.wikipedia.org/wiki/ASC_X12</desc>
+                  <add>Wikipedia Seite zum X12 Standard für Electronic Data Interchange</add>
                </footnote> Nachrichten.</p>
          </column-wide-element>
                <column-wide-element>
             <p id="28d3fd5c-15c3-4ca9-b908-d747e65b8f28d6e17">Auch im Bereich Publishing in der Luftfahrt hat sich SGML als Vorreiter von XML im S1000D Standard<footnote>
                   <desc>https://en.wikipedia.org/wiki/S1000D</desc>
+                  <add>Wikipediaseite zum S1000D Standard</add>
                </footnote> wacker gehalten. Hier wird teilweise noch mit proprietären Programmiersprachen, wie Metamorphosis gearbeitet.</p>
          </column-wide-element>
                <column-wide-element>
             <p id="d9f3e676-e9d8-4b79-8c92-552355d2ac69d6e22">Alternativen zu XSLT finden sich im entsprechendem Wikipedia-Artikel<footnote>
                   <desc>https://de.wikipedia.org/wiki/XSL_Transformation</desc>
+                  <add>Wikipedia Seite zur Programmiersprache XSLT</add>
                </footnote>.</p>
          </column-wide-element>
                <column-wide-element>
@@ -175,6 +180,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                   <li>
                      <p id="4bb863fc-d85b-4475-871f-d8d311d34366d6e8">XSLT hat gerade noch den Status "Programmiersprache", weil man damit eine Turing Maschine<footnote>
                         <desc>http://www.unidex.com/turing/utm.htm</desc>
+                        <add>Turing Maschine in XSLT programmiert</add>
                      </footnote> programmieren kann.</p>
                   </li>
                   <li>
@@ -217,7 +223,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                <column-wide-element>
             <p id="0d86999f-6918-45f8-aa05-ee775429e1db">Einige Beispiele - aktuell und aus vergangenen Tagen:</p>
          </column-wide-element>
-               <block-title id="df972998-fdff-45dd-9394-6508080a897dd6e6">
+               <block-title id="17ac2070-9a83-4529-bcef-7315ee2183cbd7e6">
                   <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
                </block-title>
                <column-wide-element>
@@ -315,7 +321,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                <column-wide-element>
             <p id="25706f42-0507-45a5-a2cc-66f12f9e87bdd6e30">Die <b>Processing Instruction</b> hat keinen Einfluss auf den XML Inhalt und wird in einer anderen Eingabeverarbeitung nicht herangezogen.</p>
          </column-wide-element>
-               <block-title id="b77288d2-fa43-40b6-8226-134452b22fc7d6e28">
+               <block-title id="13038651-a4d7-4748-b9d3-567bed17cf73d7e28">
                   <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
                </block-title>
                <column-wide-element>
@@ -404,7 +410,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
   <color name="green">&lt;/xsl:template&gt;</color>
 <color name="green">&lt;/xsl:stylesheet&gt;</color></verbatim>
          </page-wide-element>
-               <block-title id="9c01f236-d070-46db-9fd9-4585808a4401d6e43">
+               <block-title id="73d34fe9-d986-4a05-a27e-bead0b50df13d7e43">
                   <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Multiple Ausgabeformate</title>
                </block-title>
                <column-wide-element>
@@ -435,16 +441,17 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                </footnote>
                <xe>
                   <first criterion="Standards">Standards</first>
-                  <second criterion="JAT">JAT</second>
+                  <second criterion="JATS">JATS</second>
                </xe> oder TEI<footnote>
                   <desc>https://de.wikipedia.org/wiki/Text_Encoding_Initiative</desc>
+                  <add>Wikipediaseite zum TEI Standard</add>
                </footnote>
                <xe>
                   <first criterion="Standards">Standards</first>
                   <second criterion="TEI">TEI</second>
                </xe>.</p>
          </column-wide-element>
-               <block-title id="14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53">
+               <block-title id="852b9a96-944a-43a0-8cf6-88fb4bba5a2ed7e53">
                   <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbare Ausgabe</title>
                </block-title>
                <column-wide-element>
@@ -522,7 +529,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                   <second criterion="contenteditable">contenteditable</second>
                </xe> editierbar, dann bräuchte man nur noch eine Rücktransformation HTML nach XML und hätte schon einen kleinen XML Editor gebaut. So funktioniert auch der Editor in <nb>Tektur</nb>.</p>
          </column-wide-element>
-               <block-title id="2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66">
+               <block-title id="216a186e-72a0-48c5-9edd-064dc8659791d7e66">
                   <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
                </block-title>
                <column-wide-element>
@@ -589,12 +596,14 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                   <li>
                      <p id="d206a44d-c978-4902-9d62-0d34675e805dd6e87">Client-side image generation with SVG and XSLT<footnote>
                         <desc>http://surguy.net/articles/client-side-svg.xml</desc>
+                        <add>Automatische Image Erzeugung mit XSLT und SVG</add>
                      </footnote>
                   </p>
                   </li>
                   <li>
                      <p id="5689021e-dff9-4b37-9f33-35a0bb84a3c6d6e90">Knotentyp Visualisierung im Apache Jack Rabbit Projekt<footnote>
                         <desc>http://jackrabbit.apache.org/jcr/node-type-visualization.html</desc>
+                        <add>Visualisierung von Knoten im Apache Jack Rabbit Projekt</add>
                      </footnote>
                   </p>
                   </li>
@@ -612,7 +621,7 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach XM
                <column-wide-element>
             <p id="25b21e23-d4ce-4721-a7d1-2c6b83245a70">Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen.</p>
          </column-wide-element>
-               <block-title id="b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6">
+               <block-title id="52b70b84-00ae-46e8-83bd-658938847045d7e6">
                   <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
                </block-title>
                <column-wide-element>
@@ -682,7 +691,7 @@ Vorteile:</p>
                   </li>
                   <li>
                      <p id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34">Es gibt spezialisierte <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                              id="1b7d4b0c-4559-48b0-9e66-21a243a47897"
+                              id="3c9b0f3e-a382-4369-9719-93d407d17de2"
                               type="topic">XML Datenbanken</doclink>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
                   </li>
                </ul>
@@ -690,7 +699,7 @@ Vorteile:</p>
                <column-wide-element>
             <p id="df845a80-c690-4551-af36-90a401ff12aed6e36">Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die <b>Single-Source Strategie</b>.</p>
          </column-wide-element>
-               <block-title id="084a7657-95f1-4ade-905e-cada919a0918d6e72">
+               <block-title id="09892549-081b-47d6-86c5-cab66ade8e3ed7e72">
                   <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
                </block-title>
                <column-wide-element>
@@ -719,7 +728,7 @@ Vorteile:</p>
                   <add>Weiterführende Lektüre zum Thema Code-Generierung mit XSLT</add>
                </footnote>.</p>
          </column-wide-element>
-               <block-title id="ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83">
+               <block-title id="9987e686-d07e-43e2-b9b8-6c00b5db4b29d7e83">
                   <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
                </block-title>
                <column-wide-element>
@@ -4295,10 +4304,63 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                      <column-wide-element>
                   <p id="cd92c6f4-820e-4500-bc47-9e172f26ba2ad6e19">Im Rahmen dieser Lektüre wird vorrsusichtlich nur der Browser Answendung finden, weil man damit unkompliziert die Daten sichten kann. Diese werden in einem Editorfenster mit Syntaxhighlightiung dargestellt. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</p>
                </column-wide-element>
+                     <column-wide-element>
+                  <p id="1c0cb2d0-466d-4489-b5cd-5c0e5e993824d6e21">Zur Installation folgt man am besten der Anleitung auf der Website. Es gibt hier aber einiges zu beachten:</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="0d3f48fc-0977-420c-9353-efb3b10d2850d6e23">Da das Projekt über das Installationstool <doclink class="8f729755-73c7-4234-a5b2-77d2ca38a5be"
+                              id="6bc8210f-e197-42a6-b94b-59ddf148486d"
+                              type="none">mlproj</doclink> installiert wird, sind Benutzerkennung und Passwort für MarkLogic in einer bestimmten Datei zu setzen:</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <figure pdfwidth="column">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/mlproj.png"/>
+                     </figure>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="7c1e52e6-7c2c-4a48-a7c5-b7bfcc10a5d3d6e30">Der Inhalt der Datei <code>
+                        <nb>dev.json</nb>
+                     </code> sieht dabei folgendermassen aus:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>{
+    "mlproj": {
+        "format": "0.1",
+        "import": "base.json",
+        "connect": {
+            "host": "localhost",
+            "user": "admin",
+            "password": "admin"
+        }
+    }
+}</verbatim>
+               </page-wide-element>
+                     <page-wide-element>
+                  <caution>
+                        <cause>Wenn der Konfigurationsmanager von MarkLogic unter einem anderen Port läuft, dann hat das Installationstool keinen Zugriff. Wie man die Ports hier einstellt, konnte ich auf die Schnelle nicht herausfinden. </cause>
+                        <consequence>MarkLogic sollte mit den Standardports <code>
+                           <nb>8000</nb>
+                        </code>,<code>
+                           <nb>8001</nb>
+                        </code> und <code>
+                           <nb>8002</nb>
+                        </code> konfiguriert sein. Der Zugriff von ausserhalb, sollte wie bei anderen Webanwendungen auch über einen Reverse-Proxy gehandelt werden.</consequence>
+                     </caution>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p id="16c39fc6-96a7-4643-ae6a-aa3fcb3f85c2d6e40">Hat man alles richtig gemacht und den Befehl <code>
+                        <nb>mlproj -e dev setup</nb>
+                     </code> zum Aufsetzen eines Testenvironments abgesetzt, so wird man mit dem Initialisierungsscreen belohnt:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png"/>
+                     </figure>
+               </page-wide-element>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3246" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e3284" ismodule="no">
                
                   <title id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610">
                      <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - Content Pump</title>
@@ -4312,7 +4374,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3266" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3304" ismodule="no">
          
             <title id="ba5023e4-3ff9-48e4-a374-1012493b75c2">
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -4323,7 +4385,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3283" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3321" ismodule="no">
             
                <title id="9d32e957-a332-40f5-bcbd-52fd6ed7f7da">
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
@@ -4516,7 +4578,7 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3433" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3471" ismodule="no">
             
                <title id="821f8271-e9a1-43e8-ba9a-b1e8aa0ce4f4">
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
@@ -4634,7 +4696,7 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3512" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3550" ismodule="no">
       
          <title id="47df7a71-2ba1-4bde-bbc0-3ec379ec6ac5">
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
@@ -4650,7 +4712,7 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3532" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3570" ismodule="no">
          
             <title id="b1719307-52da-4e1d-9aee-a3a6bb139d92">
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
@@ -4732,7 +4794,7 @@ git log --diff-filter=D --summary</verbatim>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3559" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3597" ismodule="no">
          
             <title id="24e125c5-f411-4698-9e68-19ab7ba0f302">
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
@@ -4879,7 +4941,7 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3784" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3822" ismodule="no">
       
          <title id="c1678e74-d15c-42a1-9fd0-912fced210ef">
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -5094,7 +5156,7 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3948" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3986" ismodule="no">
       
          <title id="d3d7b9b9-8712-4844-bf96-9444ac5bb171">
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
