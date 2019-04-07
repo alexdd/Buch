@@ -66,6 +66,12 @@
               id="941ec370-0569-49a3-8327-bcf7bb41b444d6e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
+              id="0d6ac6f2-831c-4139-a5a6-5061bc2fe332d7e23"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="bd57474b-c3be-4143-add2-1c00e31d9237d7e26"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
               id="bf0a54ff-fbef-4db1-b83b-d18fcc202108d6e10"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
@@ -175,21 +181,24 @@
          <div data-element-name="commentable-element"
               id="0d86999f-6918-45f8-aa05-ee775429e1db"
               style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="1cc2b53a-8cb6-4144-83d9-02b7d4475ce5d7e6"
+              style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="df972998-fdff-45dd-9394-6508080a897dd6e6"
+   <tr data-tt-id="0de02978-01fe-4657-97bd-905fff5edf23d7e29"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 df972998-fdff-45dd-9394-6508080a897dd6e6">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 0de02978-01fe-4657-97bd-905fff5edf23d7e29">
       <td>
          <span class="number">5  </span>
          <span class="text">
                         XML Webseiten
                      </span>
          <div data-element-name="commentable-element"
-              id="df972998-fdff-45dd-9394-6508080a897dd6e6"
+              id="0de02978-01fe-4657-97bd-905fff5edf23d7e29"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="df972998-fdff-45dd-9394-6508080a897dd6e6"
+              id="0de02978-01fe-4657-97bd-905fff5edf23d7e29"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7"
@@ -211,19 +220,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="b77288d2-fa43-40b6-8226-134452b22fc7d6e28"
+   <tr data-tt-id="27b50efc-d594-47fc-a9d6-5416908e91f3d7e94"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 b77288d2-fa43-40b6-8226-134452b22fc7d6e28">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 27b50efc-d594-47fc-a9d6-5416908e91f3d7e94">
       <td>
          <span class="number">6  </span>
          <span class="text">
                         Serverseitige Konvertierung
                 ...</span>
          <div data-element-name="commentable-element"
-              id="b77288d2-fa43-40b6-8226-134452b22fc7d6e28"
+              id="27b50efc-d594-47fc-a9d6-5416908e91f3d7e94"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b77288d2-fa43-40b6-8226-134452b22fc7d6e28"
+              id="27b50efc-d594-47fc-a9d6-5416908e91f3d7e94"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33"
@@ -242,19 +251,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="9c01f236-d070-46db-9fd9-4585808a4401d6e43"
+   <tr data-tt-id="b4cd3a90-83ab-4e57-892f-21f9859c71dcd7e133"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 9c01f236-d070-46db-9fd9-4585808a4401d6e43">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 b4cd3a90-83ab-4e57-892f-21f9859c71dcd7e133">
       <td>
          <span class="number">7  </span>
          <span class="text">
                         Multiple Ausgabeformate
                     </span>
          <div data-element-name="commentable-element"
-              id="9c01f236-d070-46db-9fd9-4585808a4401d6e43"
+              id="b4cd3a90-83ab-4e57-892f-21f9859c71dcd7e133"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9c01f236-d070-46db-9fd9-4585808a4401d6e43"
+              id="b4cd3a90-83ab-4e57-892f-21f9859c71dcd7e133"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48"
@@ -267,19 +276,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53"
+   <tr data-tt-id="51263355-d431-420f-ab23-62b4e072f6b7d7e155"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 51263355-d431-420f-ab23-62b4e072f6b7d7e155">
       <td>
          <span class="number">8  </span>
          <span class="text">
                         Menschenlesbare Ausgabe
                     </span>
          <div data-element-name="commentable-element"
-              id="14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53"
+              id="51263355-d431-420f-ab23-62b4e072f6b7d7e155"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="14a69d0c-9be4-46eb-a266-4123a3f473dbd6e53"
+              id="51263355-d431-420f-ab23-62b4e072f6b7d7e155"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55"
@@ -295,19 +304,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66"
+   <tr data-tt-id="05489cfe-4cf1-4694-9fdb-fd861ef5fecfd7e192"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 05489cfe-4cf1-4694-9fdb-fd861ef5fecfd7e192">
       <td>
          <span class="number">9  </span>
          <span class="text">
                         Diagramme darstellen
                      </span>
          <div data-element-name="commentable-element"
-              id="2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66"
+              id="05489cfe-4cf1-4694-9fdb-fd861ef5fecfd7e192"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="2c3b949c-77c7-4dab-b6f6-7aa304536f45d6e66"
+              id="05489cfe-4cf1-4694-9fdb-fd861ef5fecfd7e192"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68"
@@ -357,19 +366,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6"
+   <tr data-tt-id="d95bfa32-ea9a-4ff3-977b-73c78c5a63fdd7e9"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 d95bfa32-ea9a-4ff3-977b-73c78c5a63fdd7e9">
       <td>
          <span class="number">11  </span>
          <span class="text">
                         Single Source Publishing
                    ...</span>
          <div data-element-name="commentable-element"
-              id="b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6"
+              id="d95bfa32-ea9a-4ff3-977b-73c78c5a63fdd7e9"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b3ef9995-0478-4867-b02a-e2a3b0d9cf2cd6e6"
+              id="d95bfa32-ea9a-4ff3-977b-73c78c5a63fdd7e9"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="012db970-b72c-425a-a3ad-3e817e002282d6e7"
@@ -402,26 +411,26 @@
               id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="1b7d4b0c-4559-48b0-9e66-21a243a47897"
+              id="2f1e97fe-f557-434c-b8d7-fa8bbe766a1f"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="df845a80-c690-4551-af36-90a401ff12aed6e36"
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="084a7657-95f1-4ade-905e-cada919a0918d6e72"
+   <tr data-tt-id="0c64618a-8a51-4633-8a1c-8b91f0d671d8d7e137"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 084a7657-95f1-4ade-905e-cada919a0918d6e72">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 0c64618a-8a51-4633-8a1c-8b91f0d671d8d7e137">
       <td>
          <span class="number">12  </span>
          <span class="text">
                         Code Generierung
                      </span>
          <div data-element-name="commentable-element"
-              id="084a7657-95f1-4ade-905e-cada919a0918d6e72"
+              id="0c64618a-8a51-4633-8a1c-8b91f0d671d8d7e137"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="084a7657-95f1-4ade-905e-cada919a0918d6e72"
+              id="0c64618a-8a51-4633-8a1c-8b91f0d671d8d7e137"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39"
@@ -440,19 +449,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83"
+   <tr data-tt-id="f5ae5095-0c81-4b35-a2a8-c86b441c51c1d7e169"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 f5ae5095-0c81-4b35-a2a8-c86b441c51c1d7e169">
       <td>
          <span class="number">13  </span>
          <span class="text">
                         Migrationen und Konvertierungen
             ...</span>
          <div data-element-name="commentable-element"
-              id="ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83"
+              id="f5ae5095-0c81-4b35-a2a8-c86b441c51c1d7e169"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="ce09156d-5ebb-4829-b9dc-21a3bfdf8107d6e83"
+              id="f5ae5095-0c81-4b35-a2a8-c86b441c51c1d7e169"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56"
@@ -528,25 +537,25 @@
               id="adf97e75-c632-445e-aa9f-914096737fdcd6e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="bd026272-b5da-421c-9c45-089f290ae41bd6e11"
+              id="77885e39-d3b2-4fed-ad77-559ae4d8811ed7e14"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="07322c84-0481-44ab-a799-bf52da6b8dded6e13"
+              id="a5a12202-58dc-4100-aeed-97b61c8a8843d7e16"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b19d3af3-4850-4f73-83b9-84fc139780e3d6e17"
+              id="10e55d0e-56a9-4bc5-b808-9e587d3d9fb5d7e26"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9a63a604-831f-49cb-81a7-0b79d0c947bdd6e19"
+              id="2c460a2b-29b5-4914-b841-a1ccf376d3cbd7e28"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="43976824-218f-4b76-9c34-24b9e47ccbfcd6e22"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="a24e2f39-4ed3-4f98-a3d6-c7f48358293ad6e28"
+              id="4fd0500f-029b-4cad-9c32-7e95a21273bdd7e42"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b407302b-5344-487c-963d-1bf2e2625dded6e30"
+              id="29b46f5a-4e9c-499c-a0a9-03802db651b7d7e44"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43"
@@ -605,19 +614,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="dddb5d5f-b523-4d70-871c-9deadda78661d6e8"
+   <tr data-tt-id="cdc876c7-b534-4fbe-a06b-91872e9ab6ded7e8"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 dddb5d5f-b523-4d70-871c-9deadda78661d6e8">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 cdc876c7-b534-4fbe-a06b-91872e9ab6ded7e8">
       <td>
          <span class="number">17  </span>
          <span class="text">
                         Reihenfolge der Match-Regeln
                ...</span>
          <div data-element-name="commentable-element"
-              id="dddb5d5f-b523-4d70-871c-9deadda78661d6e8"
+              id="cdc876c7-b534-4fbe-a06b-91872e9ab6ded7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="dddb5d5f-b523-4d70-871c-9deadda78661d6e8"
+              id="cdc876c7-b534-4fbe-a06b-91872e9ab6ded7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9"
@@ -630,19 +639,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="9ee01e85-e2da-4c26-9c87-8ab4ef47faf6d6e15"
+   <tr data-tt-id="d103a6b1-1f4a-4ff2-b93b-2bad7ab2084cd7e18"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 9ee01e85-e2da-4c26-9c87-8ab4ef47faf6d6e15">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 d103a6b1-1f4a-4ff2-b93b-2bad7ab2084cd7e18">
       <td>
          <span class="number">18  </span>
          <span class="text">
                         Präzedenz der Auswertung
                    ...</span>
          <div data-element-name="commentable-element"
-              id="9ee01e85-e2da-4c26-9c87-8ab4ef47faf6d6e15"
+              id="d103a6b1-1f4a-4ff2-b93b-2bad7ab2084cd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9ee01e85-e2da-4c26-9c87-8ab4ef47faf6d6e15"
+              id="d103a6b1-1f4a-4ff2-b93b-2bad7ab2084cd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c35ab440-7d81-4466-a34f-32545cec227ad6e14"
@@ -706,19 +715,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="daccc985-d7ea-41a7-8408-3094b807352dd6e76"
+   <tr data-tt-id="da589647-0783-4a15-bd4f-b049e7d344acd7e82"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 daccc985-d7ea-41a7-8408-3094b807352dd6e76">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 da589647-0783-4a15-bd4f-b049e7d344acd7e82">
       <td>
          <span class="number">19  </span>
          <span class="text">
                         Import Präzendenz und Default-Regel
         ...</span>
          <div data-element-name="commentable-element"
-              id="daccc985-d7ea-41a7-8408-3094b807352dd6e76"
+              id="da589647-0783-4a15-bd4f-b049e7d344acd7e82"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="daccc985-d7ea-41a7-8408-3094b807352dd6e76"
+              id="da589647-0783-4a15-bd4f-b049e7d344acd7e82"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19"
@@ -737,25 +746,34 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="8159cee1-a749-403e-8f24-6ca446baade4d6e89"
+   <tr data-tt-id="edc3c3ed-0ae7-40db-9f7d-cd98d463f536d7e98"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 8159cee1-a749-403e-8f24-6ca446baade4d6e89">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 edc3c3ed-0ae7-40db-9f7d-cd98d463f536d7e98">
       <td>
          <span class="number">20  </span>
          <span class="text">
                         Prioritäten
                      </span>
          <div data-element-name="commentable-element"
-              id="8159cee1-a749-403e-8f24-6ca446baade4d6e89"
+              id="edc3c3ed-0ae7-40db-9f7d-cd98d463f536d7e98"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="8159cee1-a749-403e-8f24-6ca446baade4d6e89"
+              id="edc3c3ed-0ae7-40db-9f7d-cd98d463f536d7e98"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="be710deb-554e-4962-beb9-9de58d386c7fd6e24"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="d9a24ef4-9b36-4aa8-ae9b-371cfe8120c2d6e26"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="454c8db4-17ce-4b8e-8f1f-12ad47ebdf60d7e108"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="5be06e26-697f-435e-b3b4-46096ef82e47d7e111"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="0730151b-4814-4b18-a8af-5c049148a6a9d7e114"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="2ad7f812-2b73-49a6-a5f7-36638003d62ed6e96"
@@ -778,21 +796,27 @@
          <div data-element-name="commentable-element"
               id="3f9a7a12-fa87-47eb-9874-4d8f275ed427d6e114"
               style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="7f67f7d4-dff7-4a4a-95ed-b7dc00a7b185d7e143"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="4ba64232-f94b-41a8-8522-b959448347ac"
+              style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="1c1d47cc-6418-4bdb-ad46-5f097384af28d6e118"
+   <tr data-tt-id="c4d2b90c-4d7d-4b63-af78-9d47963ba676d7e139"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 1c1d47cc-6418-4bdb-ad46-5f097384af28d6e118">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 c4d2b90c-4d7d-4b63-af78-9d47963ba676d7e139">
       <td>
          <span class="number">21  </span>
          <span class="text">
                         Modus Attribute
                      </span>
          <div data-element-name="commentable-element"
-              id="1c1d47cc-6418-4bdb-ad46-5f097384af28d6e118"
+              id="c4d2b90c-4d7d-4b63-af78-9d47963ba676d7e139"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="1c1d47cc-6418-4bdb-ad46-5f097384af28d6e118"
+              id="c4d2b90c-4d7d-4b63-af78-9d47963ba676d7e139"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29"
@@ -893,19 +917,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="93174629-fa2e-4ee4-a5f4-805f4708bb69d6e82"
+   <tr data-tt-id="a9f73387-3f51-498b-af1d-cbfdc0590072d7e79"
        data-tt-parent-id="3e443c28-8698-470b-b443-f286ff7ed2d5"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e 3e443c28-8698-470b-b443-f286ff7ed2d5 93174629-fa2e-4ee4-a5f4-805f4708bb69d6e82">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e 3e443c28-8698-470b-b443-f286ff7ed2d5 a9f73387-3f51-498b-af1d-cbfdc0590072d7e79">
       <td>
          <span class="number">23  </span>
          <span class="text">
                         Namespaces in XQuery
                      </span>
          <div data-element-name="commentable-element"
-              id="93174629-fa2e-4ee4-a5f4-805f4708bb69d6e82"
+              id="a9f73387-3f51-498b-af1d-cbfdc0590072d7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="93174629-fa2e-4ee4-a5f4-805f4708bb69d6e82"
+              id="a9f73387-3f51-498b-af1d-cbfdc0590072d7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74"
