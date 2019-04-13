@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="51877293-95b9-4486-b8f6-c006615a8109"><title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Streaming Beispiel</title><body id="c582561a-858c-4fd8-8aeb-2af18ceedd3d"><p id="1b8326b9-86af-407d-b972-5b8d98339dec">Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p><ol id="55b454b3-3415-4755-9caa-141113ac3f5cd6e6"><li id="ca269a85-cba5-48ac-b9ca-dba867f63fddd6e7"><p id="b68b789a-b3c9-407f-ba6d-fa3f3e248cdcd6e8">Für einfache Sammel- und Auswertungsaufgaben schreibt man sich am besten einen kleinen Parser, z.B. mit der Python sgmllib[[fn:https://docs.python.org/2/library/sgmllib.html]].</p></li><li id="e7423b7a-3ac5-4ad1-a3e8-202255a4b978d6e10"><p id="57c4f664-96a8-4fcc-9f0b-3e9ee7dfb3ecd6e11">Für komplexere Aufgaben, in denen man nicht an jeder Stelle über den ganzen XML Baum navigiert und sich die Werte zusammensuchen suchen muss, kann man die Streaming Funktion des Saxon XSLT Prozessors verwenden.</p></li></ol><p id="a470215e-648e-4bb9-87f9-894c63b0dd90d6e13">XSLT Streaming ist in der XSLT Version 3.0 neu hinzugekommen[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html]] und in der
-kommerziellen Saxon-EE Löunsg implementiert[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/]].</p><p id="3646e5ae-e79b-4fe4-87dc-bf3d33d48095d6e15">Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p><p id="5bed0c00-3df7-46b0-8a74-dc37a0351ecbd6e17">Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird.
-Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten. Bei einer Selektion sollte man aber darauf achten nur atomarische Werte auszuwählen.
-Knotenmengen, die über die Streaming Option eingelesen wurden, können nicht einer Funktion übergeben werden. Sie sind auch nicht einer Variablen zuweisbar.
-“Crawler”-Ausdrücke, wie //section sind nicht nicht zu verwenden, ebenso ein rekursiver Abstieg, wie bspw. mit einem Apply-Templates Call.</p><p id="76380020-ab1f-4121-86c3-c8f2cffb1396d6e19">Zu Beginn der Streaming-Aktion kann man sich auf konventionelle Art und Weise Teilbäume, die nicht so performanzlastig aufgebaut werden, 
-in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. für einen Vergleich auswerten.</p><p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p><pre id="90514307-2f4c-4076-af58-385fd5a10dabd6e23" xml:space="preserve">&lt;xsl:stylesheet version="3.0"
+<?xml version="1.0" encoding="UTF-8"?><topic id="51877293-95b9-4486-b8f6-c006615a8109"><title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator </title><body id="c582561a-858c-4fd8-8aeb-2af18ceedd3d"><p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p><pre id="a563fc16-f443-4f6f-a6e4-b76eb9cabf39d7e6" xml:space="preserve">&lt;xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   exclude-result-prefixes="#all"&gt;
@@ -27,19 +22,26 @@ in einer Variablen abspeichern und im Verlauf der Streaming-Verarbeitung z.B. f�
   &lt;/xsl:template&gt;
   
 &lt;/xsl:stylesheet&gt;</pre><p id="4ba7c650-d5a0-489c-9392-3ab548afa421d6e25">Diese Stylesheet hat einige Besonderheiten:</p><p id="06f1d8c6-03dd-4fa3-847b-4554e944f361d6e27">Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
-eine implizite Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html]]
-in die Ausgabeinstanz kopiert.</p><p id="cda2834b-a464-49e5-9b3b-e8880252433cd6e29">Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p><pre id="c68efb34-5731-47cd-a875-ddcd69294489d6e32" xml:space="preserve">&lt;xsl:template match="node()|@*"
+eine implizite [[link]]Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]][[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p><p id="cda2834b-a464-49e5-9b3b-e8880252433cd6e29">Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p><pre id="609330dc-164f-4a21-b8fe-7913f26403cbd7e14" xml:space="preserve">&lt;xsl:template match="node()|@*"
   &lt;xsl:copy&gt;
     &lt;xsl:apply-templates select="node()|@*"/&gt;
   &lt;/xsl:copy&gt;
-&lt;/xsl:template&gt;</pre><p id="6deb7053-43b9-437d-8ce4-ec81a69a7795d6e34">Zum anderen wird ein Akkumulator verwendet. Normalerweise gibt es in XSLT keine Variablen,
+&lt;/xsl:template&gt;</pre><p id="6deb7053-43b9-437d-8ce4-ec81a69a7795d6e34">Zum anderen wird ein Akkumulator[[xe1:Verarbeitungsmethoden;xe2:Akkumulator]] verwendet. Normalerweise gibt es in XSLT keine Variablen,
 sondern nur Konstanten, so wie das auch bei funktionalen Programmiersprachen der Fall ist.</p><p id="bce045c6-46f1-4745-8326-56beff21e266d6e36">Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
 an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.</p><p id="586338d8-49fa-4ddc-b715-99f9688ecd25d6e38">Ber der Verarbeitung sehr großer Datemengen, ist es aber unumgänglich, denn sonst
 würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p><p id="4a5b2945-71be-4b5c-be7f-2e33cd717a4cd6e40">Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
 wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
 bspw. das Abspeichern des gerade prozessierten Teilbaums in einem Dictionary zur 
-späteren Auswertung bzw. Gruppierung der Key-Elemente.</p><p id="825af8ca-d2ab-4357-ba6b-bbf4863f201fd6e42">Auch im Akkumulator muss das streamable="yes" Property gesetzt sein, wenn er im 
+späteren Auswertung bzw. Gruppierung der Key-Elemente.</p><p id="825af8ca-d2ab-4357-ba6b-bbf4863f201fd6e42">Auch im Akkumulator muss das [[code:streamable="yes"]] Property gesetzt sein, wenn er im 
 Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
 wenn der untersuchte Baum vollständig durchlaufen wurde.</p><p id="8d27d621-4d12-4d40-a59e-8d58c45439a5d6e44">Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
 einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
-Prozessor allerdings nicht akzeptiert.</p></body></topic>
+Prozessor allerdings nicht akzeptiert.</p><pre id="9aebd483-6fdf-4caf-ac87-39c10bdc717cd7e29" xml:space="preserve">Cannot call accumulator-after except during the post-descent 
+phase of a streaming template</pre><p id="c9a77197-237e-49fd-80d3-18a443700c33d6e59">Diese Fehlermeldung erscheint, wenn man den [[code:apply-templates]] Call entfernt. Der Akkumulator
+wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
+kann auch ein reines Kopieren sein, bspw. kann man den [[code:apply-templates]] Call auch durch ein</p><pre id="a2a6c126-d05d-49c5-b5b8-72873a5421d5d7e33" xml:space="preserve">&lt;xsl:copy-of select="."/&gt;</pre><p id="bd5669e8-e0e9-41d0-8854-f9c76aa6d3a3d6e63">ersetzen, was gleichbedeutend mit der Mode Einstellung</p><pre id="cf718a7d-5913-4a39-a3e1-dcb749abfa0bd7e37" xml:space="preserve">on-no-match="deep-copy"</pre><p id="073cb9ea-9bed-41e8-ba73-b3cef15a5708d6e68">wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
+am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
+Arten realisieren.</p><p id="29146b97-98e0-448f-8414-d8a9ee82e847d6e70">Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 
+werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreichen
+würde.</p></body></topic>
