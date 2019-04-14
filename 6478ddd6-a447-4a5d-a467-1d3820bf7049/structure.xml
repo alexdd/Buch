@@ -15,7 +15,7 @@
       <td>
          <span class="number">1  </span>
          <span class="text">
-            Intro 
+            Intro
          </span>
          <div data-element-name="commentable-element"
               id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88"
@@ -45,7 +45,7 @@
       <td>
          <span class="number">2  </span>
          <span class="text">
-            Anwendungsgebiete 
+            Anwendungsgebiete
          </span>
          <div data-element-name="commentable-element"
               id="792c9845-7c63-4a18-8aee-1878763200b5"
@@ -109,8 +109,8 @@
       <td>
          <span class="number">3  </span>
          <span class="text">
-               XSLT - die Programmiersprache im XML Bereich 
-       ...</span>
+               XSLT - die Programmiersprache im XML Bereich
+        ...</span>
          <div data-element-name="commentable-element"
               id="a264856d-c5d5-4d7b-993f-421bf222db76"
               style="display:none"> </div>
@@ -186,19 +186,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="1f2dabbe-39b3-420f-ab20-503006becfbed7e20"
+   <tr data-tt-id="17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 1f2dabbe-39b3-420f-ab20-503006becfbed7e20">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20">
       <td>
          <span class="number">5  </span>
          <span class="text">
                         XML Webseiten
                      </span>
          <div data-element-name="commentable-element"
-              id="1f2dabbe-39b3-420f-ab20-503006becfbed7e20"
+              id="17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="1f2dabbe-39b3-420f-ab20-503006becfbed7e20"
+              id="17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7"
@@ -220,19 +220,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="bec941de-8bb8-4b48-857c-24267df83226d7e48"
+   <tr data-tt-id="1d148a1e-917e-4daf-872a-89ccfae7d794d7e48"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 bec941de-8bb8-4b48-857c-24267df83226d7e48">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 1d148a1e-917e-4daf-872a-89ccfae7d794d7e48">
       <td>
          <span class="number">6  </span>
          <span class="text">
                         Serverseitige Konvertierung
                 ...</span>
          <div data-element-name="commentable-element"
-              id="bec941de-8bb8-4b48-857c-24267df83226d7e48"
+              id="1d148a1e-917e-4daf-872a-89ccfae7d794d7e48"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="bec941de-8bb8-4b48-857c-24267df83226d7e48"
+              id="1d148a1e-917e-4daf-872a-89ccfae7d794d7e48"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33"
@@ -251,19 +251,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="a2af5474-d20d-4f38-b5eb-d6c8fe3f23f4d7e66"
+   <tr data-tt-id="1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 a2af5474-d20d-4f38-b5eb-d6c8fe3f23f4d7e66">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66">
       <td>
          <span class="number">7  </span>
          <span class="text">
                         Multiple Ausgabeformate
                     </span>
          <div data-element-name="commentable-element"
-              id="a2af5474-d20d-4f38-b5eb-d6c8fe3f23f4d7e66"
+              id="1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="a2af5474-d20d-4f38-b5eb-d6c8fe3f23f4d7e66"
+              id="1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48"
@@ -276,19 +276,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="35af9d25-e59c-4236-a64b-ae577bbf51a5d7e79"
+   <tr data-tt-id="9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 35af9d25-e59c-4236-a64b-ae577bbf51a5d7e79">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79">
       <td>
          <span class="number">8  </span>
          <span class="text">
                         Menschenlesbare Ausgabe
                     </span>
          <div data-element-name="commentable-element"
-              id="35af9d25-e59c-4236-a64b-ae577bbf51a5d7e79"
+              id="9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="35af9d25-e59c-4236-a64b-ae577bbf51a5d7e79"
+              id="9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55"
@@ -304,19 +304,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="fb0e985c-1c0e-4499-bc30-88b4791776a6d7e95"
+   <tr data-tt-id="2661e812-e6de-458b-92f9-e4725f5994c8d7e95"
        data-tt-parent-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 fb0e985c-1c0e-4499-bc30-88b4791776a6d7e95">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 3c090c4b-2d46-459c-87ba-60a824bf5aa5 2661e812-e6de-458b-92f9-e4725f5994c8d7e95">
       <td>
          <span class="number">9  </span>
          <span class="text">
                         Diagramme darstellen
                      </span>
          <div data-element-name="commentable-element"
-              id="fb0e985c-1c0e-4499-bc30-88b4791776a6d7e95"
+              id="2661e812-e6de-458b-92f9-e4725f5994c8d7e95"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="fb0e985c-1c0e-4499-bc30-88b4791776a6d7e95"
+              id="2661e812-e6de-458b-92f9-e4725f5994c8d7e95"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68"
@@ -350,7 +350,7 @@
       <td>
          <span class="number">10  </span>
          <span class="text">
-               Professionelle XML Verarbeitung 
+               Professionelle XML Verarbeitung
             </span>
          <div data-element-name="commentable-element"
               id="151a9719-a32a-4fca-a55c-769b47a73b34"
@@ -366,19 +366,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="f5e04b20-54f6-49b2-9b6f-f4c535f8b752d7e9"
+   <tr data-tt-id="b195f3f0-a313-4e25-82b1-b668a019a83ed7e9"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 f5e04b20-54f6-49b2-9b6f-f4c535f8b752d7e9">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 b195f3f0-a313-4e25-82b1-b668a019a83ed7e9">
       <td>
          <span class="number">11  </span>
          <span class="text">
                         Single Source Publishing
                    ...</span>
          <div data-element-name="commentable-element"
-              id="f5e04b20-54f6-49b2-9b6f-f4c535f8b752d7e9"
+              id="b195f3f0-a313-4e25-82b1-b668a019a83ed7e9"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="f5e04b20-54f6-49b2-9b6f-f4c535f8b752d7e9"
+              id="b195f3f0-a313-4e25-82b1-b668a019a83ed7e9"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="012db970-b72c-425a-a3ad-3e817e002282d6e7"
@@ -411,26 +411,26 @@
               id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9b5ee8ef-eec3-4dcd-a798-614c33353f3d"
+              id="29fee564-4a23-49c4-8bf4-7cb5ef16951a"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="df845a80-c690-4551-af36-90a401ff12aed6e36"
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="dbcde5f3-ac14-4865-b164-bde9092306f1d7e137"
+   <tr data-tt-id="aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 dbcde5f3-ac14-4865-b164-bde9092306f1d7e137">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137">
       <td>
          <span class="number">12  </span>
          <span class="text">
                         Code Generierung
                      </span>
          <div data-element-name="commentable-element"
-              id="dbcde5f3-ac14-4865-b164-bde9092306f1d7e137"
+              id="aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="dbcde5f3-ac14-4865-b164-bde9092306f1d7e137"
+              id="aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39"
@@ -449,19 +449,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="015764f2-10d2-4a78-b35a-4b19bc2cf758d7e169"
+   <tr data-tt-id="ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169"
        data-tt-parent-id="151a9719-a32a-4fca-a55c-769b47a73b34"
-       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 015764f2-10d2-4a78-b35a-4b19bc2cf758d7e169">
+       data-chapter-link-id="792c9845-7c63-4a18-8aee-1878763200b5 151a9719-a32a-4fca-a55c-769b47a73b34 ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169">
       <td>
          <span class="number">13  </span>
          <span class="text">
                         Migrationen und Konvertierungen
             ...</span>
          <div data-element-name="commentable-element"
-              id="015764f2-10d2-4a78-b35a-4b19bc2cf758d7e169"
+              id="ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="015764f2-10d2-4a78-b35a-4b19bc2cf758d7e169"
+              id="ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56"
@@ -482,7 +482,7 @@
       <td>
          <span class="number">14  </span>
          <span class="text">
-            Wichtige Konzepte 
+            Wichtige Konzepte
          </span>
          <div data-element-name="commentable-element"
               id="31a92dc0-959c-49a1-b06e-01e2369e050e"
@@ -516,7 +516,7 @@
       <td>
          <span class="number">15  </span>
          <span class="text">
-               Push vs. Pull Stylesheets
+               Push vs. Pull Stylesheets 
             </span>
          <div data-element-name="commentable-element"
               id="5b73f348-0058-45e0-82f7-c3de72ec5d41"
@@ -537,25 +537,25 @@
               id="adf97e75-c632-445e-aa9f-914096737fdcd6e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="25f869b0-77ed-4bf0-ae0e-d6ad28dd4c25d7e14"
+              id="79877a47-c142-4bac-adae-d31507905a17d7e14"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="136ade2a-80c3-4c47-9b83-16000af6e005d7e16"
+              id="efb4a192-ff36-4b2c-9386-2ae453895c3fd7e16"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="76327a5d-8727-46a9-9196-f78dfa9844a1d7e26"
+              id="fd8e7810-4432-43f7-8de9-6ab79ade12d2d7e26"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="f9f10e10-a164-4395-b00e-609474923fa7d7e28"
+              id="6ebed04f-7ad0-401a-9a20-0072c4976325d7e28"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="43976824-218f-4b76-9c34-24b9e47ccbfcd6e22"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="319ef108-e943-4557-b2f2-cbf0a7f17a81d7e42"
+              id="9a3524b6-6a8f-4b7a-a67f-c46cf5c480aed7e42"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="4ea7fe9c-2ec7-4e27-ae06-08e276f2dba8d7e44"
+              id="59e4b4c9-1911-4363-8aca-448eb386b391d7e44"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43"
@@ -595,7 +595,7 @@
       <td>
          <span class="number">16  </span>
          <span class="text">
-               Eindeutigkeit der Regelbasis 
+               Eindeutigkeit der Regelbasis
             </span>
          <div data-element-name="commentable-element"
               id="db988919-f71e-437e-b699-b6fdd2a32cb9"
@@ -614,19 +614,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="5a139382-8e26-429a-8a0e-03573ce3ca12d7e8"
+   <tr data-tt-id="6f8124e3-08f2-4df2-8035-828703e0503ad7e8"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 5a139382-8e26-429a-8a0e-03573ce3ca12d7e8">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 6f8124e3-08f2-4df2-8035-828703e0503ad7e8">
       <td>
          <span class="number">17  </span>
          <span class="text">
                         Reihenfolge der Match-Regeln
                ...</span>
          <div data-element-name="commentable-element"
-              id="5a139382-8e26-429a-8a0e-03573ce3ca12d7e8"
+              id="6f8124e3-08f2-4df2-8035-828703e0503ad7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="5a139382-8e26-429a-8a0e-03573ce3ca12d7e8"
+              id="6f8124e3-08f2-4df2-8035-828703e0503ad7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9"
@@ -639,19 +639,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="9720e342-90a9-407f-bbf5-67d26af60a78d7e18"
+   <tr data-tt-id="61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 9720e342-90a9-407f-bbf5-67d26af60a78d7e18">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18">
       <td>
          <span class="number">18  </span>
          <span class="text">
                         Präzedenz der Auswertung
                    ...</span>
          <div data-element-name="commentable-element"
-              id="9720e342-90a9-407f-bbf5-67d26af60a78d7e18"
+              id="61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9720e342-90a9-407f-bbf5-67d26af60a78d7e18"
+              id="61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c35ab440-7d81-4466-a34f-32545cec227ad6e14"
@@ -715,19 +715,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="bcad55a9-a4cc-456d-9f06-cc6e72f73f26d7e82"
+   <tr data-tt-id="537d63c7-8475-4e1b-9006-f30960de9cf7d7e82"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 bcad55a9-a4cc-456d-9f06-cc6e72f73f26d7e82">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 537d63c7-8475-4e1b-9006-f30960de9cf7d7e82">
       <td>
          <span class="number">19  </span>
          <span class="text">
                         Import Präzendenz und Default-Regel
         ...</span>
          <div data-element-name="commentable-element"
-              id="bcad55a9-a4cc-456d-9f06-cc6e72f73f26d7e82"
+              id="537d63c7-8475-4e1b-9006-f30960de9cf7d7e82"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="bcad55a9-a4cc-456d-9f06-cc6e72f73f26d7e82"
+              id="537d63c7-8475-4e1b-9006-f30960de9cf7d7e82"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19"
@@ -746,19 +746,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="996c7f9b-2e12-4ae8-8365-2cf791da97a6d7e98"
+   <tr data-tt-id="ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 996c7f9b-2e12-4ae8-8365-2cf791da97a6d7e98">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98">
       <td>
          <span class="number">20  </span>
          <span class="text">
                         Prioritäten
                      </span>
          <div data-element-name="commentable-element"
-              id="996c7f9b-2e12-4ae8-8365-2cf791da97a6d7e98"
+              id="ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="996c7f9b-2e12-4ae8-8365-2cf791da97a6d7e98"
+              id="ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="be710deb-554e-4962-beb9-9de58d386c7fd6e24"
@@ -804,19 +804,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="f4a22d8f-436c-406a-9839-b00033eef687d7e139"
+   <tr data-tt-id="bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139"
        data-tt-parent-id="db988919-f71e-437e-b699-b6fdd2a32cb9"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 f4a22d8f-436c-406a-9839-b00033eef687d7e139">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e db988919-f71e-437e-b699-b6fdd2a32cb9 bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139">
       <td>
          <span class="number">21  </span>
          <span class="text">
                         Modus Attribute
                      </span>
          <div data-element-name="commentable-element"
-              id="f4a22d8f-436c-406a-9839-b00033eef687d7e139"
+              id="bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="f4a22d8f-436c-406a-9839-b00033eef687d7e139"
+              id="bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29"
@@ -847,7 +847,7 @@
       <td>
          <span class="number">22  </span>
          <span class="text">
-               Namespaces 
+               Namespaces
             </span>
          <div data-element-name="commentable-element"
               id="3e443c28-8698-470b-b443-f286ff7ed2d5"
@@ -917,19 +917,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="d6ad303e-16ab-4717-97ca-345cdaccaf07d7e79"
+   <tr data-tt-id="f8de39a5-2115-4624-9b34-a782d9ec7711d7e79"
        data-tt-parent-id="3e443c28-8698-470b-b443-f286ff7ed2d5"
-       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e 3e443c28-8698-470b-b443-f286ff7ed2d5 d6ad303e-16ab-4717-97ca-345cdaccaf07d7e79">
+       data-chapter-link-id="31a92dc0-959c-49a1-b06e-01e2369e050e 3e443c28-8698-470b-b443-f286ff7ed2d5 f8de39a5-2115-4624-9b34-a782d9ec7711d7e79">
       <td>
          <span class="number">23  </span>
          <span class="text">
                         Namespaces in XQuery
                      </span>
          <div data-element-name="commentable-element"
-              id="d6ad303e-16ab-4717-97ca-345cdaccaf07d7e79"
+              id="f8de39a5-2115-4624-9b34-a782d9ec7711d7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="d6ad303e-16ab-4717-97ca-345cdaccaf07d7e79"
+              id="f8de39a5-2115-4624-9b34-a782d9ec7711d7e79"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74"
@@ -953,7 +953,7 @@
       <td>
          <span class="number">24  </span>
          <span class="text">
-            Ausgewählte Themen 
+            Ausgewählte Themen
          </span>
          <div data-element-name="commentable-element"
               id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
@@ -978,7 +978,7 @@
       <td>
          <span class="number">25  </span>
          <span class="text">
-               Transformationen mit XSLT 
+               Transformationen mit XSLT
             </span>
          <div data-element-name="commentable-element"
               id="c20c1e01-1175-4664-a26a-71317760930f"
@@ -1015,7 +1015,7 @@
       <td>
          <span class="number">26  </span>
          <span class="text">
-                  Vortransformationen
+                  Vortransformationen 
                </span>
          <div data-element-name="commentable-element"
               id="ceed4546-a60b-4d5f-a625-6e79c180cc13"
@@ -1098,19 +1098,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="95fe6ef9-d836-48bd-91c0-bd9e2fc4d9b7d7e8"
+   <tr data-tt-id="2372c553-707e-4008-b13f-7d33886145f3d7e8"
        data-tt-parent-id="888d37da-0dbe-4fae-bec9-2ad1e99f7818"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f 888d37da-0dbe-4fae-bec9-2ad1e99f7818 95fe6ef9-d836-48bd-91c0-bd9e2fc4d9b7d7e8">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f 888d37da-0dbe-4fae-bec9-2ad1e99f7818 2372c553-707e-4008-b13f-7d33886145f3d7e8">
       <td>
          <span class="number">28  </span>
          <span class="text">
                            Beispiel: Parameterisierung
              ...</span>
          <div data-element-name="commentable-element"
-              id="95fe6ef9-d836-48bd-91c0-bd9e2fc4d9b7d7e8"
+              id="2372c553-707e-4008-b13f-7d33886145f3d7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="95fe6ef9-d836-48bd-91c0-bd9e2fc4d9b7d7e8"
+              id="2372c553-707e-4008-b13f-7d33886145f3d7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9"
@@ -1128,7 +1128,7 @@
               id="fd634ecc-535d-4768-bc6f-eb4e29d0f513d6e17"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="626bb8a9-aa2a-4390-bea9-4151c230bd6b"
+              id="0a812a97-0146-461c-bc92-00f7a42f49e0"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c22ab5e0-6336-4c9b-8dff-af1a3bfd84a9d6e22"
@@ -1156,7 +1156,7 @@
       <td>
          <span class="number">29  </span>
          <span class="text">
-                  XSLT Streaming 
+                  XSLT Streaming
                </span>
          <div data-element-name="commentable-element"
               id="1f8595d0-4ed9-4070-8cff-c5c59f690093"
@@ -1205,7 +1205,7 @@
       <td>
          <span class="number">30  </span>
          <span class="text">
-                     XSLT Akkumulator 
+                     XSLT Akkumulator
                   </span>
          <div data-element-name="commentable-element"
               id="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
@@ -1266,7 +1266,7 @@
       <td>
          <span class="number">31  </span>
          <span class="text">
-                     XSLT Iterator 
+                     XSLT Iterator
                   </span>
          <div data-element-name="commentable-element"
               id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
@@ -1293,7 +1293,7 @@
               id="1babc673-5450-4c9f-94d7-02027e879a51d6e21"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b15968ef-1273-464e-a15a-c8b8bbb43b7e"
+              id="9573967e-809c-4d86-8bf1-0381ac6e2b5d"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="24530e61-5662-4972-844c-140ea8d8dc0dd6e23"
@@ -1349,19 +1349,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="877af823-9eba-4746-8c71-4f0ad47f324ed7e8"
+   <tr data-tt-id="75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8"
        data-tt-parent-id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f e3ccdc75-56e4-45b3-a2be-07a61a2dcd51 877af823-9eba-4746-8c71-4f0ad47f324ed7e8">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f e3ccdc75-56e4-45b3-a2be-07a61a2dcd51 75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8">
       <td>
          <span class="number">33  </span>
          <span class="text">
                            Beispiel Stückliste
                      ...</span>
          <div data-element-name="commentable-element"
-              id="877af823-9eba-4746-8c71-4f0ad47f324ed7e8"
+              id="75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="877af823-9eba-4746-8c71-4f0ad47f324ed7e8"
+              id="75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9"
@@ -1374,19 +1374,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="2f3b11e0-9dab-4914-811a-98f2547058f6d7e17"
+   <tr data-tt-id="bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17"
        data-tt-parent-id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f e3ccdc75-56e4-45b3-a2be-07a61a2dcd51 2f3b11e0-9dab-4914-811a-98f2547058f6d7e17">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f e3ccdc75-56e4-45b3-a2be-07a61a2dcd51 bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17">
       <td>
          <span class="number">34  </span>
          <span class="text">
                            Beispiel Mantel Dokument
                 ...</span>
          <div data-element-name="commentable-element"
-              id="2f3b11e0-9dab-4914-811a-98f2547058f6d7e17"
+              id="bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="2f3b11e0-9dab-4914-811a-98f2547058f6d7e17"
+              id="bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17"
@@ -1395,7 +1395,7 @@
               id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="4e229a7a-286e-4165-a313-9fb4d289a6db"
+              id="18ee2c22-0163-4c54-af55-c15a807a817b"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="30f17d4c-717b-4778-ad02-1d6a5f41c443d6e22"
@@ -1411,7 +1411,7 @@
       <td>
          <span class="number">35  </span>
          <span class="text">
-                  Reguläre Ausdrücke 
+                  Reguläre Ausdrücke
                </span>
          <div data-element-name="commentable-element"
               id="12f4b667-2093-456b-8986-d269a6375d60"
@@ -1442,19 +1442,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="dd0f5cc7-0db6-463a-84cb-c8a0142263f9d7e20"
+   <tr data-tt-id="30da0844-76bc-41ff-94ad-a157a80558ffd7e20"
        data-tt-parent-id="12f4b667-2093-456b-8986-d269a6375d60"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f 12f4b667-2093-456b-8986-d269a6375d60 dd0f5cc7-0db6-463a-84cb-c8a0142263f9d7e20">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea c20c1e01-1175-4664-a26a-71317760930f 12f4b667-2093-456b-8986-d269a6375d60 30da0844-76bc-41ff-94ad-a157a80558ffd7e20">
       <td>
          <span class="number">36  </span>
          <span class="text">
                            XSLT Analyze String
                      ...</span>
          <div data-element-name="commentable-element"
-              id="dd0f5cc7-0db6-463a-84cb-c8a0142263f9d7e20"
+              id="30da0844-76bc-41ff-94ad-a157a80558ffd7e20"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="dd0f5cc7-0db6-463a-84cb-c8a0142263f9d7e20"
+              id="30da0844-76bc-41ff-94ad-a157a80558ffd7e20"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="055ae7ca-d2b1-41e4-be84-675e3e8827bdd6e21"
@@ -1538,7 +1538,7 @@
       <td>
          <span class="number">38  </span>
          <span class="text">
-               Abfragen mit XQuery
+               Abfragen mit XQuery 
             </span>
          <div data-element-name="commentable-element"
               id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
@@ -1569,19 +1569,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="67fd81f2-4689-437b-b3dd-369c5de8709cd7e19"
+   <tr data-tt-id="bad962ab-2a60-457c-af56-18e79561bbced7e19"
        data-tt-parent-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 67fd81f2-4689-437b-b3dd-369c5de8709cd7e19">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c bad962ab-2a60-457c-af56-18e79561bbced7e19">
       <td>
          <span class="number">39  </span>
          <span class="text">
                         XQuery Builder
                      </span>
          <div data-element-name="commentable-element"
-              id="67fd81f2-4689-437b-b3dd-369c5de8709cd7e19"
+              id="bad962ab-2a60-457c-af56-18e79561bbced7e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="67fd81f2-4689-437b-b3dd-369c5de8709cd7e19"
+              id="bad962ab-2a60-457c-af56-18e79561bbced7e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20"
@@ -1590,29 +1590,29 @@
               id="10cad5f2-85f8-44a2-820b-25080e044176d6e22"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="667dba3e-88fa-4c6d-962d-22773f3fc227d7e25"
+              id="e2c3666c-cde2-41a1-bdfd-947a46ee2ccfd7e25"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="07391e52-3bcf-4a3a-beab-7f624c298186d7e27"
+              id="3d0ac3cb-6b99-4c46-8a28-7dd2f579a94dd7e27"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="f9cd5153-7930-46ee-9bfd-33e14ec55f03d6e28"
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="57ec7ec6-9465-4ef7-83ac-92174eeccb1ad7e34"
+   <tr data-tt-id="b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34"
        data-tt-parent-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 57ec7ec6-9465-4ef7-83ac-92174eeccb1ad7e34">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34">
       <td>
          <span class="number">40  </span>
          <span class="text">
                         FLOWR Expression
                      </span>
          <div data-element-name="commentable-element"
-              id="57ec7ec6-9465-4ef7-83ac-92174eeccb1ad7e34"
+              id="b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="57ec7ec6-9465-4ef7-83ac-92174eeccb1ad7e34"
+              id="b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33"
@@ -1628,19 +1628,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="fdf8b1d4-6a75-4c1f-a01a-c048f7040ae1d7e46"
+   <tr data-tt-id="bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46"
        data-tt-parent-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c fdf8b1d4-6a75-4c1f-a01a-c048f7040ae1d7e46">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46">
       <td>
          <span class="number">41  </span>
          <span class="text">
                         XML per XQuery
                      </span>
          <div data-element-name="commentable-element"
-              id="fdf8b1d4-6a75-4c1f-a01a-c048f7040ae1d7e46"
+              id="bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="fdf8b1d4-6a75-4c1f-a01a-c048f7040ae1d7e46"
+              id="bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44"
@@ -1653,19 +1653,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="a8cb0452-2554-4e95-9f11-5db6da61c27fd7e57"
+   <tr data-tt-id="7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57"
        data-tt-parent-id="0846d6a2-6999-42ab-9e83-55bc197fc11c"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c a8cb0452-2554-4e95-9f11-5db6da61c27fd7e57">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57">
       <td>
          <span class="number">42  </span>
          <span class="text">
                         Document Projection
                      </span>
          <div data-element-name="commentable-element"
-              id="a8cb0452-2554-4e95-9f11-5db6da61c27fd7e57"
+              id="7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="a8cb0452-2554-4e95-9f11-5db6da61c27fd7e57"
+              id="7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54"
@@ -1687,7 +1687,7 @@
       <td>
          <span class="number">43  </span>
          <span class="text">
-                  XQuery als Programmiersprache 
+                  XQuery als Programmiersprache
                </span>
          <div data-element-name="commentable-element"
               id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
@@ -1703,19 +1703,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="0b23ad5a-3573-4e48-9d83-706112e956d3d7e6"
+   <tr data-tt-id="bb4765d2-8739-4510-b234-8a9d8bf37260d7e6"
        data-tt-parent-id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 0b23ad5a-3573-4e48-9d83-706112e956d3d7e6">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 bb4765d2-8739-4510-b234-8a9d8bf37260d7e6">
       <td>
          <span class="number">44  </span>
          <span class="text">
                            Schleifen
                         </span>
          <div data-element-name="commentable-element"
-              id="0b23ad5a-3573-4e48-9d83-706112e956d3d7e6"
+              id="bb4765d2-8739-4510-b234-8a9d8bf37260d7e6"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="0b23ad5a-3573-4e48-9d83-706112e956d3d7e6"
+              id="bb4765d2-8739-4510-b234-8a9d8bf37260d7e6"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7"
@@ -1731,19 +1731,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="a665390b-e9c4-4e48-b14f-fd38a8ec175cd7e19"
+   <tr data-tt-id="1a19cfd9-449b-4a72-adeb-85ef394253dad7e19"
        data-tt-parent-id="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 a665390b-e9c4-4e48-b14f-fd38a8ec175cd7e19">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 1a19cfd9-449b-4a72-adeb-85ef394253dad7e19">
       <td>
          <span class="number">45  </span>
          <span class="text">
                            Dokumente in der DB anlegen
              ...</span>
          <div data-element-name="commentable-element"
-              id="a665390b-e9c4-4e48-b14f-fd38a8ec175cd7e19"
+              id="1a19cfd9-449b-4a72-adeb-85ef394253dad7e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="a665390b-e9c4-4e48-b14f-fd38a8ec175cd7e19"
+              id="1a19cfd9-449b-4a72-adeb-85ef394253dad7e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="0bbb962d-b38e-431a-855a-294425a5a016d6e20"
@@ -1768,7 +1768,7 @@
       <td>
          <span class="number">46  </span>
          <span class="text">
-                     Funktionen und Module 
+                     Funktionen und Module
                   </span>
          <div data-element-name="commentable-element"
               id="3630ee02-616b-4bbc-8655-9064d57bf945"
@@ -1781,19 +1781,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="5ab4844b-993d-482c-b3ae-baf58d8b19cdd7e4"
+   <tr data-tt-id="8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4"
        data-tt-parent-id="3630ee02-616b-4bbc-8655-9064d57bf945"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 5ab4844b-993d-482c-b3ae-baf58d8b19cdd7e4">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4">
       <td>
          <span class="number">47  </span>
          <span class="text">
                               Funktionen
                            </span>
          <div data-element-name="commentable-element"
-              id="5ab4844b-993d-482c-b3ae-baf58d8b19cdd7e4"
+              id="8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="5ab4844b-993d-482c-b3ae-baf58d8b19cdd7e4"
+              id="8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5"
@@ -1818,19 +1818,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="e4cb2ce7-fa48-4b2b-84bf-9af8e5e03d2fd7e25"
+   <tr data-tt-id="a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25"
        data-tt-parent-id="3630ee02-616b-4bbc-8655-9064d57bf945"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 e4cb2ce7-fa48-4b2b-84bf-9af8e5e03d2fd7e25">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 3630ee02-616b-4bbc-8655-9064d57bf945 a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25">
       <td>
          <span class="number">48  </span>
          <span class="text">
                               Module
                            </span>
          <div data-element-name="commentable-element"
-              id="e4cb2ce7-fa48-4b2b-84bf-9af8e5e03d2fd7e25"
+              id="a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="e4cb2ce7-fa48-4b2b-84bf-9af8e5e03d2fd7e25"
+              id="a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26"
@@ -1875,19 +1875,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="2b328a57-3431-468a-9491-ad55388753b6d7e10"
+   <tr data-tt-id="075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10"
        data-tt-parent-id="d9cd641f-29f4-485d-8e67-32519d422b08"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 d9cd641f-29f4-485d-8e67-32519d422b08 2b328a57-3431-468a-9491-ad55388753b6d7e10">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 0846d6a2-6999-42ab-9e83-55bc197fc11c 98665bd9-d40d-4fc7-ab7a-e340be6190a6 d9cd641f-29f4-485d-8e67-32519d422b08 075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10">
       <td>
          <span class="number">50  </span>
          <span class="text">
                               Beispiel: Konditionale Server App
     ...</span>
          <div data-element-name="commentable-element"
-              id="2b328a57-3431-468a-9491-ad55388753b6d7e10"
+              id="075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="2b328a57-3431-468a-9491-ad55388753b6d7e10"
+              id="075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="b0df228c-1f72-4a12-9302-805fa0022b03d6e11"
@@ -1924,7 +1924,7 @@
       <td>
          <span class="number">51  </span>
          <span class="text">
-               XML Datenbanken 
+               XML Datenbanken
             </span>
          <div data-element-name="commentable-element"
               id="3337f433-44bf-430d-a809-73fd1de5ba6c"
@@ -1967,7 +1967,7 @@
       <td>
          <span class="number">52  </span>
          <span class="text">
-                  Connector zu Marklogic in Oxygen 
+                  Connector zu Marklogic in Oxygen
                </span>
          <div data-element-name="commentable-element"
               id="38f7a676-cbef-4a69-9ae9-d89bddde2719"
@@ -1988,37 +1988,37 @@
               id="c4eeb7c1-21bc-47b7-a37b-772b65113af2d6e13"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="02be88f3-8a5b-4c4f-b7eb-fed583be259dd7e12"
+              id="10f7f6b7-9ea2-4d09-9edd-7c84a5364db4d7e12"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="eeb8e3dd-c1c6-4158-a88a-2157da375f78d6e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="4edc0b0d-ac4f-44d2-80c0-c45aea89e2b7d7e18"
+              id="79ab1c1a-881b-4e91-84e3-0f32f17ad82bd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="1157efd7-7cf1-4405-ae94-63e33d685a1ad7e27"
+              id="603a6c0f-7693-4d78-8e0b-6dc833c5e6a0d7e27"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="fafe35d0-f23a-4f74-9910-de34f4215c51d6e30"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="643528c3-88df-47a9-974b-ce80d525e821d7e39"
+              id="a4dd752b-098c-4388-bbac-1835d5957212d7e39"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="4c0a0809-6c78-47c6-a30b-615f1ad96745d7e43"
+              id="cf84e465-8874-43ad-a5f4-2abdf1627fe4d7e43"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="9c2a53f4-bd6e-42d5-b88c-9e23a3a52923d6e46"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="995e3e3f-fcac-441d-a2a9-625f4f54faadd7e50"
+              id="3a5cdeb8-5781-41e0-818e-77c97592c31fd7e50"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="3a372d8e-d264-487c-be23-7c049f8f82ead6e53"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="d7eed60d-6cf7-43e8-aedb-21bd7da32296d7e56"
+              id="5264cc98-2b6d-4f48-997c-404055c93b16d7e56"
               style="display:none"> </div>
       </td>
    </tr>
@@ -2028,7 +2028,7 @@
       <td>
          <span class="number">53  </span>
          <span class="text">
-                  SQL Views in MarkLogic 
+                  SQL Views in MarkLogic
                </span>
          <div data-element-name="commentable-element"
               id="382bb96a-5a06-460c-8d69-4c4cd613297c"
@@ -2083,7 +2083,7 @@
       <td>
          <span class="number">54  </span>
          <span class="text">
-                  Bi-Temporale Dokumente 
+                  Bi-Temporale Dokumente
                </span>
          <div data-element-name="commentable-element"
               id="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0"
@@ -2216,8 +2216,8 @@
       <td>
          <span class="number">55  </span>
          <span class="text">
-                     Anlegen des Testszenarios auf der ML Konsole 
- ...</span>
+                     Anlegen des Testszenarios auf der ML Konsole
+  ...</span>
          <div data-element-name="commentable-element"
               id="7c58baac-7b83-41b9-adf6-12f63539cbb6"
               style="display:none"> </div>
@@ -2261,7 +2261,7 @@
               id="48ff0142-18b5-4135-986c-b4f3baf3550ed6e37"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="7ca84602-df41-4093-843a-af443593c0b3d7e40"
+              id="534f0e12-a15e-4a26-89c9-59ce7b7e0434d7e40"
               style="display:none"> </div>
       </td>
    </tr>
@@ -2271,8 +2271,8 @@
       <td>
          <span class="number">56  </span>
          <span class="text">
-                     Ausführen einiger Beispiel-Queries 
-           ...</span>
+                     Ausführen einiger Beispiel-Queries
+            ...</span>
          <div data-element-name="commentable-element"
               id="62faa067-ecd5-4053-8388-e7e151f04542"
               style="display:none"> </div>
@@ -2295,160 +2295,160 @@
               id="c4bd0531-72dc-4551-9712-58a21abef158d6e12"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="eb17dcb4-7bc2-41f0-8d1d-778c47e606bbd7e16"
+              id="a47451ed-c17d-4b3e-a8c9-59106871e200d7e16"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="3ae106e4-9352-4325-9c71-c7c6e23b50e9d7e18"
+              id="4a3c1e51-560b-4770-bfeb-5765e1549d7dd7e18"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="2a78916c-0b03-41fe-b711-de7bf5595521d7e19"
+              id="c929694f-0037-48d0-bb80-94549adcee84d7e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="c049d063-8db4-477d-b11c-5f7a7d4deeb3d7e20"
+              id="fbbf52a1-161f-4657-a737-b8a4120960bbd7e20"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="e737ee15-d24c-4456-9b61-eeebe92ccca5d7e21"
+              id="f060fa71-5156-4b4a-909f-6c6436214e96d7e21"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="eacbf939-36e1-4b38-abf0-131160a8e9b6d7e22"
+              id="73e548ba-683e-4bb8-afb5-096a87b5ab6cd7e22"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="31e1af20-fa86-49e0-8923-86e730382485d7e23"
+              id="bb2446c6-4b86-47ac-92d8-7d604fbf58ccd7e23"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="269c9054-1e0f-4974-92e0-707d5b26db33d7e24"
+              id="05472aa5-4e1a-4b82-b2c2-4c550d30d450d7e24"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="36a7e568-2f5a-4a3d-b822-c67d5110ffc1d7e25"
+              id="dd48c31d-955d-43aa-a917-cf3914224767d7e25"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="b2216d9b-02c2-472d-ae0f-450eec54ffe6d7e26"
+              id="2924046f-3296-48f8-ba08-1c8369602a7ed7e26"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="3b858260-3132-4744-822a-388757bf1ca7d6e22"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="6ec5614b-b56d-41e6-9b75-3862e99f8158d7e29"
+              id="3bea3fcd-fe94-43d2-9021-1c5f24d7c3c1d7e29"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="96fa723c-32d1-4215-8ea6-34f4c4e8d4e0d6e28"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="33a838da-a866-46ff-bb61-02bde0d6c2e5d7e32"
+              id="c053da14-5240-4f27-b64b-ee8dce461664d7e32"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="f3f4d9b2-d393-47f7-88f9-f0bd49c13be2d6e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="67273998-3428-4587-883e-800b073ced58d7e35"
+              id="de27212c-bd38-434a-ae65-792c7c15fdc1d7e35"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="6738e10e-4028-4824-bd5a-2f31fc7276a9d6e37"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="3deed836-7600-4063-803e-c406e1bc1c6dd7e38"
+              id="a5f1b0d4-a1cf-4175-a793-62a2afa1b687d7e38"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="abe482e7-7fea-4484-a3bc-7838a551a318d6e40"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="57b04f0e-bd24-4c51-9a0a-2d58a510278bd7e41"
+              id="bc4920d8-25dc-438a-aa12-810563c00f0fd7e41"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="0ae352dc-0d20-4d5c-ba77-4d6ba3aa8350d7e42"
+              id="db42436c-961e-46f0-a2ab-e3f9a15365d2d7e42"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="5934fad2-f294-49b9-a343-1f3b4ba9af29d7e43"
+              id="390afabb-2ef7-4b7c-8a58-16158047dff0d7e43"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="1c29ef78-25db-4140-b0cf-2434fe62501fd6e33"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="27365103-244b-4a25-bc2b-fd0abc6086efd7e46"
+              id="d81f33fb-370c-4fdb-a6a1-ed3ee5a25707d7e46"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="05c544a3-7bd5-4253-b5ee-67dabcabfbf4d6e51"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="8c0e0e67-0ef7-4865-961b-d8ca09abe94ad7e49"
+              id="c81218c3-85de-4329-b4a6-9aef63c86569d7e49"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="7b570410-dfd1-48dc-a64c-5ff7ee9f84d1d6e54"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="03dbec7b-c650-4c19-b0b9-e261d6051215d7e53"
+              id="da7386d3-f478-47cc-ba9f-e7ae12db2501d7e53"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="f84359ce-723b-4894-9c92-ffcea49f4624d6e58"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="809f348c-3429-4471-8dab-dd292333a776d7e56"
+              id="984c85c8-ad82-4fdd-a0d1-03e8dc94d944d7e56"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="093daa5f-3d5f-4d81-beb6-e196c438fcd5d6e61"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="56033252-37d0-4b91-a4a9-a181b3774d19d7e59"
+              id="822e488d-b008-4134-9ef7-3fce7218158ed7e59"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="bad120e6-f1ef-4a1d-8ccb-22f67478dae8d7e60"
+              id="2988d55b-c151-47c8-87a1-afbabc97f11fd7e60"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="80b154da-dd44-41e9-9478-c6902e4b4bb1d6e41"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="cf9b5b6e-97bd-40c1-88af-9dd3f8e20f25d7e63"
+              id="633a6696-3b88-46ad-90d9-adbc4e4a4fe4d7e63"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="865093ca-d4e5-4225-a791-45f80ad8fb7ed6e71"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="97fe5ca0-8d4f-4614-9dca-72ac63e43d5dd7e66"
+              id="5e6a24dc-b6a0-4d1a-bf19-c35727cb382ad7e66"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="b274b678-7150-4874-a037-23b792835749d6e74"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9f0729f6-4c89-4c8a-88f1-1a00080ca5ead7e69"
+              id="e68e1769-a42b-4ab7-96bf-50d3cb82337bd7e69"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c41e2883-6169-491b-a011-982003d98c89d6e77"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="caf84597-a57c-43ba-b118-ab1b8dff866fd7e72"
+              id="9177742c-dc0c-472a-af9a-8deed45d1e02d7e72"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="604a1931-45e7-48e9-879c-325749779335d6e80"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="e29a0021-0696-461c-9a59-74eb8bb28d4fd7e76"
+              id="5ae602bf-815a-46ef-87cb-951658c71273d7e76"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="0aca9b4e-d8cc-4320-82cd-df205165e1f9d7e77"
+              id="462f7562-773e-4c30-8255-82894cace5c4d7e77"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="1a49c7fb-9c2d-420d-aaf7-12f4c3c8c11dd6e49"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="748782c0-7407-473a-a56c-32e2b8e873b4d7e80"
+              id="49330d49-73c2-4571-b694-bda05f1d3aaed7e80"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="2d55653f-3aff-4633-ab66-6de296a620f7d6e91"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="59cffccf-a3ba-487c-afa4-b73f799d0233d7e83"
+              id="3fb3b9c5-2ab4-4e20-ac83-fff36bc77973d7e83"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="59329648-b091-46a1-8e6a-6247f0c7c617d6e94"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="6476593c-5e03-41c8-ae9c-4557d6610cb1d7e87"
+              id="94cb7710-dd68-4074-8b5d-a01970407a37d7e87"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="22c74575-6baf-4a2b-9da6-1fb880a2b15ed6e97"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="c173aa22-3de4-41a6-8aa3-430e9a5a3ff4d7e90"
+              id="889e2319-4134-4a0f-8dde-c9c1db5bf912d7e90"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="79110572-309b-4067-8121-9f9a456f8e1cd6e100"
@@ -2463,13 +2463,13 @@
               id="059b400f-b00a-4a79-944c-c54a2cbec2b0d6e93"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="ea834c2f-193f-486d-9a84-3b95578ca8bad7e101"
+              id="5ce87a88-b8e9-480c-a0ef-18b8cfb48b9dd7e101"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9d30403b-3b6a-4e99-8d9b-963f00d7e84dd7e105"
+              id="576fe768-e4c2-47d3-9d69-44de36f26b1ad7e105"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="c1fb176c-0080-446f-85cf-1ba34b9acd4ad7e109"
+              id="9828664f-381d-40b5-9bf5-0c43400582fdd7e109"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="5fb358f2-9a8a-48ce-b92e-2732bb8a695dd6e111"
@@ -2485,7 +2485,7 @@
       <td>
          <span class="number">57  </span>
          <span class="text">
-                  MarkLogic Tools 
+                  MarkLogic Tools
                </span>
          <div data-element-name="commentable-element"
               id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
@@ -2516,8 +2516,8 @@
       <td>
          <span class="number">58  </span>
          <span class="text">
-                     mlproj - Project and Environment Manager 
-     ...</span>
+                     mlproj - Project and Environment Manager
+      ...</span>
          <div data-element-name="commentable-element"
               id="8f729755-73c7-4234-a5b2-77d2ca38a5be"
               style="display:none"> </div>
@@ -2538,7 +2538,7 @@
       <td>
          <span class="number">59  </span>
          <span class="text">
-                     EXPath Konsole 
+                     EXPath Konsole
                   </span>
          <div data-element-name="commentable-element"
               id="7fd62b3e-5e73-4470-ae83-318570ddcb44"
@@ -2578,7 +2578,7 @@
       <td>
          <span class="number">60  </span>
          <span class="text">
-                     mlcp - Content Pump 
+                     mlcp - Content Pump
                   </span>
          <div data-element-name="commentable-element"
               id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb"
@@ -2600,7 +2600,7 @@
       <td>
          <span class="number">61  </span>
          <span class="text">
-               Testing 
+               Testing
             </span>
          <div data-element-name="commentable-element"
               id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
@@ -2622,7 +2622,7 @@
       <td>
          <span class="number">62  </span>
          <span class="text">
-                  Validierung mit Schematron 
+                  Validierung mit Schematron
                </span>
          <div data-element-name="commentable-element"
               id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
@@ -2647,19 +2647,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="7eeed593-1313-437b-a889-c6852e268463d7e23"
+   <tr data-tt-id="8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23"
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 7eeed593-1313-437b-a889-c6852e268463d7e23">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23">
       <td>
          <span class="number">63  </span>
          <span class="text">
                            Schematron ist XSLT
                      ...</span>
          <div data-element-name="commentable-element"
-              id="7eeed593-1313-437b-a889-c6852e268463d7e23"
+              id="8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="7eeed593-1313-437b-a889-c6852e268463d7e23"
+              id="8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="c802dd14-5953-4c24-8637-f7552d107e57d6e13"
@@ -2671,29 +2671,29 @@
               id="ca8d184a-924b-4ea6-bdab-3340c1bde072d6e19"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="5f9d96e7-770b-4920-acbf-26cc07065cead7e32"
+              id="14d10ed8-da18-4558-85da-bba3ee0d3519d7e32"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="49b7e73d-b657-40e2-af16-1209ce83b7b8d7e34"
+              id="bb4de76e-62ee-4e3b-a413-1699d78eacb8d7e34"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="4e1ec9a6-9a1a-470b-9e86-2708788be97bd6e19"
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="ff536b54-4614-4447-ac66-f1d56e8e8c18d7e39"
+   <tr data-tt-id="96a66a14-94a8-420a-828f-ec06677c0fe5d7e39"
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 ff536b54-4614-4447-ac66-f1d56e8e8c18d7e39">
+       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 96a66a14-94a8-420a-828f-ec06677c0fe5d7e39">
       <td>
          <span class="number">64  </span>
          <span class="text">
                            CLI Verwendung
                         </span>
          <div data-element-name="commentable-element"
-              id="ff536b54-4614-4447-ac66-f1d56e8e8c18d7e39"
+              id="96a66a14-94a8-420a-828f-ec06677c0fe5d7e39"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="ff536b54-4614-4447-ac66-f1d56e8e8c18d7e39"
+              id="96a66a14-94a8-420a-828f-ec06677c0fe5d7e39"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20"
@@ -2751,7 +2751,7 @@
       <td>
          <span class="number">65  </span>
          <span class="text">
-                  Erste Schritte mit Xspec 
+                  Erste Schritte mit Xspec
                </span>
          <div data-element-name="commentable-element"
               id="cc183707-5352-4c9c-9c31-68047a882d0f"
@@ -2799,7 +2799,7 @@
       <td>
          <span class="number">66  </span>
          <span class="text">
-            Zusätzliches Know-How 
+            Zusätzliches Know-How
          </span>
          <div data-element-name="commentable-element"
               id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
@@ -2824,7 +2824,7 @@
       <td>
          <span class="number">67  </span>
          <span class="text">
-               GIT Einmaleins
+               GIT Einmaleins 
             </span>
          <div data-element-name="commentable-element"
               id="7dbb15ce-bbc5-4d91-b977-ed7e8117730e"
@@ -2852,7 +2852,7 @@
       <td>
          <span class="number">68  </span>
          <span class="text">
-               XML Editoren
+               XML Editoren 
             </span>
          <div data-element-name="commentable-element"
               id="4100d43a-5b71-43ba-a05f-1063fcee8679"
@@ -2871,19 +2871,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="9332750e-c772-43ec-af17-4c8a6f2a9350d7e52"
+   <tr data-tt-id="07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52"
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
-       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 9332750e-c772-43ec-af17-4c8a6f2a9350d7e52">
+       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52">
       <td>
          <span class="number">69  </span>
          <span class="text">
                         WYSIWYM Desktop
                      </span>
          <div data-element-name="commentable-element"
-              id="9332750e-c772-43ec-af17-4c8a6f2a9350d7e52"
+              id="07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="9332750e-c772-43ec-af17-4c8a6f2a9350d7e52"
+              id="07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="346853d6-4d45-42f4-a7b8-77af38d96151d6e9"
@@ -2896,19 +2896,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="a3efcfd4-0792-403a-b0dc-a3b47d810ba7d7e73"
+   <tr data-tt-id="e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73"
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
-       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 a3efcfd4-0792-403a-b0dc-a3b47d810ba7d7e73">
+       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73">
       <td>
          <span class="number">70  </span>
          <span class="text">
                         WYSIWYG Desktop
                      </span>
          <div data-element-name="commentable-element"
-              id="a3efcfd4-0792-403a-b0dc-a3b47d810ba7d7e73"
+              id="e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="a3efcfd4-0792-403a-b0dc-a3b47d810ba7d7e73"
+              id="e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="4c42f7f1-6d2a-482d-8d84-2c500fb35927d6e74"
@@ -2918,19 +2918,19 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="5126fefd-1681-419e-9924-a45603816505d7e78"
+   <tr data-tt-id="495cf848-e78c-4ec3-91d4-9bf23b755209d7e78"
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
-       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 5126fefd-1681-419e-9924-a45603816505d7e78">
+       data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 495cf848-e78c-4ec3-91d4-9bf23b755209d7e78">
       <td>
          <span class="number">71  </span>
          <span class="text">
                         WYSIWYM Online
                      </span>
          <div data-element-name="commentable-element"
-              id="5126fefd-1681-419e-9924-a45603816505d7e78"
+              id="495cf848-e78c-4ec3-91d4-9bf23b755209d7e78"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
-              id="5126fefd-1681-419e-9924-a45603816505d7e78"
+              id="495cf848-e78c-4ec3-91d4-9bf23b755209d7e78"
               style="display:none"> </div>
          <div data-element-name="commentable-element"
               id="092992f0-ac89-4bd8-bba5-a1d685135135d6e79"
@@ -2963,7 +2963,7 @@
       <td>
          <span class="number">72  </span>
          <span class="text">
-            Glossary 
+            Glossar
          </span>
          <div data-element-name="commentable-element"
               id="3dfad2c2-2299-461a-9d80-42237bbb5e89"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="e7a9c8c6-7155-402a-9c95-89d45fc022de"><title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title><body id="a4eb5204-67d2-446b-97f6-89871c6a031d"><p id="9b154448-31c9-495f-bc85-ecb297deece8">XSLT Streaming[[xe1:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem.</p><p id="aa76d0b9-61b5-44c5-9ee7-d7af8676826fd6e6">Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden:</p><pre id="57db7a80-fa53-4f88-8d05-55c592b5fe0ad6e8" xml:space="preserve">&lt;status-report&gt;
+<?xml version="1.0" encoding="UTF-8"?><topic id="e7a9c8c6-7155-402a-9c95-89d45fc022de"><title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title><body id="a4eb5204-67d2-446b-97f6-89871c6a031d"><p id="9b154448-31c9-495f-bc85-ecb297deece8">XSLT Streaming[[xe1:Verarbeitungsmethoden; xe2:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem. Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden.</p><pre id="cd0c5f83-0252-4fd2-bc17-698d581c13b4d7e6" xml:space="preserve">&lt;status-report&gt;
   &lt;status-change&gt;
     &lt;billing_id&gt;360788&lt;/dentaltrac_encounter_id&gt;
     &lt;claim_ids&gt;967382,673647&lt;/claim_ids&gt;
@@ -11,47 +11,72 @@
     &lt;status&gt;open&lt;/status&gt;
     &lt;time_stamp&gt;2019-02-22T13:53:34.605Z&lt;/status_time&gt;
   &lt;/status-change&gt;
-  [...]</pre><p id="22848135-aec4-4770-9e80-b03304ac973cd6e10">Mit einer [[code:for-each]] Loop und einem Named-Template würde das so gehen:</p><pre id="8732e0bf-776e-498b-9e7b-d11752005ef8d6e12" xml:space="preserve">&lt;xsl:template name="main"&gt;
+  [...]</pre><p id="22848135-aec4-4770-9e80-b03304ac973cd6e10">Mit einer [[code:for-each]] Loop und einem Named-Template würde das so gehen:</p><pre id="4b8730a3-44f0-4723-8e66-409b8e89cae3d7e10" xml:space="preserve">
+&lt;xsl:template name="main"&gt;
   &lt;xsl:for-each select="$input-file/status-report/status-change"&gt;
     &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
     &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
     &lt;xsl:value-of select="concat(status,',')"/&gt;
-    &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),'[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+    &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                        '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
   &lt;/xsl:for-each&gt;
-&lt;/xsl:template&gt;</pre><note id="be096f2d-6dff-4cf5-8de4-360b9a840f74d6e14"><p id="73c07d96-20b6-4482-96ce-258d1673e1a7d6e15">Named-Templates, die direkt über den Saxon Aufruf [[code:saxon -it:main]] aufgerufen werden, sind dann
+&lt;/xsl:template&gt;</pre><note id="59e5d58c-5954-48fc-82c9-aea62efd6f38d7e12"><p id="73c07d96-20b6-4482-96ce-258d1673e1a7d6e15">Named-Templates, die direkt über den Saxon Aufruf [[code:saxon -it:main]] aufgerufen werden, sind dann
 brauchbar, wenn keine eindeutige Eingabequelle vorhanden ist, bspw. weil aus mehreren
 Quellen eingelesen werden soll, wenn die Eingabe von einem Webservice kommt oder 
-vom XSLT Skript selbst erzeugt wird.</p></note><p id="d769fa8b-5761-43cf-88ab-842d569d1e7dd6e17">Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der [[:code]]for-each Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
-verlassen, was den Code weiter vereinfacht:</p><pre id="9d9c84c1-d1d6-473f-b276-07ee51691179d6e19" xml:space="preserve">&lt;xsl:template match="/status-report/status-change"&gt;
+vom XSLT Skript selbst erzeugt wird.</p></note><p id="d769fa8b-5761-43cf-88ab-842d569d1e7dd6e17">Im vorliegenden Fall wird von einer Datei eingelesen - wir brauchen also kein Named-Template. Statt der [[code_for-each]] Schleife können wir uns auch auf den rekursiven Abstieg des XSLT Prozessors
+verlassen, was den Code weiter vereinfacht:</p><pre id="55e14bef-45f4-43aa-896d-bce9fd31f689d7e17" xml:space="preserve">
+&lt;xsl:template match="/status-report/status-change"&gt;
   &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
   &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
   &lt;xsl:value-of select="concat(status,',')"/&gt;
-  &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),'[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+  &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                      '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
 &lt;/xsl:template&gt;</pre><p id="1babc673-5450-4c9f-94d7-02027e879a51d6e21">Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
-aufgebaut wird. Wie schon im Kapitel <xref href="51bec5b9-1207-45cc-9bf2-b6ce3e300547" id="fa88c2e5-c321-4c97-97f0-b856eb400a5b" type="topic">XSLT Streaming</xref> angesprochen, gibt es dazu mehrere Möglichkeiten.</p><p id="24530e61-5662-4972-844c-140ea8d8dc0dd6e23">Wir betrachten hier das [[code:xsl:iterator]][[fn:https://www.saxonica.com/html/documentation/xsl-elements/iterate.html*Der Iterator ist ein Konzept um XSLT Streaming zu realisieren]]
+aufgebaut wird. Wie schon im Kapitel <xref href="51bec5b9-1207-45cc-9bf2-b6ce3e300547" id="eb33986a-f850-4c0f-986e-bdcc8585e5a9" type="topic">XSLT Akkumulator</xref> angesprochen, gibt es dazu mehrere Möglichkeiten.</p><p id="24530e61-5662-4972-844c-140ea8d8dc0dd6e23">Wir betrachten hier das [[code:xsl:iterator]][[link]](Doku)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/iterate.html*Der Iterator ist ein Konzept um XSLT Streaming zu realisieren]]
  Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p><ul id="4a98621c-143a-4c7b-9943-ff38c9887bc5d6e25"><li id="fbfa58c7-8873-4589-8458-2cee8344e3b9d6e26"><p id="d51bf51d-3d8e-4665-9991-84f7d01f7aefd6e27">Wir benutzen [[code:xsl:source-document]] in Verbindung mit dem [[code:streamable='yes']] Attribut,
 um dem Prozessor mitzuteilen, dass er im Streaming Modus arbeiten soll.</p></li><li id="658c209b-2f3a-4dde-9fc2-6b996f8ae4b5d6e29"><p id="edab82eb-21c5-45c3-b543-4c0ac06ad281d6e30">Wenn wir die Quelle über einen Parameter einlesen, dann müssen wir auch die Transformation über ein Named-Template
-starten.</p></li></ul><p id="0d5b49f3-2dfb-475c-b317-d76e9aac06a0d6e33">Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von [[code:value-of select]] statements in den Iterator:</p><pre id="890a37aa-83de-4d7f-a530-eeee78c8c595d6e38" xml:space="preserve">&lt;xsl:template name="main"&gt;
+starten.</p></li></ul><p id="0d5b49f3-2dfb-475c-b317-d76e9aac06a0d6e33">Ohne zu wissen, wie XSLT Streaming genau funktioniert, setzen wir eine Reihe von [[code:value-of select]] statements in den Iterator:</p><pre id="95b3d8f3-78b0-42d2-8df9-c6a6b47dd47dd7e36" xml:space="preserve">
+&lt;xsl:template name="main"&gt;
   &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
     &lt;xsl:iterate select="status-report/status-change"&gt;
       &lt;xsl:value-of select="concat(billing_id,',')"/&gt;
       &lt;xsl:value-of select="concat(claim_ids,',')"/&gt;
       &lt;xsl:value-of select="concat(status,',')"/&gt;
-      &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),'[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+      &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                          '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
     &lt;/xsl:iterate&gt;
   &lt;/xsl:source-document&gt; 
-&lt;/xsl:template&gt;</pre><p id="63c6b0e7-5dbc-499b-87d1-a8f566085023d6e37">und werden dafür prompt mit einer Fehlermeldung belohnt:</p><pre id="b670ccb6-739b-4311-b574-441be04ae9afd6e42" xml:space="preserve">Static error on line 16 column 64 of report.xsl:
+&lt;/xsl:template&gt;</pre><p id="63c6b0e7-5dbc-499b-87d1-a8f566085023d6e37">und werden dafür prompt mit einer Fehlermeldung belohnt:</p><pre id="8141a050-1a33-455f-998b-de5745cbac39d7e40" xml:space="preserve">Static error on line 16 column 64 of report.xsl:
   XTSE3430: The body of the xsl:stream instruction is not streamable
   *  There is more than one consuming operand: {xsl:value-of} on line 18, and
-  {xsl:value-of} on line 19</pre><p id="ed797bc5-78cf-4d81-8f07-25d049bb3e78d6e41">In diesem Iterator ist also nur eine "selektierende" [[code:value-of]] Operation erlaubt. 
-Ein neuer Versuch könnte so aussehen:</p><pre id="64f52db5-d308-4405-800c-a9b696f2d508d6e46" xml:space="preserve">&lt;xsl:template name="main"&gt;
-  &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
-    &lt;xsl:iterate select="encounter-status-report/encounter-status-change/*"&gt;
-      &lt;xsl:choose&gt;
-        &lt;xsl:when test="name()='timestamp'&gt;
-          &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
-                                                       '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
-        &lt;xsl:otherwise&gt;
-          &lt;xsl:value-of select="."/&gt;
-        &lt;/xsl:otherwise&gt;</pre></body></topic>
+  {xsl:value-of} on line 19</pre><p id="ed797bc5-78cf-4d81-8f07-25d049bb3e78d6e41">In diesem Iterator ist also nur eine "konsumierende" [[code:value-of]] Operation erlaubt. Um nur einmal zu selektieren, müssen wir - auf Kosten der Lesbarkeit - ziemlich umbauen. Eine Lösung könnte z.B. so aussehen:</p><pre id="eb45a7e1-8b77-423e-96f8-5163d47f1e5ad7e44" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="xs"
+  xpath-default-namespace="https://tekturcms.de/schema/status-report/1.0"
+  version="3.0"&gt;
+   
+  &lt;xsl:param name="input-file" required="yes"/&gt;
+  
+  &lt;xsl:output method="text"/&gt;
+ 
+  &lt;!-- https://www.saxonica.com/html/documentation/xsl-elements/iterate.html --&gt;
+
+  &lt;xsl:template name="main"&gt;
+    &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+      &lt;xsl:iterate select="status-report/status-change/*"&gt;
+        &lt;xsl:choose&gt;
+          &lt;xsl:when test="name()='time_stamp'"&gt;
+            &lt;xsl:value-of select="concat(format-dateTime(xs:dateTime(time_stamp),
+                                               '[Y]-[M]-[D] [H]:[m]'),'&amp;#10;')"/&gt;
+          &lt;/xsl:when&gt;
+          &lt;xsl:otherwise&gt;
+            &lt;xsl:value-of select="concat(.,',')"/&gt;
+          &lt;/xsl:otherwise&gt;
+        &lt;/xsl:choose&gt;
+      &lt;/xsl:iterate&gt;
+    &lt;/xsl:source-document&gt;
+  &lt;/xsl:template&gt;  
+&lt;/xsl:stylesheet&gt;
+</pre><p id="469ff8e1-b60e-47fa-906b-f0ba5ffcbe0ed6e48">Hier wird davon ausgegangen, dass das Element mit Namen 'time_stamp' als letztes in der Sequenz vorkommt und beim Auftreten ([[code:&amp;#10;]]) wird ein Zeilenumbruch gesetzt. Der deklarative Ansatz aus dem ersten Beispiel geht dabei verloren. </p><note id="629277e3-bd78-4e16-b0e1-b03a78247c6cd7e48"><p id="b7628b73-64d2-4adb-9e79-b0c0e27ea202d6e51">Logisch wird beim XSLT Streaming auf einer niedrigeren Abstraktionsebene programmiert, um den Anforderungen des Prozessors gerecht zu werden.</p></note><p id="25b7064f-3652-4cf9-96d9-de474327f073d6e53">Für eine <b id="61cd3405-cf36-4bc0-a923-4074c1eb8973d6e55">1.6 GB Datei</b> benötigt das obige Skript auf meinem Rechner gute<b id="90b6c3a0-5c88-4ee6-a51d-e9d6bd76df56d6e58"> drei Minuten</b>. Der traditionelle temlate-match Ansatz bricht mit einer Out-of-Memory Exception ab, selbst wenn man den Java Heap Size auf 4GB einstellt.</p></body></topic>

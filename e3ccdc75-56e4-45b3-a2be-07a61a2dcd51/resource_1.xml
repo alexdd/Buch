@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf"><title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit generate-id()</title><body id="2df0bd9e-ed7e-4325-b00f-adf034e6d3b4"><p id="3cd96c4e-4783-468f-a32c-5a009e3cd115">Die generate-id() Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p><p id="ec777147-e5f9-4922-90d7-da6edb3ba4e4d6e6">Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
-der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p><section id="e8ec86c2-690d-4e7b-a0e5-be6d7297a7fad6e8"><title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title><p id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
+<?xml version="1.0" encoding="UTF-8"?><topic id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf"><title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit [[code:generate-id()]]</title><body id="2df0bd9e-ed7e-4325-b00f-adf034e6d3b4"><p id="3cd96c4e-4783-468f-a32c-5a009e3cd115">Die [[code:generate-id()]] Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p><p id="ec777147-e5f9-4922-90d7-da6edb3ba4e4d6e6">Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
+der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p><section id="4b4b21d6-8874-47b5-800b-2aac54007220d7e8"><title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title><p id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
 System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in die Ausgabe (Eine Dokumentation für eine Maschine)
-generiert werden.</p><p id="8168234a-94fe-432e-900c-567faf2a8552d6e12">Die Id an einem Element &lt;part id=“1234”&gt; würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
+generiert werden.</p><p id="8168234a-94fe-432e-900c-567faf2a8552d6e12">Die Id an einem Element [[code:&lt;part id=“1234”&gt;]] würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
 für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
-mit den folgenden Templates (vereinfacht) passieren:</p><pre id="577b58fd-9a0f-4346-82e1-6b0592233e4cd6e15" xml:space="preserve">&lt;xsl:key name="parts" match="part" use="@id"/&gt;
+mit den folgenden Templates (vereinfacht) passieren:</p><pre id="da1019bd-a41f-4a7e-865f-d0d9cd7dbc4fd7e15" xml:space="preserve">&lt;xsl:key name="parts" match="part" use="@id"/&gt;
   
 &lt;xsl:template match=“part” mode=“content"&gt;
   &lt;!-- Ausgabe des Bauteils im Content Bereich --&gt;
@@ -19,9 +19,9 @@ mit den folgenden Templates (vereinfacht) passieren:</p><pre id="577b58fd-9a0f-4
       &lt;fo:page-number-citation ref-id="{generate-id()}"/&gt;
     &lt;/xsl:for-each&gt;
   &lt;/fo:block&gt;
-&lt;/xsl:template&gt;</pre></section><section id="93c4b796-1c96-41a7-b9b4-1e80170d1cd6d6e17"><title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title><p id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
-aufsplitten will, um sie in einer XML Datenbank abspeichern zu können. Die Struktur einer Datenübertragung
-könnte folgendermassen aussehen:</p><pre id="98bd4d67-f35c-4d3c-aa21-0cddfb3b2013d6e22" xml:space="preserve">WRAPPER1
+&lt;/xsl:template&gt;</pre></section><section id="1f7290e5-3793-4da8-bf18-6d82fe6af0a5d7e17"><title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title><p id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
+aufsplitten will, um sie in einer <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c" id="910d1655-4ff9-4262-85a4-6682ad8cc951" type="none">XML Datenbank</xref> abspeichern zu können. Die Struktur einer Datenübertragung
+könnte folgendermassen aussehen:</p><pre id="1fc390e4-02ee-4c39-8b69-d7a38d1efe3ad7e25" xml:space="preserve">WRAPPER1
   SEQUENZ1
   SEQUENZ2
   SEQUENZ3
@@ -53,10 +53,10 @@ könnte folgendermassen aussehen:</p><pre id="98bd4d67-f35c-4d3c-aa21-0cddfb3b20
         DATA3
         DATA4
         DATA5
-      [...]</pre><p id="30f17d4c-717b-4778-ad02-1d6a5f41c443d6e22">Jedes einzelne CONTENT Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
+      [...]</pre><p id="30f17d4c-717b-4778-ad02-1d6a5f41c443d6e22">Jedes einzelne [[code:CONTENT]] Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
 Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
-Descendant-Achse bis zum Element WRAPPER3, ausserdem noch die Elemente SEQUENZ1 und SEQUENZ2,
-sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p><pre id="4b1392d5-cbbc-4d79-8541-2402e7f5e264d6e26" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+Descendant-Achse bis zum Element [[code:WRAPPER3]], ausserdem noch die Elemente [[code:SEQUENZ1]] und [[code:SEQUENZ2]],
+sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]]. Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p><pre id="c6dafc95-e654-4f13-b511-b34013ca9940d7e29" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
     
   &lt;xsl:output method="xml" indent="yes"/&gt;
   &lt;xsl:strip-space elements="*"/&gt;
@@ -93,8 +93,6 @@ sowie das Element WRAPPER4 mit Kind SEQUENZ1.Ohne groß auf die Performanz zu ac
     &lt;/xsl:if&gt;
   &lt;/xsl:template&gt;
     
-&lt;/xsl:stylesheet&gt;</pre><p id="a7ab8655-d9eb-4343-bebf-c4d8850cb2c6d6e26">Im rekursiven Abstieg wird im Modus "umschlag" jedes CONTENT Element selektiert und
+&lt;/xsl:stylesheet&gt;</pre><p id="a7ab8655-d9eb-4343-bebf-c4d8850cb2c6d6e26">Im rekursiven Abstieg wird im Modus "umschlag" jedes [[code:CONTENT]] Element selektiert und
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
-indem der gesamte XML Baum über die Standard-Kopierregel in das Element &lt;nutzdaten&gt;
-gesetzt wird. Dabei wird aber nur derjenige CONTENT Abschnitt evaluiert, der
-zu der als Parameter übergebenen generierten Id passt.</p></section></body></topic>
+indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:&lt;nutzdaten&gt;]] gesetzt wird. Dabei wird aber nur derjenige [[code:CONTENT]] Abschnitt evaluiert, der - zu der als Parameter übergebenen - generierten Id passt.</p></section></body></topic>
