@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="51877293-95b9-4486-b8f6-c006615a8109"><title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title><body id="c582561a-858c-4fd8-8aeb-2af18ceedd3d"><p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p><pre id="6f3f4202-eb15-429d-8920-07ba60ccfb82d7e6" xml:space="preserve">&lt;xsl:stylesheet version="3.0"
+<?xml version="1.0" encoding="UTF-8"?><topic id="51877293-95b9-4486-b8f6-c006615a8109"><title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator </title><body id="c582561a-858c-4fd8-8aeb-2af18ceedd3d"><p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p><pre id="fc099192-dba3-4e2b-8ef2-cc19d791b88bd7e6" xml:space="preserve">&lt;xsl:stylesheet version="3.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   exclude-result-prefixes="#all"&gt;
@@ -22,7 +22,7 @@
   &lt;/xsl:template&gt;
   
 &lt;/xsl:stylesheet&gt;</pre><p id="4ba7c650-d5a0-489c-9392-3ab548afa421d6e25">Diese Stylesheet hat einige Besonderheiten:</p><p id="06f1d8c6-03dd-4fa3-847b-4554e944f361d6e27">Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
-eine implizite [[link]]Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]][[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p><p id="cda2834b-a464-49e5-9b3b-e8880252433cd6e29">Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p><pre id="f29b9b53-a53a-47e7-9f4b-638ef53b8370d7e14" xml:space="preserve">&lt;xsl:template match="node()|@*"
+eine implizite [[link]]Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]][[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p><p id="cda2834b-a464-49e5-9b3b-e8880252433cd6e29">Auf herkömmlichem Weg würde man dafür ein Templates wie dieses verwenden:</p><pre id="f9176723-e01c-47bd-9341-ad312a0b30f4d7e14" xml:space="preserve">&lt;xsl:template match="node()|@*"
   &lt;xsl:copy&gt;
     &lt;xsl:apply-templates select="node()|@*"/&gt;
   &lt;/xsl:copy&gt;
@@ -36,10 +36,10 @@ späteren Auswertung bzw. Gruppierung der Key-Elemente.</p><p id="825af8ca-d2ab-
 Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
 wenn der untersuchte Baum vollständig durchlaufen wurde.</p><p id="8d27d621-4d12-4d40-a59e-8d58c45439a5d6e44">Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
 einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
-Prozessor allerdings nicht akzeptiert.</p><pre id="c667f9ed-e8a5-4976-906f-3d9b47b589d3d7e29" xml:space="preserve">Cannot call accumulator-after except during the post-descent 
+Prozessor allerdings nicht akzeptiert.</p><pre id="1297b931-37f0-43a4-935f-2dc4820277b8d7e29" xml:space="preserve">Cannot call accumulator-after except during the post-descent 
 phase of a streaming template</pre><p id="c9a77197-237e-49fd-80d3-18a443700c33d6e59">Diese Fehlermeldung erscheint, wenn man den [[code:apply-templates]] Call entfernt. Der Akkumulator
 wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
-kann auch ein reines Kopieren sein, bspw. kann man den [[code:apply-templates]] Call auch durch ein</p><pre id="d0aa03b6-3c6e-4577-a3dc-972ec362e73cd7e33" xml:space="preserve">&lt;xsl:copy-of select="."/&gt;</pre><p id="bd5669e8-e0e9-41d0-8854-f9c76aa6d3a3d6e63">ersetzen, was gleichbedeutend mit der Mode Einstellung</p><pre id="a3fb7034-edcc-40d6-b201-b745f28896c6d7e37" xml:space="preserve">on-no-match="deep-copy"</pre><p id="073cb9ea-9bed-41e8-ba73-b3cef15a5708d6e68">wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+kann auch ein reines Kopieren sein, bspw. kann man den [[code:apply-templates]] Call auch durch ein</p><pre id="b9dd450a-a9d9-4c3b-b601-7569e0c2713bd7e33" xml:space="preserve">&lt;xsl:copy-of select="."/&gt;</pre><p id="bd5669e8-e0e9-41d0-8854-f9c76aa6d3a3d6e63">ersetzen, was gleichbedeutend mit der Mode Einstellung</p><pre id="6b9b1a20-e2e4-4ad7-ad45-b14a9757990ed7e37" xml:space="preserve">on-no-match="deep-copy"</pre><p id="073cb9ea-9bed-41e8-ba73-b3cef15a5708d6e68">wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
 Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, kann man ganz oben
 am Stylesheet Modus Properties setzen, die den Baumdurchlauf auf verschiedene
 Arten realisieren.</p><p id="29146b97-98e0-448f-8414-d8a9ee82e847d6e70">Die Verarbeitung großer Datenmenden ist aber mit Streaming etwas tricky und es sollte geprüft 

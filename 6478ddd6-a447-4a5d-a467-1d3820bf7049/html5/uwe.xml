@@ -4,7 +4,7 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Sat Apr 13 2019 20:53:46 </date-of-creation>
-      <date-of-last-change>Sun Apr 14 2019 21:08:25 </date-of-last-change>
+      <date-of-last-change>Mon Apr 15 2019 11:42:08 </date-of-last-change>
       <language>de-DE</language>
       <status>2</status>
       <description>Short Description</description>
@@ -34,7 +34,7 @@ www.tekturcms.de</cover-text>
             ismodule="no">
       <content>
          <title id="8ae493b1-a854-4349-8aff-3bc901e07199">
-            <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro</title>
+            <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro </title>
          </title>
          <block>
             <figure pdfwidth="margin">
@@ -55,7 +55,7 @@ www.tekturcms.de</cover-text>
             ismodule="no">
       <content>
          <title id="70e9195f-8072-415d-986a-6550ed24a577">
-            <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete</title>
+            <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete </title>
          </title>
          <block>
             <p id="7f1ab7b8-ac75-40c7-9dd9-633dd060ba71">
@@ -97,7 +97,7 @@ www.tekturcms.de</cover-text>
                ismodule="no">
          <content>
             <title id="8cdcf3f1-7456-4043-bfec-894e823a9a06">
-               <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich</title>
+               <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich </title>
             </title>
             <block>
                <p id="6c18d950-e0eb-4640-88c5-4abf302e2459">
@@ -143,15 +143,15 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                ismodule="no">
          <content>
             <title id="e3e3be23-3387-4f2d-bc88-628272b743f3">
-               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Aktuelle und vergangene Anwendungen </title>
+               <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Aktuelle und vergangene Anwendungen</title>
             </title>
             <block>
                <p id="0d86999f-6918-45f8-aa05-ee775429e1db">Wie auch bei anderen Programmiersprachen, hat es einige Zeit gedauert bis sich für XSLT der optimale Anwendungsbereich herauskristallisiert hat. Auch bei XSLT war ursprünglich das Internet und insbesondere Webseitenprogrammierung die treibende Kraft, weil meinte, mittels XSLT besonders gut Inhalt und Semantik trennen zu können. </p>
                <p id="1cc2b53a-8cb6-4144-83d9-02b7d4475ce5d7e6">Relativ schnell hat sich aber <b>CSS</b> in Verbindung mit <b>JavaScript</b> als Standardlösung für diese Zecke bewährt. <b>XSLT</b> ist inzwischen Platzhirsch im Bereich <b>Technische Dokumentation</b> und hier auch wohl unschlagbar.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20">
+                        id="09fd5fe2-28f8-42f8-93af-c42d067466d4d7e20">
                   <content>
-                     <title id="17c7fd2c-260f-4daf-b072-3ad15e6de5fed7e20">
+                     <title id="09fd5fe2-28f8-42f8-93af-c42d067466d4d7e20">
                         <title id="ab76273e-04a8-430a-9f91-9a1b68d9c981d6e7">XML Webseiten</title>
                      </title>
                      <p id="d23736ab-93da-4908-83d8-38ffd747db2dd6e9">Einen XSLT Prozessor hat jeder Browser eingebaut. Es gab mal eine Zeit, in der es sehr populär war, Webseiten vom Server als XML auszuliefern[[xe1:Anwendungsgebiete;xe2:XML Webseiten]]. XML erlaubt die semantische Auszeichung des Inhalts, und die strikte Trennung des Inhalts von Layout und Design. Wesentlich besser als dies mit HTML und CSS jemals möglich wäre. U.a. wegen des exzessiven Einsatzes von JavaScript (auch inline), hat sich diese Idee nie vollständig durchgesetzt. Schliesslich wurde <b>XHTML</b> spezifiziert und jetzt gibt es <b>HTML5</b>.</p>
@@ -226,9 +226,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="1d148a1e-917e-4daf-872a-89ccfae7d794d7e48">
+                        id="53b541e7-ce55-4ed9-b34f-5125a487b82ed7e48">
                   <content>
-                     <title id="1d148a1e-917e-4daf-872a-89ccfae7d794d7e48">
+                     <title id="53b541e7-ce55-4ed9-b34f-5125a487b82ed7e48">
                         <title id="d1a0e576-5434-4f78-a143-0aba397514ddd6e33">Serverseitige Konvertierung</title>
                      </title>
                      <p id="a476b87f-7491-444d-8668-72f5e5719ebed6e35">Auch eine serverseitige Konvertierung[[xe1:Anwendungsgebiete;xe2:Serverseitige Konvertierung]] ist gebräuchlich. Ein Beispiel aus vergangenen Tagen - [[link]]WAP-Seiten[[fn:https://de.wikipedia.org/wiki/Wireless_Application_Protocol*Mittels dieser Technologie wurden Webinhalte auf Handys gespielt. Das war vor den Smartphones]] für unterschiedliche Handy-Modelle.</p>
@@ -302,9 +302,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66">
+                        id="6126f5c0-c713-4c91-b04d-88d461abf406d7e66">
                   <content>
-                     <title id="1574c9e0-952b-465c-96fb-ec150d78cfcdd7e66">
+                     <title id="6126f5c0-c713-4c91-b04d-88d461abf406d7e66">
                         <title id="fa0123f8-d2ab-48fe-a8a4-69c5ea6e5b29d6e48">Multiple Ausgabeformate</title>
                      </title>
                      <p id="479bd9ce-f36a-4b96-a291-61f95e4e767dd6e50">Aus einer XML Quelle können auch leicht weitere Format erzeugt werden, bspw. . [[link]]EPUB[[fn:https://de.wikipedia.org/wiki/EPUB*EPUB ist ein Dokumentformat für Ebook-Reader.]] ist das Standardformat für eBooks. Neben Tags zur Formatierung für den Content, gibt es bspw. auch Anweisungen zum Erzeugen des Inhaltsverzeichnisses oder anderer Navigationsstrukturen.</p>
@@ -312,9 +312,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79">
+                        id="b6b09349-1505-409b-829e-be733fe98892d7e79">
                   <content>
-                     <title id="9ee6de58-126f-4456-a8dc-d1fa3107253ed7e79">
+                     <title id="b6b09349-1505-409b-829e-be733fe98892d7e79">
                         <title id="4135a624-a45f-433c-8d0b-18416fe3765fd6e55">Menschenlesbare Ausgabe</title>
                      </title>
                      <p id="dc869a54-1cb6-4282-b816-825027432083d6e57">Kryptische XML Log-, Daten- oder Konfigurationsfiles[[xe1:Anwendungsgebiete;xe2:Log- und Konfigurationsdaten]] können leicht mit XSLT menschenlesbar formatiert werden. Ein Arbeitskollege im neuen Job kam kürzlich auf mich zu, ob ich um eine Möglichkeit wüsste, wie man sein kryptisches Datenfile für einen Übersetzungsdienst formatieren könnte:</p>
@@ -375,9 +375,9 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="2661e812-e6de-458b-92f9-e4725f5994c8d7e95">
+                        id="a85a0b01-d283-4f18-814a-927478e336a6d7e95">
                   <content>
-                     <title id="2661e812-e6de-458b-92f9-e4725f5994c8d7e95">
+                     <title id="a85a0b01-d283-4f18-814a-927478e336a6d7e95">
                         <title id="5ab04d47-2964-42e4-8002-ba2b7828111bd6e68">Diagramme darstellen</title>
                      </title>
                      <p id="6a649e53-dde4-4e49-8e01-1fb5ad83cf2ed6e70">Nachdem eine <b>SVG</b>[[xe1:Standards;xe2:SVG]] Grafik[[xe1:Anwendungsgebiete;xe2:Visualisierung]] im <b>XML</b> Format vorliegt kann diese auch direkt aus XML Daten mittels XSLT erzeugt werden. Über das HTML5[[code:&lt;svg&gt;]] Element kann so eine erzeugte Grafik inline in das ebenfalls durch das XSLT generierte HTML Dokument eingebunden werden.</p>
@@ -430,14 +430,14 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
                ismodule="no">
          <content>
             <title id="0ede2c7f-f0c8-4212-9c31-cf3caefa613c">
-               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung</title>
+               <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung </title>
             </title>
             <block>
                <p id="25b21e23-d4ce-4721-a7d1-2c6b83245a70">Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen. <b>XSLT</b> ist in vielen großen Softwareprojekten vertreten. Heute liefert eine Suche nach [[code:&lt;xsl:stylesheet]] bspw. 14.868.501 [[link]]Treffer.[[fn:https://github.com/search?q=xsl%3Astylesheet&amp;type=Code*GitHub Suche nach XSLT Code Schnippseln mit 14Mio Treffern]]</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="b195f3f0-a313-4e25-82b1-b668a019a83ed7e9">
+                        id="2d1bca14-6658-4a13-bdc1-67f8a9e05db7d7e9">
                   <content>
-                     <title id="b195f3f0-a313-4e25-82b1-b668a019a83ed7e9">
+                     <title id="2d1bca14-6658-4a13-bdc1-67f8a9e05db7d7e9">
                         <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
                      </title>
                      <p id="e88e78e7-d931-45f4-bb7f-0e055e7db65cd6e9">Aus einer Quelle werden viele Ausgabe Formate generiert. Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: <b>CHM</b>, <b>EclipseHelp</b>, <b>JavaHelp</b>, <b>ePub</b>, ..., Print-Ausgabe Formate, wie <b>PDF</b> oder <b>Adobe Framemaker</b>, oder <b>XML</b> Standard Austauschformate, wie <b>DITA</b>, <b>S1000D</b>, <b>PI-MOD</b>[[xe1:Standards;xe2:PI-MOD]] oder <b>TEI</b>[[xe1:Standards;xe2:TEI]].
@@ -474,7 +474,7 @@ Vorteile:</p>
                         </li>
                         <li>
                            <p id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34">Es gibt spezialisierte <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                                       id="29fee564-4a23-49c4-8bf4-7cb5ef16951a"
+                                       id="60dc29a4-e8a5-462f-911b-fa51a2590eb1"
                                        type="topic">XML Datenbanken</doclink>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
                         </li>
                      </ul>
@@ -482,9 +482,9 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137">
+                        id="30a845a6-8f17-4d34-9bd6-425559a66782d7e137">
                   <content>
-                     <title id="aff0c2a2-7ca9-4124-ba5a-0e1cb698e2b3d7e137">
+                     <title id="30a845a6-8f17-4d34-9bd6-425559a66782d7e137">
                         <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
                      </title>
                      <p id="62ada423-a662-4d08-ba65-63ccadd079ced6e41">Nachdem man bei <b>XSLT</b> im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  <b>XSLT</b> Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer <b>XML</b> Repräsentation erzeugen zu lassen.[[xe1:Anwendungsgebiete;xe2:Code Generierung]]</p>
@@ -494,9 +494,9 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169">
+                        id="ba109103-8e7e-4d7e-bc8d-548bb9bde7e5d7e169">
                   <content>
-                     <title id="ccd5f9db-1a5c-4042-893b-c3ee43e361d9d7e169">
+                     <title id="ba109103-8e7e-4d7e-bc8d-548bb9bde7e5d7e169">
                         <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
                      </title>
                      <p id="b7221c07-bea2-4a1e-a1cd-09318580ea8dd6e58">Für jede erdenkliche Art der Migration[[xe1:Anwendungsgebiete;xe2:Migration]] eines <b>XML</b> Datenbestands oder eines Datenbank-Dumps / -Exports im <b>XML</b> Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen, bietet sich <b>XSLT</b> zur Transformation an.</p>
@@ -512,7 +512,7 @@ Vorteile:</p>
             ismodule="no">
       <content>
          <title id="6da095b0-be8a-4477-8792-76a4961ade76">
-            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte</title>
+            <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte </title>
          </title>
          <block>
             <p id="40291b73-b2de-452a-b0ab-b965112e44d3">
@@ -527,27 +527,27 @@ Vorteile:</p>
                ismodule="no">
          <content>
             <title id="17f5bbad-c12b-4da2-a847-29aba6fa0b48">
-               <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets </title>
+               <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets</title>
             </title>
             <block>
                <p id="e2adb8e3-a080-41a2-a76f-c4a29dacd4d2">XSLT ist eine ereignisgesteuerte,[[xe1:Konzepte;xe2:Push vs. Pull]] regelbasierte Umgebung zur Konvertierung von XML Daten. Gerade der Vorteil des regelbasierten Ansatzes ist vielen Entwicklern nicht bewusst, und es entsteht Quellcode der aussieht, wie mit XPath angereicherter <b>PHP</b> Code.</p>
                <p id="75d35ff2-13b7-4c17-9aef-8c028ca9a0a7d6e6">Wieso nimmt man dann überhaupt XSLT, wenn man keine Template-Match Regeln verwendet, oder nur spärlich verwendet?</p>
                <p id="adf97e75-c632-445e-aa9f-914096737fdcd6e8">Um diesen Umstand aufzuklären ist ein bisschen Theorie notwendig:</p>
                <figure pdfwidth="page">
-                  <subtitle id="79877a47-c142-4bac-adae-d31507905a17d7e14">Pull Stylesheet</subtitle>
-                  <desc id="efb4a192-ff36-4b2c-9386-2ae453895c3fd7e16">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie <b>JSP</b> oder <b>ASP</b>. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
+                  <subtitle id="273860fa-fa2f-47be-8a6f-0fa4046e2be7d7e14">Pull Stylesheet</subtitle>
+                  <desc id="99f6ab2f-21c7-4f0a-956e-392b9f86fa27d7e16">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie <b>JSP</b> oder <b>ASP</b>. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pull.svg"/>
                </figure>
                <figure pdfwidth="page">
-                  <subtitle id="fd8e7810-4432-43f7-8de9-6ab79ade12d2d7e26">Push Stylesheet</subtitle>
-                  <desc id="6ebed04f-7ad0-401a-9a20-0072c4976325d7e28">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. <b>Merke:</b>
+                  <subtitle id="a6408062-af54-4174-ba37-ee1f64fa8f58d7e26">Push Stylesheet</subtitle>
+                  <desc id="fdf28559-e3af-4ac9-9db4-d34c768d5943d7e28">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. <b>Merke:</b>
                      <b>XSLT </b>steht für <b>eXtensible Stylesheet Transformation</b>.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/pusch.svg"/>
                </figure>
                <p id="43976824-218f-4b76-9c34-24b9e47ccbfcd6e22">Das bisher Gesagte verdeutlicht zwar den "Pull" Ansatz, was genau aber ge"pusht" wird, ist vermutlich noch unklar. Betrachten wir XML in der Baumdarstellung.</p>
                <figure pdfwidth="page">
-                  <subtitle id="9a3524b6-6a8f-4b7a-a67f-c46cf5c480aed7e42">Transformation des Quellbaums in den Zielbaum</subtitle>
-                  <desc id="59e4b4c9-1911-4363-8aca-448eb386b391d7e44">Der XSLT Prozessor unternimmt einen Tiefensuchlauf[[xe1:Tiefensuchlauf]] und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
+                  <subtitle id="8ac4f6f5-5e20-4556-98c1-50c800c7b79ed7e42">Transformation des Quellbaums in den Zielbaum</subtitle>
+                  <desc id="0da54264-f148-458b-92df-42bc8b4f6df6d7e44">Der XSLT Prozessor unternimmt einen Tiefensuchlauf[[xe1:Tiefensuchlauf]] und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
                   <img src="./client/data/5b73f348-0058-45e0-82f7-c3de72ec5d41/push.svg"/>
                   <legend>
                      <leg-entry id="f9455559-67ce-4901-9444-ccdd01d21c56d6e43">
@@ -584,15 +584,15 @@ Vorteile:</p>
                ismodule="no">
          <content>
             <title id="a418237e-b29f-4ec8-960f-1707108b9f59">
-               <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis</title>
+               <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis </title>
             </title>
             <block>
                <p id="9a5b8555-49ef-4d3a-bc72-1640077ef423">Die Regelbasis[[xe1:Konzepte;xe2:Regelbasis]] von XSLT kann wahrscheinlich unendlich viele Regeln aufnehmen, wenn man unsere Limitierung bzgl. der Hardware nicht beachtet. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer aber selbst verantwortlich.</p>
                <p id="3e087bbf-c0ae-4bd1-95b2-89113fd7f25cd6e6">Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="6f8124e3-08f2-4df2-8035-828703e0503ad7e8">
+                        id="0e142621-d81b-4513-90f5-43bdfa2bc7bbd7e8">
                   <content>
-                     <title id="6f8124e3-08f2-4df2-8035-828703e0503ad7e8">
+                     <title id="0e142621-d81b-4513-90f5-43bdfa2bc7bbd7e8">
                         <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
                      </title>
                      <p id="9ef5fc0c-f742-4267-98dc-3a3c4711f7f4d6e11">Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei <b>Saxon</b> diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
@@ -600,9 +600,9 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18">
+                        id="f78569ef-ac62-4e77-9285-5084f7aa6098d7e18">
                   <content>
-                     <title id="61a2bc03-4266-48ca-aa17-ca28bf57052dd7e18">
+                     <title id="f78569ef-ac62-4e77-9285-5084f7aa6098d7e18">
                         <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
                      </title>
                      <p id="477f566a-06ea-4716-afc4-5f3fc591ec04d6e16">Match-Regeln[[xe1:Konzepte;xe2:Match-Regeln]] werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft, wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:[[xe1:Konzepte;xe2:Priorität]]</p>
@@ -677,9 +677,9 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="537d63c7-8475-4e1b-9006-f30960de9cf7d7e82">
+                        id="dd94c242-31d7-4ce5-a3e4-0cc430b33796d7e82">
                   <content>
-                     <title id="537d63c7-8475-4e1b-9006-f30960de9cf7d7e82">
+                     <title id="dd94c242-31d7-4ce5-a3e4-0cc430b33796d7e82">
                         <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
                      </title>
                      <p id="69c293ea-97d3-42a9-a6f4-a6f8bdcfa0edd6e21">Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle[[xe1:Konzepte;xe2:Import Präzedenz]] Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel[[xe1:Konzepte;xe2:Default-Regel]] einzubinden, bspw:</p>
@@ -690,9 +690,9 @@ Vorteile:</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98">
+                        id="c944460c-132f-43be-83b9-8e6ca5795fc6d7e98">
                   <content>
-                     <title id="ca06613e-8a5b-4ec3-aafa-868d97b6694fd7e98">
+                     <title id="c944460c-132f-43be-83b9-8e6ca5795fc6d7e98">
                         <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
                      </title>
                      <p id="d9a24ef4-9b36-4aa8-ae9b-371cfe8120c2d6e26">
@@ -745,13 +745,13 @@ Vorteile:</p>
 &lt;/xsl:template&gt;</verbatim>
                      <p id="7f67f7d4-dff7-4a4a-95ed-b7dc00a7b185d7e143">Neben des Einsatzes des [[code:@priority]] Attributs und des nachfolgend beschriebenen [[code:@mode]] Attributs ist sicherlich auch noch interessant, dass die gefilterten Seminar-Elemente hier nicht gelöscht werden, sondern umbenannt werden. Auf diese Weise können sie in einem nachfolgenden Transformationsschritt (Stichwort: <doclink class="ceed4546-a60b-4d5f-a625-6e79c180cc13"
                                  id="4ba64232-f94b-41a8-8522-b959448347ac"
-                                 type="topic">Vortransformationen </doclink>) weiterbehandelt werden, stören aber in der regulären Verarbeitung nicht.</p>
+                                 type="topic">Vortransformationen</doclink>) weiterbehandelt werden, stören aber in der regulären Verarbeitung nicht.</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139">
+                        id="f99c6597-8562-4ab1-b522-a840196dd582d7e139">
                   <content>
-                     <title id="bc3d3c1d-ed2d-4d4d-a8c6-41e62a98abc6d7e139">
+                     <title id="f99c6597-8562-4ab1-b522-a840196dd582d7e139">
                         <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
                      </title>
                      <p id="bc053ce1-34d6-4565-8b3a-f2fe65d21f1cd6e31">An allen Templates[[xe1:Konzepte:xe2:Modus]] hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <doclink class="5b73f348-0058-45e0-82f7-c3de72ec5d41"
@@ -788,7 +788,7 @@ Vorteile:</p>
                ismodule="no">
          <content>
             <title id="309017d9-9fd7-4a34-b13a-4bf8ecea4556">
-               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces</title>
+               <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces </title>
             </title>
             <block>
                <p id="6f3e2556-a8a9-4c91-bf51-cc4b05ba29c9">Wenn man XML Instanzen aus unterschiedlichen Quellen mit XSLT verarbeiten will, wird man sich wohl
@@ -872,9 +872,9 @@ weiterzuvererben:</p>
    &lt;/xsl:copy&gt;
 &lt;/xsl:template&gt;</verbatim>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="f8de39a5-2115-4624-9b34-a782d9ec7711d7e79">
+                        id="d84e5d25-c0d2-465c-8d2c-88a46a1eb1dbd7e79">
                   <content>
-                     <title id="f8de39a5-2115-4624-9b34-a782d9ec7711d7e79">
+                     <title id="d84e5d25-c0d2-465c-8d2c-88a46a1eb1dbd7e79">
                         <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
                      </title>
                      <p id="6a862358-2454-4cb0-a7c5-854c9d4cf899d6e75">Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
@@ -907,7 +907,7 @@ vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p
             ismodule="no">
       <content>
          <title id="a230cf67-a3f4-40e4-af51-9959bbc104d8">
-            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen</title>
+            <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen </title>
          </title>
          <block>
             <p id="3a3aa31c-2536-4888-a24f-080ab7101b8f">Auf den folgenden Seiten habe ich Themen ausgewählt, die für mich gerade besonders interessant erscheinen. Nach einer drei-jährigen Pause im Bereich XML, gibt es nun doch wieder viele neue Sachen ...</p>
@@ -918,7 +918,7 @@ vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p
                ismodule="no">
          <content>
             <title id="64e2c429-6836-44f8-9b53-af2692ba49f0">
-               <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT</title>
+               <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT </title>
             </title>
             <block>
                <p id="3d386b11-25a9-44ed-a2c5-81df086412c6">XSLT ist die Standardlösung für XML Transformationen. Es gibt noch einige exotische Lösungen, wie:</p>
@@ -939,7 +939,7 @@ vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p
                   ismodule="no">
             <content>
                <title id="a619c6d9-57c8-4fde-a3c0-cf6002905cc1">
-                  <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen </title>
+                  <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen</title>
                </title>
                <block>
                   <p id="8a421545-f7a1-49b2-8250-75b86ca592f8">Bei einer komplexen Transformation ist es ratsam und sogar manchmal unabdingbar die Konvertierung in einzelne Stufen aufzuteilen. Das hat folgende Vorteile:</p>
@@ -1077,23 +1077,23 @@ vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p
                   ismodule="no">
             <content>
                <title id="86c96e00-9a1f-4187-beba-e5d9bd3a938b">
-                  <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung</title>
+                  <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
                </title>
                <block>
                   <p id="9f3c9490-6544-4061-9f73-b31a0655f3fc">Mit XSLT[[xe1:Konzepte;xe2:Vererbung]] kann man Konstrukte nachbilden, so wie sie in anderen Programmiersprachen auch vorhanden sind, bspw. Vererbung. Dabei wird in einer Spezialisierung eine schon bereits getätigte Implementierung übernommen und erweitert oder eingeschränkt.</p>
                   <p id="55d7fd52-cfb0-4630-a202-8a4997fdc6d5d6e6">Der Vorteil dabei ist, dass man nicht alles nochmal neu schreiben muss. Das verkleinert die Redundanz, führt zu einer besseren Wartbarkeit und einer geringeren Fehleranfälligkeit.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="2372c553-707e-4008-b13f-7d33886145f3d7e8">
+                           id="c865ae10-2003-4b4f-81ad-ce378bc2f492d7e8">
                      <content>
-                        <title id="2372c553-707e-4008-b13f-7d33886145f3d7e8">
+                        <title id="c865ae10-2003-4b4f-81ad-ce378bc2f492d7e8">
                            <title id="3e8c9912-e49a-4cf3-8836-4c6d59415fcdd6e9">Beispiel: Parameterisierung</title>
                         </title>
                         <p id="87a46d3c-3a53-49d8-81af-0b186522ab04d6e11">Gewöhnlich implementiert man ein Stylsheet für ein bestimmtes Ausgabeformat und eine Produktvariante. Schrittweise werden dann weitere Varianten und Formate hinzugefügt.</p>
                         <p id="2c5936d8-c14a-48c6-8783-22cb447e158ad6e13">Am komfortabelsten hat man es natürlich, wenn zu Beginn der Implementierung eine vollständige Spezifikation vorliegt... Das ist aber natürlich eher selten der Fall.</p>
                         <p id="e49285e4-0d9b-4cb5-88fa-3c0cce5f8ca7d6e13">Aus diesem Grund ist es wichtig, sich eine gute Strategie zu überlegen, damit die Architektur nicht in Spagetthi-Code auswartet.</p>
                         <p id="fd634ecc-535d-4768-bc6f-eb4e29d0f513d6e17">Eine gute Option wäre, die XSLT Import Präzedenz auszunutzen, vgl. Kapitel <doclink class="db988919-f71e-437e-b699-b6fdd2a32cb9"
-                                    id="0a812a97-0146-461c-bc92-00f7a42f49e0"
-                                    type="topic">Eindeutigkeit der Regelbasis</doclink>.</p>
+                                    id="fb92c57c-b0ba-48b8-9196-b765d8aaf243"
+                                    type="topic">Eindeutigkeit der Regelbasis </doclink>.</p>
                         <p id="c22ab5e0-6336-4c9b-8dff-af1a3bfd84a9d6e22">Angenommen es geht darum zu einem späteren Zeitpunkt weitere Parameter einzuführen. Ein Switch, wie der folgende, müsste dann an mehreren Stellen im Code aktualisiert werden.</p>
                         <verbatim>&lt;xsl:choose&gt;
     &lt;xsl:when test="$myParameter='this_option'"&gt;
@@ -1132,7 +1132,7 @@ vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p
                   ismodule="no">
             <content>
                <title id="dbe0e394-aeee-4b28-ace0-72dcd590c0f2">
-                  <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming</title>
+                  <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming </title>
                </title>
                <block>
                   <p id="1b8326b9-86af-407d-b972-5b8d98339dec">Bei grossen flach strukturierten Datenmengen gibt es zwei Möglichkeiten:</p>
@@ -1172,7 +1172,7 @@ kommerziellen [[link]]Saxon-EE Löusug [[fn:https://www.saxonica.com/html/docume
                      ismodule="no">
                <content>
                   <title id="51877293-95b9-4486-b8f6-c006615a8109">
-                     <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator</title>
+                     <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator </title>
                   </title>
                   <block>
                      <p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
@@ -1247,7 +1247,7 @@ würde.</p>
                      ismodule="no">
                <content>
                   <title id="e7a9c8c6-7155-402a-9c95-89d45fc022de">
-                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator</title>
+                     <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator </title>
                   </title>
                   <block>
                      <p id="9b154448-31c9-495f-bc85-ecb297deece8">XSLT Streaming[[xe1:Verarbeitungsmethoden; xe2:XSLT Streaming]] ist ziemlich tricky. Betrachten wir ein einfaches Problem. Es soll ein kommaseparierter Report aus folgender XML Quelle generiert werden.</p>
@@ -1297,8 +1297,8 @@ verlassen, was den Code weiter vereinfacht:</p>
                      <p id="1babc673-5450-4c9f-94d7-02027e879a51d6e21">Wollen wir große Datenmengen schnell verarbeiten mit ein paar Hundert MB, so ist es sinnvoll
 auf die neue XSLT3.0 Streaming Option umzuschalten, weil dadurch kein Eingabebaunm in-Memory
 aufgebaut wird. Wie schon im Kapitel <doclink class="51bec5b9-1207-45cc-9bf2-b6ce3e300547"
-                                 id="9573967e-809c-4d86-8bf1-0381ac6e2b5d"
-                                 type="topic">XSLT Akkumulator</doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
+                                 id="c7803eff-73dd-4744-b231-d824ba4c9dba"
+                                 type="topic">XSLT Akkumulator </doclink> angesprochen, gibt es dazu mehrere Möglichkeiten.</p>
                      <p id="24530e61-5662-4972-844c-140ea8d8dc0dd6e23">Wir betrachten hier das [[code:xsl:iterator]][[link]](Doku)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/iterate.html*Der Iterator ist ein Konzept um XSLT Streaming zu realisieren]]
  Konstrukt und stossen dabei auf einige Fallstricke. Zunächst einmal unsere Settings:</p>
                      <ul>
@@ -1375,16 +1375,16 @@ starten.</p>
                   ismodule="no">
             <content>
                <title id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf">
-                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit [[code:generate-id()]]</title>
+                  <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit [[code:generate-id()]] </title>
                </title>
                <block>
                   <p id="3cd96c4e-4783-468f-a32c-5a009e3cd115">Die [[code:generate-id()]] Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p>
                   <p id="ec777147-e5f9-4922-90d7-da6edb3ba4e4d6e6">Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
 der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8">
+                           id="2ef6dff8-0c31-4fc4-9234-1dc7886209e6d7e8">
                      <content>
-                        <title id="75e7b67f-10ea-4782-92c5-fcd2e1126f28d7e8">
+                        <title id="2ef6dff8-0c31-4fc4-9234-1dc7886209e6d7e8">
                            <title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title>
                         </title>
                         <p id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
@@ -1413,14 +1413,14 @@ mit den folgenden Templates (vereinfacht) passieren:</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17">
+                           id="922c2f9f-f4b6-4bb1-8eb0-fa6372b5f32bd7e17">
                      <content>
-                        <title id="bb5b8b66-463c-41cf-9839-d44f13d7f4f4d7e17">
+                        <title id="922c2f9f-f4b6-4bb1-8eb0-fa6372b5f32bd7e17">
                            <title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title>
                         </title>
                         <p id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
 aufsplitten will, um sie in einer <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                                    id="18ee2c22-0163-4c54-af55-c15a807a817b"
+                                    id="2988fd11-e7f5-4086-ad85-83dc61ca346c"
                                     type="none">XML Datenbank</doclink> abspeichern zu können. Die Struktur einer Datenübertragung
 könnte folgendermassen aussehen:</p>
                         <verbatim>WRAPPER1
@@ -1510,7 +1510,7 @@ indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:
                   ismodule="no">
             <content>
                <title id="1baa0c4a-6cde-4033-9e48-ee47dc16c287">
-                  <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke</title>
+                  <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke </title>
                </title>
                <block>
                   <p id="8b2f5bb2-8497-4ea8-b65b-cf8b9c972fc3d6e4">Manchmal reicht für das Durchsuchen des XML Baums XPATH nicht mehr aus und man will auf den Textknoten reguläre Ausdrücke aufrufen. Mir sind derzeit drei XPATH Funktionen bekannt, in denen man XPATH angeben kann:</p>
@@ -1528,9 +1528,9 @@ indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:
                   <p id="867b5230-3fe3-4dd4-8794-938ba7427581d6e16">Bei der Eingabe des regulaären Ausdrucks muss man natürlich Zeichen, wie [[code:&gt;,&lt;,&amp;]] maskieren, was den Ausdruck im Gegensatz zur herkömmlichen Nicht-XML Programmierung noch ein bisschen komplizierter macht.</p>
                   <p id="89d58d94-7076-4bee-9603-f5f241963967d6e18">Der Audruck, der bspw. auf alle XML Tags matched ist folgender: [[code:&amp;lt;[^&amp;gt;^!]+&amp;gt;]]. Hier sind die für XML reservierten Zeichen bereits maskiert.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="30da0844-76bc-41ff-94ad-a157a80558ffd7e20">
+                           id="c21321b5-f914-4cbe-a2b2-b4e3eaa7078fd7e20">
                      <content>
-                        <title id="30da0844-76bc-41ff-94ad-a157a80558ffd7e20">
+                        <title id="c21321b5-f914-4cbe-a2b2-b4e3eaa7078fd7e20">
                            <title id="055ae7ca-d2b1-41e4-be84-675e3e8827bdd6e21">XSLT Analyze String</title>
                         </title>
                         <p id="cea9c4dd-6e14-445a-a899-07215642bb26d6e23">Es gibt aber auch ein eigenes XSLT Konstrukt, unabhängig von XPATH, um reguläre Ausdrücke anwenden zu können. Der Quelltext dazu sieht so aus:</p>
@@ -1559,7 +1559,7 @@ indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:
                   ismodule="no">
             <content>
                <title id="7f03cc5e-675a-4371-b3e9-5d79b981ff95">
-                  <title id="fbbe8267-ed7b-4b78-b547-d00fe41f0b5c">Webservice Calls mit [[code:doc()]] und [[code:unparsed-text()]]</title>
+                  <title id="fbbe8267-ed7b-4b78-b547-d00fe41f0b5c">Webservice Calls mit [[code:doc()]] und [[code:unparsed-text()]] </title>
                </title>
                <block>
                   <p id="cfd5bdf8-a043-405f-a3f7-1feb395fbd3d">Eine verbreitete Paxis ist es, mit der Funktion [[code:document()]] oder kurz [[code:doc()]] 
@@ -1642,7 +1642,7 @@ mit XSLT recht spannend.</p>
                ismodule="no">
          <content>
             <title id="ae325776-f861-42c4-9a68-95d2d1c756a5">
-               <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery </title>
+               <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
             </title>
             <block>
                <p id="c2687f09-7480-4b8a-aa85-97d3e6821592">Xquery[[xe1:Programmiersprachen;xe2:XQuery]] führt im Publishing-Bereich ein Schattendasein. In meiner Zeit als XSL Programmierer für zwei Publishing  Firmen hatte ich damit nie zu tun. Erst als ich näher an den eigentlichen Daten war und mit <doclink class="3337f433-44bf-430d-a809-73fd1de5ba6c"
@@ -1657,17 +1657,17 @@ mit XSLT recht spannend.</p>
                <p id="82bd2bc8-d52c-4012-85f5-f167da7f8dc4d6e12">Mit der Option [[code:-qs]] kann hier der Querystring angebenen werden. </p>
                <p id="a1ae2cee-3b1d-4919-8531-d42c03a501f2d6e17">Wie man an dem einfachen Beispiel schon sieht, ist XQuery mit XPath verwandt. XQuery umfasst den Sprachumfang von XPath bietet aber zusätzlich die [[link]]FLOWR[[https://en.wikipedia.org/wiki/FLWOR*FLOWR steht für FOR LET WHERE ORDERBY RETURN]] Syntax um mächtigere Abfragen stellen zu können. Mittels weiterer [[link]]Extensions[[fn:http://cs.au.dk/~amoeller/XML/querying/flwrexp.html*XQuery Extensions für mächtigere Funktionen]] können aber auch ganze Programme erstellt werden, die weit über die Funktionalität einer "Abfragesprache" hinausgehen.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="bad962ab-2a60-457c-af56-18e79561bbced7e19">
+                        id="70897375-e2a3-4ed8-8136-7c2754b70482d7e19">
                   <content>
-                     <title id="bad962ab-2a60-457c-af56-18e79561bbced7e19">
+                     <title id="70897375-e2a3-4ed8-8136-7c2754b70482d7e19">
                         <title id="c7e8acb5-6c21-4de1-a88d-8bbd376bbbb4d6e20">XQuery Builder</title>
                      </title>
                      <p id="10cad5f2-85f8-44a2-820b-25080e044176d6e22">[[link]]Oxygen XML Editor[[fn:https://www.oxygenxml.com/xml_editor*Homepage zum oXygen XML Editor]] bietet eine schöne Möglichkeit XQuery-Abfragen 
 auf einem geladenen XML Dokument auszuführen. Dazu kann man 
 seine Query in das betreffende Eingabefenster schreiben.</p>
                      <figure pdfwidth="page">
-                        <subtitle id="e2c3666c-cde2-41a1-bdfd-947a46ee2ccfd7e25">oXygen XQuery Builder</subtitle>
-                        <desc id="3d0ac3cb-6b99-4c46-8a28-7dd2f579a94dd7e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
+                        <subtitle id="178dfbab-d2e8-4850-8899-3337f01b70b1d7e25">oXygen XQuery Builder</subtitle>
+                        <desc id="82ba45b2-ec58-459f-8123-b6142bec7b3ad7e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
                         <img src="./client/data/0846d6a2-6999-42ab-9e83-55bc197fc11c/xquery-builder.png"/>
                      </figure>
                      <p id="f9cd5153-7930-46ee-9bfd-33e14ec55f03d6e28">Mit folgendem Ergebnis:</p>
@@ -1678,9 +1678,9 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34">
+                        id="3b0a73da-2b60-4861-8bf0-2f1fba144989d7e34">
                   <content>
-                     <title id="b47e2a89-6ea3-4d65-b790-a59da6c72d83d7e34">
+                     <title id="3b0a73da-2b60-4861-8bf0-2f1fba144989d7e34">
                         <title id="59f98501-17c8-47d7-a314-8f89c6b7299ed6e33">FLOWR Expression</title>
                      </title>
                      <p id="d9c7b63e-5eb8-4c1a-8efb-88af290b55bfd6e34">FLOWR[[xe1:FLOWR Expression]] steht für [[code:for, let, where, order by, return]]. Das sind die Query-Anweisungen, die in 
@@ -1703,9 +1703,9 @@ Da wir aber hier funtional prorgammieren, ist die Sache etwas anders...</p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46">
+                        id="4c7358db-7eca-4a9d-9fc7-08d65df7f635d7e46">
                   <content>
-                     <title id="bd1b9c03-9e03-4b77-90e8-a675562ab4e0d7e46">
+                     <title id="4c7358db-7eca-4a9d-9fc7-08d65df7f635d7e46">
                         <title id="7dbf0fb3-8421-43c4-b792-0eba61c4bf27d6e44">XML per XQuery</title>
                      </title>
                      <p id="9ab1e252-cb55-4821-9893-74ec6ef84344d6e45">Es ist aber auch möglich XML zu erzeugen, wobei natürlich für eine Transformation XSLT 
@@ -1734,9 +1734,9 @@ so kann man mit der folgenden Kommandozeile auf einer [[code:buecher.xml]] Datei
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57">
+                        id="e6a0b696-a10a-4aae-bd94-8be8a7c38dc2d7e57">
                   <content>
-                     <title id="7fd00ce1-cf28-4b62-8495-3a6085888f78d7e57">
+                     <title id="e6a0b696-a10a-4aae-bd94-8be8a7c38dc2d7e57">
                         <title id="72199b87-ef45-4bac-93aa-a03892a63e12d6e54">Document Projection</title>
                      </title>
                      <p id="4b856b14-5e37-4b3f-97aa-35d140f8c43bd6e55">[[link]]Document Projection[[fn:http://www.saxonica.com/documentation/#!sourcedocs/projection*Verstecktes Saxon Feature: Dokument Projektion bei einer XQuery Abfrage]][[xe1:Tipps und Tricks;xe2:Document Projection]]  ist ein verstecktes Saxon XQuery Feature. Es funktioniert nur für eine einzige Abfrage.
@@ -1780,16 +1780,16 @@ Memory used: 64339064</verbatim>
                   ismodule="no">
             <content>
                <title id="06abe1b7-21be-4794-bec6-c28732cf6cbf">
-                  <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache</title>
+                  <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache </title>
                </title>
                <block>
                   <p id="1e9a3c95-15bd-4eb0-89b8-59c8784a5425">Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
 Hat man parallel auch noch oXygen Editor offen, kann man die Testergebnisse aus der Konsole direkt in ein XQuery Server Skript packen.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="bb4765d2-8739-4510-b234-8a9d8bf37260d7e6">
+                           id="712aee39-7a2f-4fa4-b605-6c06b7a550fdd7e6">
                      <content>
-                        <title id="bb4765d2-8739-4510-b234-8a9d8bf37260d7e6">
+                        <title id="712aee39-7a2f-4fa4-b605-6c06b7a550fdd7e6">
                            <title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title>
                         </title>
                         <p id="5fdff6dd-6c8a-467c-880d-33c88f7de0ded6e9">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:[[xe1:Programmierkonstrukte;xe2:Schleifen - for]]</p>
@@ -1802,9 +1802,9 @@ Komma - ein Tupel wird erzeugt - dann klappt es.</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="1a19cfd9-449b-4a72-adeb-85ef394253dad7e19">
+                           id="cd4ced57-26b9-4da7-939a-de9b51dd0da7d7e19">
                      <content>
-                        <title id="1a19cfd9-449b-4a72-adeb-85ef394253dad7e19">
+                        <title id="cd4ced57-26b9-4da7-939a-de9b51dd0da7d7e19">
                            <title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title>
                         </title>
                         <p id="68e15e0c-efc5-472f-87fe-4d2dd4352485d6e22">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
@@ -1860,13 +1860,13 @@ return
                      ismodule="no">
                <content>
                   <title id="51a4584a-9a43-4f8f-ad89-d1c2d88ab6e6">
-                     <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module</title>
+                     <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module  </title>
                   </title>
                   <block>
                      <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                              id="8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4">
+                              id="4edf3877-8b8a-4cc3-91bd-1d49b04d733fd7e4">
                         <content>
-                           <title id="8be08919-a1e9-4aef-aaa2-3237b11c1919d7e4">
+                           <title id="4edf3877-8b8a-4cc3-91bd-1d49b04d733fd7e4">
                               <title id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5">Funktionen</title>
                            </title>
                            <p id="5de561e1-87c3-4f46-b36e-c5db56d9ae27d6e7">Um bestimmte Abschnitte des XQuery Programm wiederverwendbar zu machen, stehen Funktionsdeklarationen[[xe1:Programmierkonstrukte;xe2:Funktionen]] zur verfügung. Eine einfache Funktion wäre z.B. diese hier:</p>
@@ -1899,9 +1899,9 @@ Komma getrennt.</p>
                         </content>
                      </chapter>
                      <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                              id="a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25">
+                              id="3e4296a2-84b5-4914-9abf-1c608a8e74b5d7e25">
                         <content>
-                           <title id="a80e3fdd-5617-4a2c-903f-7c896d407aa8d7e25">
+                           <title id="3e4296a2-84b5-4914-9abf-1c608a8e74b5d7e25">
                               <title id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26">Module</title>
                            </title>
                            <p id="2cc3effd-16fe-42c0-9fbd-bfa92cb6d10bd6e28">Um eine XQuery Anwendung zu modularisieren[[xe1:Programmierkonstrukte;xe2:Module]], können einzelne Skripte in
@@ -1922,16 +1922,16 @@ Variablenauswertung: $common:collection-books</verbatim>
                      ismodule="no">
                <content>
                   <title id="7f9615d0-3d92-4ec1-813b-db4b788b6efd">
-                     <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">[[code:if..then..else]] Ausdrücke</title>
+                     <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">[[code:if..then..else]] Ausdrücke </title>
                   </title>
                   <block>
                      <p id="31bf12f5-ecec-4ada-965f-cb4e1539afc6">In nicht-funktionalen Programmiersprachen sind die Schlüsselwörter [[code:if]] und [[code:then]][[xe1:Programmierkonstrukte;xe2:Bedingte Anweisung - if..then..else]] dazu da, um dem Compiler oder Interpreter mitzuteilen, dass eine bedingte Anweisung ausgewertet werden soll.</p>
                      <p id="c9ab5b21-d799-4bb6-a020-d7ab5750146ed6e12">Was für den Nicht-funktionalen Programmierer etwas befremdlich erscheint, ist der Umstand, dass in XQuery [[code:if..then]] als Ausdrücke ausgewertet werden.</p>
                      <p id="e4d038c8-39fe-4f47-a81c-4a7d16a10c3ed6e17">Das ist einerseits sehr praktisch, weil es richtig angewandt den Code verkürzt und damit das Wesentliche herausstellt, kann aber auch weiter zur allg. Verwirrung bzgl. des kryptischen XQuery Codes beitragen.</p>
                      <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                              id="075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10">
+                              id="3b49c371-ed6d-4cbe-a2a5-0cba47094396d7e10">
                         <content>
-                           <title id="075e8f3c-58ae-4a49-8c0c-6bb5e32305d4d7e10">
+                           <title id="3b49c371-ed6d-4cbe-a2a5-0cba47094396d7e10">
                               <title id="b0df228c-1f72-4a12-9302-805fa0022b03d6e11">Beispiel: Konditionale Server App</title>
                            </title>
                            <p id="2d0364b2-f8b1-47fa-996e-0f9ceba95e4fd6e13">Betrachten wir ein einfaches Beispiel: Wir generieren auf einer Marklogic-Webapp eine JSON Response. Da wir diesen Mechanismus an mehreren Stellen im Code einsetzen, empfiehlt es sich das Rendern des Headers in eine Funktion auszulagern.</p>
@@ -1995,7 +1995,7 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
                ismodule="no">
          <content>
             <title id="44b03330-885f-4eee-a90b-3235d56161e7">
-               <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title>
+               <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken </title>
             </title>
             <block>
                <p id="23b4fccd-51f9-4064-b7df-46252a40211d">XML Datenbanken konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
@@ -2050,18 +2050,18 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                   ismodule="no">
             <content>
                <title id="4f168aa8-64ed-487d-924c-92e68871b212">
-                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen</title>
+                  <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen </title>
                </title>
                <block>
                   <p id="71c18de7-b974-43c8-a4f5-1b9c3cca77ae">Marklogic[[xe1:Software;xe2:Marklogic]] bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector[[xe1:Tools;xe2:oXygen-Connector]]. Hier öffnet man den <i id="69aba0a2-ccaa-4d60-bbf7-1fd62f608ca5d6e6">Data Source Explorer</i>: </p>
                   <p id="c4eeb7c1-21bc-47b7-a37b-772b65113af2d6e13">und konfiguriert eine neue Datenquelle:</p>
                   <figure pdfwidth="page">
-                     <desc id="10f7f6b7-9ea2-4d09-9edd-7c84a5364db4d7e12">oXygen Data Source Explorer View öffnen</desc>
+                     <desc id="7c0729d6-db7f-4929-a654-b0c6264f78a9d7e12">oXygen Data Source Explorer View öffnen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-1.png"/>
                   </figure>
                   <p id="eeb8e3dd-c1c6-4158-a88a-2157da375f78d6e19">Dazu muss man den [[link]]Marklogic Treiber installieren[[fn:https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html*MarkLogic Datenquelle in oXygen konfigurieren]] und diesen im folgenden Screen verfügbar machen.</p>
                   <figure pdfwidth="page">
-                     <desc id="79ab1c1a-881b-4e91-84e3-0f32f17ad82bd7e18">Neue Datenquelle in oXygen konfigurieren</desc>
+                     <desc id="956e964e-3eff-4383-84b1-64ac00747109d7e18">Neue Datenquelle in oXygen konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/d-source-explorer-2.png"/>
                   </figure>
                   <caution>
@@ -2069,26 +2069,26 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                      <consequence/>
                   </caution>
                   <figure pdfwidth="page">
-                     <desc id="603a6c0f-7693-4d78-8e0b-6dc833c5e6a0d7e27">Marklogic Treiber auswählen</desc>
+                     <desc id="2fa2b78b-e874-4c42-a759-55ad6657cfead7e27">Marklogic Treiber auswählen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/add-marklogic-jar.png"/>
                   </figure>
                   <p id="fafe35d0-f23a-4f74-9910-de34f4215c51d6e30">Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b>App Servers</b> und fügt einen neuen <b>WebDAV Server</b>[[xe1:Tools;xe2:Marklogic WebDAV Server]] hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
                   <figure pdfwidth="page">
-                     <desc id="a4dd752b-098c-4388-bbac-1835d5957212d7e39">Wechseln in die Marklogic App Server Verwaltung</desc>
+                     <desc id="8d363fd8-3dea-4575-8931-0615ada471f2d7e39">Wechseln in die Marklogic App Server Verwaltung</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/appserver.png"/>
                   </figure>
                   <figure pdfwidth="page">
-                     <desc id="cf84e465-8874-43ad-a5f4-2abdf1627fe4d7e43">WebDAV in Marklogic konfigurieren</desc>
+                     <desc id="a7a2332b-5e94-410f-90bb-9969716b5785d7e43">WebDAV in Marklogic konfigurieren</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/marklogic-create-webdav.png"/>
                   </figure>
                   <p id="9c2a53f4-bd6e-42d5-b88c-9e23a3a52923d6e46">Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
                   <figure pdfwidth="page">
-                     <desc id="3a5cdeb8-5781-41e0-818e-77c97592c31fd7e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
+                     <desc id="cc3d8149-174f-44a7-a46b-e43fe6e7b1ecd7e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/cnfigure-database-connection.png"/>
                   </figure>
                   <p id="3a372d8e-d264-487c-be23-7c049f8f82ead6e53">Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
                   <figure pdfwidth="page">
-                     <desc id="5264cc98-2b6d-4f48-997c-404055c93b16d7e56">oXygen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
+                     <desc id="fd4d7709-6218-417d-881a-186364159ca4d7e56">oXygen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
                      <img src="./client/data/38f7a676-cbef-4a69-9ae9-d89bddde2719/Data-Source_explorer.png"/>
                   </figure>
                </block>
@@ -2098,7 +2098,7 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                   ismodule="no">
             <content>
                <title id="4e59c114-46a9-4292-8c91-b346f9cde93f">
-                  <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic</title>
+                  <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic </title>
                </title>
                <block>
                   <p id="51cd2348-5ac3-401f-bfec-d6669662af27">Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
@@ -2422,7 +2422,7 @@ xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                   ismodule="no">
             <content>
                <title id="7ca48bd5-7f2e-44cd-aacd-c15f7618b43e">
-                  <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente</title>
+                  <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente </title>
                </title>
                <block>
                   <p id="fd257336-1ea5-47eb-8795-ac4f22576a8e">Wenn wir zwischen der Zeit in der das Dokument, bspw. ein Vetrag 
@@ -2618,7 +2618,7 @@ cts:search(fn:doc(), cts:and-query((
                      ismodule="no">
                <content>
                   <title id="61bcaead-35e5-4f94-b719-e7708391915f">
-                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole</title>
+                     <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole </title>
                   </title>
                   <block>
                      <p id="2104ae8b-6b06-4e0c-902d-b3dcaca2482b">Die Codefragmente aus dem vorherigen Kapitel sind folgend für eine ML Konsolensitzung aufbereitet:</p>
@@ -2794,7 +2794,7 @@ declare function local:insert-update()
                      </note>
                      <p id="48ff0142-18b5-4135-986c-b4f3baf3550ed6e37">Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</p>
                      <figure pdfwidth="page">
-                        <desc id="534f0e12-a15e-4a26-89c9-59ce7b7e0434d7e40">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.</desc>
+                        <desc id="a7b4e495-d74d-4bdb-be89-17491b924562d7e40">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Originals sind als Vorgänger mit Suffix gekennzeichnet.</desc>
                         <img src="./client/data/7c58baac-7b83-41b9-adf6-12f63539cbb6/temporal-documents.png"/>
                      </figure>
                   </block>
@@ -2804,7 +2804,7 @@ declare function local:insert-update()
                      ismodule="no">
                <content>
                   <title id="c25b36c1-64f0-4fff-8445-8dc096e98096">
-                     <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries</title>
+                     <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries </title>
                   </title>
                   <block>
                      <p id="2459f527-8e4e-4230-9966-7c387208de9b">Wie im vorherigen Kapitel beschrieben, muss in der Konsolensitzung zwischen Anlegen der Originalversion und der Aktualisierung eine Verzögerung eingebaut werden, um irgendwie das "Zeitloch" zu simulieren, in dem - wenn wir bei dem vorherigen Beispiel bleiben -  der Personalausweis als Verlust gemeldet war, aber tatsächlich schon wieder in meinem Besitz war.</p>
@@ -2821,87 +2821,87 @@ declare function local:insert-update()
                             frame="all"
                             scale="50"
                             status="changed">
-                        <desc id="a47451ed-c17d-4b3e-a8c9-59106871e200d7e16">Diese Daten wurde aus der Exploreransicht der Konsolensitzung entnommen. </desc>
-                        <tgroup id="4a3c1e51-560b-4770-bfeb-5765e1549d7dd7e18" cols="5">
-                           <colspec id="c929694f-0037-48d0-bb80-94549adcee84d7e19" colwidth="187" colname="col0"/>
-                           <colspec id="fbbf52a1-161f-4657-a737-b8a4120960bbd7e20" colwidth="220" colname="col1"/>
-                           <colspec id="f060fa71-5156-4b4a-909f-6c6436214e96d7e21" colwidth="222" colname="col2"/>
-                           <colspec id="73e548ba-683e-4bb8-afb5-096a87b5ab6cd7e22" colwidth="211" colname="col3"/>
-                           <colspec id="bb2446c6-4b86-47ac-92d8-7d604fbf58ccd7e23" colwidth="225" colname="col4"/>
-                           <thead id="05472aa5-4e1a-4b82-b2c2-4c550d30d450d7e24">
-                              <row id="dd48c31d-955d-43aa-a917-cf3914224767d7e25">
-                                 <entry id="2924046f-3296-48f8-ba08-1c8369602a7ed7e26" colname="col0" width="187px">
+                        <desc id="24c598bc-01cd-4a47-a191-c56d8825476dd7e16">Diese Daten wurde aus der Exploreransicht der Konsolensitzung entnommen. </desc>
+                        <tgroup id="1d7b4be5-37ce-445d-9c86-80ef49880e55d7e18" cols="5">
+                           <colspec id="1e9c6ea1-72e4-45d0-81af-ae594c13ec70d7e19" colwidth="187" colname="col0"/>
+                           <colspec id="81084ad4-184e-46a5-9eac-e8c731f9bcbfd7e20" colwidth="220" colname="col1"/>
+                           <colspec id="8e798b95-f919-46bf-87ab-6323394582f3d7e21" colwidth="222" colname="col2"/>
+                           <colspec id="01047d75-00b1-4859-a161-b9a6bb7ddb51d7e22" colwidth="211" colname="col3"/>
+                           <colspec id="8ecc7c23-b0d0-47ee-a917-b7014b4aadc0d7e23" colwidth="225" colname="col4"/>
+                           <thead id="7425a11e-1404-4272-b9c7-640b254c7c12d7e24">
+                              <row id="1bd01a81-b580-494f-a838-d735a95ebc7ed7e25">
+                                 <entry id="e981bb09-977b-446f-b042-30e3e70115b8d7e26" colname="col0" width="187px">
                                     <p id="3b858260-3132-4744-822a-388757bf1ca7d6e22">Document</p>
                                  </entry>
-                                 <entry id="3bea3fcd-fe94-43d2-9021-1c5f24d7c3c1d7e29" colname="col1" width="220px">
+                                 <entry id="6ce9ddea-f294-4955-936e-0a6839a3c755d7e29" colname="col1" width="220px">
                                     <p id="96fa723c-32d1-4215-8ea6-34f4c4e8d4e0d6e28">validStart</p>
                                  </entry>
-                                 <entry id="c053da14-5240-4f27-b64b-ee8dce461664d7e32" colname="col2" width="222px">
+                                 <entry id="07bceca6-e57e-443e-a91a-ff5061f78887d7e32" colname="col2" width="222px">
                                     <p id="f3f4d9b2-d393-47f7-88f9-f0bd49c13be2d6e34">validEnd</p>
                                  </entry>
-                                 <entry id="de27212c-bd38-434a-ae65-792c7c15fdc1d7e35" colname="col3" width="211px">
+                                 <entry id="df2f733b-56b3-40bd-954c-5e30945c5d78d7e35" colname="col3" width="211px">
                                     <p id="6738e10e-4028-4824-bd5a-2f31fc7276a9d6e37">systemStart</p>
                                  </entry>
-                                 <entry id="a5f1b0d4-a1cf-4175-a793-62a2afa1b687d7e38" colname="col4" width="225px">
+                                 <entry id="6c208755-de4c-45a3-a0ce-7b1035ce1e2ad7e38" colname="col4" width="225px">
                                     <p id="abe482e7-7fea-4484-a3bc-7838a551a318d6e40">systemEnd</p>
                                  </entry>
                               </row>
                            </thead>
-                           <tbody id="bc4920d8-25dc-438a-aa12-810563c00f0fd7e41">
-                              <row id="db42436c-961e-46f0-a2ab-e3f9a15365d2d7e42">
-                                 <entry id="390afabb-2ef7-4b7c-8a58-16158047dff0d7e43" colname="col0" width="187px">
+                           <tbody id="02bc5c91-19a9-452a-92d5-27f9c968be9dd7e41">
+                              <row id="e0cdd0ca-9f41-47b5-8d97-2d99555a5ed2d7e42">
+                                 <entry id="0d19fb4d-57f3-4671-905b-680488255c94d7e43" colname="col0" width="187px">
                                     <p id="1c29ef78-25db-4140-b0cf-2434fe62501fd6e33">duesel_alex_270774.2462380991258156208.xml</p>
                                  </entry>
-                                 <entry id="d81f33fb-370c-4fdb-a6a1-ed3ee5a25707d7e46" colname="col1" width="220px">
+                                 <entry id="0cae814c-bc54-4eed-bd8f-7dcd53ac8d46d7e46" colname="col1" width="220px">
                                     <p id="05c544a3-7bd5-4253-b5ee-67dabcabfbf4d6e51">2019-03-19T14:17:00</p>
                                  </entry>
-                                 <entry id="c81218c3-85de-4329-b4a6-9aef63c86569d7e49" colname="col2" width="222px">
+                                 <entry id="a5c67d7e-d8d7-4878-8a5f-e6a102ff8c01d7e49" colname="col2" width="222px">
                                     <p id="7b570410-dfd1-48dc-a64c-5ff7ee9f84d1d6e54">
                                        <b>unendlich</b>
                                     </p>
                                  </entry>
-                                 <entry id="da7386d3-f478-47cc-ba9f-e7ae12db2501d7e53" colname="col3" width="211px">
+                                 <entry id="d82987fb-d15f-4724-a402-924d6a7466bcd7e53" colname="col3" width="211px">
                                     <p id="f84359ce-723b-4894-9c92-ffcea49f4624d6e58">2019-03-19T13:18:28</p>
                                  </entry>
-                                 <entry id="984c85c8-ad82-4fdd-a0d1-03e8dc94d944d7e56" colname="col4" width="225px">
+                                 <entry id="5e6e5973-d077-449c-b613-643ab4aabec4d7e56" colname="col4" width="225px">
                                     <p id="093daa5f-3d5f-4d81-beb6-e196c438fcd5d6e61">2019-03-19T13:19:18</p>
                                  </entry>
                               </row>
-                              <row id="822e488d-b008-4134-9ef7-3fce7218158ed7e59">
-                                 <entry id="2988d55b-c151-47c8-87a1-afbabc97f11fd7e60" colname="col0" width="187px">
+                              <row id="87338937-358a-4be9-804b-118623e5798ed7e59">
+                                 <entry id="e209cd83-04cc-45b4-8a94-a2e85d83befcd7e60" colname="col0" width="187px">
                                     <p id="80b154da-dd44-41e9-9478-c6902e4b4bb1d6e41">duesel_alex_270774.819911042637597172.xml</p>
                                  </entry>
-                                 <entry id="633a6696-3b88-46ad-90d9-adbc4e4a4fe4d7e63" colname="col1" width="220px">
+                                 <entry id="d43b251a-a1ca-4ba1-8741-1d29d721391ad7e63" colname="col1" width="220px">
                                     <p id="865093ca-d4e5-4225-a791-45f80ad8fb7ed6e71">2019-03-19T14:17:00</p>
                                  </entry>
-                                 <entry id="5e6a24dc-b6a0-4d1a-bf19-c35727cb382ad7e66" colname="col2" width="222px">
+                                 <entry id="a2be5e65-2d16-4bf7-a8ba-dc5c4f09db8ed7e66" colname="col2" width="222px">
                                     <p id="b274b678-7150-4874-a037-23b792835749d6e74">2019-03-19T14:18:00</p>
                                  </entry>
-                                 <entry id="e68e1769-a42b-4ab7-96bf-50d3cb82337bd7e69" colname="col3" width="211px">
+                                 <entry id="07b42295-70a5-4809-8876-eeeb5a048181d7e69" colname="col3" width="211px">
                                     <p id="c41e2883-6169-491b-a011-982003d98c89d6e77">2019-03-19T13:19:18</p>
                                  </entry>
-                                 <entry id="9177742c-dc0c-472a-af9a-8deed45d1e02d7e72" colname="col4" width="225px">
+                                 <entry id="95b84ee8-d439-4137-8c14-2aa8f685eab1d7e72" colname="col4" width="225px">
                                     <p id="604a1931-45e7-48e9-879c-325749779335d6e80">
                                        <b>unendlich</b>
                                     </p>
                                  </entry>
                               </row>
-                              <row id="5ae602bf-815a-46ef-87cb-951658c71273d7e76">
-                                 <entry id="462f7562-773e-4c30-8255-82894cace5c4d7e77" colname="col0" width="187px">
+                              <row id="e2a87177-0da9-40ce-a545-8a1800cd6c25d7e76">
+                                 <entry id="fdc220f0-7484-42a1-a131-678a506f0a66d7e77" colname="col0" width="187px">
                                     <p id="1a49c7fb-9c2d-420d-aaf7-12f4c3c8c11dd6e49">duesel_alex_270774.xml</p>
                                  </entry>
-                                 <entry id="49330d49-73c2-4571-b694-bda05f1d3aaed7e80" colname="col1" width="220px">
+                                 <entry id="abacdc29-3d37-4094-a00f-9030a62c5eead7e80" colname="col1" width="220px">
                                     <p id="2d55653f-3aff-4633-ab66-6de296a620f7d6e91">2019-03-19T14:18:00</p>
                                  </entry>
-                                 <entry id="3fb3b9c5-2ab4-4e20-ac83-fff36bc77973d7e83" colname="col2" width="222px">
+                                 <entry id="3f73f558-2638-4f4e-bde7-a442909cde8cd7e83" colname="col2" width="222px">
                                     <p id="59329648-b091-46a1-8e6a-6247f0c7c617d6e94">
                                        <b>unendlich</b>
                                     </p>
                                  </entry>
-                                 <entry id="94cb7710-dd68-4074-8b5d-a01970407a37d7e87" colname="col3" width="211px">
+                                 <entry id="85c06f61-42e2-47b4-9893-e3430ce9b992d7e87" colname="col3" width="211px">
                                     <p id="22c74575-6baf-4a2b-9da6-1fb880a2b15ed6e97">2019-03-19T13:19:18</p>
                                  </entry>
-                                 <entry id="889e2319-4134-4a0f-8dde-c9c1db5bf912d7e90" colname="col4" width="225px">
+                                 <entry id="1c13bda5-32f4-4225-ae19-e5c7ae2c4744d7e90" colname="col4" width="225px">
                                     <p id="79110572-309b-4067-8121-9f9a456f8e1cd6e100">
                                        <b>unendlich</b>
                                     </p>
@@ -2915,15 +2915,15 @@ declare function local:insert-update()
                      <p id="6bea37b1-3981-4fda-8afb-6d40e27b4838d6e96">Das korrekte Setup bleibt an dieser Stelle dem geneigten Leser selbst überlassen.</p>
                      <p id="059b400f-b00a-4a79-944c-c54a2cbec2b0d6e93">Zwei Queries, die die Werte in der Tabelle illustriere sind bspw. folgende:</p>
                      <figure pdfwidth="page">
-                        <desc id="5ce87a88-b8e9-480c-a0ef-18b8cfb48b9dd7e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide mit dem Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
+                        <desc id="b1354f32-7b9b-458d-ab4b-dc40c6db5044d7e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide mit dem Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
                         <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result1.png"/>
                      </figure>
                      <figure pdfwidth="page">
-                        <desc id="576fe768-e4c2-47d3-9d69-44de36f26b1ad7e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
+                        <desc id="debd38cf-cd65-46eb-9aae-a021ccb7917cd7e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
                         <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result2.png"/>
                      </figure>
                      <figure pdfwidth="page">
-                        <desc id="9828664f-381d-40b5-9bf5-0c43400582fdd7e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "<i id="5fb358f2-9a8a-48ce-b92e-2732bb8a695dd6e111">latest</i>" gespeichert.</desc>
+                        <desc id="b292e011-dab7-4158-9b3d-5dc517f25fded7e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "<i id="5fb358f2-9a8a-48ce-b92e-2732bb8a695dd6e111">latest</i>" gespeichert.</desc>
                         <img src="./client/data/62faa067-ecd5-4053-8388-e7e151f04542/result_3.png"/>
                      </figure>
                      <p id="b609d2ea-c4d2-4b17-839e-3fc77a984064d6e116">Wie man sie kann man - ausreichend Lösungsphantasie vorausgesetzt - einiges mit diesen Queries anstellen. Hilfreich ist sicherlich auch die umfangreiche Liste der Vergleichsoperatoren, die MarkLogic zum Vergleichen von Zeiträumen bereitstellt: [[link]]ISO Operator[[fn:https://docs.marklogic.com/guide/temporal/searching#id_92200*ISO normierte Operatoren in MarkLogic zum Vergleichen von Zeiträumen]] und [[link]]ALLEN Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_98704*Allen (ALN) Vergleichsoperatoren für Zeiträume]].</p>
@@ -2935,7 +2935,7 @@ declare function local:insert-update()
                   ismodule="no">
             <content>
                <title id="aaf86c32-9113-4007-a352-4f0fde370520">
-                  <title id="be53f14b-df1f-438f-bed4-5b62d0659c1c">MarkLogic Tools</title>
+                  <title id="be53f14b-df1f-438f-bed4-5b62d0659c1c">MarkLogic Tools </title>
                </title>
                <block>
                   <p id="389da682-4511-40f2-b942-5272545d3bc8">MarkLogic bringt out-of-the-box schon eine Vielzahl an Ansichten und Tools mit. Da aber ein produktiver Applicatione Server nicht auch noch Entwicklerwerkzeuge bündeln sollte, bzw. verhindern sollte, dass irgendwelche halbfertigen Sachen produktiv laufen, ist es nicht verwunderlich, dass einige interessante Ansichten fehlen, wie z.B. ein Datenbrowser<undefined id="a94b2b31-80ea-4cbc-bc50-21bb754459b4d7e6" href="undefined">[[xe1:Tools für MarkLogic;xe2:Datenbrowser]]</undefined> mit Syntaxhighlighting.</p>
@@ -2947,7 +2947,7 @@ declare function local:insert-update()
                      ismodule="no">
                <content>
                   <title id="a94334c5-6336-4fd4-ac7f-3df55368ade8">
-                     <title id="b90f365f-bab3-4baa-b39a-bc95ef410819">mlproj - Project and Environment Manager</title>
+                     <title id="b90f365f-bab3-4baa-b39a-bc95ef410819">mlproj - Project and Environment Manager </title>
                   </title>
                   <block>
                      <p id="9cd5cde4-fd3e-4b5b-a90c-beca0cb24a2e">bla bla</p>
@@ -2958,7 +2958,7 @@ declare function local:insert-update()
                      ismodule="no">
                <content>
                   <title id="8e2deac6-e32d-4fd3-8478-05002d53efad">
-                     <title id="e2dd6fa8-c3ba-4e13-a7c9-e7818b117c97">EXPath Konsole</title>
+                     <title id="e2dd6fa8-c3ba-4e13-a7c9-e7818b117c97">EXPath Konsole </title>
                   </title>
                   <block>
                      <p id="89198b6a-b14b-4a4d-8128-4953fe8ed0ec">Die [[link]]MarkLogic EXPath Konsole[[fn:https://github.com/fgeorges/expath-ml-console*ML EXPath Konsole auf GitHub]]ist eine Webanwendung, die ausserhalb des MarkLgic Servers verschiedene Ansichten auf die Daten bereitstellt. Sie umfasst auch einige praktische Tools, wie:</p>
@@ -2985,7 +2985,7 @@ declare function local:insert-update()
                      ismodule="no">
                <content>
                   <title id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610">
-                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - Content Pump</title>
+                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - Content Pump </title>
                   </title>
                   <block>
                      <p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">bl abl </p>
@@ -3008,7 +3008,7 @@ declare function local:insert-update()
                   ismodule="no">
             <content>
                <title id="9d32e957-a332-40f5-bcbd-52fd6ed7f7da">
-                  <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron</title>
+                  <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron </title>
                </title>
                <block>
                   <p id="4e6cde2f-795e-42a2-97a3-67b0c72db22a">Um die Korrektheit einer XML Instanz zu prüfen, gib es verschiedene Schemata, wie <b>XSD</b>, <b>RNG</b> oder <b>DTD</b>[[xe1:Schemata]], welche der Parser beim Aufbau des DOM Baums heranzieht. Eine Validierung[[xe1:Verarbeitungsmethoden;xe2:Validierung]] mit Apache Xerces könnte beispielsweise als Java Code[[xe1:Programmiersprachen;xe2:Java]] folgendermaßen angestossen werden:</p>
@@ -3028,25 +3028,25 @@ try {
                   <p id="3920a1e6-ddfe-499f-997b-33b7b330ae55d6e10">Das geht einerseits über die Angabe des Doctypes in der XML Instanz, anderseits bieten auch alle Editoren die Möglichkeit ein bestimmtes Schema explizit auszuwählen, um gegen dieses auf Anforderung zu validieren.</p>
                   <p id="0c8bf04d-6ef7-4b2b-9e36-3c115fdf5657d6e10">Gilt es komplexere Businessregeln zu überprüfen, die über Syntax-, Konsistenz- und einfache Korrektheitschecks hinausgehen, empfiehlt sich eine Validierung mit Schematron Regeln.</p>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23">
+                           id="f54f772a-dfad-458a-8e81-32a493f62736d7e23">
                      <content>
-                        <title id="8b00f9d6-ffe9-401f-bc08-2f6116ae9071d7e23">
+                        <title id="f54f772a-dfad-458a-8e81-32a493f62736d7e23">
                            <title id="c802dd14-5953-4c24-8637-f7552d107e57d6e13">Schematron ist XSLT</title>
                         </title>
                         <p id="c7d6f54a-c183-4238-8fcd-65258833ebd9d6e15">Bei einer Schematron Validierung wird eine XML Instanz mit Hilfe eines automatisch generierten XSLT Stylesheets überprüft. Dieses kontextabhängige Stylesheet wird aus einer in der Schematron Syntax vom Autor verfassten Regelbasis, die wiederum in XML vorliegt, über ein zweites XSLT Stylesheet generiert - Dieses zweite XSLT Stylesheet ist sozusagen das eigentliche Schematron Programm. </p>
                         <p id="ca8d184a-924b-4ea6-bdab-3340c1bde072d6e19">Das folgende Diagramm veranschaulicht die Vorgehensweise anhand eines Filter-Szenarios[[xe1:Verarbeitungsmethoden;xe2:Filter-Szenario]], bei dem ein XML Dokument mit einigen ungültigen Passagen in eine gefilterte Darstellung überführt wird.</p>
                         <figure pdfwidth="page">
-                           <subtitle id="14d10ed8-da18-4558-85da-bba3ee0d3519d7e32">Schematron Validierung mit Filter</subtitle>
-                           <desc id="bb4de76e-62ee-4e3b-a413-1699d78eacb8d7e34">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
+                           <subtitle id="7f4c69a8-9191-4d83-8906-86414f46fcc1d7e32">Schematron Validierung mit Filter</subtitle>
+                           <desc id="a269b039-80a5-4904-9777-3d34956fc235d7e34">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
                            <img src="./client/data/6fd7b270-9d1f-4f8e-996f-13b5862956a9/schematron.svg"/>
                         </figure>
                         <p id="4e1ec9a6-9a1a-470b-9e86-2708788be97bd6e19">Zu finden ist das [[link]]Schematron Repo auf Github[[fn:https://github.com/Schematron/schematron*Schematron auf GitHub]]. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: [[code:schematron/code]]</p>
                      </content>
                   </chapter>
                   <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                           id="96a66a14-94a8-420a-828f-ec06677c0fe5d7e39">
+                           id="821ea5d7-c459-4543-8aec-f3ec1d0ee3b9d7e39">
                      <content>
-                        <title id="96a66a14-94a8-420a-828f-ec06677c0fe5d7e39">
+                        <title id="821ea5d7-c459-4543-8aec-f3ec1d0ee3b9d7e39">
                            <title id="0cc5ca05-4506-44eb-981b-f74a156e6da0d6e20">CLI Verwendung</title>
                         </title>
                         <p id="3f68c067-cd95-4b41-b51b-c594057af29fd6e22">Um die Schematron XSLT Skripte in eine eigene XSLT Anwendung per Kommandozeile einzubinden, könnte man folgendermassen vorgehen: </p>
@@ -3125,7 +3125,7 @@ saxon -s:- $script_dir/schematron/iso_svrl_for_xslt2.xsl \
                   ismodule="no">
             <content>
                <title id="821f8271-e9a1-43e8-ba9a-b1e8aa0ce4f4">
-                  <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec</title>
+                  <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec </title>
                </title>
                <block>
                   <p id="eef21ef4-793e-4fef-9f1e-a22ecf24b64c">XSpec[[xe1:Tools;xe2:XSpec]] ist ein [[link]]Test-Framework[[fn:https://github.com/xspec*XSpec auf GitHub]][[xe1:Test-Framework]] für XSLT, XQuery und Schematron. 
@@ -3197,7 +3197,7 @@ und alles ist gut - dem Augenschein nach.</p>
             ismodule="no">
       <content>
          <title id="47df7a71-2ba1-4bde-bbc0-3ec379ec6ac5">
-            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How</title>
+            <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How </title>
          </title>
          <block>
             <p id="07696fff-994c-406a-8d47-cb3b1aa0ef48">Unsortierte Notizen, die für jeden XSLT-Programmierer interessant sein könnten.</p>
@@ -3208,7 +3208,7 @@ und alles ist gut - dem Augenschein nach.</p>
                ismodule="no">
          <content>
             <title id="b1719307-52da-4e1d-9aee-a3a6bb139d92">
-               <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins </title>
+               <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins</title>
             </title>
             <block>
                <p id="c2e52685-e1e6-417d-8e94-2d5367436ccb">Im Fachbereich Technische Dokumentation wird neue Technologie ein bisschen langsamer adaptiert, als in anderen Disziplinen der IT - schliesslich muss ja erst alles dokumentiert werden ...</p>
@@ -3280,15 +3280,15 @@ git log --diff-filter=D --summary</verbatim>
                ismodule="no">
          <content>
             <title id="24e125c5-f411-4698-9e68-19ab7ba0f302">
-               <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren </title>
+               <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren</title>
             </title>
             <block>
                <p id="d64ff6f9-5ce2-4143-9cde-da10e57ac3e0">Der XSLT Styesheet-Entwickler wird sich  gewöhnlich mit Eingabedaten beschäftigen, die entweder automatisch mittels irgendeines Prozesses erzeugt wurden, oder die durch einen menschlichen Autor mit einem XML Editor[[xe1:Tools;xe2:XML Editor]] eingegeben wurden.</p>
                <p id="e047af65-643f-4cc0-8bd5-36f99fb92872d6e6">Aus diesem Grund ist es ganz nützlich, die wichtigsten Editoren zu kennen. Wir unterscheiden zwischen Desktopapplikationen und Webanwendungen. Ausserdem unterscheiden wir noch ob der Editor WYSIWIG (<b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>I</b>s <b>W</b>hat <b>Y</b>ou <b>G</b>et) oder WYSIWYM (<b>W</b>hat <b>Y</b>ou <b>S</b>ee <b>I</b>s <b>W</b>hat <b>Y</b>ou <b>M</b>ean) [[xe1:WYSIWYG und WYSIWYM]] unterstützt oder eine Mischung aus beidem darstellt.</p>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52">
+                        id="d406e023-ca69-4c59-bb0f-e4b5e02b9966d7e52">
                   <content>
-                     <title id="07b5dccb-ddbd-4038-85d3-c215daa008a5d7e52">
+                     <title id="d406e023-ca69-4c59-bb0f-e4b5e02b9966d7e52">
                         <title id="346853d6-4d45-42f4-a7b8-77af38d96151d6e9">WYSIWYM Desktop</title>
                      </title>
                      <table type="dl">
@@ -3322,18 +3322,18 @@ git log --diff-filter=D --summary</verbatim>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73">
+                        id="94a18c0c-6613-45a4-9235-d0fd7c645e46d7e73">
                   <content>
-                     <title id="e7c8cebe-8763-4823-8bc6-e2b9fa16f912d7e73">
+                     <title id="94a18c0c-6613-45a4-9235-d0fd7c645e46d7e73">
                         <title id="4c42f7f1-6d2a-482d-8d84-2c500fb35927d6e74">WYSIWYG Desktop</title>
                      </title>
                      <p id="fb2fd093-aad8-48f0-9a96-343cee2e42bdd6e76">XMetal kann so konfiguriert werden, dass bei einer einfachen DTD der Content Bereich wie Word aussieht. Auch Code Editoren, wie OxygenXML[[xe1:Tools;xe2:oXygen XML Editor]] bieten diese Möglichkeit. Das Key-Handling bei dieser Variante zeigt aber schnell, dass die UX noch weit von herkömmlichen Textverarbeitungssystem, wie Word oder OpenOffice entfernt ist.  </p>
                   </content>
                </chapter>
                <chapter hyphenation="yes" chapterpage="no" ismodule="yes"
-                        id="495cf848-e78c-4ec3-91d4-9bf23b755209d7e78">
+                        id="91afc5eb-42f5-44da-81a6-9d700cc42444d7e78">
                   <content>
-                     <title id="495cf848-e78c-4ec3-91d4-9bf23b755209d7e78">
+                     <title id="91afc5eb-42f5-44da-81a6-9d700cc42444d7e78">
                         <title id="092992f0-ac89-4bd8-bba5-a1d685135135d6e79">WYSIWYM Online</title>
                      </title>
                      <table type="dl">
@@ -3389,7 +3389,7 @@ git log --diff-filter=D --summary</verbatim>
             ismodule="no">
       <content>
          <title id="c1678e74-d15c-42a1-9fd0-912fced210ef">
-            <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">[[glossary]]</title>
+            <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">[[glossary]] </title>
          </title>
          <block>
             <table type="dl">
@@ -3475,7 +3475,7 @@ git log --diff-filter=D --summary</verbatim>
             ismodule="no">
       <content>
          <title id="d3d7b9b9-8712-4844-bf96-9444ac5bb171">
-            <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS</title>
+            <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS </title>
          </title>
          <block>
             <p id="37aa8a92-5d62-431a-a248-92f4c263fec7d6e4">Tekur CCMS[[xe1:Tektur CCMS]] ist ein web-basiertes Component Content Management System und befindet sich noch in der Entwicklung.</p>

@@ -1,31 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="44b03330-885f-4eee-a90b-3235d56161e7"><title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken</title><body id="72db8e0f-a252-4a9d-ac99-80f159518570"><p id="23b4fccd-51f9-4064-b7df-46252a40211d">XML Datenbanken[[xe1:XML Datenbank]] konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
-Datenbanken auf die Struktur eines Dokuments, was abstrakt gesehen einen Baum darstellt, und weniger auf die Beziehungen zwischen Objekten, die eher einen Graphen aufspannen.</p><p id="01eaca65-7909-46d8-9223-3de00eed2606d6e6">Natürlich ist auch jeder Baum ein Graph ohne Kreise, und sicherlich kann man auch Bäume
-in einer realtionalen Datenbank abspeichern. </p><p id="b8e45351-2764-4e0f-9d4a-c78d2e149bced6e8">Eine XML Datenbank ist aber für diese Struktur
-optimiert, sprich: Fragen, wie "Welche Hühner legen braune Eier?" müssen eher selten beantwortet
-werden. Vielmehr geht es um die Frage "Wie sieht ein Huhn und wie sieht ein Ei aus?"</p><p id="ded53943-e2b3-4ef2-b8e4-2eee4a93ebb8d6e8">Wir betrachten also Dokumente, wie:</p><pre id="b9a7afac-a1c1-483b-9ded-c5d73e63d81ed6e12" xml:space="preserve">&lt;huhn&gt;
-  &lt;name&gt;heiner&lt;/name&gt;
-  &lt;geschlecht&gt;männlich&lt;/geschlecht&gt;
-  &lt;alter&gt;3&lt;/alter&gt;
-  &lt;feder-farbe&gt;weiss&lt;/feder-farbe&gt;
-&lt;/huhn&gt;</pre><pre id="bd1a649f-6906-440b-bc65-a3ce7f195268d6e14" xml:space="preserve">&lt;huhn&gt;
-  &lt;name&gt;helga&lt;/name&gt;
-  &lt;geschlecht&gt;weiblich&lt;/geschlecht&gt;
-  &lt;alter&gt;2&lt;/alter&gt;
-  &lt;feder-farbe&gt;braun&lt;/feder-farbe&gt;
-&lt;/huhn&gt;</pre><pre id="3f2c43dd-97dc-4ed7-af66-d8920c3c5064d6e16" xml:space="preserve">&lt;ei&gt;
-  &lt;farbe&gt;braun&lt;/farbe&gt;
-  &lt;gewicht&gt;65g&lt;/gewicht&gt;
-  &lt;legedatum&gt;23.03.2019&lt;/legedatum&gt;
-&lt;ei&gt;</pre><p id="cc774b7e-f0f8-4dca-89d7-1670b34834c7d6e18">Um nun ein Ei einem bestimmtem Huhn zuzuordnen, könnte man die Ei-Struktur innerhalb der Huhn-Struktur ansiedeln, bspw. so:</p><pre id="638f5a9e-a009-427c-949c-83859c80b4f8d6e20" xml:space="preserve">&lt;huhn&gt;
-  &lt;name&gt;helga&lt;/name&gt;
-  &lt;geschlecht&gt;weiblich&lt;/geschlecht&gt;
-  &lt;alter&gt;2&lt;/alter&gt;
-  &lt;feder-farbe&gt;braun&lt;/feder-farbe&gt;
-  &lt;eier&gt;
-    &lt;ei&gt;
-      &lt;farbe&gt;braun&lt;/farbe&gt;
-      &lt;gewicht&gt;65g&lt;/gewicht&gt;
-      &lt;legedatum&gt;23.03.2019&lt;/legedatum&gt;
-    &lt;ei&gt;
-  &lt;/eier&gt;
-&lt;/huhn&gt;</pre></body></topic>
+<?xml version="1.0" encoding="UTF-8"?><topic id="44b03330-885f-4eee-a90b-3235d56161e7"><title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken </title><body id="72db8e0f-a252-4a9d-ac99-80f159518570"><p id="23b4fccd-51f9-4064-b7df-46252a40211d">XML Datenbanken konzentrieren sich im Gegensatz zu den verbreiteten relationalen 
+Datenbanken auf die Struktur eines Dokuments, die abstrakt gesehen einen Baum darstellt, und weniger auf die Beziehungen zwischen Objekten, die eher einen Graphen aufspannen.</p><p id="01eaca65-7909-46d8-9223-3de00eed2606d6e6">Natürlich ist auch jeder Baum ein Graph ohne Kreise, und sicherlich kann man auch Bäume
+in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für diese Struktur optimiert. </p><p id="b8e45351-2764-4e0f-9d4a-c78d2e149bced6e8">Es gibt gegenwärtig vier reine XML Datenbanken und einige Erweiterungen für konventionelle SQL Datenbanken:[[xe1:XML Datenbank;xe2:eXist]][[xe1:XML Datenbank;xe2:BaseX]][[xe1:XML Datenbank;xe2:MarkLogic]][[xe1:XML Datenbank;xe2:Berkely XML DB]]</p><dl id="ad8dbaef-90f1-4214-bf9e-9bb452bee61cd6e10"><dlhead id="46b108b7-aa73-48d3-9f9e-be36c20dd3dbd7e11"><dthd id="1397d733-5c1f-4e6d-8d29-beb6e38fc0f9d7e12">Datenbank</dthd><ddhd id="4199fc5f-23a3-4a48-ab6d-cfeb14bc5d9dd7e14">Besonderheiten</ddhd></dlhead><dlentry id="7e096901-e250-44c8-9b59-853d24b347fdd6e16"><dt id="88e9ecbe-276b-4e33-a6de-266b52409019d7e17">[[link]]eXist DB[[fn:EX;http://exist-db.org/exist/apps/homepage/index.html*Homepage zur eXist XML Datenbank]]</dt><dd id="c47033e0-3eaf-4760-9c73-5bc74de627ced7e19"><p id="3a5173f3-5cdb-4aff-b6ea-23fd95f7f1b9d6e20">eXist DB ist ein Open Source Projekt. Neben der Datenbank umfasst diese Software eine komplette Entwicklungsumgebung für Webapplikationen. Für diese DB xistiert ein 1-Klick Installer in Form eines Java Jars. eXist ist im Bereich Digital Humanities (ein Fachbereich der Geschichts- und Kulturwissenschaften) sehr verbreitet.</p></dd></dlentry><dlentry id="4c0d6d6d-8c58-42a1-b1f3-e607a897785ed6e22"><dt id="ceb71d4a-9edf-4832-9e18-7aaab0078d17d7e23">[[link]]BaseX[[fn:BX;http://basex.org/*Homepage zur BaseX XML Datenbank]]</dt><dd id="bcde9667-1c86-400c-b5ff-c8947dc17ff4d7e25"><p id="15075d1b-a56d-4be2-9b93-c5f50f833f6ad6e26">BaseX ist ebenfalls OpenSource und die Homepage macht einen ordentlichen Eindruck. Bisher bin ich noch nicht dazugekommen, BaseX zu evaluieren. Unter meiner Java 10 Installation lief erst einmal nichts - weshalb die erste Kontaktaufnahme scheiterte. </p></dd></dlentry><dlentry id="fa4e7762-db96-4ff0-b3da-0cfa058ff457d6e28"><dt id="a5d2cc7e-2f58-4530-8c0e-5ddbfcafd65ad7e29">[[link]]MarkLogic[[fn:ML;https://www.marklogic.com/*Homepage zur XML Datenbank MarkLogic]]</dt><dd id="3add8b97-54c3-4ab8-8248-f2cd98cfb169d7e31"><p id="c7c02152-da2a-42a9-b1d0-333d01700ff0d6e32">MarkLogic ist der Platzhirsch unter den kommerziellen Anbietern. Hier ist alles "Enterprise"... die Funktionalität, der Support und auch der Preis. Obwohl ML viele Erweiterungen für XQuery bietet, ist der XQuery 3.0 Standard noch nicht umgesetzt.</p></dd></dlentry><dlentry id="114af74d-62e0-4ffc-b827-ec7edc1ae63cd6e34"><dt id="d54f8f22-ff83-42cf-92ea-e3ea18b7a13cd7e35">[[link]]Berkely DB XML Datenbank[[fn:BD;https://www.oracle.com/database/berkeley-db/xml.html*Website zur Berkeley DB XML Datenbank auf den Seiten von Oracle]]</dt><dd id="10ecf1b9-ec17-4f28-bf31-a5d70d3035ded7e37"><p id="131dcb3d-0963-4c7c-a545-f4752f376746d6e38">Die gute alte Berkely DB war der Key-Value Unterbau für viele andere Datenbanken, wie auch MySQL. Sicherlich hat auch die XML Variante einiges in Petto.</p></dd></dlentry></dl><p id="c326937e-0037-4363-9e58-c6f75e5a1b41d6e40">Da ich zur Zeit beruflich mit MarkLogic zu tun habe, lasse ich mir die Gelegenheit nicht nehmen, meine Erfahrungen und Erkenntnisse dazu in diesem Kapitel zu beschreiben. Es gibt auch eine [[link]]Developer License[[fn:DL;https://developer.marklogic.com/free-developer*MarkLogic Developer Lizenzvereinbarung]] mit der man die Software ausprobieren kann. Für alle langfristigen XQuery Spielereien ist die eXist DB wohl die erste Wahl, da hier auch der aktuelle XQuery 3.0 Standard umgesetzt ist.</p></body></topic>
