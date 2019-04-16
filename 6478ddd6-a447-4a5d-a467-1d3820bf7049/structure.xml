@@ -2510,33 +2510,11 @@
               style="display:none"> </div>
       </td>
    </tr>
-   <tr data-tt-id="8f729755-73c7-4234-a5b2-77d2ca38a5be"
-       data-tt-parent-id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
-       data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc 8f729755-73c7-4234-a5b2-77d2ca38a5be">
-      <td>
-         <span class="number">58  </span>
-         <span class="text">
-                     mlproj - Project and Environment Manager 
-     ...</span>
-         <div data-element-name="commentable-element"
-              id="8f729755-73c7-4234-a5b2-77d2ca38a5be"
-              style="display:none"> </div>
-         <div data-element-name="commentable-element"
-              id="a94334c5-6336-4fd4-ac7f-3df55368ade8"
-              style="display:none"> </div>
-         <div data-element-name="commentable-element"
-              id="b90f365f-bab3-4baa-b39a-bc95ef410819"
-              style="display:none"> </div>
-         <div data-element-name="commentable-element"
-              id="9cd5cde4-fd3e-4b5b-a90c-beca0cb24a2e"
-              style="display:none"> </div>
-      </td>
-   </tr>
    <tr data-tt-id="7fd62b3e-5e73-4470-ae83-318570ddcb44"
        data-tt-parent-id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc 7fd62b3e-5e73-4470-ae83-318570ddcb44">
       <td>
-         <span class="number">59  </span>
+         <span class="number">58  </span>
          <span class="text">
                      EXPath Konsole 
                   </span>
@@ -2570,16 +2548,31 @@
          <div data-element-name="commentable-element"
               id="4e292b35-15b4-4267-a06a-3223bc8628ebd7e21"
               style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="dbb7c052-c7f5-4650-a839-24b2d1ded8c8d7e29"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="6328dbc7-08da-49f0-aef9-f86b07676ac9d7e35"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="26a055f8-b2e6-4e58-85e1-08b2d2f92734d7e37"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="40953aa2-3239-4b10-aeca-b939f03bbd9cd7e46"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="e21e0575-39e8-43b9-9aca-1c42e22ca666d7e49"
+              style="display:none"> </div>
       </td>
    </tr>
    <tr data-tt-id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb"
        data-tt-parent-id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea 3337f433-44bf-430d-a809-73fd1de5ba6c ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc 632fc504-f5b6-4bed-8f08-5fa0aa26a5bb">
       <td>
-         <span class="number">60  </span>
+         <span class="number">59  </span>
          <span class="text">
-                     mlcp - Content Pump 
-                  </span>
+                     mlcp - MarkLogic Content Pump
+                 </span>
          <div data-element-name="commentable-element"
               id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb"
               style="display:none"> </div>
@@ -2592,13 +2585,43 @@
          <div data-element-name="commentable-element"
               id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a"
               style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="18eb8e60-9aa7-4995-a990-b2e35c3eb0f5d7e6"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="36942ea0-9a85-4e60-a4a4-b1840d913432d7e8"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="4a8a6f60-fb15-413a-a876-eb4f0d862e0fd7e10"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="610445a5-b21f-4c12-b582-6acc8367231cd7e15"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="e296ffb3-e4e7-440a-90dc-3870dc33c0d1d7e19"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="bfaf1f2d-d1c7-43b9-9099-c629f74cc23cd7e22"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="d6695868-ca0a-418e-91e2-bd91943744b3d7e24"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="cfcdff52-44c0-48d4-aeca-1e8702ba3868d7e28"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="4934777a-2889-43c7-a6d2-652dba74841bd7e29"
+              style="display:none"> </div>
+         <div data-element-name="commentable-element"
+              id="37791b4d-4056-4e22-a6a1-d49c2cf72624d7e31"
+              style="display:none"> </div>
       </td>
    </tr>
    <tr data-tt-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-tt-parent-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936">
       <td>
-         <span class="number">61  </span>
+         <span class="number">60  </span>
          <span class="text">
                Testing
             </span>
@@ -2620,7 +2643,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9">
       <td>
-         <span class="number">62  </span>
+         <span class="number">61  </span>
          <span class="text">
                   Validierung mit Schematron 
                </span>
@@ -2651,7 +2674,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 f54f772a-dfad-458a-8e81-32a493f62736d7e23">
       <td>
-         <span class="number">63  </span>
+         <span class="number">62  </span>
          <span class="text">
                            Schematron ist XSLT
                      ...</span>
@@ -2685,7 +2708,7 @@
        data-tt-parent-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 6fd7b270-9d1f-4f8e-996f-13b5862956a9 821ea5d7-c459-4543-8aec-f3ec1d0ee3b9d7e39">
       <td>
-         <span class="number">64  </span>
+         <span class="number">63  </span>
          <span class="text">
                            CLI Verwendung
                         </span>
@@ -2749,7 +2772,7 @@
        data-tt-parent-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
        data-chapter-link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea b3eba8f1-fb04-4ab5-ac92-5f52c80d1936 cc183707-5352-4c9c-9c31-68047a882d0f">
       <td>
-         <span class="number">65  </span>
+         <span class="number">64  </span>
          <span class="text">
                   Erste Schritte mit Xspec 
                </span>
@@ -2797,7 +2820,7 @@
    <tr data-tt-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055" data-tt-parent-id="Manual"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055">
       <td>
-         <span class="number">66  </span>
+         <span class="number">65  </span>
          <span class="text">
             Zusätzliches Know-How 
          </span>
@@ -2822,7 +2845,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 7dbb15ce-bbc5-4d91-b977-ed7e8117730e">
       <td>
-         <span class="number">67  </span>
+         <span class="number">66  </span>
          <span class="text">
                GIT Einmaleins
             </span>
@@ -2850,7 +2873,7 @@
        data-tt-parent-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679">
       <td>
-         <span class="number">68  </span>
+         <span class="number">67  </span>
          <span class="text">
                XML Editoren
             </span>
@@ -2875,7 +2898,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 d406e023-ca69-4c59-bb0f-e4b5e02b9966d7e52">
       <td>
-         <span class="number">69  </span>
+         <span class="number">68  </span>
          <span class="text">
                         WYSIWYM Desktop
                      </span>
@@ -2900,7 +2923,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 94a18c0c-6613-45a4-9235-d0fd7c645e46d7e73">
       <td>
-         <span class="number">70  </span>
+         <span class="number">69  </span>
          <span class="text">
                         WYSIWYG Desktop
                      </span>
@@ -2922,7 +2945,7 @@
        data-tt-parent-id="4100d43a-5b71-43ba-a05f-1063fcee8679"
        data-chapter-link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055 4100d43a-5b71-43ba-a05f-1063fcee8679 91afc5eb-42f5-44da-81a6-9d700cc42444d7e78">
       <td>
-         <span class="number">71  </span>
+         <span class="number">70  </span>
          <span class="text">
                         WYSIWYM Online
                      </span>
@@ -2961,7 +2984,7 @@
    <tr data-tt-id="3dfad2c2-2299-461a-9d80-42237bbb5e89" data-tt-parent-id="Manual"
        data-chapter-link-id="3dfad2c2-2299-461a-9d80-42237bbb5e89">
       <td>
-         <span class="number">72  </span>
+         <span class="number">71  </span>
          <span class="text">
             Glossar 
          </span>
@@ -2980,7 +3003,7 @@
    <tr data-tt-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8" data-tt-parent-id="Manual"
        data-chapter-link-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8">
       <td>
-         <span class="number">73  </span>
+         <span class="number">72  </span>
          <span class="text">
             Tektur CCMS 
          </span>

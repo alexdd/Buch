@@ -254,14 +254,11 @@
                               <li class="toc-level-3"><a href="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc.html" class="toc-entry" id="chapter-link_ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc" data-level="3"><span class="chapter-link3">4.3.4&nbsp;&nbsp;
                                        MarkLogic Tools 
                                        </span></a><ul>
-                                    <li class="toc-level-4"><a href="8f729755-73c7-4234-a5b2-77d2ca38a5be.html" class="toc-entry" id="chapter-link_8f729755-73c7-4234-a5b2-77d2ca38a5be" data-level="4"><span class="chapter-link4">4.3.4.1&nbsp;&nbsp;
-                                             mlproj - Project and Environment Manager 
-                                             </span></a></li>
-                                    <li class="toc-level-4"><a href="7fd62b3e-5e73-4470-ae83-318570ddcb44.html" class="toc-entry" id="chapter-link_7fd62b3e-5e73-4470-ae83-318570ddcb44" data-level="4"><span class="chapter-link4">4.3.4.2&nbsp;&nbsp;
+                                    <li class="toc-level-4"><a href="7fd62b3e-5e73-4470-ae83-318570ddcb44.html" class="toc-entry" id="chapter-link_7fd62b3e-5e73-4470-ae83-318570ddcb44" data-level="4"><span class="chapter-link4">4.3.4.1&nbsp;&nbsp;
                                              EXPath Konsole 
                                              </span></a></li>
-                                    <li class="toc-level-4"><a href="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb.html" class="toc-entry" id="chapter-link_632fc504-f5b6-4bed-8f08-5fa0aa26a5bb" data-level="4"><span class="chapter-link4">4.3.4.3&nbsp;&nbsp;
-                                             mlcp - Content Pump 
+                                    <li class="toc-level-4"><a href="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb.html" class="toc-entry" id="chapter-link_632fc504-f5b6-4bed-8f08-5fa0aa26a5bb" data-level="4"><span class="chapter-link4">4.3.4.2&nbsp;&nbsp;
+                                             mlcp - MarkLogic Content Pump
                                              </span></a></li>
                                  </ul>
                               </li>
@@ -323,12 +320,105 @@
       <div id="main">
          <div id="content-wrapper">
             <div id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb-target" class="chapter first" data-element-name="chapter">
-               <h2 id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610" data-element-name="title"><span class="number">4.3.4.3&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
+               <h2 id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610" data-element-name="title"><span class="number">4.3.4.2&nbsp;&nbsp;</span><span class="text"><span class="first-chapter-title">
                         
-                        <div class="title" data-tektur-reviewer-number="" id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd" data-element-name="title">mlcp - Content Pump </div>
+                        <div class="title" data-tektur-reviewer-number="" id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd" data-element-name="title">mlcp - MarkLogic Content Pump</div>
                         </span></span></h2>
                <div class="margin">
-                  <div class="p" id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a" data-element-name="p" data-tektur-reviewer-number="">bl abl </div>
+                  <div class="p" id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a" data-element-name="p" data-tektur-reviewer-number="">Die Content Pump für MarkLogic ist ein Java Tool, das den Bulk-Import von Daten über die Kommadozeile realisiert.</div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="18eb8e60-9aa7-4995-a990-b2e35c3eb0f5d7e6" data-element-name="p" data-tektur-reviewer-number="">Das betreffende GitHub Projekt befindet sich <a href="https://github.com/marklogic/marklogic-contentpump" title="https://github.com/marklogic/marklogic-contentpump" target="_blank">hier&nbsp;↗↗</a>.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="36942ea0-9a85-4e60-a4a4-b1840d913432d7e8" data-element-name="p" data-tektur-reviewer-number="">Zur einfachen Installation kann man sich aber auch die Binaries auf den </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="4a8a6f60-fb15-413a-a876-eb4f0d862e0fd7e10" data-element-name="p" data-tektur-reviewer-number="">
+                     <a href="https://developer.marklogic.com/products/mlcp" title="https://developer.marklogic.com/products/mlcp" target="_blank">Developer Seiten&nbsp;↗↗</a> herunterladen.
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="610445a5-b21f-4c12-b582-6acc8367231cd7e15" data-element-name="p" data-tektur-reviewer-number="">Folgendes Bash Skript benutze ich um Daten nach MarkLogic hochzuladen:</div>
+               </div>
+               <div class="no-margin"><pre class="verbatim">#!/bin/bash
+
+set -eo pipefail
+
+mlcp_opts="-database alex-test -host localhost -username admin -password admin"
+
+mlcp import <span style="color:#7F0037">$mlcp</span>_opts \
+     -input_file_path input-files \
+     -input_file_type aggregates \
+     -aggregate_record_element chapter \
+     -output_collections /chapter \
+     -output_uri_prefix /chapter/ \
+     -output_uri_suffix .xml</pre></div>
+               <div class="margin">
+                  <div class="p" id="e296ffb3-e4e7-440a-90dc-3870dc33c0d1d7e19" data-element-name="p" data-tektur-reviewer-number="">Dabei werden alle Dateien im Ordner <span style="font-family:Courier New, monospace">
+                        input-files
+                        </span> importiert. Der Dateityp
+                     der hochzuladenen Daten ist mit <span style="font-family:Courier New, monospace">
+                        aggregates
+                        </span> angegeben. Das sind XML Daten. 
+                  </div>
+               </div>
+               <div class="no-margin">
+                  <div class="note" id="" data-element-name="note">
+                     <div class="signal-word">
+                        <div class="translation" data-tektur-reviewer-number="" id="" data-element-name="translation">Hinweis</div>
+                        <div class="translation" data-tektur-reviewer-number="" id="" data-element-name="translation">NOTIZ</div>
+                     </div>
+                     <div class="content">
+                        
+                        <div class="consequence" data-tektur-reviewer-number="" id="" data-element-name="consequence">
+                           
+                           <div class="p" id="bfaf1f2d-d1c7-43b9-9099-c629f74cc23cd7e22" data-element-name="p" data-tektur-reviewer-number="">Mehr Infos zu den Kommandozeilen-Optionen befinden sich auf der 
+                              entsprechenden <a href="https://docs.marklogic.com/guide/mlcp/import" title="https://docs.marklogic.com/guide/mlcp/import" target="_blank">Dokuseite&nbsp;↗↗</a>
+                              von MarkLogic. 
+                           </div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="margin">
+                  <div class="p" id="d6695868-ca0a-418e-91e2-bd91943744b3d7e24" data-element-name="p" data-tektur-reviewer-number="">Mit der Option <span style="font-family:Courier New, monospace">
+                        -aggregate_record_element
+                        </span> wird definiert, dass die Eingabe bzgl. des Elements <span style="font-family:Courier New, monospace">
+                        &lt;chapter&gt;
+                        </span> aufgesplittet werden soll.
+                     D.h. eine Datei mit folgendem Inhalt: 
+                  </div>
+               </div>
+               <div class="no-margin"><pre class="verbatim"><span style="color:#527F3F">&lt;test&gt;</span>
+  <span style="color:#527F3F">&lt;title&gt;</span>Test Datei<span style="color:#527F3F">&lt;/title&gt;</span>
+  <span style="color:#527F3F">&lt;chapter&gt;</span>
+    <span style="color:#527F3F">&lt;title&gt;</span>Test Kapitel 1<span style="color:#527F3F">&lt;/title&gt;</span>
+    <span style="color:#527F3F">&lt;content&gt;</span>Kapitel Inhalt 1<span style="color:#527F3F">&lt;/content&gt;</span>
+  <span style="color:#527F3F">&lt;/chapter&gt;</span>
+  <span style="color:#527F3F">&lt;chapter&gt;</span>
+    <span style="color:#527F3F">&lt;title&gt;</span>Test Kapitel 2<span style="color:#527F3F">&lt;/title&gt;</span>
+    <span style="color:#527F3F">&lt;content&gt;</span>Kapitel Inhalt 2<span style="color:#527F3F">&lt;/content&gt;</span>
+  <span style="color:#527F3F">&lt;/chapter&gt;</span>
+  <span style="color:#527F3F">&lt;chapter&gt;</span>
+    <span style="color:#527F3F">&lt;title&gt;</span>Test Kapitel 2<span style="color:#527F3F">&lt;/title&gt;</span>
+    <span style="color:#527F3F">&lt;content&gt;</span>Kapitel Inhalt 2<span style="color:#527F3F">&lt;/content&gt;</span>
+  <span style="color:#527F3F">&lt;/chapter&gt;</span>
+<span style="color:#527F3F">&lt;/test&gt;</span></pre></div>
+               <div class="margin">
+                  <div class="p" id="cfcdff52-44c0-48d4-aeca-1e8702ba3868d7e28" data-element-name="p" data-tektur-reviewer-number="">wird in drei Records aufgesplittet:</div>
+               </div>
+               <div class="no-margin">
+                  <div class="desc" data-tektur-reviewer-number="" id="37791b4d-4056-4e22-a6a1-d49c2cf72624d7e31" data-element-name="desc">Auf der Konsole kann man sich das Ergebnis der <span style="font-family:Courier New, monospace">
+                        mlcp
+                        </span> Sitzung anschauen. Es wurden - wie gewünscht - drei XML Fragmente separat in die Collection gespeichert.
+                  </div>
+                  <div style="width:100%;text-align:center"><img src="../../632fc504-f5b6-4bed-8f08-5fa0aa26a5bb/mlcp.png" id="" data-element-name="img"></div>
+                  <h5 id="4934777a-2889-43c7-a6d2-652dba74841bd7e29" class="figure-title" data-element-name="subtitle"><br>Bild:&nbsp;7&nbsp;&nbsp;Ergebnis einer MarkLogic Content Pump Sitzung
+                  </h5>
                </div>
             </div>
          </div>
@@ -341,7 +431,7 @@
             </table>
          </div>
       </div>
-      <div id="date-version">Version: 2<br>Apr 15 2019
+      <div id="date-version">Version: 4<br>Apr 16 2019
       </div>
    </body>
 </html>

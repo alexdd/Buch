@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Sat Apr 13 2019 20:53:46 </date-of-creation>
-      <date-of-last-change>Mon Apr 15 2019 23:04:23 </date-of-last-change>
+      <date-of-last-change>Tue Apr 16 2019 17:43:22 </date-of-last-change>
       <language>de-DE</language>
-      <status>2</status>
+      <status>4</status>
       <description>Short Description</description>
       <logo-image>././client/data/6478ddd6-a447-4a5d-a467-1d3820bf7049/logo.png</logo-image>
       <cover-image>././client/data/6478ddd6-a447-4a5d-a467-1d3820bf7049/cover.png</cover-image>
@@ -33,7 +33,8 @@ www.tekturcms.de</cover-text>
       </design>
    </meta>
    <supplemental-directives>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e93" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e93" ismodule="no"
+               link-id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88">
       
          <title id="8ae493b1-a854-4349-8aff-3bc901e07199">
             <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro </title>
@@ -75,7 +76,8 @@ www.tekturcms.de</cover-text>
       </chapter>
    </supplemental-directives>
    <toc/>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e134" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e134" ismodule="no"
+            link-id="792c9845-7c63-4a18-8aee-1878763200b5">
       
          <title id="70e9195f-8072-415d-986a-6550ed24a577">
             <title id="a01d7a84-023f-4c62-ab06-1e8e8b069bed">Anwendungsgebiete </title>
@@ -142,7 +144,8 @@ www.tekturcms.de</cover-text>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e242" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e242" ismodule="no"
+               link-id="a264856d-c5d5-4d7b-993f-421bf222db76">
          
             <title id="8cdcf3f1-7456-4043-bfec-894e823a9a06">
                <title id="1ea26780-291c-470f-9559-616cfb744574">XSLT - die Programmiersprache im XML Bereich </title>
@@ -225,7 +228,8 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e422" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e422" ismodule="no"
+               link-id="3c090c4b-2d46-459c-87ba-60a824bf5aa5">
          
             <title id="e3e3be23-3387-4f2d-bc88-628272b743f3">
                <title id="f19c130f-edfe-408f-a9e2-31b53d92bb4c">Aktuelle und vergangene Anwendungen</title>
@@ -628,7 +632,8 @@ mit <b>LISP</b> Dialekten verarbeitet wird, bspw. die Verarbeitung von - nach <b
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e620" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e620" ismodule="no"
+               link-id="151a9719-a32a-4fca-a55c-769b47a73b34">
          
             <title id="0ede2c7f-f0c8-4212-9c31-cf3caefa613c">
                <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung </title>
@@ -774,7 +779,8 @@ Vorteile:</p>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e882" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e882" ismodule="no"
+            link-id="31a92dc0-959c-49a1-b06e-01e2369e050e">
       
          <title id="6da095b0-be8a-4477-8792-76a4961ade76">
             <title id="6a6d03c2-e2be-4b5f-b515-ed4ec3132dd1">Wichtige Konzepte </title>
@@ -800,7 +806,8 @@ Vorteile:</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e917" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e917" ismodule="no"
+               link-id="5b73f348-0058-45e0-82f7-c3de72ec5d41">
          
             <title id="17f5bbad-c12b-4da2-a847-29aba6fa0b48">
                <title id="c16fd330-a145-443c-bf0a-2ca245527453">Push vs. Pull Stylesheets</title>
@@ -887,7 +894,8 @@ Vorteile:</p>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1050" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1050" ismodule="no"
+               link-id="db988919-f71e-437e-b699-b6fdd2a32cb9">
          
             <title id="a418237e-b29f-4ec8-960f-1707108b9f59">
                <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis </title>
@@ -1195,7 +1203,8 @@ Vorteile:</p>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1369" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1369" ismodule="no"
+               link-id="3e443c28-8698-470b-b443-f286ff7ed2d5">
          
             <title id="309017d9-9fd7-4a34-b13a-4bf8ecea4556">
                <title id="743f34bc-c83e-49d3-9a2e-2c38d1c384c9">Namespaces </title>
@@ -1388,7 +1397,8 @@ vorhanden ist. Der Namespace<code>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e1537" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e1537" ismodule="no"
+            link-id="f838f9be-97bf-44a4-ac63-2e813a87f2ea">
       
          <title id="a230cf67-a3f4-40e4-af51-9959bbc104d8">
             <title id="e959b617-429c-4a40-9ba2-c55ac946a753">Ausgewählte Themen </title>
@@ -1404,7 +1414,8 @@ vorhanden ist. Der Namespace<code>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e1557" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e1557" ismodule="no"
+               link-id="c20c1e01-1175-4664-a26a-71317760930f">
          
             <title id="64e2c429-6836-44f8-9b53-af2692ba49f0">
                <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT </title>
@@ -1438,7 +1449,8 @@ vorhanden ist. Der Namespace<code>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1598" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1598" ismodule="no"
+                  link-id="ceed4546-a60b-4d5f-a625-6e79c180cc13">
             
                <title id="a619c6d9-57c8-4fde-a3c0-cf6002905cc1">
                   <title id="28a8c9ba-33b0-41ff-8681-da976df43b85">Vortransformationen</title>
@@ -1612,7 +1624,8 @@ vorhanden ist. Der Namespace<code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1705" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1705" ismodule="no"
+                  link-id="888d37da-0dbe-4fae-bec9-2ad1e99f7818">
             
                <title id="86c96e00-9a1f-4187-beba-e5d9bd3a938b">
                   <title id="d97b76dd-7b2b-48e3-9b9e-53a4197d41f8">Vererbung </title>
@@ -1715,7 +1728,8 @@ vorhanden ist. Der Namespace<code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e1783" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e1783" ismodule="no"
+                  link-id="1f8595d0-4ed9-4070-8cff-c5c59f690093">
             
                <title id="dbe0e394-aeee-4b28-ace0-72dcd590c0f2">
                   <title id="cb79aa28-6141-41b3-9bb7-5dc5f10cd81d">XSLT Streaming </title>
@@ -1786,7 +1800,8 @@ kommerziellen Saxon-EE Löusug <footnote>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1858" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1858" ismodule="no"
+                     link-id="51bec5b9-1207-45cc-9bf2-b6ce3e300547">
                
                   <title id="51877293-95b9-4486-b8f6-c006615a8109">
                      <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator </title>
@@ -1914,7 +1929,8 @@ würde.</p>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e1933" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e1933" ismodule="no"
+                     link-id="b308e60a-c7f3-4143-8e04-6c0d3bd4df01">
                
                   <title id="e7a9c8c6-7155-402a-9c95-89d45fc022de">
                      <title id="8a54eb22-afbb-4741-b3e5-8088e75c9ebd">XSLT Iterator </title>
@@ -2101,7 +2117,8 @@ starten.</p>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2042" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2042" ismodule="no"
+                  link-id="e3ccdc75-56e4-45b3-a2be-07a61a2dcd51">
             
                <title id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf">
                   <title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit <code>
@@ -2270,7 +2287,8 @@ indem der gesamte XML Baum über die Standard-Kopierregel in das Element <code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2105" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2105" ismodule="no"
+                  link-id="12f4b667-2093-456b-8986-d269a6375d60">
             
                <title id="1baa0c4a-6cde-4033-9e48-ee47dc16c287">
                   <title id="a3acd735-e2ec-4c5f-940d-72d647e5bd74">Reguläre Ausdrücke </title>
@@ -2357,7 +2375,8 @@ indem der gesamte XML Baum über die Standard-Kopierregel in das Element <code>
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2178" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2178" ismodule="no"
+                  link-id="11ebc17e-560c-4961-8dd6-9aa6776dc160">
             
                <title id="7f03cc5e-675a-4371-b3e9-5d79b981ff95">
                   <title id="fbbe8267-ed7b-4b78-b547-d00fe41f0b5c">Webservice Calls mit <code>
@@ -2509,7 +2528,8 @@ mit XSLT recht spannend.</p>
             
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2260" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2260" ismodule="no"
+               link-id="0846d6a2-6999-42ab-9e83-55bc197fc11c">
          
             <title id="ae325776-f861-42c4-9a68-95d2d1c756a5">
                <title id="0e661463-0259-4d9f-a784-93f4f169bc52">Abfragen mit XQuery</title>
@@ -2714,7 +2734,8 @@ Memory used: 64339064</verbatim>
          </page-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2388" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2388" ismodule="no"
+                  link-id="98665bd9-d40d-4fc7-ab7a-e340be6190a6">
             
                <title id="06abe1b7-21be-4794-bec6-c28732cf6cbf">
                   <title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache </title>
@@ -2828,7 +2849,8 @@ zu können. Das geht mit dem folgenden Befehl (Doku)<footnote>
             </page-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2458" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2458" ismodule="no"
+                     link-id="3630ee02-616b-4bbc-8655-9064d57bf945">
                
                   <title id="51a4584a-9a43-4f8f-ad89-d1c2d88ab6e6">
                      <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module  </title>
@@ -2927,7 +2949,8 @@ Variablenauswertung: <color name="red">$common</color>:collection-books</verbati
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e2532" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e2532" ismodule="no"
+                     link-id="d9cd641f-29f4-485d-8e67-32519d422b08">
                
                   <title id="7f9615d0-3d92-4ec1-813b-db4b788b6efd">
                      <title id="86a66f53-eb4a-4cc0-b14c-12d5c2bb84bd">
@@ -3039,7 +3062,8 @@ und bewährten Programmierstil entwickelt, den er auch beibehalten sollte.</p>
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e2602" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e2602" ismodule="no"
+               link-id="3337f433-44bf-430d-a809-73fd1de5ba6c">
          
             <title id="44b03330-885f-4eee-a90b-3235d56161e7">
                <title id="b49f74f7-6d65-4672-beef-5fd92c877526">XML Datenbanken </title>
@@ -3143,7 +3167,8 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2704" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2704" ismodule="no"
+                  link-id="38f7a676-cbef-4a69-9ae9-d89bddde2719">
             
                <title id="4f168aa8-64ed-487d-924c-92e68871b212">
                   <title id="d9ecd69d-0fbd-4931-8d5b-fe5bee02f362">Connector zu Marklogic in Oxygen </title>
@@ -3231,7 +3256,8 @@ in einer relationalen Datenbank abspeichern. Eine XML Datenbank ist aber für di
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2812" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2812" ismodule="no"
+                  link-id="382bb96a-5a06-460c-8d69-4c4cd613297c">
             
                <title id="4e59c114-46a9-4292-8c91-b346f9cde93f">
                   <title id="6dc3be8f-5b8c-407c-9853-0533fdbf8267">SQL Views in MarkLogic </title>
@@ -3598,7 +3624,8 @@ xdmp:sql</color>("SELECT name, datum, preis FROM kunden_view k INNER JOIN
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e2890" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e2890" ismodule="no"
+                  link-id="ef2b4070-c3cf-4d73-968e-e25f6dc1eef0">
             
                <title id="7ca48bd5-7f2e-44cd-aacd-c15f7618b43e">
                   <title id="ba9dfb96-d3dd-49c8-9008-8476c0e59728">Bi-Temporale Dokumente </title>
@@ -3904,7 +3931,8 @@ cts:search</color>(<color name="blue">fn:doc</color>(), <color name="blue">cts:a
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3116" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e3116" ismodule="no"
+                     link-id="7c58baac-7b83-41b9-adf6-12f63539cbb6">
                
                   <title id="61bcaead-35e5-4f94-b719-e7708391915f">
                      <title id="a1776d29-3de4-4aeb-9f82-1718bfdb333e">Anlegen des Testszenarios auf der ML Konsole </title>
@@ -4136,7 +4164,8 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3219" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e3219" ismodule="no"
+                     link-id="62faa067-ecd5-4053-8388-e7e151f04542">
                
                   <title id="c25b36c1-64f0-4fff-8445-8dc096e98096">
                      <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries </title>
@@ -4302,7 +4331,8 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                
             </chapter>
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3463" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3463" ismodule="no"
+                  link-id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc">
             
                <title id="aaf86c32-9113-4007-a352-4f0fde370520">
                   <title id="be53f14b-df1f-438f-bed4-5b62d0659c1c">MarkLogic Tools </title>
@@ -4326,19 +4356,8 @@ import <color name="brown">module </color><color name="brown">namespace </color>
             </column-wide-element>
                
             
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3489" ismodule="no">
-               
-                  <title id="a94334c5-6336-4fd4-ac7f-3df55368ade8">
-                     <title id="b90f365f-bab3-4baa-b39a-bc95ef410819">mlproj - Project and Environment Manager </title>
-                  </title>
-                  
-                     <column-wide-element>
-                  <p id="9cd5cde4-fd3e-4b5b-a90c-beca0cb24a2e">bla bla</p>
-               </column-wide-element>
-                  
-               
-            </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3507" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e3489" ismodule="no"
+                     link-id="7fd62b3e-5e73-4470-ae83-318570ddcb44">
                
                   <title id="8e2deac6-e32d-4fd3-8478-05002d53efad">
                      <title id="e2dd6fa8-c3ba-4e13-a7c9-e7818b117c97">EXPath Konsole </title>
@@ -4348,7 +4367,7 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   <p id="89198b6a-b14b-4a4d-8128-4953fe8ed0ec">Die MarkLogic EXPath Konsole<footnote>
                         <desc>https://github.com/fgeorges/expath-ml-console</desc>
                         <add>ML EXPath Konsole auf GitHub</add>
-                     </footnote>ist eine Webanwendung, die ausserhalb des MarkLgic Servers verschiedene Ansichten auf die Daten bereitstellt. Sie umfasst auch einige praktische Tools, wie:</p>
+                     </footnote> ist eine Webanwendung, die ausserhalb des MarkLgic Servers verschiedene Ansichten auf die Daten bereitstellt. Sie umfasst auch einige praktische Tools, wie:</p>
                </column-wide-element>
                      <column-wide-element>
                   <ul>
@@ -4382,26 +4401,163 @@ import <color name="brown">module </color><color name="brown">namespace </color>
                   <p id="cd92c6f4-820e-4500-bc47-9e172f26ba2ad6e19">Im Rahmen dieser Lektüre wird nur der Browser kurz vorgestellt, weil man damit unkompliziert die Daten sichten kann. </p>
                </column-wide-element>
                      <column-wide-element>
-                  <p id="4e292b35-15b4-4267-a06a-3223bc8628ebd7e21">Diese werden in einem Editorfenster mit Syntaxhighlightiung dargestellt. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</p>
+                  <p id="4e292b35-15b4-4267-a06a-3223bc8628ebd7e21">Diese werden in einem Editorfenster mit Syntaxhighlighting dargestellt.</p>
                </column-wide-element>
+                     <page-wide-element>
+                  <caution>
+                        <cause>Das Sichten großer Datenmengen ist mit dem EXPath Browser aus Performanzgründen nicht möglich.</cause>
+                        <consequence>Auf diesen Umstand weist der Autor explizit hin. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</consequence>
+                     </caution>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p id="dbb7c052-c7f5-4650-a839-24b2d1ded8c8d7e29">Nach der Installation läuft die EXPath Konsole standardmässig auf Port 8010. Über den Reiter <b>Databases</b> kann man sich die definierten Databases anschauen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <column-wide-element>
+                        <subtitle id="6328dbc7-08da-49f0-aef9-f86b07676ac9d7e35">Datenbank Ansicht im EXPath Explorer für MarkLogic</subtitle>
+                     </column-wide-element>
+                        <desc id="26a055f8-b2e6-4e58-85e1-08b2d2f92734d7e37">Über den Reiter <b>Databases</b> gelangt man zur Datenbank-Ansicht. Hier kann man die einzelnen Verzeichnisse mittels des <b>Browse-Buttons</b> auswählen.</desc>
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png"/>
+                     </figure>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p id="40953aa2-3239-4b10-aeca-b939f03bbd9cd7e46">Über einen Dateipfad gelangt man zur Datenansicht mit Syntax-Highlighting.</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <column-wide-element>
+                        <subtitle id="e21e0575-39e8-43b9-9aca-1c42e22ca666d7e49">Datensicht mit Syntax-Highlighting in der EXPath Konsole für MarkLogic</subtitle>
+                     </column-wide-element>
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/dataview.png"/>
+                     </figure>
+               </page-wide-element>
+                     <page-wide-element>
+                  <warning>
+                        <cause>Die EXPath Konsole erwartet, dass der MarkLogic auf den Standard-Ports läuft. Das ist <code>
+                           <nb>8001</nb>
+                        </code> für die Admin-Applikation. Ist dies nicht der Fall, so schlägt eine Installation mittels des Tools mlproj<footnote>
+                           <desc>http://mlproj.org/</desc>
+                           <add>Project and Environment Manager für MarkLogic</add>
+                        </footnote> fehl.</cause>
+                        <consequence>Wie dieser Umstand korrigiert werden kann, lässt sich bestimmt über die Projekt-Seite auf GitHub erfragen. Der Autor des Tools ist sehr hilfsbereit und antwortet meiner Erfahrung nach am selben Tag. Da ich aus anderen Gründen MarkLogic von einem exotischen Port wieder auf den Standardport zurückgesetzt habe, bin ich dazu noch nicht gekommen.</consequence>
+                     </warning>
+               </page-wide-element>
                   
                
             </chapter>
-            <chapter hyphenation="yes" chapterpage="no" id="d2e3558" ismodule="no">
+            <chapter hyphenation="yes" chapterpage="no" id="d2e3593" ismodule="no"
+                     link-id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb">
                
                   <title id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610">
-                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - Content Pump </title>
+                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - MarkLogic Content Pump</title>
                   </title>
                   
                      <column-wide-element>
-                  <p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">bl abl </p>
+                  <p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">Die Content Pump für MarkLogic ist ein Java Tool<xe>
+                        <first criterion="Tools für MarkLogic">Tools für MarkLogic</first>
+                        <second criterion="Content Pump">Content Pump</second>
+                     </xe>, das den Bulk-Import von Daten über die Kommadozeile realisiert.</p>
                </column-wide-element>
+                     <column-wide-element>
+                  <p id="18eb8e60-9aa7-4995-a990-b2e35c3eb0f5d7e6">Das betreffende GitHub Projekt befindet sich hier<footnote>
+                        <desc>https://github.com/marklogic/marklogic-contentpump</desc>
+                        <add>GitHub Projekt zur MarkLogic Content Pump</add>
+                     </footnote>.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="36942ea0-9a85-4e60-a4a4-b1840d913432d7e8">Zur einfachen Installation kann man sich aber auch die Binaries auf den </p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="4a8a6f60-fb15-413a-a876-eb4f0d862e0fd7e10">Developer Seiten<footnote>
+                        <desc>https://developer.marklogic.com/products/mlcp</desc>
+                        <add>Binaries zur Installation der MarkLogic Content Pump</add>
+                     </footnote> herunterladen.</p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="610445a5-b21f-4c12-b582-6acc8367231cd7e15">Folgendes Bash Skript benutze ich um Daten nach MarkLogic hochzuladen:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim>#!/bin/bash
+
+set -eo pipefail
+
+mlcp_opts="-database alex-test -host localhost -username admin -password admin"
+
+mlcp import <color name="red">$mlcp</color>_opts \
+     -input_file_path input-files \
+     -input_file_type aggregates \
+     -aggregate_record_element chapter \
+     -output_collections /chapter \
+     -output_uri_prefix /chapter/ \
+     -output_uri_suffix .xml</verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p id="e296ffb3-e4e7-440a-90dc-3870dc33c0d1d7e19">Dabei werden alle Dateien im Ordner <code>
+                        <nb>input-files</nb>
+                     </code> importiert. Der Dateityp
+der hochzuladenen Daten ist mit <code>
+                        <nb>aggregates</nb>
+                     </code> angegeben. Das sind XML Daten. </p>
+               </column-wide-element>
+                     <column-wide-element>
+                  <note>
+                        <consequence>
+                           <p id="bfaf1f2d-d1c7-43b9-9099-c629f74cc23cd7e22">Mehr Infos zu den Kommandozeilen-Optionen befinden sich auf der 
+entsprechenden Dokuseite<footnote>
+                              <desc>https://docs.marklogic.com/guide/mlcp/import</desc>
+                              <add>Dokuseite zu den Import Optionen der MarkLogic Content Pump</add>
+                           </footnote>
+von MarkLogic. </p>
+                        </consequence>
+                     </note>
+               </column-wide-element>
+                     <column-wide-element>
+                  <p id="d6695868-ca0a-418e-91e2-bd91943744b3d7e24">Mit der Option <code>
+                        <nb>-aggregate_record_element</nb>
+                     </code> wird definiert, dass die Eingabe bzgl. des Elements <code>
+                        <nb>&lt;chapter&gt;</nb>
+                     </code> aufgesplittet werden soll.
+D.h. eine Datei mit folgendem Inhalt: </p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <verbatim><color name="green">&lt;test&gt;</color>
+  <color name="green">&lt;title&gt;</color>Test Datei<color name="green">&lt;/title&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Test Kapitel 1<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;content&gt;</color>Kapitel Inhalt 1<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Test Kapitel 2<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;content&gt;</color>Kapitel Inhalt 2<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+  <color name="green">&lt;chapter&gt;</color>
+    <color name="green">&lt;title&gt;</color>Test Kapitel 2<color name="green">&lt;/title&gt;</color>
+    <color name="green">&lt;content&gt;</color>Kapitel Inhalt 2<color name="green">&lt;/content&gt;</color>
+  <color name="green">&lt;/chapter&gt;</color>
+<color name="green">&lt;/test&gt;</color></verbatim>
+               </page-wide-element>
+                     <column-wide-element>
+                  <p id="cfcdff52-44c0-48d4-aeca-1e8702ba3868d7e28">wird in drei Records aufgesplittet:</p>
+               </column-wide-element>
+                     <page-wide-element>
+                  <figure pdfwidth="page">
+                        <column-wide-element>
+                        <subtitle id="4934777a-2889-43c7-a6d2-652dba74841bd7e29">Ergebnis einer MarkLogic Content Pump Sitzung</subtitle>
+                     </column-wide-element>
+                        <desc id="37791b4d-4056-4e22-a6a1-d49c2cf72624d7e31">Auf der Konsole kann man sich das Ergebnis der <code>
+                           <nb>mlcp</nb>
+                        </code> Sitzung anschauen. Es wurden - wie gewünscht - drei XML Fragmente separat in die Collection gespeichert.</desc>
+                        <img src="./client/data/632fc504-f5b6-4bed-8f08-5fa0aa26a5bb/mlcp.png"/>
+                     </figure>
+               </page-wide-element>
                   
                
             </chapter>
          </chapter>
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3578" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3662" ismodule="no"
+               link-id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936">
          
             <title id="ba5023e4-3ff9-48e4-a374-1012493b75c2">
                <title id="05ed1e37-8006-4bb7-ba6a-7c143ff22106">Testing</title>
@@ -4412,7 +4568,8 @@ import <color name="brown">module </color><color name="brown">namespace </color>
          </column-wide-element>
             
          
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3595" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3679" ismodule="no"
+                  link-id="6fd7b270-9d1f-4f8e-996f-13b5862956a9">
             
                <title id="9d32e957-a332-40f5-bcbd-52fd6ed7f7da">
                   <title id="a693fc99-5e16-4788-95a0-958870aa845a">Validierung mit Schematron </title>
@@ -4618,7 +4775,8 @@ saxon -s:- <color name="red">$script</color>_dir/schematron/iso_svrl_for_xslt2.x
                
             
          </chapter>
-         <chapter hyphenation="yes" chapterpage="no" id="d2e3754" ismodule="no">
+         <chapter hyphenation="yes" chapterpage="no" id="d2e3838" ismodule="no"
+                  link-id="cc183707-5352-4c9c-9c31-68047a882d0f">
             
                <title id="821f8271-e9a1-43e8-ba9a-b1e8aa0ce4f4">
                   <title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec </title>
@@ -4738,7 +4896,8 @@ und alles ist gut - dem Augenschein nach.</p>
          </chapter>
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e3833" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e3917" ismodule="no"
+            link-id="f606e9c6-3d46-48f3-8de4-46e13dc7d055">
       
          <title id="47df7a71-2ba1-4bde-bbc0-3ec379ec6ac5">
             <title id="e4c14d2b-d2df-4a76-ac0c-4ecebfe223ae">Zusätzliches Know-How </title>
@@ -4754,7 +4913,8 @@ und alles ist gut - dem Augenschein nach.</p>
       </column-wide-element>
          
       
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3853" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3937" ismodule="no"
+               link-id="7dbb15ce-bbc5-4d91-b977-ed7e8117730e">
          
             <title id="b1719307-52da-4e1d-9aee-a3a6bb139d92">
                <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Einmaleins</title>
@@ -4831,12 +4991,14 @@ git reset --hard origin/master
 git tree
 git status
 git checkout 118886ee3f06738b53f089433078d35f4d70a8f9 vendor/error-report.xsl
-git log --diff-filter=D --summary</verbatim>
+git log --diff-filter=D --summary
+Test</verbatim>
          </page-wide-element>
             
          
       </chapter>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e3880" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e3964" ismodule="no"
+               link-id="4100d43a-5b71-43ba-a05f-1063fcee8679">
          
             <title id="24e125c5-f411-4698-9e68-19ab7ba0f302">
                <title id="46cfa469-01ec-434d-ab13-e24ce0b06467">XML Editoren</title>
@@ -4983,7 +5145,8 @@ git log --diff-filter=D --summary</verbatim>
          
       </chapter>
    </chapter>
-   <chapter hyphenation="yes" chapterpage="no" id="d2e4105" ismodule="no">
+   <chapter hyphenation="yes" chapterpage="no" id="d2e4189" ismodule="no"
+            link-id="3dfad2c2-2299-461a-9d80-42237bbb5e89">
       
          <title id="c1678e74-d15c-42a1-9fd0-912fced210ef">
             <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">
@@ -5198,7 +5361,8 @@ git log --diff-filter=D --summary</verbatim>
    <footnote-index/>
    <index/>
    <cover-backpage>
-      <chapter hyphenation="yes" chapterpage="no" id="d2e4269" ismodule="no">
+      <chapter hyphenation="yes" chapterpage="no" id="d2e4353" ismodule="no"
+               link-id="dac12b19-ef37-4e41-b88c-6f0ce7becbb8">
       
          <title id="d3d7b9b9-8712-4844-bf96-9444ac5bb171">
             <title id="3701e56d-cbbf-4125-bce3-cffcd3b10b4f">Tektur CCMS </title>

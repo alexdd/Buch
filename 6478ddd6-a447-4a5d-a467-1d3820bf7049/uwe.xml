@@ -4,9 +4,9 @@
    <meta>
       <owner>alex</owner>
       <date-of-creation>Sat Apr 13 2019 20:53:46 </date-of-creation>
-      <date-of-last-change>Mon Apr 15 2019 23:04:23 </date-of-last-change>
+      <date-of-last-change>Tue Apr 16 2019 17:43:22 </date-of-last-change>
       <language>de-DE</language>
-      <status>2</status>
+      <status>4</status>
       <description>Short Description</description>
       <logo-image>././client/data/6478ddd6-a447-4a5d-a467-1d3820bf7049/logo.png</logo-image>
       <cover-image>././client/data/6478ddd6-a447-4a5d-a467-1d3820bf7049/cover.png</cover-image>
@@ -2817,17 +2817,6 @@ declare function local:insert-update()
                   <p id="37e60b8f-6994-45ef-8352-1ff289f3ea8cd6e6">[[chaptertoc]]</p>
                </block>
             </content>
-            <chapter hyphenation="yes" chapterpage="no" id="8f729755-73c7-4234-a5b2-77d2ca38a5be"
-                     ismodule="no">
-               <content>
-                  <title id="a94334c5-6336-4fd4-ac7f-3df55368ade8">
-                     <title id="b90f365f-bab3-4baa-b39a-bc95ef410819">mlproj - Project and Environment Manager </title>
-                  </title>
-                  <block>
-                     <p id="9cd5cde4-fd3e-4b5b-a90c-beca0cb24a2e">bla bla</p>
-                  </block>
-               </content>
-            </chapter>
             <chapter hyphenation="yes" chapterpage="no" id="7fd62b3e-5e73-4470-ae83-318570ddcb44"
                      ismodule="no">
                <content>
@@ -2835,7 +2824,7 @@ declare function local:insert-update()
                      <title id="e2dd6fa8-c3ba-4e13-a7c9-e7818b117c97">EXPath Konsole </title>
                   </title>
                   <block>
-                     <p id="89198b6a-b14b-4a4d-8128-4953fe8ed0ec">Die [[link]]MarkLogic EXPath Konsole[[fn:https://github.com/fgeorges/expath-ml-console*ML EXPath Konsole auf GitHub]]ist eine Webanwendung, die ausserhalb des MarkLgic Servers verschiedene Ansichten auf die Daten bereitstellt. Sie umfasst auch einige praktische Tools, wie:</p>
+                     <p id="89198b6a-b14b-4a4d-8128-4953fe8ed0ec">Die [[link]]MarkLogic EXPath Konsole[[fn:https://github.com/fgeorges/expath-ml-console*ML EXPath Konsole auf GitHub]] ist eine Webanwendung, die ausserhalb des MarkLgic Servers verschiedene Ansichten auf die Daten bereitstellt. Sie umfasst auch einige praktische Tools, wie:</p>
                      <ul>
                         <li>
                            <p id="a37b104e-37e8-4c57-b6d8-abef1270c682d6e8">Package Manager[[xe1:Tools für MarkLogic;xe2:Package Manager]]</p>
@@ -2851,7 +2840,26 @@ declare function local:insert-update()
                         </li>
                      </ul>
                      <p id="cd92c6f4-820e-4500-bc47-9e172f26ba2ad6e19">Im Rahmen dieser Lektüre wird nur der Browser kurz vorgestellt, weil man damit unkompliziert die Daten sichten kann. </p>
-                     <p id="4e292b35-15b4-4267-a06a-3223bc8628ebd7e21">Diese werden in einem Editorfenster mit Syntaxhighlightiung dargestellt. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</p>
+                     <p id="4e292b35-15b4-4267-a06a-3223bc8628ebd7e21">Diese werden in einem Editorfenster mit Syntaxhighlighting dargestellt.</p>
+                     <caution>
+                        <cause>Das Sichten großer Datenmengen ist mit dem EXPath Browser aus Performanzgründen nicht möglich.</cause>
+                        <consequence>Auf diesen Umstand weist der Autor explizit hin. Die Anwendung sollte nicht produktiv eingesetzt werden, sondern ist für Entwicklungszwecke gedacht.</consequence>
+                     </caution>
+                     <p id="dbb7c052-c7f5-4650-a839-24b2d1ded8c8d7e29">Nach der Installation läuft die EXPath Konsole standardmässig auf Port 8010. Über den Reiter <b>Databases</b> kann man sich die definierten Databases anschauen:</p>
+                     <figure pdfwidth="page">
+                        <subtitle id="6328dbc7-08da-49f0-aef9-f86b07676ac9d7e35">Datenbank Ansicht im EXPath Explorer für MarkLogic</subtitle>
+                        <desc id="26a055f8-b2e6-4e58-85e1-08b2d2f92734d7e37">Über den Reiter <b>Databases</b> gelangt man zur Datenbank-Ansicht. Hier kann man die einzelnen Verzeichnisse mittels des <b>Browse-Buttons</b> auswählen.</desc>
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/expath.png"/>
+                     </figure>
+                     <p id="40953aa2-3239-4b10-aeca-b939f03bbd9cd7e46">Über einen Dateipfad gelangt man zur Datenansicht mit Syntax-Highlighting.</p>
+                     <figure pdfwidth="page">
+                        <subtitle id="e21e0575-39e8-43b9-9aca-1c42e22ca666d7e49">Datensicht mit Syntax-Highlighting in der EXPath Konsole für MarkLogic</subtitle>
+                        <img src="./client/data/7fd62b3e-5e73-4470-ae83-318570ddcb44/dataview.png"/>
+                     </figure>
+                     <warning>
+                        <cause>Die EXPath Konsole erwartet, dass der MarkLogic auf den Standard-Ports läuft. Das ist [[code:8001]] für die Admin-Applikation. Ist dies nicht der Fall, so schlägt eine Installation mittels des Tools [[link]]mlproj[[fn:http://mlproj.org/*Project and Environment Manager für MarkLogic]] fehl.</cause>
+                        <consequence>Wie dieser Umstand korrigiert werden kann, lässt sich bestimmt über die Projekt-Seite auf GitHub erfragen. Der Autor des Tools ist sehr hilfsbereit und antwortet meiner Erfahrung nach am selben Tag. Da ich aus anderen Gründen MarkLogic von einem exotischen Port wieder auf den Standardport zurückgesetzt habe, bin ich dazu noch nicht gekommen.</consequence>
+                     </warning>
                   </block>
                </content>
             </chapter>
@@ -2859,10 +2867,59 @@ declare function local:insert-update()
                      ismodule="no">
                <content>
                   <title id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610">
-                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - Content Pump </title>
+                     <title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - MarkLogic Content Pump</title>
                   </title>
                   <block>
-                     <p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">bl abl </p>
+                     <p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">Die Content Pump für MarkLogic ist ein Java Tool[[xe1:Tools für MarkLogic;xe2:Content Pump]], das den Bulk-Import von Daten über die Kommadozeile realisiert.</p>
+                     <p id="18eb8e60-9aa7-4995-a990-b2e35c3eb0f5d7e6">Das betreffende GitHub Projekt befindet sich [[link]]hier[[fn:https://github.com/marklogic/marklogic-contentpump*GitHub Projekt zur MarkLogic Content Pump]].</p>
+                     <p id="36942ea0-9a85-4e60-a4a4-b1840d913432d7e8">Zur einfachen Installation kann man sich aber auch die Binaries auf den </p>
+                     <p id="4a8a6f60-fb15-413a-a876-eb4f0d862e0fd7e10">[[link]]Developer Seiten[[fn:https://developer.marklogic.com/products/mlcp*Binaries zur Installation der MarkLogic Content Pump]] herunterladen.</p>
+                     <p id="610445a5-b21f-4c12-b582-6acc8367231cd7e15">Folgendes Bash Skript benutze ich um Daten nach MarkLogic hochzuladen:</p>
+                     <verbatim>#!/bin/bash
+
+set -eo pipefail
+
+mlcp_opts="-database alex-test -host localhost -username admin -password admin"
+
+mlcp import $mlcp_opts \
+     -input_file_path input-files \
+     -input_file_type aggregates \
+     -aggregate_record_element chapter \
+     -output_collections /chapter \
+     -output_uri_prefix /chapter/ \
+     -output_uri_suffix .xml</verbatim>
+                     <p id="e296ffb3-e4e7-440a-90dc-3870dc33c0d1d7e19">Dabei werden alle Dateien im Ordner [[code:input-files]] importiert. Der Dateityp
+der hochzuladenen Daten ist mit [[code:aggregates]] angegeben. Das sind XML Daten. </p>
+                     <note>
+                        <consequence>
+                           <p id="bfaf1f2d-d1c7-43b9-9099-c629f74cc23cd7e22">Mehr Infos zu den Kommandozeilen-Optionen befinden sich auf der 
+entsprechenden [[link]]Dokuseite[[fn:https://docs.marklogic.com/guide/mlcp/import*Dokuseite zu den Import Optionen der MarkLogic Content Pump]]
+von MarkLogic. </p>
+                        </consequence>
+                     </note>
+                     <p id="d6695868-ca0a-418e-91e2-bd91943744b3d7e24">Mit der Option [[code:-aggregate_record_element]] wird definiert, dass die Eingabe bzgl. des Elements [[code:&lt;chapter&gt;]] aufgesplittet werden soll.
+D.h. eine Datei mit folgendem Inhalt: </p>
+                     <verbatim>&lt;test&gt;
+  &lt;title&gt;Test Datei&lt;/title&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 1&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 1&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 2&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 2&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 2&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 2&lt;/content&gt;
+  &lt;/chapter&gt;
+&lt;/test&gt;</verbatim>
+                     <p id="cfcdff52-44c0-48d4-aeca-1e8702ba3868d7e28">wird in drei Records aufgesplittet:</p>
+                     <figure pdfwidth="page">
+                        <subtitle id="4934777a-2889-43c7-a6d2-652dba74841bd7e29">Ergebnis einer MarkLogic Content Pump Sitzung</subtitle>
+                        <desc id="37791b4d-4056-4e22-a6a1-d49c2cf72624d7e31">Auf der Konsole kann man sich das Ergebnis der [[code:mlcp]] Sitzung anschauen. Es wurden - wie gewünscht - drei XML Fragmente separat in die Collection gespeichert.</desc>
+                        <img src="./client/data/632fc504-f5b6-4bed-8f08-5fa0aa26a5bb/mlcp.png"/>
+                     </figure>
                   </block>
                </content>
             </chapter>
@@ -3136,7 +3193,8 @@ git reset --hard origin/master
 git tree
 git status
 git checkout 118886ee3f06738b53f089433078d35f4d70a8f9 vendor/error-report.xsl
-git log --diff-filter=D --summary</verbatim>
+git log --diff-filter=D --summary
+Test</verbatim>
             </block>
          </content>
       </chapter>
