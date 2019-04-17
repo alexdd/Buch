@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="6f1d988d-2a6f-4ce7-82ab-8d7857e00610"><title id="8ab127a1-f7fa-4113-8ab7-9e0d00b2ccdd">mlcp - MarkLogic Content Pump</title><body id="c0ff5619-8a20-494b-acf6-5434b7154503"><p id="0bfad7a9-ed2d-4700-bf0f-dc1618b6fe0a">Die Content Pump für MarkLogic ist ein Java Tool[[xe1:Tools für MarkLogic;xe2:Content Pump]], das den Bulk-Import von Daten über die Kommadozeile realisiert.</p><p id="18eb8e60-9aa7-4995-a990-b2e35c3eb0f5d7e6">Das betreffende GitHub Projekt befindet sich [[link]]hier[[fn:https://github.com/marklogic/marklogic-contentpump*GitHub Projekt zur MarkLogic Content Pump]].</p><p id="36942ea0-9a85-4e60-a4a4-b1840d913432d7e8">Zur einfachen Installation kann man sich aber auch die Binaries auf den </p><p id="4a8a6f60-fb15-413a-a876-eb4f0d862e0fd7e10" href="undefined">[[link]]Developer Seiten[[fn:https://developer.marklogic.com/products/mlcp*Binaries zur Installation der MarkLogic Content Pump]] herunterladen.</p><p id="610445a5-b21f-4c12-b582-6acc8367231cd7e15">Folgendes Bash Skript benutze ich um Daten nach MarkLogic hochzuladen:</p><pre id="4d6d9b6d-4b8b-4b7b-a478-a214d5211fa6d7e14" xml:space="preserve">#!/bin/bash
+
+set -eo pipefail
+
+mlcp_opts="-database alex-test -host localhost -username admin -password admin"
+
+mlcp import $mlcp_opts \
+     -input_file_path input-files \
+     -input_file_type aggregates \
+     -aggregate_record_element chapter \
+     -output_collections /chapter \
+     -output_uri_prefix /chapter/ \
+     -output_uri_suffix .xml</pre><p id="e296ffb3-e4e7-440a-90dc-3870dc33c0d1d7e19">Dabei werden alle Dateien im Ordner [[code:input-files]] importiert. Der Dateityp
+der hochzuladenen Daten ist mit [[code:aggregates]] angegeben. Das sind XML Daten. </p><note id="a3541e9a-1521-4b25-b2a0-84320f67934dd7e18"><p id="bfaf1f2d-d1c7-43b9-9099-c629f74cc23cd7e22">Mehr Infos zu den Kommandozeilen-Optionen befinden sich auf der 
+entsprechenden [[link]]Dokuseite[[fn:https://docs.marklogic.com/guide/mlcp/import*Dokuseite zu den Import Optionen der MarkLogic Content Pump]]
+von MarkLogic. </p></note><p id="d6695868-ca0a-418e-91e2-bd91943744b3d7e24">Mit der Option [[code:-aggregate_record_element]] wird definiert, dass die Eingabe bzgl. des Elements [[code:&lt;chapter&gt;]] aufgesplittet werden soll.
+D.h. eine Datei mit folgendem Inhalt: </p><pre id="1285a05d-fb32-4301-bd1d-514175b8011cd7e23" xml:space="preserve">&lt;test&gt;
+  &lt;title&gt;Test Datei&lt;/title&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 1&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 1&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 2&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 2&lt;/content&gt;
+  &lt;/chapter&gt;
+  &lt;chapter&gt;
+    &lt;title&gt;Test Kapitel 2&lt;/title&gt;
+    &lt;content&gt;Kapitel Inhalt 2&lt;/content&gt;
+  &lt;/chapter&gt;
+&lt;/test&gt;</pre><p id="cfcdff52-44c0-48d4-aeca-1e8702ba3868d7e28">wird in drei Records aufgesplittet:</p><fig id="964971ac-f826-4b38-b346-3f439fb3de65d7e30"><title id="aa5590de-5e6c-4bf8-bbaf-c7679dd2a96cd7e29">Ergebnis einer MarkLogic Content Pump Sitzung</title><desc id="f99e3cf7-6c37-4329-a2f9-a2c98e1f3b78d7e31">Auf der Konsole kann man sich das Ergebnis der [[code:mlcp]] Sitzung anschauen. Es wurden - wie gewünscht - drei XML Fragmente separat in die Collection gespeichert.</desc><image id="ed6187a1-4911-4cfe-b69b-7b16e6791761d7e33" href="mlcp.png"/></fig><note id="0cb8a518-a646-42fc-a4c4-270ab375759dd7e34"><p id="3a383331-3738-4f70-877c-5f3e07ce9fbbd7e35">Um in MarkLogic keine Speicherpobleme zu erzeugen empfielt es sich große Dokumente, die man nur "speichern" will mit der Option [[code:-document_type binary]] zu importieren. In diesem Zusammenhang ist ebenfalls die Option [[code:-streaming true]] interessant.</p></note></body></topic>
