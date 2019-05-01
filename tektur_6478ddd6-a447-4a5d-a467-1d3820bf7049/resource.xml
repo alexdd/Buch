@@ -24,6 +24,9 @@
       <topicref id="151a9719-a32a-4fca-a55c-769b47a73b34"
                 href="151a9719-a32a-4fca-a55c-769b47a73b34/resource.xml"
                 navtitle="Professionelle XML Verarbeitung"/>
+      <topicref id="c0fc1eac-482c-4069-8409-cf10496846e5"
+                href="c0fc1eac-482c-4069-8409-cf10496846e5/resource.xml"
+                navtitle="Technische Dokumentation"/>
    </topicref>
    <topicref id="31a92dc0-959c-49a1-b06e-01e2369e050e"
              href="31a92dc0-959c-49a1-b06e-01e2369e050e/resource.xml"
@@ -83,6 +86,9 @@
                       href="d9cd641f-29f4-485d-8e67-32519d422b08/resource.xml"
                       navtitle="[[code:if..then..else]] Ausdrücke"/>
          </topicref>
+         <topicref id="bfa3e3ec-5b97-4144-aba8-4e1a942598e8"
+                   href="bfa3e3ec-5b97-4144-aba8-4e1a942598e8/resource.xml"
+                   navtitle="Wikipedia Scrapper Applikation"/>
       </topicref>
       <topicref id="3337f433-44bf-430d-a809-73fd1de5ba6c"
                 href="3337f433-44bf-430d-a809-73fd1de5ba6c/resource.xml"
@@ -103,6 +109,9 @@
                       href="62faa067-ecd5-4053-8388-e7e151f04542/resource.xml"
                       navtitle="Ausführen einiger Beispiel-Queries"/>
          </topicref>
+         <topicref id="9e6623eb-480b-4875-a150-9946d246e438"
+                   href="9e6623eb-480b-4875-a150-9946d246e438/resource.xml"
+                   navtitle="Datenkorrektur mit der Konsole"/>
          <topicref id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
                    href="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc/resource.xml"
                    navtitle="MarkLogic Tools">
@@ -111,7 +120,7 @@
                       navtitle="EXPath Konsole"/>
             <topicref id="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb"
                       href="632fc504-f5b6-4bed-8f08-5fa0aa26a5bb/resource.xml"
-                      navtitle="Ergebnis einer MarkLogic Content Pump Sitzung"/>
+                      navtitle="mlcp - MarkLogic Content Pump"/>
          </topicref>
       </topicref>
       <topicref id="b3eba8f1-fb04-4ab5-ac92-5f52c80d1936"
