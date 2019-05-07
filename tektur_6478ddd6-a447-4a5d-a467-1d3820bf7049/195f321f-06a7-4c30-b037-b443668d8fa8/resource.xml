@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><topic id="7a4ded7e-6893-4283-8507-22575cb7e4bb"><title id="031a9203-60cb-46e7-b2bf-e7e21fe90d45">Hilfreiche XQuery Schippsel</title><body id="a208acaa-4319-41fa-83d9-752afeae469b"><p id="05773d2d-9893-43af-8d09-42f0576d575f">Unsortierte Schnippsel für die MarkLogic Konsole, die an mancher Stelle hilfreich sein könnten:</p><dl id="a5000499-e8e9-4c65-b38b-3c9a6e9026d6d7e6"><dlhead id="b5827073-8c2f-45be-ab6f-920d4c64d851d7e7"><dthd id="2f8a8faf-8b87-4e4a-bf29-26ce7a554c26d7e8">Beschreibung</dthd><ddhd id="16366a3a-302b-47d8-a267-9b8e9b203f44d7e10">Beispiel Code Schnippsel</ddhd></dlhead><dlentry id="18e4406d-c2b9-4e7c-8eef-6b7c5311f058d7e12"><dt id="9143faaf-d18e-4191-8ac8-51daf6e8d9a4d7e13">Datenbank löschen</dt><dd id="a52421be-cc57-437e-a195-0ecbad7f8b65d7e15"><pre id="1c142cad-87f1-4a9f-9f95-31f95d2dde11d7e16" xml:space="preserve">xdmp:forest-clear(
+
+xdmp:database-forests(
+
+xdmp:database("xml-scrapper-content")))</pre></dd></dlentry><dlentry id="1db258fe-af34-4508-9480-79e91d0b48dbd7e18"><dt id="9d724bc6-941d-4fbb-a158-0fce2aec3287d7e19">Über Collection iterieren</dt><dd id="a560eedc-6895-4155-9a76-50d7ccd978fbd7e21"><pre id="33b2f19d-75a0-4e9f-a0ad-c3de1969a1ddd7e22" xml:space="preserve">for $x in collection("/topics")
+return
+ (&lt;fname&gt;{ fn:document-uri($x) }&lt;/fname&gt;,
+ $x)</pre></dd></dlentry><dlentry id="d7a87293-7f4e-4ac7-900b-fa73d9c3ba53d7e24"><dt id="14a2284f-29e1-4c47-ba1b-7b6729d095fdd7e25">Attribut / Knoten ersetzen</dt><dd id="12bb82f1-c724-44d9-ae6a-98797d8b64bbd7e27"><pre id="051ee2e9-0270-458b-8c25-037acb8d5300d7e28" xml:space="preserve">for $ref in collection("/topics")//topicref
+    let $topic := collection("/topics")
+               [contains(fn:document-uri(.),$ref/@href)],
+        $new := attribute href { $topic/topic/@id }
+return 
+  xdmp:node-replace($ref/@href,  $new)</pre></dd></dlentry><dlentry id="ccfadc33-1e2f-4e32-bb18-b42006225027d7e30"><dt id="55e9b0a8-9f15-4bf2-a4e6-c02a15e8ae60d7e31">Dokument [[link]]"umbenennen"[[fn:https://developer.marklogic.com/recipe/move-a-document/*Rezept, wie man ein Dokument in MarkLogic "umbenennt"]]</dt><dd id="c2b6ad90-990d-4177-a64e-fdcc1352112fd7e33"><pre id="d3645df6-2ce4-45c7-8576-61580a42ca03d7e34" xml:space="preserve">xdmp:document-insert(
+  $new-uri,
+  fn:doc($old-uri),
+  xdmp:document-get-permissions($old-uri),
+  xdmp:document-get-collections($old-uri)
+ ),
+ xdmp:document-delete($old-uri),
+ xdmp:document-set-properties($new-uri, $properties</pre></dd></dlentry><dlentry id="742e10cf-94a6-493d-87eb-2948bfa44404d7e36"><dt id="fab65d71-0ad8-4846-861e-145ecc496493d7e37">Über verschiedene Collections bestimmte Elemente suchen</dt><dd id="3e6e0c48-77bf-42be-990f-61bd26ce2efad7e39"><pre id="3157c610-3bac-45cc-b289-f0b1776b1de9d7e40" xml:space="preserve">for $element in cts:search(/descendant::*[self::b or 
+                                         self::i or self::u], 
+                cts:collection-query(("/topics", 
+                                      "/tasks", "/maps")))
+return $element/text()</pre></dd></dlentry></dl></body></topic>

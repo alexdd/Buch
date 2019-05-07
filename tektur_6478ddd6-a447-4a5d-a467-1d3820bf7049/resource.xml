@@ -89,6 +89,9 @@
          <topicref id="bfa3e3ec-5b97-4144-aba8-4e1a942598e8"
                    href="bfa3e3ec-5b97-4144-aba8-4e1a942598e8/resource.xml"
                    navtitle="Wikipedia Scrapper Applikation"/>
+         <topicref id="195f321f-06a7-4c30-b037-b443668d8fa8"
+                   href="195f321f-06a7-4c30-b037-b443668d8fa8/resource.xml"
+                   navtitle="Hilfreiche XQuery Schippsel"/>
       </topicref>
       <topicref id="3337f433-44bf-430d-a809-73fd1de5ba6c"
                 href="3337f433-44bf-430d-a809-73fd1de5ba6c/resource.xml"
@@ -111,7 +114,7 @@
          </topicref>
          <topicref id="9e6623eb-480b-4875-a150-9946d246e438"
                    href="9e6623eb-480b-4875-a150-9946d246e438/resource.xml"
-                   navtitle="Datenkorrektur mit der Konsole"/>
+                   navtitle="Webapps mit MarkLogic"/>
          <topicref id="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc"
                    href="ff0c6d9b-57f8-4463-a65d-58dbfec8d2dc/resource.xml"
                    navtitle="MarkLogic Tools">
