@@ -3,7 +3,7 @@ from subprocess import call
 
 # this script pumps the topics into MarkLogic
 
-book_dir = "tektur_6478ddd6-a447-4a5d-a467-1d3820bf7049"
+book_dir = "../tektur_6478ddd6-a447-4a5d-a467-1d3820bf7049"
 pathes = []
 
 for f in os.listdir(book_dir):
@@ -17,7 +17,7 @@ for p in pathes:
 		'mlcp.bat',
 		'import',
 		'-database',
-		'xml-scrapper-content',
+		'tektur',
 		'-username',
 		'alex',
 		'-password',
