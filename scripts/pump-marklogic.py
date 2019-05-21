@@ -26,7 +26,7 @@ for p in pathes:
 		'localhost',
 		'-input_file_path',
 		p,
-		'-output_collections',
+		'-temporal_collection',
 		'/topics',
 		'-output_uri_prefix',
 		'/topic',

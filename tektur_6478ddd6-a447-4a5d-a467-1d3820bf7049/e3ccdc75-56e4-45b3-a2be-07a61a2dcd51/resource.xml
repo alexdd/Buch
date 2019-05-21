@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><topic id="79f1f2e3-3456-4d89-aa21-ad40597ab9bf"><title id="6e53fba3-c83c-4a92-8cea-170e5781324c">Identifikation mit [[code:generate-id()]] </title><body id="2df0bd9e-ed7e-4325-b00f-adf034e6d3b4"><p id="3cd96c4e-4783-468f-a32c-5a009e3cd115">Die [[code:generate-id()]] Funktion gibt es in XSLT schon immer. Mit ihr kann eine Prüfsumme eines Knotens im Baum generiert werden.</p><p id="ec777147-e5f9-4922-90d7-da6edb3ba4e4d6e6">Das funktioniert natürlich nur, wenn man bei der Auswertung dieses Wertes nicht den Kontext wechselt. D.h. z.B. dass ein Knoten in einem Baum,
-der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p><section id="2ef6dff8-0c31-4fc4-9234-1dc7886209e6d7e8"><title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title><p id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
+der in einer Variablen gespeichert ist, eine andere Prüfsumme bekommt, als derselbe Knoten im Kontext-Baum.</p><section id="eb652a4a-e05e-4909-9668-39fb3cc44173d7e8"><title id="fc5861f4-cba9-4568-8ebe-a70d04f46a66d6e9">Beispiel Stückliste</title><p id="f1a60882-448a-4f9f-a10b-0b54ef3aa35dd6e10">Ein Anwendungszenario wäre bspw. die Generierung einer Target-ID für ein Bauteil in einer Stückliste. Das Bauteil ist nur einmal im 
 System erfasst, hat also eine eindeutige ID, soll aber an mehreren Stellen in die Ausgabe (Eine Dokumentation für eine Maschine)
 generiert werden.</p><p id="8168234a-94fe-432e-900c-567faf2a8552d6e12">Die Id an einem Element [[code:&lt;part id=“1234”&gt;]] würde somit mehrfach in die XML Eingabe für einen XSL-FO Prozessor erscheinen und ist 
 für Referenzen unbrauchbar geworden.  Deshalb ist es ratsam beim Rendern der Bauteile eine neue Id zu vergeben, das kann z.B. 
-mit den folgenden Templates (vereinfacht) passieren:</p><pre id="f15bb7d1-5a69-48f5-a032-586460ff4803d7e15" xml:space="preserve">&lt;xsl:key name="parts" match="part" use="@id"/&gt;
+mit den folgenden Templates (vereinfacht) passieren:</p><pre id="aed985cb-da5b-41c9-9534-9973e909a28bd7e15" xml:space="preserve">&lt;xsl:key name="parts" match="part" use="@id"/&gt;
   
 &lt;xsl:template match=“part” mode=“content"&gt;
   &lt;!-- Ausgabe des Bauteils im Content Bereich --&gt;
@@ -19,9 +19,9 @@ mit den folgenden Templates (vereinfacht) passieren:</p><pre id="f15bb7d1-5a69-4
       &lt;fo:page-number-citation ref-id="{generate-id()}"/&gt;
     &lt;/xsl:for-each&gt;
   &lt;/fo:block&gt;
-&lt;/xsl:template&gt;</pre></section><section id="922c2f9f-f4b6-4bb1-8eb0-fa6372b5f32bd7e17"><title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title><p id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
-aufsplitten will, um sie in einer <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c" id="2988fd11-e7f5-4086-ad85-83dc61ca346c" type="none">XML Datenbank</xref> abspeichern zu können. Die Struktur einer Datenübertragung
-könnte folgendermassen aussehen:</p><pre id="71eec671-6954-4e34-b795-5d3051162b89d7e25" xml:space="preserve">WRAPPER1
+&lt;/xsl:template&gt;</pre></section><section id="3a809089-53c0-4384-a5cb-f49bf98b5ea1d7e17"><title id="90386d0e-7162-471c-8c09-8bb00da36da5d6e17">Beispiel Mantel Dokument</title><p id="b77784f8-4fa6-4519-b20d-347ba62d7e8bd6e18">Im Bereich EDI Datenaustausch werden große XML Dateien versendet, die man auf einzelne Transmissions 
+aufsplitten will, um sie in einer <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c" id="0304c800-34c0-49fd-8808-3d1532a27c7e" type="none">XML Datenbank</xref> abspeichern zu können. Die Struktur einer Datenübertragung
+könnte folgendermassen aussehen:</p><pre id="2c76a8ba-db08-4fcb-9f6c-8d82bbef2f82d7e25" xml:space="preserve">WRAPPER1
   SEQUENZ1
   SEQUENZ2
   SEQUENZ3
@@ -56,7 +56,7 @@ könnte folgendermassen aussehen:</p><pre id="71eec671-6954-4e34-b795-5d3051162b
       [...]</pre><p id="30f17d4c-717b-4778-ad02-1d6a5f41c443d6e22">Jedes einzelne [[code:CONTENT]] Element soll nun einen Mantel erhalten und separat in einer Datei abgelegt werden.
 Der "Umschlag" soll dabei alle Elemente des Rahmens der Transmission erhalten. Also alles auf der
 Descendant-Achse bis zum Element [[code:WRAPPER3]], ausserdem noch die Elemente [[code:SEQUENZ1]] und [[code:SEQUENZ2]],
-sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]]. Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p><pre id="e7e8c5d7-4ffb-4a1f-8bc2-4b8f696ad270d7e29" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
+sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]]. Ohne groß auf die Performanz zu achten, könnte das recht einfach so realisiert werden:</p><pre id="7491a271-db03-495b-8e5c-d51ee3101ecbd7e29" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
     
   &lt;xsl:output method="xml" indent="yes"/&gt;
   &lt;xsl:strip-space elements="*"/&gt;
@@ -95,4 +95,4 @@ sowie das Element [[code:WRAPPER4]] mit Kind [[code:SEQUENZ1]]. Ohne groß auf d
     
 &lt;/xsl:stylesheet&gt;</pre><p id="a7ab8655-d9eb-4343-bebf-c4d8850cb2c6d6e26">Im rekursiven Abstieg wird im Modus "umschlag" jedes [[code:CONTENT]] Element selektiert und
 in einen Umschlag verpackt. Der eigentlich Inhalt des Umschlags wird generiert,
-indem der gesamte XML Baum über die Standard-Kopierregel in das Element [[code:&lt;nutzdaten&gt;]] gesetzt wird. Dabei wird aber nur derjenige [[code:CONTENT]] Abschnitt evaluiert, der - zu der als Parameter übergebenen - generierten Id passt.</p></section></body></topic>
+indem der gesamte XML Baum über die Standard-Kopierregel[[xe1:XSLT Konstrukte;xe2:Default-Kopierregel]] in das Element [[code:&lt;nutzdaten&gt;]] gesetzt wird. Dabei wird aber nur derjenige [[code:CONTENT]] Abschnitt evaluiert, der - zu der als Parameter übergebenen - generierten Id passt.</p></section></body></topic>
