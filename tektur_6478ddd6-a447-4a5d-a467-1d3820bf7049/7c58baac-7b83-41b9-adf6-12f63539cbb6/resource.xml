@@ -67,7 +67,6 @@ declare function local:create-axes()
 
 declare function local:create-temporal-collection() 
 {
-#test
   try {
     let $t:= temporal:collection-create("/perso-verluste", "system", "valid")
     return ()
