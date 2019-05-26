@@ -36,10 +36,13 @@
                 navtitle="Push vs. Pull Stylesheets"/>
       <topicref id="db988919-f71e-437e-b699-b6fdd2a32cb9"
                 href="db988919-f71e-437e-b699-b6fdd2a32cb9/resource.xml"
-                navtitle="Eindeutigkeit der Regelbasis  [REVIEW]"/>
+                navtitle="Eindeutigkeit der Regelbasis"/>
       <topicref id="3e443c28-8698-470b-b443-f286ff7ed2d5"
                 href="3e443c28-8698-470b-b443-f286ff7ed2d5/resource.xml"
                 navtitle="Namespaces  [REVIEW]"/>
+      <topicref id="27faad55-4d8d-4009-8274-9d96a771c8d1"
+                href="27faad55-4d8d-4009-8274-9d96a771c8d1/resource.xml"
+                navtitle="Schemata"/>
    </topicref>
    <topicref id="f838f9be-97bf-44a4-ac63-2e813a87f2ea"
              href="f838f9be-97bf-44a4-ac63-2e813a87f2ea/resource.xml"
