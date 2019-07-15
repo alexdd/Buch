@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="821f8271-e9a1-43e8-ba9a-b1e8aa0ce4f4"><title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit Xspec </title><body id="9036318d-3693-4e5c-be19-8a62e8748b03"><p id="eef21ef4-793e-4fef-9f1e-a22ecf24b64c">XSpec[[xe1:Tools;xe2:XSpec]] ist ein [[link]]Test-Framework[[fn:https://github.com/xspec*XSpec auf GitHub]][[xe1:Test-Framework]] für XSLT, XQuery und Schematron. 
+<?xml version="1.0" encoding="UTF-8"?><topic id="821f8271-e9a1-43e8-ba9a-b1e8aa0ce4f4"><title id="9b1e7086-25cc-4bdf-ba77-6adfb503603b">Erste Schritte mit XSpec </title><body id="9036318d-3693-4e5c-be19-8a62e8748b03"><p id="eef21ef4-793e-4fef-9f1e-a22ecf24b64c">XSpec[[xe1:Tools;xe2:XSpec]] ist ein [[link]]Test-Framework[[fn:https://github.com/xspec*XSpec auf GitHub]][[xe1:Test-Framework]] für XSLT, XQuery und Schematron. 
 Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b id="f6d68885-0ad1-420b-82ea-92bd5889e0bcd6e9">Test-Szenario</b> 
-Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p><pre id="c081ed9a-1a4b-4337-b0c9-34b997ffb2f0d7e9" xml:space="preserve">&lt;test-szenario&gt;
+Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p><pre id="094cc495-d584-4597-8230-9e3a1016feb1d7e9" xml:space="preserve">&lt;test-szenario&gt;
   &lt;testfall&gt;
     &lt;personen&gt;
       &lt;person&gt;
@@ -15,7 +15,7 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
       &lt;/person&gt;
     &lt;/personen&gt;
   &lt;/testfall&gt;
-&lt;/test-szenario&gt;</pre><p id="a495ec01-4794-4e28-b47f-0313ab934100d6e26">in einer XSpec Datei [[code:*.xspec]] werden <b id="31a39752-2463-4c05-bbc6-043c7fa89e67d6e28">Assert- und Not-Assert-Methoden</b>[[xe1:Assert- und Not-Assert]]deklariert:</p><pre id="5c077bd6-c90b-4894-9279-ddc11407f1c6d7e16" xml:space="preserve">&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+&lt;/test-szenario&gt;</pre><p id="a495ec01-4794-4e28-b47f-0313ab934100d6e26">in einer XSpec Datei [[code:*.xspec]] werden <b id="31a39752-2463-4c05-bbc6-043c7fa89e67d6e28">Assert- und Not-Assert-Methoden</b>[[xe1:Assert- und Not-Assert]]deklariert:</p><pre id="7d99d2eb-fb48-4d78-8324-9e56e5cf0ec6d7e16" xml:space="preserve">&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
                schematron="test.sch"&gt;
   &lt;x:scenario label="ALL"&gt;
     &lt;x:context href="test.xml"/&gt;
@@ -25,7 +25,7 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
 &lt;/x:description&gt;</pre><p id="9aac4097-bb50-44d5-8827-bd1775ce18fcd6e39">Grds. bdeutet ein Assert, dass das Mapping zwischen tatsächlichem Wert und Erwartungswert des
 Testfalls[[xe1:Testfall]] positiv erfüllt ist. Beim Not-Assert ist das Gegenteil der Fall. Im obigen Beispiel
 reichen zwei Regeln, um den Testfall vollständig abzudecken.</p><p id="350b086a-a78e-47cc-9a3e-4f8c596fadf4d6e41">Wenn man Schematron[[xe1:Tools;xe2:Schematron]] Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
-die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p><pre id="e06e841f-1310-46c4-9851-ee6d6c8948f2d7e22" xml:space="preserve">&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p><pre id="21e95807-7a1f-4055-872e-e3318ade3839d7e22" xml:space="preserve">&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
   &lt;sch:pattern id="main"&gt;
     &lt;sch:rule context="nachname"&gt;
@@ -34,9 +34,9 @@ die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert mod
       &lt;/sch:assert&gt;
     &lt;/sch:rule&gt;
   &lt;/sch:pattern&gt;
-&lt;/sch:schema&gt;</pre><p id="5da4afab-3eda-4027-956a-1e72b6dd19b3d6e48">In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p><p id="6d2dba49-cecd-4315-8956-4beb19e4af08d6e50">Hat sie keinen Nachnamen so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
-geschrieben. Diese Datei wertet nun Xspec aus.</p><note id="6a785c81-f6fe-4cde-a12c-b3582eb3baa9d7e28"><p id="611d787d-7b54-46dd-9548-158dd6db0bfcd6e53">Erscheint ein Fehler (= das Feld <b id="171bb098-8941-486f-b6e0-c577438c996dd6e55">nachname</b> ist leer), so greift bei Xspec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p></note><p id="1ed9b5fd-88c2-4a6b-998b-6eac55854ec7d6e58">Als Eselsbrücke kann man
-ein Assert in der Xspec Datei gleichsetzen mit <b id="30100a12-de8b-4e03-a6ff-86361fb1e578d6e60">Appear</b> und ein Not-Assert mit
+&lt;/sch:schema&gt;</pre><p id="5da4afab-3eda-4027-956a-1e72b6dd19b3d6e48">In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p><p id="6d2dba49-cecd-4315-8956-4beb19e4af08d6e50">Hat sie keinen Nachnamen, so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
+geschrieben. Diese Datei wertet nun XSpec aus.</p><note id="0b069163-6cae-46c1-997a-b378c40b9bfbd7e28"><p id="611d787d-7b54-46dd-9548-158dd6db0bfcd6e53">Erscheint ein Fehler (= das Feld <b id="171bb098-8941-486f-b6e0-c577438c996dd6e55">nachname</b> ist leer), so greift bei XSpec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p></note><p id="1ed9b5fd-88c2-4a6b-998b-6eac55854ec7d6e58">Als Eselsbrücke kann man
+ein Assert in der XSpec Datei gleichsetzen mit <b id="30100a12-de8b-4e03-a6ff-86361fb1e578d6e60">Appear</b> und ein Not-Assert mit
 <b id="be31f20f-1e9b-4c0d-b42d-f12afa043917d6e63">Not-Appear</b>. [[xe1:Tipps und Tricks;xe2:Appear- und Not-Appear]]</p><p id="5f9a44b2-0d88-4bf3-81f2-d93a28301049d6e67">Ein Assert sichert also zu, dass sich ein Fehlerbericht in der
 Schematron Ergebnisdatei zum Testfall befindet. Ein Not-Assert sichert zu, dass
 sich kein Fehlerbericht befindet. </p><p id="23ee0dc1-c910-43f7-a86b-442562947535d6e69"> Wie man sich leicht vorstellen kann, sind Assert-Regeln in diesem Fall leicht zu finden,
