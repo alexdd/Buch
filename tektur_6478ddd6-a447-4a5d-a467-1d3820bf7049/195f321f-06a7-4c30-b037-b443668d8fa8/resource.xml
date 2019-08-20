@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><topic id="7a4ded7e-6893-4283-8507-22575cb7e4bb"><title id="031a9203-60cb-46e7-b2bf-e7e21fe90d45">Hilfreiche XQuery Schippsel</title><body id="a208acaa-4319-41fa-83d9-752afeae469b"><p id="05773d2d-9893-43af-8d09-42f0576d575f">Unsortierte Schnippsel für die MarkLogic Konsole, die an mancher Stelle hilfreich sein könnten:</p><dl id="a5000499-e8e9-4c65-b38b-3c9a6e9026d6d7e6"><dlhead id="ec40f408-fe34-42e5-b377-ae8555f967f8d7e7"><dthd id="76b7a2c4-3f35-4245-9b57-bfe2bcc45418d7e8">Beschreibung</dthd><ddhd id="01162bbc-83d6-4f0d-932e-468183514ad1d7e10">Beispiel Code Schnippsel</ddhd></dlhead><dlentry id="18e4406d-c2b9-4e7c-8eef-6b7c5311f058d7e12"><dt id="0e8d4eec-ebc7-4603-b219-3aecf1061b48d7e13">Datenbank löschen</dt><dd id="cabbf52e-56b0-4084-bd36-fc85e98513dcd7e15"><pre id="5507de52-82d5-4d62-b8ca-4dcfef901e3ed7e16" xml:space="preserve">xdmp:forest-clear(
+<?xml version="1.0" encoding="UTF-8"?><topic id="7a4ded7e-6893-4283-8507-22575cb7e4bb"><title id="031a9203-60cb-46e7-b2bf-e7e21fe90d45">Hilfreiche XQuery Schippsel</title><body id="a208acaa-4319-41fa-83d9-752afeae469b"><p id="05773d2d-9893-43af-8d09-42f0576d575f">Unsortierte Schnippsel für die MarkLogic Konsole, die an mancher Stelle hilfreich sein könnten:</p><dl id="a5000499-e8e9-4c65-b38b-3c9a6e9026d6d7e6"><dlhead id="fbd4533f-7215-48d5-be16-e47580e45cf9d7e7"><dthd id="5f583414-ef91-4f28-9867-5987130b8be3d7e8">Beschreibung</dthd><ddhd id="0aa7eaa2-802c-46c4-989a-0ecea987eda1d7e10">Beispiel Code Schnippsel</ddhd></dlhead><dlentry id="18e4406d-c2b9-4e7c-8eef-6b7c5311f058d7e12"><dt id="36d5fb3e-7005-4ec1-9f51-f8fd974a6a9bd7e13">Datenbank löschen</dt><dd id="2955bc9e-760e-4feb-ac3a-08227c45cb06d7e15"><pre id="fe3c5973-6fea-45e9-b186-ceac1be9e211d7e16" xml:space="preserve">xdmp:forest-clear(
 
 xdmp:database-forests(
 
-xdmp:database("xml-scrapper-content")))</pre></dd></dlentry><dlentry id="1db258fe-af34-4508-9480-79e91d0b48dbd7e18"><dt id="e7efec15-8826-4179-aab0-c46aee4593e3d7e19">Über Collection iterieren</dt><dd id="a23d0275-0b7a-44d9-8ef1-724566b80971d7e21"><pre id="ccf8efb1-6193-432d-8ec3-55bba253d2afd7e22" xml:space="preserve">for $x in collection("/topics")
+xdmp:database("xml-scrapper-content")))</pre></dd></dlentry><dlentry id="1db258fe-af34-4508-9480-79e91d0b48dbd7e18"><dt id="ebfb1375-e14c-43da-8550-34abe0662375d7e19">Über Collection iterieren</dt><dd id="44f6f191-bdec-43bb-aedf-69e2fca6b642d7e21"><pre id="9e76d281-139a-47de-bd94-2bbf085e2562d7e22" xml:space="preserve">for $x in collection("/topics")
 return
  (&lt;fname&gt;{ fn:document-uri($x) }&lt;/fname&gt;,
- $x)</pre></dd></dlentry><dlentry id="d7a87293-7f4e-4ac7-900b-fa73d9c3ba53d7e24"><dt id="aa33e8c6-2a27-4e00-8f37-517c616e2c92d7e25">Attribut / Knoten ersetzen</dt><dd id="da75b385-1303-4e03-8e24-8f170ad318bcd7e27"><pre id="a594713f-14d9-4bc6-bc4f-89f6e78955fed7e28" xml:space="preserve">for $ref in collection("/topics")//topicref
+ $x)</pre></dd></dlentry><dlentry id="d7a87293-7f4e-4ac7-900b-fa73d9c3ba53d7e24"><dt id="828443db-c78d-4638-b4b3-fcf8882e8634d7e25">Attribut / Knoten ersetzen</dt><dd id="e2412243-d247-48bd-8494-a8f911eda9c8d7e27"><pre id="21f42beb-5ab7-4358-af79-da209085ce60d7e28" xml:space="preserve">for $ref in collection("/topics")//topicref
     let $topic := collection("/topics")
                [contains(fn:document-uri(.),$ref/@href)],
         $new := attribute href { $topic/topic/@id }
 return 
-  xdmp:node-replace($ref/@href,  $new)</pre></dd></dlentry><dlentry id="ccfadc33-1e2f-4e32-bb18-b42006225027d7e30"><dt id="f72a3a17-1b7a-4712-828c-5097552f2a24d7e31">Dokument [[link]]"umbenennen"[[fn:https://developer.marklogic.com/recipe/move-a-document/*Rezept, wie man ein Dokument in MarkLogic "umbenennt"]]</dt><dd id="6eec506b-fe68-45fc-a390-aa65b589c5ffd7e33"><pre id="000eb81a-66ef-49bf-aa62-ab3c650a00ffd7e34" xml:space="preserve">xdmp:document-insert(
+  xdmp:node-replace($ref/@href,  $new)</pre></dd></dlentry><dlentry id="ccfadc33-1e2f-4e32-bb18-b42006225027d7e30"><dt id="242d3a98-13cd-4566-85ba-6c56246292e5d7e31">Dokument [[link]]"umbenennen"[[fn:https://developer.marklogic.com/recipe/move-a-document/*Rezept, wie man ein Dokument in MarkLogic "umbenennt"]]</dt><dd id="479e4c84-9810-4d55-afe3-b66dcece613fd7e33"><pre id="49989af1-c084-4491-8ccc-c1963670f378d7e34" xml:space="preserve">xdmp:document-insert(
   $new-uri,
   fn:doc($old-uri),
   xdmp:document-get-permissions($old-uri),
   xdmp:document-get-collections($old-uri)
  ),
  xdmp:document-delete($old-uri),
- xdmp:document-set-properties($new-uri, $properties</pre></dd></dlentry><dlentry id="742e10cf-94a6-493d-87eb-2948bfa44404d7e36"><dt id="7d3364ba-30ac-4354-8e53-58127048f47cd7e37">Über verschiedene Collections bestimmte Elemente suchen</dt><dd id="fb3126e2-00e6-454e-afe2-d32685e16361d7e39"><pre id="0c7235e0-149b-48c0-8c12-c55489aa60c2d7e40" xml:space="preserve">for $element in cts:search(/descendant::*[self::b or 
+ xdmp:document-set-properties($new-uri, $properties</pre></dd></dlentry><dlentry id="742e10cf-94a6-493d-87eb-2948bfa44404d7e36"><dt id="33600895-64eb-4f7e-9829-73eb1c79c0c0d7e37">Über verschiedene Collections bestimmte Elemente suchen</dt><dd id="22fb834d-6497-48b8-be0c-9fb11d55296ad7e39"><pre id="e4a0f549-bd97-46c6-ba4f-5afb6d91137fd7e40" xml:space="preserve">for $element in cts:search(/descendant::*[self::b or 
                                          self::i or self::u], 
                 cts:collection-query(("/topics", 
                                       "/tasks", "/maps")))
-return $element/text()</pre></dd></dlentry><dlentry id="1e48802c-5681-44f2-b9ae-665df683b775d7e42"><dt id="491bd030-f099-42dc-938e-524283dcac3fd7e43">Ein Element aus einem "Stack" holen und das Element vom Stack nehmen ("Pop")</dt><dd id="b28e5711-6b6f-44df-9854-9a7ff1a7f3ffd7e45"><pre id="8bd720bc-fb93-4fa2-9fec-daa92a703e37d7e46" xml:space="preserve">let $result := ( 
+return $element/text()</pre></dd></dlentry><dlentry id="1e48802c-5681-44f2-b9ae-665df683b775d7e42"><dt id="ab1bdafd-4f98-43f6-b377-e780b2ee2fe6d7e43">Ein Element aus einem "Stack" holen und das Element vom Stack nehmen ("Pop")</dt><dd id="c63574d8-8d8f-4028-ae8d-67e4bb1ee6fed7e45"><pre id="278d29bc-91e9-49e4-b2c8-4b86d33017a7d7e46" xml:space="preserve">let $result := ( 
   for $stack in collection("/stack-pushed")
   order by $stack/some-element/some-criterion descending
   return
@@ -29,7 +29,7 @@ return $element/text()</pre></dd></dlentry><dlentry id="1e48802c-5681-44f2-b9ae-
 return (
   local:render-response($result),
   xdmp:document-set-collections(fn:document-uri($result), 
-                               ("/stack-popped")</pre></dd></dlentry><dlentry id="c63605c2-4858-4569-a6a3-003916a7c9f3d7e48"><dt id="7ba2f885-1bb0-4ed9-a0c3-2a8849b70767d7e49">Konvertierung nach JSON</dt><dd id="8f00d15a-d2c8-4275-828c-2bfb4cb9008ad7e51"><pre id="b41aa208-81e9-4196-a8a0-e5193fabd94fd7e52" xml:space="preserve">let $xml:=
+                               ("/stack-popped")</pre></dd></dlentry><dlentry id="c63605c2-4858-4569-a6a3-003916a7c9f3d7e48"><dt id="7ca0d9f9-d9f0-493c-ad16-2010d71e4f5dd7e49">Konvertierung nach JSON</dt><dd id="839c8bd6-caa4-40ef-9894-c7d572ab8e63d7e51"><pre id="4790d643-14d9-4d56-b1f2-73be868559b6d7e52" xml:space="preserve">let $xml:=
 &lt;tektur-dita&gt;
 {
 for $x in collection("/topics")
@@ -39,7 +39,7 @@ return
 &lt;/tektur-dita&gt;,
     $config := json:config("full") =&gt; 
                map:with("whitespace", "preserve")
-    return json:transform-to-json( $xml , $config )</pre></dd></dlentry><dlentry id="8d4eee9a-9049-41e8-a576-06701189da7fd7e54"><dt id="bf788c3c-a4ee-4d04-a5ec-a2ad979d8878d7e55">Gib mir alle Dokumente, die nach dem 23.05.2019 zur (temporalen) Collection "/topics" hinzugefügt wurden</dt><dd id="eace07cf-3242-488b-b0f3-818e8ad1d4b2d7e57"><pre id="1c16a3ea-1d9c-40ec-9e10-3efa18b299f7d7e58" xml:space="preserve">let $period := cts:period(
+    return json:transform-to-json( $xml , $config )</pre></dd></dlentry><dlentry id="8d4eee9a-9049-41e8-a576-06701189da7fd7e54"><dt id="a610f061-f78c-4772-87ba-67e34947d92ad7e55">Gib mir alle Dokumente, die nach dem 23.05.2019 zur (temporalen) Collection "/topics" hinzugefügt wurden</dt><dd id="1ec77dbb-68b8-40a1-a05e-ffec82a02feed7e57"><pre id="bb5a72ed-ed48-44d5-883b-801ede0f923dd7e58" xml:space="preserve">let $period := cts:period(
   xs:dateTime('0001-01-01T00:00:00'),
   xs:dateTime('2019-05-23T00:00:00')
 )
@@ -48,7 +48,7 @@ return cts:search(
   cts:period-range-query('system-axis', 
                          'ISO_SUCCEEDS', 
                          $period)
-)</pre></dd></dlentry><dlentry id="dc7412f2-fc59-4434-b72c-37ecca1ccc63d7e60"><dt id="d61c531c-6468-4e83-a030-254cb14278c9d7e61">cURL Parameter um eine DB zu leeren (als Array Einträge im Python Code)</dt><dd id="c88ff485-65ff-4965-be5e-d7f205d2d47cd7e63"><pre id="af1e7487-a90f-489d-9073-fd422ef8af18d7e64" xml:space="preserve">args = [
+)</pre></dd></dlentry><dlentry id="dc7412f2-fc59-4434-b72c-37ecca1ccc63d7e60"><dt id="773cde9f-8c93-41a7-99dc-98f9a56e9795d7e61">cURL Parameter um eine DB zu leeren (als Array Einträge im Python Code)</dt><dd id="20d5adab-561c-4dc2-8ed2-58a25a331b4ed7e63"><pre id="45b2f889-a453-4872-8542-16c234b000ffd7e64" xml:space="preserve">args = [
   'curl',
   '-X',
   'POST',

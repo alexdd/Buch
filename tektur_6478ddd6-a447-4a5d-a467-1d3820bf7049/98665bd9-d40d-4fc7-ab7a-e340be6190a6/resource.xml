@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><topic id="06abe1b7-21be-4794-bec6-c28732cf6cbf"><title id="8c5a4500-d080-4910-b4cd-529caeb12ae3">XQuery als Programmiersprache </title><body id="ae4f3c4a-54be-4671-bba8-047bdf24b1d7"><p id="1e9a3c95-15bd-4eb0-89b8-59c8784a5425">Erste Schritte in XQuery gehen sehr schön  
 mit der Query Konsole auf dem Marklogic Server (Port 8000).
-Hat man parallel auch noch oXygen Editor offen, kann man die Testergebnisse aus der Konsole direkt in ein XQuery Server Skript packen.</p> |   |                                                    Rejected by , .       <section id="1af0536e-84c8-43db-9382-7c0ba4ce268ed7e7"><title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title><p id="5fdff6dd-6c8a-467c-880d-33c88f7de0ded6e9">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:[[xe1:Programmierkonstrukte;xe2:Schleifen - for]]</p><pre id="85e17ddc-a11d-40a1-8c6a-c294d3f1b7fad7e12" xml:space="preserve">(doc())[position() lt 11]</pre><p id="b3785b18-f654-4483-85a6-bdbb21caa0e1d6e13">Die Zahlen von 1 bis 100 mit:</p><pre id="095a626d-6d33-49ef-a2b7-735df5ceebbcd7e16" xml:space="preserve">(for $i in (1 to 100) return $i)</pre><p id="7558c943-b4af-4b14-acf0-fc84efcebb90d6e17">Wenn man diese beide Anweisungen untereinander in die Konsole
+Hat man parallel auch noch oXygen Editor offen, kann man die Testergebnisse aus der Konsole direkt in ein XQuery Server Skript packen.</p> |   |                                                    Rejected by , .       <section id="213e4ae4-664b-4811-ae84-67134ab77ffbd7e7"><title id="fa1956ff-e468-4fb8-99dc-1a7a8f773707d6e7">Schleifen</title><p id="5fdff6dd-6c8a-467c-880d-33c88f7de0ded6e9">Die ersten 10 Dokumente auf dem Server bekommt man z.B. mit:[[xe1:Programmierkonstrukte;xe2:Schleifen - for]]</p><pre id="f6576ee3-9294-47fd-adf7-70f1c119505ed7e12" xml:space="preserve">(doc())[position() lt 11]</pre><p id="b3785b18-f654-4483-85a6-bdbb21caa0e1d6e13">Die Zahlen von 1 bis 100 mit:</p><pre id="a8dc4a91-51e8-40ad-92fa-b02bf73b2b34d7e16" xml:space="preserve">(for $i in (1 to 100) return $i)</pre><p id="7558c943-b4af-4b14-acf0-fc84efcebb90d6e17">Wenn man diese beide Anweisungen untereinander in die Konsole
 schreibt bekommt man einen Fehler. Trennt man sie mit einem 
-Komma - ein Tupel wird erzeugt - dann klappt es.</p> |   |                                                    Rejected by , .       </section><section id="216a1d77-d65b-437e-abbb-e75db6d06daed7e21"><title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title><p id="68e15e0c-efc5-472f-87fe-4d2dd4352485d6e22">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
-folgendermassen aus [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-insert*Doku zu xdmp:documen-insert Funktion auf den MarkLogic Webseiten]]:[[xe1:Programmierkonstrukte;xe2:DB insert]]</p><pre id="324b89be-5e74-4675-85cd-c2ad0e645f14d7e26" xml:space="preserve">xdmp:document-insert(
+Komma - ein Tupel wird erzeugt - dann klappt es.</p> |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       </section><section id="67cb8942-2ee1-40bc-bc17-334b676f701fd7e21"><title id="0bbb962d-b38e-431a-855a-294425a5a016d6e20">Dokumente in der DB anlegen</title><p id="68e15e0c-efc5-472f-87fe-4d2dd4352485d6e22">Der Befehl zum Anlegen eines Dokuments in der Marklogic DB sieht
+folgendermassen aus [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-insert*Doku zu xdmp:documen-insert Funktion auf den MarkLogic Webseiten]]:[[xe1:Programmierkonstrukte;xe2:DB insert]]</p><pre id="363f9487-3cd6-41b4-806a-91aefff5beedd7e26" xml:space="preserve">xdmp:document-insert(
   "/alex-test/example-alex.xml",
   &lt;root&gt;Hier steht der Content&lt;/root&gt;, 
   &lt;options xmlns="xdmp:document-insert"&gt;  
@@ -11,7 +11,7 @@ folgendermassen aus [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-
       map:map() =&gt; map:with("valid-start", "2014-06-03T14:13:05.472585-07:00")
       =&gt; map:with("valid-end", "9999-12-31T11:59:59Z")
       }&lt;/metadata&gt;
-  &lt;/options&gt;)</pre><p id="0db3e46f-54fa-4858-b85d-ad36ded2bf2ad6e26">Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p><pre id="571027b9-65e5-4c9f-9249-67c88a219bc1d7e30" xml:space="preserve">(for $i in (1 to 10) return 
+  &lt;/options&gt;)</pre><p id="0db3e46f-54fa-4858-b85d-ad36ded2bf2ad6e26">Packt man diese Instruktion in die for-Schleife oben, dann sieht das Konstrukt so aus:</p><pre id="351bba63-f5c2-4d03-a720-6675dac50629d7e30" xml:space="preserve">(for $i in (1 to 10) return 
   xdmp:document-insert(
   concat("/alex-test/example-alex-",$i,".xml"),
   &lt;root&gt;Hier steht der Content {$i}&lt;/root&gt;, 
@@ -22,7 +22,7 @@ folgendermassen aus [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-
       }&lt;/metadata&gt;
   &lt;/options&gt;)
 )</pre><p id="ccd162ef-82c4-45f2-8a4d-a72e51647514d6e30">Dokumente kann man einer Collection[[xe1:Programmierkonstrukte;xe2:DB Collection]] zuweisen, um sie leichter finden und auswerten
-zu können. Das geht mit dem folgenden Befehl [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-add-collections*Dokumentation zur xdmp:document-add-collections Funktion auf den MarkLogic Webseiten]] und diesem Schnippsel:</p><pre id="3ba9354c-cb7a-4233-a35d-c46bc242019dd7e34" xml:space="preserve">let $root :=
+zu können. Das geht mit dem folgenden Befehl [[link]](Doku)[[fn:https://docs.marklogic.com/xdmp:document-add-collections*Dokumentation zur xdmp:document-add-collections Funktion auf den MarkLogic Webseiten]] und diesem Schnippsel:</p><pre id="ed0b6a78-3ad7-4d7f-9b4d-136313367376d7e34" xml:space="preserve">let $root :=
 &lt;mein-test&gt;
    &lt;id&gt;{$id}&lt;/id&gt;
    &lt;content&gt;Hallo Welt!&lt;/content&gt;
@@ -37,6 +37,6 @@ $options :=
 $fname := concat('/',$id,'_','.xml'),
 $td := xdmp:document-insert($fname,$root,$options)
 return 
-  [...]</pre><p id="089d273b-a358-45a2-857e-181948135159d6e34">Die Dokumente, die mit der Collection [[code:alex-test]] getaggt wurden, kann man sich mit der folgenden Schleife ausgeben lassen:</p> |   |                                                    Rejected by , .       <pre id="5b11e6ea-4733-4e98-af5d-8722c3b3ad9bd7e39" xml:space="preserve">for $x in collection("/alex-test")
+  [...]</pre><p id="089d273b-a358-45a2-857e-181948135159d6e34">Die Dokumente, die mit der Collection [[code:alex-test]] getaggt wurden, kann man sich mit der folgenden Schleife ausgeben lassen:</p> |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <pre id="09e400e9-5ddd-423a-8a64-dadfba2505e5d7e39" xml:space="preserve">for $x in collection("/alex-test")
   return
     fn:document-uri($x)</pre></section></body></topic>
