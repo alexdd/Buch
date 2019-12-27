@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="b1719307-52da-4e1d-9aee-a3a6bb139d92">
+   <title id="5d677796-4ebf-49b1-85ba-45315312a0e4">GIT Kommandos</title>
+   <body id="0a19606e-0b70-4532-9eaa-bf50a84927d0">
+      <p id="c2e52685-e1e6-417d-8e94-2d5367436ccb">Die wichtigsten GIT Befehle - Rubrik "Note-to-self":</p>
+      <dl id="0254c40f-d216-4429-8b61-6e02985de2b6d7e6">
+         <dlhead id="6ddd30f4-72f7-49d2-ac2f-6ed85de307f6d7e7">
+            <dthd id="27d3b2d0-5757-4106-a0d3-a5f9ff642cc1d7e8">Beschreibung</dthd>
+            <ddhd id="caf2fa95-f0d4-407f-9add-1615e40790b3d7e10">Kommando / Beispiel</ddhd>
+         </dlhead>
+         <dlentry id="9e1bdbc4-7f40-4b2f-9f9a-2fa3d10ff86fd7e11">
+            <dt id="727f45d1-06ed-4261-9b59-e8c7e151c04fd7e13">Bestehendes GIT Repository clonen</dt>
+            <dd id="7d73e045-abf4-4b5e-8656-3e9bda589a09d7e15">
+               <pre id="3ad78359-99f2-4d66-ae19-6854001e7f38d7e16" xml:space="preserve">git clone https://git.tekturcms.de/tekturcms/tektur.git</pre>
+               <note id="04e5ee83-f620-4900-8cb8-d5457b20b331d7e18">
+                  <p id="a77f1f2e-fef1-4257-9b1e-69ef738760b7d7e20">Wenn man sich auf der Kommandozeile bewegt, dann kann es sein, dass man keinen Zugriff auf den HTTP Endpoint von GutHub hat, auf der GitHub Website kann man sich auch die URL für die SSH Verbindung geben lassen.</p>
+                  <fig id="e41fdf0f-8138-44e0-83ab-9f94e4f5dd05d7e21">
+                     <image href="images/clone_59.png"/>
+                  </fig>
+               </note>
+            </dd>
+         </dlentry>
+         <dlentry id="5d0ce17a-1d58-49a1-ad68-3e5e1dfae3f4d7e23">
+            <dt id="b3a8493e-6e02-42f0-8906-ecb792dcb1e8d7e24">GIT Repository clonen und alle GIT Submodule gleichzeitig clonen</dt>
+            <dd id="4768e6f0-e5eb-47ed-8334-c8f3a72ae645d7e26">
+               <pre id="327310aa-c238-4f2a-9712-e20c27391579d7e27" xml:space="preserve">git clone --recurse-submodules git://github.com/foo/bar.git</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="0fe7fdfb-4228-454f-8d1d-a1207f302732d7e29">
+            <dt id="4d3a0607-f7c2-480f-a0d8-f970b8a8fe97d7e30">Veränderung einer Datei zum GIT Tracking hinzufügen, damit diese beim nächsten Commit erfasst wird</dt>
+            <dd id="e82b5111-07d7-488a-88cc-6421341e2aacd7e32">
+               <pre id="fdfc033d-d72e-4ff1-b7d1-73a443e29a3fd7e33" xml:space="preserve">git add pfad/im/git/projekt/zur/datei.txt</pre>
+               <p id="6e75a93b-887b-40f0-a831-b27fff50eda3d7e35">Wildcards funktionieren auch</p>
+               <pre id="0d1b9408-dba8-4c1c-a8c8-9d8f001ee80dd7e37" xml:space="preserve">git add *</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="985d5533-98ed-4154-bf7c-98212e8535a5d7e39">
+            <dt id="6fac4c27-135e-4c7e-8ca3-fe97281a2c7ad7e40">Alle Veränderungen in das lokale, geklonte Repository einchecken</dt>
+            <dd id="9b21c106-97dd-4940-8a1d-b70d7dcd437fd7e42">
+               <pre id="68722de4-2b6d-4506-bf11-058719aa8c6fd7e43" xml:space="preserve">git commit -m "Form validation added”</pre>
+               <p id="df72ac08-83e0-4d23-aa16-df9cd205e310d7e45">ohne die Dateien vorher explizit per [[code:add] zu registrieren</p>
+               <pre id="3fc1cba5-bd3d-4938-8932-5d6f21d5259ad7e47" xml:space="preserve">git commit -a -m "Form Validation added"</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="8c360d68-0746-4224-899c-788e5c6f43bcd7e49">
+            <dt id="8c476bbe-a79a-4716-a2b7-062d013a980ed7e50">Alle vorhandenen Branches im Remote Repository holen</dt>
+            <dd id="a7f28854-2cab-4b93-813a-65612bfea9f7d7e52">
+               <pre id="6dd846a3-743a-435e-b753-0279fd75a870d7e53" xml:space="preserve">git fetch</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="ac85c93c-254e-4100-b8ad-287ab257df8bd7e55">
+            <dt id="01f10bfa-25de-4606-848d-a040fb4fcd61d7e56">Einen bestimmten Branch auschecken</dt>
+            <dd id="6f1ade4e-e1ad-4d00-96e3-8ee5bdcfb041d7e58">
+               <pre id="5ea50dd2-a652-4fbb-af4d-7bbfd04aeb11d7e59" xml:space="preserve">git checkout "TEKTUR-experimental-branch"</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="32210f91-9c10-4c6c-a1aa-00efdf0bd42ad7e61">
+            <dt id="09b37ea6-6813-4d05-943c-4808fb25831dd7e62">Einen Branch anlegen</dt>
+            <dd id="0f4af354-f721-4085-98aa-dee500b7033ad7e64">
+               <pre id="3d3478a1-3b11-4030-ace7-dd23f52f87f8d7e65" xml:space="preserve">git branch "TEKTUR-experimental-branch"</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="337def31-0de7-43c3-8f74-2138f57fb139d7e67">
+            <dt id="77ffefe3-106d-42df-987c-73051715a7bbd7e68">Alle vorhanden Branches auflisten</dt>
+            <dd id="675fb78a-5b2b-4afe-9f9f-20a041cadc02d7e70">
+               <pre id="b3aa49c6-6f00-4f27-bc88-f6e8e917464dd7e71" xml:space="preserve">git branch</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="7bd29369-9d7b-46da-9713-6fcd5dca8630d7e73">
+            <dt id="4a090ff2-f122-4acf-b4d1-02eb735fff37d7e74">Lokale Änderungen auf den Remote Branch pushen</dt>
+            <dd id="07a499c4-f9f3-4fde-b578-aaf43af3e5d6d7e76">
+               <pre id="b0e95d66-d77f-4f6d-afac-6b2dbb2d1facd7e77" xml:space="preserve">git push origin "TEKTUR-experimental-branch"</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="ac7b9ee6-f50c-49cc-bc87-93fb5571ee9ed7e79">
+            <dt id="461f5021-ad4e-4725-abd9-076d89165a14d7e80">Pull Request auf GitHub anlegen</dt>
+            <dd id="45b71079-8cc1-4713-886c-2977b1e5f64dd7e82">
+               <fig id="4425dabc-1b19-4737-ae46-61a730254664d7e83">
+                  <image href="images/pr_60.png"/>
+               </fig>
+            </dd>
+         </dlentry>
+         <dlentry id="39a371c3-3235-4f8a-b250-c280d9cc26fed7e86">
+            <dt id="9ca59cd0-ae23-4034-abf3-2cf6e27f78d0d7e87">Den Pull Request auf einen bestimmten Base-Branch beziehen</dt>
+            <dd id="ac9ddeb4-1b3a-4309-8ba8-ed206290dde5d7e89">
+               <fig id="d254ffe8-ee84-4218-8a34-d67de2fe1e58d7e90">
+                  <image href="images/compare_61.png"/>
+               </fig>
+            </dd>
+         </dlentry>
+         <dlentry id="bb7738fd-e167-4450-9d41-88ceb1bcce9fd7e92">
+            <dt id="6672ede6-a5e8-4e4e-8b84-8dff3cd2efc7d7e93">Zum Vorgänger eines beliebigen Commits wechseln</dt>
+            <dd id="cebd76cb-7861-4841-8658-9a7c4ea555f2d7e95">
+               <pre id="774ae04f-f3db-46be-91c8-562ddf67ed2cd7e96" xml:space="preserve">git checkout '67b7474a773c4d6f76dc0915b290400b313c0bf5^'</pre>
+               <p id="8c0ca85d-6a9b-4b38-bc8c-2000d8dd2758d7e98">Hier ist das Dach-Zeichen wichtig, das angibt, dass der vorherige Commit ausgecheckt werden soll</p>
+            </dd>
+         </dlentry>
+         <dlentry id="89fb95a2-d4f6-43ea-9ffa-75cf3aead95ad7e100">
+            <dt id="29da953a-4627-48c3-a8f9-fbe7cb339021d7e101">Einen Commit rückgängig machen</dt>
+            <dd id="934406be-18ea-4d57-b544-603df548bd81d7e103">
+               <pre id="93b2e158-58ef-450e-81a4-68c2032327bdd7e104" xml:space="preserve">git revert '67b74'</pre>
+               <p id="75afe606-3628-4fe9-98ae-b3cd2aee9312d7e106">[[code:git revert]] erzeugt einen neuen Commit, der den angegeben Commit rückgängig macht </p>
+            </dd>
+         </dlentry>
+         <dlentry id="a6ac146b-bf9c-4bc7-b764-de6dbee4f429d7e108">
+            <dt id="dcbe7134-8027-45f8-b3e9-ed8ba89b821ad7e109">Ausgecheckten Branch mit einem anderen Branch mergen</dt>
+            <dd id="451939b2-b3c7-45d2-b26c-1a2263533c98d7e111">
+               <pre id="75afc5ac-2d1d-49ea-85b4-9defa405bc70d7e112" xml:space="preserve">git merge experimental</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="b2d7478a-c4d8-4fed-81a1-a2e6e969b2a7d7e114">
+            <dt id="3f7337d9-b499-4c9c-a71c-80eca3864cc3d7e115">Grafisches Tool starten</dt>
+            <dd id="01944db3-4947-40e8-8a04-46a9e93d9c65d7e117">
+               <pre id="45081f1c-2e4c-4bf3-8c5c-425766cf16c9d7e118" xml:space="preserve">gitk</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="213e9239-0625-4874-a729-27c7bac0c5c9d7e120">
+            <dt id="d4510b41-5922-4572-bdb9-2621afed6c1dd7e121">Lokale Änderungen rückgängig machen</dt>
+            <dd id="a5bfc313-5fc6-4591-bffd-f9ac51814773d7e123">
+               <pre id="a2039553-32a0-4715-89e3-a0fb7a2cabf9d7e124" xml:space="preserve">git stash</pre>
+            </dd>
+         </dlentry>
+         <dlentry id="c10b98cc-e6cd-4324-a004-128b525c5a7ed7e126">
+            <dt id="bd0f1760-6181-420a-ba2c-469d9e1f47d3d7e127">Auf Version des Git Repos auf dem Server zurücksetzen</dt>
+            <dd id="f7921e51-742f-4218-a772-30ca98db75bad7e129">
+               <pre id="08602a3c-377f-4b83-922b-5259236c2474d7e130" xml:space="preserve">git reset --hard origin/master</pre>
+            </dd>
+         </dlentry>
+      </dl>
+   </body>
+</topic>

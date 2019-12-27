@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="8c00dbb9-4be9-4478-ac36-02afe27d44d7">
+   <title id="90733aa1-f925-405b-971f-996641c3c554">Technical Skills</title>
+   <body id="96e71aa0-82c0-4331-9b0d-4465c4f68e4d">
+      <section id="fc7ae436-fc56-47b6-b14f-e82a0fff2911d7e4">
+         <title id="a359191b-2360-4f7a-a719-c91e67c7555ad7e5">Software Development</title>
+         <table id="d870f453-063d-42ba-901a-7414b59e2179d7e7" pgwide="1" frame="all">
+            <title id="a8070c2b-758d-4f54-a81b-1ffbec93b712d7e8">Standards</title>
+            <tgroup id="1737156e-7a19-48f5-833f-25cd3e7ea4d0d7e10" cols="3">
+               <colspec id="870133d0-9b21-41dd-9a68-c6375b0f9a05d7e11" colwidth="" colname="col0"/>
+               <colspec id="7bc6494c-f804-4a61-8fef-b6acedabd807d7e12" colwidth="" colname="col1"/>
+               <colspec id="7d765285-bce5-45fe-8446-a7dbe92c4963d7e13" colwidth="" colname="col2"/>
+               <thead id="1a822f49-d6ac-4bd5-babc-6c86dfb35362d7e14">
+                  <row id="7acd5364-196b-4e43-b86f-50dfc0298026d7e15">
+                     <entry id="96e7912a-c237-421b-ab06-eefd1bf24911d7e16" colname="col0" width=""/>
+                     <entry id="47a34723-0db2-430a-82a1-ff5988857f74d7e17" colname="col1" width=""/>
+                     <entry id="28e596bc-2717-4abb-87ba-70adf2f70f6dd7e18" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="010bc0f3-fb34-46a3-ba78-eb779fc74f45d7e19">
+                  <row id="f99cba06-751b-478f-bf7a-c148a41555c5d7e20">
+                     <entry id="2d2c67ca-dc11-4447-b599-166663e20d2dd7e21" colname="col0" width="">
+                        <p id="f2259906-b1b8-4b93-8b8e-39eb64b4cbcbd7e22">XML, XSLT, XQuery, XPath, XSpec, Schematron[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="a2bae55b-de85-4257-aed1-cf615ba04b42d7e24" colname="col1" width="">
+                        <p id="c12aaf2c-f673-4897-84c5-82e93b0c51c5d7e25">HTML5, XHTML, XSL-FO, CSS</p>
+                     </entry>
+                     <entry id="cbf7e7a7-8bd3-42e6-a1fb-deaaf68faa8ed7e27" colname="col2" width="">
+                        <p id="1230eadd-c231-4431-8da1-0a3f71c9ccbfd7e28">JSON</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="fae06bb1-f833-4b36-b33a-d20182b58e09d7e30" pgwide="1" frame="all">
+            <title id="925a84af-6e79-4cdb-a92a-b67a31793444d7e31">Programming</title>
+            <tgroup id="ce35350f-21b8-4a5d-a923-6df37577a298d7e33" cols="3">
+               <colspec id="e3232933-9bff-453a-924c-0ab5d79eb615d7e34" colwidth="" colname="col0"/>
+               <colspec id="7a562d7e-bb11-4299-b6ff-ea6ad5583912d7e35" colwidth="" colname="col1"/>
+               <colspec id="43295d35-60d7-43d2-ab9a-95aceb78e974d7e36" colwidth="" colname="col2"/>
+               <thead id="c3033e65-3e57-40c8-b931-c9de320557b5d7e37">
+                  <row id="14fd2866-7a01-4c40-a35c-4b23cd380787d7e38">
+                     <entry id="22d923ff-6074-4612-8817-6432dac7deccd7e39" colname="col0" width=""/>
+                     <entry id="a497122b-810a-46e8-b2b0-62b9b6ee3e5bd7e40" colname="col1" width=""/>
+                     <entry id="3c851a65-2839-490a-8baa-b2b45c18ee37d7e41" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="7466cb47-bf2e-4690-a118-1731f36f367ad7e42">
+                  <row id="e2fc9a03-d32e-4fa6-a2d8-00fe70dc7d00d7e43">
+                     <entry id="0ff066a7-dbdc-4d26-b0f2-77fb76b60852d7e44" colname="col0" width="">
+                        <p id="c68983ab-b938-444a-809e-43f946d316bbd7e45">Python, Django, NodeJS[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="ab450e5c-13ef-47a8-9d4e-dd5c80db319ad7e47" colname="col1" width="">
+                        <p id="145bf103-6974-4a74-93ac-bca4e15c1cc0d7e48">Javascript, jQuery,[[br]] CKEditor</p>
+                     </entry>
+                     <entry id="fc026e50-6a41-45ee-a03a-51c592bebf95d7e50" colname="col2" width="">
+                        <p id="48bd8ec5-41dc-4dbb-9a6c-d183edca381fd7e51">SQL</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="a6c4948e-f84f-4106-ac20-4420ca89db84d7e53" pgwide="1" frame="all">
+            <title id="5905499d-88e3-4141-be4a-f4309e24306bd7e54">Formats</title>
+            <tgroup id="3c7a5fe0-d8d8-4a6d-b4d8-30af1d913218d7e56" cols="3">
+               <colspec id="af15ded8-8292-4470-846c-237df4efb434d7e57" colwidth="" colname="col0"/>
+               <colspec id="72a70f09-ad51-4fee-9964-bb5383ce764cd7e58" colwidth="" colname="col1"/>
+               <colspec id="f0f7a81b-3b8a-47b7-88c5-a8765662da8cd7e59" colwidth="" colname="col2"/>
+               <thead id="ed7a7acb-06e7-4d2d-821e-2f5500a9ae6bd7e60">
+                  <row id="d3c7970a-cde2-46a6-808d-e0f513d4b0dfd7e61">
+                     <entry id="6a97aa13-eee6-4b3f-9b9e-396120d337bad7e62" colname="col0" width=""/>
+                     <entry id="1033d190-9fae-4192-ba27-48f92515c970d7e63" colname="col1" width=""/>
+                     <entry id="b5876e2c-52ce-4549-a157-8a16bda95fe9d7e64" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="a434ce51-29e4-4cfe-bd6f-b7156ae15161d7e65">
+                  <row id="97748d4c-ffef-4e96-b2df-c2cfb4d1d471d7e66">
+                     <entry id="e112f776-101e-4107-ae84-9d8b281b5691d7e67" colname="col0" width="">
+                        <p id="f2f47754-a42d-415d-bb5c-c5b5801df2c9d7e68">Docbook, DITA, PI-MOD</p>
+                     </entry>
+                     <entry id="36686f64-7c3d-4996-ad61-945b15b8c28fd7e70" colname="col1" width="">
+                        <p id="de8a9389-31ff-4826-ae8d-aba6f255b176d7e71">S1000D SGML, CALS</p>
+                     </entry>
+                     <entry id="17ead9f8-9d93-48da-b2ef-f05d9bd8f985d7e73" colname="col2" width="">
+                        <p id="995ff7f1-3d32-4a3b-99c0-35d6c17cc829d7e74">DTD, XSD, RelaxNG</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="8181bad0-ba53-4423-ac0e-a42d8840ed32d7e76" pgwide="1" frame="all">
+            <title id="74ac4670-3ca8-447f-9c82-45d756443dadd7e77">Enterprise Development</title>
+            <tgroup id="aca3aaa8-db2c-4c22-ad3b-22738e16a0fcd7e79" cols="3">
+               <colspec id="119eb759-0f3b-4984-833f-c8c80d1e253ad7e80" colwidth="" colname="col0"/>
+               <colspec id="4a84172f-995c-487d-bddb-d928bd815e32d7e81" colwidth="" colname="col1"/>
+               <colspec id="32813e4f-3f4f-4150-acec-e0e7754d1fd1d7e82" colwidth="" colname="col2"/>
+               <thead id="32134e86-f7b2-4afe-801d-2e0016d40609d7e83">
+                  <row id="4aee0d9b-713d-4c0a-8ecb-00e4f54ebf33d7e84">
+                     <entry id="c9eaf648-2b53-4eba-8fd7-25958fa24beed7e85" colname="col0" width=""/>
+                     <entry id="5d3afee5-8f47-41de-85c9-b31a3f3894e9d7e86" colname="col1" width=""/>
+                     <entry id="4217de8f-9f7b-42b4-84c2-09ea98480a90d7e87" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="6e77c308-165d-45b8-9213-a63a1dbecb4dd7e88">
+                  <row id="d2bd57a3-d3a5-4d95-ae0b-1fc86339b1f2d7e89">
+                     <entry id="97cf1774-39f6-443e-af9a-fa168d8c32b8d7e90" colname="col0" width="">
+                        <p id="33ff9fcb-a3a1-40da-b7e6-423e32b21475d7e91">Java, J2ME</p>
+                     </entry>
+                     <entry id="425b1737-b713-4e4d-b15f-1cd135cd6d3cd7e93" colname="col1" width="">
+                        <p id="7baafa63-fb2b-488f-acf4-d186691f594dd7e94">REST, SOAP</p>
+                     </entry>
+                     <entry id="8968628b-ddf7-40ad-8117-4eb87b145cecd7e96" colname="col2" width="">
+                        <p id="0403be95-8a06-454f-a1ba-cdb7e3d37808d7e97">J2EE, OSGi</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="5d7b4000-68a8-4d99-a382-faebb38c8a21d7e99" pgwide="1" frame="all">
+            <title id="0059dee7-c291-4240-bb59-50369eacb74ed7e100">Modelling</title>
+            <tgroup id="5c521d4b-4121-4a47-8a41-8e7be81b9311d7e102" cols="3">
+               <colspec id="87f09720-9df2-4734-a8d3-87b9cfb05c0fd7e103" colwidth="" colname="col0"/>
+               <colspec id="b2c6b0f9-ecd8-4398-be8f-871b2a7c8d31d7e104" colwidth="" colname="col1"/>
+               <colspec id="16973c83-dfed-4dee-96a0-0473c5403518d7e105" colwidth="" colname="col2"/>
+               <thead id="1df0a822-0680-4e53-81a8-5c7692deb536d7e106">
+                  <row id="215c93b5-c012-4e2c-a76d-3533720c8273d7e107">
+                     <entry id="94fdba4d-993e-4b79-91be-d33bdcc8733ed7e108" colname="col0" width=""/>
+                     <entry id="36a35648-5464-42b6-941a-728a6231daacd7e109" colname="col1" width=""/>
+                     <entry id="66a0b5c2-2f56-4951-8fc0-adf476400dd6d7e110" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="2ea8aeca-3722-461f-b124-251cbb52ce54d7e111">
+                  <row id="499d83ba-59e3-4d7a-b2df-781e722f3326d7e112">
+                     <entry id="a1b7bb60-2ba0-4cba-b712-5645e560e28ad7e113" colname="col0" width="">
+                        <p id="290e29f4-24c3-47dc-a461-dd6dfca14e92d7e114">OOA / OOD</p>
+                     </entry>
+                     <entry id="9f8c4245-61ca-4047-a8a0-37f012f9a0bcd7e116" colname="col1" width="">
+                        <p id="3b8aa93c-7d4f-444f-8d75-088a11383627d7e117">UML</p>
+                     </entry>
+                     <entry id="b9e88445-4833-4d81-a6b9-9100be3c19f4d7e119" colname="col2" width="">
+                        <p id="cfd4be4d-7b72-4948-b4e5-55d1a519021bd7e120">BPMN[[cellcol:#9DE093]]</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="ba852f3e-ea72-4c6c-be83-150282ff04a2d7e122" pgwide="1" frame="all">
+            <title id="490f21d2-f6ad-4f5d-baae-b53656e0f9e8d7e123">Practices</title>
+            <tgroup id="90f92ea4-8f50-4be9-92e8-dfee484fa763d7e125" cols="3">
+               <colspec id="33c86425-e4c3-4698-af28-d5f08192da4ed7e126" colwidth="" colname="col0"/>
+               <colspec id="b35d6df1-fb31-460e-b10e-5303943b0781d7e127" colwidth="" colname="col1"/>
+               <colspec id="1e7e1fe2-c6ed-4c26-b424-7d408b631fbed7e128" colwidth="" colname="col2"/>
+               <thead id="dd76d221-2a86-41c7-8509-f2b788b6cbbfd7e129">
+                  <row id="c1eb7839-3c76-4b68-a278-b428ec2e6e08d7e130">
+                     <entry id="b6f19584-d9a2-41f7-8707-7621a2bc7a5cd7e131" colname="col0" width=""/>
+                     <entry id="3d0eafbb-acfa-4371-96a8-ce906e52f070d7e132" colname="col1" width=""/>
+                     <entry id="c4972ded-a9fe-4b13-8318-d53aac0c2483d7e133" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="6410cd4b-2fe7-4549-9e07-e8fe42bcbae3d7e134">
+                  <row id="d98dc520-d78c-4173-a7b6-92819be6f550d7e135">
+                     <entry id="1aae9dfe-a740-48c7-bcf7-838340de4cc6d7e136" colname="col0" width="">
+                        <p id="02eb221b-4e45-467c-a556-fced0dda7e5dd7e137">Agile / SCRUM</p>
+                     </entry>
+                     <entry id="7c1a08db-020a-4162-8435-2063202d30a4d7e139" colname="col1" width="">
+                        <p id="b1323196-cdc3-437c-a751-3e59b021b3d7d7e140">Declarative Programming</p>
+                     </entry>
+                     <entry id="9b0d8318-83f5-4006-9314-859db35b61f6d7e142" colname="col2" width="">
+                        <p id="ecb5bc7f-551b-4e6c-92ca-b1a4ece7c7c2d7e143">OOP, [[br]]Functional[[br]]Programming</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="193ca814-75a5-4c59-bf31-2eae2e20fc50d7e143" pgwide="1" frame="all">
+            <title id="b61b13ee-7cf0-479c-9e22-31c6724eacadd7e146">Tools</title>
+            <tgroup id="4a644a4d-f994-43e5-ac42-38a81d380cd0d7e148" cols="3">
+               <colspec id="7d8b1eca-dbbc-45e0-875f-828cdb8a4051d7e149" colwidth="" colname="col0"/>
+               <colspec id="25bf9d84-305e-4a03-ade8-336d513d1856d7e150" colwidth="" colname="col1"/>
+               <colspec id="d948ce6d-cfae-43a3-9325-3f9dae24007dd7e151" colwidth="" colname="col2"/>
+               <thead id="fef970dd-506b-4453-a7ed-9fc6de4a7900d7e152">
+                  <row id="96a9689d-aea6-44ff-9802-d9b7c6eeacecd7e153">
+                     <entry id="248b6b44-a7d4-4767-b60f-b3b1a19f5ff4d7e154" colname="col0" width=""/>
+                     <entry id="61dd1736-a61a-4521-b11b-a26a83733be8d7e155" colname="col1" width=""/>
+                     <entry id="740e34c3-bfc4-4929-a962-520c827540f1d7e156" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="89725c70-a9cd-4e54-b5ae-3bd566eae2f1d7e157">
+                  <row id="cb562215-f6d4-4c94-96ba-b01ba201810fd7e158">
+                     <entry id="3ec0ff89-662c-4c40-8e75-c49dd8a389f6d7e159" colname="col0" width="">
+                        <p id="21a8fbe6-d9e5-491a-bbbd-1b9bd2096e0dd7e158">GIT, SVN</p>
+                     </entry>
+                     <entry id="d668bc48-0ab1-4ad1-a438-cf1d65628a84d7e162" colname="col1" width="">
+                        <p id="7f2fa5d9-0775-4f37-966e-ebf4812c8417d7e161">Eclipse,[[br]] oXygen</p>
+                     </entry>
+                     <entry id="d114fd78-d98f-43bf-8b67-94bef968a7e5d7e165" colname="col2" width="">
+                        <p id="da79c9fc-fe92-4662-8537-1f86c6bcd8c6d7e164">Jira,[[br]] Confluence</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="67ddc3ee-4c11-4c66-b169-ed9bdc2c3385d7e168">
+         <title id="58b816b7-ba08-4764-954a-ad5c47e9a633d7e169">Applications</title>
+         <table id="303199b8-0346-4b3b-8cc4-8be9b48f6c0ed7e171" pgwide="1" frame="all">
+            <title id="074e88fa-6a02-4dd3-8828-2d0356d7cf0bd7e172">Technical Documentation</title>
+            <tgroup id="6df8565d-4194-46f0-bd82-936ef9b9acc1d7e174" cols="3">
+               <colspec id="970a3d4f-c7d9-4fbc-ac4d-e3c9357fbaacd7e175" colwidth="" colname="col0"/>
+               <colspec id="9b6c657b-89f0-4f5b-be63-604816b0cdbcd7e176" colwidth="" colname="col1"/>
+               <colspec id="2f326a9d-d375-4bc0-8adc-a30cec0f7c71d7e177" colwidth="" colname="col2"/>
+               <thead id="a3a584ff-e4c2-4a5e-ae4f-6941dd921b75d7e178">
+                  <row id="152a0fa0-d26e-441c-aa0b-c02bbe8cbe2bd7e179">
+                     <entry id="e06a6f5d-7744-4946-afad-cb6dffe2708ed7e180" colname="col0" width=""/>
+                     <entry id="6f248839-e919-403f-bf80-19a3bc782235d7e181" colname="col1" width=""/>
+                     <entry id="d6b561b6-1536-4889-b549-4669bc25ba5bd7e182" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="0d5aaf3d-2d70-4be5-9c53-0d7a07eeba1ed7e183">
+                  <row id="24cce38d-6f00-493e-ac8f-dde23307f35dd7e184">
+                     <entry id="50a55355-45d8-4592-ac1a-09a5800e9c4ad7e185" colname="col0" width="">
+                        <p id="592eabf1-e83e-4c93-aaad-4169fad9ed57d7e186">Docufy COSIMA</p>
+                     </entry>
+                     <entry id="c4d3e73b-db49-477d-8d76-8682859ff62dd7e188" colname="col1" width="">
+                        <p id="14f3f119-ae63-411f-adf4-af32bbac5d2dd7e189">Ovidius TCToolbox</p>
+                     </entry>
+                     <entry id="cd650aab-2116-43df-8f15-17a624a8a99bd7e191" colname="col2" width="">
+                        <p id="56c70c47-b5e9-4aa4-8fc1-70ba4b2bb7e3d7e192">Docufy Machine Safety</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="c13108c8-8d97-4450-8ce4-ff1e5de211ecd7e194" pgwide="1" frame="all">
+            <title id="aa0353a3-a1ff-4347-aff2-cb8127f430c9d7e195">PDF Formatters</title>
+            <tgroup id="677e9f2c-4d8b-48e7-9770-c3184287e273d7e197" cols="3">
+               <colspec id="edb8507a-e7b6-4206-9a16-688e31cc7508d7e198" colwidth="" colname="col0"/>
+               <colspec id="255dfebb-c1a6-466c-9d6d-f7e2110373bcd7e199" colwidth="" colname="col1"/>
+               <colspec id="2b2f0867-26b1-4632-a968-3c24f892cb5fd7e200" colwidth="" colname="col2"/>
+               <thead id="ac7a45eb-28d1-4c1f-b0f0-a8fa9e741a6dd7e201">
+                  <row id="c0690c66-68fb-46b4-a89e-da2a56e3eb98d7e202">
+                     <entry id="308b61d8-c84e-4989-ad12-3f04b48239cbd7e203" colname="col0" width=""/>
+                     <entry id="5c2c55fd-eff0-48d3-acb8-f7c17dc65b1ed7e204" colname="col1" width=""/>
+                     <entry id="5e7cb707-2b14-48fa-90c6-2fb97a995b99d7e205" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="2b1cdec6-bc77-4799-ad0d-b73e33f27c20d7e206">
+                  <row id="d78fc1e3-8172-4501-bebc-81edb57e3ca1d7e207">
+                     <entry id="786bc3d2-8fc4-4e6a-9ef5-4feae6471772d7e208" colname="col0" width="">
+                        <p id="34d2daa9-bfd3-4940-bae8-2a12662d1f0ed7e209">AntennaHouse[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="c48452ea-85b9-4b03-81c4-6e290787132cd7e211" colname="col1" width="">
+                        <p id="339fe6bf-41c0-4a04-9f5b-f06e32f6fbc2d7e212">Apache FOP[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="af6102a2-c675-4aed-8fa2-448a4a8e7ab2d7e214" colname="col2" width="">
+                        <p id="669900f2-3a93-4e04-8a5c-fffb2326ba68d7e215">TopLeaf[[br]]Formatter</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="922017b5-4049-4103-9e6f-8d71c36b5c75d7e219" pgwide="1" frame="all">
+            <title id="397447c2-ee76-40be-936b-25bb465cbd07d7e218">BPMN Suites &amp; WCMS</title>
+            <tgroup id="973b94af-6af3-401f-88f0-0cae39a3d96dd7e220" cols="3">
+               <colspec id="7a282665-3b63-45db-b946-2099816a7db5d7e221" colwidth="" colname="col0"/>
+               <colspec id="f49ce955-5c66-4543-9191-de9ddffd1e5ed7e222" colwidth="" colname="col1"/>
+               <colspec id="a0b0557d-de17-48f4-9bda-d2bb884ba042d7e223" colwidth="" colname="col2"/>
+               <thead id="db963f8d-6b85-4103-a7e3-469f80acb341d7e224">
+                  <row id="a7b1d449-5153-41c8-a0d3-06d53965433dd7e225">
+                     <entry id="c5d9c3fd-b60c-400b-9558-02c5af30b421d7e226" colname="col0" width=""/>
+                     <entry id="268bd7c6-864c-4ab6-a585-a3b99370160cd7e227" colname="col1" width=""/>
+                     <entry id="ea7adf1f-12c0-4d5b-9a64-d8a611d791b5d7e228" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="10fe200f-66d9-4fbd-8649-8e698632c541d7e229">
+                  <row id="94a877bb-0824-4f30-b4ff-2b8c63c13277d7e230">
+                     <entry id="a85335c2-5217-4752-8e08-a4607c22c149d7e231" colname="col0" width="">
+                        <p id="698c0fef-3b48-47f9-be14-e24797106ce9d7e234">Adobe[[br]]LiveCycle[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="3c195346-a3fa-4253-90ca-004da1a08463d7e234" colname="col1" width="">
+                        <p id="f2bcdd84-4cc6-4176-a652-e65e4c6f84a8d7e237">Camunda[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="4e71c723-f7ae-48fd-9fb5-41332add1cf3d7e237" colname="col2" width="">
+                        <p id="cdf8e2e1-6423-44c2-abef-e3fa2a63f062d7e240">Zope, Plone</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="81ab5681-774d-4502-9e21-5ff441cc0d4fd7e240">
+         <title id="b4eb9f9f-e5e4-45c5-b523-aa4c72465412d7e243">Infrastructure</title>
+         <table id="9cf403a8-78a8-4ae2-a3b8-fbe7c5b31b2cd7e245" pgwide="1" frame="all">
+            <title id="ec6de325-3920-441d-87c5-b2ca1afe34bbd7e244">Databases</title>
+            <tgroup id="2ba5c34f-3fd6-4885-8f37-8b07a6685038d7e246" cols="3">
+               <colspec id="508f6519-da85-4c51-943a-dfa721bc4b42d7e247" colwidth="" colname="col0"/>
+               <colspec id="74c561fd-ed77-410f-a55d-a5508c066e8bd7e248" colwidth="" colname="col1"/>
+               <colspec id="82233f67-a641-47e2-a82c-5a31ff5ca2aad7e249" colwidth="" colname="col2"/>
+               <thead id="ae3fcac5-1e71-492f-9ec0-a98b703a6545d7e250">
+                  <row id="747ae9fe-54d5-44d8-afdf-590979b0b8fbd7e251">
+                     <entry id="cb5e1b3a-7c19-44bb-86f2-251927807cf2d7e252" colname="col0" width=""/>
+                     <entry id="431389d4-260f-4cd9-8a3c-37fe29134372d7e253" colname="col1" width=""/>
+                     <entry id="2079fb9d-0148-4e12-86f9-d4e8571eaef0d7e254" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="3fd9f3bc-9b1d-4c54-82bc-635aad0a26bad7e255">
+                  <row id="c8e851fd-158f-4355-b345-b61d1ef43101d7e256">
+                     <entry id="305260b4-2863-4faf-93d5-0ab224c19f93d7e257" colname="col0" width="">
+                        <p id="ccdee1ec-d2f6-47f7-89ef-137c0deba49ed7e260">MongoDB[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="6a840702-5a3d-44bc-b245-e67e0705cbd2d7e260" colname="col1" width="">
+                        <p id="4fb62f0f-a322-433b-b5c5-50287d66df32d7e263">MarkLogic[[cellcol:#9DE093]]</p>
+                     </entry>
+                     <entry id="41f036e2-52c4-4091-aee0-2a77668f2becd7e263" colname="col2" width="">
+                        <p id="806b95f6-fd0c-4ce7-bdda-a4d67c40daa5d7e266">existDB</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="4816e8bf-210f-427f-8166-49608460bca8d7e268" pgwide="1" frame="all">
+            <title id="69a084c8-af2e-473b-802a-cbab329b058ad7e267">Server &amp; Search Engine</title>
+            <tgroup id="d26d6a58-7899-4305-b2fe-6932d9e46770d7e269" cols="3">
+               <colspec id="6de41ed3-5061-4c33-b621-3c6d4ff4ba56d7e270" colwidth="" colname="col0"/>
+               <colspec id="d1238c8f-558a-4207-87ab-5bc2dc37a1f6d7e271" colwidth="" colname="col1"/>
+               <colspec id="c1a88418-f46d-4c93-842c-26ab7caa34fdd7e272" colwidth="" colname="col2"/>
+               <thead id="f6456eb6-4e3b-4650-9a7b-3ef66a6352b5d7e273">
+                  <row id="39fc6287-3c35-42fc-a511-69a948a027ddd7e274">
+                     <entry id="1d0ae00e-a501-4643-b154-63fc078420a2d7e275" colname="col0" width=""/>
+                     <entry id="f32c52fc-c7be-44d3-b0c5-b9e20a1ac463d7e276" colname="col1" width=""/>
+                     <entry id="ed00d14d-9501-45a7-8f8a-2f1731746d5cd7e277" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="7f9ba614-e497-44f7-894b-f09c52f000bfd7e278">
+                  <row id="3b461c30-d998-482f-b87a-32356e56d4a2d7e279">
+                     <entry id="a42529a1-f0af-45cd-b662-eb78c33a983bd7e280" colname="col0" width="">
+                        <p id="15e0aece-c852-4026-aceb-8faa733a9161d7e283">Apache Solr</p>
+                     </entry>
+                     <entry id="0b280084-e33b-4285-a48e-7534769e485ad7e283" colname="col1" width="">
+                        <p id="c7edf1ae-0070-4a93-b870-85007aacc499d7e286">Apache HTTPD</p>
+                     </entry>
+                     <entry id="726602cb-e5c0-469a-a737-328e071dc3f7d7e286" colname="col2" width="">
+                        <p id="59a09694-87db-4b5a-a137-9b673c391c25d7e289">nginx</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <table id="3c5923f3-1eb1-47dd-8de2-b2e14b9dfe4bd7e291" pgwide="1" frame="all">
+            <title id="1a966a6c-7df5-49bf-a515-6e068905a053d7e290">Operating Systems</title>
+            <tgroup id="081d08f8-663b-476e-ab12-31768be10178d7e292" cols="3">
+               <colspec id="762e122e-e7f3-4110-8128-91a1e3972462d7e293" colwidth="" colname="col0"/>
+               <colspec id="8a2b0de5-6c17-47e3-a930-35775cfceb38d7e294" colwidth="" colname="col1"/>
+               <colspec id="04f54a87-09f8-4fa7-9c1b-e54729176690d7e295" colwidth="" colname="col2"/>
+               <thead id="b83816b1-6282-4a0d-abdf-92410c96a25bd7e296">
+                  <row id="5b20ee57-9426-4d47-8587-0dd240c78298d7e297">
+                     <entry id="21d9b6e8-e6fd-4874-b8d0-72696324a16ad7e298" colname="col0" width=""/>
+                     <entry id="d36f97b7-e2f3-4976-b82b-10e9c3d50ba0d7e299" colname="col1" width=""/>
+                     <entry id="043e1cad-67c4-4041-97c0-42dad7168015d7e300" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="279b3937-2c0c-4ccf-a049-95f071d41ccdd7e301">
+                  <row id="af9717c2-a03d-4c7e-b790-eafc7e3de9bfd7e302">
+                     <entry id="bd5f22c0-beb0-4e50-9817-c6ae282dfd03d7e303" colname="col0" width="">
+                        <p id="a3f213ad-6e20-413f-9f8b-1c4ae0f2b688d7e306">Windows</p>
+                     </entry>
+                     <entry id="61c05d85-712f-47c5-92a5-813afb130bb0d7e306" colname="col1" width="">
+                        <p id="d261d566-0527-4aee-a140-2c157c789664d7e309">Mac OS</p>
+                     </entry>
+                     <entry id="ebaf3ac8-ec8b-495e-9446-4b21c887b5d7d7e309" colname="col2" width="">
+                        <p id="0200b11b-c115-4487-8ffa-0c0d7b115c65d7e312">Linux</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+   </body>
+</topic>

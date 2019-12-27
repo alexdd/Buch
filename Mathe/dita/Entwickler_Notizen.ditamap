@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><map title="Mathe für Programmierer">
+   <topicmeta id="6a025e5e-95bd-4db7-bf52-b1e9ee8c265f">
+      <navtitle id="44be5dcd-d64a-4378-aa04-6108de86337d">kurz &amp; bündig</navtitle>
+      <shortdesc id="bc13e8da-cf0b-4a13-8121-d39a40f6cd78">Short Description</shortdesc>
+      <keywords id="322a2ae4-5a89-4832-8189-55203698a25a">
+         <keyword id="01e3b7f7-4362-4e46-95d7-5cf65ee1bd38">Programmierer</keyword>
+         <keyword id="8b7d5ec5-b9da-45fe-8f77-afc91ad900bb">Software-Entwickler</keyword>
+         <keyword id="929c01bf-2f1a-4513-9144-f7eac2db7e63">Mathematik</keyword>
+      </keywords>
+   </topicmeta>
+   <topicref id="c15a8d5c-03bc-4ee9-a04a-a123e0ce5d88" href="1_Intro.dita" navtitle="Intro"/>
+   <topicref id="9284a3b8-d0a1-4f81-a5ea-7d7c7a2fc7d4" href="2_Wahrscheinlichkeiten.dita" navtitle="Wahrscheinlichkeiten"/>
+   <topicref id="f5d404a3-b9b6-4332-a0be-869f881004bd" href="3_Abbildungen.dita" navtitle="Abbildungen"/>
+   <topicref id="88e9783e-8d7b-406d-afd6-bbb475e1fc8b" href="4_Bume.dita" navtitle="Bäume"><topicref id="611a8535-17d8-4325-a425-e37b169ccc3b" href="4_1_Vergleich_von_Bumen.dita" navtitle="Vergleich von Bäumen"/></topicref>
+   <topicref id="c4a6738a-9008-486d-8c85-a189f74aad56" href="5_Eigenschaften_von_Graphen.dita" navtitle="Eigenschaften von Graphen"><topicref id="49f6d3c3-a595-4e19-af05-0e49e1bc6812" href="5_1_Gleichwertigkeit_von_Graphen.dita" navtitle="Gleichwertigkeit von Graphen"/><topicref id="584bfa47-dade-4b81-915d-d974ea09ffd2" href="5_2_Hamiltonkreis_vs._Eulertour.dita" navtitle="Hamiltonkreis vs. Eulertour"/><topicref id="ca33f846-f8a6-4285-97d9-6d58dba9ea2d" href="5_3_Matchingprobleme.dita" navtitle="Matchingprobleme"/></topicref>
+   <topicref id="31c78791-2635-4687-885b-963984c6ba98" href="6_Lsen_von_Gleichungssystemen.dita" navtitle="Lösen von Gleichungssystemen"/>
+</map>

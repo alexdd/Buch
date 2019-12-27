@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="13e1939c-f812-4fde-b881-1a7c4dc1ad61">
+   <title id="7765c609-560c-4ad9-80e6-30ccf1190549">Modus vs. Tunnel Lösung</title>
+   <body id="b9469a1c-2d81-474e-bda6-22af1fb2d030">
+      <p id="ba080e3a-4b9b-413d-aecb-f1baa07f8c03">Als Entwickler wird man oft mit der Situation konfrontiert, dass es zur Lösung eines bestimmten Problems mehrere
+Möglichkeiten gibt und man eine davon auswählen muss.</p>
+      <p id="a89373da-ff22-4c2b-813c-bb06175e525bd7e6">Hier gilt es einen Trade-Off[[xe1:Trade-Off]] aus teils konkurrierenden Zielen zu finden, wie das folgende Beispiel zeigt:</p>
+      <pre id="80c26d2c-5223-4126-99e8-b075b82c1cfdd7e8" xml:space="preserve">&lt;konto nr="123"&gt;
+    &lt;inhaber&gt;alex&lt;/inhaber&gt;
+    &lt;vorgang&gt;456&lt;/vorgang&gt;
+    &lt;eintrag art="soll" datum="2019-05-06"&gt;20.56&lt;/eintrag&gt;
+    &lt;eintrag art="soll" datum="2019-02-21"&gt;4.73&lt;/eintrag&gt;
+    &lt;eintrag art="haben" datum="2019-01-14"&gt;1.68&lt;/eintrag&gt;
+    &lt;eintrag art="soll" datum="2019-09-17"&gt;6.45&lt;/eintrag&gt;
+    &lt;eintrag art="haben" datum="2019-01-03"&gt;12.38&lt;/eintrag&gt;
+    [...]
+&lt;/konto&gt;</pre>
+      <p id="693b5d6a-841b-4f4b-9c1c-d532c1458d02d7e13">Es gibt nun mehrere Möglichkeiten die Bilanz in zwei Dateien [[code:soll.xml]] und [[code:haben.xml]] aufzusplitten.</p>
+      <section id="0ecc850f-9729-4dc7-a833-3df76af7ac52d7e12">
+         <title id="cdeddfcc-a18e-4b8e-8184-19f0581b75a4d7e16">Schleife</title>
+         <pre id="65c6e20b-fc8d-4647-a211-6f97bb3f38f4d7e15" xml:space="preserve">&lt;xsl:template match="/"&gt;
+    &lt;xsl:result-document href="soll.xml"&gt;
+        &lt;konto nr="{@nr}"&gt;
+            &lt;inhaber&gt;&lt;xsl:value-of select="inhaber"/&gt;&lt;/inhaber&gt;
+            &lt;vorgang&gt;&lt;xsl:value-of select="vorgang"/&gt;&lt;/vorgang&gt;
+            &lt;xsl:for-each select="konto/eintrag"&gt;
+                &lt;xsl:if test="@art='soll'"&gt;
+                    &lt;xsl:copy-of select="."/&gt;
+                &lt;/xsl:if&gt;
+            &lt;/xsl:for-each&gt;
+        &lt;/konto&gt;
+    &lt;/xsl:result-document&gt;
+    &lt;xsl:result-document href="haben.xml"&gt;
+        [...]
+&lt;/xsl:template&gt;</pre>
+         <p id="11651e3b-715f-4ac1-9cf4-91f6ac877007d7e20">Hier werden die gemeinsamen Felder für das Konto [[code:&lt;inhaber&gt;]] und [[code:&lt;vorgang&gt;]] hartcodiert,
+was in dem einfachen Beispiel okay wäre. Sollte das XML Gerüst aber umfangreicher sein, dann 
+fällt diese Lösung offensichtlich aus. Abgesehen davon wollen wir ja Pull-Stylesheets[[xe1:Konzepte;xe2:Push vs. Pull]] vermeiden, vgl. 
+<xref href="5b73f348-0058-45e0-82f7-c3de72ec5d41"
+                  id="d819ed3f-23eb-4f79-badd-a6a7587eeaff"
+                  type="topic">Push vs. Pull Stylesheets</xref>.</p>
+      </section>
+      <section id="d5697b77-c83c-4660-8b21-15aea86e8bd0d7e22">
+         <title id="d627e5a3-2673-4960-81ea-a62df8328ca3d7e26">Tunnel Parameter</title>
+         <pre id="a876f956-21d7-42e1-9517-0d455c1b264bd7e25" xml:space="preserve">&lt;xsl:template match="/"&gt;
+    &lt;xsl:result-document href="soll.xml"&gt;
+        &lt;xsl:apply-templates&gt;
+            &lt;xsl:with-param name="is-soll" select="true()" tunnel="yes"/&gt;
+        &lt;/xsl:apply-templates&gt;
+    &lt;/xsl:result-document&gt;
+    &lt;xsl:result-document href="haben.xml"&gt;
+        &lt;xsl:apply-templates&gt;
+            &lt;xsl:with-param name="is-soll" select="false()" tunnel="yes"/&gt;
+        &lt;/xsl:apply-templates&gt;
+    &lt;/xsl:result-document&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match="node()|@*"&gt;
+    &lt;xsl:copy&gt;
+        &lt;xsl:apply-templates select="node()|@*"/&gt;
+    &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match="eintrag"&gt;
+    &lt;xsl:param name="is-soll" tunnel="yes"/&gt;
+    &lt;xsl:choose&gt;
+        &lt;xsl:when test="$is-soll and @art='soll'"&gt;
+            &lt;xsl:copy-of select="."/&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:when test="not($is-soll) and @art='haben'"&gt;
+            &lt;xsl:copy-of select="."/&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:otherwise/&gt;
+    &lt;/xsl:choose&gt;
+&lt;/xsl:template&gt;</pre>
+         <p id="5a38d475-e0c2-4fa1-9c07-4b992d11685ed7e30">Hier werden über eine Default-Kopierregel alle Knoten des XML Gerüsts kopiert, d.h. das Gerüst kann
+beliebig gross sein, und wir brauchen uns darum nicht zümmern. Insofern ist diese Lösung einen
+Schritt weit generischer, als die zuvor gezeigte.[[xe1:XSLT Konstrukte;xe2:Tunnel Parameter]]</p>
+         <p id="d51fac45-26eb-4b48-bd63-33999b6bc9ebd7e32">Wir sind sogar sehr flexibel was Änderungen angeht, da im Eintrag-Template leicht weitere Logik 
+implementiert werden kann, die über alle Zweige der bedingten Anweisung greift, bspw. mittels
+einer lokalen Variablen, die einen Berechnungsausdruck enthält.</p>
+      </section>
+      <section id="01a3eabe-338f-4f2d-9661-3886ac1ea34ad7e31">
+         <title id="2ce7be92-c977-41b8-bde1-db89d50b8546d7e32">Mode Attribut</title>
+         <p id="0d4ce877-3339-4868-9aab-1efa48b9638ad7e34">(Noch) kürzer geht es dagegen mit dem [[code:mode]] Attribut:[[xe1:XSLT Konstrukte;xe2:Mode Attribut]]</p>
+         <pre id="1300791a-7025-4aaf-994b-f021e72fd060d7e36" xml:space="preserve">&lt;xsl:template match="/"&gt;
+    &lt;xsl:result-document href="soll.xml"&gt;
+        &lt;xsl:apply-templates mode="soll"/&gt;
+    &lt;/xsl:result-document&gt;
+    &lt;xsl:result-document href="haben.xml"&gt;
+        &lt;xsl:apply-templates mode="haben"/&gt;
+    &lt;/xsl:result-document&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match="node()|@*" mode="#all"&gt;
+    &lt;xsl:copy&gt;
+        &lt;xsl:apply-templates select="node()|@*" mode="#current"/&gt;
+    &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match="eintrag[@art='soll']" mode="haben"/&gt;
+&lt;xsl:template match="eintrag[@art='haben']" mode="soll"/&gt;</pre>
+         <p id="873134f2-9958-403c-a863-acde25ea45ffd7e38">Der Trick ist hier, dass im jeweils anderen Modus, gerade die 
+ausgewählten Knoten nicht kopiert werden, was schliesslich die
+Eingabe korrekt in Soll und Haben aufteilt.  Wenn wir weitere Logik
+hinzufügen wollen, müssten wir die Templates ein bisschen umbauen, was nicht weiter
+tragisch sein sollte.</p>
+         <p id="11ec22f6-98ad-4c13-9096-0fb722b68114d7e40">Der Trade-Off[[xe1:Trade-Off]] besteht also aus den meist konkurrierenden Zielen Redundanz einzusparen, 
+d.h. den Quelltext so kurz und knapp wie möglich zu gestalten, und 
+einer zukünftigen leichten Erweiterbarkeit.</p>
+      </section>
+   </body>
+</topic>

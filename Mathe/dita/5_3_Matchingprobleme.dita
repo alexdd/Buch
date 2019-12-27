@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="695e9f13-5ae7-4104-aab3-2700b452ef8d">
+   <title id="182f43ba-25da-4f80-b870-329dc5a15a4f">Matchingprobleme </title>
+   <taskbody id="b9063323-de5f-4ed0-8f63-1c634af4a1d0">
+      <steps id="35da827f-cfaf-4e0f-a3eb-c13a6349e8f1">
+         <stepsection id="04990e40-2856-4078-85b1-fe6143e57658d7e5">
+            <p id="b5bcfac1-1844-4fcf-87d6-a76ea727cee7d7e6">Bei einem bipartiten Graphen, bei dem die Knoten in zwei "Farb"-klassen aufgeteilt
+werden können, findet man sog. Matchingprobleme. Jeder Knoten einer
+Farbklasse kann nämlich einem Knoten aus der anderen Farbklasse zugeordnet
+(= gematcht) werden.</p>
+         </stepsection>
+         <step id="eaa23c2a-3710-4ad1-86dc-5acfe674ca03">
+            <cmd id="4c660d3f-2f58-4903-9740-a0fc9e552f44d7e9">Identifikation eines bipartiten Graphen</cmd>
+            <substeps id="995ad4db-50f6-45c0-977a-e17d55320f6cd7e11">
+               <substep id="da543d9e-7ff6-4ca9-9917-33015a39679dd7e12">
+                  <cmd id="c06f0025-d02b-4b66-a1ce-26d525afbf55d7e13">Markiere abwechselnd besuchte Knoten mit zwei Farben.</cmd>
+               </substep>
+               <substep id="39f1bbbd-1bb0-4b66-8264-048e03c52913d7e15">
+                  <cmd id="21d3e3c5-0ca5-4024-bacf-58878945eeafd7e16">Stösst man auf einen Knoten mit derselben Farbe, in der man markieren will
+	     so ist der Graph nicht bipartit.</cmd>
+               </substep>
+               <substep id="94b2f98a-a077-424e-bce0-3edf8e4a4cd6d7e18">
+                  <cmd id="d240eb6a-8bcd-4200-aad2-bcc587836630d7e19">Fahre solange fort bis alle Knoten markiert sind.</cmd>
+               </substep>
+            </substeps>
+            <stepresult id="83f83f99-b61c-4aa2-834d-218badfc5352d7e21">
+               <p id="5ec33648-d476-4c92-b474-1556e24f8db3d7e22">Man stellt dabei fest, dass ein Graph genau dann bipartit ist, wenn er keine
+	   Kreise ungerader Länge enthält.</p>
+            </stepresult>
+         </step>
+         <step id="b4632cae-3e37-4995-a780-49a5fa2476ced7e24">
+            <cmd id="bdf2e8c7-8d05-4451-9c9b-f802c0215ce2d7e25">Heiratssatz von Hall</cmd>
+            <substeps id="9e5deb90-2d10-4eb7-bea6-4c3ba3b4fd12d7e27">
+               <substep id="5d285be1-b074-43e8-91c0-6229da7a28c5d7e28">
+                  <cmd id="634edff5-0e82-46b2-ae64-43580bb9163bd7e29">Men Propose - Women Dispose</cmd>
+               </substep>
+               <substep id="6458f430-7b99-458e-a014-0e991155558ad7e31">
+                  <cmd id="c4e88e3d-d091-44af-ae52-1eeb82e2c966d7e32">Damen und Herren verfassen Präferenzlisten bzgl. des anderen Geschlechts.</cmd>
+               </substep>
+               <substep id="c73934b3-2569-48f8-8ef7-fc44ca99a420d7e34">
+                  <cmd id="b7ac4e31-3f82-4e0e-b99b-fd0f3458423ed7e35">Die Liste der Herren wird durchlaufen und der aktuelle Herr macht der ersten 
+	     Dame auf seiner Liste einen Antrag. Lehnt sie ab, streicht er sie von seiner Liste
+	     ansonsten geht das Paar eine Beziehung ein, solange kein Herr der Dame einen
+	     Antrag macht, den sie besser findet.</cmd>
+               </substep>
+               <substep id="2d3f8ae6-2b1d-4991-b0ab-98e1a9572784d7e37">
+                  <cmd id="b252766f-2353-44a4-9b95-f91e5cef09a5d7e38">Fahre solange fort bis die Präferenzlisten der Herren durchlaufen sind 
+	     oder kein Pärchen mehr gebildet werden kann.</cmd>
+               </substep>
+               <substep id="619353e3-bc46-45ad-8e45-779c5ed9aec9d7e40">
+                  <cmd id="c53a1278-98c2-480d-8c23-56f7e52513a5d7e41">Diese Algorithmus liefert eine für den Mann optimale Pärchenbildung.</cmd>
+               </substep>
+            </substeps>
+         </step>
+         <step id="9281e686-de04-4117-9652-dcd12828c43dd7e43">
+            <cmd id="8c148565-b332-402a-a2f2-dc36c0f6d043d7e44">Perfektes Matching</cmd>
+            <substeps id="50c380b8-6937-4aad-82da-8c58470215dbd7e46">
+               <substep id="94d15753-7109-41d3-844c-fb7e011caa51d7e47">
+                  <cmd id="5917dcc6-eee5-41f9-bfd7-e798f600b7aed7e48">
+                     <b id="2960e373-bec3-4349-a343-711675b8c334d7e49">Das Matching ist maximal</b>, wenn man keinen augmentierenden Weg mehr
+	       findet. Dabei spaziert man auf einem augmentierender Weg, wenn man 
+	       abwechselnd gematchete und ungematchete Knoten besucht, sowie auf
+	       letzteren startet und endet.</cmd>
+               </substep>
+               <substep id="79a959ba-25c3-4938-8ba7-fac27fb9f605d7e50">
+                  <cmd id="b892a767-1b06-4785-8709-ad56c83d8130d7e53">
+                     <b id="d195a36e-2ef5-4da5-941a-ab8590df7f06d7e52">Satz vom König:</b> Die Anzahl der Matchingkanten in einem maximalen Matching stimmt mit der Anzahl der Knoten einer minimalen Knotenüberdeckung überein. (Knotenüberdeckung: Die Knoten müssen an allen Kanten des Matchings beteiligt sein)</cmd>
+               </substep>
+               <substep id="b382cd0e-1d81-48cd-bc4d-441eba865f98d7e55">
+                  <cmd id="e89080b6-90f9-40ff-a8df-0cff24f1f6b3d7e58">
+                     <b id="2af1fa04-1ce1-4a9c-8694-e8b9c9088089d7e57">Heiratssatz von Hall:</b> Die Nachbarschaftsmenge einer jeden Teilmenge muss größer sein, als die Teilmenge selbst.</cmd>
+               </substep>
+            </substeps>
+         </step>
+      </steps>
+   </taskbody>
+</task>

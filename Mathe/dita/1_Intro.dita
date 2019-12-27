@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="8ae493b1-a854-4349-8aff-3bc901e07199">
+   <title id="67b2fea2-88ac-4cbc-9763-0e31cf89b469">Intro </title>
+   <body id="ba3c8040-10ea-44b1-bc9a-5270ed596ace">
+      <fig id="5ac5f669-4ecb-4aed-9baf-aede42e9cbf4d7e4" expanse="spread" frame="all"
+           scale="50"
+           status="changed">
+         <image href="images/dita-logo2_2.jpg"/>
+      </fig>
+      <p id="27d0f17c-7370-4fac-ab15-9a18d1ca1e91d7e6">Dieses Buch wurde mit Tektur CCMS erstellt. Tektur ist ein einfach zu bedienender kollaborativer Editor um [[link]]DITA[[fn:https://de.wikipedia.org/wiki/Darwin_Information_Typing_Architecture*DITA ist ein Standard im Bereich Publishing und löst ältere Dokumenttypen, wie z.B. Docbook ab. Beispielsweise ist DITA ein gutes Modell für Softwarehandbücher und zugehörige Online-Dokumentation.]] Inhalte erstellen, als PDF ausgeben und pflegen zu können. Die Eingabe erfolgt dabei per [[link]]WYSIWYG[[fn:https://de.wikipedia.org/wiki/WYSIWYG*What You See Is What You Get - Mit dieser Eingabemethode hat der Autor schon ein Bild davon, wie sein Text gedruckt werden kann.]] mit geführter Benutzerinteraktion. Die Inhalte werden als einzelne Topics verwaltet, die in verschiedenen Maps referenziert werden können; Stichwort: [[link]]Topic Based Authoring[[fn:https://en.wikipedia.org/wiki/Topic-based_authoring*Beim Topic Based Authoring wird der Content feingranular in Informationseinheiten aufgegliedert, die sich dann über Referenzen in verschiedene Publikationen einbinden lassen.]].</p>
+      <p id="1e9e7b35-22ad-4819-b062-c0f43536e06dd6e10">Sonstige Features: Rechte- und Rollensystem, Versionskontrolle, konfigurerierbarer Workflow mit Review &amp; Approval Funktionen. Auf dem [[link]]Entwicklerblog[[fn:http://www.tekturcms.de*Das ist die private Homepage des Autors mit einer kompletten Liste seiner Hobby-Projekte seit 2000.]] kann man sich über den Fortschritt informieren.</p>
+      <note id="97cdaf85-a637-41bd-b719-16cacc0a129dd7e10">
+         <p id="25b00336-a77d-43f8-ace7-62c8986e20fbd6e11">Dieses Buch dient in erster Linie als Test für Tektur CCMS. Der Inhalt ist recht schnell entstanden, so dass der Feinschliff an mancher Stelle vielleicht noch fehlt... Trotzdem könnte es für den einen oder anderen XML Entwickler ganz interessant sein. Für mich dient der Text in erster Linie als Gedächtnisstütze. </p>
+         <p id="cfde8ac5-f13d-4547-ba6a-fd6fcf596eedd7e13">Die Quelltexte sind aus "didaktischen" Gründen an mancher Stelle in deutsch gehalten, was natürlich für ein richtiges Programm nicht soviel Sinn machen würde.</p>
+      </note>
+   </body>
+</topic>

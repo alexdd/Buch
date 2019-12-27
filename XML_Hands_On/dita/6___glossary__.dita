@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="c1678e74-d15c-42a1-9fd0-912fced210ef">
+   <title id="fab91e1c-40b2-4fa4-8137-87e27882221d">[[glossary]] </title>
+   <body id="aca576e1-3207-47c8-9e4d-6a7ac430a943">
+      <dl id="sorted" status="changed">
+         <dlhead id="039baf06-be11-4b4d-af6d-fe5b1e67b44ed7e5">
+            <dthd id="0859de8a-1ccc-48b4-ab14-a7fe2f3f1af9d7e6">Begriff</dthd>
+            <ddhd id="1a02270c-8d0f-491f-ac52-7bb977305955d7e8">Beschreibung</ddhd>
+         </dlhead>
+         <dlentry id="34612ad5-8ffa-417c-b803-c7e55b68e44cd6e10">
+            <dt id="f642af71-21ed-4810-8a4d-9484a40b86a2d7e11">Core-Stylesheet</dt>
+            <dd id="63f670b7-d1d3-403c-a6dd-00accaf4e03bd7e13">
+               <p id="f9c16370-65fa-43ba-bd9b-b5e720ee11a0d6e14">In einem Stylesheet-Projekt bezeichnet das Core-Stylesheet eine bereits ausgiebig getestete Variante, die mittels Sub-Stylesheet unter Ausnutzung der XSLT Import Präzedenz überschrieben wird.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="7fddefae-32fa-4b48-b486-829b5bae0ff9d6e16">
+            <dt id="a8874b1d-01da-4888-b3f0-46ddc2579c7fd7e17">Sub-Stylesheet</dt>
+            <dd id="ca38a2d4-a1a8-430a-bfad-355ba80dc2add7e19">
+               <p id="83fe0f23-8fb2-48e5-b6c5-e882aadbe51ed6e20">Ein Sub-Stylesheet spezialisiert das Core-Stylesheet, damit Redundanz vermieden wird und somit die Wartbarkeit gewährleistet werden kann.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="3acc3410-71ac-404b-b83d-c9e6bced2a91d6e22">
+            <dt id="47bb2bd4-f027-49d2-871e-db3ee9352d4bd7e23">Parameterisierung</dt>
+            <dd id="99607d92-5df2-437f-a188-1f1157e8df47d7e25">
+               <p id="3164dd67-7751-43e2-b3be-0fcf81d4465bd6e26">Bei der Parameterisierung wird ein bestehendes Stylesheet mit Parametern versehen, um für möglichst viele Produktvarianten und Ausgabeformate die gleiche Codebasis wiederverwenden zu können. Dadurch soll Redundanz eingespart werden und der Aufruf vereinfacht werden.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="2a5aaa74-8cf0-4d3a-b21f-33e02ccbef8bd6e28">
+            <dt id="cd4dc70e-eec0-4adc-b966-1c1b79157971d7e29">Topic Based Authoring</dt>
+            <dd id="63f59f1d-512b-4e4a-9f91-79449a354cffd7e31">
+               <p id="7acb0827-bd9f-420e-85ad-9a55d6676669d6e32">Beim Topic Based Authoring steht nicht das gesamte Buch im Vordergrund, sondern der Inhalt wird in wiederverwendbare Topics aufgeteilt, die dann in verschiedenen Publikationen referenziert werden können. </p>
+            </dd>
+         </dlentry>
+         <dlentry id="4c36b8fc-3998-4a09-bf3b-9b2719ac0955d6e34">
+            <dt id="13ef958e-f17a-4e8d-8739-74bfa8d92484d7e35">DITA</dt>
+            <dd id="1c802f5f-e9d0-479e-a96e-3a7e2bc32192d7e37">
+               <p id="26870915-35a0-46d2-b209-3033c421d628d6e38">DITA ist ein Informationsmodell für die Technische Dokumentation - es unterstützt <i id="1062d079-f6e1-4221-82d5-316445fbb2b2d7e40">Topic Based Authoring</i>.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="10f3902a-3216-4b9f-9fa2-43c73d597181d6e40">
+            <dt id="43f4e8b7-7eb4-4d7b-9093-127f21df5988d7e44">SGML</dt>
+            <dd id="ac747157-d56f-4fb7-8917-03ff136075afd7e46">
+               <p id="1b3d05e6-f3c3-4d3f-9e84-40105bb8a907d6e44">SGML ist der Vorläufer von XML.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="0d0a4a89-9436-4da6-a402-baeb52c8adecd6e46">
+            <dt id="e98af959-0c6b-44c7-9a62-bb74ae8cd8c1d7e50">TIOBE Index</dt>
+            <dd id="dbbccf32-2ece-4ad7-a9b0-f9ee645cab88d7e52">
+               <p id="34b180ff-1755-4e48-93cb-68d1e780f287d6e50">Im TIOBE Index wird jährlich die Beliebtheit von Programmiersprachen erfasst.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="461ce6d7-0731-49da-9f9a-d5972d60ae0fd6e52">
+            <dt id="ac6ce173-59c2-4904-b39a-755ee0328a8bd7e56">Single Source Publishing</dt>
+            <dd id="f9e55256-495a-4364-a927-9b99b9ca790ad7e58">
+               <p id="43cf62a5-8f20-4bbe-b1e4-211aba79f19fd6e56">Beim Single Source Publishing wird aus einer XML Quelle eine Vielzahl von Ausgabeformaten erzeugt</p>
+            </dd>
+         </dlentry>
+         <dlentry id="67367b9f-b6be-4c3f-8795-5d82fb84ef49d6e58">
+            <dt id="de516b5a-ef84-4ab8-896a-00f86071fa87d7e62">Structured Content Authoring</dt>
+            <dd id="3c221139-2962-4d76-a011-18515fb136cbd7e64">
+               <p id="0e9b7c24-dca3-43e0-853a-e86a52c6a0c9d6e62">Der Content wird beim <i id="e401e082-ff5b-4e3d-a189-a5801acc9c65d7e67">Structured Content Authoring</i> semantisch mittels XML Tags ausgezeichnet. Bei einem WYSIWYG Ansatz sind die meisten Tags nur optional sichtbar.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="c2efac02-cb17-4508-8753-ff586c12c3a5d6e64">
+            <dt id="8ea171d4-78fe-434b-9e63-b9892378ff79d7e71">XML Datenbanken</dt>
+            <dd id="70073dff-d2cb-4417-bdaa-b5fbd00965c9d7e73">
+               <p id="ac77e56f-29c2-4023-af1b-1621f29a0634d6e68">XML Datenbanken sind NoSQL Datenbanken, d.h. "Not only SQL" oder auch tatsächlich "No SQL" wird unterstützt. Die Spezialisierung erfolgt auf XML Daten.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="d0602bd8-ce29-4fcf-b5fe-e88ad33066d8d7e71">
+            <dt id="08826137-3e1c-45a8-99ad-d78b5c6dcdebd7e78">Gültigkeiten</dt>
+            <dd id="8920df79-d58a-461b-9cd2-7600890d47a9d7e80">
+               <p id="99b82641-0263-412d-b176-864e6b7baf4fd7e75">In einer technischen Publikation werden Satzbausteine und Grafiken mit Gültigkeiten versehen, um bspw. länderspezifische Produktvarianten zu kennzeichnen.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="43959796-4021-4f83-b5f0-f81ce355a4ced7e77">
+            <dt id="2d09c6d9-2fae-4c64-ba03-493c639cf4bdd7e84">Übersetzungsmanagement</dt>
+            <dd id="336a90c0-cf0a-45ca-8444-db68f337262ad7e86">
+               <p id="b369e47b-74df-4635-a71b-e24129657e55d7e81">Damit ist die Verwaltung der Übersetzungen einer tech. Publikation gemeint. Da eine größere Publikation ständig aktualisiert wird, die Übersetzungen aber von externen Übersetzungsbüros einige Zeit in Anspruch nehmen, ist eine gewisse Abstimmungslogik erforderlich.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="90037cda-fd6c-4d0b-b4e5-9edeb7d84cf7d7e83">
+            <dt id="c5118718-4739-49d5-8295-74428f7fe75ad7e90">Content Delivery Portal</dt>
+            <dd id="505ecdaa-695c-4476-a629-10c7e67fed6ad7e92">
+               <p id="b91c2e54-f554-40fa-ad98-73630fd2fecfd7e87">Die beim Single Source Publishing erzeugten Ausgabeformate werden über Webportale zielgerecht verteilt. Aktuell experimentiert man mit QR Codes an Maschinen, die über das Smartphone gescannt werden können und daraufhin die Doku zur Maschine herunterladen.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="5a77704e-d20f-497e-9dc5-828038ddb1fcd7e89">
+            <dt id="2b03daa5-52dd-48a9-8686-68e571fb0474d7e96">Automatischer Satz</dt>
+            <dd id="57168c85-a8c1-415b-ac10-52981f5b9030d7e98">
+               <p id="35f98fec-b587-4929-8434-2d6c70c94b67d7e93">Bei einer Printpublikation kommt es auf gute Wort-, Zeilen-, Spalten und Seitenumbrüche an. Der mittels XML ausgezeichnete Content wird von einem Formatierprozess diesbzgl. automatisch an die richtige Stelle <i id="2b5a5b0f-7ab8-4311-b35e-90516fd9004dd7e95">"gesetzt"</i>.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="4007af7b-74b9-4e97-960e-0b097fcf3906d7e98">
+            <dt id="a5f8f6de-f9f3-439c-9018-4ea6c170be11d7e105">CCMS</dt>
+            <dd id="a7f85fb5-1984-47df-9257-a0056519c40ed7e107">
+               <p id="7b556c90-cbcc-45f1-b605-218ee423eb72d7e102">
+                  <i id="c151d433-aa64-4c6c-8079-4a4715ec1fe2d7e103">Component Content Management System</i> - Um Konzepte wie <i id="4ad4c719-9c3e-4241-855c-d9719cde9966d7e106">Topic Based Authoring</i> realisieren zu können, sind spezielle Content Management Systeme erforderlich, die nicht <i id="e542935d-c510-4000-8adb-61b00aaf6652d7e109">"Kapitelbasiert"</i> verwalten, sondern feingranular Topics und die Beziehungen zwischen diesen.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="5308f5aa-ad90-4442-bc34-503e868df2cad7e112">
+            <dt id="47489739-29da-4db8-9ebc-a9f53b4fa5dbd7e119">Diffing</dt>
+            <dd id="a5aeaf95-d572-44a8-9da9-9f00e91770f8d7e121">
+               <p id="fd84425c-4999-4bce-8518-96e07cc3155ad7e116">Beim <i id="5c8d4b56-8632-43c7-891e-5c50cfcdfc7dd7e118">Diffing</i> werden zwei XML Instanzen miteinander verglichen. Ein Diffing Prozessor markiert hingefügte, gelöschte und veränderte XML Elemente in einer <i id="989efd0c-a94f-4c08-a7cf-46713d27d6fdd7e121">Diffing-Instanz</i>.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="4a9b67b0-f32e-4a04-bbab-0e47477dccc1d7e124">
+            <dt id="d1562b0a-9bfc-4ef8-a46f-ab286c999e45d7e131">Intelligente Querverweise</dt>
+            <dd id="04ca3c9a-d8ea-4872-bdbc-079f23968316d7e133">
+               <p id="3ca0be01-b443-472b-b291-32bc70ed369fd7e128">Links zwischen Textstellen in verschiedenen Topics und Publikationen bleiben versionstreu, d.h. in einer früheren Version der Publikation werden diejenigen Kapitel und Texte referenziert, die zum Zeitpunkt der Publikation aktuell waren.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="2066e31a-55c5-43df-9297-dc38faaba9e0d7e130">
+            <dt id="4f2d96d1-9491-4f2c-882a-b6e3a56e683bd7e137">Push- vs. Pull</dt>
+            <dd id="906b853f-880b-4b42-a01e-ea6ad81b3bf6d7e139">
+               <p id="01ef920f-2eb8-46e4-8fdd-08244155dba2d7e134">Push und Pull sind zwei Konzepte, wie man Transformationen mit XSLT gestalten kann. Die einen "ziehen" Informationen aus der Eingabe und setzen sie an die richtige Stelle in der Ausgabe. Die anderen transformieren die Eingabe schrittweise in die Ausgabe, vgl. Kapitel <xref href="5b73f348-0058-45e0-82f7-c3de72ec5d41"
+                        id="0ceee717-f9d4-482c-b3a9-f6cd80029370"
+                        type="topic">Push vs. Pull Stylesheets</xref>. Mischformen sind die Regel.</p>
+            </dd>
+         </dlentry>
+         <dlentry id="46f201ec-c31e-4ef8-b064-41e01921d1f7d7e139">
+            <dt id="01a61f16-faf8-4b20-a021-7592b313089ed7e146">Vortransformation</dt>
+            <dd id="c448b88c-48fb-475a-888b-ee7e5f98ef30d7e148">
+               <p id="461f6226-46de-461a-a5fa-3d5bb7d97323d7e143">Ein Schritt in der Prozesskette einer XSLT Transformation, der die Daten für den nächsten Schritt vorbereitet, vgl. Kapitel <xref href="ceed4546-a60b-4d5f-a625-6e79c180cc13"
+                        id="f9eeced7-88cf-4024-b777-809538056eec"
+                        type="topic">Vortransformationen</xref>.</p>
+            </dd>
+         </dlentry>
+      </dl>
+   </body>
+</topic>

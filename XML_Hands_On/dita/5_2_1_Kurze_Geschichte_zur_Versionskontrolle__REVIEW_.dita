@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="1009e2f7-5cf1-4946-ac43-c97d057c2ab3">
+   <title id="1b4fec3d-78d4-4b37-9ed4-3ffab480e276">Kurze Geschichte zur Versionskontrolle</title>
+   <body id="3c89bb77-f97a-43ab-9cfb-b60ff130497e">
+      <p id="d1435b8d-485d-44aa-9e22-966db77d244c">Ich vermute, dass das Problem der Versionsverwaltung von Source Code Dateien seit Anbeginn der Programmierung existiert. So ist es nicht verwunderlich, dass die Lösungen hierzu immer weiter verfeinert werden. Zu jeder Epoche gibt es allerdings nur einen Platzhirschen, der allen Entwicklern gleichermassen heilig ist.</p>
+      <section id="44ccbd7d-835c-481f-9b98-5b72e1d130afd7e6">
+         <title id="5a1d9137-a721-4eed-a897-aed012258f6ed7e7">RCS</title>
+         <p id="06f7ef75-86eb-4c1c-8cc0-39d30074af38d7e9">Bis zu den 90er Jahren war das in Unix Systeme integrierte, [[link]]<undefined id="e0412b9a-84c2-4dfa-8d3c-2f2e1a3118e6d7e11" href="undefined"/>RCS[[fn:https://de.wikipedia.org/wiki/Revision_Control_System*Wikipediaeintrag zu RCS]]<undefined id="941fe651-51d9-4193-8c3b-711da406fcfad7e13" href="undefined"/> beliebt. Jede Linux Distribution hat diese Lösung immer noch an Bord, und die Bedienung ist relativ einfach.[[xe1:Versionskontrolle;xe2:RCS]]</p>
+         <p id="34e271d2-ad10-41ef-bb27-4c75546c04a5d7e15">Bei RCS werden Änderungen an einzelnen Dateien in der jeweils zugeordneten Archivdatei verwaltet. Man kann dann die aktuelle Version in das Archiv einchecken und mit einer Logmeldung versehen.</p>
+         <p id="c34d6795-2c61-4796-ab04-341ccfad9190d7e17">Eine ausgecheckte Datei wird für andere Nutzer mit einem Lock versehen und gesperrt. Eine Check-In Sitzung sieht z.B. so aus:</p>
+         <pre id="8f0dd7a1-e4c6-4447-ad08-758aa0fd2f8fd7e19" xml:space="preserve">$ ls -l
+-rw-r--r--    1 Alex users          19 10. Oct 16:30 test.txt
+$ cat test.txt
+Hallo Welt!
+$ ci -l test.txt
+test.txt,v  &lt;--  test.txt
+enter description, terminated with single '.' or end of file:
+NOTE: This is NOT the log message!
+&gt;&gt; test check-in
+&gt;&gt; .
+initial revision: 1.1
+done
+$ ls -l
+-rw-r--r--    1 alex users          19 10. Jan 14:25 test.txt
+-r--r--r--    1 Alex users         218 10. Jan 14:25 test.txt,v
+$ echo „bla bla blubb“ &gt;&gt; test.txt
+$ ci -l test.txt
+test.txt,v  &lt;--  test.txt
+new revision: 1.2; previous revision: 1.1
+enter log message, terminated with single '.' or end of file:</pre>
+         <p id="f6d9108c-9e9f-4248-b0a1-da95e49f9038d7e21">Es gibt zusätzlich die Möglichkeit Branches anzulegen (über das Hinzufügen einer weiteren Stelle zur Versionsnummer).</p>
+         <p id="8101641a-5031-465c-8e34-3a043f8ba84ed7e23">Verschiedene Kopien können auch mittels einer Merge-Operation zusammengeführt werden. Ein Mehrbenutzerbetrieb ist also schon ansatzweise realisiert.</p>
+         <p id="f43d392a-2fba-4fd3-8ae2-7445ab4547e8d7e25">Praktisch ist RCS für mich nach-wie-vor, wenn ich eine elnzelne Datei trocken will, wie z.B. meinen Lebenslauf im ASCII-Text Format. Mittels Schlüsselwörter, wie [[code:$Author$]], [[code:$Date$]] und [[code:$Log$]], lassen sich Metadaten zur Version automatisch in die Arbeitsdatei übernehmen.</p>
+         <p id="ef0fcd0c-d26f-4a87-9e9b-af01b2f0be45d7e27">RCS, das also den Mehrbenutzebetrieb nur über Absprachen bzgl. des Locking-Mechanimsu erlaubt, wurde in den 90er Jahren von CVS abgelöst.</p>
+      </section>
+      <section id="6fd630b2-b617-4b7c-92af-45f71cd46fa9d7e29">
+         <title id="5e44903d-4ac8-478c-b0dc-5c27315cc281d7e30">CVS</title>
+         <p id="9a3394aa-28a4-488c-884a-3a37acd5b4cfd7e32">Wie der Name schon sagt (Concurrent Versions System), erlaubt [[link]]CVS[[fn:https://de.wikipedia.org/wiki/Concurrent_Versions_System*Wikipediaeintrag zu CVS]] den reibungslosen Mehrbenutzerbetrieb.[[xe:Versionskontrolle;xe2:CVS]]</p>
+         <p id="0eacc228-78f5-4851-a6bf-5dd2e3d7d027d7e34">Im Gegensatz zu RCS werden Archivdateien nicht an ggf. verschiedenen frei definierbaren Orten gespeichert, sondern zentral in einem <b id="14b79745-eb68-4542-88a4-add4061afd64d7e36" href="undefined">Repository</b>.</p>
+         <p id="cff6876c-712d-4347-895e-670fc934d9c3d7e39">Mittels grafischer Clients und der Integration in alle gängigen IDEs (Integrated Development Environment), erlaubt CVS bspw. ein komfortables grafisches Diffing, was den Review und die Übernahme von Änderungen eines anderen Programmierers, wesentlich erleichtert.</p>
+      </section>
+      <section id="8b1613a0-aafc-4ab7-a3e3-6e83098e2515d7e41">
+         <title id="5ab7129a-d804-46c6-b29a-6962f7898f56d7e42">Subversion</title>
+         <p id="aa384a07-eb0a-46cd-bb9f-d7eaa8f0be6cd7e44">CVS hatte einige Unzulänglichkeiten, was das Handling von Binärdaten und Verzeichnissen betraf, sowie einige [[link]]Sicherheitsmängel[[fn:https://www.cvedetails.com/vulnerability-list/vendor_id-442/CVS.html*Eintrag zu CVS in der „Common Vulnerabilities and Exposure“ Datenbank]]</p>
+         <p id="5be37362-56d4-4ced-85a7-728cfee40259d7e46">Der Nachfolger von CVS ist [[link]]Subversion[[fn:https://de.wikipedia.org/wiki/Apache_Subversion*Wikipediaeintrag zu Subversion]].[[x1:Versionskontrolle;xe2:Subversion]]</p>
+         <p id="65510056-cbf1-406a-8070-05bf7f8a15d1d7e48">Was den Feature-Umgang angeht, sollte Subversion eigentlich für die meisten Anwendungsfälle in der Software-Entwicklung ausreichen, wäre da nicht die Open-Source Bewegung, die weltweit verteilt an Tausenden Projekten arbeitet.</p>
+         <p id="6dd92dd1-438a-44cc-8e7b-10f7d75840d1d7e50">So wurde das zentrale Repository, das eigentlich das Killer-Feature von CVS im Vergleich zu RCS war, nach der Jahrtausendwende mehr oder weniger über den Haufen geworfen.</p>
+         <p id="0e923f5c-fd62-4e1d-986d-6fe0d8d21e63d7e52">Linus Toralds, der Erfinder von Linux, stellte [[link]]GIT[[fn:https://de.wikipedia.org/wiki/Git*Wikipedia Eintrag zu GIT]] vor.</p>
+      </section>
+      <section id="319289b2-3019-4b46-a6bf-d8318982df87d7e54">
+         <title id="3761f134-5823-4372-a711-80bdd8b10c3fd7e55">GIT</title>
+         <p id="b9465297-210a-4e73-bfcd-049d778dd83cd7e57">[[link]]GIT[[fn:https://de.wikipedia.org/wiki/Git*Wikipedia Eintrag zu GIT]] weicht das Konzept des zentralen Repositories auf. Es gibt zwar meistens ein Repository, das zentral über das Netz erreichbar ist, jeder Entwickler arbeitet aber zusätzlich noch auf einer lokalen Kopie, die er regelmässig mit dem Haupt-Repository synchronisiert.[[xe1:Versionskontrolle;xe2:GIT]]</p>
+         <p id="c4f9f4a5-dfc9-451e-a2af-434fefa0332fd7e59">Ausserdem kann jedes Repository auch ge-„forkt“ werden, d.h. es wird von einer anderen Entwickler(-gruppe) kopiert, mit dem Ziel eine neue Variante der Software oder gar ein anderes Produkt zu erschaffen, was nach dem Open-Source Gedanken natürlich völlig legitim ist.</p>
+      </section>
+   </body>
+</topic>

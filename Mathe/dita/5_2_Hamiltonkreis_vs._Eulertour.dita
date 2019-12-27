@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="a8149f16-f05c-4150-aafe-0d2eee34c25b">
+   <title id="8c1047ac-97c5-4df5-a6d6-3b386850eb91">Hamiltonkreis vs. Eulertour</title>
+   <taskbody id="15c782c0-952c-42da-afe5-c45d9ac228dd">
+      <steps id="9b8ef49e-fe7f-45d4-9b5f-345cb941f935">
+         <stepsection id="30af3066-dc81-4f4f-a702-cb369ee5c185d7e5">
+            <p id="f9d3521c-4c84-47cc-9763-a078c778fad2d7e6">Jeder kennt das Königsberger Sieben-Brückenproblem. Der korrekte Fachbegriff lautet dabei
+Eulertour, bei der jede Kante (=Brücke) eines Graphen genau einmal durchlaufen wird. Ein Spezialfall
+ist der Hamiltonkreis. Hier darf auch nur jeder Knoten einmal besucht werden.</p>
+         </stepsection>
+         <step id="fc623f89-4a6b-44e7-b9c7-7adbba6366a7">
+            <cmd id="b36d1866-937c-4414-a635-1055d6c2d224d7e9">Es gibt u.a. zwei Merkmale die bewiesen werden müssen</cmd>
+            <substeps id="d24ce49c-42f0-4592-888e-c27e2eee2e05d7e11">
+               <substep id="d907a760-7a70-4c9f-acaa-43a6176661f4d7e12">
+                  <cmd id="7eaf5ab3-f360-4eba-8d91-71a0e6069d6dd7e13">Der Graph ist zusammenhängend, das heisst es gibt einen Weg von jedem Koten zu jedem Knoten.</cmd>
+               </substep>
+               <substep id="707847cc-d18a-4e42-bc65-4ea651dee19ad7e15">
+                  <cmd id="8663af65-f111-4833-9953-5e4e934fbaced7e16">Die Anzahl der Kanten, die vom Knoten hin-/wegführen ist gerade.</cmd>
+               </substep>
+            </substeps>
+            <stepresult id="1fbd9ef5-8a40-4c9c-b8c9-c3ec032021e6d7e18">
+               <p id="3b08cc9e-d9ee-4205-a8e9-e384093ad978d7e19">Paradebeispiel für das Finden einer Eulertour ist das Haus vom Nikolaus. Da das Haus vom Nikolaus 
+2 Knoten vom Grad 3 hat, gibt es keine Eulertour, sondern nur einen Eulerkreis.</p>
+            </stepresult>
+         </step>
+         <step id="cdd95156-b4d8-4e70-a752-75496a61470ad7e21">
+            <cmd id="ffce5570-3010-41a0-afc2-5abc1606ab3cd7e22">Zum Auffinden einer Eulertour kann man nach dem folgendem Schema vorgehen:</cmd>
+            <substeps id="d63a866c-3a5d-4b09-8c6c-80dcd491e53bd7e24">
+               <substep id="a4812fba-27ef-44b2-a841-34d4282f2350d7e25">
+                  <cmd id="466e9755-2727-4cd3-9877-c9aaa939d99ed7e26">Starte mit einer Kante eines beliebigen Knoten</cmd>
+               </substep>
+               <substep id="a7470c14-bb44-41d4-914b-b8f36e2fc8ffd7e28">
+                  <cmd id="0412873b-dd29-4394-8bd4-86910de615fed7e29">Markiere die Kante und merke Sie Dir in einer Liste</cmd>
+               </substep>
+               <substep id="289e163c-e06a-4468-bfe9-78ffae867d2bd7e31">
+                  <cmd id="c7a798a6-8eb4-4136-aa75-30ba7378fdcfd7e32">Laufe auf dieser Kante zum nächsten Knoten</cmd>
+               </substep>
+               <substep id="bb5cb0db-7aab-4d06-b3af-2b1e31443858d7e34">
+                  <cmd id="1d42bdc2-5887-490f-b4e4-5dfafdadc1efd7e35">Wiederhole die Prozedur solange es noch Knoten gibt, die nicht in der Liste sind</cmd>
+               </substep>
+            </substeps>
+         </step>
+         <step id="35a169e8-ac06-455c-a2da-d923fee0da44d7e37">
+            <note id="94ad7a61-0a47-470f-9b8b-cc36b6a91b29d7e38">
+               <p id="57c1b132-b4dc-4cd5-a10d-67eb871bc2ecd7e39">Wichtg ist das die Liste an der Stelle aktualisiert wird, von der man einen neuen Knoten als 
+Startknoten sucht. Es werden sozusagen Kreise gefunden und aneineinandergereiht.</p>
+            </note>
+            <cmd id="a8791706-3f99-4a1f-b550-bc926569ae65d7e41">Praktisch könnte man den Algorithmus im folgenden Szenario einsetzen:</cmd>
+            <info id="859cc07b-463e-48a3-b59d-00ecdc867aabd7e43">
+               <p id="900b03e9-6228-4c5e-86bf-dd0c04ecc81ed7e44">Die Geister eines Pac-Man-artigen Spiels laufen auf einer Eulertour um sich nicht gegenseitig zu 
+blockieren, bei unterschiedlichen Startpunkten mit gleicher Geschwindigkeit.</p>
+            </info>
+         </step>
+      </steps>
+   </taskbody>
+</task>

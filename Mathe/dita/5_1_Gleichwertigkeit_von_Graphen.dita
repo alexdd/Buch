@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="2dc1c655-d85c-4c79-8ece-1519d7ef218b">
+   <title id="733a5f49-10a4-4065-8c60-0f90621c8e12">Gleichwertigkeit von Graphen</title>
+   <taskbody id="1432b666-f87d-4b96-be8a-eab54b21b971">
+      <steps id="97b27f11-03d9-446d-89dc-a1e0277fb245">
+         <stepsection id="30219620-49a9-4ab0-9393-2643a85d0f9bd7e5">
+            <p id="ca4f45de-7c24-4e28-992c-fedf7ab16fd2d7e6">Zwei Graphen sind gleich, wenn sie isomorph sind. Man notiert einen Graphen mit der sog. Valenzsequenz:</p>
+            <pre id="b7e2aa57-84bb-401b-931a-f05252683058d7e8" xml:space="preserve">(3,2,2,1,1,1)</pre>
+            <p id="165a3c3c-8e2d-4194-97b1-eb6b7c29cfd9d7e10">Hier sind die Knotengrade (= Anzahl der Kanten an einem Graphen) der Größe
+nach notiert. Wenn dann die Anzahl der Knoten und die Anzahl der
+Kanten, der zu vergleichenden Graphen gleich ist, und es jeweils eine 
+Entsprechung der verbunden Kanten in beiden Graphen gibt, dann sind
+die Graphen gleich bzw. isomorph.</p>
+         </stepsection>
+         <step id="80c2445b-9d7d-4136-879a-6ad68a51f4f7">
+            <note id="e6cb5361-6ccc-47a7-98c4-4e66470b5814d7e13">
+               <p id="ce5415cf-23b6-437e-a931-aa1fa8a9fd8ad7e14">Damit die Valenzsequenz valide ist, müssen die folgenden
+Bedingungen erfüllt sein:</p>
+            </note>
+            <cmd id="be0c182a-8f17-4a54-8fa5-2dba1880f800d7e16">Die Summe aller Knotengrade ist gerade - eine Regel, die vom sog. 
+[[link]]Handshake Lemma[[fn:https://de.wikipedia.org/wiki/Handschlaglemma*Wikipedia Seite zum Handshake Lemma]] 
+abgleitet ist.</cmd>
+         </step>
+         <step id="4470b37e-f4c4-4235-9725-83a6839e4ea7d7e18">
+            <cmd id="1f5e4bca-1031-420a-a560-898560466866d7e19">Nach jedem Knoten in der Valenzsequenz gibt es mindestens soviele Knoten,
+wie (Knotengrad - 1) des aktuell betrachteten Knoten.</cmd>
+         </step>
+         <step id="1660a96d-c387-476f-a6f3-bb38e0bcc59ad7e21">
+            <cmd id="1736cf46-3655-4356-b10c-3383c8eeb100d7e22">Jeder Knotengrad muss natürlich positiv sein</cmd>
+            <stepresult id="06718420-368c-4bfe-a593-452b2e2d8715d7e24">
+               <p id="62bcd851-dc0d-47cb-a780-925ea1accc5fd7e25">Ein weiterer interessanter Umstand, ist die Tatsache, dass man schrittweise 
+entsprechende Knoten in zwei gleichwertigen Graphen löschen kann, und
+es entstehen wieder isomporphe Graphen. Umgekehrt kann man sukkzessive isomorphe Graphen konstruieren. Beim Verfahren 
+von [[link]]Havel und Hakimi[[fn:https://de.wikipedia.org/wiki/Havel-Hakimi-Algorithmus*Wikipedia-Seite zum Verfahren von Havel und Hakimi]] macht man sich das zu Nutze, um zu prüfen, ob eine gegebene Valenzsequenz einen validen
+Graphen darstellt.</p>
+            </stepresult>
+         </step>
+         <step id="c3a944d0-8f76-4119-acbe-138f701b32a2d7e27">
+            <cmd id="faae1aba-3b1f-424f-80de-a26acbf66ef9d7e28">Verfahren von Havel und Hakimi</cmd>
+            <substeps id="8abe501d-dc57-487c-8af4-ba853bd6eceed7e30">
+               <substep id="34c1ff04-0ee5-4ee1-abd4-bf009b3d2738d7e31">
+                  <note id="27f6996e-8371-4bef-9209-9b6103091d6bd7e32">
+                     <p id="99768836-e477-4358-aed3-3b7ecb34cebdd7e33">Wir betrachten die Valenzsequenz von oben mit [[code:(3,3,3,2,2,1)]]. Schrittweise 
+werden nun die ersten Knoten entfernt und die Valenzsequenz reduziert. 
+Es muss immer eine valide Valenzsequenz übrig bleiben, ansonsten hat 
+man bewiesen, dass es sich um keine gülige Valenzsequenz für einen
+Graphen handelt.</p>
+                  </note>
+                  <cmd id="64b3bf11-ff81-4e68-a5ee-3ba8d9dbcd33d7e35">
+                     <b id="caa0da26-69a8-4a97-9a3e-da9fda579cf5d7e36">Schritt 1</b>
+                  </cmd>
+                  <stepresult id="c7463007-5cb8-409b-b981-11e3464b5963d7e37">
+                     <p id="dc8ef2ab-88a4-4dac-a840-5354c7fce417d7e39">Die Valenzsequenz unterhalb der zugehörigen Knoten aufgeschrieben, ergibt diese Tabelle:</p>
+                     <pre id="294c97b8-3a5d-414c-87cb-103789ac1062d7e41" xml:space="preserve">v1  v2  v3  v4  v5  v6
+======================
+3   3   3   2   2   1
+    2   2   1   2   1</pre>
+                  </stepresult>
+               </substep>
+               <substep id="506b37a7-2a41-41e4-a7be-ea3f9deb009ed7e42">
+                  <cmd id="ac61cda2-44ea-44cf-bc42-1fe06bc69aafd7e44">
+                     <b id="44dbad47-e092-4bf8-9945-310ba9ceaef5d7e43">Schritt 2</b>
+                  </cmd>
+                  <stepresult id="38b42486-7a82-499a-8a5e-23078987991dd7e45">
+                     <p id="71edf5d2-25b1-45f1-b8f5-8951b1f2e9c2d7e46">Jetzt sortiert man die Sequenz neu und merkt sich dabei die Knotenbezeichner</p>
+                     <pre id="9d3d72cf-d482-4f8d-9a54-b0fbdf6546ebd7e50" xml:space="preserve">v1  v2  v3  v5  v4  v6
+======================
+    2   2   2   1   1
+        1   1   0   0</pre>
+                     <p id="8f9f6b22-c6a2-4acb-b2bc-a178125dd3a5d7e50">Schliesslich erhalten wir eine Kante zwischen den Knoten [[code:v3]] und [[code:v5]]... Mit dieser Information kann man sukzessive den Graphen grafisch aufbauen, indem man bis Schritt 1 zurückgeht.</p>
+                  </stepresult>
+               </substep>
+            </substeps>
+         </step>
+         <step id="360fb5ea-cbb5-4872-b56a-0606fdaa9c2bd7e54">
+            <note id="f3b57387-39b2-4581-ae13-358e7e593464d7e55">
+               <p id="37c7bd82-9aee-4056-8ac4-1fad63960d96d7e56">Mit dem Satz von Erdös und Gallai kann man mittels einer Formel prüfen, ob eine gegebene Valenzsequenz einen validen Graphen darstellt.</p>
+            </note>
+            <cmd id="fce31d17-4ca8-4b98-bb3d-fcd99981a350d7e58">Verfahren von Erdös und Gallai</cmd>
+            <stepresult id="567a08e4-f727-4786-92df-fc20b1cb000dd7e64">
+               <p id="35d152f8-c8cc-4bbb-b55a-0cd78099f844d7e65">Um zu  beweisen, dass es sich bei einer gegebenen Sequenz um <b id="6d4e4f5d-5c88-42b9-8741-50cb4a16ccc1d7e67">keinen</b> Graphen handelt, genügt es zu beweisen, dass für ein [[code:i]] die folgende Formel nicht erfüllt ist.</p>
+               <fig id="aa341b17-bf05-47df-bbc9-00cdd20caf14d7e66">
+                  <image href="images/erdoes_10.png"/>
+               </fig>
+               <p id="24f036f0-3010-4693-ba24-40829e3a8150d7e68">Die [[code:dj]] stellen dabei die Knotengrade der Sequenz an der Stelle [[code:j]] dar.</p>
+            </stepresult>
+         </step>
+      </steps>
+   </taskbody>
+</task>

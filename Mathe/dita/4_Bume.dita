@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="e7d97a12-98e7-4168-a435-051129cb76d4">
+   <title id="22d632f4-637e-489f-bc18-97bf0eaed207">Bäume </title>
+   <taskbody id="1ba0869c-2482-4655-8257-5f68568e7e72">
+      <steps id="3033e066-f31a-40e4-83e9-ebc1828f547d">
+         <stepsection id="73dbd8cc-7f5c-47db-a20e-e9965918a98dd7e5">
+            <p id="b645b5db-839b-42c8-9516-0f11e32bc5afd7e6">Ein Baum ist ein zusammenhängender Graph, der keine Kreise enthält. Viele Datenstrukturen sind
+als Baumstruktur realsiert, z.B. eine [[link]]Binärbaum[[fn:https://de.wikipedia.org/wiki/Bin%C3%A4rbau*Wikipedia-Artikel zum Binärbaum]] 
+auf Algorithmusebene oder XML auf Modellierungsebene.</p>
+         </stepsection>
+         <step id="e84086a9-073d-4f38-b17a-37f4cfb191aa">
+            <note id="d4681573-f4a4-433d-9d6e-fcaa6f864520d7e9">
+               <p id="5ae14f97-8a54-487c-9a0f-d0a76ee789e6d7e10">Ein minimaler ausfspannender Baum ist ein Teilgraph, der alle Knoten des Baums besucht, mit einer minimaler
+Anzahl von aufsummierten Kantengewichten - im Vergleich zu anderen aufspannenden Bäumen.</p>
+            </note>
+            <cmd id="7f25ff34-c25b-4969-9cec-fa8a6a432025d7e12">Zum Auffinden eines MST könnte man nach folgenden Algorithmus vorgehen:</cmd>
+            <substeps id="c923224d-5a32-468d-96ab-7319ce91512fd7e14">
+               <substep id="c36aef5c-070a-4f9b-bd5c-c2a753ff4e21d7e15">
+                  <cmd id="febd3f13-5305-4180-8b1c-af0dad2f009ed7e16">Zuerst ist die Menge MST leer</cmd>
+               </substep>
+               <substep id="a3a9b8dc-5146-4122-a1f4-52043c9110b5d7e18">
+                  <cmd id="281098de-07d3-40e0-a1ff-566bb7c6a18fd7e19">Sortiere die Kanten des Graphen mach aufsteigendem Kantengewicht</cmd>
+               </substep>
+               <substep id="062b7f67-0bae-43ee-b95a-f517fb95a846d7e21">
+                  <cmd id="8cc784fb-aac1-41f9-9153-36ca3c542338d7e22">Nimm die erste Kante weg und füge sie zu MST hinzu - nur wenn dadurch in MST kein Kreis entsteht</cmd>
+               </substep>
+               <substep id="c8ae794d-2a7b-4cb8-b6d9-fc2a721120c2d7e24">
+                  <cmd id="b78b6487-ed1a-4443-918b-0f8d458f60e9d7e25">ahre solange bis MST alle Knoten des Graphen enthält</cmd>
+               </substep>
+            </substeps>
+            <info id="3a0a6112-12ad-441e-b2dd-0410b1928a34d7e27">
+               <p id="b95f7fde-4a14-408c-af2f-6c95566da8c8d7e28">Ein Kantengewicht könnte z.B. ein Preis für eine bestimmte Rohstoffart sein, die nach einem 
+bestimmten Prozess (als Entscheidungsgraph modelliert) ein Ergebnisprodukt liefert.</p>
+            </info>
+         </step>
+      </steps>
+   </taskbody>
+</task>

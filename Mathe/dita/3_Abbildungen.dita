@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="585f8e52-94cf-40d9-82d0-5f971c51e73b">
+   <title id="282850e8-3145-43a8-a105-41a66405305a">Abbildungen</title>
+   <taskbody id="2da6c346-4716-4a81-8aa6-adfd6eb41133">
+      <steps id="bfec647e-f7a9-4b88-9397-4c8573ad4ecd">
+         <stepsection id="8d7f7ddb-e2cc-4d45-ab57-8f06c35e32b0d7e5">
+            <p id="cb8a91b2-3b85-4d0c-ad19-fcbc73a9666cd7e11">Hier geht es um Abbildungen - wie bei Funktionen wird eine Eigabe mittels einer Funktion (oder einem Programm) in eine Ausgabe überführt.</p>
+            <p id="6d0c5387-66cc-4bf2-83e8-d7bf7c019881d7e8">Wir unterscheiden zwischen injektiven, surjektiven und bijektiven Abbildungen. Bijektive Abbildungen sind beides, injektiv und surjektiv.</p>
+         </stepsection>
+         <step id="ee45a7f9-32c9-4b26-ae08-83d070df23f5d7e13">
+            <cmd id="4ba1af34-09d8-40cf-9117-65e4859baa7fd7e11">Surjektive Abbildungen</cmd>
+            <info id="608c082e-b427-40cc-bbb6-e97e24b39ba5d7e16">
+               <p id="3d3acba2-d038-41cb-b97a-3f58123a90c5d7e14">Bei einer surjektiven Abbildungen wird jedes Element der Bildmenge getroffen. D.h. es gibt keine "herrenlosen" Werte in der Ergebnismenge.</p>
+            </info>
+            <stepresult id="cae6d806-72a5-4290-ad79-a21d93abda0bd7e19">
+               <p id="e291f8ec-4f00-4363-a933-35dc611f1d0bd7e20">f(M) = N</p>
+            </stepresult>
+         </step>
+         <step id="6075991d-1af0-459a-95b9-6c8cfedb2325d7e22">
+            <cmd id="5b72baab-4727-4e18-b251-86757ad06a58d7e20">Injektive Abbildungen</cmd>
+            <info id="c5235a59-c197-4a25-8cb5-ae59a7381072d7e25">
+               <p id="cc658734-429a-485a-9619-8b3cbd198828d7e23">Bei einer injektiven Abbildung ist sichergestellt, dass ein Wert des Definitionsbereichs genau auf einen eindeutigen Wert des Bildbereichs abgebildet wird.</p>
+            </info>
+            <stepresult id="d4e948f2-0737-4659-8ce8-5640b12cf7aad7e28">
+               <fig id="a542a4ae-e27a-4ea5-92c1-6bed45405892d7e29">
+                  <image href="images/injektiv_8.png"/>
+               </fig>
+            </stepresult>
+         </step>
+         <step id="071c3a2b-28d9-4f49-8673-271c151d513ed7e31">
+            <cmd id="938b15d1-7453-41fb-b268-f8eaaa344946d7e29">Bijektive Abbildungen</cmd>
+            <info id="3c8bea82-8995-4ab9-8afd-ac3650d60fe6d7e31">
+               <p id="a3107b2f-aac7-4736-a9b9-c93a40b8de78d7e32">Bijektive Abbildungen sind injektiv und surjektiv</p>
+            </info>
+         </step>
+      </steps>
+   </taskbody>
+</task>

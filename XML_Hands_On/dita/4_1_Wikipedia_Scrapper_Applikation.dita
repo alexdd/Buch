@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="4ef71a8e-d651-4aa7-87b7-12c2bc7c88cf">
+   <title id="8c2e8b9f-b099-45ac-abeb-f4cfe90780e2">Wikipedia Scrapper Applikation</title>
+   <body id="1115f7f7-4bd4-4c0f-9f28-1748855cd004">
+      <p id="576f7e46-d6fe-4c45-8935-4325c9b1e87b">In diesem Kapitel wollen wir eine XSLT Transformation bauen, die während des Durchlaufs durch einen XML Baum Anfragen
+an ein XQuery Skript auf einem MarkLogic Server stellt[[xe1:Scrapper Applikation]]. Über einen GET Request wird ein Feld [[code:&lt;title&gt;]] zur Persistierung
+in einer ML Collection übertragen.</p>
+      <section id="fa67d9e6-4d28-4520-a4df-4165390e69cdd7e6">
+         <title id="26f96afa-a4ef-4021-ae5e-02e4b4b5ba2bd7e7">App Server Authentifizierung</title>
+         <p id="5f1879dc-9d01-4807-b7a9-f769be5eaca4d7e8">Um dieses Szenario realisieren zu können, müssen wir die Rechte in MarkLogic so einstellen, dass Webrequests ohne eine
+Authentifizierung akzeptiert werden. D.h. unsere Applikation ist also eher für den <i id="ec540a23-97e0-4c14-a58f-3e7794661260d7e11">internen</i> Gebrauch gedacht.</p>
+         <p id="a65990ed-6cb5-43f9-ab3f-4639a0f6fe1ad7e10">Da momentan der Saxon XSLT Prozessor die Auflösung von URIs dem Java URI Resolver überlässt[[fn:https://sourceforge.net/p/saxon/mailman/message/13252035/*Eine Diskussion zum Thema URI Resolver in Saxon mit Michael Kay]], dieser aber eine Authentifizierung mit Credentials in der URL, wie in</p>
+         <pre id="2fc81b2f-ebae-4921-a3f8-6074fcb02644d7e16" xml:space="preserve">fn:json-to-xml('http://admin:admin@localhost:8088')</pre>
+         <p id="b2d414ca-dbb8-4bd7-a290-2ee62738a1c9d7e14">noch nicht unterstützt, müssen wir die Authentifizierung für unsere MarkLogic Webapp ausschalten. </p>
+         <p id="eb055e99-1808-4045-ae33-3c2b070d9aa9d7e17">Dazu setzen wir 
+die Einstellung [[code:authentication]] unseres App Servers auf [[code:application-level]] und weisen 
+die Default-User Rolle einem [[code:admin]] Benutzer zu.</p>
+         <fig id="697f5e90-3278-4c46-acdb-0717512be2cfd7e16">
+            <title id="f894e48c-d81a-43a3-bf79-519e77725620d7e23">MarkLogic App Server Authentifizierung einstellen</title>
+            <desc id="5bb1ae83-b2ef-499e-a606-3ed068e41fdbd7e25">In der App Server Konfiguration kann man die Stufe einstellen, auf der der Zugriffsmechanismus greifen soll. Hier stellen wir [[code:application-level]] mit einem Admin-User ein, um für das Intranet die Authentifizierung auszuschalten.</desc>
+            <image href="images/authentication_13.png"/>
+         </fig>
+         <p id="80c0a1fc-808b-4072-9ee6-170a09798570d7e28">Eine ausgefeiltere Einstellung wird im Kapitel <xref href="45052c9e-d2a2-4879-b83b-921be879916f"
+                  id="61a3ef52-1666-4cef-8904-94a771e36241"
+                  type="topic">Dokument-Rechte in MarkLogic</xref> beschrieben.</p>
+      </section>
+      <section id="6468dbc6-9db3-4a96-acf4-97830086893cd7e33">
+         <title id="31bb527a-37a0-4f76-8d45-21cafa39b682d7e23">XML Eingabe</title>
+         <p id="6dd18dc1-9afd-480e-a464-e59690bd4e45d7e25">Damit das Experiment etwas aufregender wird, arbeiten wir mittels XML Streaming auf einem [[link]]Wikipedia Dump mit 5.3 GB 
+Filesize[[fn:https://dumps.wikimedia.org/enwiki/latest/*Listing aller XML Dumps von Wikipedia]]. 
+Das XML dazu sieht folgendermassen aus:</p>
+         <pre id="97c22f32-e039-4bdd-81d1-907ef976cd78d7e38" xml:space="preserve">&lt;mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ 
+                                 http://www.mediawiki.org/xml/export-0.10.xsd" 
+             version="0.10" 
+             xml:lang="en"&gt;
+    
+   &lt;siteinfo&gt;
+     &lt;sitename&gt;Wikipedia&lt;/sitename&gt;
+     &lt;dbname&gt;enwiki&lt;/dbname&gt;
+     &lt;base&gt;https://en.wikipedia.org/wiki/Main_Page&lt;/base&gt;
+     &lt;generator&gt;MediaWiki 1.29.0-wmf.12&lt;/generator&gt;
+     &lt;case&gt;first-letter&lt;/case&gt;
+     &lt;namespaces&gt;
+       [...]
+     &lt;/namespaces&gt;
+   &lt;/siteinfo&gt;
+   &lt;page&gt;
+     &lt;title&gt;AccessibleComputing&lt;/title&gt;
+     &lt;ns&gt;0&lt;/ns&gt;
+     &lt;id&gt;10&lt;/id&gt;
+     &lt;redirect title="Computer accessibility" /&gt;
+     &lt;revision&gt;
+       &lt;id&gt;631144794&lt;/id&gt;
+       &lt;parentid&gt;381202555&lt;/parentid&gt;
+       &lt;timestamp&gt;2014-10-26T04:50:23Z&lt;/timestamp&gt;
+       &lt;contributor&gt;
+         &lt;username&gt;Paine Ellsworth&lt;/username&gt;
+         &lt;id&gt;9092818&lt;/id&gt;
+       &lt;/contributor&gt;
+[...]</pre>
+         <p id="f129ec1b-fe68-4988-8c4d-08c026d68426d7e29">Wir wollen alle Titel in einer Datenbank speichern, deshalb wird auf das [[code:&lt;title&gt;]] Element gematcht.</p>
+      </section>
+      <section id="7c57447d-1c12-4e0e-80ad-31c570b76563d7e42">
+         <title id="3280fe65-9223-4be1-a701-c9fb4492e97ad7e32">XSLT Transformation</title>
+         <p id="59a44429-ec61-4c13-8df9-0c793e0e27a1d7e34">Die Streaming Transformation mit dem <xref href="b308e60a-c7f3-4143-8e04-6c0d3bd4df01"
+                  id="d4f27d64-4f58-4806-985d-e8789dd7e1e1"
+                  type="none">Iterator Konzept</xref> sieht so aus:</p>
+         <pre id="05b0a9bb-f33a-4746-be7b-be6768c61d9dd7e50" xml:space="preserve">template name="main"&gt;
+  &lt;xsl:source-document href="{$input-file}" streamable='yes'&gt;
+    &lt;result&gt;
+      &lt;xsl:iterate select="page/title"&gt;
+        &lt;xsl:variable name="json-call" select="json-to-xml(
+                                               unparsed-text(
+                                               concat($server-url,'/scrap-title.xqy?',
+                                                      'title=',encode-for-uri(.))))"/&gt;
+        &lt;state&gt;
+          &lt;xsl:sequence select="$json-call/descendant::*[@key='state']/text()"/&gt;
+        &lt;/state&gt;
+      &lt;/xsl:iterate&gt;
+    &lt;/result&gt;
+  &lt;/xsl:source-document&gt; 
+&lt;/xsl:template&gt;</pre>
+         <p id="f7792c35-e547-4831-a33c-1aa82b3b2522d7e47">Hier werden in einer Ergebnis Struktur mit einem [[code:&lt;result&gt;]] Element einzelne [[code:&lt;state&gt;]] Elemente ausgegeben.</p>
+         <p id="1c224b68-20cf-4ba8-8eb6-a857aaa844aad7e49">Der Inhalt dieser Elemente ist Rückgabewert eines Webrequests über die Funktion [[code:fn:unparsed-text()]].</p>
+         <p id="b76788d3-14db-4d61-89e2-b44d27226b5cd7e51">An das Skript [[code:scrap-title.xqy]] wird ein Parameter [[code:title]] übergeben:</p>
+         <pre id="97527e04-45dd-4caa-a4a6-77ed5164ea0fd7e58" xml:space="preserve">xquery version "1.0-ml";
+
+import module namespace json = "http://marklogic.com/xdmp/json" 
+                            at "/MarkLogic/json/json.xqy";
+
+declare namespace local = 'local:';
+declare variable $title := xdmp:get-request-field('title');
+
+declare function local:render-response($response)
+{
+  xdmp:add-response-header("Pragma", "no-cache"),
+  xdmp:add-response-header("Cache-Control", "no-cache"),
+  xdmp:add-response-header("Expires", "0"),
+  xdmp:set-response-content-type('text/json; charset=utf-8'),
+  xdmp:unquote($response)
+};
+
+let $root := &lt;title&gt;{ $title }&lt;/title&gt;,
+$options :=
+&lt;options xmlns="xdmp:document-insert"&gt;  
+  &lt;permissions&gt;{ xdmp:default-permissions() }&lt;/permissions&gt;
+  &lt;collections&gt;
+    &lt;collection&gt;/wikimedia-titles&lt;/collection&gt;
+  &lt;/collections&gt;
+&lt;/options&gt;,
+$fname := concat('/wikimedia-titles/', xdmp:md5($title), ".xml"),
+$td := xdmp:document-insert($fname, $root, $options)
+return 
+  local:render-response(concat('{"state":"success","title":"',$title,'"}'))</pre>
+         <p id="0d709888-40c3-4e74-a6fb-7a3f30552a4ad7e55">Wenn alles gut läuft, sollte die Transformation nach einer halben Stunde abgeschlossen sein. Es sollten sich in der</p>
+         <p id="93c85208-bd17-44f3-b8c6-b8f7a8cb1eeed7e57">Collection [[code:/wikimedia-titles]] viele Einträge befinden, mit Dateinamen wie:</p>
+         <pre id="7e6c0d2f-c9ac-4913-b45c-01ac88340b6dd7e64" xml:space="preserve">&lt;fname&gt;/wikimedia-titles/b00bb36cf9dd18f12141f463f59947e6.xml&lt;/fname&gt;</pre>
+      </section>
+   </body>
+</topic>

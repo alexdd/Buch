@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><map title="Professional Record">
+   <topicmeta id="7a350774-d0b7-43d9-a30f-95e72b7407ab">
+      <navtitle id="2a1dd2ca-8f06-42bc-a348-90e73108e843">XSL, Python, Django, NodeJS</navtitle>
+      <shortdesc id="bd5176d3-ae97-48b6-843e-5a3ad3aa32d8">Short Description</shortdesc>
+      <keywords id="9a0e0a7c-025b-4d6b-9abc-d0cbeece94f7">
+         <keyword id="b71458b4-a3fc-437f-851a-52f9997dcc8d">Keyword 1</keyword>
+         <keyword id="fe84b55c-3be7-40fe-b408-31733a3cba3a">Keyword 2</keyword>
+         <keyword id="eb4f1961-4a73-44e7-9ba3-1d7be828eef9">Keyword 3</keyword>
+      </keywords>
+   </topicmeta>
+   <topicref id="c9672fcc-5ec3-4f9e-a650-193c891361a9" href="1_Introduction_(imported).dita" navtitle="Introduction (imported)"/>
+   <topicref id="90296cc9-315f-489e-80bf-8fae3e3ce523" href="2_Technical_Skills_(imported).dita" navtitle="Technical Skills (imported)"/>
+   <topicref id="300d6508-825c-4de2-b309-7eaaa97f98f3" href="3_Relevant_Experience_(imported).dita" navtitle="Relevant Experience (imported)"/>
+   <topicref id="72dc39de-c975-49ca-a18e-87d0d35f8e82" href="4_Side_Projects_(imported).dita" navtitle="Side Projects (imported)"/>
+</map>

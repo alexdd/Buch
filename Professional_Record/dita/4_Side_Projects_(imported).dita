@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="1bfb60da-5c36-438d-95a6-bd7abf2d32f4">
+   <title id="80f4ebcd-6bbb-4e9e-b35b-85e9d1529dfb">Side Projects</title>
+   <body id="7b86b5ab-d7cf-4bd0-8878-f263df88b666">
+      <p id="f8dba5b0-e545-4297-88cb-d556f93b7e32d7e4">Over the last 20 years I have worked on many small side projects. The two most successful one's (in terms of impact on my skills) are listed below.</p>
+      <section id="fe2b55e0-5015-4ff9-abeb-f5c9bc208930d7e6">
+         <title id="1c17a2e2-5ace-4428-b3f0-debbb4f7e9f9d7e5">Tektur CCMS</title>
+         <table id="fe2a601c-086d-4030-a01d-94de1e3f2d7ed7e4" pgwide="1" frame="all">
+            <tgroup id="6c562553-6282-4c57-82de-9681bb67fa91d7e10" cols="2">
+               <colspec id="ae9dcc9c-83a9-4fdf-a561-f9e52aed5b5cd7e11" colwidth="" colname="col0"/>
+               <colspec id="54db23dc-9532-4a11-adf3-9e4c8050d03ad7e12" colwidth="" colname="col1"/>
+               <thead id="7b1011a8-5c84-465d-a83a-b144e25d50aed7e13">
+                  <row id="7a98b6c7-d0a1-40cc-99c8-93ab42f544a7d7e14">
+                     <entry id="aca4a847-9cff-468a-ba84-0469acfd53a5d7e15" colname="col0" width=""/>
+                     <entry id="5c7ba74d-ab2b-4ce8-8285-e64fb76482bfd7e16" colname="col1" width=""/>
+                  </row>
+               </thead>
+               <tbody id="02e897e1-86ba-476e-8a32-7c18752c4dfbd7e17">
+                  <row id="dc860833-8a71-4285-ab0e-c6dd0a2e3cd9d7e18">
+                     <entry id="b1c555ce-b1b7-48fd-bdcb-84e015a020dcd7e19" colname="col0" width="">
+                        <p id="efa8fc73-e007-4739-a4c3-ce08b488d890d7e17">2016/08 - 2019/12</p>
+                     </entry>
+                     <entry id="872e7e36-22cf-4cd9-bc3d-0c9fd6e10d2dd7e22" colname="col1" width="">
+                        <p id="0bd96d5c-1524-4efd-bed1-af224cb6ce64d7e20">www.tekturcms.de</p>
+                        <p id="e8ffd46d-82f9-4ea8-99f2-5026b63ec1c0d7e25">www.publiziere.de</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="92b20fb8-bca9-41e1-9578-429d2ff57ce0d7e23">
+            <i id="9ebf14f5-bde5-4ce3-a83f-2b243e7c399ed7e24">DITA Publishing + Review &amp; Approval - Tektur is an easy-to-use browser-based CCMS system.</i>
+         </p>
+         <ul id="387bfd03-5143-4b2c-8fae-16cbe42ddf66d7e26">
+            <li id="f1d16bf3-6ce7-4a13-b332-48a875c79579d7e27">
+               <p id="5ce1b27b-1e2c-48b2-854f-e7cc07964154d7e28">
+                  <b id="91844a99-7121-410d-bd31-3adced31a714d7e29">Technology:</b> NodeJS / Express, MongoDB, XML / XSLT / XSL-FO</p>
+            </li>
+            <li id="d278c7de-b658-4edc-bb00-2a60e03ef0acd7e37">
+               <p id="52f3f277-6b11-41d5-834f-d09188a6317ed7e38">
+                  <b id="3332844e-e907-4d81-9c78-903939847e27d7e39">Status:</b> Production-ready prototype that would need a bit of polishing</p>
+            </li>
+         </ul>
+         <p id="f64dd0af-bb93-42e2-8024-f227eabfa609d7e44">Some random screenshots:</p>
+         <fig id="7626c051-9e2a-4f30-aaf0-da72ad71ee47d7e48">
+            <desc id="9abfd6bc-6267-475f-b641-efffbd600971d7e44">Approver can change the state of a discussion:</desc>
+            <image href="images/tektur_1_12.png"/>
+         </fig>
+         <fig id="c41def1c-3ab6-4af5-8a95-50708b2a13b5d7e52">
+            <desc id="0d4906ea-5e44-47e9-80f3-62c3cf6d4cd6d7e48">Reader's view with TOC and discussion panel:</desc>
+            <image href="images/reader_view_13.png"/>
+         </fig>
+         <fig id="57cf7681-ff61-4354-8a7f-049b45f2f3f3d7e56">
+            <desc id="6755a61b-0a28-41ef-aa2d-2c7efef69cc0d7e52">Document listing with many optional settings:</desc>
+            <image href="images/document_listing_14.png"/>
+         </fig>
+         <fig id="f24d063d-af2f-4a6a-bd7c-f8c36491974fd7e60">
+            <desc id="1ce7c9c5-5618-4705-bdac-b5834eeda1ded7e56">Editor view showing a "tag-less" XML editor featuring the DITA content model:</desc>
+            <image href="images/editor_view_15.png"/>
+         </fig>
+      </section>
+      <section id="b53f26c5-5d9d-44fd-bf95-c431e90a879ed7e59">
+         <title id="6159c00d-eea8-48c4-b960-ec7722a7b3f1d7e49">Pushbox</title>
+         <table id="fe2a601c-086d-4030-a01d-94de1e3f2d7ed7e4" pgwide="1" frame="all">
+            <tgroup id="c100635e-6d15-42b5-9b0f-9f18ef8028cad7e63" cols="2">
+               <colspec id="81e71b06-4e36-4978-8483-d6241d2756a0d7e64" colwidth="" colname="col0"/>
+               <colspec id="d2adaadb-320f-4562-a175-1f54d289cb9ed7e65" colwidth="" colname="col1"/>
+               <thead id="5e4e0094-90d6-4289-bbb4-079815336125d7e66">
+                  <row id="98df8bf9-bdd2-441b-a04c-d8b3aba31781d7e67">
+                     <entry id="ab6e6d07-0b86-42b5-b238-42be0fa39c5bd7e68" colname="col0" width=""/>
+                     <entry id="7ed337c2-ebb8-48e0-9e03-0a653aa57088d7e69" colname="col1" width=""/>
+                  </row>
+               </thead>
+               <tbody id="e3103010-7b05-4627-8545-5dab7051a0cbd7e70">
+                  <row id="675fa655-993a-4f19-a8fa-c615431803a8d7e71">
+                     <entry id="c5eafb4d-948f-4d41-b2c4-9b8e14439647d7e72" colname="col0" width="">
+                        <p id="efa8fc73-e007-4739-a4c3-ce08b488d890d7e17">2005/04 - 2005/12</p>
+                     </entry>
+                     <entry id="e778abc1-f0cf-4596-8e05-093c63076475d7e75" colname="col1" width="">
+                        <p id="0bd96d5c-1524-4efd-bed1-af224cb6ce64d7e20">PushBox - free-to-play cellphone game</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="d39e68d9-4704-4bee-8ecc-3532b1671f78d7e67">
+            <i id="a261f3c0-d2cd-482f-bdb8-46fc812e5dfed7e68">Cellphone game that scored more than 10000 downloads in 2005. It was featured on many websites, e.g. Softonic.</i>
+         </p>
+         <ul id="80dfe34d-bce9-4bbc-82cb-60dd14a78233d7e69">
+            <li id="64f6b3a8-ed5f-4203-affa-de952b3043add7e70">
+               <p id="e6ed4386-6558-4e15-9742-cf30a5efae98d7e71">
+                  <b id="9ee64ca3-5a32-415d-8f2a-93194f0b2e84d7e72">Technology:</b> Java / J2ME / MIDP</p>
+            </li>
+            <li id="5d14e476-cecb-4473-a5b5-a354472975c0d7e75">
+               <p id="32b1beed-5cf7-4b7e-a727-269ede660e9bd7e76">
+                  <b id="d4225a7d-94ec-4611-b3c7-74842c31e2a5d7e77">Game design:</b> Sokoban clone on a scrollable isometric map with 33 levels included</p>
+            </li>
+            <li id="2a507b44-294c-4b0b-8265-0921adb34649d7e80">
+               <p id="0506f496-97f5-4680-8b97-b50bd10c625cd7e81">
+                  <b id="c3892c67-daa3-418d-b746-865523a8b033d7e82">Status: </b>Production-ready 100% bug free</p>
+            </li>
+         </ul>
+         <fig id="8a6265df-73e5-4eea-9eae-490d4ec372fed7e85">
+            <desc id="c0b663f1-f369-41cb-ae42-675dac19d926d7e98">There's a speaking-Young-Alex-animation at game start:</desc>
+            <image href="images/introde_new_7.gif"/>
+         </fig>
+         <fig id="7c838a1d-1254-4bca-8077-533c25abc8b4d7e87">
+            <desc id="deeeec43-e863-44c6-be27-33f8c7ceec05d7e102">A teaser animation automatically moves the player sprite around:</desc>
+            <image href="images/startde_new_8.gif"/>
+         </fig>
+         <fig id="45064b8c-f1b1-4f86-b62e-c9cf2eabd479d7e89">
+            <desc id="560c439b-2f0e-483c-af07-5045916bf77dd7e106">Select one of 33 levels in the level-select screen:</desc>
+            <image href="images/levelselde_new_9.gif"/>
+         </fig>
+         <fig id="390556a1-d92d-4a2b-9e39-50048bb814a5d7e93">
+            <desc id="8d1ae94d-a901-460f-a5f5-5742535b5806d7e110">Reward animation when level completed:</desc>
+            <image href="images/winde_new_11.gif"/>
+         </fig>
+      </section>
+   </body>
+</topic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="40a639ea-9dea-4971-815a-ad610eee748d">
+   <title id="6a604f84-5868-470f-a91e-7dc8515f6f85">Quellcode-Versionskontrolle</title>
+   <body id="79d688f6-0c03-45fa-aa55-dd5359ff2c76">
+      <p id="7c2a4680-c913-41a1-be19-84dc1d9eddfa">Um Zurückverfolgen zu können, was man an den Kunden ausgeliefert hat, welche Meilensteine auf dem Weg zum fertigen
+Produkt zurücklegt wurden - und ganz allgemein, um den Überblick über Quellcodeänderungen zu behalten, empfiehlt sich der Einsatz eines Versionskontrollsystems.</p>
+      <p id="04bb56d8-c8cc-480a-970a-744cf3189534d7e6">Mittlerweile ist <b id="282957b3-f189-484f-a39e-a37150523ff5d7e8">GIT</b> vom Linux Erfinder Linus Toralds das Mass aller Dinge. Je nach Anwendungsfall gibt es aber auch (historische) Alternativen.</p>
+   </body>
+</topic>

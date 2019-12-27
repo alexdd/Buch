@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="407f39ea-1c29-403f-9eac-adc838db5be0">
+   <title id="03ebb1e1-6fd0-411e-8293-057580fe5cfc">Wahrscheinlichkeiten</title>
+   <taskbody id="a52ad8ed-3094-44b6-b86a-cd5a4002bf77">
+      <steps id="20783e46-4f26-48a3-a69f-8a3f11705a50">
+         <stepsection id="9b766dcc-0d98-4b94-8fd0-57e7e296946ad7e5">
+            <p id="66e9b960-8e55-4a76-bea3-7fcea1807162d7e6">In diesem Abschnitt ist zentrale Formel die Berechnung des Binominalkoeffizienten, mit dem man ausrechnen kann, auf wieviele verschiedene Arten man eine Teilmenge - mit einer fixen Zahl von Elementen - aus einer Obermenge auswählen kann. Das gewählte Beispiel mit den Kleidungsstücken ist mir willkürlich eingefallen. Der Klassiker ist natürlich das sogenannte [[link]]Urnenmodell[[fn:https://de.wikipedia.org/wiki/Urnenmodell*Wikipediaseite zum sog. Urnenmodell]].</p>
+            <fig id="6d9c947a-ede7-4d95-9cef-a90b5ad1d7cdd7e8">
+               <title id="50f5463c-f308-4895-a1ab-d03519ba324dd7e9">Binominalkoeffizient als Bruch geschrieben</title>
+               <desc id="a7c1ab7d-3c58-411c-b413-154d89483ecad7e11">Der Binominalkoeffizient, kurz <i id="3232ec10-611f-474c-b1b4-4edaa99b983bd7e13">n über k</i>, hat [[code:k!]] im Nenner und im Zähler die "Umkehrung bis n" - das ist jetzt meine Eselsbrücke - diesen Ausdruck wird man in der Literatur wohl so nicht finden...</desc>
+               <image href="images/binominmalkoeefizient_5.png"/>
+            </fig>
+         </stepsection>
+         <step id="80486b0c-beaf-4dca-8f60-0538b2c088ca">
+            <cmd id="b6536735-fba1-400f-8f4c-e6a60c57ae65d7e18">Variation mit Wiederholung</cmd>
+            <info id="2a26842a-2a05-4ced-9ee0-7f54c1ceeb01d7e8">
+               <p id="837c6124-8efe-42e7-960c-32e4d64b30bdd7e21">Klassisches Abzählproblem: Auf wieviel verschiedene Arten können
+sich 12 Personen kleiden, wenn insgesammt 8 verschiedene
+Kleidungsstücke pro Person zur Auswahl stehen und alles getragen
+werden muss?</p>
+            </info>
+            <stepresult id="7802ea9e-a500-4c43-a6c3-9b8ceb8d2f59d7e11">
+               <p id="467d7f16-a46c-4821-80b2-496b90c1509bd7e12">8<sup id="d4567c55-f398-4d9c-94fc-29b436c71e1ed7e26">12</sup>
+               </p>
+            </stepresult>
+         </step>
+         <step id="3ab6d9e0-69b1-49ea-a7b0-f51738921f57d7e16">
+            <cmd id="4f81738a-35c4-4c50-849e-93ab735d5953d7e29">Variation ohne Wiederholung</cmd>
+            <info id="d8299f3d-5c59-4d91-b2f7-7059a919258ad7e19">
+               <p id="509aea28-3cb8-41df-8ef4-8ac8abe7c8abd7e32">Beispiel wie vorher, allerdings zieht jede Person nur ein Kleidungsstück an und es stehen nur ingesamt 20 zur Verfügung.</p>
+            </info>
+            <stepresult id="bc2ffbd3-a93e-4e3c-8d31-3df5e9802f1bd7e22">
+               <p id="4e0024e5-8929-40f3-98c8-66935c0c86a6d7e23">20*19*18*17*16*15*14*13*12*10*8*7</p>
+            </stepresult>
+         </step>
+         <step id="1b4dc296-7354-46a7-adf8-951a07dab18dd7e25">
+            <cmd id="97b24992-b0d6-4f86-9863-5e8f3093ae10d7e38">Kombination mit Wiederholung</cmd>
+            <info id="fe2fd01a-0efe-456a-93e6-53d2772ce936d7e28">
+               <p id="32067437-4b0e-4b07-935a-e5268ed169dad7e41">Es stehen 20 Kleidungsstück-Arten zur Verfügung und die Personen können mehrere übereinander anziehen und auch dieselben, aber maximal 4. Auf wieviel verschiedene Arten kann sich die Gruppe kleiden?</p>
+            </info>
+            <stepresult id="e0d08a5f-8388-4bb3-87d4-9549479cb90ed7e31">
+               <fig id="cff4bdef-20ab-4d12-add4-eabf93289a4ed7e32">
+                  <image href="images/kombi_mit_whd_3.png"/>
+               </fig>
+            </stepresult>
+         </step>
+         <step id="3d1e9fc1-9865-4ed1-9811-92e3bef5fabfd7e34">
+            <cmd id="3390fd23-38c3-41e7-b853-c74364119c48d7e47">Kombination ohne Wiederholung</cmd>
+            <info id="06825fd4-bf00-40ac-a2a2-575729dec303d7e37">
+               <p id="9e2941cb-bc16-4b2e-aa49-8e95175d6a6dd7e50">Gleiches Szenario wie vorher, jedoch stehen nicht unendlich viele Kleidungsstücke zu Verfügung, sondern nur 20.</p>
+            </info>
+            <stepresult id="da8eaa9f-91e2-4fec-96d4-cf69e969f012d7e40">
+               <fig id="973f424c-de28-4889-8bed-6638b902dcd3d7e41">
+                  <image href="images/kombi_ohne_whd_4.png"/>
+               </fig>
+            </stepresult>
+         </step>
+         <step id="d331722d-ec1f-4087-9e39-16550f9b1d11d7e55">
+            <cmd id="0307960b-0f72-4294-8831-25509b1d5c07d7e56">Permutation</cmd>
+            <info id="9e465f2d-db03-42ea-80bc-01e8cf90ee02d7e58">
+               <p id="cb26bc15-1ce9-4c2a-a103-b92d48ae5424d7e59">Für die 8 verschiedenen Personen stehen 8 Badehosen zur Verfügung, die alle eine unterschiedliche Farbe haben. Jede Person will bekleidet sein, wieviele verschiedene Möglichkeiten der Zuordnung gibt es?</p>
+            </info>
+            <stepresult id="70a7165c-d2e9-4813-b136-577a208dcb5ad7e61">
+               <p id="97c6b9c2-746e-43ee-867b-aca90d624411d7e62">8!</p>
+            </stepresult>
+         </step>
+         <step id="0c0b3056-fe42-4e17-8e48-bbdcc4a7f099d7e64">
+            <cmd id="f4aa9588-bb04-4a36-806b-5baca2fa49c3d7e65">Fixpunktfreie Permutation</cmd>
+            <info id="49941ce8-610e-4a2f-bc63-2bf6d4e6129dd7e67">
+               <p id="d86a2c46-a835-4552-bf05-32980f9f0092d7e68">Wenn wir nun davon ausgehen, dass jede der 8 Personen eine Lieblingsfarbe hat - wir aber keinen bevorzugen wollen - also erreichen wollen, dass jeder eine Badehose anzieht, die nicht in seiner Lieblingsfarbe ist, wieviele Möglichkeiten der Bekleidung gibt es dann?<i id="f8badb79-d8c0-455f-82cf-08ea70b92e9cd7e71">Abstrakt gesehen wollen wir die "fixpunktfreien Permutationen" zählen.</i>
+               </p>
+            </info>
+            <stepresult id="5123f422-6bc2-459b-a56b-3982933e7f3fd7e73">
+               <fig id="9c20e315-ac95-4e54-b3bf-b20a3d3cc531d7e74">
+                  <image href="images/fixpunkt_frei_6.png"/>
+               </fig>
+               <p id="32c67758-74b5-477f-b811-9dd5bf5e4d5ad7e75">Auf die Formel kommt man, indem man die diejenigen Permutationen zählt, die eine bestimmte Anzahl [[code:k]] von Elementen fest lässt. Das sind genau die Permutationen der übrigen [[code:n-k]] Elemente, also [[code:(n-k)!]] Stück. Mit Hilfe von ein bisschen Mengenleere und dem <b id="014a4d49-d63a-431b-847d-c9aa9a760587d7e77">Satz von Inklusion und Exklusion</b> kann man dann die Formel weiter herleiten.</p>
+            </stepresult>
+         </step>
+         <step id="4ebbe786-04db-4080-a6f2-9a25d1b45115d7e80">
+            <cmd id="3a24d093-73fd-441b-866c-42e66702b9d7d7e81">Zerlegung einer Permutation</cmd>
+            <info id="18820dbf-95d3-416f-afb4-065cf4164897d7e83">
+               <p id="c41a19f4-4a96-483f-9a71-681364db0769d7e84">
+                  <i id="11d4bc9e-436b-4810-8011-5480bb3c1273d7e85">Jede Permutation lässt sich in disjunkte Zyklen zerlegen</i>. Für unser Bekleidungsbeispiel könnte man sich das so vorstellen, dass jede Person ihre Badehose auszieht und diese an eine bestimmte, zuvor schon fest ausgesuchte Person weitergibt.</p>
+            </info>
+            <stepresult id="d520fab1-9a83-4179-a283-7db8d108ef54d7e88">
+               <p id="dc3326b0-5fc2-4062-ba14-4bae476b4943d7e89">Wären die Zyklen nicht disjunkt, so könnte es vorkommen, dass eine Person nackt dasteht und eine Person mehrere Badehosen übereinander trägt.</p>
+               <pre id="758b8055-8a7b-4385-a1a5-edf7e048eac8d7e91" xml:space="preserve">
+=================================
+Alex | Horst  |  Anne  | Sepp   
+---------------------------------
+rot  |  grün  |  blau  | braun    
+grün |  blau  |  braun | orange  
+=================================
+Dieter| Gerd    | Alfons | Jutta
+---------------------------------
+orange| schwarz | gelb   | ocker
+ocker | gelb    | schwarz | rot</pre>
+               <p id="46f31e15-3c6d-4174-85d1-4fc6b8b289b4d7e93">Betrachten wir die folgenden zwei Zuordnungen, welche eine Permutation darstellen. Zerlegt in Zyklen bekommen wir:</p>
+               <p id="901cf55d-2526-4dfa-98a3-86d49dc268f8d7e95">[[code:&lt;rot, grün, blau, braun, orange, ocker, rot&gt;]] als ersten Zyklus und [[code:&lt;schwarz, gelb, schwarz&gt;]] als zweiten Zyklus. </p>
+            </stepresult>
+         </step>
+         <step id="440b5648-3af8-457d-8c6e-5cc83e2fec14d7e97">
+            <cmd id="c8161d50-7818-49f1-bf7f-1c6d836c5f6fd7e98">Lottoziehung</cmd>
+            <choices id="8fcc11d6-806f-4e9b-bf41-4491ed2c94edd7e100">
+               <choice id="8a92833e-deff-49a9-9495-9ba89f28e817d7e101">
+                  <p id="acca3282-024f-4191-8d80-859afabd8d5dd7e102">Der Klassiker in der Wahrscheinlichkeitsrechung ist die Lottoziehung. Jeder weiss, dass die Wahrscheinlichkeit einen 6er im Lotto zu haben irgendwas mit [[code:1:14 Mio]]? ist. Das entspricht einer Kombination ohne Wiederholung bzw. dem Binominlakoeffizienten "n über k" - 49 über 6 - oder "Wie oft kann man eine unterschiedliche 6-elementige Teilmenge aus einer 49-elementigen Menge auswählen?</p>
+               </choice>
+               <choice id="9545c87e-30dc-441e-b370-44ef60a37d6ed7e104">
+                  <p id="80bcde08-b24c-4d2b-8f50-d62c2af86b02d7e105">Ist die Aufgabenstellung dagegen etwas anders gestellt, sieht man sich schnell mit komplizierteren Abzählungen konfrontiert, bspw: <b id="0ffa0cbe-f831-4cbc-b011-a7797eb8d1a4d7e113">Wie hoch ist die Wahrschlichkeit 5 Richtige mit Zusatzzahl zu bekommen?</b>
+                  </p>
+                  <fig id="7449fa94-71a7-4735-aaf0-da23fb693503d7e115">
+                     <desc id="69507776-8a4a-4f05-a34f-1dca957ed34cd7e110">Für die Ziehung der Superzahl hat man 10 Möglichkeiten, da diese zwischen 0 und 9 liegen muss. Kombinert mit der Gesamtwahrscheinlickeit und unter Berücksichtigung, dass tatsächlich nur eine Möglichkeit gezogen wird, berechnet sich die Wahrscheinlichkeit für das erfolgreiche Ereignis anhand dieser Formel:</desc>
+                     <image href="images/alle-mit-superzahl_7.png"/>
+                  </fig>
+                  <p id="03d64ad0-469d-4afb-9941-cc6d85c83cedd7e119">Das klärt aber noch nicht die Aufgabenstellung. Offensichtlich gibt es bei der <b id="58802e7d-1b9b-4989-8136-b914139c6794d7e121">5 mit Zusatzzahl</b> mehr als eine richtige Gewinnnkombination. Diese Kombinationen müssen wir zählen und durch die Anzahl aller Ereignisse teilen, um auf die gesuchte Wahrscheinlichkeit zu kommen.</p>
+               </choice>
+            </choices>
+            <stepresult id="b500f420-6743-4747-b3d1-d83c1a9d730bd7e124">
+               <p id="db916dab-1627-4127-b2a6-06127940dd58d7e125">Für einen Lotto-5er gibt es <b id="24005915-0368-4889-a297-66170899b1b6d7e127">6*43</b> Möglichkeiten = <b id="0d005d11-f882-4073-ba96-7441caed4e5bd7e130">258</b>. Also ist die Wahrscheinlichkeit <b id="3dbea3dc-1d6e-4d7f-b7e1-ac62685018a7d7e127">258 / 139838160</b>, was wohl sehr, sehr unwahrscheinlich ist - ohne das jetzt näher auszurechnen.</p>
+            </stepresult>
+         </step>
+      </steps>
+   </taskbody>
+</task>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="64e2c429-6836-44f8-9b53-af2692ba49f0">
+   <title id="81e11338-11b3-42c9-917d-d3f9d4bffb12">Transformationen mit XSLT</title>
+   <body id="b27a2c9b-ba11-4811-af64-3cbfce48c664">
+      <p id="3d386b11-25a9-44ed-a2c5-81df086412c6">XSLT ist die Standardlösung für XML Transformationen. Es gibt zwar einige exotische Lösungen, wie:</p>
+      <ul id="10d7659a-1ee9-47c5-9370-1bfa8b34c90dd6e6">
+         <li id="b19838d4-2109-47b4-ae1c-e08f14f80333d6e7">
+            <p id="002fe486-1e23-4b4d-ab09-941b91a814d5d6e8">
+               <undefined id="538b0aea-451b-474a-ab72-33a03e5638edd6e9" href="undefined">[[link]]</undefined>Metamorphosis<undefined id="637314cc-588a-404d-aade-40f6251755a1d6e12" href="undefined">[[fn:https://de.wikipedia.org/wiki/XSL_Transformation#MetaMorphosis*Wikipedia Eintrag zu dem XML Prozessor Metamorphosis]] ist eine proprietäre Sprache der Firma Ovidius GmbH in Berlin. Sie findet hauptsächlich Anwendung im Bereich Publishing in der Luftfahrt / Verteidigung.</undefined>
+            </p>
+         </li>
+         <li id="b6a37743-9eb2-4da9-bd1e-82e2ab9631ffd6e14">
+            <p id="df420ef2-f293-40cc-9c0e-ee2926bcc5a1d6e15">Es gibt auch auch Spielereien, wie eine Nachbildung der XSLT Syntax in Erlang: [[link]]xmerl_xs[[fn:http://erlang.org/doc/man/xmerl_xs.html*Dokuseiten zum Modul xmel_xs, mit dem man in Erlang wie in XSLT "programmieren" kann]]</p>
+         </li>
+      </ul>
+      <p id="cf2e40a3-e62f-4a90-980a-e27b751bb842d6e17">In diese Kapitel werden einige ausgewählte Themen zur XML Prozessierung mit XSLT dargestellt. Dabei geht es weder um Vollständigkeit, noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz - so wie ich die Sache halt angehen würde ...</p>
+   </body>
+</topic>

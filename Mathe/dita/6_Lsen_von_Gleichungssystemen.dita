@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="6c23a7e2-d07f-4c54-aa6d-e962aa980c55">
+   <title id="6a462d63-5231-46d2-82b4-23fd8480226b">Lösen von Gleichungssystemen</title>
+   <body id="177c4a35-af48-442f-9dd5-3619e0254f9e">
+      <p id="30cedd92-2614-4b37-8867-a32d8972b92d">Gleichungssysteme kann man lösen, indem man schrittweise nach einer 
+Variablen auflöst und diese dann in den anderen Gleichungen einsetzt.</p>
+      <p id="ba56ee11-04bf-4182-b7dd-d80c326bcf76d7e6">Mit diesem Vorgehen gelangt man schnell in eine Sackgasse, wenn man mit 
+der falschen Variablen anfängt, oder die Gleichung zu komplex ist.</p>
+      <p id="5727318d-00d4-4d76-8c5b-a934d839ffb8d7e8">Es gibt verschiedene algorithmische Verfahren, wie man dieses Problem 
+gut in den Griff bekommen kann.</p>
+      <section id="f15428d8-d231-403e-a0dc-15738a7601e0d7e10">
+         <title id="8bf66870-fceb-4a15-ac08-21bd52c80ce7d7e11">Gauss-Jordan Algorithmus</title>
+         <p id="c5376116-647c-4096-9d27-3c4dc2e95eb5d7e13">Beim Gauss-Jordan-Algorithmus bringt man das Gleichungssystem zunächst in 
+Matrixform. Dabei werden die Koeffizienten (K) der Variablen in den linken Spalten
+aufgelistet und die Konstanten der Ergebniswerte (E) in der Spalte ganz rechts.</p>
+         <p id="a12ac33f-cf97-4bac-93dc-06f4d87a6db1d7e15">Das sieht dann so z.B. so aus:</p>
+         <table id="282aae42-2c6b-4eb9-b267-76875694afd1d7e17" pgwide="1" frame="all">
+            <tgroup id="56e1a2a9-5bf2-4084-8676-dc88c4d5ad59d7e18" cols="6">
+               <colspec id="baaf7869-b2e9-474f-be06-90ebbd0fa323d7e19" colwidth="" colname="col0"/>
+               <colspec id="915eb22b-7453-4831-82ea-a5737ee7856bd7e20" colwidth="" colname="col1"/>
+               <colspec id="bf717935-d057-490c-8176-52ff72fbcdabd7e21" colwidth="" colname="col2"/>
+               <colspec id="66b1cd49-01ee-4bdf-8c18-b6f38ef7df46d7e22" colwidth="" colname="col3"/>
+               <colspec id="1d2cfc5e-ddd5-491b-a06a-a1ad452b195cd7e23" colwidth="" colname="col4"/>
+               <colspec id="bbad89ca-ae15-4114-8bca-176d359c693bd7e24" colwidth="" colname="col5"/>
+               <thead id="53d7e69d-aeff-4a97-8cd9-6b8b4d656cd6d7e25">
+                  <row id="76dd247e-c96f-4bba-ba16-8155ccc5b4f2d7e26">
+                     <entry id="f0a7529c-2426-4ae6-99e8-e9fa64fdeca4d7e27" colname="col0" width=""/>
+                     <entry id="556291c5-f8aa-49b2-bd84-3d9a7c733513d7e28" colname="col1" width=""/>
+                     <entry id="6038e022-2567-4163-96df-ed38c4ba63c7d7e29" colname="col2" width=""/>
+                     <entry id="f1682adf-e4cb-4529-8070-3cc0f8160275d7e30" colname="col3" width=""/>
+                     <entry id="cc9d082b-e812-460d-aa9a-4841644860dfd7e31" colname="col4" width=""/>
+                     <entry id="c16e5f1b-6da6-4ff4-8722-1f3fce1d9ac1d7e32" colname="col5" width=""/>
+                  </row>
+               </thead>
+               <tbody id="07cde172-9be6-4eda-9de9-ae5711dcb04ad7e33">
+                  <row id="550b9d76-acc6-45f4-bad8-cea39cf0a5bfd7e34">
+                     <entry id="c8c027f9-fab9-44c7-8569-61c9a76d4692d7e35" colname="col0" width="">
+                        <p id="af84e24c-33e1-45e9-b7a1-beb9e2e5921fd7e36">K</p>
+                     </entry>
+                     <entry id="8ebc6c84-f68a-4f6d-953a-bcda2f9d3706d7e38" colname="col1" width="">
+                        <p id="56870308-2f43-40c4-a17c-ec3f8161368fd7e39">K</p>
+                     </entry>
+                     <entry id="4d3c6335-3774-47d6-8c6c-9302b7cb8e00d7e41" colname="col2" width="">
+                        <p id="16bd5f8e-3be1-46d0-bc3c-09428bd32fead7e42">-K</p>
+                     </entry>
+                     <entry id="4e24dea0-da07-4030-9a75-b6d5d52da0a4d7e44" colname="col3" width="">
+                        <p id="a81b902a-2271-4cee-9e61-610c3d83e3cbd7e45">K</p>
+                     </entry>
+                     <entry id="e30ce2f7-ab6a-4d7a-9c66-35c59046b6d8d7e47" colname="col4" width="">
+                        <p id="eba0283e-995f-41af-a148-3ffe2e9d706dd7e48">-K</p>
+                     </entry>
+                     <entry id="c4485f6b-74d6-4825-82c1-b84d2a9af7f4d7e50" colname="col5" width="">
+                        <p id="7cadbc09-1dc4-4f0b-bee2-90fbe84c42ded7e51">E[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="d41ce708-6676-4920-abe4-6b689c131837d7e53">
+                     <entry id="45c4abc8-4399-41b2-9270-3865b51dea89d7e54" colname="col0" width="">
+                        <p id="428ad2be-af4e-4115-bc11-81ec9fa63c48d7e55">-K</p>
+                     </entry>
+                     <entry id="aeeb5038-9e9f-4e73-992c-52b062d6b94fd7e57" colname="col1" width="">
+                        <p id="37bb2099-8a8a-4eb9-8d64-68219a4ecfa8d7e58">K</p>
+                     </entry>
+                     <entry id="8f7b4234-2bbe-4adf-bfa0-11aebbb30112d7e60" colname="col2" width="">
+                        <p id="0f440b72-f16d-4d41-bad9-46f822add663d7e61">K</p>
+                     </entry>
+                     <entry id="40e91085-118b-40c0-8123-008d61d89c57d7e63" colname="col3" width="">
+                        <p id="ce23bfc7-ce9f-4f95-a409-1be1d87d6606d7e64">.K</p>
+                     </entry>
+                     <entry id="6c17c7c8-e307-4921-8590-102638e43e6dd7e66" colname="col4" width="">
+                        <p id="e08a3ac2-6e4a-47d5-9232-1da9902fdd46d7e67">K</p>
+                     </entry>
+                     <entry id="c80a894b-d0ea-486c-8b84-e3b4999f2cd7d7e69" colname="col5" width="">
+                        <p id="aa5d9f23-32c6-4ba3-9f85-7e1671200141d7e70">E[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="b323cd87-84bb-47ff-9f26-5f196f32daa7d7e72">
+                     <entry id="0a247ca0-1864-4125-93be-b5c054db076ad7e73" colname="col0" width="">
+                        <p id="952d04a0-81dd-4480-879b-fe119cd0918ed7e74">K</p>
+                     </entry>
+                     <entry id="16cf9331-727f-41fd-8c52-edcbc25fde0ad7e76" colname="col1" width="">
+                        <p id="5e20df88-c13b-440f-800f-68f5af5d85efd7e77">K</p>
+                     </entry>
+                     <entry id="b5fa810c-29fa-4f49-a75e-8e104de711d9d7e79" colname="col2" width="">
+                        <p id="f319605b-d999-4c1c-b26e-3655f23d318dd7e80">K</p>
+                     </entry>
+                     <entry id="85314a3b-f444-4ef9-ba0b-54a9833ff932d7e82" colname="col3" width="">
+                        <p id="b3777a4d-0175-41b0-9d86-3dabb213f495d7e83">-K</p>
+                     </entry>
+                     <entry id="00fba09c-24d8-457c-82d3-e0d35ea46206d7e85" colname="col4" width="">
+                        <p id="214f7768-aa77-469a-8bee-90abb0ce3bd2d7e86">-K</p>
+                     </entry>
+                     <entry id="2196a1f8-72fe-45a2-9823-2b883f1c061ed7e88" colname="col5" width="">
+                        <p id="a689411c-fd25-4d36-992b-a98c24b13079d7e89">E[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="5f0f54eb-0968-489c-809c-0d47bd1294ebd7e91">
+                     <entry id="29556a7e-1d64-4bab-ae68-1185d0e7f326d7e92" colname="col0" width="">
+                        <p id="04cd8a27-e20c-49d8-b87a-ae0be0a22e95d7e93">-K</p>
+                     </entry>
+                     <entry id="9cf44b0e-d7e8-4fd3-9140-5cafc9e8d043d7e95" colname="col1" width="">
+                        <p id="914f720c-b517-4010-a244-4190228986a3d7e96">-K</p>
+                     </entry>
+                     <entry id="5f46df3c-98f6-4af5-a578-1d0adf93387fd7e98" colname="col2" width="">
+                        <p id="63ec373a-021b-4c60-9031-65a4d777b257d7e99">-K</p>
+                     </entry>
+                     <entry id="cd89b393-00a3-445b-a1d0-0ce80aa15444d7e101" colname="col3" width="">
+                        <p id="aad44f85-7960-4ced-a054-1ab2ea9efe85d7e102">K</p>
+                     </entry>
+                     <entry id="d5780b77-796b-482f-90ec-f92855da94ccd7e104" colname="col4" width="">
+                        <p id="be47ba3d-1379-4363-afb7-de84e8e13669d7e105">K</p>
+                     </entry>
+                     <entry id="0d124105-69d3-43b6-b11a-18092e563becd7e107" colname="col5" width="">
+                        <p id="9e080706-efbb-459a-8361-c9ff8a4121aad7e108">E[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="798a7873-3fc0-466b-abb4-c86224a8a709d7e110">Jetzt versucht man einen Koeffizienten zu einer 1 zu machen (wenn man keinen
+findet), indem man ein Vielfaches des Koeffizienten von allen Zeilen abzieht.
+Beispielsweise könnte man alle Zeilen durch zwei teilen, wenn man eine 2 aber keine 1 findet.</p>
+         <p id="32dec0ce-2804-412e-90f4-a5e55549c289d7e112">Hat man eine Spalte mit einer 1 gefunden oder erzeugt, dann macht man alle anderen Werte
+dieser Spalte zu einer 0, indem man ein Vielfaches der 1-Spalte von den anderen abzieht.</p>
+         <p id="e3b07d23-6954-4fa3-8f7c-a46301093dbdd7e114">So verfährt man weiter, bis man in allen Spalten jeweils eine 1 und sonst nur Nullen erhält
+und hat das Gleichungssystem gelöst.</p>
+      </section>
+      <section id="1b6a129a-cbc3-41b3-af81-a658a6913714d7e116">
+         <title id="7aa9d6da-f7cc-4027-9127-e1bbce5fe6aed7e117">LU-Zerlegung</title>
+         <p id="419be890-87b9-40cc-bd5a-4cee6d045a6fd7e119">Bei der LU-Zerlegung teilt man die Gleichungs-Matrix in eine untere (L) und eine obere (O)
+Koeffizienten-Dreiecksmatrix auf, das sieht dann z.B. so für die untere Matrixhälfte aus:</p>
+         <table id="03f3ca17-0781-47b8-aa04-82d8576c43bdd7e121" pgwide="0" frame="all">
+            <tgroup id="711d47a8-a1c6-41eb-8159-26093870b8a2d7e122" cols="3">
+               <colspec id="a0ab9882-6be4-4d69-8cbb-fa867d504639d7e123" colwidth="" colname="col0"/>
+               <colspec id="8b8bc9c1-516d-44b9-8735-ca549805dd95d7e124" colwidth="" colname="col1"/>
+               <colspec id="5523fe81-838d-4327-ac72-72dd2a654457d7e125" colwidth="" colname="col2"/>
+               <thead id="42d3e754-2895-4d5d-a33e-f287a499cbded7e126">
+                  <row id="6e41ec8c-11cb-4e6c-ab4c-e0200ba08f42d7e127">
+                     <entry id="25015fe4-88b0-495f-a260-06aa316d31e1d7e128" colname="col0" width=""/>
+                     <entry id="00fbe70c-f2c6-41d6-a9cc-c05f02df57bfd7e129" colname="col1" width=""/>
+                     <entry id="43b1cf8b-4fe8-4df7-87e7-6fdfcda2d6a8d7e130" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="1fa3f07f-bb30-40cc-97dd-e015f12cebdad7e131">
+                  <row id="52f92ace-2ca9-4083-9f1c-287f05059b2dd7e132">
+                     <entry id="2a39a85c-6ee5-44d1-8fa4-a0a32c3d70e8d7e133" colname="col0" width="">
+                        <p id="a483a707-b53c-446d-976f-7bcba8eeaabad7e134">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="0085b6cf-2fcb-45e5-aa74-edcf51702856d7e136" colname="col1" width="">
+                        <p id="035c4a54-91ad-4ea2-8f85-a5c52c02ce36d7e137">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="a190fb1e-0260-432f-8dd9-cc84edef48d9d7e139" colname="col2" width="">
+                        <p id="7fa87786-1d81-4e3a-8c76-7bb68ea9ab16d7e140">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                  </row>
+                  <row id="c2e9ac1f-983a-4e1e-983f-d44846cfa73fd7e142">
+                     <entry id="36d6ddd2-b4f4-4ea3-b7ca-777be93c9135d7e143" colname="col0" width="">
+                        <p id="124968cb-753a-4163-88d6-3bf15f033dabd7e144">K</p>
+                     </entry>
+                     <entry id="9eea6ff3-d0e8-450b-a83b-da686646a35dd7e146" colname="col1" width="">
+                        <p id="89a9e8c1-e663-4af2-9d6d-d52ee90bab70d7e147">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="57deb0f9-f2e0-4c44-bb54-a44921237233d7e149" colname="col2" width="">
+                        <p id="5ae2b4b8-8f48-4d00-8967-a73ab67bb93bd7e150">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                  </row>
+                  <row id="7a46a7eb-6213-4151-b4eb-166ae3c14832d7e152">
+                     <entry id="fba18c4d-0d47-4e45-9d1a-b504317c619fd7e153" colname="col0" width="">
+                        <p id="366cd1b6-1bb2-4123-b151-4c6913e3b3c0d7e154">K</p>
+                     </entry>
+                     <entry id="d126a5a4-5e7a-4c27-bb12-174e08ef2022d7e156" colname="col1" width="">
+                        <p id="64a2f8fe-da13-4fc1-926c-8c51c9cd7651d7e157">K</p>
+                     </entry>
+                     <entry id="660da459-5976-4111-946a-97448fbfbffdd7e159" colname="col2" width="">
+                        <p id="be108018-9901-46f6-bc7d-65728fb62b75d7e160">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="568720e9-12da-4830-87a6-027b5f4cdd51d7e162">und so für die obere:</p>
+         <table id="874a4f83-ea77-4e26-b76f-d671d02767cfd7e164" pgwide="0" frame="all">
+            <tgroup id="553338b6-21be-4e65-9fbf-0343e0636073d7e165" cols="3">
+               <colspec id="1daf8d6b-d94f-424e-a03c-6b49ed985bd8d7e166" colwidth="" colname="col0"/>
+               <colspec id="3fafd58c-d0f4-4a19-8e35-69a2bedb8f56d7e167" colwidth="" colname="col1"/>
+               <colspec id="3f6f0e05-3d24-410f-b96a-e4d33269385ad7e168" colwidth="" colname="col2"/>
+               <thead id="5112b17d-f39c-478f-870c-efb27c528894d7e169">
+                  <row id="0f1686d3-00d5-4e09-8d26-ccdd41317418d7e170">
+                     <entry id="7b8282cb-35eb-4c21-ab53-86b7993b5788d7e171" colname="col0" width=""/>
+                     <entry id="b14f888a-18c7-4c95-8da7-8a00bdb29809d7e172" colname="col1" width=""/>
+                     <entry id="dbb77302-bde5-4157-9583-c1313e93001dd7e173" colname="col2" width=""/>
+                  </row>
+               </thead>
+               <tbody id="31257ac6-8810-4377-9067-a764395554cfd7e174">
+                  <row id="2170f926-16ef-4c90-8e24-6062ec780140d7e175">
+                     <entry id="3dbb8183-2b37-4fa7-97a9-fa5d9c621880d7e176" colname="col0" width="">
+                        <p id="2ea8784c-e069-4e86-9884-b0aadd630ecfd7e177">K</p>
+                     </entry>
+                     <entry id="1f8e9dda-c020-4281-883b-6ac9981a0689d7e179" colname="col1" width="">
+                        <p id="59b4f2b2-714a-4538-a9bb-8632fb727ae9d7e180">K</p>
+                     </entry>
+                     <entry id="15a95978-6c45-4cc7-b265-20ddb09aa96bd7e182" colname="col2" width="">
+                        <p id="07d45847-0d0a-4fbb-8e81-56a1dc0125a6d7e183">K</p>
+                     </entry>
+                  </row>
+                  <row id="73f2695f-667d-4ce3-8f84-82913fb75486d7e185">
+                     <entry id="a7110ad5-2e15-434c-b8ff-99586ffdf615d7e186" colname="col0" width="">
+                        <p id="b38b371a-fa02-48ba-8f96-02a020227264d7e187">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="4f08fadc-c1be-4878-abf1-dd0dfab3e5d4d7e189" colname="col1" width="">
+                        <p id="2dd119cb-3328-4141-beca-343f72a2504fd7e190">K</p>
+                     </entry>
+                     <entry id="0bf7b14d-6170-49a2-a534-fd4c4db7f186d7e192" colname="col2" width="">
+                        <p id="e075abf6-6f62-460d-933d-5c6365227c7ad7e193">K</p>
+                     </entry>
+                  </row>
+                  <row id="b35e621c-e61e-4d69-9321-697af6bef873d7e195">
+                     <entry id="e00a5ca5-6720-4c39-a90f-8f282895335ad7e196" colname="col0" width="">
+                        <p id="1e8d4b9b-5a67-4eda-837c-5ceddc049a51d7e197">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="8cc33182-081b-47c2-8b6b-ee48a08a8857d7e199" colname="col1" width="">
+                        <p id="c82eeee9-198b-4852-a4d4-19c0608900ced7e200">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="3f0c6a26-a8fd-4fe4-a825-ece44fab2d9cd7e202" colname="col2" width="">
+                        <p id="88d579ea-a6be-4e58-863e-bdb3ec181e32d7e203">K</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="a2b94825-9cc8-4d6b-9c0d-66417c0ecf9bd7e205">Um diese Matrizen zu erhalten fängt man mit der unteren an und versucht schrittweise Nullen
+unter die 1 in der ersten Zeile zu bringen, indem an wieder ein Vielfaches der ersten Zeile
+von den anderen abzieht.</p>
+         <p id="dbc6fdd4-b01c-4284-9ba8-ad5dc341ef8dd7e207">Hat man die erste Spalte in Form gebracht, so macht man dasselbe in der zweiten Spalte.</p>
+         <p id="057d00fb-d0a6-4b6e-aecd-446f00607f9cd7e209">Das gesuchte Gleichungssystem löst man dann, indem man die zwei Teil-Gleichungssystem der Dreiecksmatrizen ineinander auflöst, nämlich:</p>
+         <fig id="551e4c23-815d-4387-b9c9-d8e46ed266fdd7e211">
+            <desc id="b83c2675-0102-438d-bc5f-509c69b83b87d7e212">[[code:L]] steht für die untere Dreiecksmatrix (lower). [[code:y]] sind die Koeffizienten in der Matrix. [[code:b]] ist der Lösungsvektor des Gleichungssystems.</desc>
+            <image href="images/TeX_yb_434e4b_15.png"/>
+         </fig>
+         <p id="075087b0-c56e-4489-9fa7-aa01fb6ae542d7e213">und</p>
+         <fig id="57044eaa-6fed-4733-b9a5-0ccf489e4691d7e215">
+            <desc id="eeb2f938-209c-4888-bae2-e8f6404f084ed7e218">[[code:U]] steht für die untere Dreiecksmatrix. [[code:x]] sind die Koeffizienten des ursprünglichen Gleichungssystems. [[code:y]] sind die Koeffizienten, die wir mit [[code:Ly = b]] schon bestimmt haben.</desc>
+            <image href="images/TeX_xy_8vpocg_13.png"/>
+         </fig>
+      </section>
+      <section id="7bb64761-aaab-4c9f-b1bb-48a43ecd3367d7e221">
+         <title id="b5da06c9-690a-44cc-a4aa-2b2724c9ac2bd7e218">Cholesky Faktorisierung</title>
+         <p id="978d74d9-2c08-45d0-900c-52c9239b8f60d7e220">Die Cholesky Faktorisierung ist ein Spezialfall der LU-Zerlegung. Sie ist genau dann gegeben, 
+wenn die obere und untere Dreiecksmatrix gleich sind:</p>
+         <fig id="363b507f-bf5f-4e1c-9b28-0a905bd1bf56d7e226">
+            <desc id="b24f023f-980e-4ad9-ad0a-a6556503eaa6d7e227">[[code:T]] gibt an, dass die Matrix [[code:L]] transponiert ist.</desc>
+            <image href="images/"/>
+         </fig>
+         <fig id="7bf694f9-67d7-4cdc-b1d2-3fb4ab6c2a59d7e230">
+            <desc id="42bc4592-61b8-4090-9a75-223de49fe929d7e231">Die Eingabematrix [[code:A]] ist somit das Matrixprodukt aus unterer [[code:L]] und transponierter unterer Dreiecksmatrix. </desc>
+            <image href="images/"/>
+         </fig>
+         <p id="2aaa2b74-363c-4b10-8d6e-6288892a2078d7e224">Die obere Dreiecksmatrix ist die Transponierte der unteren. Ist dieses Szenario gegeben, dann kann man das Gleichungssystem mittels Formeln lösen:</p>
+         <fig id="14961807-f8d2-47df-8eed-634a2ad5874cd7e226">
+            <image href="images/2019-11-14 17_17_27-Microsoft Edge_21.png"/>
+         </fig>
+         <p id="3f09abad-38d9-4a32-83ee-afa7af25d3f7d7e228">Mit diesen Formeln kann man auch bestimmen, ob eine gegeben Matrix positiv definit ist. Das ist genau dann der Fall, wenn die Formeln ein sinnvolles Ergebnis liefern, und die Berechnung möglich ist. Bspw. darf unter der Wurzel kein negativer Wert stehen.</p>
+      </section>
+   </body>
+</topic>

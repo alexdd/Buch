@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="2512a028-dcd4-4d2b-983f-d901b637f518">
+   <title id="458301d8-58e4-447e-8881-da5bda04f199">Eigenschaften von Graphen</title>
+   <body id="c88c1cb2-e821-4e8b-8fe7-8382465715bf">
+      <p id="c4e98644-e7b6-48f9-8c12-ae2636f9ff66">Graphem können ganz interessante Eigenschaften haben, die man mit cleveren Algorithmen bestimmen kann. Wenn man z.B. von einem Knoten zu einem anderen
+läuft, dann unternimmt man einen Spaziergang.</p>
+      <section id="c44ffa17-9cd6-44d5-ae98-21cb2b844d19d7e6">
+         <title id="212c6a33-f3e4-461d-ad51-a57e0e42d245d7e7">Anzahl der Spaziergänge mit bestimmter Länge</title>
+         <p id="5f2b26ad-5dfc-4295-963d-c74bb88bf120d7e9">Es gibt eine recht interessante Methode, wie man die Anzahl
+aller möglichen, unterschiedlichen Spaziergänge zwischen zwei
+Knoten mit der Länge [[code:k]] bestimmen kann. Dazu stellt man die
+Adjazenzmatrix auf, diese sieht bei einem Graphen mit 4 Knoten [[code:(A,B,C,D)]] folgendermassen aus:</p>
+         <fig id="36e7bf60-f071-4177-b84f-fb4700190743d7e11">
+            <image href="images/graph_9.png"/>
+         </fig>
+         <table id="ec4cfaba-b870-4dfc-a5b9-69ceee2f2116d7e11" pgwide="1" frame="all">
+            <tgroup id="c06c4261-8806-419b-bcfa-2004862ac5fbd7e14" cols="5">
+               <colspec id="08561d9e-3986-471d-b304-9086774b0fcad7e15" colwidth="" colname="col0"/>
+               <colspec id="d6d112ef-04c0-403f-83b1-71997167fc95d7e16" colwidth="" colname="col1"/>
+               <colspec id="17ce8f34-efff-4228-a24d-a53d20a6dbb2d7e17" colwidth="" colname="col2"/>
+               <colspec id="68891746-0a50-467d-90f7-212b94bfc9e8d7e18" colwidth="" colname="col3"/>
+               <colspec id="7a378ad5-04d2-4fac-bf89-c61b44bd869dd7e19" colwidth="" colname="col4"/>
+               <thead id="dc1d0b93-d837-4e3c-a2dc-80408e2f5bfad7e20">
+                  <row id="974bd1ad-28eb-4082-ac13-b08dd534a8dad7e21">
+                     <entry id="5909eefd-24df-49f9-8073-24926ca750b5d7e22" colname="col0" width=""/>
+                     <entry id="6749f5a2-a4d5-4a21-8d61-a2197dc102b6d7e23" colname="col1" width=""/>
+                     <entry id="e3084ec0-c4cd-4838-8983-1730a573c224d7e24" colname="col2" width=""/>
+                     <entry id="68435c6a-8f02-472c-9c93-ab4c94283a4fd7e25" colname="col3" width=""/>
+                     <entry id="51c4cd07-432c-4d68-b37e-00804ebbe9b5d7e26" colname="col4" width=""/>
+                  </row>
+               </thead>
+               <tbody id="c489a95f-d8f6-4aa5-bdfa-a8ec578fca71d7e27">
+                  <row id="359fa884-66d4-4cf7-9af9-0916ad3eac10d7e28">
+                     <entry id="7b7cfafc-c8c8-4324-bcfc-3e638146c9e7d7e29" colname="col0" width=""/>
+                     <entry id="087cb42c-2697-4ea2-9672-c4e3e3f6e2a2d7e30" colname="col1" width="">
+                        <p id="9293ae77-cb0e-4081-a48a-a019c4a369a1d7e29">
+                           <b id="6a9c8c5d-98e0-4fe3-8497-265b00d2ee86d7e30">A</b>
+                        </p>
+                     </entry>
+                     <entry id="a7638bc1-29ce-47da-ac05-2eae3afef32ed7e34" colname="col2" width="">
+                        <p id="b7f2acc7-33e9-494a-a74a-8cc1322ce982d7e33">
+                           <b id="3b41c00d-1bf1-4a66-a1d4-574c7f7af856d7e34">B</b>
+                        </p>
+                     </entry>
+                     <entry id="e1876dc1-7f2f-402e-a079-27994eea025ed7e38" colname="col3" width="">
+                        <p id="92ec85f4-4b7e-4fe0-b261-1106745390b7d7e37">
+                           <b id="9f7c262e-113d-476c-a47b-2512c6536e02d7e38">C</b>
+                        </p>
+                     </entry>
+                     <entry id="511b700f-f654-491c-b63f-4684edfb6750d7e42" colname="col4" width="">
+                        <p id="d66d1f3a-399d-4f23-a4b3-dba4bf2652d6d7e41">
+                           <b id="b8481a6f-a052-4d49-906a-ef9f249e36f2d7e42">D</b>
+                        </p>
+                     </entry>
+                  </row>
+                  <row id="50a962aa-034d-4078-8a4c-5830a3b4457ad7e46">
+                     <entry id="25aa43c4-2de2-47b7-aebf-989deebfcbfad7e47" colname="col0" width="">
+                        <p id="9a5aa2db-b274-4136-a983-42be25f78947d7e46">
+                           <b id="468c2833-29a3-46dd-9131-b324d52aef37d7e47">A</b>
+                        </p>
+                     </entry>
+                     <entry id="5275f74a-3331-4849-8892-4e47091e1290d7e51" colname="col1" width="">
+                        <p id="feb5e9f7-63c6-42fb-bd0b-7d2936b827d9d7e50">0</p>
+                     </entry>
+                     <entry id="29f165d9-2237-4d74-84db-d1aba9b29efad7e54" colname="col2" width="">
+                        <p id="d1ea1a3b-c4d6-4deb-8a9f-264f77e4f195d7e53">1</p>
+                     </entry>
+                     <entry id="e4fe81f6-95b7-43a9-b78f-de92eca99b21d7e57" colname="col3" width="">
+                        <p id="7b06bcd8-c514-4dfb-ada4-8b028548caccd7e56">0</p>
+                     </entry>
+                     <entry id="6d56d805-c723-467a-8bbd-65e6f2ddd099d7e60" colname="col4" width="">
+                        <p id="241e3fcc-0286-48ad-8cbf-014714e4512bd7e59">1</p>
+                     </entry>
+                  </row>
+                  <row id="5e70ec08-2cba-4512-ad4f-777109312052d7e63">
+                     <entry id="45115ceb-cd26-41a5-87ff-24089d698e8bd7e64" colname="col0" width="">
+                        <p id="ae2528ed-f441-476d-9a6f-edb8558af235d7e63">
+                           <b id="0ed151bc-2bb8-4722-96a4-6a265e2afcb9d7e64">B</b>
+                        </p>
+                     </entry>
+                     <entry id="86e2df8d-9f80-482e-aafe-41e659a68b1cd7e68" colname="col1" width="">
+                        <p id="a0caad00-c60b-4913-a226-0b60050a4680d7e67">1</p>
+                     </entry>
+                     <entry id="b4786dd9-7940-48f7-bd35-c97caa7739a1d7e71" colname="col2" width="">
+                        <p id="fcfc0ec5-226c-416b-89a7-8a137724dfc0d7e70">0</p>
+                     </entry>
+                     <entry id="d79edf68-c8ca-4c95-b123-9b7131803d4bd7e74" colname="col3" width="">
+                        <p id="60273ad9-ca10-40eb-93c8-c0202a0c1b17d7e73">1</p>
+                     </entry>
+                     <entry id="bdd10e0e-4170-44e1-9b51-a8dc29a16398d7e77" colname="col4" width="">
+                        <p id="94a470a0-ef67-444a-83c0-fae1164ccc43d7e76">1</p>
+                     </entry>
+                  </row>
+                  <row id="155c2102-ecdf-45e1-8012-e088bd2c9fdbd7e80">
+                     <entry id="c90e4ae6-4593-4a89-8402-09c9a2b8dd01d7e81" colname="col0" width="">
+                        <p id="8bba82f2-aeab-4d23-9197-610f49e24202d7e80">
+                           <b id="157163f1-7add-4181-862b-6e53625e5f6ad7e81">C</b>
+                        </p>
+                     </entry>
+                     <entry id="ce1ab4a1-527b-4cbc-b5f2-ef5ca4b6b5c7d7e85" colname="col1" width="">
+                        <p id="4f0b9eaa-c10d-4acc-b091-339e1b9baa80d7e84">0</p>
+                     </entry>
+                     <entry id="40891fd1-0e6a-4ca0-9d5a-4b04fafc4895d7e88" colname="col2" width="">
+                        <p id="66aff5eb-6b0f-42a5-8d18-f207ab629e9dd7e87">1</p>
+                     </entry>
+                     <entry id="c5fdba97-9e26-4267-9010-dd7a0fec5aebd7e91" colname="col3" width="">
+                        <p id="f9ee6e84-849a-45f1-b46b-6ccca1c718a6d7e90">0</p>
+                     </entry>
+                     <entry id="227365fa-be0e-4990-bc99-17a9df1e009ed7e94" colname="col4" width="">
+                        <p id="4ebbe126-07f7-4e11-92d0-e082cf196757d7e93">1</p>
+                     </entry>
+                  </row>
+                  <row id="59efab5a-8146-44ba-a748-350c500dba45d7e97">
+                     <entry id="3b330249-3403-496a-81fb-b38e72946583d7e98" colname="col0" width="">
+                        <p id="6b015358-6184-42dc-b285-81cdf6578b5ad7e97">
+                           <b id="4c259085-ea4f-43b9-b41c-32f3f0279d3bd7e98">D</b>
+                        </p>
+                     </entry>
+                     <entry id="65caca79-739e-4e6e-a8ea-ab70526a457ad7e102" colname="col1" width="">
+                        <p id="5826159d-2f4d-4331-9e29-85d9e2486b52d7e101">1</p>
+                     </entry>
+                     <entry id="ec973779-cec1-496e-a8d5-77a957a8c165d7e105" colname="col2" width="">
+                        <p id="9e299671-5f09-41e8-b3f3-c82a1c5b5085d7e104">1</p>
+                     </entry>
+                     <entry id="46472cfc-82e6-4783-9b27-754cf6e44948d7e108" colname="col3" width="">
+                        <p id="fecb0742-6b7a-4d85-8ba8-e449f9099827d7e107">1</p>
+                     </entry>
+                     <entry id="6bf20c07-686c-4ffc-9ad1-df135f352617d7e111" colname="col4" width="">
+                        <p id="aaf21f75-9ac6-4f63-9160-8876d3416dfed7e110">0</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="6e04f5de-16a2-4dbf-bcc7-4a7a9c0ab256d7e158">Um die Anzahl der Spaziergänge mit Länge k zu bestimmen, führt man eine Martizenmultiplikation der Länge [[code:k]] aus.</p>
+         <p id="7ad03b46-289a-415b-aee8-04a7447f230dd7e116">
+            <sup id="79eaf1ed-b6b1-4b39-a3a3-6eadc5865311d7e117"/>Für die Anzahl der möglichen Spaziergänge der Läge [[code:3]] wird also [[code:A * A * A]] bestimmt. Eine Matrizenmultiplikation nach dem 
+[[link]]Falkschen Schema[[fn:https://de.wikipedia.org/wiki/Falksches_Schema*Wikipedia-Seite zum Falkschen Schema]] so:</p>
+         <table id="348f4315-8e2a-4653-a105-59969058ac8dd7e119" pgwide="1" frame="all">
+            <title id="eb357520-2be1-4052-aadd-a1568ba02277d7e120">Matrizenmultiplikation nach dem Falkschen Schema</title>
+            <tgroup id="75718e9d-931a-444a-9c69-489ea251a9b7d7e122" cols="9">
+               <colspec id="083c1c8c-14af-424e-bf4d-9b8976642f88d7e123" colwidth="" colname="col0"/>
+               <colspec id="09a3243f-7a25-4a70-9b41-8fd38b4a4653d7e124" colwidth="" colname="col1"/>
+               <colspec id="d0b624a7-e4b7-4f62-85a6-fa6c1ee08a06d7e125" colwidth="" colname="col2"/>
+               <colspec id="74ae6398-b52f-4cfd-8f3d-b2e182b45e2cd7e126" colwidth="" colname="col3"/>
+               <colspec id="75e6949d-cb33-47c6-b853-bd3ad2d0686cd7e127" colwidth="" colname="col4"/>
+               <colspec id="b3fc6533-a30e-4a63-b268-d52cce4a98b5d7e128" colwidth="" colname="col5"/>
+               <colspec id="ed10d07c-7bbe-4425-8c3b-bc136ae26538d7e129" colwidth="" colname="col6"/>
+               <colspec id="c8d2fc90-370f-495c-9ee7-e6f45d62271ed7e130" colwidth="" colname="col7"/>
+               <colspec id="4ac7c2b8-0981-4e5a-b8ea-bd0661341153d7e131" colwidth="" colname="col8"/>
+               <thead id="032fac7d-7215-4ed5-82b4-c0b8d478f883d7e132">
+                  <row id="70bff78f-e8ca-4d94-be60-40864b7659d6d7e133">
+                     <entry id="565f1e29-c2b0-48cd-abb1-866a69975b45d7e134" colname="col0" width=""/>
+                     <entry id="b9d435ef-6da9-4a68-a452-281d039fa2a8d7e135" colname="col1" width=""/>
+                     <entry id="06adaa7a-2fe3-427b-8549-f775857b2b13d7e136" colname="col2" width=""/>
+                     <entry id="92c4e8ac-fca9-4fc8-bef9-c444f034617ed7e137" colname="col3" width=""/>
+                     <entry id="d2895290-7499-4932-852f-a0310bfecf4dd7e138" colname="col4" width=""/>
+                     <entry id="d747fe51-b57a-482f-af4c-2736165f0df9d7e139" colname="col5" width=""/>
+                     <entry id="a01ba1e7-28d6-4388-89e1-1f3f2d40bb3bd7e140" colname="col6" width=""/>
+                     <entry id="c4190ecd-8e24-48b8-978d-13216fb91b0bd7e141" colname="col7" width=""/>
+                     <entry id="dba64858-f9ab-4208-b716-bdef9609d626d7e142" colname="col8" width=""/>
+                  </row>
+               </thead>
+               <tbody id="2f7b61d7-30ff-4bad-bbb3-5044881a851ad7e143">
+                  <row id="43499fee-4033-4868-af10-a6d4e9c1fd7dd7e144">
+                     <entry id="32b98821-de08-4ebd-b899-d11151ef7c7ad7e145" colname="col0" width="">
+                        <p id="26dd50f0-0988-4cb2-9831-6dea08aa690ad7e146">-</p>
+                     </entry>
+                     <entry id="f77fd4ac-3672-444a-aa41-e68fd6f400e7d7e148" colname="col1" width="">
+                        <p id="28aa5521-7f07-42ee-9626-7e188c069157d7e149">-</p>
+                     </entry>
+                     <entry id="213d583a-18fe-4d7d-82f8-f683f78973a2d7e151" colname="col2" width="">
+                        <p id="68c6d301-bc44-4eeb-ac41-5e8a08471008d7e152">-</p>
+                     </entry>
+                     <entry id="cf15940f-8ff5-4767-96b3-1987628ea913d7e154" colname="col3" width="">
+                        <p id="ff79b850-b2e4-48d3-83d8-9cc7f4d79f78d7e155">-</p>
+                     </entry>
+                     <entry id="f9111377-9dab-4a0e-bafb-afd9652ec947d7e157" colname="col4" width="">
+                        <p id="f317ae95-98f4-450c-9cf5-539b28f380c7d7e158">-</p>
+                     </entry>
+                     <entry id="4cd8308e-c6b3-452c-8214-f00450da8358d7e160" colname="col5" width="">
+                        <p id="dda89261-fc70-420a-8580-9df2970b276ad7e161">
+                           <b id="aa8f4332-0a38-427f-a4bf-bada559903e7d7e162">A</b>
+                        </p>
+                     </entry>
+                     <entry id="e7356660-6291-479e-b08a-cc2239ddd6ecd7e164" colname="col6" width="">
+                        <p id="dc7781e4-d0ef-4951-83f2-09f895768e3ed7e165">
+                           <b id="7890b123-c628-4faf-b281-8a45f5be76d5d7e166">B</b>
+                        </p>
+                     </entry>
+                     <entry id="55f84921-1656-4230-bac6-5fdfba9d82d0d7e168" colname="col7" width="">
+                        <p id="f4b00172-f32b-49cd-a9a2-ec884715a8d7d7e169">
+                           <b id="c1a04e87-26e8-44e5-9591-1303813919ccd7e170">C</b>
+                        </p>
+                     </entry>
+                     <entry id="67e46b0a-f77e-4e79-bc9b-61356db1e404d7e172" colname="col8" width="">
+                        <p id="9e494905-3959-41bb-9f35-7b3f4aa6fb82d7e173">
+                           <b id="36ee3304-a4a1-42cd-94f9-a256d3809637d7e174">D</b>
+                        </p>
+                     </entry>
+                  </row>
+                  <row id="4399271c-59c0-435f-a1ee-9b7925a61ea3d7e176">
+                     <entry id="ccdf5a16-73d9-4fd7-aa18-358738917668d7e177" colname="col0" width="">
+                        <p id="3fbaf6f3-539b-4e13-be7b-8c94856a80a2d7e178">-</p>
+                     </entry>
+                     <entry id="85785fc5-e34e-4be4-a7c9-7c376a4acdc0d7e180" colname="col1" width="">
+                        <p id="35cc8576-5e5c-48f8-92aa-99d2ba2352f2d7e181">-</p>
+                     </entry>
+                     <entry id="79e3ad59-3054-402b-bccc-7bf62690f906d7e183" colname="col2" width="">
+                        <p id="04415015-712b-4dc1-a87f-7bdfafb4ac45d7e184">-</p>
+                     </entry>
+                     <entry id="cfd876a7-d57f-45ef-aa84-212895763eb0d7e186" colname="col3" width="">
+                        <p id="fd352b78-9089-4d3b-83c5-33f23649bc7dd7e187">-</p>
+                     </entry>
+                     <entry id="a0e586c2-5016-4356-9f3a-9f336c60412dd7e189" colname="col4" width="">
+                        <p id="01af6385-2b50-415e-bb32-15dfe1e19299d7e190">-</p>
+                     </entry>
+                     <entry id="724840eb-d7e6-40c9-8035-d6be3207e98fd7e192" colname="col5" width="">
+                        <p id="5c8c72d3-5dc9-44b2-968b-ca4c40fb10f4d7e193">0</p>
+                        <p id="43b87afa-6f06-429a-93c4-3f9178597791d7e195">[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="78e66a7b-3466-43d1-8da5-0386197a07f0d7e197" colname="col6" width="">
+                        <p id="513c452a-ebfe-4a64-80d8-d648e42ce380d7e196">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="c6f5591f-dc0c-4144-b4f1-006bdc5fe604d7e200" colname="col7" width="">
+                        <p id="3fa254d1-3cac-4e63-aa7e-7e33211b1d9dd7e199">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="1da912e8-68d2-4b32-91e8-9eeaa534407dd7e203" colname="col8" width="">
+                        <p id="372ace2a-e2d3-43f1-93cb-3b5736f2e40ad7e202">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="1e949b63-d8a7-4d5e-896f-5296b1674db9d7e206">
+                     <entry id="fcea39e1-c7ca-42ce-81e2-2633f32b8cf7d7e207" colname="col0" width="">
+                        <p id="74bd1992-622f-4537-a5dc-af06d067a9e4d7e206">-</p>
+                     </entry>
+                     <entry id="0aea47ae-63a8-4f89-8fd3-363ca032b88bd7e210" colname="col1" width="">
+                        <p id="239acdbd-3e8b-420d-a920-bb02e0c5ee02d7e209">-</p>
+                     </entry>
+                     <entry id="b2aea7fc-7405-4baa-8411-b2c2ef6b0340d7e213" colname="col2" width="">
+                        <p id="35559a6f-ff2b-4162-81fb-be818089a4e5d7e212">-</p>
+                     </entry>
+                     <entry id="b2d21357-3f93-4e0e-96ad-a2f992fd9485d7e216" colname="col3" width="">
+                        <p id="8e5b01bb-2787-4548-9930-4c22bdb99c11d7e215">-</p>
+                     </entry>
+                     <entry id="9405a171-fbf2-41f4-acea-7dfcafd4b689d7e219" colname="col4" width="">
+                        <p id="0f7806f7-abc2-490b-990f-d201c5d19843d7e218">-</p>
+                     </entry>
+                     <entry id="1435f227-9412-4cd9-9b25-9d8206cea520d7e222" colname="col5" width="">
+                        <p id="90b4d012-6ab0-4f76-a003-e1c405d0c404d7e221">1</p>
+                        <p id="0e4b65fd-2047-4afb-a73b-8597ae752923d7e225">[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="21cc9ab7-fcd9-41c2-8443-bc1b322dc0a8d7e227" colname="col6" width="">
+                        <p id="447bb192-52c9-4faa-99f9-c9af8987edf9d7e224">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="77009005-a33b-4fad-b9b5-dc1035bb72d0d7e230" colname="col7" width="">
+                        <p id="659e15e0-6a45-4392-a0e5-b0e0765d646dd7e227">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="fc507a7a-ec0e-4033-aa43-1a63286b8ee7d7e233" colname="col8" width="">
+                        <p id="d1ef191d-59aa-4b31-8393-b535a22b6e78d7e230">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="78beb15e-3abd-4328-b6f8-67416d5070a6d7e236">
+                     <entry id="3eecfcbd-d44a-40fd-ae95-d087e573d3e1d7e237" colname="col0" width="">
+                        <p id="eb9ea370-88fe-4f6e-aeca-ea4b9e5bf49ad7e234">-</p>
+                     </entry>
+                     <entry id="7241f19c-94a5-4bde-857e-50501591973ad7e240" colname="col1" width="">
+                        <p id="b816326a-52ca-493d-a4aa-7200c973117ad7e237">-</p>
+                     </entry>
+                     <entry id="26d42d6c-3515-48a6-9f62-e5d71c3f9ba7d7e243" colname="col2" width="">
+                        <p id="85c70c11-c205-454e-bd96-9e0e863e0d68d7e240">-</p>
+                     </entry>
+                     <entry id="bd8bde96-3a71-4c32-9a3c-0c8764f1e817d7e246" colname="col3" width="">
+                        <p id="ea722012-d2e2-40cd-86a7-d69af19105ddd7e243">-</p>
+                     </entry>
+                     <entry id="fc33d20f-6198-4d9d-92d6-993fc513f2f7d7e249" colname="col4" width="">
+                        <p id="93cf4758-a51f-4887-85be-c90a7def4710d7e246">-</p>
+                     </entry>
+                     <entry id="b474a964-1cc7-4991-bd3a-df868f45fce9d7e252" colname="col5" width="">
+                        <p id="a6fd33d1-3ba4-49a9-a5b0-69e78df36063d7e249">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="aa8f7ba6-0ceb-432f-9b7d-c69acecb5726d7e255" colname="col6" width="">
+                        <p id="a89b7083-ad0d-4c95-9310-fa4a746982e0d7e252">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="2409f03a-e0cc-4e88-990f-184733d8297cd7e258" colname="col7" width="">
+                        <p id="fd9d329d-e80e-43aa-b764-9d3dc1077b08d7e255">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="5f6308df-1857-404f-ab2a-945eb6c52206d7e261" colname="col8" width="">
+                        <p id="47aa9621-5ff3-4f66-9fbc-d7432466ac2cd7e258">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="3ba1c6f7-be6d-4ea5-9e7c-1c14b72e4d32d7e264">
+                     <entry id="304b6605-30ac-4766-bed6-107868516334d7e265" colname="col0" width="">
+                        <p id="2430c930-460f-4238-8461-7f4c202e2bf3d7e262">-</p>
+                     </entry>
+                     <entry id="5acf3834-c141-41a5-abcb-00a90f607791d7e268" colname="col1" width="">
+                        <p id="58d0417e-56a0-4df0-ad66-32e7214465a0d7e265">-</p>
+                     </entry>
+                     <entry id="dfc316f5-cdc3-4330-8476-bc5ebbf57805d7e271" colname="col2" width="">
+                        <p id="13509d00-f30e-40b4-9e38-5d7307e508c1d7e268">-</p>
+                     </entry>
+                     <entry id="29897928-949d-4de9-92a9-141df0641c6fd7e274" colname="col3" width="">
+                        <p id="fdfeb97f-2e41-4f4e-9a51-272634545bc1d7e271">-</p>
+                     </entry>
+                     <entry id="0d70cead-6bc6-4e4c-9382-0df086641a03d7e277" colname="col4" width="">
+                        <p id="09f47f94-e32e-4f9f-a2c9-3b206e1c0a4ed7e274">-</p>
+                     </entry>
+                     <entry id="ebba3810-52f4-4843-bfd3-3af409b5da85d7e280" colname="col5" width="">
+                        <p id="63baec83-8577-4702-b783-1ac5883d29e4d7e277">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="d39895d9-6853-464c-acd7-493bf95b6bf8d7e283" colname="col6" width="">
+                        <p id="04a469a8-05b1-4f1b-9db3-c1050fc6aa36d7e280">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="8bac4039-ca5e-45c3-9a8c-1f76daac1186d7e286" colname="col7" width="">
+                        <p id="c79fea0c-39e7-4d98-8205-fa87c09d77ead7e283">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="633cae39-2429-4c37-8e02-b72a7eeca83bd7e289" colname="col8" width="">
+                        <p id="7012f8a1-2d51-438d-903c-5f415d10c6e5d7e286">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                  </row>
+                  <row id="09a33a6b-9b7e-4acd-8c9e-6d3ceab6880bd7e292">
+                     <entry id="406f4c9c-e8ac-4681-9761-6659efde2ae8d7e293" colname="col0" width="">
+                        <p id="4fdaac42-3dc8-4db0-b5fd-26cf30f8c5e7d7e290">-</p>
+                     </entry>
+                     <entry id="a3927efc-a44d-40c5-b9e9-d07a07bfadefd7e296" colname="col1" width="">
+                        <p id="493b9184-8841-481f-84b7-71f653f2fc74d7e293">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="6afe3b3d-2751-4f84-8cf8-9344f966f8bbd7e299" colname="col2" width="">
+                        <p id="f5e56dd4-b7e8-4ce7-8a04-0b440d4d4099d7e296">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="00e3566f-e5c2-4526-bb90-b8a51c78c2cfd7e302" colname="col3" width="">
+                        <p id="4358b9b3-b9fc-4a8b-b6b1-cfed5b4cc1d5d7e299">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="6d46847e-60d8-413c-b0ca-82f6815fc8d7d7e305" colname="col4" width="">
+                        <p id="0abe69fe-3476-463f-9094-b2e557b6869cd7e302">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="de0aa96a-b0cd-4a4f-976a-15ef7f45413fd7e308" colname="col5" width="">
+                        <p id="7e096a07-44b1-407b-b9e0-136c640b74a8d7e305">2</p>
+                     </entry>
+                     <entry id="a27cc1d7-a367-40ac-be11-6b763e59d5e9d7e311" colname="col6" width="">
+                        <p id="4192b208-6b02-4957-8d3d-ea84835f6058d7e308">1</p>
+                     </entry>
+                     <entry id="89edb25c-16b0-4023-9b4b-5cd2351886a9d7e314" colname="col7" width="">
+                        <p id="ce64f86c-4964-48b8-8824-47ab4c61147dd7e311">2</p>
+                     </entry>
+                     <entry id="f518c090-1f92-4e3f-9e13-b62dfa201701d7e317" colname="col8" width="">
+                        <p id="ccb85008-0613-4f51-b83d-a2a78964df6fd7e314">1</p>
+                     </entry>
+                  </row>
+                  <row id="3fc43bfa-0029-4868-a917-e385de2cbf87d7e320">
+                     <entry id="684594dd-3176-4a06-b0d7-37d4e74adee7d7e321" colname="col0" width="">
+                        <p id="7033eea6-60b6-4041-bb93-f4f12f032a77d7e318">-</p>
+                     </entry>
+                     <entry id="9b4c6499-7d3d-4ff3-a06f-d967c90fb84ad7e324" colname="col1" width="">
+                        <p id="95d42451-84cc-472f-8916-dd18220e7655d7e321">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="337fded5-12ff-460c-adbe-eb201116df10d7e327" colname="col2" width="">
+                        <p id="d5922e50-dae2-4e27-b3fe-f1e34592c37cd7e324">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="88031c40-17ac-44c6-9b61-bcab53647e1ad7e330" colname="col3" width="">
+                        <p id="944c066b-5224-440c-a228-5d049048dc60d7e327">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="851d4937-1936-43fa-b3f9-b4bc3a00467dd7e333" colname="col4" width="">
+                        <p id="aea106f4-b9b5-4158-8229-9a4c117be84ed7e330">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="8920c29a-307b-4774-97b8-27ea1d0e542ad7e336" colname="col5" width="">
+                        <p id="b752ded7-160a-413a-9b60-91195fdc077ad7e333">1</p>
+                     </entry>
+                     <entry id="abfc2cb1-d26e-448e-a2ac-180bcd0ce0c1d7e339" colname="col6" width="">
+                        <p id="9d92ad51-95e2-40b7-baf3-ffbb3075da12d7e336">3</p>
+                     </entry>
+                     <entry id="28950fb2-9994-48be-ad0b-093f736115c5d7e342" colname="col7" width="">
+                        <p id="36e06351-fb41-4906-bae5-c55aee3eb40dd7e339">1</p>
+                     </entry>
+                     <entry id="ae180b28-dad9-4b98-ab0e-15246c2d33d6d7e345" colname="col8" width="">
+                        <p id="bc20442c-e66c-4244-9836-949eee906817d7e342">2</p>
+                     </entry>
+                  </row>
+                  <row id="3e80841d-1b84-404a-8b3f-672466185672d7e348">
+                     <entry id="438733cd-24a0-47c3-8ac1-ad6e32fd90ccd7e349" colname="col0" width="">
+                        <p id="ac0391c5-f595-4aad-a005-454bf4579869d7e346">-</p>
+                     </entry>
+                     <entry id="51db42d4-e954-45c1-9ca3-1ec64f39e71bd7e352" colname="col1" width="">
+                        <p id="52e45ae7-24e8-4428-95d3-fb842255a836d7e349">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="45e74114-1ef3-4a15-ac7c-96d2b6ae9859d7e355" colname="col2" width="">
+                        <p id="7dd7e9cf-50aa-471f-8345-349723a66bced7e352">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="895a22b8-c54d-49a6-bdeb-c43c17261081d7e358" colname="col3" width="">
+                        <p id="eac01e8f-0f89-4a30-a492-1e402788a4a3d7e355">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="42bf0720-a603-4585-998e-782e48b85d2ad7e361" colname="col4" width="">
+                        <p id="0814af20-8f6e-4062-9fbe-3749a46e297dd7e358">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="c90faaa6-0f16-4cef-9c4a-9b71eab1e53ed7e364" colname="col5" width="">
+                        <p id="624fae7e-458e-4aa7-a736-39e218ddb60dd7e361">2</p>
+                     </entry>
+                     <entry id="9034a3a9-2516-48bc-8b3a-92deec4eb6ffd7e367" colname="col6" width="">
+                        <p id="f2e3eba5-b36e-476c-8f5f-3b4dc871ee69d7e364">1</p>
+                     </entry>
+                     <entry id="0bc630e2-f3dc-4ff5-ae69-82a388ef201cd7e370" colname="col7" width="">
+                        <p id="4dfd21b0-d79d-4e9d-807f-ebc11e937918d7e367">2</p>
+                     </entry>
+                     <entry id="12b2b065-a3b0-423b-9461-462e47115923d7e373" colname="col8" width="">
+                        <p id="d1eefe61-205e-4263-9039-6659fc4d0a96d7e370">1</p>
+                     </entry>
+                  </row>
+                  <row id="b6934486-a282-413a-ba9d-cee5695687ded7e376">
+                     <entry id="e14a6d30-9747-4be0-9c77-237aa0eb0799d7e377" colname="col0" width="">
+                        <p id="98277fbb-ec78-4cf1-a735-7bc5fc3c1e85d7e374">-</p>
+                     </entry>
+                     <entry id="9dacff32-c577-4d19-a28d-7fa79231edf8d7e380" colname="col1" width="">
+                        <p id="aa1b0d72-d5d2-4a63-bdd6-e31628fc79c1d7e377">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="ea826ceb-d126-4dc6-a807-4f01a2c0fa01d7e383" colname="col2" width="">
+                        <p id="221aec8b-2ca1-4711-a5ed-3a1615ac9b3ed7e380">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="454f8696-23c9-492a-8b4b-2a8def6d0260d7e386" colname="col3" width="">
+                        <p id="1f3f8e58-1b5f-4b48-9405-b1fb3d985852d7e383">1[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="afae6f41-2518-43fe-ad39-7313fdcac524d7e389" colname="col4" width="">
+                        <p id="50654e9a-eac8-4551-b5f0-eec0ed31504fd7e386">0[[cellcol:#E6BC5C]]</p>
+                     </entry>
+                     <entry id="57345107-0a00-403d-9d5e-0d5952ed6038d7e392" colname="col5" width="">
+                        <p id="b31a5e5f-5bba-4898-b6e2-37695a73621fd7e389">1</p>
+                     </entry>
+                     <entry id="0e452b37-8f2d-4142-9036-d59c42026171d7e395" colname="col6" width="">
+                        <p id="0214e700-a6d1-48ec-bcd7-6f0cb9523c8ed7e392">2</p>
+                     </entry>
+                     <entry id="911238df-e719-449f-82ff-ffc6009dd87bd7e398" colname="col7" width="">
+                        <p id="2a26dd3f-a04b-4b33-be4a-5688307dda44d7e395">1</p>
+                     </entry>
+                     <entry id="b2adf01d-a3c0-45a5-94a8-61701cfa429bd7e401" colname="col8" width="">
+                        <p id="a8eab95f-8b2d-4993-a5c8-e126d15199e5d7e398">3</p>
+                     </entry>
+                  </row>
+                  <row id="284116e4-112c-466d-aabc-30d2768f81a6d7e404">
+                     <entry id="72c77876-8a25-4ffd-967d-c6ed7bdb436ed7e405" colname="col0" width="">
+                        <p id="387bebf8-46cb-45be-9410-f4674cb3800ed7e402">
+                           <b id="72046e92-9325-4cd9-9c77-5cafd1b8676cd7e403">A</b>
+                        </p>
+                     </entry>
+                     <entry id="e9c379cb-c125-40d4-be5f-673fd42f0538d7e409" colname="col1" width="">
+                        <p id="a608b510-a59c-40c9-9887-cd71392eae90d7e406">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="f61b6b96-51a3-4a66-9833-facdeb55dbb2d7e412" colname="col2" width="">
+                        <p id="a46153e6-9ac4-42e3-ad94-7cd24a3d2e64d7e409">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="c398f077-9344-4d2c-850f-aad3fd378031d7e415" colname="col3" width="">
+                        <p id="b6d3ee71-a800-4906-859a-4386a98e3398d7e412">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="f7c7c1ed-51e3-4a5e-8eeb-e64813c37883d7e418" colname="col4" width="">
+                        <p id="9b24ac29-428f-48b8-af9f-b3301a2f367bd7e415">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="d3c60d34-2d16-4d0d-a5a8-b536c497abc8d7e421" colname="col5" width="">
+                        <p id="f0b4654b-1d38-4174-8bde-d227010b0045d7e418">2</p>
+                     </entry>
+                     <entry id="c4ed0dcc-7f2d-4b45-a1c5-3a8eb8fd7e0ad7e424" colname="col6" width="">
+                        <p id="1d09963a-250e-4a33-bba4-259c972d54d4d7e421">5</p>
+                     </entry>
+                     <entry id="158a219a-3d33-4091-84be-640ae7da9701d7e427" colname="col7" width="">
+                        <p id="1fe942a9-ea9c-441f-a1cc-c4ead2cbf3d6d7e424">2</p>
+                     </entry>
+                     <entry id="e7871574-1f3d-4f45-ade9-f02b767b83f1d7e430" colname="col8" width="">
+                        <p id="939beee8-cf9a-44d4-a500-72a822ff70e3d7e427">
+                           <b id="c85d6116-10b8-48cd-aed0-d9f64b23386cd7e428">5[[cellcol:#AAF0D1]]</b>
+                        </p>
+                     </entry>
+                  </row>
+                  <row id="ddb9c46a-2444-487a-b375-6b01fc7f1306d7e434">
+                     <entry id="b1c2dd58-203a-4a32-a2e2-69669cf907f3d7e435" colname="col0" width="">
+                        <p id="08759234-7b94-4d93-a0a3-513fc318c19bd7e432">
+                           <b id="c23c48a2-8ca1-4c1f-b0dd-22ecaafead83d7e433">B</b>
+                        </p>
+                     </entry>
+                     <entry id="467d461f-f274-4efb-9033-5b0cb94ae150d7e439" colname="col1" width="">
+                        <p id="10132d20-aa59-446e-9252-2c0eab7d8aa5d7e436">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="83f4d74f-9f9f-4a89-9f99-bce0e3119cccd7e442" colname="col2" width="">
+                        <p id="d6851b31-ff63-45db-9d82-215963195402d7e439">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="23b2eb12-2724-4076-a2f2-6721bcf4629ad7e445" colname="col3" width="">
+                        <p id="3cc873db-bcd4-47ed-b67a-c90e84dd6e2fd7e442">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="dcfec553-5a45-41fd-ac38-785c05c77b52d7e448" colname="col4" width="">
+                        <p id="167b8522-0fcd-4d3f-a68b-1470d594258cd7e445">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="6c73e96f-f108-4947-b680-ec7d0861770bd7e451" colname="col5" width="">
+                        <p id="070e5121-a392-4b00-865a-e766c76978a8d7e448">5</p>
+                     </entry>
+                     <entry id="4f37f44a-9d0d-4506-8d52-ba97355fb4edd7e454" colname="col6" width="">
+                        <p id="7db8ae35-f0d9-42f2-a75f-c5949c34cbd2d7e451">4</p>
+                     </entry>
+                     <entry id="5618f217-d373-4e2f-ac7c-7a00fd7453fdd7e457" colname="col7" width="">
+                        <p id="3cc68f3a-6fa8-4e8b-832d-cf8346a2191ed7e454">5</p>
+                     </entry>
+                     <entry id="f1db4bf4-c5a4-40b6-a017-86889ea7baaad7e460" colname="col8" width="">
+                        <p id="e0b56dac-84fa-4d49-84f2-84e2044225b1d7e457">5</p>
+                     </entry>
+                  </row>
+                  <row id="cf657c6f-8454-44fe-bff1-830f721e3985d7e464">
+                     <entry id="7453a4e5-6c27-466b-b7b6-751e5328ccc5d7e465" colname="col0" width="">
+                        <p id="d8bdcead-89a3-4270-81b0-8f877152dc4ed7e462">
+                           <b id="d458f2ef-a839-4c9f-bb65-0168b1cb7e15d7e463">C</b>
+                        </p>
+                     </entry>
+                     <entry id="528d65e1-183b-4368-bde0-8cbe641ea933d7e469" colname="col1" width="">
+                        <p id="e9b4a872-2d88-4e4c-b1a0-20c15649e9d3d7e466">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="cf136c26-dd8d-4250-a07e-94e485a301b5d7e472" colname="col2" width="">
+                        <p id="71f22c30-76d7-44f1-b005-6be87f282543d7e469">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="2d059cae-b597-48f5-9f67-5266ede6c1bbd7e475" colname="col3" width="">
+                        <p id="3f7eef06-f65f-4cce-b9bd-642c481ac827d7e472">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="ddd5ba11-e88d-4988-8ca1-bc9c61518052d7e478" colname="col4" width="">
+                        <p id="28ed94de-0e8c-4e40-99a2-3cf401c329b8d7e475">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="87c4700b-8540-401a-90e6-db73b91df77ad7e481" colname="col5" width="">
+                        <p id="4bd12b05-4c94-485f-892e-cb4648dc7073d7e478">2</p>
+                     </entry>
+                     <entry id="4d0b82d9-7db9-4e17-aae2-dc54ddd08807d7e484" colname="col6" width="">
+                        <p id="88705972-86dd-4c14-8777-36040824e794d7e481">5</p>
+                     </entry>
+                     <entry id="b9831fe7-6868-43c3-879e-20c710071e84d7e487" colname="col7" width="">
+                        <p id="0c7b5e1a-a379-454d-8d65-8cd1f12f3bead7e484">2</p>
+                     </entry>
+                     <entry id="f66517d1-38a8-49d1-81df-3498b673b34bd7e490" colname="col8" width="">
+                        <p id="f051ca4f-fda9-48e9-a0cb-419b4effadf3d7e487">5</p>
+                     </entry>
+                  </row>
+                  <row id="47a1ca29-329e-4da5-80b9-2197103571bad7e493">
+                     <entry id="73865f86-873f-4d1e-99e8-927b2782822bd7e494" colname="col0" width="">
+                        <p id="fcb62f27-923c-4d09-aa83-7ece61a2c46fd7e491">
+                           <b id="67c4a53c-c21e-4876-a656-1ab13ec08a38d7e492">D</b>
+                        </p>
+                     </entry>
+                     <entry id="534f516d-0579-4208-a928-d71349ca594bd7e498" colname="col1" width="">
+                        <p id="f0646f06-511e-4d26-b3ac-c0f6a40ae2f2d7e495">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="1a995a4c-a0e6-4b77-81e4-34121fd0d489d7e501" colname="col2" width="">
+                        <p id="650e1e86-1d18-48c3-9776-339b5c7b5462d7e498">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="aa800307-4ba4-4689-844f-366ceeec9e29d7e504" colname="col3" width="">
+                        <p id="4606f371-c756-4ad6-93ad-aaabada5e03fd7e501">1[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="1744ac45-b148-42cd-bd91-9d34e6d05110d7e507" colname="col4" width="">
+                        <p id="65f6de88-2185-4e03-888f-fcfcaea4ab4ed7e504">0[[cellcol:#95E0E8]]</p>
+                     </entry>
+                     <entry id="be439763-8201-4233-862b-8d2dd846f243d7e510" colname="col5" width="">
+                        <p id="8b8cd2c0-569e-4e11-8950-44f6b8307764d7e507">
+                           <b id="bc9c9596-f98c-4415-b9ce-60064211c60fd7e508">5[[cellcol:#AAF0D1]]</b>
+                        </p>
+                     </entry>
+                     <entry id="0f7ebfee-834a-4925-a2ac-c8c91bacc2d0d7e514" colname="col6" width="">
+                        <p id="c32c728f-eb13-4a29-bf93-db65bb99e93dd7e511">5</p>
+                     </entry>
+                     <entry id="9f45fa23-138c-4c1b-82fa-b868f9334753d7e517" colname="col7" width="">
+                        <p id="f69b250c-fb5d-4d8a-9b10-da674e4d6a57d7e514">5</p>
+                     </entry>
+                     <entry id="260e0311-3c9d-4e9d-aae1-e847500ed840d7e520" colname="col8" width="">
+                        <p id="8f7ec7bd-af47-415b-91f7-b9e4ff473f5ed7e517">4</p>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p id="b138d3db-d27d-4a62-a107-a448708d90c7d7e519">In der Teil-Tabelle rechts unten kann man nun ablesen, dass es [[code:5]] Möglichkeiten 
+für Spaziergänge von [[code:A]] nach [[code:D]] gibt.</p>
+         <note id="cd5b9678-8e9b-4a46-8afd-f3279b92e4c5d7e525">
+            <p id="9560e3a4-d9c8-4bd3-9d3d-8c5af63b7a74d7e522">Als Programmierer ist diese Information interessant,
+wenn man z.B. Aussagen über den Aufwand einer Testabdeckung veranschlagen möchte. Hier würde ein Spaziergang
+von einem Ausgangszustand [[code:A]] zu einem Endzustand [[code:D]], der 
+über verschiedene Fallunterscheidungen erreicht werden
+kann, den Graphen darstellen. Fallunterscheidungen könnten
+z.B. auch verschiedene Eingabedialoge in einer GUI-Anwendung sein...</p>
+         </note>
+      </section>
+   </body>
+</topic>

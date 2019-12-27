@@ -1,16 +1,17 @@
-# Buch
-Buch über XML, XSLT und XQuery
+# Bücher
 
-Dieses Repository enthält nur das exportierte DITA XML und dient für Backup-Zwecke.
-Ausserdem findet man hier auch einige Skripte, die bei der Bearbeitung entstanden sind.
+Diese Bücher werden mit [Tektur CCMS](http://www.tekturcms.de) geschrieben:
 
-## Projekt Homepage
-Die aktuelle Version des Buchs kann man auf [www.stylesheet-entwicklung.de](http://www.stylesheet-entwicklung.de) lesen.
+* __XML Hands On__: Buch über XML, XSLT und XQuery
+* __Mathe für Programmierer__: Zusammenfassung meiner Mathe Uni Skripte
+* __Professional Record__: Meine berufliche Projekthistorie 
+
+Dieses Repository enthält jeweils die DITA XML Quelle, ein einfaches HTML Format, sowie das PDF (Apache FOP).
 
 ## Tektur CCMS
-Der Text ist in erster Linie als schneller Test für [Tektur CCMS](http://www.tekturcms.de) gedacht. Der Feinschliff kommt noch :-]
+Die Text sind in erster Linie als Test für [Tektur CCMS](http://www.tekturcms.de) gedacht. Der Feinschliff kommt noch :-]
 
 ## Lizenz
-Das Buch ist unter einer Creative Commons Lizenz veröffentlicht:
+Die Bücher sind unter einer Creative Commons Lizenz veröffentlicht:
 https://creativecommons.org/licenses/by-nd/4.0/legalcode.de
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="d79a8dc3-32ed-4a6e-b3e5-f5f501334df4">
+   <title id="64a49545-93fd-4838-930b-9ee7dc3801b1">Vergleich von Bäumen</title>
+   <taskbody id="b734be63-61be-44be-b5ed-717eb086c53b">
+      <steps id="944bc063-1f76-40ff-8e6f-f72df0ea99e9">
+         <stepsection id="f8a61b6a-f50e-402a-910f-259b577d4261d7e5">
+            <p id="fb557cd2-b392-43f9-81d3-0e5d25552dacd7e6">Wenn man zwei Bäume vor sich hat, ist es nicht immer leicht  zu erkennen, ob sie den gleichen 
+Sachverhalt darstellen. Bspw. kann ein Entscheidugsbaum so in der Ebene verdreht sein, dass 
+er nicht mit einem anderen Baum vergleichbar ist.</p>
+         </stepsection>
+         <step id="2c77d50f-bf9b-4192-9e6a-3d19c65b8c5e">
+            <note id="f0dee927-a5b6-419d-bdc9-2061393afe14d7e9">
+               <p id="27ac56d4-3b38-442b-9bd6-50f808c77bc4d7e10">Aus diesem Grund ist es ratsam die Baumdarstellung zu normalisieren. Grds. sind zwei Bäume gleich,
+wenn die folgenden Kriterien erfüllt sind:</p>
+            </note>
+            <cmd id="15226aba-8d14-48e5-bae7-6e2b30baf58dd7e12">Die beiden Bäume haben dieselbe Anzahl von Knoten</cmd>
+         </step>
+         <step id="6bb768a2-8b08-4a3c-9901-86097716cc8ad7e14">
+            <cmd id="7e44334c-0a01-48c2-bca6-28fd34aafa8dd7e15">Die beiden Bäume haben dieselbe Anzahl von Kanten</cmd>
+         </step>
+         <step id="db7a51aa-a517-4afb-bf88-49e0c7185da8d7e17">
+            <cmd id="ba6f3a7b-7fd0-4250-aef1-a7ad7c10a6f7d7e18">Eine Kanze in Baum ein, muss auch genauso eine Kante in Baum zwei haben</cmd>
+            <stepresult id="8adf297a-7ad1-4198-afc1-3d4af6ef1b7ed7e20">
+               <p id="faab6ff7-e858-4d1d-81b8-651620d8cc5ad7e21">Der Vergleich funktioniert natürlich nur, wenn man die Knoten der Bäume geeignet durchnumeriert.</p>
+            </stepresult>
+         </step>
+         <step id="b6f46cf2-dd66-4cae-a17e-6c814d7ef05fd7e23">
+            <cmd id="2bbf4eac-dfe3-419d-9751-340b1d74308ed7e24">Man kann auch den sog. Code des Baums bestimmen. Das ist eine wohldefinierte Klammerfolge:</cmd>
+            <substeps id="aa01df18-e2ff-4b07-9508-b8c566af3237d7e26">
+               <substep id="fbcc0ea4-fdf2-45d9-a069-d12fcd157445d7e27">
+                  <cmd id="c199c3e6-f80b-41a1-b328-9a4c4382594ad7e28">Es gibt genau soviele öffnende wie schliessende Klammern</cmd>
+               </substep>
+               <substep id="8c4683f0-289b-46c5-ade4-d7066119744fd7e30">
+                  <cmd id="6a773a5e-3abd-4eda-9b9f-269b35a4f365d7e31">Es existiert eine Totalordnung auf den Klammerausdrücken, d.h. A &lt; B, wenn</cmd>
+                  <stepresult id="685df710-e2e4-4d0a-8320-92c28523bd7cd7e33">
+                     <ul id="58d7b6ce-ca6c-4961-b59d-1e4990d960bfd7e34">
+                        <li id="61319fcd-eee9-4cc7-8919-1e2afd26379cd7e35">
+                           <p id="fbfd155e-685a-421a-80a5-a32085cddc48d7e36">A ist Anfang von B, mit A = () und B = ()</p>
+                        </li>
+                        <li id="bd7bda7a-db63-41c1-af7f-3c3061e3eab3d7e38">
+                           <p id="fcf80bc3-f23a-4e9f-af2b-b17a7d61593dd7e39">Wenn sich die erste Klammer, in der sich A und B unterscheiden, 
+     bei A öffnend und bei B schliessend ist.</p>
+                        </li>
+                     </ul>
+                  </stepresult>
+               </substep>
+            </substeps>
+         </step>
+         <step id="f8fdc0cb-c557-4a0e-aa28-7c3b6487e8b1d7e41">
+            <cmd id="73043a57-9e0a-443f-a739-caeca668e29cd7e42">Um nun zu testen, ob man einen echten Baum vor sich hat, geht man nach den folgenden Schritten vor:</cmd>
+            <substeps id="564ee87c-be5d-4bbb-86d6-7653793f120dd7e44">
+               <substep id="8a84ce5a-83ec-4fa9-a02b-df5740564f65d7e45">
+                  <cmd id="f4a48656-1f05-4127-a803-e9e83be740d0d7e46">Kriterium für einen gepflanzten Baum: Es gibt gnausoviele öffnende, wie schliessende Klammern?</cmd>
+               </substep>
+               <substep id="e0d83e0f-1e44-489c-bb65-1b0b5f422a9fd7e48">
+                  <cmd id="8e27f852-f6cd-412f-8bf5-dbb1736f7769d7e49">Kriterium für einen Wurzelbaum: Sind die Unterbäume jedes Knotens lexikographisch sortiert?</cmd>
+               </substep>
+               <substep id="4f99b88b-1fca-447c-8a05-0a40b214bde2d7e51">
+                  <cmd id="803f3621-a653-40a7-9f81-e007035c187cd7e52">Kriterium für einen echten Baum: Hat die Wurzel des Baum minimale Exzentrität (= größter Abstand eines Knotens zu einem anderen)</cmd>
+               </substep>
+            </substeps>
+            <stepresult id="e73910b0-7fbb-49a0-9c4e-25e042c9d7c4d7e54">
+               <p id="3bce0d99-163d-46b3-bb56-6fce7f5d3faed7e55">Minimale Exzentrität bedeutet also, dass man die Wurzel eines Baumes vor sich hat. Ein nach den obigen Kriteriien gefundener Baum ist eindeutig definiert.</p>
+            </stepresult>
+         </step>
+      </steps>
+   </taskbody>
+</task>
