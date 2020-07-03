@@ -30,7 +30,7 @@ mlcp import $mlcp_opts \
       <fig id="3b3808a6-0ed7-4759-9a2b-17cb68431025d7e30">
          <title id="beca9858-b1b2-4c0f-9fa7-ca2b3d282bf7d7e31">Anzeige der Dokument-Rechte in der MarkLogic Datenbank</title>
          <desc id="a63952f0-9adf-45b9-86e6-2d3c9011e2a0d7e33">Der "Browse"-Button in der MarkLogic Konsole wird oft übersehen, bietet aber viele nützliche Funktionen, wie z.b. die Anzeige der gesetzten Dokumentrechte.</desc>
-         <image href="images/rights_50.png"/>
+         <image href="images/rights_52.png"/>
       </fig>
       <hazardstatement id="188439f3-bd70-4b14-91e7-ab0d0174ebded7e36" type="notice" status="changed">
          <messagepanel id="106d0067-a4d8-4dc3-af79-06759cfd5cf6d7e37">

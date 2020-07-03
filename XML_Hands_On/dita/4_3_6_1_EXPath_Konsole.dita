@@ -29,12 +29,12 @@
       <fig id="74c79256-f9ae-4fb9-adaa-4ac4bce58517d7e34">
          <title id="99c62af8-559f-419e-b26c-c55d25538729d7e35">Datenbank Ansicht im EXPath Explorer für MarkLogic</title>
          <desc id="1d7e9fb2-ae02-4989-9949-612ed6526bd5d7e37">Über den Reiter <b id="9268e88b-e527-436e-a69e-fb7424743025d7e39">Databases</b> gelangt man zur Datenbank-Ansicht. Hier kann man die einzelnen Verzeichnisse mittels des <b id="ebee9698-a2f4-44b5-903a-d2b04a329144d7e42">Browse-Buttons</b> auswählen.</desc>
-         <image href="images/expath_52.png"/>
+         <image href="images/expath_54.png"/>
       </fig>
       <p id="40953aa2-3239-4b10-aeca-b939f03bbd9cd7e46">Über einen Dateipfad gelangt man zur Datenansicht mit Syntax-Highlighting.</p>
       <fig id="45daf975-dad4-46fc-863d-a20d1471dacbd7e48">
          <title id="169a2659-71ad-4d4b-949b-6fcb88cbaf0cd7e49">Datensicht mit Syntax-Highlighting in der EXPath Konsole für MarkLogic</title>
-         <image href="images/dataview_54.png"/>
+         <image href="images/dataview_56.png"/>
       </fig>
       <hazardstatement id="d875db07-a04b-4426-b67c-8d2472b217e8d7e52" type="warning">
          <messagepanel id="77327707-b273-48a9-9eed-42bee26edac0d7e53">

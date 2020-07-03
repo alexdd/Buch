@@ -3,18 +3,18 @@
    <title id="b8539c31-c176-46bb-b028-e811b2decfbe">Eindeutigkeit der Regelbasis </title>
    <body id="9b59165e-39f4-40fc-81ce-c28c517bce27">
       <p id="9a5b8555-49ef-4d3a-bc72-1640077ef423">Die Regelbasis[[xe1:Konzepte;xe2:Regelbasis]] von XSLT kann wahrscheinlich unendlich viele Regeln aufnehmen, wenn man unsere Limitierung bzgl. der Hardware nicht beachtet. Für die Vollständigkeit, Eindeutigkeit und Konsistenz der Regelbasis ist der Programmierer aber selbst verantwortlich.</p>
-      <p id="3e087bbf-c0ae-4bd1-95b2-89113fd7f25cd6e6">Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.</p>
-      <section id="e53dfc13-6982-4645-b585-0d0d3f5ec2a8d7e8">
+      <p id="3e087bbf-c0ae-4bd1-95b2-89113fd7f25cd6e6">Um die Eindeutigkeit der Regeln zu gewährleisten,  gibt es verschiedene Mechanismen.23e23e23e</p>
+      <section id="3dd6da85-ee9a-4b94-97bf-9df8c4c4f9d6d7e8">
          <title id="e16576ad-fbf7-41d7-a23e-deb174c6b176d6e9">Reihenfolge der Match-Regeln</title>
          <p id="9ef5fc0c-f742-4267-98dc-3a3c4711f7f4d6e11">Im Normalfall sollte auf einen bestimmten Knoten in einem bestimmten Szenario genau eine Regel matchen. Falls es einen Konflikt gibt, wird zumindest bei <b id="467fbc9d-ac4b-4acd-8aa3-bc69b15a716dd7e16">Saxon</b> diejenige Regel herangezogen, die im Stylesheet zuletzt deklariert wurde.</p>
          <p id="ca5b365e-570a-4296-be40-adc228bb4c30d6e13">Diesen Umstand zu kennen, ist genau dann wichtig, wenn man einen bestehenden Stylesheet-Code übernehmen muss. Getreu dem Motto "Never change a running system" sollte man die Sache diesbzgl. sehr behutsam aufräumen.</p>
       </section>
-      <section id="0bc0faa9-a59d-4b83-924f-6227f4d2d4fad7e18">
+      <section id="410db593-7055-434a-b3d9-eca72f4e58efd7e18">
          <title id="c35ab440-7d81-4466-a34f-32545cec227ad6e14">Präzedenz der Auswertung</title>
          <p id="477f566a-06ea-4716-afc4-5f3fc591ec04d6e16">Match-Regeln[[xe1:Konzepte;xe2:Match-Regeln]] werden gemäß ihrer Spezifität sortiert und diejenige, die auf einem Knoten in einem bestimmten Szenario am besten zutrifft, wird zur Auswertung herangezogen. Grds. werden die Regeln anhand folgender Kriterien sortiert:[[xe1:Konzepte;xe2:Priorität]]</p>
          <ol id="a43e906c-c1ac-4f94-a7df-31a3a401db62d6e20">
             <li id="96b21a07-bda1-4642-b895-2f007be4fbabd6e21">
-               <p id="12919986-a583-4893-bc7b-bcab6b74558fd6e22">Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p> |   |                                                    Rejected by , .       </li>
+               <p id="12919986-a583-4893-bc7b-bcab6b74558fd6e22">Importierte Template Regeln haben immer eine niedrigere Priorität als die Regeln des importierenden Stylesheets.</p> |  |                                                    Rejected by , .       </li>
             <li id="32a5235c-9d03-46ed-9255-7c0be933ac1cd6e24">
                <p id="01aededb-d8e1-43b6-92d3-1495e12ce7e5d6e25">Templates mit einem höheren Priority Attribut haben Vorrang.</p>
             </li>
@@ -22,7 +22,7 @@
                <p id="70789d26-aaa8-40ca-ab3d-54df68f59d9fd6e28">Templates ohne Priorität bekommen automatisch eine Default-Priorität. Die höchste Default-Priorität ist [[code:0.5]].</p>
             </li>
             <li id="bfe9a249-156c-4d95-94c4-84b60d190f3ed6e30">
-               <p id="aafa8f6b-38f7-4076-8d83-4d506d2df6bdd6e31">Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p> |   |                                                    Rejected by , .       <ul id="1b5ec534-ba6b-47d8-9fbd-69ddcf412f39d6e33">
+               <p id="aafa8f6b-38f7-4076-8d83-4d506d2df6bdd6e31">Diese Default Priorität errechnet sich anhand der Bedingungen oder Wildcards, die an einen Match-Regel geknüpft sind: </p> |  |                                                    Rejected by , .       <ul id="1b5ec534-ba6b-47d8-9fbd-69ddcf412f39d6e33">
                   <li id="35d5190b-b817-4225-a765-b315675a2c6ad6e34">
                      <p id="847229ce-7fb1-40e2-89d1-a17200496892d6e35">Wenn mehrere Templates matchen, dann wird das am meisten spezifische zur Auswertung herangezogen.</p>
                   </li>
@@ -69,14 +69,14 @@
             </li>
          </ol>
       </section>
-      <section id="35c420cf-267c-4cc9-80b4-b9035bf81c81d7e84">
+      <section id="ac7bf3d7-18db-497b-89e1-8d9ef49bf321d7e84">
          <title id="5b4364ca-516c-4edb-a9e8-3de574a18cc2d6e19">Import Präzendenz und Default-Regel</title>
          <p id="69c293ea-97d3-42a9-a6f4-a6f8bdcfa0edd6e21">Wie in der obigen Sektion unter Punkt 1. angegeben, haben alle[[xe1:Konzepte;xe2:Import Präzedenz]] Regeln in einem importierten Stylesheet eine geringere Priorität als im importierenden Stylesheet. Diesen Umstand kann man sich zunutze machen, um eine Default-Regel[[xe1:Konzepte;xe2:Default-Regel]] einzubinden, bspw:</p>
-         <pre id="3d5973a1-4f31-43bb-93c1-fc1df0337d15d7e89" xml:space="preserve">&lt;xsl:template match="*" mode="#all"/&gt;</pre>
+         <pre id="ad230c8d-bb88-40eb-b4b7-9b9e90a06ca6d7e89" xml:space="preserve">&lt;xsl:template match="*" mode="#all"/&gt;</pre>
          <p id="ee1dbc33-8d3b-4a4d-8fff-0f3d31f87f4bd6e83">Da diese Regel sich in einem importierten Stylesheet befindet, hat sie geringere Priorität als alle anderen Regeln und greift nur dann, wenn für einen betretenen Knoten keine anderen Match-Regeln definiert sind.</p>
-         <p id="c1b40cca-19d7-4c6e-9be7-d77ad779951bd6e85">Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p> |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <p id="daffa816-57a9-4f65-b1c3-b5266bc0c41bd6e87">Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer <b id="b678b8ee-aa4b-48a3-b6ea-4b0ef087914dd7e98">XML-2-XML Migration</b> automatisch Knoten im XML Baum abgetrennt werden sollen...</p>
+         <p id="c1b40cca-19d7-4c6e-9be7-d77ad779951bd6e85">Das ist z.B. praktisch, um nicht "gehandelte" Element zu identifizieren - dazu wäre die obige Regel nicht leer, sondern würde bspw. einen gelb markierten Warntext direkt in das Ausgabeformat schreiben.</p> |  |                                                    Rejected by , .           |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <p id="daffa816-57a9-4f65-b1c3-b5266bc0c41bd6e87">Eine leere Default-Regel ist dagegen gut, wenn bspw. in einer <b id="b678b8ee-aa4b-48a3-b6ea-4b0ef087914dd7e98">XML-2-XML Migration</b> automatisch Knoten im XML Baum abgetrennt werden sollen...</p>
       </section>
-      <section id="80e453c7-d7e9-4cf5-9890-6b8009bd104bd7e101">
+      <section id="2a94a3bf-7ed5-45a0-a439-95b71c6bff4ad7e101">
          <title id="be710deb-554e-4962-beb9-9de58d386c7fd6e24">Prioritäten</title>
          <p id="d9a24ef4-9b36-4aa8-ae9b-371cfe8120c2d6e26">
             <undefined id="454c8db4-17ce-4b8e-8f1f-12ad47ebdf60d7e108" href="undefined">Alle[[xe1:Konzepte;xe2:Priorität]]</undefined> Match-Regeln werden mit einer Priorität ausgestattet. Der Stylesheet-Entwickler hat die Möglichkeit diese Priorität zu überschreiben. Dazu wird das Attribut <undefined id="5be06e26-697f-435e-b3b4-46096ef82e47d7e111" href="undefined">[[code:@priority]]</undefined> an der Match-Regel verwendet. Ein Use-Case für die Prioritäten wäre bspw. folgendes Filter-Szenario</p>
@@ -104,7 +104,7 @@
             </li>
          </ul>
          <p id="3f9a7a12-fa87-47eb-9874-4d8f275ed427d6e114">In XSLT Templates überführt, könnte diese Anforderung so umgsetzt werden:</p>
-         <pre id="64923aca-ea3c-496d-becd-fae8c56125a2d7e135" xml:space="preserve">&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
+         <pre id="87c06e5b-3a72-4c47-a6c8-2853188d46e0d7e135" xml:space="preserve">&lt;xsl:template match="Seminar[Ende-Datum/xs:date(.) le current-date()]" 
               priority="30" mode="filter-seminare"&gt; 
   &lt;xsl:element name="Filtered-Seminar" namespace="{namespace-uri()}"&gt; 
     &lt;xsl:attribute name="reason"&gt;termed-seminar&lt;/xsl:attribute&gt; 
@@ -130,14 +130,14 @@
                   id="4ba64232-f94b-41a8-8522-b959448347ac"
                   type="topic">Vortransformationen</xref>) weiterbehandelt werden, stören aber in der regulären Verarbeitung nicht.</p>
       </section>
-      <section id="e9037771-9795-4e6f-80a3-1bde83a73d29d7e142">
+      <section id="61235340-08de-44a4-9b24-d77452ebabc7d7e142">
          <title id="8950e48f-85c8-4fc8-98f7-e1f7e42ed7d5d6e29">Modus Attribute</title>
          <p id="bc053ce1-34d6-4565-8b3a-f2fe65d21f1cd6e31">An allen Templates[[xe1:Konzepte:xe2:Modus]] hat man die Möglichkeit einen selbst deklarierten Modus anzugeben. Wenn dann der XSLT Prozessor in eine bestimmte Richtung gepusht, vgl. <xref href="5b73f348-0058-45e0-82f7-c3de72ec5d41"
                   id="8e5f35b9-8707-4d46-bf49-cfcfbdc2c7c9"
                   type="none">Push vs. Pull Stylesheets</xref> , wird, werden nur diejenigen Regeln zur Auswertung herangezogen, die im selben Modus sind, wie der [[code:apply-templates]] Call selbst.</p>
          <p id="f26823af-acb5-4314-8aca-25e62527371dd6e126">Beispielsweise möchte man die Titel im Kapitel anders behandeln als die Kapitel im Inhaltsverzeichnis, denn im TOC sollen z.B. keine Fussnoten-Marker angezeigt werden. </p>
          <p id="12bc5735-95b8-4bb2-99e7-a2979c3d031ad6e128">In Templates formuliert würde so eine Anweisung folgendermassen aussehen:</p>
-         <pre id="8d8ec9dc-36d4-4f6a-a3e2-5795fb331eadd7e154" xml:space="preserve">&lt;xsl:template match="title" mode="toc"&gt;
+         <pre id="bca57493-fce4-48d6-8941-fa408c01ec64d7e154" xml:space="preserve">&lt;xsl:template match="title" mode="toc"&gt;
   &lt;div class="toc-entry"&gt;
     &lt;xsl:apply-templates select="*[not(self::footnote)]"/&gt;
   &lt;/div&gt;
@@ -148,12 +148,12 @@
     &lt;xsl:apply-templates/&gt;
   &lt;/h1&gt;
 &lt;/xsl:template&gt;</pre>
-         <p id="b11eef8a-04dc-4c3e-b189-3d8d6b78444ad6e132">Die Generierung des TOC könnte dann so ablaufen:</p> |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <pre id="4889f26b-a8ed-439b-b3c4-dd6c2283a8bad7e159" xml:space="preserve">&lt;xsl:for-each select="chapter"&gt;
+         <p id="b11eef8a-04dc-4c3e-b189-3d8d6b78444ad6e132">Die Generierung des TOC könnte dann so ablaufen:</p> |  |                                                    Rejected by , .           |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <pre id="aaef7433-42b6-4e8b-b5e3-34fc23302cfdd7e159" xml:space="preserve">&lt;xsl:for-each select="chapter"&gt;
   &lt;xsl:apply-templates select="title" mode="toc"&gt;
 &lt;/xsl:for-each&gt;</pre>
          <p id="2cb80884-bdd3-4b2d-a4ae-4d1c7ed04a67d6e136">Bzgl. der Eindeutigkeit der Regelbasis kann man so anhand des Mode-Attributes[[xe1:XSLT Konstrukte;xe2:Mode Attribut]][[xe1:Attribute;xe2:mode]] Ausführungsgruppen bilden. </p>
          <hazardstatement id="b14bd5cf-29a8-4619-b2bc-bc8e57e5a501d6e138" type="warning">
-            <messagepanel id="4fd05323-82fc-46ac-bfde-516d314f8a29d7e164">
+            <messagepanel id="3003dbad-efb5-46c8-97e2-b6483439b94ed7e164">
                <typeofhazard id="3c4c54b5-0b86-44f0-91b4-093224f47751d6e140">Wie auch bei Angabe der Priorities kann man auf diese Weise Regeln setzen, die nie ausgeführt werden, weil sie vllt. im Zuge einer Refactoring-Massnahme abgeklemmt und dann vergessen werden.</typeofhazard>
                <howtoavoid id="bb4d0cf8-6cf3-4757-9ac5-a453f6dcc85ed6e142">Auch das [[code:mode]]-Attribut ist also mit Vorsicht zu geniessen und sparsam einzusetzen.</howtoavoid>
             </messagepanel>

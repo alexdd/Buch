@@ -171,7 +171,7 @@ declare function local:insert-update()
       <p id="48ff0142-18b5-4135-986c-b4f3baf3550ed6e37">Lassen wir diese Query auf einer frischen Datenbank laufen, so erhalten wir die folgendes Ergebnis:</p>
       <fig id="acc86390-4ffd-48cb-9526-0c067105e0e3d7e42">
          <desc id="5286cb2a-c3ce-41d4-a6b9-0d521ad71491d7e43">Nach der Ausführung obiger Query gibt es in der DB drei Dokumente, das Orginal, das Split-Dokument und die Aktualisierung. Das Split-Dokuments und das Original sind als Vorgänger mit Suffix gekennzeichnet.</desc>
-         <image href="images/temporal-documents-1_38.png"/>
+         <image href="images/temporal-documents-1_39.png"/>
       </fig>
    </body>
 </topic>

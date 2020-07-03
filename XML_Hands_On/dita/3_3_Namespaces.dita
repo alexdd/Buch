@@ -10,7 +10,7 @@ den der folgende Prozesschritt nicht versteht, weil er dort nicht deklariert wur
       <p id="7b6e758e-d962-425a-86cf-30fc852bda81d6e8">Es gibt meherere Möglichkeiten einen Namespace im Stylesheet zu deklarieren. Gehen wir davon aus,
 dass in einem Transformationsschritt genau eine Quelle und max. eine Konfigurationsdatei verarbeitet 
 wird, dann kann das Stylsheet-Element bspw. so aussehen:</p>
-      <pre id="a8373523-6448-4b74-aa70-79f9a0f97062d7e11" xml:space="preserve">&lt;xsl:stylesheet version="2.0" 
+      <pre id="6ec31b93-2bbb-4fc3-a72b-5b69f70bf886d7e11" xml:space="preserve">&lt;xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
   xmlns:tektur="https://namespace-eigener-xslt-funktionen"
@@ -39,10 +39,10 @@ In diesem Feld würde ich den Namespace einer Konfigurations- oder separaten Dat
          </li>
       </ul>
       <p id="facda359-d33a-4d29-86cd-1c8ed0c0c37bd6e37">Mehr als einen Namespace in der Eingabe sollte man aus meiner Sicht bei der XML Verarbeitung mit XSLT vermeiden - wenn es geht.
-Ggf. empfiehlt es sich, die Eingabe vor der Verarbeitung zu normalisieren und Elemente ggf. umzubenennen. Ansonsten kann man auch eigene Namespace-Prefixes deklarieren, wie z.B.:</p> |  |                                                    Rejected by , .       <pre id="31f36956-3bef-4ffe-b462-fba1ffde0d52d7e38" xml:space="preserve">xmlns:ext="https://www.tekturcms.de/external-tools"</pre>
+Ggf. empfiehlt es sich, die Eingabe vor der Verarbeitung zu normalisieren und Elemente ggf. umzubenennen. Ansonsten kann man auch eigene Namespace-Prefixes deklarieren, wie z.B.:</p> |  |                                                    Rejected by , .       <pre id="f1c30ec9-7c78-4dbb-9666-280c8ec6fd11d7e38" xml:space="preserve">xmlns:ext="https://www.tekturcms.de/external-tools"</pre>
       <p id="11bfa628-dd5a-46ee-9dfa-99ea9733ed73d6e41">und diesen in XPath Selektionen und Match-Regeln verwenden.</p>
       <hazardstatement id="d4c6a587-757b-4b00-883c-9e5273834a12d6e39" type="danger" status="changed">
-         <messagepanel id="deb426d7-45d2-41c2-96ba-ff5c0051f1c8d7e43">
+         <messagepanel id="f5d1e078-9c6c-44e2-b933-f3cf51a22b1ad7e43">
             <typeofhazard id="6a0d517a-4a6c-48b2-b637-699ec79f42a7d6e41">Befinden sich in den Eingabedaten Namespaces, die man in den XSLT Stylesheets nicht handelt - der Namespace kann auch nur
 an einem ganz bestimmten Element hängen - so kann es bei der Transformation - ohne Fehlermeldung - zu unerwarteten Ergebnissen kommen.</typeofhazard>
             <howtoavoid id="4d47e81a-7a6a-4f2e-9621-45a6535edbb2d6e43">Deshalb sollte man die Daten im Vorfeld bzgl. Namespaces sehr genau analysieren.</howtoavoid>
@@ -58,16 +58,16 @@ schliesslich in die Ausgabe geschrieben wird, hängt vom aktuell verarbeiteten K
          </li>
       </ul>
       <p id="b7e9f54a-5c0b-48de-abf2-80f917c915acd6e54">Um diese beiden Default Einstellungen zu steuern (bzw. zu überschreiben) gibt es mehrere Möglichkeiten:</p>
-      <pre id="3f59fb3a-1489-4173-90f4-12da5cec9bbbd7e61" xml:space="preserve">&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</pre>
+      <pre id="476ae31a-e994-4f1b-8c59-d962de8ad1dbd7e61" xml:space="preserve">&lt;xsl:element name="{local-name()}" namespace="{namespace-uri()}"&gt;</pre>
       <p id="e38c1750-4914-402d-a6c8-1189f6f96106d6e59">Hier wird ein Element mit dem un-geprefixten Namespace des Kontextknotens deklariert.
 Wenn der Kontextknoten keinen anderen Namespace hat, so wird hierdurch sichergestellt,
 dass der Default-Namespace auch tatsächlich in die Ausgabe kommt.</p>
-      <pre id="f3541de3-79ca-4011-9e56-7e155f53eeded7e65" xml:space="preserve">&lt;xsl:element name="meinelement" namespace="mein-namespace"&gt;</pre>
+      <pre id="487fbff7-e08b-4ad7-9181-252dbb2bb36bd7e65" xml:space="preserve">&lt;xsl:element name="meinelement" namespace="mein-namespace"&gt;</pre>
       <p id="ff135156-7c5f-461a-aa39-03acbbfc2164d6e63">Hier wird ein Element mit eigener Namespace Angabe in die Ausgabe geschrieben. Einfacher geschrieben:</p>
-      <pre id="aba330fb-428c-4191-9e63-ff16a63a3ab3d7e69" xml:space="preserve">&lt;mein-element xmlns="mein-namespace"&gt;</pre>
+      <pre id="e69733b6-e94c-46ae-aea6-51e29ed7537bd7e69" xml:space="preserve">&lt;mein-element xmlns="mein-namespace"&gt;</pre>
       <p id="5803933b-c6bf-431b-9f72-f8649ce4f19fd6e71">Es gibt auch ein Attribut am [[code:xsl:copy]] Element,
 das den Vorgang des Namespace-Kopierens steuern kann:</p>
-      <pre id="f5dc1eb5-cdbc-4305-ac5c-b5d61318907ed7e73" xml:space="preserve">&lt;xsl:template match="p"&gt;
+      <pre id="eb49e095-1264-4ddc-90aa-c96770632bc2d7e73" xml:space="preserve">&lt;xsl:template match="p"&gt;
   &lt;xsl:copy copy-namespaces="no"&gt;
      &lt;xsl:apply-templates/&gt;
    &lt;/xsl:copy&gt;
@@ -75,15 +75,15 @@ das den Vorgang des Namespace-Kopierens steuern kann:</p>
       <p id="1f87506c-b5f5-4f11-9ff3-4932938dea95d6e67">Hier wird der Namespace am [[code:p]] Element nicht in die Ausgabe geschrieben. Ggf. funktioniert diese
 Funktion aber mit unerwarteten Ergebnissen, deshalb sollte man sich ohne genauen Test nicht darauf verlassen.</p> |  |                                                    Rejected by , .       <p id="526b542d-9aaa-4181-bb81-9990f3f9940bd6e69">Ebenso kann eine Default-Kopierregel verwendet werden, die es verbietet einen Namespace
 weiterzuvererben:</p>
-      <pre id="47d40475-9552-4dba-b9b7-9bc7323a8102d7e81" xml:space="preserve">&lt;xsl:template match="@* | node()"&gt;
+      <pre id="fb450003-5cf3-46bd-8919-aa7bbf74b850d7e81" xml:space="preserve">&lt;xsl:template match="@* | node()"&gt;
    &lt;xsl:copy inherit-namespaces="no"&gt;
      &lt;xsl:apply-templates select="@* | node()"/&gt;
    &lt;/xsl:copy&gt;
 &lt;/xsl:template&gt;</pre>
-      <section id="b322b484-5d57-4807-a77c-d53d9b960360d7e83">
+      <section id="d17dd69f-7dd5-4baf-b48c-5b3852582d51d7e83">
          <title id="53d517b1-02ad-4bf4-8cc4-743e14ee97f5d7e84">Freie Wildbahn</title>
          <p id="168b7360-bd2f-4390-b5ad-4859526706ced7e86">In der freien Wildbahn bin ich erst kürzlich über folgendes Problem gestolpert:</p>
-         <pre id="271c5345-4c57-40e6-adb9-1a732c738061d7e88" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+         <pre id="92b1ff2f-9a54-463a-a262-9b3008ad8a76d7e88" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xpath-default-namespace="https://tekturcms.de/schema/x12-xml/1.0"
                 exclude-result-prefixes="#all"
@@ -97,30 +97,30 @@ weiterzuvererben:</p>
 
   [...]</pre>
          <p id="9c337f98-f15f-43e0-9592-6ee4008a9309d7e90">So deklariert würde das neue Element [[code:my-element]] mit einem leeren Namespace in die Ausgabe gesetzt, so [[code:&lt;neuer-name xmlns=""/&gt;]]. Das kann ein nachfolgender Transformationsschritt nicht lesen. Aus diesem Grund setze ich neue Elemente immer mit dem Element-Konstruktor in die Ausgabe, so:</p>
-         <pre id="a27f1d5a-d9cd-40be-8c1a-69f309890037d7e92" xml:space="preserve">&lt;xsl:template match="my-element"&gt;
+         <pre id="7b90c58b-2afb-4180-b66e-542d98e41f25d7e92" xml:space="preserve">&lt;xsl:template match="my-element"&gt;
     &lt;xsl:element name="neuer-name" namespace="{namespace-uri()}"&gt;
       &lt;xsl:apply-templates&gt;
     &lt;/xsl:element&gt;
   &lt;/xsl:template&gt;</pre>
       </section>
-      <section id="f2c44966-9304-4e0c-9a3d-268ef0fadaecd7e94">
+      <section id="c4d75180-86a2-4332-8fb7-c3925fde6d3bd7e94">
          <title id="ad139a27-9649-4c97-8f05-a62edd570cb7d6e74">Namespaces in XQuery</title>
          <p id="6a862358-2454-4cb0-a7c5-854c9d4cf899d6e75">Während XSLT dazu dienen sollte, XML Daten in andere (XML-) Formate zu transformieren, dient XQuery 
 z.B. dazu auf einer <b id="444bc708-61da-4b72-a757-3e25f37f5729d7e200">NoSQL</b> Datenbank Daten aus unterschiedlichen Quellen
-zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p> |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <p id="56fd4141-0088-4fdb-bf10-930e2d5d028ed6e77">Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
+zu selektieren, zu harmonisieren und an verarbeitende Prozesse weiterzugeben.</p> |  |                                                    Rejected by , .           |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <p id="56fd4141-0088-4fdb-bf10-930e2d5d028ed6e77">Deshalb ist es für mich nicht so erstaunlich, dass das Namespace Konzept in XQuery irgendwie besser
 funktioniert.</p>
          <p id="baa93854-b02c-41f2-a553-bb6701a8925ed6e79">Damit man überhaupt Daten auf einem mit Namespaces versehenen XML Dokument selektieren
-kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p> |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <pre id="92dbb1a1-870d-4aef-b647-f4282ad37eabd7e108" xml:space="preserve">xquery version "1.0-ml";
+kann, müssen alle Namspaces am Anfang des XQuery Ausdrucks angegeben werden, das sieht so aus:</p> |  |                                                    Rejected by , .           |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       <pre id="11fd238d-1db0-4aad-a81b-36441741c760d7e108" xml:space="preserve">xquery version "1.0-ml";
 
 import module namespace tektur = "http://www.teturcms.de/xquery/common" 
                                   at "common.xqy";
 import module namespace mem = "http://xqdev.com/in-mem-update" 
                                   at '/MarkLogic/appservices/utils/in-mem-update.xqy';
-declare namespace local = "https://lambdawerk.com/code/alex-sandbox/1.0";
+declare namespace local = "https://tekturcms.de/code/alex-sandbox/1.0";
 declare namespace weiredns = "https://weired-ns-in-input-data.com/weired/ns";
 declare namespace xs = "http://www.w3.org/2001/XMLSchema"; </pre>
          <p id="d6bb0949-b9fa-4770-ba36-3acf2056e934d6e83">Hier werden zuerst Funktionen aus anderen Modulen eingebunden. Diejenigen in einer eigenen Datei [[code:common.xqy]], sowie aus der Bibliothek [[code:mem]] in der<b id="fc59fe90-8635-452b-bc60-30a7025d884ad7e226"> MarkLogic</b>
 Umgebung. Danach wird ein Namespace [[code:local]] für eigene Funktionen innerhalb der Quelldatei deklariert, sowie der Namespace [[code:weiredns]], der in den Eingabedaten
-vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p> |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       </section>
+vorhanden ist. Der Namespace[[code:xs]] ist analog zum XSLT Beispiel gesetzt.</p> |  |                                                    Rejected by , .           |  |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .           |   |                                                    Rejected by , .       </section>
    </body>
 </topic>

@@ -48,7 +48,7 @@ D.h. eine Datei mit folgendem Inhalt: </p>
       <fig id="964971ac-f826-4b38-b346-3f439fb3de65d7e30">
          <title id="a46643aa-2c1c-46de-8a16-91d1c0e40dc5d7e29">Ergebnis einer MarkLogic Content Pump Sitzung</title>
          <desc id="40282051-dfdf-47ed-850f-08f622af504cd7e31">Auf der Konsole kann man sich das Ergebnis der [[code:mlcp]] Sitzung anschauen. Es wurden - wie gewünscht - drei XML Fragmente separat in die Collection gespeichert.</desc>
-         <image href="images/mlcp_55.png"/>
+         <image href="images/mlcp_57.png"/>
       </fig>
       <note id="001f5806-9357-4554-8e7b-d970e4c9edc0d7e34">
          <p id="3a383331-3738-4f70-877c-5f3e07ce9fbbd7e35">Um in MarkLogic keine Speicherpobleme zu erzeugen empfielt es sich große Dokumente, die man nur "speichern" will mit der Option [[code:-document_type binary]] zu importieren. In diesem Zusammenhang ist ebenfalls die Option [[code:-streaming true]] interessant.</p>

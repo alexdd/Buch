@@ -5,11 +5,46 @@
       <p id="51cd2348-5ac3-401f-bfec-d6669662af27">Es macht nicht immer Sinn über eine Baumstruktur zu suchen. Obwohl das in einer 
 XML Datenbank rasend schnell geht, weil jeder Knoten des Baums initial in einen Index
 aufgenommen wird. So gibt es doch Anwendungsfälle bei denen man lieber eine relationale
-Sicht auf die Daten hätte.</p> |   |                                                    Rejected by , .       <p id="fa6fb1a1-78b4-4a46-9b1e-ba2328fdd2f3d6e6">In MarkLogic heisst die Lösung dazu SQL Views.</p>
+Sicht auf die Daten hätte.</p> |  |                                                    Rejected by , .       <p id="fa6fb1a1-78b4-4a46-9b1e-ba2328fdd2f3d6e6">In MarkLogic heisst die Lösung dazu SQL Views.</p>
       <p id="8029ae2f-5b5a-4df5-97c1-aad92ac65df2d6e8">Bspw. benötigt man eine relationale Sicht auf die Daten,
 wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
-      <p id="93e04ead-905f-488b-a0bc-d024c912fc35d6e10">Nehmen wir an, es gibt im Datenbestand die folgenden Dokumente:</p>
-      <pre id="bd807865-6805-4a53-8651-2cfcfb762c08d7e13" xml:space="preserve">&lt;k:kunde&gt;
+      <p id="93e04ead-905f-488b-a0bc-d024c912fc35d6e10">Nehmen wir an, es gibt im D- die folgenden Dokumente:</p>
+      <table id="1bf5b7b3-b4b8-4407-9d43-6053d22226a9d7e13" pgwide="1" frame="all">
+         <title id="a5df9593-8d8d-4ec9-b1dc-dca150067ee4d7e14">Fzhhhhh</title>
+         <desc id="b0f32af1-4613-446a-94bf-d3ea66b39202d7e16">Zzzz</desc>
+         <tgroup id="a364cec9-9891-491b-a175-acd3914949bdd7e18" cols="3">
+            <colspec id="740db4c6-4989-4ee6-8360-1b760d455f47d7e19" colname="col0"/>
+            <colspec id="6b695158-67f7-4aa1-a4e2-1fb3b993717bd7e20" colname="col1"/>
+            <colspec id="872ea26f-bc1b-475e-8ad6-a0fd0040546cd7e21" colname="col2"/>
+            <thead id="92acf7e9-f2cc-4a43-a4bb-218f65925046d7e22">
+               <row id="bd982a65-532b-421b-9466-6368cb8a0d64d7e23">
+                  <entry id="6a413fea-8de1-4547-ae92-661f8bf35bfad7e24" colname="col0" width=""/>
+                  <entry id="fe17e28a-ec36-4814-b18f-9a58c77ce0e0d7e25" colname="col1" width=""/>
+                  <entry id="faff767f-8f49-47d3-a8d1-9007afb05622d7e26" colname="col2" width=""/>
+               </row>
+            </thead>
+            <tbody id="ea0bb8b0-2959-4d37-850b-e61d295a747fd7e27">
+               <row id="9c8b522c-12c7-4ea0-bb63-78ad3604ae74d7e28">
+                  <entry id="23812ad3-a0f9-4681-804f-8670e53d3d80d7e29" colname="col0" width="">
+                     <p id="8aea368f-ad68-4103-a664-491ccf78dbaed7e30">Philip</p>
+                  </entry>
+                  <entry id="8b3f7fcd-7804-4b56-81f5-f07fcbe1c3d1d7e32" colname="col1" width=""/>
+                  <entry id="ec2406de-abe2-45d6-9c75-13be8d89f4c1d7e33" colname="col2" width=""/>
+               </row>
+               <row id="ae277116-edfd-423b-b8f9-9d25e0d1b2bed7e34">
+                  <entry id="20ae3294-335e-46f4-b5ba-743b3aba0558d7e35" colname="col0" width=""/>
+                  <entry id="b6b7565b-485d-432c-8b50-1e359256df44d7e36" colname="col1" width=""/>
+                  <entry id="f8b63f72-18a6-4377-be0d-67cb579730b1d7e37" colname="col2" width=""/>
+               </row>
+               <row id="50ef4c2a-ca00-4ee7-ba4f-aa592e754818d7e38">
+                  <entry id="8140d6bd-8d5a-4ab7-b59d-24959a290936d7e39" colname="col0" width=""/>
+                  <entry id="f742077f-2f06-4450-bc57-2f8076bc1df3d7e40" colname="col1" width=""/>
+                  <entry id="b5794d2c-be4b-4842-b63f-a72a5a9920e8d7e41" colname="col2" width=""/>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <pre id="e584181a-298a-42cb-931f-25e7b3f35dd2d7e42" xml:space="preserve">&lt;k:kunde&gt;
   &lt;k:id&gt;1&lt;/k:id&gt;
   &lt;k:name&gt;Alex&lt;/k:name&gt;
   &lt;k:eMail&gt;tekturcms@gmail.com&lt;/k:eMail&gt;
@@ -42,19 +77,19 @@ wenn über verschiedene Datensätze ein Report generiert werden soll.</p>
 &lt;/b:bestellung&gt;</pre>
       <p id="2328ace1-a84c-4d9b-839c-e81962bff15ed6e14">Will man sich alle Kunden anzeigen lassen, die eine Bestellung 
 abgegeben haben - das sind Alex und Horst - so würde man bei
-einem relationalen Ansatz einen [[code:JOIN]] verwenden, so wie:</p> |   |                                                    Rejected by , .       <pre id="3c74a286-1821-4900-be2b-866c96470f24d7e18" xml:space="preserve">SELECT name, datum, preis
+einem relationalen Ansatz einen [[code:JOIN]] verwenden, so wie:</p> |  |                                                    Rejected by , .       <pre id="57eada0a-f5f8-4cf8-9fbf-5c2aa8b141fbd7e47" xml:space="preserve">SELECT name, datum, preis
 FROM kunden k
 INNER JOIN bestellungen b
 ON k.id = b.kunde_id</pre>
       <p id="634aa470-0b4d-4ef9-ad31-e23e72e82857d6e18">In einer relationalen Sicht würde uns das dann die folgende Tabelle liefern:</p>
-      <pre id="f520289e-1f46-4dec-8d00-c4c224f47595d7e22" xml:space="preserve">name, datum, preis
+      <pre id="a97ca70a-1bdb-4de9-8bd7-e449b4e162f7d7e52" xml:space="preserve">name, datum, preis
 Alex, 03.01.2019, 68.90
 Horst, 02.01.2019, 99.90</pre>
       <p id="32221bf5-8e13-4057-90ab-06577e278a90d6e22">Um für MarkLogic eine SQL View zu definieren verwendet man einen Mechanismus,
 der da heisst: [[link]]Template Driven Extraction[[fn:https://docs.marklogic.com/guide/app-dev/TDE*Template Driven Extraction wird verwendet um in MarkLogic eine relationale Sicht auf die baumstrukturierten Daten zu setzen]]</p>
       <p id="300d1425-14e5-4fe0-b486-327254ed8cf0d6e24">Dazu werden Templates in XML deklariert und in die Template Collection eingefügt. Für unser obiges Beispiel
 würden wir zwei Templates brauchen, die so aussehen:</p>
-      <pre id="7b044d07-1f36-4afc-8534-2ea61c19e106d7e29" xml:space="preserve">xquery version "1.0-ml";
+      <pre id="a52f6996-d27c-443d-a4eb-9387edc57f1fd7e58" xml:space="preserve">xquery version "1.0-ml";
 
 import module namespace tde = "http://marklogic.com/xdmp/tde" 
                             at "/MarkLogic/tde.xqy";
@@ -105,7 +140,7 @@ return(
                       $sql-view, xdmp:default-permissions())
 )</pre>
       <p id="1b5ad441-b64a-48a5-beaf-fcb03b693c17d6e29">und analog für die Bestellungen:</p>
-      <pre id="e1032744-8dfc-4884-9a3c-d765fe7bf5dbd7e33" xml:space="preserve">[...]
+      <pre id="112eab2d-78cb-4055-8863-b1fed95dc0c5d7e62" xml:space="preserve">[...]
    &lt;rows&gt;
       &lt;row&gt;
          &lt;schema-name&gt;bestellungen_schema&lt;/schema-name&gt;
@@ -135,10 +170,10 @@ return(
       &lt;/row&gt;
 [...]</pre>
       <p id="beda4ca5-f41c-4fbd-834a-6a375127725dd6e33">In XQuery eingebunden könnte man dann die definierten SQL Views mit dem folgenden Befehl abfragen:</p>
-      <pre id="5f2b9f27-a84f-4c99-8f29-efb318f05534d7e37" xml:space="preserve">xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
+      <pre id="59ef5298-8be2-4af4-9762-c5d46d82d256d7e66" xml:space="preserve">xdmp:sql("SELECT name, datum, preis FROM kunden_view k 
           INNER JOIN bestellungen_view b ON k.id = b.kunde_id")</pre>
       <p id="30ca1f15-55f4-4eba-9f9f-eff3c661f764d6e37">Folgende ist das komplette Beispiel für eine MarkLogic XQuery Konsolensitzung abgebildet ...</p>
-      <pre id="ffba7d0c-e49d-4a5d-811e-e0509702b060d7e41" xml:space="preserve">xquery version "1.0-ml";
+      <pre id="e4ceea74-5751-4b3b-bbb4-5b31a2de138ad7e70" xml:space="preserve">xquery version "1.0-ml";
 
 declare namespace k = 'http://www.tekturcms.de/kunden';
 declare namespace b = 'http://www.tekturcms.de/bestellungen';
@@ -297,7 +332,7 @@ local:insertBestellungenSchema(),
 xdmp:sql("SELECT name, datum, preis FROM kunden_view k INNER JOIN 
           bestellungen_view b ON k.id = b.kunde_id")</pre>
       <p id="af0bb509-8735-46fb-8e48-918f1d3f8f15d6e41">... mit einer schönen tabellarischen Ausgabe im unteren Panel der Query Konsole - oder als JSON:</p>
-      <pre id="e3079509-f7c3-4ba9-955d-43389f2e2f65d7e45" xml:space="preserve">[
+      <pre id="05c40a32-44cc-4b42-b514-6ced5bafc151d7e75" xml:space="preserve">[
   [
     "k.name", 
     "b.datum", 

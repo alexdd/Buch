@@ -109,15 +109,15 @@
       <p id="059b400f-b00a-4a79-944c-c54a2cbec2b0d6e93">Zwei Queries, die die Werte in der Tabelle illustrieren, sind bspw. folgende:</p>
       <fig id="eeceb673-1acc-4bbb-8939-dd98e5d59372d7e100">
          <desc id="d97fe83f-ce17-4be2-9a8b-a98ea038923ed7e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide haben den Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
-         <image href="images/result1-x_42.png"/>
+         <image href="images/result1-x_43.png"/>
       </fig>
       <fig id="b7274335-1fa9-4956-9e11-0c4a9dddb8d2d7e104">
          <desc id="da09368b-5ed5-401c-8b57-efe4c04a2e7ed7e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
-         <image href="images/result2-x_43.png"/>
+         <image href="images/result2-x_44.png"/>
       </fig>
       <fig id="60ca5cd2-2cf7-4274-b9f2-a1d46cc545a9d7e108">
          <desc id="befb9134-5ec9-4d4d-b0bd-4935d636b398d7e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "latest" gespeichert.</desc>
-         <image href="images/result_3-x_44.png"/>
+         <image href="images/result_3-x_45.png"/>
       </fig>
       <p id="68c1023b-0ca5-4a40-b422-3c559fd63533d7e113">Wie man sieht, kann man - ausreichend Lösungsphantasie vorausgesetzt - einiges mit diesen Queries anstellen. Hilfreich ist sicherlich auch die umfangreiche Liste der Vergleichsoperatoren, die MarkLogic zum Vergleichen von Zeiträumen bereitstellt: [[link]]ISO Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_92200*ISO normierte Operatoren in MarkLogic zum Vergleichen von Zeiträumen]] und [[link]]ALLEN Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_98704*Allen (ALN) Vergleichsoperatoren für Zeiträume]].</p>
    </body>

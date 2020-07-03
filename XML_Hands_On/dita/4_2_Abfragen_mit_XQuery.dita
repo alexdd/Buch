@@ -21,7 +21,7 @@ seine Query in das betreffende Eingabefenster schreiben.</p>
          <fig id="13e13673-84eb-40db-b9fb-220e25aca173d7e24">
             <title id="4952e62b-ea78-4a7b-a1e0-134cc5a24144d7e25">oXgen XQuery Builder</title>
             <desc id="b7a98153-2944-4ca0-abe7-61ac4ad1706bd7e27">Mit dem XQuery Builder von oXygen lassen sich unkompliziert Queries testen</desc>
-            <image href="images/xquery-builder-1_15.png"/>
+            <image href="images/xquery-builder-1_14.png"/>
          </fig>
          <p id="f9cd5153-7930-46ee-9bfd-33e14ec55f03d6e28">Mit folgendem Ergebnis:</p>
          <pre id="63b384ff-dc7d-471a-980f-4f85bd50f235d7e32" xml:space="preserve">&lt;dates&gt;

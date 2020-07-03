@@ -3,11 +3,11 @@
    <title id="056fbbaa-9560-4b9b-bcfd-3a33cb7ec819">Webapps mit MarkLogic</title>
    <body id="6034ed85-b291-4f7d-bd26-4ab712d1c14d">
       <p id="537345c2-d9dc-4397-86d7-ad84f862ab16d7e4">[[xe1:Tools für MarkLogic;xe2:Konfiguration per cURL]] </p>
-      <section id="54dc95bb-2f4c-46c7-9ce8-7cd25f13bed2d7e6">
+      <section id="0fcf0c84-b222-464f-bfc2-f86e1f3cc7d2d7e6">
          <title id="8b655804-9b09-4142-856b-aa841c3c158bd7e5">Konfiguration mit cURL</title>
          <p id="98c12714-a8f6-423a-8090-c5625e3f0a5ed7e7">cURL[[fn:https://de.wikipedia.org/wiki/CURL*Wikipedia-Seite zu Curl URL Request Library - cURL]] ist ein gebräuchliches 
 Kommandozeilentool[[xe1:Tools;xe2:cURL]], mit dem man Web-Requests an einen Server schicken kann.</p>
-         <note id="8218a5ed-6bc1-4489-b3c1-713ada248b84d7e11">
+         <note id="7f571c34-c13f-4353-a70f-62366fcc63dcd7e11">
             <p id="bbe51277-3a22-4dab-a4d4-f2ccd8e63c23d7e10">Die Beispiel-Queries auf diesen Seiten wurden größtenteils von den MarkLogic Doku-Seiten übernommen, sind jedoch
 für Windows Rechner angepasst. Statt Shell Skripten mit diversen Besonderheiten, kann man die Code-Schnippsel
 auch in Batch-Dateien packen und ausführen.</p>
@@ -15,11 +15,11 @@ auch in Batch-Dateien packen und ausführen.</p>
          <p id="b43369fb-2207-4fe7-a228-8c03fcb00de5d7e12">MarkLogic horcht auf Port [[code:8002]]  mit seiner Configuration Manager Applikation. Über diesen Port können auch cURL Requests
 zur Remote-Konfiguration abgesetzt werden.</p>
          <p id="5bd894cb-c5e4-4eed-8aea-4602eb11bdb2d7e14">Zum Anlegen einer Datenbank setzt man den folgenden cURL Befehl ab:</p>
-         <pre id="0140e46b-5866-4640-b4de-44ecc8d3dd6dd7e18" xml:space="preserve">curl -X POST  --anyauth -u admin:admin --header "Content-Type:application/json" 
+         <pre id="4f2c6070-e44a-43bd-bff2-fe2e2f5fee7ad7e18" xml:space="preserve">curl -X POST  --anyauth -u admin:admin --header "Content-Type:application/json" 
               -d '{\"database-name\":\"xml-scrapper-content\"}' 
               http://localhost:8002/manage/v2/databases</pre>
          <hazardstatement id="5d6a6c0e-8149-4bec-bbd8-5f390b8b7b28d7e18" type="caution" status="changed">
-            <messagepanel id="66ff0209-7a00-4672-bbf5-d5a051a9dc34d7e21">
+            <messagepanel id="2912a0d7-7b81-42b0-84ac-47da73b0cb13d7e21">
                <typeofhazard id="bad7f46c-daf7-4d9e-a0e5-0b1afb6ce976d7e20">Auf meiner Windows Maschine konnte ich den Befehl, wie in der MarkLogic Doku[[fn:https://docs.marklogic.com/REST/POST/manage/v2/databases*Doku-Seite zum Anlegen einer MarkLogic Datenbank mit cURL]] 
 beschrieben, nicht ausführen, da erst das JSON mittels Backslashes maskiert werden musste. Ausserdem ist in der Powershell der [[code:curl]] Befehl per alias
 auf ein Windows Programm gemappt[[fn:https://daniel.haxx.se/blog/2016/08/19/removing-the-powershell-curl-alias/*Anleitung zur Entfernung des curl Alias auf Windows]]</typeofhazard>
@@ -28,11 +28,11 @@ auf ein Windows Programm gemappt[[fn:https://daniel.haxx.se/blog/2016/08/19/remo
             </messagepanel>
          </hazardstatement>
          <p id="b0575087-0411-413d-adf6-da48b30e5149d7e24">Analog legt man einen "Forrest" an, den die oben definierte Datenbank braucht:</p>
-         <pre id="ab508e8c-2024-4d5e-8493-81293e67118cd7e30" xml:space="preserve">curl --anyauth --user alex:anoma66 -X POST -d '{\"forest-name\": \"xml-scrapper-forrest\", 
+         <pre id="48b0f312-62c6-41ea-a095-ab5a2b36fa5ed7e30" xml:space="preserve">curl --anyauth --user alex:anoma66 -X POST -d '{\"forest-name\": \"xml-scrapper-forrest\", 
                                                 \"database\": \"xml-scrapper-content\"}' 
                -i -H "Content-type: application/json" http://localhost:8002/manage/v2/forests</pre>
          <p id="eff10af9-427d-4a06-be13-9cc6415e98b1d7e28">Die Konsole quittiert das erfolgreiche Ereignis mit diesen Meldungen:</p>
-         <pre id="c1409c6f-37bd-4bb2-b9ff-eedded9b62d2d7e34" xml:space="preserve">HTTP/1.1 201 Created
+         <pre id="8b872868-2c88-49a1-b9d8-80ab02e16618d7e34" xml:space="preserve">HTTP/1.1 201 Created
 Location: /manage/v2/forests/12099403305847426321
 Content-type: application/xml; charset=UTF-8
 Cache-Control: no-cache
@@ -44,7 +44,7 @@ Keep-Alive: timeout=5</pre>
          <p id="95acde5f-25b2-4409-94ce-a7fbb1f5457bd7e33">Die Erfolgsmeldung kann man auch leicht in der Übersicht des Configuration Managers auf Port 8003 nachprüfen. 
 Nun können wir die neue Datenbank mit der <b id="c9e258cf-83a9-4024-b2a2-890b6d9bd1b1d7e39">MarkLogic Content Pump</b> [[xe1:Tools für MarkLogic;xe2:Content Pump]]befüllen.</p>
          <p id="fd55bce8-e177-44b1-b581-bb574c20d11cd7e35">Dazu laden wir folgendes Beispiel-XML, das sich in einem Ordner [[code:input-files]] befindet, in die Datenbank:</p>
-         <pre id="8719d076-47b8-4912-8373-33dc5c35146ed7e44" xml:space="preserve">&lt;test&gt;
+         <pre id="663ab480-9e65-4163-8f30-c93ec20832c8d7e44" xml:space="preserve">&lt;test&gt;
     &lt;title&gt;Test Datei&lt;/title&gt;
     &lt;chapter&gt;
         &lt;title&gt;Test Kapitel 1&lt;/title&gt;
@@ -59,11 +59,11 @@ Nun können wir die neue Datenbank mit der <b id="c9e258cf-83a9-4024-b2a2-890b6d
         &lt;content&gt;Kapitel Inhalt 2&lt;/content&gt;
     &lt;/chapter&gt;
 &lt;/test&gt;</pre>
-         <note id="132b5c21-36b3-43e2-bb05-35b1e150b2a5d7e46">
+         <note id="fc7864ba-fe0e-4bb6-9f28-02b46ae54aa6d7e46">
             <p id="9776c424-bed2-4b7a-b457-f550779b6f20d7e40">Den Tippfehler im obigen XML werden wir im folgenden Kapitel korrigieren.</p>
          </note>
          <p id="75aa2f46-2a2b-43f4-8299-8dce89b2c5ced7e42">Das geschieht mit dem Befehl:</p>
-         <pre id="a0bd27b7-0891-41fe-8a75-83472ec3209ad7e51" xml:space="preserve">mlcp import -database xml-scrapper -host localhost -username admin -password admin 
+         <pre id="2be77492-cfd1-4733-a799-e43765befa84d7e51" xml:space="preserve">mlcp import -database xml-scrapper -host localhost -username admin -password admin 
             -input_file_path input-files -input_file_type aggregates 
             -aggregate_record_element chapter 
             -output_collections /chapter 
@@ -71,7 +71,7 @@ Nun können wir die neue Datenbank mit der <b id="c9e258cf-83a9-4024-b2a2-890b6d
             -output_uri_suffix .xml</pre>
          <p id="c5ab4c0e-2a57-4ff5-b44c-df1d8f2a38d1d7e46">Nun brauchen wir nun noch einen Application Server in MarkLogic anlegen, um eigene XQuery Skripte laufen lassen zu können.
 In einer Datei [[code:server-setup.json]] definieren wir unsere Server Einstellungen:</p>
-         <pre id="470be35b-8dc4-4a1c-9875-105861ad8836d7e55" xml:space="preserve">{ "server-name":"xml-scrapper",
+         <pre id="a186203f-3402-45c4-80cd-247dc9efa2b5d7e55" xml:space="preserve">{ "server-name":"xml-scrapper",
   "root":"c:\\xquery",
   "port":"8088",
   "content-database":"xml-scrapper-content",
@@ -79,13 +79,13 @@ In einer Datei [[code:server-setup.json]] definieren wir unsere Server Einstellu
   "group-name":"Default"
 }</pre>
          <p id="a1d2fc71-7fa8-4345-8752-23a9fff03373d7e50">Diese schicken wir mit dem folgenden cURL Befehl an den Server:</p>
-         <pre id="e7aa126e-36b8-4019-9440-fc548d2ddca3d7e59" xml:space="preserve">curl -X POST --digest -u alex:anoma66 -H "Content-type: application/json" 
+         <pre id="7335aa8e-6d1d-4fd2-aacf-d01cbe53fceed7e59" xml:space="preserve">curl -X POST --digest -u alex:anoma66 -H "Content-type: application/json" 
      -d @server-setup.json http://localhost:8002/manage/v2/servers</pre>
          <p id="0541c331-0242-4746-8020-557ebfb3c13bd7e54">Im Web-Interface können wir uns überzeugen, dass alles geklappt hat:</p>
          <fig id="a27fb114-402d-4a01-8265-10f0fbc28a55d7e57">
-            <title id="567e8d5a-f18d-4121-a5e4-9b435ae9b25cd7e65">Konfiguration eine App Servers auf MarkLogic</title>
-            <desc id="baddf792-2170-4380-bbd6-b857288bca1bd7e67">Im Reiter [[code:Configure]] können wir den App Server auf MarkLogic konfigurieren.</desc>
-            <image href="images/create-app-server-1_45.png"/>
+            <title id="eaafe88b-7c95-405f-be97-ea937a4b2e75d7e65">Konfiguration eine App Servers auf MarkLogic</title>
+            <desc id="115ddb2b-3d1c-47e1-a4b5-7b4cdbfbc5eed7e67">Im Reiter [[code:Configure]] können wir den App Server auf MarkLogic konfigurieren.</desc>
+            <image href="images/create-app-server-1_46.png"/>
          </fig>
          <p id="d883ae4c-cdcc-4cf5-b28b-893080f87cb5d7e63">Die Konfiguration kann natürlich auch mittels des Webinterfaces auf Port 8001 gemacht werden, oder aber auch per
 XQuery Skripte über die Konsole auf Port 8000. Einige Skripte für diesen Zweck befinden sich auf den 
@@ -93,13 +93,13 @@ Developer Seiten von MarkLogic[[fn:https://docs.marklogic.com/guide/admin-api/co
          <p id="4d8ef625-fbac-487d-ad85-6754915bd050d7e65">Nach diesen Vorbereitungen können wir unseren App-Server nun mit Skripten bestücken, wie
 im folgenden Abschnitt beschrieben. Wir legen die Skripte in das Wurzelverzeichnis [[code:c:\xquery]],
 das wir oben definiert haben und können diese über einen Webrequest aufrufen, z.B. so:</p>
-         <pre id="7e762b89-2b81-414b-b5fd-35ceb5fbb299d7e74" xml:space="preserve">http://localhost:8088/test.xqy</pre>
+         <pre id="6420c2ea-01f3-4424-b08c-7057d6eb1f81d7e74" xml:space="preserve">http://localhost:8088/test.xqy</pre>
       </section>
-      <section id="3a93abbb-f62c-4308-9f76-10be0533c31cd7e76">
+      <section id="782562e5-420a-4851-b951-ad29763d928ed7e76">
          <title id="7506d17e-f9c4-4bb8-9a20-451d4a5edc82d7e70">Implementierung als XQuery Skript</title>
          <p id="2d1dd02f-2c43-4799-b8b2-9b7e46235bb3d7e72">In diesem Abschnitt werden wir eine HTML Seite mit Inhaltsverzeichnis aus den zuvor geladenen Daten generieren.</p>
          <p id="dcad5785-227f-454b-addb-29707486c73bd7e74">Beginnen wir mit einem Skript [[code:book.xqy]] im Verzeichnis [[code:C:\xml-scrapper]]</p>
-         <pre id="448f3a71-d890-432f-8e96-9902e290a7d3d7e83" xml:space="preserve">xquery version "1.0-ml";
+         <pre id="ed2c4b3c-be20-435b-96d6-38b033073b9ed7e83" xml:space="preserve">xquery version "1.0-ml";
 
 xdmp:set-response-content-type("text/html"),
 let $pages :=
@@ -119,19 +119,19 @@ return $pages</pre>
          <fig id="ce051091-c427-4bac-82b4-c475241f8503d7e80" expanse="column" frame="all"
               scale="50"
               status="changed">
-            <title id="a226d84e-42fb-4762-a81a-105f7c614250d7e88">Erste Ausgabe unseres kleinen XQuery Skripts für eine Website</title>
-            <desc id="d07642bc-1931-442a-8430-f18cd9fb2432d7e90">Die Kapitel der Webseite werden hintereinander weggeschrieben. Das ist natürlich noch nicht optimal</desc>
-            <image href="images/book_46.png"/>
+            <title id="bab2a880-ba34-42a0-adc0-0d9743f6e503d7e88">Erste Ausgabe unseres kleinen XQuery Skripts für eine Website</title>
+            <desc id="6da84b74-0f4a-4251-a09f-584279abd7ced7e90">Die Kapitel der Webseite werden hintereinander weggeschrieben. Das ist natürlich noch nicht optimal</desc>
+            <image href="images/book_47.png"/>
          </fig>
          <hazardstatement id="40182548-0388-4b49-8a46-0852fb1a3177d7e86" type="caution" status="changed">
-            <messagepanel id="0c5c2147-3b07-4b99-a426-315d5da6273fd7e94">
+            <messagepanel id="65442915-c190-4d8c-a583-0ef954310899d7e94">
                <typeofhazard id="56a8df95-ec54-409e-960e-75561e30c1bed7e88">Hier fällt auf, dass wir 2x ein Kapitel 2 eingebunden haben. Es handelt sich dabei um einen Tippfehler.</typeofhazard>
                <howtoavoid id="85029caf-172f-479d-b39b-dab5c62c0185d7e90">Wir kümmern uns um diesen Fehler später.</howtoavoid>
             </messagepanel>
          </hazardstatement>
          <p id="5afe0ab2-398c-4397-a0d3-7ae7e00e9d07d7e92">Nun wollen wir die einzelnen Seiten auf verschiedene Webseiten aufsplitten und auf einer Cover-Page ein Inhaltsverzeichnis
 darstellen.</p>
-         <pre id="03ad0435-5071-4278-bcd2-a7bd31297717d7e101" xml:space="preserve">xquery version "1.0-ml";
+         <pre id="9b73a959-2019-44d0-bc77-5d99b50de768d7e101" xml:space="preserve">xquery version "1.0-ml";
 
 declare variable $page:= xdmp:get-request-field('page');
 
@@ -160,12 +160,12 @@ return $pages</pre>
          <fig id="1745142d-7469-48f6-9607-d78ecd0ebef3d7e101" expanse="column" frame="all"
               scale="50"
               status="changed">
-            <title id="57378536-a711-45d8-9222-5be057086c6bd7e109">Zweite Ausgabe unseres kleinen XQuery Skripts für eine Website</title>
-            <desc id="8f6ecfcb-16cd-4a6e-867d-3216b8be71b0d7e111">Der zweite Schritt unserer Webapplikation ist ein Inhaltsverzeichnis mit verlinkten Kapiteln</desc>
-            <image href="images/toc_47.png"/>
+            <title id="83acb806-fcb5-4de3-9735-7909bad42882d7e109">Zweite Ausgabe unseres kleinen XQuery Skripts für eine Website</title>
+            <desc id="728e314e-2948-49a8-8ad7-c1b0175e2c02d7e111">Der zweite Schritt unserer Webapplikation ist ein Inhaltsverzeichnis mit verlinkten Kapiteln</desc>
+            <image href="images/toc_48.png"/>
          </fig>
          <p id="29837759-ad68-46ad-aa90-25af3685081ed7e107">Der im Skript deklarierte Request-Parameter [[code:$page]] wird nun ausgewertet, um die Kapitelseiten zu erzeugen.</p>
-         <pre id="44879ba2-4d76-4ee1-967d-32d65a7d887dd7e116" xml:space="preserve">xquery version "1.0-ml";
+         <pre id="15c3f063-3c0d-4276-8101-7bcfa8e02963d7e116" xml:space="preserve">xquery version "1.0-ml";
 
 declare variable $page:= xdmp:get-request-field('page');
 
@@ -198,7 +198,7 @@ vgl. die [[code:sx:decimal]] Cast Anweisung zur Typ-Konvertierung.</p>
          <p id="56f7156b-b880-41ef-bbd8-59e7979a856fd7e113">Unsere Website wäre eigentlich schon perfekt, wenn da der fehlerhafte Datenimport nicht wäre, und wir das Kapitel 2 nicht
 doppelt importiert hätten. Um die Daten zu bereinigen ist eine Daten-Migration notwendig.</p>
       </section>
-      <section id="92b69198-b58e-4caf-8b9d-5c33dd56ee7fd7e122">
+      <section id="dc3150f2-6bb1-4de6-943a-68ea50429d20d7e122">
          <title id="bff1e446-c2ef-48bf-9024-e84297fb9c95d7e123">Webapps mit mehreren Datenbanken</title>
          <p id="78636f4b-3454-4228-84f4-1ab1937997fcd7e125">Jeder App-Server ist in MarkLogic genau einer Content-Database zugeordnet.
 Darin sollten alle Daten vorhanden sein, auf die die Webapplikation zugreift.</p>
@@ -207,7 +207,7 @@ MarkLogic Webapp abzufragen. Dazu verwendet man die [[code:xdmp:eval-in]] Funkti
          <p id="cc3634ac-52c7-41a0-8628-086af9b542bad7e129">Wie der Name schon sagt, wird damit ein Ausdruck <i id="add78a2c-a341-422f-b8c4-b8342a41888cd7e131" href="undefined">in</i> einer anderen Datenbank <i id="58ef217c-1f47-4b72-960e-757e0a1c8554d7e134" href="undefined">evaluiert</i>.</p>
          <p id="d837cfa0-a96f-4081-9fac-5520169c191dd7e137">Das Beispiel dazu auf der MarkLogic-Doku Seite[[fn:https://docs.marklogic.com/xdmp:eval-in*Eval-in Funktion auf der MarkLogic Dokuseite]]
 sieht folgendermassen aus:</p>
-         <pre id="12a32b00-2a24-4344-a36f-92ba65a611bbd7e139" xml:space="preserve">xquery version "0.9-ml"
+         <pre id="be6ca5e7-bc14-43e8-8041-9f1f3c9cb9b6d7e139" xml:space="preserve">xquery version "0.9-ml"
 declare namespace my='http://mycompany.com/test'
 
 let $s :=
@@ -225,7 +225,7 @@ return
 
 =&gt; hello world</pre>
          <p id="19a62930-2e33-4d64-aeeb-d4cf463ca405d7e141">Ein Anwendungsbeispiel aus der Praxis würde demnach so aussehen:</p>
-         <pre id="c1253f4d-ed2c-4851-8f76-4ea60ea60c50d7e143" xml:space="preserve">declare function local:remove-sql-view($sql-view-name) {
+         <pre id="769c6847-505a-4ee7-b3ba-419c10b29d0fd7e143" xml:space="preserve">declare function local:remove-sql-view($sql-view-name) {
   let $url := concat('/sql-views/', $sql-view-name)
   return xdmp:eval-in('xquery version "1.0-ml";
                declare variable $url as xs:string external;
@@ -235,31 +235,31 @@ return
   )
 };</pre>
          <p id="28044388-0bf6-44d9-9171-70985ea72423d7e145">Hier wird eine zuvor gesetzte SQL View, vgl. Kapitel <xref href="382bb96a-5a06-460c-8d69-4c4cd613297c"
-                  id="f9162759-98f2-4f47-b7f8-4f82ffa940a4"
+                  id="28f03f89-e576-4b4e-b611-410c3e9aa465"
                   type="topic">SQL Views in MarkLogic </xref>, die per Default
 in der Schema-Datenbank untergebracht ist, wieder aus dem System gelöscht.</p>
       </section>
-      <section id="6cce7b48-41b7-410a-84fa-d9cff7dd4788d7e150">
+      <section id="87446d6c-8f34-4b20-81bf-ea31b4afd32bd7e150">
          <title id="564c57b0-2bb2-4d97-abe6-92266bf56a8ed7e116">Datenkorrektur mit der Konsole</title>
          <p id="0165be87-2ac9-4ee8-a576-55623c8cfcabd7e117">Um die fehlerhaften Daten aus dem vorherigen Kapitel zu korrigieren, öffnen wir eine Konsolensitzung auf Port [[code:8000]]:</p>
-         <note id="e8419ec8-5314-42d4-8a59-3bfa1ee35b17d7e155">
+         <note id="27480335-130f-40ce-9ea3-441da978eff5d7e155">
             <p id="44542243-50f1-4e89-a600-9a529810d1f3d7e126">Wir bemerken in der folgenden Abbildung, dass das [[code:mlcp]] Kommando den [[code:document-name]] mit dem absoluten Pfad der Datei im 
 Dateisystem des importierenden Rechners geprefixt hat.</p>
          </note>
          <fig id="f35eb81e-b0d5-42da-8e36-2ef4476ebd61d7e119">
-            <title id="9981e745-6d49-483e-b532-a9d7593d3e28d7e159">MarkLogic Konsolensitzung mit einer Collection Iteration</title>
-            <desc id="491caaea-c80d-49a4-9a2e-1ca394bdc7c9d7e161">Auf der Konsole können wir uns die in der Collection abgespeicherten Dokumente auflisten lassen.</desc>
-            <image href="images/console_48.png"/>
+            <title id="d4f1ca71-fa5c-474d-ac30-46b214942010d7e159">MarkLogic Konsolensitzung mit einer Collection Iteration</title>
+            <desc id="c6591b84-100f-4370-b618-7c47ea7b1738d7e161">Auf der Konsole können wir uns die in der Collection abgespeicherten Dokumente auflisten lassen.</desc>
+            <image href="images/console_49.png"/>
          </fig>
          <p id="1348d857-8a86-4a82-ae03-b917901dcfcad7e128">Wir sehen, dass wir zweimal ein Kapitel 2 in der Collection angelegt haben. Wir müssen also das 3. Element in der 
 Collection korrigieren:</p>
-         <pre id="ee834f6a-61a8-499b-b2bb-372d2038730fd7e166" xml:space="preserve">xdmp:node-replace(doc("/chapter//C:/input-files/data.xml-0-3.xml")/chapter/title, 
+         <pre id="6b055fff-b0f0-4a11-b469-71b23ed6d095d7e166" xml:space="preserve">xdmp:node-replace(doc("/chapter//C:/input-files/data.xml-0-3.xml")/chapter/title, 
     &lt;title&gt;Test Kapitel 3&lt;/title&gt;);
 xdmp:node-replace(doc("/chapter//C:/input-files/data.xml-0-3.xml")/chapter/content, 
 
     &lt;title&gt;Kapitel Inhalt 3&lt;/title&gt;);</pre>
          <hazardstatement id="263b8198-5cd0-42a8-8331-99ad396ae2e8d7e132" type="caution" status="changed">
-            <messagepanel id="6680b41d-773e-499e-aa3e-3c73634ea99cd7e169">
+            <messagepanel id="b579d361-911c-46a5-aedd-ee5e2c6d3fdad7e169">
                <typeofhazard id="8c42b7e9-6555-41f4-930a-3357c3bba091d7e134">Das Semikolon zum Abschluss des Statements ist eine Besonderheit von MarkLogic und gibt an, dass
 dieses Statement in einer Transaktion ausgeführt werden soll.</typeofhazard>
                <howtoavoid id="6dc1b0e1-8202-4662-9294-53e5e832d89cd7e136">In anderen XQuery Implementierungen gibt es diese Funktion möglicherweise nicht.</howtoavoid>

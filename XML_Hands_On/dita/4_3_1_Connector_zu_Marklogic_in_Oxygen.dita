@@ -5,12 +5,12 @@
       <p id="71c18de7-b974-43c8-a4f5-1b9c3cca77ae">Marklogic[[xe1:Software;xe2:Marklogic]] bietet zwar auf Port 8000 per Default ein Query Console im Browser, mit der man bestimmte Sachen ausprobieren kann. Komfortabler arbeitet man aber mit einem Oxygen-Connector[[xe1:Tools;xe2:oXygen-Connector]]. Hier öffnet man den <i id="0a5b1594-03c1-4a51-99e6-c9635050e54cd7e6">Data Source Explorer</i> und konfiguriert eine neue Datenquelle:</p>
       <fig id="fb4950ad-f783-463b-a64b-038f74e2820bd7e11">
          <desc id="3e1e9266-c0bf-4e2f-ba72-bdad1d672da5d7e10">oXygen Datasource Explorer View öffnen</desc>
-         <image href="images/ox-data-exp_30.png"/>
+         <image href="images/ox-data-exp_31.png"/>
       </fig>
       <p id="eeb8e3dd-c1c6-4158-a88a-2157da375f78d6e19">Dazu muss man den [[link]]Marklogic Treiber installieren[[fn:https://www.oxygenxml.com/doc/versions/20.1/ug-editor/topics/configure-marklogic-datasource.html*MarkLogic Datenquelle in oXygen konfigurieren]] und diesen im folgenden Screen verfügbar machen.</p>
       <fig id="69461989-8bbc-470d-a3a9-2a31087f0764d7e17">
          <desc id="90a79377-9443-4860-83b9-c532f1eb6f1ed7e16">Neue Datenquelle in oXygen konfigurieren</desc>
-         <image href="images/confi-dsource_31.png"/>
+         <image href="images/confi-dsource_32.png"/>
       </fig>
       <hazardstatement id="71250119-fe45-4c68-bbce-226ee37c97f0d6e21" type="caution" status="changed">
          <messagepanel id="51a9c962-c11b-4937-844a-a54801587df4d7e20">
@@ -20,26 +20,26 @@
       </hazardstatement>
       <fig id="445013cb-10c5-4773-b66e-f544417d4d0ad7e26">
          <desc id="35156b4d-53d3-4e37-add6-424596340e0ed7e25">Neue oXygen Treiberdatei auswählen</desc>
-         <image href="images/ml_treib_32.png"/>
+         <image href="images/ml_treib_33.png"/>
       </fig>
       <p id="03f8b48e-3889-4d0b-adea-cd2617f2937cd7e30">Natürlich ist auf der Serverseite auch eine Einstellung notwendig. Man wechselt als Admin in den Bereich <b id="19b8ef13-fb56-425e-8b77-2a1cec6531dbd6e32">App Servers</b> und fügt einen neuen <b id="f35588eb-8b91-467d-b02f-ceff6380b29ad6e35">WebDAV Server</b>[[xe1:Tools für MarkLogic;xe2:WebDAV Server]] hinzu. Ggf. muss man bei der Auswahl der Datenbank diese noch auf "automatische Directory Erzeugung" umstellen.</p>
       <fig id="a23bf0b3-e55d-4777-8776-28b408a937ccd7e38">
          <desc id="9303dc08-1829-47bc-b374-883a00544afdd7e37">Wechseln in die MarkLogic Appserver Verwaltung</desc>
-         <image href="images/appserver-ver_33.png"/>
+         <image href="images/appserver-ver_34.png"/>
       </fig>
       <fig id="b2db1d63-fc24-49d8-9cb3-747f4214c2cdd7e42">
          <desc id="2b171189-7a21-494d-979b-174198d8fc00d7e41">WebDav in MarkLogic konfigurieren</desc>
-         <image href="images/marklogic-create-webdav-1_34.png"/>
+         <image href="images/marklogic-create-webdav-1_35.png"/>
       </fig>
       <p id="9c2a53f4-bd6e-42d5-b88c-9e23a3a52923d6e46">Hat man den WebDAV Server erzeugt und diesem eine bestehende oder neu angelegte Datenbank zugewiesen, dann kann man diese DB im Konfigurationsdialog der neuen WebDav Connection auswählen.</p>
       <p id="3a372d8e-d264-487c-be23-7c049f8f82ead6e53">Schliesslich hat man im Data Source Explorer in oXygen die neue Verbindung verfügbar und kann gefühlt wie im Dateisystem mit den Files auf dem Server arbeiten.</p>
       <fig id="d784d31f-9b46-4713-8ed8-7cd66abeef84d7e51">
          <desc id="1c91a559-e5ef-4de0-90be-94d0da74f1d1d7e50">Konfigurieren der WebDAV Connection Einstellungen in oXygen</desc>
-         <image href="images/cnfigure-database-connection-1_35.png"/>
+         <image href="images/cnfigure-database-connection-1_36.png"/>
       </fig>
       <fig id="07f5a46b-216f-49df-bd3c-b07b0e5ada6fd7e55">
          <desc id="35dfb52c-30a2-4b07-ab7b-1370f54fe06ad7e54">oXygen Data Source Explorer zeigt die WebDAV Verzeichnisse auf dem Marklogic Server</desc>
-         <image href="images/Data-Source_explorer-1_36.png"/>
+         <image href="images/Data-Source_explorer-1_37.png"/>
       </fig>
    </body>
 </topic>

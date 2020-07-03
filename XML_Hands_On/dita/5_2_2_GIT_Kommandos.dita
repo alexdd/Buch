@@ -15,7 +15,7 @@
                <note id="04e5ee83-f620-4900-8cb8-d5457b20b331d7e18">
                   <p id="a77f1f2e-fef1-4257-9b1e-69ef738760b7d7e20">Wenn man sich auf der Kommandozeile bewegt, dann kann es sein, dass man keinen Zugriff auf den HTTP Endpoint von GutHub hat, auf der GitHub Website kann man sich auch die URL für die SSH Verbindung geben lassen.</p>
                   <fig id="e41fdf0f-8138-44e0-83ab-9f94e4f5dd05d7e21">
-                     <image href="images/clone_59.png"/>
+                     <image href="images/clone_61.png"/>
                   </fig>
                </note>
             </dd>
@@ -76,7 +76,7 @@
             <dt id="461f5021-ad4e-4725-abd9-076d89165a14d7e80">Pull Request auf GitHub anlegen</dt>
             <dd id="45b71079-8cc1-4713-886c-2977b1e5f64dd7e82">
                <fig id="4425dabc-1b19-4737-ae46-61a730254664d7e83">
-                  <image href="images/pr_60.png"/>
+                  <image href="images/pr_62.png"/>
                </fig>
             </dd>
          </dlentry>
@@ -84,7 +84,7 @@
             <dt id="9ca59cd0-ae23-4034-abf3-2cf6e27f78d0d7e87">Den Pull Request auf einen bestimmten Base-Branch beziehen</dt>
             <dd id="ac9ddeb4-1b3a-4309-8ba8-ed206290dde5d7e89">
                <fig id="d254ffe8-ee84-4218-8a34-d67de2fe1e58d7e90">
-                  <image href="images/compare_61.png"/>
+                  <image href="images/compare_63.png"/>
                </fig>
             </dd>
          </dlentry>
