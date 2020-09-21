@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="c25b36c1-64f0-4fff-8445-8dc096e98096">
+   <title id="877dafce-2dfe-4a6f-9483-cfe566858b83">Ausführen einiger Beispiel-Queries </title>
+   <body id="48877454-f109-4d47-9192-0575f181f939">
+      <p id="2459f527-8e4e-4230-9966-7c387208de9b">Wie im vorherigen Kapitel beschrieben, muss in der Konsolensitzung zwischen Anlegen der Originalversion und der Aktualisierung eine Verzögerung eingebaut werden, um irgendwie das "Zeitloch" zu simulieren, in dem - wenn wir bei dem vorherigen Beispiel bleiben -  der Personalausweis als Verlust gemeldet war, aber tatsächlich schon wieder in meinem Besitz war.</p>
+      <p id="699e7bf9-bd79-4a39-be86-f018583ec67dd6e6">Ohne jetzt groß [[code:validStart]] und [[code:validEnd]] anzupassen, habe ich das Beispiel mit einer Verzögerung von 50 Sekunden lassen:</p>
+      <pre id="bc956fea-d13b-42fd-a3b1-b2910e91c365d7e8" xml:space="preserve">( xdmp:invoke-function(local:create-temporal-fields#0),
+  xdmp:invoke-function(local:create-range-index-fields#0),
+  xdmp:invoke-function(local:create-axes#0),
+  xdmp:invoke-function(local:create-temporal-collection#0),
+  xdmp:invoke-function(local:insert-original#0),
+  <b id="fda3ce2f-fcf8-4063-ad94-d54875a360f2d6e10">xdmp:sleep(50000),</b>
+  xdmp:invoke-function(local:insert-update#0))</pre>
+      <p id="16e38ef6-1840-4045-a53b-c4fcf6103b4ad6e10">Und bekomme folgendes Ergebnis:</p>
+      <table id="c4bd0531-72dc-4551-9712-58a21abef158d6e12" pgwide="1" frame="all"
+             scale="50"
+             status="changed">
+         <desc id="2e2eab4a-363d-4301-b34c-b950b8025506d7e16">Diese Daten wurde aus der Exploreransicht der Konsolensitzung entnommen. </desc>
+         <tgroup id="28de4be3-a70c-4f91-9763-687dda0c9a88d7e18" cols="5">
+            <colspec id="f77f3bec-430b-4b71-9b5c-af4a0b31e043d7e19" colwidth="187px" colname="col0"/>
+            <colspec id="360cf6b0-2381-43d0-a256-161f0750f040d7e20" colwidth="220px" colname="col1"/>
+            <colspec id="8c2aba36-f4e7-4add-8eb1-7b275be022e7d7e21" colwidth="222px" colname="col2"/>
+            <colspec id="ed78c93f-96d5-4184-93bb-98bd9145e7e9d7e22" colwidth="211px" colname="col3"/>
+            <colspec id="d8f52897-26de-4556-8f9e-d1994d3abd74d7e23" colwidth="225px" colname="col4"/>
+            <thead id="06d9f2fe-ed57-43d0-a877-aeb948b71f0fd7e24">
+               <row id="9e783b88-80ce-478c-849e-3535e0b8e159d7e25">
+                  <entry id="eb206fff-14bb-4ea8-9033-d58e16b19474d7e26" colname="col0" width="187px">
+                     <p id="3b858260-3132-4744-822a-388757bf1ca7d6e22">Document</p>
+                  </entry>
+                  <entry id="21c445bd-ea35-44be-86f1-245ebaba12c6d7e29" colname="col1" width="220px">
+                     <p id="96fa723c-32d1-4215-8ea6-34f4c4e8d4e0d6e28">validStart</p>
+                  </entry>
+                  <entry id="bcaea0c4-71d0-47dd-9f29-56368db06d9dd7e32" colname="col2" width="222px">
+                     <p id="f3f4d9b2-d393-47f7-88f9-f0bd49c13be2d6e34">validEnd</p>
+                  </entry>
+                  <entry id="6932087d-78f8-4eb3-ba0d-ceb6a6f0845dd7e35" colname="col3" width="211px">
+                     <p id="6738e10e-4028-4824-bd5a-2f31fc7276a9d6e37">systemStart</p>
+                  </entry>
+                  <entry id="46e0b5c6-3483-4a8b-a1ba-e86a4a46577cd7e38" colname="col4" width="225px">
+                     <p id="abe482e7-7fea-4484-a3bc-7838a551a318d6e40">systemEnd</p>
+                  </entry>
+               </row>
+            </thead>
+            <tbody id="380f8190-89d7-4c09-b7a3-9817f8289df5d7e41">
+               <row id="2d26149d-759f-4f9b-9c40-873ac2da494bd7e42">
+                  <entry id="d0dec2d0-a2a5-4093-a8dc-85021de060b6d7e43" colname="col0" width="187px">
+                     <p id="1c29ef78-25db-4140-b0cf-2434fe62501fd6e33">duesel_alex_270774.2462380991258156208.xml</p>
+                  </entry>
+                  <entry id="34d54718-84e8-4217-8cb5-ee9659355ab0d7e46" colname="col1" width="220px">
+                     <p id="05c544a3-7bd5-4253-b5ee-67dabcabfbf4d6e51">2019-03-19T14:17:00</p>
+                  </entry>
+                  <entry id="2e218266-6172-44b2-a8d4-3985b6a6b3d7d7e49" colname="col2" width="222px">
+                     <p id="7b570410-dfd1-48dc-a64c-5ff7ee9f84d1d6e54">
+                        <b id="e2968d95-6b67-479c-a4bc-d962ab336dc4d6e55">unendlich</b>
+                     </p>
+                  </entry>
+                  <entry id="a841933a-88bd-440a-85ec-422989110618d7e53" colname="col3" width="211px">
+                     <p id="f84359ce-723b-4894-9c92-ffcea49f4624d6e58">2019-03-19T13:18:28</p>
+                  </entry>
+                  <entry id="391d50a8-99df-44c2-9cf0-f0eecd57a92ed7e56" colname="col4" width="225px">
+                     <p id="093daa5f-3d5f-4d81-beb6-e196c438fcd5d6e61">2019-03-19T13:19:18</p>
+                  </entry>
+               </row>
+               <row id="defe37bd-be67-4071-819b-9deb91141ed2d7e59">
+                  <entry id="d692445f-26ce-4169-a1d5-07d0cde5e0d2d7e60" colname="col0" width="187px">
+                     <p id="80b154da-dd44-41e9-9478-c6902e4b4bb1d6e41">duesel_alex_270774.819911042637597172.xml</p>
+                  </entry>
+                  <entry id="e02017eb-f567-4ad2-b5c2-aa06958bb1e7d7e63" colname="col1" width="220px">
+                     <p id="865093ca-d4e5-4225-a791-45f80ad8fb7ed6e71">2019-03-19T14:17:00</p>
+                  </entry>
+                  <entry id="41a57545-f7a8-4086-bcef-4cfb1053ca0ed7e66" colname="col2" width="222px">
+                     <p id="b274b678-7150-4874-a037-23b792835749d6e74">2019-03-19T14:18:00</p>
+                  </entry>
+                  <entry id="32d33196-7b78-4ca9-ab1a-f98d4cc49890d7e69" colname="col3" width="211px">
+                     <p id="c41e2883-6169-491b-a011-982003d98c89d6e77">2019-03-19T13:19:18</p>
+                  </entry>
+                  <entry id="c92ef635-1ad8-4acb-8bd0-85c3475dc343d7e72" colname="col4" width="225px">
+                     <p id="604a1931-45e7-48e9-879c-325749779335d6e80">
+                        <b id="679a6f9d-2685-4c2f-9f04-929aa5c31d02d6e81">unendlich</b>
+                     </p>
+                  </entry>
+               </row>
+               <row id="48743fde-0a65-46f3-a210-e6af56b40688d7e76">
+                  <entry id="6fca2358-8de9-41bb-85fc-b67b3ab31288d7e77" colname="col0" width="187px">
+                     <p id="1a49c7fb-9c2d-420d-aaf7-12f4c3c8c11dd6e49">duesel_alex_270774.xml</p>
+                  </entry>
+                  <entry id="b27e0b08-71c4-40d8-bdca-6782ed2fe78bd7e80" colname="col1" width="220px">
+                     <p id="2d55653f-3aff-4633-ab66-6de296a620f7d6e91">2019-03-19T14:18:00</p>
+                  </entry>
+                  <entry id="5c90ce2f-954b-4d5a-8544-6519c41337edd7e83" colname="col2" width="222px">
+                     <p id="59329648-b091-46a1-8e6a-6247f0c7c617d6e94">
+                        <b id="adff2f4d-1eb4-4549-a972-99b4a7dd047ed6e82">unendlich</b>
+                     </p>
+                  </entry>
+                  <entry id="a671a027-c711-467c-a39f-db108d3caa81d7e87" colname="col3" width="211px">
+                     <p id="22c74575-6baf-4a2b-9da6-1fb880a2b15ed6e97">2019-03-19T13:19:18</p>
+                  </entry>
+                  <entry id="2b4b6235-4c98-4f29-b8a4-1406ce3d457ed7e90" colname="col4" width="225px">
+                     <p id="79110572-309b-4067-8121-9f9a456f8e1cd6e100">
+                        <b id="f2bc6042-2a22-49dc-b3d4-d22591503a53d6e101">unendlich</b>
+                     </p>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p id="ab1286fb-98c0-432c-bf1f-60bf116968a2d6e90">Wie man sieht, müsste sich jetzt das Zeitloch von 50 Sekunden der Systemzeiten innerhalb der gültigen Zeiten befinden, um das Beispiel mit dem verlorenen Ausweis zumindest für die Zeitspanne von 50 Sekunden simulieren zu können. </p>
+      <p id="6bea37b1-3981-4fda-8afb-6d40e27b4838d6e96">Das korrekte Setup bleibt an dieser Stelle dem geneigten Leser selbst überlassen.</p>
+      <p id="059b400f-b00a-4a79-944c-c54a2cbec2b0d6e93">Zwei Queries, die die Werte in der Tabelle illustrieren, sind bspw. folgende:</p>
+      <fig id="eeceb673-1acc-4bbb-8939-dd98e5d59372d7e100">
+         <desc id="d97fe83f-ce17-4be2-9a8b-a98ea038923ed7e101">Bei dieser Query werden alle Dokumente gesucht, deren gültiger Zeitraum, den Zeitraum zwischen 14:17 Uhr und 14:18 Uhr umfasst. Das sind das Split-Dokument und das Original-Dokument. Beide haben den Status "gestolen", da erst um 14:18 Uhr der Fund bekannt gegeben wurde.</desc>
+         <image href="images/result1-x_59.png"/>
+      </fig>
+      <fig id="b7274335-1fa9-4956-9e11-0c4a9dddb8d2d7e104">
+         <desc id="da09368b-5ed5-401c-8b57-efe4c04a2e7ed7e105">Verändert man den Zeitraum nach 18:00 Uhr, so wird das Original - wie erwartet - durch das Update verdrängt.</desc>
+         <image href="images/result2-x_60.png"/>
+      </fig>
+      <fig id="60ca5cd2-2cf7-4274-b9f2-a1d46cc545a9d7e108">
+         <desc id="befb9134-5ec9-4d4d-b0bd-4935d636b398d7e109">Die aktuelle Version des temporal verwalteten Dokuments ist in der Collection "latest" gespeichert.</desc>
+         <image href="images/result_3-x_61.png"/>
+      </fig>
+      <p id="68c1023b-0ca5-4a40-b422-3c559fd63533d7e113">Wie man sieht, kann man - ausreichend Lösungsphantasie vorausgesetzt - einiges mit diesen Queries anstellen. Hilfreich ist sicherlich auch die umfangreiche Liste der Vergleichsoperatoren, die MarkLogic zum Vergleichen von Zeiträumen bereitstellt: [[link]]ISO Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_92200*ISO normierte Operatoren in MarkLogic zum Vergleichen von Zeiträumen]] und [[link]]ALLEN Operators[[fn:https://docs.marklogic.com/guide/temporal/searching#id_98704*Allen (ALN) Vergleichsoperatoren für Zeiträume]].</p>
+   </body>
+</topic>

@@ -8,18 +8,18 @@
       <fig id="0d502088-17cc-4df6-910c-2f7039fdf1c0d6e10">
          <title id="3246bdbb-3085-4bec-874e-717cf966010ed7e14">Pull Stylesheet</title>
          <desc id="138e70a4-9d86-49df-95ce-a44629d611ebd7e16">Beim "Pull" werden Elemente in der Quellinstanz selektiert und an einer passenden Stelle in der Zielinstanz eingefügt. Diese Vorgehensweise ist vergleichbar mit derer von Template-Engines, wie <b id="0a86d34e-281d-4bb3-a363-34738d6db0a4d7e29">JSP</b> oder <b id="b291c3a3-16dc-483d-a959-745e574325bcd7e32">ASP</b>. Das kann in mehreren Stufen erfolgen, bis schrittweise die Quellinstanz in die finale Zielinstanz überführt wurde.</desc>
-         <image href="images/pull_3.svg"/>
+         <image href="images/pull_9.svg"/>
       </fig>
       <fig id="2c947622-9c37-4214-aa99-4e2fbcb0e4b0d7e25">
          <title id="7d62b238-0131-40fd-a3a9-2b9ba651120ad7e26">Push Stylesheet</title>
          <desc id="d1d87156-8516-4e1c-9e76-8921c674801ed7e28">Beim "Push" werden die Quelldaten schrittweise in die Zieldaten konvertiert. Diese Vorgehensweise kann explorativ erfolgen und beim Transformieren in einen Zwischenschritt entstehen Erkenntnisse, die bei der Weiterverarbeitung nützlich sind. Merke:XSLT steht für eXtensible Stylesheet Transformation.</desc>
-         <image href="images/pusch-x_8.svg"/>
+         <image href="images/pusch-x_14.svg"/>
       </fig>
       <p id="43976824-218f-4b76-9c34-24b9e47ccbfcd6e22">Das bisher Gesagte verdeutlicht zwar den "Pull" Ansatz, was genau aber ge"pusht" wird, ist vermutlich noch unklar. Betrachten wir XML in der Baumdarstellung.</p>
       <fig id="e4c503ef-8c78-4549-bba4-39ea85229ebdd7e33">
          <title id="711e093f-3e49-4de9-a327-b5b88d096f38d7e34">Transformation des Quellbaus in den Zielbaum</title>
          <desc id="e1a11904-ea0f-4c6d-acc9-d1dfd291d448d7e36">Der XSLT Prozessor unternimmt einen Tiefensuchlauf[[xe1:Tiefensuchlauf]] und überprüft bei jedem Knoten den er betritt, ob in seiner Regelbasis eine Regel existiert, die auf diesen Knoten "matched". Dabei gibt es drei grundsätzliche Möglichkeiten, wie die Knoten des Quellbaums in den Zielbaum kopiert - oder eben nicht kopiert - werden können.</desc>
-         <image href="images/pushi-x_9.svg"/>
+         <image href="images/pushi-x_15.svg"/>
       </fig>
       <p id="299d3e98-3089-4974-a46a-bf457340a701d6e52">Pull-Stylesheets werden gewöhlich mit [[code:xsl:for-each]] Loops programmiert. Dieser Ansatz ist meiner Ansicht nach gebräuchlich, wenn keine großen <b id="ceb946a0-86da-4f10-8883-8c06674fe26dd7e91">DTD</b> Änderungen zu erwarten sind, der XML Baum flach strukturiert ist und die Anforderungen an die  Knvertierung relativ einfach sind, bspw. beim Auswerten / Konvertieren von Konfigurationsdateien. In allen anderen Fällen sind Push-Stylesheets vorzuziehen, d.h. möglichst wenig [[code:xsl:for-each]] loops und möglichst viele Template-Match Regeln.</p>
    </body>

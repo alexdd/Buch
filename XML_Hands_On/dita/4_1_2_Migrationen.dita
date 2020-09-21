@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<topic id="4237c0f1-b3fa-4e97-b20b-abe896ef5053">
-   <title id="1101558a-cb87-4c9b-b68d-74ca5667dc6c">Migrationen</title>
-   <body id="8fd0a7e2-57e6-4f17-b275-c4da9280e25b">
-      <p id="e4ea3c43-732b-4227-a074-2f511d067161">[[xe1:Migrationen]]Wenn es nicht mehr nur allein darum geht auf ein wohldefiniertes Ausgabe- oder Zwischenformat zu transformieren, dann spricht man von einer Migration.</p>
-      <p id="f2aa0677-dd0a-4742-b150-fe1f858e3faad7e6">Migrationen laufen in mehrstufigen Prozessen ab - mit Konvertiertungs-, Validierungs-, Log- und Kopierschritten. Nicht nur die XML Daten müssen dabei transformiert werden, sondern auch Ressourcen, wie Grafiken. </p>
-      <p id="149af15e-fede-4fe5-82c2-d078adfd61dcd7e8">Im folgenden werden ein paar Best Practices bzgl. der XML Konvertierung aufgelistet.</p>
-   </body>
-</topic>

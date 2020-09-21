@@ -14,6 +14,11 @@
       <p id="a470215e-648e-4bb9-87f9-894c63b0dd90d6e13">XSLT Streaming[[xe1:Verarbeitungsmethoden;xe2:XSLT Streaming]] ist in der [[link]]XSLT Version 3.0[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/xslt-streaming.html*XSLT3.0 Streaming API]] neu hinzugekommen und in der
 kommerziellen [[link]]Saxon-EE Lösung von Michael Kay[[fn:https://www.saxonica.com/html/documentation/sourcedocs/streaming/]][[xe1:XML Gurus;xe2:Michael Kay]] implementiert. Bei dieser Methode wird kein Eingabebaum im Speicher aufgebaut, was zu einer drastischen Performanzsteigerung[[xe1:Performanzsteigerung]] führt.</p>
       <p id="3646e5ae-e79b-4fe4-87dc-bf3d33d48095d6e15">Es gibt ein paar Regeln, die man bei der Verarbeitung großer Datenmengen über die Streaming Funktionen beachten sollte:</p>
+      <fig id="9fc3e316-d0d1-4b18-bffe-98b5119b63b8d7e17" expanse="spread" frame="all"
+           scale="50"
+           status="changed">
+         <image href="images/Coot-_24.svg"/>
+      </fig>
       <ul id="35560a63-bdf8-4ada-81c2-106bbfc808e4d6e17">
          <li id="956a2a9f-c86e-4f35-9c4b-d117a5f2382bd6e18">
             <p id="dddf3268-6ea2-4478-87d5-24c73f2f8927d6e19">Bei einer XPATH Auswertung sollte nur ein einfacher Ausdruck mit höchstens einer konsumierenden Selektion gegeben sein. Konsumieren heißt, dass vom Kontextknoten aus eine Knotenmenge abwärts selektiert wird. Dagegen bleibt die Information bzgl. der Ancestor-Achse erhalten.</p>

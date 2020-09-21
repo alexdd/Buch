@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="0cbf3589-fc55-423c-93f1-80bea9b197bd">
+   <title id="c023b480-f281-4a8b-90d6-ef6341e1e882">Dokument-Rechte in MarkLogic</title>
+   <body id="a0ed7f32-4f85-4d3c-9ec2-0954343f8ef8">
+      <p id="6f6fb89d-f244-40ba-82a2-e7f8ab6297b9">MarkLogic bietet ein sehr ausgefeiltes Rechte-und Rollensystem.[[xe1:Konzepte;xe2:Dokument-Rechte]] Da wir MarkLogic aber vornehmlich als Datenbank einsetzen und nicht als Content Management System, reicht es aus, die grundlegende Funktionalität zu kennen.</p>
+      <note id="31088970-6414-44ad-b091-dcd7e1ccce42d7e6">
+         <p id="84df2c22-a4c0-4d1a-9f3c-e630eb75b211d7e7">Ohne weitere Massnahmen werden Dokumente mit den Rechten des Erzeugers versehen.</p>
+      </note>
+      <p id="1afa2b7a-c207-4e83-9858-9153e208deacd7e9">Lädt man z.B. Dokumente über die MarkLogic Content Pump in die Datenbank, wie mit diesem Befehl:</p>
+      <pre id="797fe063-965b-49d7-ac15-fd02062ebb61d7e11" xml:space="preserve">mlcp_opts="-database alex-test -host localhost -username admin -password admin"
+
+mlcp import $mlcp_opts \
+     -<b id="7dfd13c5-c221-411d-9ebc-8b20e86f6289d7e13">output_permissions xml-scrapper,read,xml-scrapper,update</b>
+     -input_file_path input-files \
+     -input_file_type aggregates \
+     -aggregate_record_element chapter \
+     -output_collections /chapter \
+     -output_uri_prefix /chapter/ \
+     -output_uri_suffix .xml</pre>
+      <p id="86dc8dd4-c1c0-4978-afa3-9225afc6bfa4d7e16">So ist es besonders wichtig, die Einstellung:</p>
+      <pre id="de16842c-23ff-42e6-82fe-ef9926493048d7e18" xml:space="preserve">-output_permissions role1,read,role2,update</pre>
+      <p id="0d5aca0d-049b-442a-9942-66ceee075c39d7e20">zu setzen, wenn man z.B. für eine Webapp nur einen User mit einer bestimmten Rolle vorsieht. </p>
+      <hazardstatement id="479f30b8-b06d-4bd5-84d9-734bf1a0f091d7e22" type="danger" status="changed">
+         <messagepanel id="bac900a8-7ae3-40f0-84d7-62ff7f5b4ae3d7e23">
+            <typeofhazard id="582f8d7c-6415-4018-8fc8-55a43073dcebd7e24">Vergisst man die Option [[code:-output_permissions]], so kann man u.U. die Dokumente von einer Webapp aus nicht zur Anzeige bringen.</typeofhazard>
+            <howtoavoid id="5386e186-c3df-4937-bd7f-b927acb4a7b4d7e26">In diesem Fall sind keine Rechte an den hochgeladenen Dokumenten vorhanden und man kann diese in einer Webapp nur herunterladen, wenn man in der Admin-Rolle eingeloggt ist.</howtoavoid>
+         </messagepanel>
+      </hazardstatement>
+      <p id="cf404aeb-1738-4953-9d2f-233cd081a8bcd7e28">Es gibt einen einfachen Weg, die Rechte an einem Dokument zu überprüfen. Dazu führt man in der Konsole die "Browse"-Aktion auf einer Datenbank aus und wechselt in den Dateireiter Permissions:</p>
+      <fig id="3b3808a6-0ed7-4759-9a2b-17cb68431025d7e30">
+         <title id="beca9858-b1b2-4c0f-9fa7-ca2b3d282bf7d7e31">Anzeige der Dokument-Rechte in der MarkLogic Datenbank</title>
+         <desc id="a63952f0-9adf-45b9-86e6-2d3c9011e2a0d7e33">Der "Browse"-Button in der MarkLogic Konsole wird oft übersehen, bietet aber viele nützliche Funktionen, wie z.b. die Anzeige der gesetzten Dokumentrechte.</desc>
+         <image href="images/rights_70.png"/>
+      </fig>
+      <hazardstatement id="188439f3-bd70-4b14-91e7-ab0d0174ebded7e36" type="notice" status="changed">
+         <messagepanel id="106d0067-a4d8-4dc3-af79-06759cfd5cf6d7e37">
+            <typeofhazard id="db8f1760-6ca4-426a-9aec-49e893f76ea9d7e38">Ein XQuery-Skript, das eine Webapp betreibt, kann nicht nur im Browser aufgerufen werden, sondern auch von einem externen Programm bedient werden. Damit dies möglich ist, müssen die Rechte der WebApp wie in Kapitel <xref href="bfa3e3ec-5b97-4144-aba8-4e1a942598e8"
+                     id="72583dfb-bc4f-411a-b36d-0cd9b56e5954"
+                     type="topic">Wikipedia Scrapper Applikation</xref> gesetzt werden.</typeofhazard>
+            <howtoavoid id="117a8d78-fc70-4ddb-b777-37f309047c56d7e43">Idealerweise sollte man dann aber auch dem User [[code:sml-scrapper]] eine Rolle [[code:xml-scrapper]] zuweisem, die nur Dokumente mit den Permissions [[code:-output_permissions xml-scrapper,read,xml-scrapper,update]], vgl. oben, lesen und modifizieren kann - und nicht die Admin-Rolle.</howtoavoid>
+         </messagepanel>
+      </hazardstatement>
+   </body>
+</topic>

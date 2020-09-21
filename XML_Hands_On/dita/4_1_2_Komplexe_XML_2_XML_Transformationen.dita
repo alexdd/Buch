@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e0d7eb79-068d-4266-9982-c759fd052fec">
+   <title id="8bb42763-a375-4684-97d7-3a9107e733e2">Komplexe XML-2-XML Transformationen</title>
+   <body id="5fa964ab-0fb8-498b-9a52-7d570679775a">
+      <p id="144a3257-7998-48dd-8921-3de1194b130c">Der erfahrene XML-Entwickler schreibt schlanken, performanten und einfachen Code, den auch andere gut verstehen. Er meistert alle Bereiche der XML-Entwicklung und hat sich mit Publishing Standards befasst, wie Docbook[[xe1:Standards;xe2:Docbook]], DITA[[xe1:Standards;xe2:DITA]] und JATS[[xe1:Standards;xe2:JATS]]. Er erstellt mittels XSL-FO[[xe1:XSL-FO]] und verschiedenen Seitenvorlagen schöne PDF Dokumente und hat auch schon in anderen Anwendungsbereichen geabeitet, wie bspw. im EDI[[fn:https://de.wikipedia.org/wiki/Elektronischer_Datenaustausch*Wikipediaseite zum Elekronischen Datenaustausch / EDI]][[xe1:Anwendungsgebiete;xe2:EDI]] Umfeld. Er beherrscht XML Datenbanken, wie Marklogic[[xe1:XML Datenbank;xe2: MarkLogic]] oder eXist[[xe1:XML Datenbank;xe2: eXist]] und deren Abfragesprache XQuery[[xe1:Programmiersprachen;xe2:XQuery]].</p>
+      <p id="66ab9ba6-1dd3-4251-a4e8-4b752a9e66a1d7e6">Als Königsdisziplin stellen sich komplexe XML-2-XML Transformationen[[xe1:XML-2-XML Transformationen]] heraus. Insbesondere solche, die von einem relativ freien Inhaltsmodell auf ein restriktives Inhaltsmodell[[xe1:Inhaltsmodell; xe2: Restriktives Inhaltsmodell]] abbilden. Dabei können diese ausserhalb und auch innerhalb einer XML Datenbank ablaufen - oder über Webrequests verteilt statt finden. </p>
+      <p id="5150550d-6bc3-475f-a14b-4e1c38411ce4d7e8">Es hat sich bewährt solche komplexen Transformationen auf mehrere Schritte aufzuteilen, die jeder für sich genommen, eine abgeschlossene und leicht zu testende Einheit bildet.</p>
+      <p id="4d01f962-213b-4ad3-a7d2-0988de510c23d7e8">Schritt-für-Schritt wird dabei die XML Eingabeinstanz transformiert, bis schliesslich das validierbare Ergebnis herauskommt. Das XML der Zwischenschritte kann dabei meistens nicht gegen ein Schema validiert werden, weshalb eine besondere Sorgfalt bei der Entwicklung erforderlich ist.</p>
+      <section id="245de40f-8e46-421e-a48b-d698bd073d9fd7e12">
+         <title id="b601fc1f-db14-405b-83a8-16b22c2e83d6d7e11">Schritt-für-Schritt Python Skript</title>
+         <p id="044dedbc-1ce9-469e-8463-c7a592a035dfd7e13">Bei einer mehrstufigen Transformation möchte man bei der Entwicklung leicht die Zwischenschritte überprüfen können. Dabei hilft eine andere Skriptsprache, wie bspw. Python[[xe:Programmiersprachen;xe2:Python]]. Das folgende Skript nimmt die XML Daten in einem Ordner [[code:input]], transformiert diese in Sortierreihenfolge mit den XSLT Skripten, die im Ordner [[code:xslt]] liegen und schreibt die Ausgabe übersichtlich in den Ordner [[code:output]].</p>
+         <pre id="934544cb-54cb-4155-bf0c-c33c0bade7a7d7e17" xml:space="preserve">import glob, os, shutil, getopt, sys, subprocess
+
+SAXON_JAR = "/mnt/c/saxon/saxon9pe_98.jar"
+JAVA_CMD = "java"
+
+def transform(): 
+    for fpath in glob.glob('input/*'):
+        file_name= os.path.basename(fpath)
+        input_folder = os.path.dirname(os.path.realpath(fpath))
+        input_file =  os.path.join(input_folder, file_name)
+  
+        steps = os.listdir("xslt")
+        steps.sort()
+        step = None
+        
+        for step_file in steps:
+            if not step_file.startswith("step"): continue 
+            step = step_file.split("_")[0]
+            output_folder = input_folder.replace("input","output/"+step)
+            current_step = os.path.join(output_folder, file_name)
+            os.makedirs(output_folder,exist_ok=True)
+            args = [
+                JAVA_CMD,
+                "-classpath",
+                SAXON_JAR,
+                "net.sf.saxon.Transform",
+                "-s:"+input_file,
+                "-o:"+current_step,
+                "-xsl:xslt/"+step_file,
+                "filename="+os.path.basename(input_file).replace(".xml","")
+                ]
+            try:
+                subprocess.call(args)
+            except:
+                print ("ERROR: Could not transform file: "+fpath+" with: "+step_file)
+            input_file = current_step
+            print ("Transformed "+step+": "+fpath)
+        
+transform()
+print ("Done")</pre>
+         <p id="d2d82e18-8106-43cc-82cf-5877e058330fd7e17">Das Skript kann natürlich noch um weitere Funktionen erweitert werden, wie bspw. einer Validierung für den letzten Schritt oder einem Deltavergleich der Zwischenergebnisse mit denen des vorherigen Transformationslaufs. </p>
+         <p id="0736d8fb-b326-4230-a9a6-61754f30731cd7e19">Will man das Ganze noch weiter treiben, kann man auch eine [[link]]BPMN Engine[[xe1:Business Process Management;xe2: Camunda BPMN Engine]][[fn:https://de.wikipedia.org/wiki/Prozessmanagement*Wikipediaseite zum Prozessmanagement]], wie [[link]]Camunda[[fn:https://camunda.com/*Website der Camunda BPMN Engine]] verwenden (einen speziellen Task-Executor für Camunda, der genau für diese XML Zwecke gemacht wurde, findet man auch in meinem [[link]]Github Repository[[fn:https://github.com/alexdd/tektur_worker*Github Repo eines Camunda Task-Executors für XML Transformationen]]).</p>
+      </section>
+      <section id="28b04f0b-7b29-4a20-9891-a0f27d1e8e55d7e23">
+         <title id="85ffda6b-2a0a-4a86-9da3-8776eb67395fd7e20">Patterns für wiederkehrende Schritte</title>
+         <p id="b8885454-3c0a-4820-b896-12b4070f4969d7e22">Eine mehrstufige Transformation, die auf ein restriktives Inhaltsmodell abbildet, funktioniert vielleicht wie eine Goldschürfer-Pipeline, in der gesiebt und gerüttelt wird, bis das erwartete Ergebnis vorliegt. </p>
+         <p id="6cf71c9c-f4dd-40e4-960b-5d6412a2e1c7d7e26">Folgende Patterns für wiederkehrende Schritte lassen sich dabei identifizieren:</p>
+      </section>
+      <section id="45689309-211c-4db7-8b2f-5d7f7e3188dcd7e30">
+         <title id="ba888b46-2cf1-47cf-943f-9fa7c2572284d7e29">Elemente markieren</title>
+         <p id="c2a20a66-bfa1-4d7f-90ed-d26c53a23647d7e31">[[xe1:Transformation-Patterns;xe2:Markieren]]Wenn man alles auf einmal transformieren will, kommt man schnell in Bedrängnis. Es empfiehlt sich zunächst zu markieren und im nächsten Schritt dann auf den markierten Elementen bestimmte Operationen auszuführen. </p>
+         <pre id="b4a307d3-91c6-4c7d-a868-b98e4e536c81d7e35" xml:space="preserve">&lt;xsl:template match="*[name()=$outline-element-names]"&gt;
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="@*"/&gt;
+    &lt;xsl:if test="preceding-sibling::*[1][@otherprops=$list-fragment-marker]"&gt;
+      &lt;xsl:attribute name="<b id="0c9ff1b6-550b-4a9c-bec7-c318761bbb3ad7e37">copy-target-id</b>" 
+                     select="preceding-sibling::*[@otherprops=$list-fragment-marker][1]/
+                             descendant::*[<b id="6a35de6b-a40b-4d15-a313-4a3102092d11d7e40">@copy-id</b>][last()]/<b id="5828b327-6ef6-4b9e-b7fc-9671a6a5a627d7e43">@copy-id</b>"/&gt;
+    &lt;/xsl:if&gt;
+    &lt;xsl:apply-templates select="node()|@*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</pre>
+         <p id="9a6873c9-8ee7-4e69-a3aa-276996757f90d7e46">Hier wird ein künstliches Attribut [[code:@copy-target-id]] mit einem Wert von [[code:@copy-id]] an ein Outline Element gesetzt, das im folgenden Schritt an die Stelle nach der[[code:@copy-id]] kopiert wird.</p>
+      </section>
+      <section id="1567ba2e-7b33-483f-bc84-20e00ea7e232d7e48">
+         <title id="e138481f-1be9-43ac-9cbc-82c1a265cd54d7e36">Elemente kopieren</title>
+         <p id="00b6c2cb-4be3-4ec5-9bb4-298667c6c27ad7e51">[[xe1:Transformation-Patterns;xe2:Kopieren]]Ein wiederverwendbarer Schritt, der mit [[code:@copy-target-id]] markierte Elemente nach eine Stelle kopiert, die mit [[code:@copy-id]] markiert wurde, könnte z.B. so aussehen:</p>
+         <pre id="e178ab17-c4ea-4806-a2ad-af548988902dd7e53" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    version="2.0"&gt;
+    
+    &lt;xsl:key name="targets" match="*[<b id="500dc172-d47e-45a6-8cdb-e1bfadabc6d2d7e55">@copy-target-id</b>]" use="<b id="fff4418a-d7c2-41bc-91da-6c60edfed9bdd7e58">@copy-target-id</b>"/&gt;
+    
+    &lt;!-- copy elements from src to target --&gt;
+    
+    &lt;xsl:template match="*[<b id="39b277da-017a-4c05-ba5e-a96e3353e95bd7e61">@copy-id</b>]"&gt;
+        &lt;xsl:copy&gt;
+            &lt;xsl:apply-templates select="node()|@*"/&gt;
+            &lt;xsl:apply-templates select="key('targets',<b id="82dbd27c-a71a-4795-ad03-a46848e43b3cd7e64">@copy-id</b>)" mode="copied"/&gt;
+        &lt;/xsl:copy&gt;
+    &lt;/xsl:template&gt;
+
+    &lt;!-- remove original position and attributes --&gt;
+	
+    &lt;xsl:template match="*[<b id="9808eb47-daa4-4d21-80a3-9cdb8d013c68d7e67">@copy-target-id</b>]"/&gt;
+    &lt;xsl:template match="<b id="0b6ecc45-5317-4229-a133-d6949216486ed7e71">@copy-target-id</b>|<b id="a2262d7e-c9a3-4248-a31f-9adf35cec530d7e74">@copy-id</b>" mode="copied"/&gt;
+   
+    &lt;xsl:template match="node()|@*" mode="#all"&gt;
+        &lt;xsl:copy&gt;
+            &lt;xsl:apply-templates select="node()|@*" mode="#current"/&gt;
+        &lt;/xsl:copy&gt;
+    &lt;/xsl:template&gt;
+ 
+&lt;/xsl:stylesheet&gt;</pre>
+         <p id="27dc79f5-6cda-4897-8ae4-48cf10062564d7e77">Mit so einer Vorgehensweise kann man sukkzessive und mittels einzelner Kopierschritte die XML Instanz umbauen und die Zwischenergebnisse verfolgen. So eine explorative Herangehensweise hat enorme Vorteile, wenn man sich über den Algorithmus noch nicht ganz im Klaren ist.</p>
+      </section>
+      <section id="061f9f4a-e399-4a0f-b777-a8e92fd65cb3d7e79">
+         <title id="a4ecf49a-78a5-4273-89ab-340c230d0be7d7e80">Elemente nach oben ziehen</title>
+         <p id="29c6d76d-0b02-4956-8727-631b03ea91f7d7e82">[[xe1:Transformation-Patterns;xe2:Nach oben ziehen]]Falls ein tieferliegendes Element nicht an die Stelle in der Ziel-DTD passt, kann man es mit folgenden Templates "nach oben ziehen":</p>
+         <pre id="04929ffa-fbea-4a27-9826-77de917cdd88d7e84" xml:space="preserve">&lt;xsl:template match="table[descendant::table or descendant::ol]"&gt;
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates <b id="3aefabf7-cafb-4507-b926-fc97c3fbd5e5d7e86">mode="remove-table-ol</b>"/&gt;
+  &lt;/xsl:copy&gt;
+  &lt;xsl:apply-templates select="descendant::ol | descendant::table"/&gt;
+&lt;/xsl:template&gt;
+    
+&lt;xsl:template match="*[self::ol or self::table]" mode="remove-table-ol"/&gt;</pre>
+         <p id="8ec9ec89-5d50-461a-a871-3c00e5330bd0d7e86">Hier werden Tabellen und Listen in einer Tabelle nach der Tabelle gesetzt. Über einen Modus (vgl. auch ein Beispiel zum Modus hier: <xref href="119f935c-99c9-465e-b2d4-90e7ae5f614f"
+                  id="f8bc7192-65e7-417e-90aa-1af20b5c7c4f"
+                  type="topic">Modus vs. Tunnel Lösung</xref> werden diese Knoten aus dem XML Zielbaum "ausgeschnitten".</p>
+      </section>
+      <section id="401e27ef-867d-4b89-9dc5-152ce6867e8cd7e94">
+         <title id="b5cfb304-190e-4b70-88e4-e4f65f233ddfd7e95">Blöcke auszeichnen</title>
+         <p id="f5c8f71a-58a0-47b2-96a7-c2a3f94b62d1d7e97">[[xe1:Transformation-Patterns;xe2:Blöcke auszeichnen]]Falls Blockstrukturen geklammert werden sollen, bspw. wenn diese im HTML Kapitel nur mittels [[code:h1]] Überschriften-Tags gekennzeichnet sind, dann hilft vielleicht ein Template wie dieses weiter:</p>
+         <pre id="f6752c1d-cea1-47c4-8767-4360f396ae64d7e99" xml:space="preserve">&lt;xsl:template match="body"&gt;       
+  &lt;xsl:for-each select="h1"&gt;
+    &lt;block&gt;
+      &lt;title&gt;
+        &lt;xsl:apply-templates /&gt;
+      &lt;/title&gt;
+      &lt;xsl:apply-templates select="following-sibling::*[not(self::h1)]
+          [preceding-sibling::h1[1][<b id="c7627c8f-4969-4ab0-8d35-83fe26a3e8e4d7e101">generate-id()=current()/generate-id()</b>]]"/&gt;                
+    &lt;/block&gt;
+  &lt;/xsl:for-each&gt;
+&lt;/xsl:template&gt;</pre>
+         <p id="2a5752ab-909e-45c2-82f0-d0fa12f98138d7e101">Mittels der XPath [[code:fn:is()]] Funktion liesse sich der [[code:generate-id()]] Vergleich sogar noch abkürzen.</p>
+      </section>
+      <section id="3938775b-b3ca-49cf-9e71-3ef4692ea275d7e106">
+         <title id="0a038513-1329-43e0-a182-93223f1cd901d7e107">Mixed Content wrappen</title>
+         <p id="a4fa4571-de04-4853-8782-2501fee309fdd7e109">[[xe1:Transformation-Patterns;xe2:Mixed Content wrappen]] Sehr unangenehm ist sporadisch auftretender XML Mixed Content, z.B. zwischen Paras. Mit folgenden Templates lässt sich das handeln. Zuerst kann man den Mixed Content in einem vorhergehenden Schritt markieren und in einen künstlichen Para packen ...</p>
+         <pre id="7f3cb499-9618-4338-8760-202471dcb21cd7e111" xml:space="preserve">&lt;!-- wrap a p around PCDATA in li --&gt;
+    
+&lt;xsl:template match="text()[parent::li]"&gt;
+  &lt;p content="mixed"&gt;
+    &lt;xsl:value-of select="."/&gt;
+  &lt;/p&gt;
+&lt;/xsl:template&gt;</pre>
+         <p id="3cc758cc-9265-4bb1-8826-52e49df59244d7e113">... hier markiert mit [[code:@content="mixed"]]. Im folgenden Schritt werden dann die ursprünglichen Paras, die jetzt verschachtelt im künstlichen Para liegen wieder ausgepackt:</p>
+         <pre id="7a9d8b39-0a8b-4e68-9e99-e512723b25c1d7e115" xml:space="preserve">&lt;xsl:variable name="inline-elements" select="('sub','sup','b','i','br','u')"/&gt;
+
+&lt;xsl:template match="p[<b id="90cdbd5d-d06c-4a70-a4f0-0978ccfcd494d7e117">@content='mixed'</b> and not(preceding-sibling::p[@content='mixed'])]"&gt;
+  &lt;xsl:variable name="first-p-id" select="(preceding-sibling::*[1]/generate-id(), 
+                                                                   generate-id())[1]"/&gt;
+  &lt;p&gt;
+    &lt;xsl:copy-of select="preceding-sibling::*[name()=$inline-elements]"/&gt;
+      &lt;xsl:apply-templates select="node()|following-sibling::*[(self::p[<b id="2d643601-48d8-4992-a384-513b49c02247d7e120">@content='mixed'</b>]
+                           or name()=$inline-elements) and 
+			   not(preceding-sibling::p[not(<b id="140600dc-1e28-4652-b14a-25aa1d3a06f6d7e123">@content='mixed'</b>)][1]/
+                           generate-id()!=$first-p-id)]"<b id="276e579d-c665-4bec-be97-e3773444712bd7e126"> mode="unwrap"</b>/&gt;
+   &lt;/p&gt;
+&lt;/xsl:template&gt;
+	
+&lt;xsl:template match="p[<b id="3f6ecb71-bcbd-4431-8052-2dc98aea4babd7e129">@content='mixed'</b> and preceding-sibling::p[<b id="4ded219d-cf40-4966-8d80-faee414042e7d7e133">@content='mixed'</b>]]"/&gt;
+	
+&lt;xsl:template match="p" <b id="69f9c252-88a9-41b2-9889-45f609c8caead7e136">mode="unwrap"</b>&gt;
+  &lt;xsl:apply-templates/&gt;
+&lt;/xsl:template&gt;
+	
+&lt;xsl:template match="*[not(self::p)]" <b id="e4a1134c-f8d0-495c-aeb6-d604d14c32f0d7e139">mode="unwrap"</b>&gt;
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="node()|@*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;
+	
+&lt;xsl:template match="li[p[<b id="cb598a76-72bd-49a9-8c1f-7483d4771798d7e142">@content='mixed'</b>]]/*[name()=$inline-elements]"/&gt;</pre>
+      </section>
+   </body>
+</topic>

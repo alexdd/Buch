@@ -25,7 +25,7 @@ try {
          <fig id="8c50585d-b572-4f1c-a868-df5c56394151d7e35">
             <title id="c43c998f-cf78-4e19-af11-8d7c09e7dd31d7e36">Schematron Validierung mit Filter</title>
             <desc id="bbc380b4-693c-4009-bb7d-34af391c84cbd7e38">Einfacher Batch-Prozess zur Validierung mit Schematron und anschliessendem Filtern der Ergebnisse</desc>
-            <image href="images/schematron-1_60.svg"/>
+            <image href="images/schematron-1_78.svg"/>
          </fig> |   |                                                    Rejected by , .       <p id="4e1ec9a6-9a1a-470b-9e86-2708788be97bd6e19">Zu finden ist das [[link]]Schematron Repo auf Github[[fn:https://github.com/Schematron/schematron*Schematron auf GitHub]]. Dieses Repo ist etwas unübersichtlich. Der relevante Teil des Sourcecodes befindet sich unter: [[code:schematron/code]]</p>
       </section>
       <section id="8286fa4b-b6f5-444c-ad3a-139f4c074f3ed7e44">

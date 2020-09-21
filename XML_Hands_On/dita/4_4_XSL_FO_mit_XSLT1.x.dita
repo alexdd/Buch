@@ -42,7 +42,7 @@ des [[link]]Funktionskatalogs[[fn:https://www.w3.org/TR/2010/REC-xpath-functions
          <fig id="d2e36f63-8cd3-482b-83ba-1b57b85c47aed7e35">
             <title id="924a4458-cce2-4290-9410-ee646669e24cd7e50">Ausschnitt aus einer PDF XSL-FO Demo</title>
             <desc id="5f1a4d4c-36c6-4b87-b26f-8061e9b4c099d7e52">Notentabelle zur Benotung nach dem 15-Punkte Schema am Gymnasium. Mit ein paar Zeilen Code liessen sich schon in der Version 1.0 der Programmiersprache XSLT in Verbindung mit der Auszeichnungssprache XSL-FO beeindruckende PDF Layouts erzeugen.</desc>
-            <image href="images/noten-table_58.png"/>
+            <image href="images/noten-table_76.png"/>
          </fig>
          <p id="94e056ae-ca89-4926-9845-048f88d6cd9dd7e41">(Link zum PDF mit der vollständigen [[link]]Notentabelle[[fn:http://www.tekturcms.de/stylesheets/margits_noten.pdf*XSL-FO Experiment, das eine Notentabelle für die Kollegstufe am Gymnasium generiert]])</p>
          <p id="b5463c04-53a3-4d10-8b51-597c6ff52ed9d7e43">
