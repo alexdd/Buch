@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="3428ba06-d592-42a8-8480-4093057c0f89">
+   <title id="8ae7b5c4-6d33-4dcc-8ad5-14149817fb5c">Stylesheet-Parameter auf der Kommandozeile</title>
+   <body id="1dc8f4b8-d292-4dbb-bf87-5331285a3d72">
+      <p id="30077de1-d740-4f1a-859f-e2c51189e9e7">[[xe1:Parameterisierung;xe2:Stylesheet-Parameter]]Beim XSLT-Call auf die Einsprungdatei (Hauptstylesheet) könnnen auf der Konsole Parameter mitgegeben werden.
+Diese werden normalerweise im Hauptstylesheet deklariert, können aber auch in Sub-Stylesheets[[xe1:Parameterisierung;xe2:Sub-Stylesheet]] untergebracht werden,
+wenn diese nur lokal verfügbar sein sollen.</p>
+      <p id="e9622e40-d6ef-45f8-82b7-c8df9ba45aa4d7e6">Ein Parameter kann z.B. so aussehen:</p>
+      <pre id="7ab4b93d-472a-458e-ae63-79965e07cb87d7e8" xml:space="preserve">&lt;xsl:param name="test-param" required="no" select="'Hallo'"/&gt;</pre>
+      <p id="2f3d98ab-d411-45b9-aab0-b536dc9ab5c7d7e10">Wenn das Feld [[code:@required]] den Wert [[code:yes]] zugewiesen bekommt, dann darf kein Default-Wert im [[code:@select]] Attribut 
+angegeben werden. (Der Default könnte natürlich auch als PCDATA Inhalt innerhalb der Tags stehen.)</p>
+      <p id="f0382145-ee76-40c0-a964-aed0fb0e307bd7e12">Ein Saxon-Aufruf auf der Kommandozeile, der diesen Parameter bedient, sieht z.B. so aus:</p>
+      <pre id="c77f818f-94f6-4289-906e-83adbe90d761d7e14" xml:space="preserve">saxon -it:main -o:out.xml testparam="Servus!"</pre>
+      <section id="ed7e3f76-a938-4615-a962-7aaebc029286d7e16">
+         <title id="3daff868-49b8-445d-9b3c-4c76f570af08d7e17">XPath als Parameterwert</title>
+         <p id="27ea2d98-1795-4641-a7cb-b1881e3cb2a6d7e19">Jetzt gib es hier aber auch noch einige versteckte Funktionalitäten, bspw. möchte man einen XPath-Ausdruck an das Stylesheet übergeben,
+der vom Hauptprogramm vllt. unter Zuhilfenahme einer Datenbankabfrage berechnet wird.</p>
+         <p id="1548efc0-8cba-46d1-a588-756cb737677ed7e21">Im einfachsten Fall ist so ein XPath ein boolscher Wert [[code:true()]] Dieser wird an das Stylesheet korrekt übergeben, indem der XPath Kennzeichner [[code:?]] vorangestellt wird, so:</p>
+         <pre id="20691b1a-4cd9-4c91-b604-73617627e134d7e23" xml:space="preserve">saxon -it:main -o:out.xml ?testparam=true()</pre>
+         <p id="4fad832d-b368-47f3-b853-44d8ced90c46d7e25">Wegen des [[code:?]]-Prefix versteht Saxon sofort, dass es sich um einen XPath handelt. Ein [[code:xsl:choose]] Statement wie
+das folgende würde den korrekten Fall liefern:</p>
+         <pre id="e3352cd8-1de3-434a-b98e-adada145439dd7e27" xml:space="preserve">[...]
+&lt;xsl:param name="test-param" required="yes"/&gt;
+[...]
+&lt;xsl:choose&gt;
+    &lt;xsl:when test="$test-param"&gt;Gut&lt;/xsl:when&gt;
+    &lt;xsl:otheriwse&gt;Schlecht&lt;/xsl:otheriwse&gt;
+&lt;/xsl:choose&gt;
+[...]</pre>
+         <p id="7e5d4e4e-e6b2-48fa-ba50-d5c5d0fb9d97d7e29">Würde man das Prefix nicht setzen und bspw. dieses [[code:Name=Wert]] Paar senden:</p>
+         <pre id="8c6f631d-8422-4395-918e-8920d031d1c8d7e31" xml:space="preserve">saxon -it:main -o:out.xml testparam=false</pre>
+         <p id="5ffb925b-b154-43af-8ce9-e816f1e8b082d7e33">So würde auch der gute Zweig ausgeführt, da der Nicht-Leerstring als wahr interpretiert wird, was aber falsch ist.</p>
+         <p id="3f7221cc-45b9-4979-bc06-28347111a17fd7e35">Typsicher kann man natürlich auch programmieren und an den Parameter noch eine Typendeklaration heften, was die Fehlersuche erleichtert:</p>
+         <pre id="1c727c87-a4d9-45ec-af1d-b9fd89e8c498d7e37" xml:space="preserve">&lt;xsl:param name="test-param" required="yes" as="xs:boolean"/&gt;</pre>
+         <p id="044cab92-1dbc-40a1-b8d4-3a396875cdb1d7e40">Um noch ein komplexeres Szenario für einen übergebenen XPath zu zeigen, betrachten wir die folgende Parameterübergabe:</p>
+         <pre id="224921ec-cec6-4c0c-a62a-7ed84571c795d7e42" xml:space="preserve">saxon -it:main -o:out.xml ?testparam="//descendant::buch[id=$id-aus-webservice-abfrage]"</pre>
+         <p id="092a04b4-549b-423a-89e7-7957a4329fe4d7e44">Die Shell Variable [[code:$id-aus-webservice-abfrage]] wird bei der Ausfühung des Shell-Skripts mit dem Ergebniswert
+eines vorangegangenen Webservice-Calls bestückt und an das XSLT Stylesheet übergeben. Dieses arbeitet auf einer Bücher-Liste und formatiert
+das ausgewählte Buch z.B. als HTML Seite:</p>
+         <pre id="574debdd-c58a-42a6-9f0a-74e2d1d52802d7e46" xml:space="preserve">&lt;xsl:param name="test-param" required="yes" /&gt;
+
+&lt;xsl:template name="main"&gt;
+    &lt;xsl:apply-templates select="$test-param"/&gt;
+&lt;/xsl:template&gt;</pre>
+      </section>
+      <section id="c7d35051-e387-45aa-bc1f-b660b2b41dbcd7e48">
+         <title id="066371be-c9ed-4741-b8ed-bfa90c5ab805d7e49">Clark Notation</title>
+         <p id="807e8c1f-508b-4a88-be8e-f4a0f243588ad7e51">[[xe1:Clark Notation]]Bei der [[link]]Clark Notation[[fn:http://www.jclark.com/xml/xmlns.htm*Webpage von James Clark bezüglich XML Namespaces]] kann dem Elementbezeichner
+mittels geschweifter Klammerung der benötigte Namespace vorangestellt werden. Das sieht z.B. wie folgt aus - wenn man auch gleich noch
+das [[code:?]]-Prefix voranstellt:</p>
+         <pre id="f098d8a8-569c-4b3a-a50d-8e8fb94ecee8d7e53" xml:space="preserve">?{http://www.tekturcms.de/namespaces/mein-namespace}spezieller-verarbeitungs-modus=true()</pre>
+         <p id="ffc0bdd7-b3fb-4fb3-b6a0-4c66406e3966d7e55">Im aufgerufenen Stylesheet wird zunächst der Namespace deklariert, dann der Parameter gesetzt und schliesslich die Logik angegeben:</p>
+         <pre id="5dd48876-0e3a-41f6-b308-c053b184d4c5d7e57" xml:space="preserve">&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tk="http://www.tekturcms.de/namespaces/mein-namespace"
+    exclude-result-prefixes="xs"
+    version="2.0"&gt;
+    
+    &lt;xsl:param name="tk:spezieller-verarbeitungs-modus" select="false()" as="xs:boolean"/&gt;
+    
+    &lt;xsl:template name="main"&gt;
+        &lt;xsl:choose&gt;
+            &lt;xsl:when test="$tk:spezieller-verarbeitungs-modus"&gt;Gut&lt;/xsl:when&gt;
+            &lt;xsl:otheriwse&gt;Schlecht&lt;/xsl:otheriwse&gt;
+        &lt;/xsl:choose&gt;
+    &lt;/xsl:template&gt;
+    
+&lt;/xsl:stylesheet&gt;</pre>
+         <p id="ef9f7583-b5c9-4db4-b62d-ce260605a8f3d7e59">Diesen Sonderfall braucht man eigentlich nur, wenn man in eine bestehende Transformation einen
+Parameter einführen will, dessen Bezeichner schon existiert, um so einen Namenskonflikt zu vermeiden
+- gesehen bspw. bei komplexen Schematron Regeln.</p>
+      </section>
+   </body>
+</topic>

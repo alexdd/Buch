@@ -3,7 +3,7 @@
    <title id="47f2fdc5-eca0-4e9b-bfc8-f2fbd76403d8">Professionelle XML Verarbeitung </title>
    <body id="4c47d822-0170-4ff7-b065-932773eb0e10">
       <p id="25b21e23-d4ce-4721-a7d1-2c6b83245a70">Vom Single-Source Publishing bis zur Generierung von Java Code aus Klassendiagrammen. XSLT ist in vielen großen Softwareprojekten vertreten. Heute liefert eine Suche nach [[code:&lt;xsl:stylesheet]] bspw. 14.868.501 [[link]]Treffer.[[fn:https://github.com/search?q=xsl%3Astylesheet&amp;type=Code*GitHub Suche nach XSLT Code Schnippseln mit 14Mio Treffern]]</p>
-      <section id="468df67b-d9e3-4733-a9f7-d72a45dfd362d7e6">
+      <section id="db7b6f20-9d4f-4732-b6f9-cb582ad26fc8d7e6">
          <title id="012db970-b72c-425a-a3ad-3e817e002282d6e7">Single Source Publishing</title>
          <p id="e88e78e7-d931-45f4-bb7f-0e055e7db65cd6e9">[[xe1:Single-Sourcing]]Aus einer Quelle werden viele Ausgabe Formate generiert. Gängige Formate in der Technischen Dokumentation sind elektronische Ausgabe-Formate wie: <b id="96c979b3-1b62-4707-a821-d8c6c58f3508d7e11" href="undefined">CHM</b>, <b id="9eef9aae-cacc-4a59-aef7-27a96f4864f4d7e14" href="undefined">EclipseHelp</b>, <b id="42478335-d4e1-476a-9f9d-5ccaf364e1c0d7e17" href="undefined">JavaHelp</b>, <b id="e54c8f5a-bc0d-4860-97ba-f6046a85feaed7e20" href="undefined">ePub</b>, ..., Print-Ausgabe Formate, wie <b id="e4566283-3ece-43ee-a03d-87578fba2542d7e23" href="undefined">PDF</b> oder <b id="d13e1010-6e2f-4617-a416-058dd5d4539fd7e27" href="undefined">Adobe Framemaker</b>, oder <b id="ff32b0fa-426d-4d16-90f4-e41b35d98968d7e30" href="undefined">XML</b> Standard Austauschformate, wie <b id="54325d75-82c5-4d6e-9b5b-27b5247d949cd7e33" href="undefined">DITA</b>, <b id="593915f9-ddf7-45c3-acce-e5e497d8e29fd7e36" href="undefined">S1000D</b>, <b id="a784261b-f555-46ad-805b-9a95f5acfd89d7e39" href="undefined">PI-MOD</b>[[xe1:Standards;xe2:PI-MOD]] oder <b id="a4f5d850-42a5-4db2-96fe-47f33beb8cd9d7e42" href="undefined">TEI</b>[[xe1:Standards;xe2:TEI]]. </p>
          <p id="c4c67a7d-ed1d-4fbe-88be-439fd8730e13d7e45">
@@ -65,20 +65,39 @@
             </li>
             <li id="c6a284d6-23aa-404e-8b5d-4f76ee4dab97d6e33">
                <p id="c6122f80-b8a0-4cca-9939-4122325dfef2d6e34">Es gibt spezialisierte <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                        id="e9653d9b-6180-41a8-a203-07f8e950c223"
-                        type="topic">XML Datenbanken </xref>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
+                        id="57d96678-9a44-49fa-843f-3aa975d54d9c"
+                        type="topic">XML Datenbanken modified by alex</xref>, die besonders gut auf Baumstrukturen arbeiten. (Dokumente sind per se baum-strukturiert und sind eigentlich für eine relationale Datenbank ungeignet)</p>
             </li>
          </ul>
          <p id="df845a80-c690-4551-af36-90a401ff12aed6e36">Die Redaktionssysteme der Technischen Dokumentation der führenden Hersteller in Deutschland haben XML unter der Haube und setzen auf die <b id="0e94bef5-f15d-4209-b53c-26b68a6604c8d6e69">Single-Source Strategie</b>.</p>
+         <ul id="1ec3a9af-3ba9-4fbe-b0ed-a3efc4831957d7e119">
+            <li id="e819e084-a71d-42e9-8fef-0c263cca4122d7e120">
+               <p id="7be58ef3-7725-449a-92d3-4881ca0041ead7e121">dfgdfg</p>
+               <p id="ecc2f826-bc2a-4c15-b0e3-f2144d5b104dd7e123">fdgdfg</p>
+            </li>
+            <li id="b7de9fdd-376a-48bf-8bdd-77d786f1842ed7e125">
+               <p id="e1ae6720-0989-4afc-9756-00427e48a9c9d7e126">fdgdfg</p>
+            </li>
+            <li id="9173b201-8bd1-43d4-a427-9b04d1491b9fd7e128">
+               <p id="188c16c0-d4ba-46ae-b5af-277131edf264d7e129">fdgdfg</p>
+            </li>
+         </ul>
+         <hazardstatement id="a88ff8bf-0f29-47b9-9f19-136f6b02bf3ad7e131" type="notice" status="changed">
+            <messagepanel id="6045e966-5001-4dd0-8d23-dc12c5a158e4d7e132">
+               <typeofhazard id="f83231d0-a600-4d15-92f4-cf5e45085e4fd7e133">dgdfg</typeofhazard>
+               <howtoavoid id="f4af7889-7957-4e50-860a-65da5ac4169ad7e135">dgdfgdfgdfgdfg</howtoavoid>
+            </messagepanel>
+         </hazardstatement>
+         <p id="d4019dd5-f81c-4b04-a264-d53f00a7d16ed7e137">dsfsdfsdfsdfsdfsdf</p>
       </section>
-      <section id="6dfcb4ed-4e1f-42ae-b7a1-8e628ec0bbd7d7e119">
+      <section id="1aa4c64b-c6e5-43b2-9d5e-848d042b8d25d7e139">
          <title id="c2ea4ffe-bfc9-4c96-b5d9-d793083fc510d6e39">Code Generierung</title>
          <p id="62ada423-a662-4d08-ba65-63ccadd079ced6e41">Nachdem man bei XSLT im Format der Ausgabe frei ist, kann auch direkt Plain-Text mit  XSLT Regeln generiert werden. Daher liegt es nahe sich jegliche Form von Quelltext aus einer XML Repräsentation erzeugen zu lassen.[[xe1:Anwendungsgebiete;xe2:Code Generierung]]</p>
          <p id="52746a75-07e2-4452-8f21-1fb22d4e1332d6e43">Beispielsweise speichern gängige <b id="bd402eab-050a-438c-a88a-bb0762c33858d7e153">CASE Tools</b> (Computer Aided Software Engineering) UML Diagramme im XML Format ab, so z.B. [[link]]ArgoUML[[fn:http://argouml.tigris.org*ArgoUML ist ein freier UML Editor]].</p>
          <p id="a655bc68-8f84-470f-ad3f-a5bb41b19aa6d6e48">Diese Klassendiagramme lassen sich mittels XSLT direkt in Java-Code transformieren, wie z.B. in einem kleinen Open Source Projekt (aus vergangenen Tagen) : [[link]]Butterfly Code Generator[[fn:http://butterflycode.sourceforge.net*Damit kann man sich Code aus UMl Klassendiagrammen generieren lassen, natürlich XSLT basiert]]</p>
          <p id="ba1967f4-d697-4466-8455-dd17d935c68ed6e53">Es gibt auch einen schönen Artikel dazu im [[link]]Java World Journal[[fn:https://www.javaworld.com/article/2073998/java-web-development/generate-javabean-classes-dynamically-with-xslt.html*Weiterführende Lektüre zum Thema Code-Generierung mit XSLT]].</p>
       </section>
-      <section id="2bd93fa2-95ff-4158-a212-2f01cabd1946d7e133">
+      <section id="3f602f31-8448-4386-a0b2-d2f1ba67ec89d7e153">
          <title id="bd0e17e7-dce2-45a0-b5eb-90297e678e88d6e56">Migrationen und Konvertierungen</title>
          <p id="b7221c07-bea2-4a1e-a1cd-09318580ea8dd6e58">Für jede erdenkliche Art der Migration[[xe1:Anwendungsgebiete;xe2:Migration]] eines XML Datenbestands oder eines Datenbank-Dumps / -Exports im XML Format, zwischen Produktversionen oder zwischen Dienstleister- und Dienstnutzer-Systemen, bietet sich XSLT zur Transformation an.</p>
          <p id="755dccf0-48c4-4b8f-a778-4e4eb27089a9d6e60">Dabei ist zu beachten, dass XSLT besonders schnell und gut auf verschachtelten Strukturen arbeitet. Entartet ein Baum zur Liste und/oder sind nur geringe Strukturanpassungen notwendig, wird man sich mit einem schnellen SAX Parser leichter tun. </p>

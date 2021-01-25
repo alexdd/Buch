@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="d9eb7249-f8f7-4dbb-bf77-fe1f1833b66b">
+   <title id="879f017d-4cf1-41a1-ac4f-a212c7bd490f">XPath-Achsenbereich selektieren</title>
+   <body id="a59585c2-8664-400a-9b0f-06ff08c002b2">
+      <p id="8540bbf6-74f2-4f96-8c5e-c6e06f5ff4df">Mit den folgenden Ausdrücken selektiert man ausgehend vom aktuellen Kontextknoten alle Knoten, die auf den betreffenden XPath Achsen liegen:</p>
+      <ul id="87027c6a-f07f-422c-891e-815cb5098251d7e6">
+         <li id="bd6c8a1d-cb7e-45b4-9d79-e71ce5503734d7e7">
+            <p id="3cecb18a-c3e4-41ce-9d07-e18dbf60ad6ed7e8">[[code:preceding-sibling::*]]</p>
+         </li>
+         <li id="c5b9fb9c-34f2-49f6-ab17-8f5f1bb557ecd7e10">
+            <p id="bef257f9-ec6d-4fc7-a777-01fce92a4365d7e11">[[code:following-sibling::*]]</p>
+         </li>
+         <li id="c878afb8-ad36-4f19-9d04-978705b95461d7e13">
+            <p id="1241c974-de33-4d78-8afd-8ad5243f6ebfd7e14">[[code:ancestor::*]]</p>
+         </li>
+         <li id="f72bdfb5-7a17-44c9-8981-f2216a6ea43ad7e16">
+            <p id="2a54967d-fdfd-4165-8f07-db6a9e9f46ddd7e17">[[code:descendant::*]]</p>
+         </li>
+         <li id="cb8e1c5b-95ab-492f-9a53-d49a301bfa7cd7e19">
+            <p id="a89f0342-c17a-41da-8850-0fec239da386d7e20">[[code:ancestor-or-self::*]]</p>
+         </li>
+         <li id="cccb746d-c135-40ab-9e69-be82c8059b71d7e22">
+            <p id="37a6217c-b411-4a4e-95e8-eb34248b6bd1d7e23">[[code:descendant-or-self::*]]</p>
+         </li>
+      </ul>
+      <p id="a0716c50-77b2-4200-b3a2-a9b9b8a482b5d7e25">Schwieriger wird es, wenn man nur einen bestimmten Bereich auswählen will und nicht alle Knoten bis zum Anfang bzw. Ende der Achse.</p>
+      <p id="af401fee-0038-4adf-a57d-a77adbdae6bed7e27">Die Selektion eines Bereichs kann man z.B. beim Strukturieren einer Sequenz aus Überschriften und Paras gebrauchen:</p>
+      <pre id="cfa838a9-e53c-4a51-9251-1c28911ca70ed7e29" xml:space="preserve">
+&lt;body&gt;  
+  &lt;h1&gt;Überschrift 1&lt;/h1&gt;
+  &lt;p&gt;Para 1.1&lt;/p&gt;
+  &lt;p&gt;Para 1.2&lt;/p&gt;
+  &lt;h1&gt;Überschrift 2&lt;/h1&gt;
+  &lt;p&gt;Para 2.1&lt;/p&gt;
+  &lt;p&gt;Para 2.2&lt;/p&gt;
+  &lt;h1&gt;Überschrift 3&lt;/h1&gt;
+  &lt;p&gt;Para 3.1&lt;/p&gt;
+  &lt;p&gt;Para 3.2&lt;/p&gt;
+&lt;/body&gt;</pre>
+      <p id="ec69ecda-9482-451d-8e42-7f81c8ffe1f6d7e31">Die Aufgabe besteht nun darin, jeweils einen [[code:section]]-Abschnitt einzuführen, so:</p>
+      <pre id="0e03203f-71c7-458e-adf2-d8c47b132923d7e33" xml:space="preserve">&lt;section&gt;  
+  &lt;h1&gt;Überschrift 1&lt;/h1&gt;
+  &lt;p&gt;Para 1.1&lt;/p&gt;
+  &lt;p&gt;Para 1.2&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;h1&gt;Überschrift 2&lt;/h1&gt;
+  &lt;p&gt;Para 2.1&lt;/p&gt;
+  &lt;p&gt;Para 2.2&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+  &lt;h1&gt;Überschrift 3&lt;/h1&gt;
+  &lt;p&gt;Para 3.1&lt;/p&gt;
+  &lt;p&gt;Para 3.2&lt;/p&gt;
+&lt;/section&gt;</pre>
+      <p id="898002ac-83a3-472f-a7a1-2bfe6de66349d7e35">Ein XSLT Template das dieses Unterfangen bewerkstelligen könnte, sieht bspw. so aus:</p>
+      <pre id="8a52923d-2271-4bf2-9d74-c0ae8aa84b95d7e37" xml:space="preserve">&lt;xsl:template match="body"&gt; 
+  &lt;xsl:copy&gt;
+    &lt;xsl:for-each select="h1"&gt;
+      &lt;section&gt;
+        &lt;xsl:copy/&gt;
+        &lt;xsl:apply-templates select="following-sibling::*[not(self::h1)]
+                                    [preceding-sibling::h1[1] is current()]"/&gt;                
+      &lt;/section&gt;
+    &lt;/xsl:for-each&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</pre>
+      <p id="7fb9a315-835e-483a-9b58-d4c227ba530ed7e39">Hier werden im [[code:apply-templates]] Call alle Nachfolger-Knoten ausgehend vom aktuellen Kontextknoten selektiert, die keine Überschriften sind, und die als erste Vorgängerüberschrift den aktuellen Kontextknoten haben. Das ist genau der Bereich bis zur nächsten Überschrift. </p>
+   </body>
+</topic>

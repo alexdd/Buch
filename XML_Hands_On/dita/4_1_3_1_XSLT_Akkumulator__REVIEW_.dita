@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="51877293-95b9-4486-b8f6-c006615a8109">
+   <title id="40515442-a67d-49f4-9945-0f9d227bd97e">XSLT Akkumulator </title>
+   <body id="c582561a-858c-4fd8-8aeb-2af18ceedd3d">
+      <p id="6c3d953a-91cc-4be7-bf9d-65d3c6d6c75fd6e21">Ein einfaches Streaming Stylesheet könnte z.B. so aussehen:</p>
+      <pre id="6c759bf7-d987-46d9-b7f9-72c4153449a4d7e6" xml:space="preserve">&lt;xsl:stylesheet version="3.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="#all"&gt;
+  
+  &lt;xsl:output method="xml" indent="yes"/&gt;
+  
+  &lt;xsl:mode on-no-match="shallow-copy" use-accumulators="entry-count" streamable="true"/&gt;
+  
+  &lt;xsl:accumulator name="entry-count" as="xs:integer" initial-value="0" 
+                   streamable="yes"&gt;
+    &lt;xsl:accumulator-rule match="entry" select="$value + 1"/&gt;
+  &lt;/xsl:accumulator&gt;
+  
+  &lt;xsl:template match="/"&gt;
+    &lt;result&gt;
+      &lt;xsl:apply-templates/&gt;
+      &lt;count&gt;
+        &lt;xsl:value-of select="accumulator-after('entry-count')"/&gt; 
+      &lt;/count&gt;
+    &lt;/result&gt;
+  &lt;/xsl:template&gt;
+  
+&lt;/xsl:stylesheet&gt;</pre>
+      <p id="4ba7c650-d5a0-489c-9392-3ab548afa421d6e25">Diese Stylesheet hat einige Besonderheiten:</p>
+      <p id="06f1d8c6-03dd-4fa3-847b-4554e944f361d6e27">Zum einen wird darin ein Default-Modus deklariert, der jeden Knoten der Eingabeinstanz über
+eine implizite [[link]]Identity-Transformation (shallow-copy)[[fn:https://www.saxonica.com/html/documentation/xsl-elements/mode.html*Mode Optionen in XSLT3.0]][[xe1:Verarbeitungsmethoden;xe2:Shallow Copy]]in die Ausgabeinstanz kopiert.</p>
+      <p id="cda2834b-a464-49e5-9b3b-e8880252433cd6e29">(Auf herkömmlichem Weg würde man dafür ein Templates, wie dieses, verwenden:)</p>
+      <pre id="6638d3c6-94cd-4dfc-b72d-c3b8e9003634d7e14" xml:space="preserve">&lt;xsl:template match="node()|@*"
+  &lt;xsl:copy&gt;
+    &lt;xsl:apply-templates select="node()|@*"/&gt;
+  &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;</pre>
+      <p id="6deb7053-43b9-437d-8ce4-ec81a69a7795d6e34">Zum anderen wird ein Akkumulator[[xe1:Verarbeitungsmethoden;xe2:Akkumulator]] verwendet. Normalerweise gibt es in XSLT keine Variablen,
+sondern nur Konstanten, wie das auch bei funktionalen Programmiersprachen der Fall ist.</p>
+      <p id="bce045c6-46f1-4745-8326-56beff21e266d6e36">Es gab zwar schon länger eine Saxon-Erweiterung, die die mehrmalige Zuweisung eines Wertes
+an eine Variable erlaubte, im Normallfall braucht man diese Eigenschaft aber nicht.fred</p>
+      <hazardstatement id="4110b20a-b023-4345-953f-70b7cc48ad51d7e20" type="danger" status="changed">
+         <messagepanel id="65ef86d7-2e30-43c2-81f3-e03aea015856d7e21">
+            <typeofhazard id="66df8114-8842-44bd-bef3-24cc3fb6f534d7e22">zzzzz</typeofhazard>
+            <howtoavoid id="bb12a166-b48e-4d21-a771-baa40f220f1fd7e24">uuuu  fred</howtoavoid>
+         </messagepanel>
+      </hazardstatement>
+      <p id="586338d8-49fa-4ddc-b715-99f9688ecd25d6e38">Ber der Verarbeitung sehr großer Datemengen, sind aber zuweisbare Variablen unumgänglich, denn sonst
+würde der Laufzeitstapel schnell an seine Grenzen gelangen.</p>
+      <p id="4a5b2945-71be-4b5c-be7f-2e33cd717a4cd6e40">Ein Akkumulator akkumuliert Werte, wie der Name schon sagt. Das können atomare Typen sein,
+wie im obigen Beispiel, aber auch Datenstrukturen können aufgebaut werden, wie 
+bspw. der gerade prozessierte Teilbaums in einem Dictionary. (Um spätere eine Auswertung bzw. Gruppierung der Key-Elemente durchführen zu können).</p>
+      <p id="825af8ca-d2ab-4357-ba6b-bbf4863f201fd6e42">Im Akkumulator muss das [[code:streamable="yes"]] Property gesetzt sein, wenn er im 
+Streaming-Modus arbeiten soll. In diesem Modus kann der Akkumulatorwert erst ausgelesen werden,
+wenn der untersuchte Baum vollständig durchlaufen wurde.</p>
+      <p id="8d27d621-4d12-4d40-a59e-8d58c45439a5d6e44">Um die Unterschiede zum "normalen" XSLT Betrieb festzustellen, können im obigen Beispiel 
+einige offensichtlich korrekte Änderungen vorgenommen werden, die der Streaming 
+Prozessor allerdings nicht akzeptiert.</p>
+      <pre id="076028e0-f55f-4dab-a7f9-731f6fcc432ad7e35" xml:space="preserve">Cannot call accumulator-after except during the post-descent 
+phase of a streaming template</pre>
+      <p id="c9a77197-237e-49fd-80d3-18a443700c33d6e59">Diese Fehlermeldung erscheint, wenn man den [[code:apply-templates]] Call entfernt. Der Akkumulator
+wird also nur befüllt, wenn der Baum auch explizit durchlaufen wurde. Dieser Durchlauf 
+kann auch ein reines Kopieren sein, bspw. kann man den [[code:apply-templates]] Call auch durch ein</p>
+      <pre id="8ed6b929-d517-460a-9092-54583140e764d7e39" xml:space="preserve">&lt;xsl:copy-of select="."/&gt;</pre>
+      <p id="bd5669e8-e0e9-41d0-8854-f9c76aa6d3a3d6e63">ersetzen, was gleichbedeutend mit der Mode Einstellung</p>
+      <pre id="453a25c2-5f93-467c-9360-ba572f5a1980d7e43" xml:space="preserve">on-no-match="deep-copy"</pre>
+      <p id="073cb9ea-9bed-41e8-ba73-b3cef15a5708d6e68">wäre. Wie man sieht hat sich in XSLT 3.0 viel bzgl. der Handhabung verschiedener
+Verarbeitungsmodi getan. Anstatt Default-Match Regeln zu schreiben, setzt man in der Stylesheet Deklaration bestimmte Modus Properties, die den Baumdurchlauf auf verschiedene
+Arten realisieren.</p>
+      <hazardstatement id="52c608e9-d982-443c-b607-bb30fb88fabbd7e41" type="danger" status="changed">
+         <messagepanel id="dad82131-a656-42e7-9e9f-d69799a05ffbd7e48">
+            <typeofhazard id="5672e757-b41c-4f4d-b42f-518b96afa7ebd7e43">Die Verarbeitung großer Datenmengen ist aber mit Streaming etwas tricky!</typeofhazard>
+            <howtoavoid id="655868c5-91b7-4c06-813b-0667d14c01ced7e45">Es sollte geprüft werden, ob ggf. konventionelles Performanz-optimiertes XSLT für den Answendungsfall ausreicht.</howtoavoid>
+         </messagepanel>
+      </hazardstatement>
+   </body>
+</topic>

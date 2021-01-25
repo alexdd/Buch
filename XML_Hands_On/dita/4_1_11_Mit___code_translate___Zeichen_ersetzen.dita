@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="ec84a734-21a0-44a3-bc8c-5ceadf36d3f0">
+   <title id="fc25f4f3-d1ac-4c15-a465-8789b04701bd">Mit [[code:translate]] Zeichen ersetzen</title>
+   <body id="fcef2e5c-5161-4b36-9617-ad0f91dbe190">
+      <p id="4d90375e-967f-442a-90f9-6e04bdb82bbe">Die [[code:fn:translate()]] XPath Funktion gibt es schon seit XSLT1.0. Mit den moderneren Varianten, wie [[code:fn:replace()]] die auch <xref href="" id="00d9154a-0d79-42a5-a028-020367da4e31" type="">Reguläre Ausdrücke</xref> verstehen, gibt es aber für die meisten Anwendungsfälle mächtigere Alternativen. </p>
+      <p id="ab2474fe-c012-41c4-a1e3-7092d614d2bed7e9">Jedoch kann man mit [[code:translate]] mehrere Zeichen auf einmal ersetzen. Mit [[code:replace]] müsste man dagegen die Funktionen verschachteln, so wie in diesem Beispiel:</p>
+      <pre id="d6326aec-c410-450a-b096-8d3a5992d2a4d7e11" xml:space="preserve">&lt;xsl:function name="dy:make-url"&gt;
+        &lt;xsl:param name="root"/&gt;
+        &lt;xsl:value-of select="replace(replace(replace(replace($url-pattern,
+                                '%id%', $root/@id),
+                                '%version%',$root/@version),
+                                '%language%',$root/@language),
+                                '%variant%',$root/@variant)"/&gt;
+    &lt;/xsl:function&gt;</pre>
+      <p id="f16aaa35-c650-4c13-adc4-ac830ac0f716d7e8">Priscilla Walmsley[[xe1:XML Gurus;xe2: Priscilla Walmsley]] bietet aber auch eine [[link]]Funktion, die mehrere Replacements vornehmen kann[[fn:http://www.xsltfunctions.com/xsl/functx_replace-multi.html*Die Multi-Replace XPath Funktion von Priscilla Walmsley auf der Website der xsltfunctions Bibliothek]].</p>
+      <p id="680407b5-9ef7-41ef-a8cd-3ba5d729d513d7e15">Das Ersetzen von Einzel-Zeichen macht man aber am besten mit [[code:fn:translate()]]. </p>
+      <p id="619d030e-362e-48a2-a402-0cecefe17c83d7e17">In der Indexsortierung des Buchindex wurden in XSLT1.0 Stylesheets die Gruppentitel der Indexrubriken mittels dieser Funktion normalisiert. Um bspw. die Zeichen [[code:AÄÅaäå]] (beachte das schwedische [[link]]Bolle-A[[fn:https://de.wikipedia.org/wiki/%C3%85*Wikipediaseite zum Bolle-A]] auf den Gruppentitel [[code:A]] abzubilden, würde folgender [[code:translate]]-Aufruf genügen:</p>
+      <pre id="bd2afa28-e000-4e2e-b675-526a46a48078d7e19" xml:space="preserve">&lt;xsl:value-of select="translate(.,'AÄÅaäå','A')/&gt;</pre>
+      <p id="3543a31d-402f-4de9-96fa-39126e55f947d7e21">Das große [[code:A]] wäre nun der Gruppentitel für unsere Zeichen. Natürlich will man nicht jedes Zeichen einzeln mappen, sondern eine globale Regel für das ganze Alphabet angeben. Das könnte bspw. für die französischen Kleinbuchstaben so aussehen:</p>
+      <pre id="0c60bcc8-649c-4096-8a25-552922d21332d7e23" xml:space="preserve">&lt;xsl:variable name="kleinbuchstaben" 
+              select="'abcdefghijklmnopqrstuvwxyzÀàÆæÇçÉéÈèÊêËëÎîÏïÖöÔôŒœÙùÜüÛûŸÿ'/&gt;
+&lt;xsl:variable name="gruppentitel" 
+              select="'ABCDEFGHIJKLMNOPQRSTUVWXYZAAAACCEEEEEEEEIIIIOOOOOOUUUUUUYY'/&gt;
+&lt;xsl:value-of select="translate(.,$kleinbuchstaben,$gruppentitel)"/&gt;</pre>
+      <hazardstatement id="5f7559da-d7ae-43b0-8b92-bd677a5c54d1d7e27" type="caution" status="changed">
+         <messagepanel id="ee0dbd97-aaaf-4253-a867-81989025dbd4d7e26">
+            <typeofhazard id="075b1a44-8b33-42ba-a5bf-4e210a84c97bd7e29">Hier kommt es auf die Reihenfolge der Zeichenketten an. Ausserdem müssen die Strings gleich lang sein.</typeofhazard>
+            <howtoavoid id="64dfbd34-6dc8-4122-9742-97d10f1d793ed7e31">Solche Zeichenketten schreibt man am besten in eine sprachabhängige separate XML Datei, die auch ausserhalb des Quelltexts gepflegt werden könnte.</howtoavoid>
+         </messagepanel>
+      </hazardstatement>
+      <p id="8fd1708c-4a1a-4090-8399-9714a3b546f5d7e25">Auch die Prüfung, ob ein Wort mittels Leerzeichen im Satz abgesetzt ist, lässt sich mittels [[code:fn:translate]] realisieren. Hier wird sicherlich auch eine Prüfung notwendig sein, ob eine Zeichenkette schon mit einem Leerzeichen (unter Ausschluss von Interpunktionszeichen) beginnt: </p>
+      <pre id="7bae750b-23b0-4238-bab9-87b44683cd99d7e34" xml:space="preserve">test="not(starts-with(translate(
+                      translate(.,$common-punctuation-marks,''),$whitespaces,' '),' '))"</pre>
+      <p id="2c854bbf-0fa2-407a-89e2-ab5574cbe7fad7e30">mit dieser Variablenbelegung:</p>
+      <pre id="a898847d-7075-47ee-9f11-a26fd703354bd7e38" xml:space="preserve">&lt;sch:let name="common-punctuation-marks" 
+         value="'.,!?()[]{}&amp;#xFF02;&amp;#x60;&amp;#x22;:;⟨⟩©–—-+…=«»¿&amp;lt;&amp;gt;&amp;quot;%‰®™|/'"/&gt;
+&lt;sch:let name="whitespaces" 
+         value="'&amp;#32;&amp;#160;&amp;#8192;&amp;#8193;&amp;#8194;&amp;#8195;&amp;#8201;&amp;#8196;&amp;#8197;&amp;#8198;'"/&gt;</pre>
+      <p id="f26f22cd-1452-4db6-b417-1f3895833320d7e34">Dem Einsatzbereich von [[code:fn:translate()]] ist mit genügend Lösungsphantasie keine Grenzen gesetzt.</p>
+   </body>
+</topic>
