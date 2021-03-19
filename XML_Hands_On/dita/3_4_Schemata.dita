@@ -36,8 +36,8 @@ ein bisschen gefangen und man wünscht sich doch wieder die Flexibilität eines 
          </li>
       </ul>
       <fig id="936b6304-49b3-446c-929e-e0b0523a05e4d7e34">
-         <title id="98b5ba62-920e-4e0f-af32-e214d990bb51d7e38">Abbildung einer DTD Struktur im Near&amp;Far Designer</title>
-         <desc id="5c636086-721c-4c44-99a2-997579edacfdd7e40">Eine DTD wird im Near&amp;Far Designer als aufklappbare Baumstruktur angezeigt. So könnnen auch sehr komplexe DTDs mit 1000 Elementen effizient untersucht werden. Über einen Eingabedialog lassen sich Attribute hinzufügen oder ändern. Auch das Neuanlegen von einzelnen Zweigen (= Hinzufügen von Elementen) lässt sich grafisch erledigen. Jedoch ist es ratsam, sich zumindest das Grundgerüst der DTD mit einem Texteditor zu überlegen.</desc>
+         <title id="59636a3b-7844-4874-b9a5-ba96b139d3cdd7e38">Abbildung einer DTD Struktur im Near&amp;Far Designer</title>
+         <desc id="5608dc08-c0b3-4388-ab3d-8afa83858e16d7e40">Eine DTD wird im Near&amp;Far Designer als aufklappbare Baumstruktur angezeigt. So könnnen auch sehr komplexe DTDs mit 1000 Elementen effizient untersucht werden. Über einen Eingabedialog lassen sich Attribute hinzufügen oder ändern. Auch das Neuanlegen von einzelnen Zweigen (= Hinzufügen von Elementen) lässt sich grafisch erledigen. Jedoch ist es ratsam, sich zumindest das Grundgerüst der DTD mit einem Texteditor zu überlegen.</desc>
          <image href="images/near-und-far_16.png"/>
       </fig>
       <p id="6f9e4562-1131-4a3d-890f-d9d7826b7130d7e40">Ähnlich wie in Programmierumgebungen zählt aber schlussendlich, wie schnell man etwas in umfangreichen Quelltexten
@@ -50,7 +50,7 @@ relativ klar herausgestellt, was die Regelfindung erleichtert.</p>
 [[link]]RelaxNG Tutorial[[fn:https://relaxng.org/tutorial-20011203.html#IDAHDYR*RelaxNG Tutorial]] 
 gestolen:</p>
       <p id="55cf9b9b-1394-4725-b1b6-5cfac828bc00d7e49">Consider a simple XML representation of an email address book:</p>
-      <pre id="325d7a53-9529-4593-a81c-5f935cf59531d7e54" xml:space="preserve">&lt;addressBook&gt;
+      <pre id="83cfcd8b-4e8f-45a3-9d6c-f1ad0a658708d7e54" xml:space="preserve">&lt;addressBook&gt;
     &lt;card&gt;
         &lt;name&gt;John Smith&lt;/name&gt;
         &lt;email&gt;js@example.com&lt;/email&gt;
@@ -61,14 +61,14 @@ gestolen:</p>
     &lt;/card&gt;
 &lt;/addressBook&gt;</pre>
       <p id="300bade8-a203-4e2c-a111-9dee2375e2bbd7e53">The DTD would be as follows:</p>
-      <pre id="b1a08938-229a-4907-80c5-3ae1e0f6b456d7e58" xml:space="preserve">&lt;!DOCTYPE addressBook [
+      <pre id="769c2879-fe2c-452b-bf39-68cfe45b629cd7e58" xml:space="preserve">&lt;!DOCTYPE addressBook [
 &lt;!ELEMENT addressBook (card*)&gt;
 &lt;!ELEMENT card (name, email)&gt;
 &lt;!ELEMENT name (#PCDATA)&gt;
 &lt;!ELEMENT email (#PCDATA)&gt;
 ]&gt;</pre>
       <p id="19f8297d-c704-4141-a0dc-9140631aee9bd7e57">A RELAX NG pattern for this could be written as follows:</p>
-      <pre id="b0cf819b-d1a2-4f1c-a146-48d48bd6548dd7e62" xml:space="preserve">&lt;element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0"&gt;
+      <pre id="66cd9b25-a426-442e-9666-b079c0adbbb1d7e62" xml:space="preserve">&lt;element name="addressBook" xmlns="http://relaxng.org/ns/structure/1.0"&gt;
     &lt;zeroOrMore&gt;
         &lt;element name="card"&gt;
             &lt;element name="name"&gt;
@@ -81,24 +81,24 @@ gestolen:</p>
     &lt;/zeroOrMore&gt;
 &lt;/element&gt;</pre>
       <p id="f1d7e973-e67e-43b4-be51-4442c4a646bdd7e61">In der Kurzform würde dieses Beispiel so aussehen:</p>
-      <pre id="cd499ed1-6041-4c52-8a34-91685344b6dcd7e66" xml:space="preserve">element addressBook {
+      <pre id="bed79a77-cb3a-40ac-a903-8e6ae65f9262d7e66" xml:space="preserve">element addressBook {
     element card {
         element name { text },
         element email { text }
     }*
 }</pre>
       <p id="214be47f-b3ae-42d5-af56-8a126f509de0d7e66">Es gibt auch ein [[link]]Tutorial zur Kurzform[[fn:https://relaxng.org/compact-tutorial-20030326.html*Tutorial zur RelaxNG Kurzform]].</p>
-      <note id="12c57603-5ccc-483f-a6e7-0977c47d35f3d7e71">
+      <note id="7a6351de-98eb-4a93-831f-3af929525f66d7e71">
          <p id="07907c66-28cb-4ef7-ab0c-5530bf7d7176d7e72">Schemadateien, die in der Kurzform verfasst sind, tragen gewöhnlicherweise die Dateiendung [[code:.rnc]]. Dateien in der Langform haben die Endung [[code:.rng]].</p>
       </note>
       <p id="59d688e7-d73d-470e-86b9-fa955a9298afd7e74">Mit RelaxNG kann man Schema-Grammatiken fast so elegant wie mit der [[link]]Backus Naur Normalform - BNF[[fn:https://de.wikipedia.org/wiki/Backus-Naur-Form*Wikipediaseite zur BNF]]modellieren - wie man das im Informatik Unterricht gelernt hat.</p>
-      <section id="576dfcdd-9bac-4113-995c-7ca63d8986b3d7e76">
+      <section id="308cde19-8a18-4213-81d4-019c7499b887d7e76">
          <title id="051f4919-4d45-4676-83cc-cdd093b5dbe8d7e75">Exklusion mit RNC</title>
          <p id="53e811b0-c650-4df8-8fb7-b1e8f679c9a1d7e77">Das schöne an RelaxNG ist die Tatsache, dass man damit Sachen machen kann, die mit
 anderen Schemasprachen nicht so leicht gehen. Z.b. kann man ein unvollständiges
 Schema erzeugen, das nur ganz bestimmte Teile der XML Instanz prüft.</p>
          <p id="9771995f-802e-4481-b3db-460e332e5a1ed7e79">Betrachten wir dazu das folgendes Beispiel:[[xe1:Konzepte;xe2:Exklusion mit RelaxNG]]</p>
-         <pre id="e96bc450-9580-4170-b73c-ec79f49557c9d7e83" xml:space="preserve">unbehandeltesElement =
+         <pre id="542386ce-8a38-4f13-831a-e6444695730ad7e83" xml:space="preserve">unbehandeltesElement =
     element * - (aussteller | 
                  empfaenger |
                  datum) {
@@ -144,10 +144,10 @@ das sozusagen einen Platzhalter darstellt. Dieses schliesst explizit die
 zwingenden Felder [[code:datum]], [[code:empfaenger]] und [[code:aussteller]]
 aus, um deren Validierung durch das Schema nicht zu verfälschen.</p>
       </section>
-      <section id="b4e20712-3ea1-4e46-b264-0c684115370fd7e89">
+      <section id="2dc4bc90-7f8d-4ca1-aa8b-906b2578dbaed7e89">
          <title id="f3fe767e-c36f-4e53-a861-d55137994398d7e88">Relaxtron</title>
          <p id="bee23839-c51b-42a4-a4ec-481d4157a57cd7e90">Besonders fortschrittlich klingt die Möglichkeit in ein RelaxNG Schema weitere Schematron-Regeln[[xe1:Schematron]] einzubinden - [[link]]Relaxtron[[fn:https://www.xml.com/pub/a/2004/02/11/relaxtron.html*Artikel zum Einbetten von Schematron in RelaxNG auf xml.com]]. Damit kann man bspw. sicherstellen, dass bestimmte Constraints bzgl. der Elementstruktur eingehalten werden. Mit einer Schemasprache allein ginge das nicht. Betrachten wir das folgende Stück RelaxNG in der Kompaktform:</p>
-         <pre id="9ea12ef9-b95d-4f29-8e93-59b2ce029e6cd7e94" xml:space="preserve">namespace sch = "http://purl.oclc.org/dsdl/schematron"
+         <pre id="f751981f-62cd-4c35-a97f-d4a499fd13c6d7e94" xml:space="preserve">namespace sch = "http://purl.oclc.org/dsdl/schematron"
 
 start = ul 
 ul =
@@ -182,17 +182,17 @@ any_attribute = attribute * { text }</pre>
          <p id="e9ca292f-e4a3-4a1f-9ccc-1fe6c53b8017d7e94">Hier wird sichergestellt, dass eine ungeordnete Liste [[code:list]] nicht tiefer verschachtelt wird - aber nur innerhalb einer [[code:procedure]].</p>
          <p id="a5fa0e26-c9a0-43d4-99b8-cbbcf08dc812d7e96">Der oXygen Editor kann die RelaxNG Kopaktform in die XML Form überführen und schön visualisieren. Das sieht dann so aus:</p>
          <fig id="edd5ed8e-b6cd-436c-b1bf-f50402ac0af6d7e100">
-            <title id="d54304e8-fe42-4f58-a5a7-24f103f59359d7e101">Anzeige eines RelaxNG Schemas im oXygen Editor</title>
-            <desc id="1e2eef65-4dd2-49e4-8007-d41090517a77d7e103">Im oXygen Editor gibt es eine Vollmodell-Ansicht und eine Logische Modellansicht für RelaxNG Schemas, die auch eingebettete Schematron-Knoten anzeigen. Mit Klick auf ein Symbol gelangt man zum betreffenden Quelltextstück.</desc>
+            <title id="df12ceda-201a-4d20-b14f-d031592887b2d7e101">Anzeige eines RelaxNG Schemas im oXygen Editor</title>
+            <desc id="8b80b71f-1491-4b55-a3e6-f27b8492ee95d7e103">Im oXygen Editor gibt es eine Vollmodell-Ansicht und eine Logische Modellansicht für RelaxNG Schemas, die auch eingebettete Schematron-Knoten anzeigen. Mit Klick auf ein Symbol gelangt man zum betreffenden Quelltextstück.</desc>
             <image href="images/oxygen-rng-display_20.png"/>
          </fig>
       </section>
-      <section id="b5a8c6e6-578e-4aab-a248-1d0c6a7d85add7e106">
+      <section id="104eada7-e4ce-4a78-ada8-ea17aa15b5c6d7e106">
          <title id="e77393e9-e29c-4618-82fb-513e20026d4bd7e69">Angabe des Schemas in der XML Instanz</title>
          <p id="17d20720-8cc6-45be-afcd-6770d3dd1787d7e71">Wie auch schon im Kapitel <xref href="792c9845-7c63-4a18-8aee-1878763200b5"
                   id="3a436f39-04be-4255-bdcb-01e33c73f959"
                   type="topic">Anwendungsgebiete </xref> beschrieben, werden alle zusätzlichen - für den XML Prozessor wichtigen - Instruktionen, 
-die nicht Teil der Daten sind, über eine Processing Instruction[[xe1:XML Konstrukte;xe2:Processing Instruction]] in das XML eingebunden.</p>
+die nicht Teil der Daten sind, über eine <i id="c5b8b499-98cc-4dfe-93fe-112ec9158749d7e114">Processing Instruction</i>[[xe1:XML Konstrukte;xe2:Processing Instruction]] in das XML eingebunden.</p>
          <p id="2661b349-8143-40f2-92c6-2a0239da3ec3d7e73">Es können auch mehrere Schemata mittels einer Processing Instruction eingebunden werden, so dass eine Validierung über mehrere Engines möglich ist. 
 </p>
          <p id="6b285656-5590-42d0-98ee-1b059f3c477dd7e81">Übernimmt man bspw. einen Legacy Datenbestand, für den nur eine DTD vorhanden ist, so kann im Nachhinhein auch noch
@@ -200,66 +200,66 @@ ein XML Schema hinzugefügt werden, welches komplexere semantische Beziehungen �
          <p id="2bbf59e0-1a80-4f77-9837-93bf12ee2a9ed7e75">Für eine weitere Überprüfung steht schliesslich Schematron, vgl. Kapitel <xref href="6fd7b270-9d1f-4f8e-996f-13b5862956a9"
                   id="1838ec0c-23bf-499e-8aa2-3fcb1896392a"
                   type="topic">Validierung mit Schematron </xref> zur Verfügung. Ein Beispiel, wie man mehrere Schemas angibt, findet sich auf der [[link]]Seite des W3 Konsortiums zum Thema[[fn:https://www.w3.org/TR/xml-model/*Associating Schemas with XML documents 1.0 (Third Edition)]]</p>
-         <pre id="4cb6880a-9841-4f11-b0e5-8dde37e745d4d7e123" xml:space="preserve">&lt;?xml version="1.0"?&gt;
+         <pre id="8834c27b-6b11-43e6-ada1-f9dca5c91dbdd7e126" xml:space="preserve">&lt;?xml version="1.0"?&gt;
 &lt;?xml-model href="http://www.docbook.org/xml/5.0/rng/docbook.rng"?&gt;
 &lt;?xml-model href="http://www.docbook.org/xml/5.0/xsd/docbook.xsd"?&gt;
 &lt;book xmlns="http://docbook.org/ns/docbook"&gt;
   [...]
 &lt;/book&gt;</pre>
-         <p id="4a5ff65f-07eb-4d10-9565-a651b834be62d7e82">Zum Einbinden einer RelaxNG Kompaktform genügt es bspw. diese PI (Processing Instruction) anzugeben</p>
-         <pre id="02fa3445-bb1d-44cb-8d3c-6f02885edacfd7e127" xml:space="preserve">&lt;?xml-model href="whatever.rnc" type="application/relax-ng-compact-syntax"?&gt;</pre>
-         <p id="e712d9cd-18b3-4bae-b103-ab8f631b35b9d7e86">oXygen und auch alle anderen Editoren unterstützen die Angabe des Schemas mittels PI, so dass man auch im Editor ohne explizite Anfrage
+         <p id="4a5ff65f-07eb-4d10-9565-a651b834be62d7e82">Zum Einbinden einer RelaxNG Kompaktform genügt es bspw. diese PI (Processing Instruction[[xe1:XML Konstrukte;xe2:Processing Instruction]]) anzugeben</p>
+         <pre id="d998002e-0774-49a9-94a0-22b17f114219d7e130" xml:space="preserve">&lt;?xml-model href="whatever.rnc" type="application/relax-ng-compact-syntax"?&gt;</pre>
+         <p id="e712d9cd-18b3-4bae-b103-ab8f631b35b9d7e86">oXygen und auch alle anderen Editoren unterstützen die Angabe des Schemas mittels <i id="4a4f58af-9c92-4654-a753-dfc7e9d6467fd7e134">PI</i>, so dass man auch im Editor ohne explizite Anfrage
 validieren kann.</p>
       </section>
-      <section id="72a2a003-8fae-4d40-86b9-6b7e3ddb6ef4d7e131">
+      <section id="9e42603d-6780-4a1f-93e7-2230c1dddaa9d7e137">
          <title id="75768059-e701-43a1-8690-25dd614d9294d7e89">oXygen Validierung</title>
          <p id="35f4cc9f-fcea-4eb0-b0ab-36ea5e7c4d93d7e91">Die Validierungswerkzeuge finden sich im oXygen Editor unter  [[code:Document]] &gt; [[code:Validate]] &gt; [[code:Validate With]]</p>
          <fig id="2773dabf-d1e0-42ce-87fe-9de28191d336d7e93">
-            <title id="c2eb4a16-9b5d-4169-9474-29ca3e8048f8d7e137">Validierungsdialog in oXygen</title>
-            <desc id="3a3b2033-2c8c-4d49-b383-e4dda9c46423d7e139">Über das [[code:Document]] Tab findet man in oXygen die Validierungsoptionen.</desc>
+            <title id="ffbf01d6-4a6b-4357-93b4-4872e4b45195d7e143">Validierungsdialog in oXygen</title>
+            <desc id="639fbca7-3c14-48a4-9fab-365e4ff17991d7e145">Über das [[code:Document]] Tab findet man in oXygen die Validierungsoptionen.</desc>
             <image href="images/validate-dialog_17.png"/>
          </fig>
          <p id="c7c17029-a53e-4151-86f4-b6f84f04fe17d7e99">Es lassen sich mit oXygen auch Schemas konvertieren, [[code:Document]] &gt; [[code:Schema]] &gt; [[code:Generate/Convert Schema]]</p>
          <fig id="c0d1158e-db16-4dd6-a034-a4d0b20f34acd7e101">
-            <title id="afc23a8e-b255-4e25-b6bb-6b41cab91ed1d7e145">Schema-Konvertierung mit oXygen</title>
-            <desc id="5ed58762-cfc8-4808-aba3-e0fa490e3e15d7e147">Tools zur Konvertierung sind ebenfalls im [[code:Document]] Tab untergebracht</desc>
+            <title id="c55c4687-aee4-4812-a326-1aa1c1b62068d7e151">Schema-Konvertierung mit oXygen</title>
+            <desc id="13d51b0d-51f8-4720-af43-b43485729295d7e153">Tools zur Konvertierung sind ebenfalls im [[code:Document]] Tab untergebracht</desc>
             <image href="images/covert-schema_18.png"/>
          </fig>
       </section>
-      <section id="b376ccc0-fcda-4dbe-a318-3799b2027edfd7e150">
+      <section id="99e5031b-e16d-49dc-879f-570257a9732fd7e156">
          <title id="8df4c58a-1bd5-42f6-8f9c-06cb98ede2d1d7e108">Jing und Trang</title>
          <p id="1ece1cf8-fdec-423f-be6a-ad9f48a0d308d7e110">Für RelaxNG gibt es den [[link]]Jing Validator[[fn:https://relaxng.org/jclark/jing.html*Homepage des Jing RelaxNG Schema Validators]]. Bemerkenswert ist hier, dass das Tool von 
 [[link]]James Clark[[fn:http://www.jclark.com/bio.htm*Homepage con James Clark]] entwickelt wird (ein Urgestein in der XML Datenwelt).</p>
          <hazardstatement id="4a30b1ab-e0f8-4988-aea2-01e1fb5076c1d7e112" type="caution" status="changed">
-            <messagepanel id="d369fa93-0b68-4ee9-908d-fe495dff6706d7e156">
+            <messagepanel id="ea195468-1a39-4502-83dc-8fc08bc20dbbd7e162">
                <typeofhazard id="14672d21-8d90-4bfb-85b0-e23ab4890ea7d7e114">Passt zwar nicht ganz zum Thema: Ein Tool von James Clark[[xe1:XML Gurus;xe2:James Clark]], mit dem ich schon öfters gearbeitet habe, ist [[link]]SP[[fn:http://www.jclark.com/sp/*Homepage zum SP SGML Parser]] ein SGML System[[xe1:Tools;xe2:SP]],
 mit dem man SGML nach XML konvertieren kann. Diese Funktionalität ist wohl sonst eher selten zu finden ...</typeofhazard>
                <howtoavoid id="a0db184c-df78-4de3-bf7f-5bb791d3571ad7e116"/>
             </messagepanel>
          </hazardstatement>
          <p id="f07a8cc0-586e-4b6b-b695-ae91d43611b8d7e117">Um eine XML Instanz mit Jing zu validieren genügt folgender Kommandozeilenaufruf:</p>
-         <pre id="82e4c986-8cd7-40c1-8d69-f41a38ca7ca1d7e162" xml:space="preserve">jing resources/schemas/person.rng resources/examples/person.xml</pre>
-         <hazardstatement id="f38263dc-7763-4a20-a820-03a51d021290d7e121" type="danger" status="changed">
-            <messagepanel id="bae37da8-29ef-45b8-8014-5b84c112d917d7e165">
+         <pre id="a5b3b3b6-b489-4c74-b852-f9b5b78ba9a9d7e168" xml:space="preserve">jing resources/schemas/person.rng resources/examples/person.xml</pre>
+         <hazardstatement id="f38263dc-7763-4a20-a820-03a51d021290d7e121" type="warning" status="changed">
+            <messagepanel id="ae8e7122-24fc-42eb-833a-b0104a72cc26d7e171">
                <typeofhazard id="7e6f0c1e-d4d8-479b-ba91-cbc125564795d7e123">Jing unterstützt nicht die RelaxNG Kompaktform!</typeofhazard>
                <howtoavoid id="e7821935-33c5-4f0f-a5fd-519e90872b61d7e125">Die Kompaktform muss zuerst in die Normalform mit [[link]]Trang[[fn:https://relaxng.org/jclark/trang.html*Multi-Schema Konverter Trang]] konvertiert werden.</howtoavoid>
             </messagepanel>
          </hazardstatement>
          <p id="a4efd44d-0987-44eb-8746-a0a0c5a95f32d7e127">Um die Kompaktform von RelaxNG in die Normalform zu konvertieren setzt man diesen Befehl auf der Kommandozeile ab:</p>
-         <pre id="519ff161-e8e8-42e4-affe-c2fc616a5cffd7e172" xml:space="preserve">trang -I rnc -O rng resources/schemas/person.rnc resources/schemas/person.rng</pre>
+         <pre id="2c607d53-bb3b-482e-a46e-95bd04373c57d7e178" xml:space="preserve">trang -I rnc -O rng resources/schemas/person.rnc resources/schemas/person.rng</pre>
       </section>
-      <section id="12119fc1-bb9d-4b96-90d0-b5c3bec1bb0dd7e174">
+      <section id="9e91239e-c1bc-449e-b2df-0c2288b9b7e4d7e180">
          <title id="8bf6629b-ff3c-4791-90f1-5e215a678b84d7e175">Schema Single-Sourcing</title>
-         <p id="7b9ec486-abfc-4c1a-925e-ba840a4ba95fd7e177">[[xe1:Single-Sourcing;xe2:Schemata]]Das <xref href="151a9719-a32a-4fca-a55c-769b47a73b34"
+         <p id="7b9ec486-abfc-4c1a-925e-ba840a4ba95fd7e177">[[xe1:Single-Sourcing;xe2:Schemata]][[xe1:Buzzwords;xe2:Single Source Publishing]]Das <xref href="151a9719-a32a-4fca-a55c-769b47a73b34"
                   id="29b03058-9b4d-447e-9205-932d8c7dfd39"
                   type="none">Single-Sourcing Konzept</xref> macht auch vor Schemata nicht halt. Aus einer Quelle in der RelaxNG Kompaktform können alternative Ansichten in anderen Schema-Sprachen erzeugt werden, wie bspw. [[link]]XML Schema (XSD)[[fn:https://de.wikipedia.org/wiki/XML_Schema*Wikipediaseite zum XML Schema]].</p>
          <fig id="28a27812-dac9-46cb-9958-66e7f474b289d7e182">
-            <title id="a7c78814-db81-405a-9d48-54c64bd6f269d7e183">BPMN Diagramm zum Single-Sourcing Konzept bei RelaxNG Schemas</title>
-            <desc id="da87dce3-fd4a-4bc5-a398-a25bf931a9a6d7e185">Mit einem BPMN Diagramm kann man das Single-Sourcing Konzept bei der Schema-Erzeugung recht gut veranschaulichen. Aus einer [[code:RNC]] Quelle wird die RelaxNG XML Form, die Schematron-Regeln, die XSD und das XSLT der Schematron-Regeln generiert. Diese Artefakte dienen zur Validierung im Editor und zur Validierung in einer Transformer-Pipe.</desc>
+            <title id="c1293355-2c80-4226-b1cc-db2f257c8665d7e189">BPMN Diagramm zum Single-Sourcing Konzept bei RelaxNG Schemas</title>
+            <desc id="7c340285-351a-449d-8bd5-f288629e0b0bd7e191">Mit einem BPMN Diagramm kann man das Single-Sourcing Konzept bei der Schema-Erzeugung recht gut veranschaulichen. Aus einer [[code:RNC]] Quelle wird die RelaxNG XML Form, die Schematron-Regeln, die XSD und das XSLT der Schematron-Regeln generiert. Diese Artefakte dienen zur Validierung im Editor und zur Validierung in einer Transformer-Pipe.</desc>
             <image href="images/create-schemas_21.svg"/>
          </fig>
          <p id="b8a9b581-4342-41be-8128-793eb417c01fd7e188">Ein Shell-Skript, das den Prozess aufruft, könnte z.B. so aussehen:</p>
-         <pre id="4fdc6e5d-a7df-4948-984e-bf77a9375988d7e190" xml:space="preserve">#!/bin/sh
+         <pre id="3a35b615-8962-4b3a-8056-0b7abee69953d7e196" xml:space="preserve">#!/bin/sh
 
 echo "converting from RelaxNG compact form to RelaxNG XML form..."
 trang -I rnc -O rng test.rnc test.rng 

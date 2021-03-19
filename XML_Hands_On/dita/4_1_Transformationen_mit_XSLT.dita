@@ -10,7 +10,7 @@
             </p>
          </li>
          <li id="b6a37743-9eb2-4da9-bd1e-82e2ab9631ffd6e14">
-            <p id="df420ef2-f293-40cc-9c0e-ee2926bcc5a1d6e15">Es gibt auch auch Spielereien, wie eine Nachbildung der XSLT Syntax in Erlang: [[link]]xmerl_xs[[fn:http://erlang.org/doc/man/xmerl_xs.html*Dokuseiten zum Modul xmel_xs, mit dem man in Erlang wie in XSLT "programmieren" kann]]</p>
+            <p id="df420ef2-f293-40cc-9c0e-ee2926bcc5a1d6e15">Es gibt auch auch Spielereien, wie eine Nachbildung der XSLT Syntax in Erlang: [[link]]xmerl_xs [[fn:http://erlang.org/doc/man/xmerl_xs.html*Dokuseiten zum Modul xmel_xs, mit dem man in Erlang wie in XSLT "programmieren" kann]]</p>
          </li>
       </ul>
       <p id="cf2e40a3-e62f-4a90-980a-e27b751bb842d6e17">In diese Kapitel werden einige ausgewählte Themen zur XML Prozessierung mit XSLT dargestellt. Dabei geht es weder um Vollständigkeit, noch um die beste/eleganteste Lösung, sondern eher um die Vorstellung eines Anwendungsszenarios mit einem potentiellen Lösungsansatz - so wie ich die Sache halt angehen würde ...</p>

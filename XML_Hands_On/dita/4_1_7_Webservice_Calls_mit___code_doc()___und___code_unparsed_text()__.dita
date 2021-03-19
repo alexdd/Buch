@@ -5,7 +5,7 @@
       <p id="cfd5bdf8-a043-405f-a3f7-1feb395fbd3d">Eine verbreitete Paxis ist es, mit der Funktion [[code:document()]] oder kurz [[code:doc()]] 
 entfernte Ressourcen in die Transformation einzubinden. 
 Bei einer Schematron-Validierung, würde bspw. eine Regel, wie:</p>
-      <pre id="26eec7e9-a2ab-461f-bf46-a4b8cb9372c6d7e6" xml:space="preserve">&lt;sch:not-assert id="personal-check"
+      <pre id="4d65b316-93ad-45c7-8db2-b0d7fad32d85d7e6" xml:space="preserve">&lt;sch:not-assert id="personal-check"
     role="error"
     test="doc(concat('https://tekturcms.de/personal.xqy?personal-id=',personal-id))/kuendigung"&gt;
         Angestellter mit ID "&lt;sch:value-of select="personal-id"/&gt;" hat gekündigt!
@@ -17,7 +17,7 @@ Logfile Eintrag äussern sollte.</p>
       <p id="e3b1a6ca-7163-4c64-a69d-a1f4277847d5d6e10">Was vermutlich viele noch nicht kennen - ich nehme jetzt einfach mal an, dass mein 
 bisheriger Kenntnisstand dem der Mehrheit der XML-Entwickler entspricht - ist der Umstand,
 dass auch die Funktion [[code:unparsed-text()]] eine URL als Parameter nimmt:</p>
-      <pre id="eb59bbbd-edeb-48fe-92d1-eb5ad068ab65d7e12" xml:space="preserve">&lt;xsl:template match="angestellter"
+      <pre id="77900916-fc28-48f6-9d50-41ec73c51b8cd7e12" xml:space="preserve">&lt;xsl:template match="angestellter"
     &lt;xsl:copy&gt;
         &lt;xsl:apply-templates select="node()|@*"/&gt;
         &lt;hat-gekuendigt&gt;
@@ -33,7 +33,7 @@ prozessiert wird, erwartet [[code:unparsed-text()]] z.B. einen <b id="cb9e283d-0
 der Funktion [[code:json-to-xml()]] nach XML konvertiert werden kann.</p>
       <p id="3b7e4ebd-cc5a-448c-8ae5-85e90302d51dd6e16">Beispielsweise könnte die Gegenseite zum [[code:angestellter]] Template mittels XQuery
 folgendermassen realisiert sein:</p>
-      <pre id="197e967e-837d-4fa0-b669-66b567ae3852d7e21" xml:space="preserve">xquery version "1.0-ml";
+      <pre id="d3859804-916b-4c23-9bd4-0bd3af19e491d7e21" xml:space="preserve">xquery version "1.0-ml";
 
 declare variable $personal-id := xdmp:get-request-field('personal-id');
 
@@ -47,21 +47,21 @@ return
                id="86e61dc1-c690-4420-b3ce-83c39c6bf091"
                type="none">Mehr zu XQuery und den hier verwendeten Konstrukten</xref>, wie [[code:render-response()]])</p>
       <p id="dc9f1757-17d5-4982-9f9b-b624dcc9f86cd6e22">Das zurückgeklieferte JSON Dokument sieht dann so aus:</p>
-      <pre id="b02b4dd1-44ef-4629-a95e-0f11927eae6ad7e30" xml:space="preserve">{"gekuendig":"ja","personal-id":"q5687500"}</pre>
+      <pre id="3be10de4-22eb-46b6-af4b-94d68bc2509bd7e30" xml:space="preserve">{"gekuendig":"ja","personal-id":"q5687500"}</pre>
       <p id="c16d857e-bf25-4013-a637-fb1f1f42b212d6e27">Konvertiert nach XML erhält man eine Map Struktur:</p>
-      <pre id="0c5509c6-77df-42aa-8419-f67c36cfe2d1d7e35" xml:space="preserve">&lt;map xmlns="http://www.w3.org/2005/xpath-functions"&gt;
+      <pre id="8ffa4274-7359-4326-822d-c2323f377965d7e35" xml:space="preserve">&lt;map xmlns="http://www.w3.org/2005/xpath-functions"&gt;
     &lt;string key="gekuedigt"&gt;ja&lt;/string&gt;
     &lt;string key="personal-id"&gt;q5687500&lt;/string&gt;
 &lt;/map&gt;</pre>
       <p id="5aa1c1a3-6eaa-470b-bbb0-9cecf34158c3d6e31">was den Selektorausdruck im obigen XPATH erklärt:</p>
-      <pre id="e571154e-eb68-4d1b-be70-7379b83508a6d7e39" xml:space="preserve">json-to-xml(
+      <pre id="31c0196e-56b2-4254-a0d9-f70d5d1b457dd7e39" xml:space="preserve">json-to-xml(
 unparsed-text(
 concat('https://tekturcms.de/personal.xqy?personal-id=',
 personal-id))))/descendant::*[@key='gekuendigt']/text()</pre>
       <p id="423a28a9-42c2-4e62-b73c-c2a48f68c079d6e35">Resultat der Konvertierung wäre - wie erwartet - ein um 
 das [[code:gekuendigt]] Flag erweitertes [[code:&lt;angestellter&gt;]]
 Element:</p>
-      <pre id="3c9f2932-919e-4a98-b5d0-29b210008931d7e43" xml:space="preserve">&lt;angestellter&gt;
+      <pre id="f8a7a748-8968-4a5d-aef1-70fb81fb31b3d7e43" xml:space="preserve">&lt;angestellter&gt;
     &lt;perosnal-id&gt;q5687500&lt;/perosnal-id&gt;
     &lt;name&gt;Alex&lt;/name&gt;
     [...]
@@ -70,7 +70,7 @@ Element:</p>
       <p id="d6ebc0e3-4946-40df-99b9-89d396165f96d6e39">Sicherlich wird der XML Entwickler eine <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c"
                id="997e18de-4390-4b97-9f13-5198617f39e4"
                type="none">XML Datenbank</xref>, wie MarkLogic, vorziehen
-und sich gleich XML Fragmente ausliefern laasen. [[$productname]] ist aber bspw. mit
+und sich gleich XML Fragmente ausliefern lassen. [[$productname]] ist aber bspw. mit
 [[link]]MongoDB[[fn:https://www.mongodb.com/*Homepage der NoSQL Datenbank MongoDB]]
 realisiert, die auf JSON arbeitet... Nicht zuletzt deshalb finde ich JSON Verarbeitung
 mit XSLT recht spannend.</p>

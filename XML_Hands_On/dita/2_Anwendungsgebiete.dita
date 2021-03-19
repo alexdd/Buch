@@ -11,8 +11,8 @@
          <image href="images/Killdeer_4.svg"/>
       </fig>
       <p id="941ec370-0569-49a3-8327-bcf7bb41b444d6e8">Vom Aussehen her sind XML Daten im Prinzip Textdaten. Sie können sehr einfach mit einem Texteditor erstellt werden. Im Gegensatz zu Multimedia-Daten sind keine komplexen Tools, wie z.B. ein Grafikeditor, erforderlich. Auch relationale Daten können in Form von Tabellen, als Excel Tabelle, oder bspw. als kommaseparierte Textdatei, aus einem System ausgespult und weiterverarbeitet werden. XML erlaubt es jedoch die Daten semantisch auszuzeichnen. Das geschieht durch das Klammern semantisch zusammengehöriger Elemente mittels Klammer-Tags und Kategorisierung dieser Informationseinheiten mittels weiterer Properties (Attribute) an diesen Tags. Durch das Verschachteln dieser geklammerten Komponenten entsteht ein Baum, der die Hierarchische Ordnung der Daten widerspiegelt. Diese Baumstrukturen sind maschinell lesbar und die Daten können, bevor sie von einem Versender zu einem Empfänger gehen, mittels eines automatischen Prozesses validiert werden. Dabei können sowohl der Inhalt als auch die Syntax anhand von definierten Regeln (Schemas) genau überprüft werden.</p>
-      <p id="eef6c182-a348-4979-bebc-64e3b7bc1e2ed6e12">Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubte.</p>
-      <p id="30432260-5058-47a4-8959-a37812962075d6e18">Der Übergang von SGML zu XML brachte eine konzeptionelle Vereinfachung, noch simpler ist JSON als Standard, der gerne im Webbereich eingesetzt wird. JSON ist jedoch nicht so gut maschinenlesbar und es fehlen noch viele Werkzeuge, wie ausgefeiltere Code Editoren oder Validierungstools.</p>
+      <p id="eef6c182-a348-4979-bebc-64e3b7bc1e2ed6e12">Der XML Standard ist mittlerweile 20 Jahre alt. Zuvor gab es SGML, das zum Beispiel auch nicht abgeschlossene Tags erlaubte. SGML ist die konzeptionelle Basis von HTML.</p>
+      <p id="30432260-5058-47a4-8959-a37812962075d6e18">Der Übergang von SGML zu XML brachte eine längst fällige konzeptionelle Vereinfachung. JSON als defakto Standard bei Webapplikationen vereinfacht den Einsatz von baumstrukturierten Daten noch weiter. JSON ist jedoch nicht so gut maschinenlesbar, und es fehlen noch viele Werkzeuge, wie ausgefeiltere Code Editoren oder Validierungstools.</p>
       <p id="148bc5b8-55c6-497c-90c6-27d2c65182b1d6e29">Folgend eine kurze Erläuterung zu den eingangs erwähnten Schlüsselwörtern:</p>
       <ul id="54ddfd61-c6db-4646-90a2-aa947774627cd6e31">
          <li id="6df12255-09a8-4c6a-9dc2-f322a346cdbad6e32">
@@ -21,7 +21,7 @@
          </li>
          <li id="4bbacef6-93fe-439a-b945-2138515497eed6e37">
             <p id="8f207dc3-6fd8-4c19-be61-2a88ac596f11d6e38">
-               <b id="f3d58ba6-2bae-4ab7-a1d6-96991e450b86d6e39">XSLT</b> ist eine Programmiersprache. Mit XSLT kann man eine XML Instanz in eine andere transformieren, d.h. Inhalt und Struktur anpassen.</p>
+               <b id="f3d58ba6-2bae-4ab7-a1d6-96991e450b86d6e39">XSLT</b> ist eine Programmiersprache. Mit XSLT kann man XML Daten in ein anderes Format transformieren, d.h. Inhalt und Struktur anpassen.</p>
          </li>
          <li id="4f1f7156-d04f-47b9-af7d-1dabd9236d37d6e42">
             <p id="b2b5e6c1-3acf-46d5-a939-03a5b39d6f01d6e43">

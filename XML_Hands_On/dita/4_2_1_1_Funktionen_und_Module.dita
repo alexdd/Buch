@@ -2,10 +2,10 @@
 <topic id="51a4584a-9a43-4f8f-ad89-d1c2d88ab6e6">
    <title id="9c13d213-40d3-4e74-b343-23cc42779c6d">Funktionen und Module  </title>
    <body id="55287d31-0b28-41fc-a844-f9f51bdf389d">
-      <section id="715c7f04-701b-4b97-b356-9b3833476fb4d7e4">
+      <section id="efff1021-3fd0-40d9-b78d-d553f75645b8d7e4">
          <title id="2b09a4f1-af09-482e-b220-bbaa5e4f0897d6e5">Funktionen</title>
          <p id="5de561e1-87c3-4f46-b36e-c5db56d9ae27d6e7">Um bestimmte Abschnitte des XQuery Programm wiederverwendbar zu machen, stehen Funktionsdeklarationen[[xe1:Programmierkonstrukte;xe2:Funktionen]] zur Verfügung. Eine einfache Funktion wäre z.B. diese hier:</p>
-         <pre id="57dad1e5-64f4-4d7d-8433-5cceea557027d7e9" xml:space="preserve">declare function local:wrap-header($json) {
+         <pre id="08176f61-b5a4-40fb-b709-5c5992429ad2d7e9" xml:space="preserve">declare function local:wrap-header($json) {
   xdmp:add-response-header("Pragma", "no-cache"),
   xdmp:add-response-header("Cache-Control", "no-cache"),
   xdmp:add-response-header("Expires", "0"),
@@ -14,10 +14,10 @@
 };</pre>
          <p id="285caf33-98eb-4945-acad-961bc509ce0cd6e11">Sie wickelt um einen JSON String eine passende Header Information.</p>
          <p id="df24cc6b-17ff-486d-827c-9cec00d4a33bd6e13">Damit die Funktion eingebunden werden kann, muss ein passender Namespace[[xe1:XML Konstrukte;xe2:Namespaces]] deklariert werden:</p>
-         <pre id="301b1ab4-93e4-4d6c-aabc-d1454660a98cd7e15" xml:space="preserve">declare namespace local = 'local:';</pre> |  |                                                    Rejected by , .       <p id="bc7c92a6-2eae-47e2-973b-904415f3fc0ed6e17">Nicht i do my change her nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
+         <pre id="7cf7642e-a328-47c9-a8e3-4a38fdeda869d7e15" xml:space="preserve">declare namespace local = 'local:';</pre> |  |                                                    Rejected by , .       <p id="bc7c92a6-2eae-47e2-973b-904415f3fc0ed6e17">Nicht nur bzgl. Wiederverwendbarkeit sind Funktionen praktisch, sondern auch
 um ganz elementare Konstrukte, wie [[code:while...do]][[xe1:Programmierkonstrukte;xe2:Schleifen - while..do]] Schleifen, zu realisieren.</p>
-         <p id="6ec7b350-f2e7-4922-9e96-9c12fd07957ad6e19">Dazu nutzt man, wie in der funktionalen Programmierung üblich, die Rekursion:</p>
-         <pre id="b2499eb2-4959-4708-a439-58dcd4236606d7e22" xml:space="preserve">declare function local:ist-letzter-wert-in-kette($glied) {
+         <p id="6ec7b350-f2e7-4922-9e96-9c12fd07957ad6e19">Dazu nutzt man - wie in der funktionalen Programmierung üblich - die Rekursion:</p>
+         <pre id="90d962f4-639a-444b-8228-e0ffd7a237bcd7e22" xml:space="preserve">declare function local:ist-letzter-wert-in-kette($glied) {
   let $wert := local:komplizierte-berechnung($glied),
     $naechstes-glied := local:komplizierte-berechnung-der-position($glied),
   return
@@ -31,32 +31,32 @@ XQuery zu sehen. Variablenzuweisungen geschehen mit einem Doppelpunkt,
 Vergleiche dagegen nur mit einem einfachen "=". Statements werden mit einem
 Komma getrennt.</p>
       </section>
-      <section id="716a2b58-8d0f-4116-94f4-13a5da825152d7e26">
+      <section id="2a48363f-0691-43d8-a9c8-05840c6b6af3d7e26">
          <title id="4864a9f8-a94d-458d-b063-087f18dcd9d6d7e26">Funktionsaufrufe im XPath</title>
          <p id="fb308435-c134-4665-86f1-1a9cd2db603bd7e28">Wenn eine Funktion auf einer Kontenmenge operiert, dann kann der Funktionsaufruf auch an einen Pfadselektor gehangen werden, bspw. so:</p>
-         <pre id="af2e6638-0bd0-436f-8f09-9194c104cbd4d7e31" xml:space="preserve">&lt;xsl:value-of select="sum($current/betrag[xs:decimal(.) gt 0]<b id="6e806b18-4de3-49ee-9de0-8a1974f62605d7e34">/xs:decimal(.)</b>)"/&gt;</pre>
+         <pre id="8e3b6973-888b-4db5-906a-48603d7331c7d7e31" xml:space="preserve">&lt;xsl:value-of select="sum($current/betrag[xs:decimal(.) gt 0]<b id="6e806b18-4de3-49ee-9de0-8a1974f62605d7e34">/xs:decimal(.)</b>)"/&gt;</pre>
          <p id="3505f31d-614f-498c-a004-1991b63878bbd7e32">Hier werden die [[code:betrag]]-Knoten eines zuvor selektierten Teilbaums, der in der Variablen [[code:$current]] abgespeichert ist, aufsummiert - aber nur wenn der Wert größer als 0 ist. </p>
          <p id="7608a002-6b4b-4450-9373-957c49937bf4d7e39">Der Funktionsaufruf ist hier ein Type-Cast auf einen Dezimalwert, um eine gewisse Rechengenauigkeit zu gewährleisten.</p>
          <p id="a8401228-9794-424f-81c6-c4dface74b24d7e34">Die Filterung auf positive Werte ist dabei noch gewöhnlich formuliert:</p>
-         <pre id="f12bcc95-0a47-4257-90ce-ff0265da0d03d7e42" xml:space="preserve">[xs:decimal(.) gt 0]</pre>
+         <pre id="932de966-b216-4e2a-b8c4-6424d705657fd7e42" xml:space="preserve">[xs:decimal(.) gt 0]</pre>
          <p id="98c3f316-0613-448e-9bce-079c54e269f8d7e38">[[code:xs:decimal]] nimmt den aktuell ausgwählten Knoten und macht einen Dezimalwert daraus, um ihn mit 0 zu vergleichen. </p>
          <p id="c172e71d-7964-45d3-9779-43fa7b7885c9d7e47">Falls hier an den Typkonstruktor [[code:xs:decimal]] ein nicht-unterstütztes Format übergeben wird, bspw. ein String, dann wird ein <b id="1678156d-999f-4ecc-b895-c45613c239e0d7e49"> fatalen Fehler geworfen und das Programm bricht ab</b>.</p>
          <p id="85a7b857-617a-420b-8947-fd10409308dad7e52">Der Funktionsaufruf kann aber auch als Pfadselektion an einem XPath angebracht werden:</p>
-         <pre id="f837fd04-2e77-449d-9f51-871a205cb3fcd7e53" xml:space="preserve">/xs:decimal(.)</pre>
+         <pre id="67d9cdbb-16cf-4d71-a1f5-980eda1a4643d7e53" xml:space="preserve">/xs:decimal(.)</pre>
          <p id="4b0b3234-3f68-420a-a066-42e04bbaf22ed7e57">Im Fehlerfall wird <b id="9f9d6ea0-5439-4c81-8744-20c7ed92d4b5d7e59" href="undefined">der fehlerhafte Wert nicht summiert und das Programm läuft weiter</b>.</p>
-         <pre id="9a92cb39-e001-438b-b986-e0081b6c7a7dd7e61" xml:space="preserve">$current/betrag[xs:decimal(.) gt 0]</pre>
+         <pre id="9d95b6dc-8936-476b-a817-bc3e209cd8f7d7e61" xml:space="preserve">$current/betrag[xs:decimal(.) gt 0]</pre>
          <p id="7bfc0476-8d90-40bf-a043-413cb3175030d7e68">Auf herkömmlichen Weg würde man eine Schleife verwenden, die alle Werte auf deren Dezimalwert abbildet:</p>
-         <pre id="d69734b2-5a02-426a-8e46-669d39949b89d7e65" xml:space="preserve">sum(for $x in $current/betrag[xs:decimal(.) gt 0]
+         <pre id="b0b35cb5-95f0-4021-951b-f1bd4761c8d5d7e65" xml:space="preserve">sum(for $x in $current/betrag[xs:decimal(.) gt 0]
 return xs:decimal($x))</pre>
          <p id="30718f69-dae4-43c6-9979-b267dfcc2cadd7e72">Das ist ein bisschen komplizerter, gewährleistet aber eine bessere Robustheit der Programmierung.</p>
          <hazardstatement id="9cbb16ad-d2d9-4d23-9650-8eb745bef942d7e74" type="notice" status="changed">
-            <messagepanel id="d6bf304c-b674-4191-8e58-f40bccb3c699d7e70">
+            <messagepanel id="aaaba2a8-f4f2-4080-aadf-94b824cbb740d7e70">
                <typeofhazard id="483ab37e-ae89-4b50-b2fe-fbb4bb1fb27ed7e76">Funktionsaufrufe als Pfadselektoren brechen bei einem Fehler in der Funktion - ohne explizite Ausnahmebehandlung - <b id="ac9ec453-ed71-437a-883a-bef994a7cb5ad7e72">nicht</b> ab.</typeofhazard>
                <howtoavoid id="85eca9d4-2dd6-4713-a242-c0e484b6b304d7e78">Falls mehr Robustheit gefordert ist, sollte man über Ergbnisknotenmengen iterieren und Funktionsaufrufe auf herkömmlichem Weg absetzen.</howtoavoid>
             </messagepanel>
          </hazardstatement>
          <p id="61f9cde3-decb-4a58-9d41-a4972de19362d7e76">Betrachten wir folgendes XQuery-Schnippsel:</p>
-         <pre id="f0cdaca5-16bb-402f-9608-4d26c3a91ab6d7e80" xml:space="preserve">collection("/abrechnung")[vorgangsnummer[.=(3, 8,9,10)]/xdmp:node-collections(.)
+         <pre id="6d49c170-b4ae-4b8c-afee-4e955e235996d7e80" xml:space="preserve">collection("/abrechnung")[vorgangsnummer[.=(3, 8,9,10)]/xdmp:node-collections(.)
                          [starts-with(., '/buchung')]/xdmp:collection-delete(.)</pre>
          <fig id="daf2d9df-a827-4238-93ed-0c23130be9d0d7e81" expanse="spread" frame="all"
               scale="50"
@@ -68,17 +68,18 @@ herausgefischt werden. Diese Abrechungen können auch in verschiedenen Collectio
 "Buchung". Eine Buchung-Collection sammelt alle Abrechungen, die an einem bestimmten Buchungstag getätigt wurden. Wir gehen jetzt davon aus,
 dass alle Abrechungen [[code:3,8,9,10]] an einem bestimmten Buchungstag getätigt wurden - und nur diese. Aus irgendeinem Grund wollen wir diese 
 Buchung nun löschen. Das macht genau der obige Einzeiler. Der Filter:</p>
-         <pre id="e19b8064-775d-4999-8692-2e9746caa0fed7e86" xml:space="preserve">collection("/abrechnung")[vorgangsnummer[.=(3, 8,9,10)]</pre>
+         <pre id="63f7d2b5-e2e7-4847-ba6e-85653e688fe9d7e86" xml:space="preserve">collection("/abrechnung")[vorgangsnummer[.=(3, 8,9,10)]</pre>
          <p id="cba99f3f-1cbd-48fc-8c8d-b094dc70a75ed7e85">gibt eine Knotenmenge zurück. Das gefilterte Funktionsergebnis</p>
-         <pre id="f437580a-06aa-43bf-955e-3467eb30d516d7e91" xml:space="preserve">xdmp:node-collections(.)[starts-with(., '/buchung')]</pre>
+         <pre id="419ae523-f0b9-44b1-a024-1d9a7a86c01ed7e91" xml:space="preserve">xdmp:node-collections(.)[starts-with(., '/buchung')]</pre>
          <p id="ed11205c-8ddb-4c5c-bc38-1c68ba2678d4d7e89">ist auch eine Knotenmenge. Normalerweise bräuchten wir also Schleifen, um über diese Mengen zu iterieren. Das würde irgendwie so aussehen</p>
-         <pre id="40c53f46-1256-4ada-8063-a2d59d2dc480d7e95" xml:space="preserve">let 
+         <pre id="73d19862-467e-4877-9c02-a3f654cda332d7e95" xml:space="preserve">let 
   $filtered-collection := collection("/abrechnung")[vorgangsnummer[.=(3, 8,9,10)],
   $collections-to-be-deleted :=
   distinct-values(
     for $x in $collection
        return (
-         for $y in xdmp:document-get-collections(fn:document-uri($x))[starts-with(., '/buchung')]
+         for $y in xdmp:document-get-collections(fn:document-uri($x))
+                                                 [starts-with(., '/buchung')]
            return 
              $y
        )
@@ -89,16 +90,16 @@ return (
     )</pre>
          <p id="1c69ecfc-78f0-4eeb-9998-e1b9cf680975d7e93">Der Quelltext ist zwar so wesentlich länger, aber auch weniger geübte XPath-Experten erkennen leicht, um was es geht.</p>
       </section>
-      <section id="ff4271ad-2bd6-4076-a51a-9392f43fca11d7e99">
+      <section id="f893f046-d4d8-412f-bdc2-4f8f80c33b56d7e99">
          <title id="dab65cd2-0eb9-4487-99e0-07422d3c3759d6e26">Module</title>
          <p id="2cc3effd-16fe-42c0-9fbd-bfa92cb6d10bd6e28">Um eine XQuery Anwendung zu modularisieren[[xe1:Programmierkonstrukte;xe2:Module]], können einzelne Skripte in
 Module ausgelagert werden. Ein Modul, z.B. [[code:common.xqy]], wird dabei über einen eigenen
 Namespace deklariert:</p>
-         <pre id="29d0b0df-2274-40d0-b28e-afda46ffd979d7e104" xml:space="preserve">module namespace common = "https://www.tekturcms.de/common";</pre>
+         <pre id="00c27198-068c-4815-b681-473233d7b67cd7e104" xml:space="preserve">module namespace common = "https://www.tekturcms.de/common";</pre>
          <p id="86f1276d-3550-4da6-887d-58012231ea7cd6e32">Dieses Modul kann dann in anderen Skripten eingebunden werden:</p>
-         <pre id="8953d51d-ef06-4f3c-aafe-051907e25a1cd7e108" xml:space="preserve">import module namespace common = "https://www.tekturcms.de/common" at "common.xqy";</pre>
+         <pre id="4122821e-e820-4476-ba49-b2eda1b43a61d7e108" xml:space="preserve">import module namespace common = "https://www.tekturcms.de/common" at "common.xqy";</pre>
          <p id="d3d6ab20-364a-45c0-b0fa-e2e4578331bcd6e36">Funktionen und Variablen werden dann mir dem Namespace[[xe1:XML Konstrukte;xe2:Namespaces]] geprefixt aufgerufen:</p>
-         <pre id="8ef712e8-0582-48a5-850c-3da40452e897d7e112" xml:space="preserve">Funktionsaufruf: common:wrap-response-header(...)
+         <pre id="d3769606-076f-40e1-8f4c-ebaee04358a3d7e112" xml:space="preserve">Funktionsaufruf: common:wrap-response-header(...)
 Variablenauswertung: $common:collection-books</pre>
       </section>
    </body>

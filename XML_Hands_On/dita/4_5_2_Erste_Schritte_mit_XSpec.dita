@@ -4,8 +4,8 @@
    <body id="9036318d-3693-4e5c-be19-8a62e8748b03">
       <p id="eef21ef4-793e-4fef-9f1e-a22ecf24b64c">XSpec[[xe1:Tools;xe2:XSpec]] ist ein [[link]]Test-Framework[[fn:https://github.com/xspec*XSpec auf GitHub]][[xe1:Test-Framework]] für XSLT, XQuery und Schematron. 
 Um beispielsweise komplexe Schematron Regeln zu testen, hinterlegt man in einem <b id="f6d68885-0ad1-420b-82ea-92bd5889e0bcd6e9">Test-Szenario</b> 
-Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln. hallo</p>
-      <pre id="54bcabeb-4058-4421-85ba-dd703fdfaaf7d7e9" xml:space="preserve">&lt;test-szenario&gt;
+Erwartungswerte für positive und negative Testfälle in Form von XML Schnippseln.</p>
+      <pre id="2f417b62-8fac-47d5-b126-831bc67d89ead7e9" xml:space="preserve">&lt;test-szenario&gt;
   &lt;testfall&gt;
     &lt;personen&gt;
       &lt;person&gt;
@@ -22,7 +22,7 @@ Erwartungswerte für positive und negative Testfälle in Form von XML Schnippsel
   &lt;/testfall&gt;
 &lt;/test-szenario&gt;</pre>
       <p id="a495ec01-4794-4e28-b47f-0313ab934100d6e26">in einer XSpec Datei [[code:*.xspec]] werden <b id="31a39752-2463-4c05-bbc6-043c7fa89e67d6e28">Assert- und Not-Assert-Methoden</b>[[xe1:Assert- und Not-Assert]]deklariert:</p>
-      <pre id="88877800-9138-43c2-b49c-6897666ca6d6d7e16" xml:space="preserve">&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+      <pre id="b70bfbba-f6bd-4b50-8f16-58c39450038fd7e16" xml:space="preserve">&lt;x:description xslt-version="2.0" xmlns:x="http://www.jenitennison.com/xslt/xspec" 
                schematron="test.sch"&gt;
   &lt;x:scenario label="ALL"&gt;
     &lt;x:context href="test.xml"/&gt;
@@ -35,7 +35,7 @@ Testfalls[[xe1:Testfall]] positiv erfüllt ist. Beim Not-Assert ist das Gegentei
 reichen zwei Regeln, um den Testfall vollständig abzudecken.</p>
       <p id="350b086a-a78e-47cc-9a3e-4f8c596fadf4d6e41">Wenn man Schematron[[xe1:Tools;xe2:Schematron]] Regeln mit Hilfe von XSpec testen will, dann muss man ein bisschen um 
 die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert modelliert.</p>
-      <pre id="e12967e4-18e3-481f-8602-951f7691b957d7e22" xml:space="preserve">&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
+      <pre id="f78ecf21-e70d-43b2-864f-136899bfb9d3d7e22" xml:space="preserve">&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" 
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2"&gt;
   &lt;sch:pattern id="main"&gt;
     &lt;sch:rule context="nachname"&gt;
@@ -48,7 +48,7 @@ die Ecke denken. Denn auch diese Regeln werden mittels Assert und Not-Assert mod
       <p id="5da4afab-3eda-4027-956a-1e72b6dd19b3d6e48">In der Schematron-Regel wird zugesichert (Assert), dass jede Person einen Nachnamen hat.</p>
       <p id="6d2dba49-cecd-4315-8956-4beb19e4af08d6e50">Hat sie keinen Nachnamen, so wird der Bericht zum Fehlerfall in die Schematron Ergebnisdatei
 geschrieben. Diese Datei wertet nun XSpec aus.</p>
-      <note id="d10ecfa1-e3b1-42aa-9b34-c27d257405a8d7e28">
+      <note id="b9459bc3-0717-40a9-9d8a-184a85c46ec7d7e28">
          <p id="611d787d-7b54-46dd-9548-158dd6db0bfcd6e53">Erscheint ein Fehler (= das Feld <b id="171bb098-8941-486f-b6e0-c577438c996dd6e55">nachname</b> ist leer), so greift bei XSpec die Assert-Regel! Das ist die umgekehrte Logik zu den Schematron Regeln.</p>
       </note>
       <p id="1ed9b5fd-88c2-4a6b-998b-6eac55854ec7d6e58">Als Eselsbrücke kann man

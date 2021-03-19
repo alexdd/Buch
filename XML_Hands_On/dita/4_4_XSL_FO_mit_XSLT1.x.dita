@@ -8,27 +8,27 @@ wie dem kommerziellen [[link]]AntennaHouse Formatter[[fn:https://www.antennahous
       <p id="a383f0d1-386e-477b-9bdc-9bede40f0b89d7e6">Ausgabe ist meistens 
 PDF, aber auch andere Formate, wie das veraltete RTF (Rich Text Format) oder auch spezielle Hardware spezifische Formate, wie 
 [[link]]PCL[[fn:https://en.wikipedia.org/wiki/Printer_Command_Language*Wikipedia Seite zur Printer Command Language von HP]], werden unterstützt.</p>
-      <section id="f9729a9e-4b5f-4a35-9c77-b7574445ceddd7e8">
+      <section id="a0aaf59d-9a1f-472b-9786-d0235730079dd7e8">
          <title id="3191b2ed-effd-4dc7-8066-fe7e94c70e5ad7e9">XSL Entwickler</title>
          <p id="15c3ebc1-7695-4cc0-aa18-48731a26018fd7e11">XSL-FO ist eine Wissenschaft für sich, wie die sehr umfangreiche [[link]]Spezifikation[[fn:https://www.w3.org/TR/xsl/*Spezifikation zur Auszeichnungssprache XSL-FO]] belegt.
 Deshalb nimmt der XSL-Entwickler (Stylesheet-Entwickler) meistens eine Sonderrolle in einer XML Company ein.</p>
          <hazardstatement id="39313d54-ff49-4d47-9225-26ef5e5f7727d7e13" type="caution" status="changed">
-            <messagepanel id="53d06b69-5148-4219-96eb-cc61457f2f9cd7e14">
-               <typeofhazard id="9fca84dc-952b-4038-837e-a70240ce060cd7e15">Bei der Berufswahl gilt es zu beachten, dass ein <i id="29e484e4-8c40-4fc8-87c4-38e62c28da7cd7e17">"Stylesheet-Entwickler"</i> in einer XML Company etwas ganz anderes macht, als ein <i id="80299031-32f5-4dcf-b078-00c08eecb560d7e20">"Stylesheet Spezialist"</i> in einer Web Company. Ausserdem ist der XML Anwendungsbereich in zwei Sparten aufgeteilt:</typeofhazard>
+            <messagepanel id="1d35c641-a9c1-41e1-86de-20191d08fa7cd7e14">
+               <typeofhazard id="9fca84dc-952b-4038-837e-a70240ce060cd7e15">Bei der Berufswahl gilt es zu beachten, dass ein [[nb:"Stylesheet-Entwickler"]] in einer XML Company etwas ganz anderes macht, als ein [[nb:"Stylesheet Spezialist"]] in einer Web Company. Ausserdem ist der XML Anwendungsbereich in zwei Sparten aufgeteilt:</typeofhazard>
                <howtoavoid id="6d365585-25b7-4eac-836f-fcbb97321f71d7e17">Publishing</howtoavoid>
                <howtoavoid id="96105848-a4d7-4403-82b8-9171c21b1616d7e25">Datenkonvertierung</howtoavoid>
             </messagepanel>
          </hazardstatement>
          <p id="84208d17-abf9-438b-987a-c2c1409f607bd7e19">Beide Bereiche überlappen, und XML Entwickler werden sowohl im Publishing als auch in der Datenkonvertierung händeringend gesucht. 
 Jedoch kommt ein Publisher seltener mit <xref href="3337f433-44bf-430d-a809-73fd1de5ba6c"
-                  id="e8a4c57a-1e49-40d9-8637-76db8a9fbb45"
-                  type="topic">XML Datenbanken </xref>, und deren Abfragesprache <xref href="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
-                  id="2a1f50e9-4b60-4948-bb5f-5d527eb6f3a5"
+                  id="091d0ed9-f6fc-42c9-a2d1-7449f60effb2"
+                  type="topic">XML Datenbanken</xref>, und deren Abfragesprache <xref href="98665bd9-d40d-4fc7-ab7a-e340be6190a6"
+                  id="25448e7f-b236-43da-b6ea-d8648e54655f"
                   type="topic">XQuery als Programmiersprache </xref> in Berührung. 
 Dagegen wird sich der Konvertierer weniger mit kniffeligen Layoutproblemen herumschlagen müssen.</p>
          <p id="ef197a1a-9e2d-41e9-ba85-1b6d12cf3731d7e21">Diese Differenzierung ist wohl vergleichbar mit Backend- und Frontend-Entwicklung.</p>
       </section>
-      <section id="6128b3c8-0582-4f2f-9a99-d1d100bd3fb2d7e37">
+      <section id="9838503e-215b-47c6-9138-1de98647c83bd7e31">
          <title id="ff3c8c33-9a61-4471-8ddf-75af51271d60d7e24">XSLT1.x</title>
          <p id="d8f863c1-11f0-44d3-b9aa-126ecfc7de71d7e26">In der Version 1.x von XSLT musste man noch auf viele XPath Features verzichten. Bspw. wurde das Iterieren über eine Knotenmenge rekursiv
 mittels Template-Calls realisiert. Auch bzgl. der Arithmetik gab es noch nicht so viele Funktionen, wie man leicht anhand
@@ -36,12 +36,12 @@ des [[link]]Funktionskatalogs[[fn:https://www.w3.org/TR/2010/REC-xpath-functions
 überprüfen kann.</p>
          <p id="82d31315-5cc0-4a80-93b7-532e69b69334d7e28">Vermutlich mag es also an den begrenzten Möglichkeiten liegen, warum mein damaliges Stylesheet (vor 10 Jahren) etwas komplizierter aussieht ...</p>
       </section>
-      <section id="98b8baf5-cccb-4b5f-954e-e76b2b4c910bd7e44">
+      <section id="722605c0-a85a-4965-97d3-4406b3ed08b8d7e38">
          <title id="7b61f70e-8f7c-43ea-9312-9a335ea7b027d7e31">Notentabellen</title>
          <p id="f0efc94a-b972-4ff0-ace0-ed2d6b83e744d7e33">Folgend ist eine Notentabelle zur Benotung nach dem 15-Punkte-Schema für die Kollegstufe abgebildet.</p>
          <fig id="d2e36f63-8cd3-482b-83ba-1b57b85c47aed7e35">
-            <title id="924a4458-cce2-4290-9410-ee646669e24cd7e50">Ausschnitt aus einer PDF XSL-FO Demo</title>
-            <desc id="5f1a4d4c-36c6-4b87-b26f-8061e9b4c099d7e52">Notentabelle zur Benotung nach dem 15-Punkte Schema am Gymnasium. Mit ein paar Zeilen Code liessen sich schon in der Version 1.0 der Programmiersprache XSLT in Verbindung mit der Auszeichnungssprache XSL-FO beeindruckende PDF Layouts erzeugen.</desc>
+            <title id="2754ffe6-814d-4486-b9f8-ab2c4cf612acd7e44">Ausschnitt aus einer PDF XSL-FO Demo</title>
+            <desc id="55a39839-cadb-47e1-8050-6864c46f7e39d7e46">Notentabelle zur Benotung nach dem 15-Punkte Schema am Gymnasium. Mit ein paar Zeilen Code liessen sich schon in der Version 1.0 der Programmiersprache XSLT in Verbindung mit der Auszeichnungssprache XSL-FO beeindruckende PDF Layouts erzeugen.</desc>
             <image href="images/noten-table_76.png"/>
          </fig>
          <p id="94e056ae-ca89-4926-9845-048f88d6cd9dd7e41">(Link zum PDF mit der vollständigen [[link]]Notentabelle[[fn:http://www.tekturcms.de/stylesheets/margits_noten.pdf*XSL-FO Experiment, das eine Notentabelle für die Kollegstufe am Gymnasium generiert]])</p>
@@ -60,7 +60,7 @@ auf die 15 Notenstufen. Das Stylesheet generiert über 200 Tabellen mit verschie
 Werten für die Gesamtpunktzahl aufgeteilt auf 5 DIN A4 Seiten.</i>
          </p>
          <p id="3ba8c873-0420-45c8-b5f5-990175de7b8ed7e47">Die Logik dazu sieht folgendermassen aus:</p>
-         <pre id="32db3a7a-2123-4890-b853-a9959357ef52d7e65" xml:space="preserve">
+         <pre id="48bc91e7-9081-4f83-992c-d0c623f7fb6ad7e59" xml:space="preserve">
 &lt;xsl:template name="note-runden"&gt;
   &lt;xsl:param name="note"/&gt;
   &lt;xsl:variable name="rest" select="$note * 10 mod 10"/&gt;
@@ -227,10 +227,10 @@ auch komplizierte Prädikate und verschachtelte Selektoren auf Anhieb.</p>
 Fällen nicht mehr notwendig. Auch Templates, die nur eine Hilfsfunktion realisieren, wie das obige Template [[code:note-runden]], werden 
 besser mittels [[code:xsl:function]] umgesetzt, was auch innerhalb eines XPath Ausdrucks ausgewertet werden kann.</p>
       </section>
-      <section id="b28727bf-f3c7-4462-9781-9f938a154ac1d7e73">
+      <section id="ad5e007d-06e0-4b57-ad75-0801d200a70bd7e67">
          <title id="4129b713-afb9-44a3-9079-086511d4fe01d7e58">XSL-FO Seitenvorlage</title>
          <p id="71473b28-92af-4439-a79d-e7e0c7893ad9d7e60">Um diese Logik nun in eine XSL-FO Transformation einzubauen, wickelt man einfach das typische XSL-FO Gerüst herum:</p>
-         <pre id="b67ced94-3be2-4633-8d0e-42eab39b5b84d7e78" xml:space="preserve">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         <pre id="1520bee9-b93c-4a91-98bf-bdcadd2abd12d7e72" xml:space="preserve">&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:fo="http://www.w3.org/1999/XSL/Format"
   xmlns:html="http://www.w3.org/1999/xhtml"&gt;
        

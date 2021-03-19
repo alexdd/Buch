@@ -31,7 +31,7 @@
          </li>
       </ul>
       <p id="e42f964a-137b-4b75-bfad-28dc54470a68d6e28">Den zweiten Punkt möchte ich anhand eines Beispiel XSLT Skripts vorführen. Betrachten wir folgende Input Daten:</p>
-      <pre id="a8a81b61-908e-43d3-8d7c-e96db526f053d7e33" xml:space="preserve">&lt;education-system&gt;
+      <pre id="d7ff3325-e381-4985-b065-a9b3fb68103fd7e33" xml:space="preserve">&lt;education-system&gt;
   &lt;administrative-regions&gt;
     [...]
     &lt;dministrative-region id="31" name="Bavaria"&gt;
@@ -56,7 +56,7 @@
   &lt;/administrative-regions&gt;
 &lt;/education-system&gt;</pre>
       <p id="8985af84-2126-4159-b493-540b65c41b58d6e32">Die erste Datei beinhaltet eine Zuordnung von Lehrern zu Schulen in verschiedenen Regierungsbezirken. Um die Daten zu den beiden referenzierten Objekten einzusehen, müssen zwei weitere Dateien konsultiert werden. Die Datei, welche die Lehrer auflistet:</p>
-      <pre id="fbfafda4-efad-4a07-a828-9a5a03c1f5d0d7e37" xml:space="preserve">&lt;teachers&gt;
+      <pre id="beeb3e9e-dc86-410f-8146-aded0045ead3d7e37" xml:space="preserve">&lt;teachers&gt;
   [...]
   &lt;teacher id="576"&gt;
     &lt;first-name&gt;Alfons&lt;/first-name&gt;
@@ -72,7 +72,7 @@
   [...]
 &lt;/teachers&gt;</pre>
       <p id="c35caf7a-807f-48b2-8973-1e575a619ae8d6e36">Und die Datei, welche die Schulen auflistet:</p>
-      <pre id="d9791c06-a50d-4857-bd5d-c7bdaaff7c2fd7e41" xml:space="preserve">&lt;schools&gt;
+      <pre id="becaf125-3e0f-4dab-bffd-efc857127dc3d7e41" xml:space="preserve">&lt;schools&gt;
   [...]
   &lt;school id="45"&gt;
     &lt;name&gt;Gymnasium Bad Aibling&lt;/name&gt;
@@ -82,7 +82,7 @@
   [...]
 &lt;/schools&gt;</pre>
       <p id="c8ee6679-b15c-45f7-9fca-aa269b19e54dd6e40">Um diese Daten verarbeiten zu können ist es sinnvoll, die drei Dateien in einem ersten "Resolver" Schritt zusammenzuführen und ggf. irrelevante Strukturen zu entfernen. Lehrer aus obigem Beispiel können beispielsweise suspendiert worden sein. Das folgende Skript erledigt dies mittels einer zusätzlichen Transformation in eine Variable:</p>
-      <pre id="b5cddcbf-be8c-4755-a0b8-87946e0a23edd7e46" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      <pre id="d77a3109-6810-42a1-9520-ce470a76c216d7e46" xml:space="preserve">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet version="2.0" 
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   exclude-result-prefixes="#all"&gt;
@@ -134,10 +134,10 @@
       <p id="45fef16c-d685-4a23-9038-37e8b4ce1715d6e45">Im ersten Resolve-Schritt werden die Referenzen zu den Lehrer- und Schul-Objekten aufgelöst, d.h. die Attribute des Schul-Objekts werden in die Struktur aus der ersten Datei kopiert. </p>
       <p id="e7b46b28-d440-4f91-b415-c4116e924876d6e47">Die Liste der Lehrer an diesen Schul-Objekten bleibt erhalten und wird mit dem Inhalt aus der zweiten Datei bestückt. </p>
       <p id="aa88c1b0-cb8a-4647-8498-61e6d266fe18d6e47">Zusätzlich werden alle Regierungsbezirke entfernt, die nicht zu Bayern gehören - was die weitere Verarbeitung wesentlich beschleunigen wird. Lehrer die suspendiert worden sind fliegen ebenfalls raus ...</p>
-      <section id="65a89c94-20f9-459b-8684-301f0428270dd7e54">
+      <section id="262c5478-c5d7-468a-9e36-8460b8c97f0ed7e54">
          <title id="ff04425d-99ce-418e-a3b8-2a190252dce1d7e53">In-Situ Vortransformation</title>
-         <p id="3eae591f-9f14-414d-ade7-e337b14a8378d7e55">Als ich mir kürzlich meinen Code vor über zehn Jahren zu Gemüte führte, fiel mir ein augenscheinlich sehr seltsames Stück XSLT auf, sinngemäss:</p>
-         <pre id="5a07b6e9-9a34-43cb-99b1-3b4ccc220f52d7e59" xml:space="preserve">Datei: common/semantic-tables.xsl
+         <p id="3eae591f-9f14-414d-ade7-e337b14a8378d7e55">Als ich mir kürzlich meinen Code vor zehn Jahren zu Gemüte führte, fiel mir ein sehr seltsames Stück XSLT auf, sinngemäss:</p>
+         <pre id="766a1228-722a-4428-aebb-7615e210ee4fd7e59" xml:space="preserve">Datei: common/semantic-tables.xsl
 
 &lt;xsl:template name="maintenance-table"&gt;
     &lt;cals-table-structure&gt;
@@ -153,15 +153,15 @@
     &lt;/xsl:variable&gt;
     &lt;xsl:apply-templates select="$maintenance-table"/&gt;
 &lt;/xsl:template&gt;</pre>
-         <p id="e7c3d5a5-07a9-435d-b24d-2502151c7287d7e59">Was hat mich denn da geritten? Nach einer kurzen Zeit des in mich Gehens, bin ich dann 
-schon darauf gekommen. Der Clou ist hier eine Vortransformation innerhalb einer
+         <p id="e7c3d5a5-07a9-435d-b24d-2502151c7287d7e59">Was hat mich denn da geritten? Ich bin ich dann 
+schon darauf gekommen... Der Clou ist hier eine Vortransformation innerhalb einer
 Match-Regel.</p>
          <p id="d7b34699-b12b-4df9-bf3b-80a85a2f00a7d7e61">Die Transformation innerhalb der Variablen rendert die semantischen Elemente der 
 Wartungstablle, wie z.B. das Wartungsintervall [[code:maint-int]], in eine CALS-Tabelle.</p>
          <p id="ca9ff208-bcbc-4e30-af38-b500521e08d8d7e63">Diese wird dann im nächsten Transformationsschritt entweder nach XSL-FO oder nach HTML
 transformiert, je nachdem welche Haupt-Datei [[code:main.xsl]] das Modul [[code:semantic-tables.xsl]]
 importiert.</p>
-         <pre id="7c6dc389-f9be-45a1-8f7f-a4f9bcc4b984d7e67" xml:space="preserve">Datei html/main.xsl
+         <pre id="b94bfa80-2280-47ff-a6b7-7adddd217fa2d7e67" xml:space="preserve">Datei html/main.xsl
 
 &lt;xsl:import href="common/semantic-tables.xsl"/&gt;
 
@@ -185,10 +185,10 @@ wie Duplikat-Eliminierung oder spezielle Merge-Operation, abgefangen werden. Zud
 bzgl. der Wartungstabelle als auch die Match-Regel im importierenden Stylesheet überschrieben werden, was der Kreativität
 keine Grenzen setzt.</p>
       </section>
-      <section id="af2f9acd-69e6-483f-ab23-2d035fdf2992d7e71">
+      <section id="27ef43d3-5e40-4ba9-a1b2-72d096b847bcd7e71">
          <title id="79c1ceed-415e-450e-9bae-76b5ddf3fe24d7e70">Mehrstufige Transformationen</title>
          <p id="523b5ee3-3e1f-4fcf-92a8-77f377063006d7e72">Bei manchen Kovertierungen reichen ein oder zwei hintereinander geschaltete Transformationsschritte nicht aus. </p>
-         <p id="230048f2-3feb-4b0f-9ce6-fd6b8c3856e6d7e74">Vielleicht hat man es mit einer Struktur zu tun, die gar nicht zum Zielformat passt... Sei es, weil auf ein sehr restriktives Inhaltsmodel transformiert wird, sei es weil <xref href="" id="791161f0-8ed1-4217-9151-4a38fecc1fad" type="">das Inhaltsmodell</xref>  erst schrittweise erschlossen wird, da der Überblick über die Daten noch fehlt. </p>
+         <p id="230048f2-3feb-4b0f-9ce6-fd6b8c3856e6d7e74">Vielleicht hat man es mit einer Struktur zu tun, die gar nicht zum Zielformat passt... Sei es, weil auf ein sehr restriktives Inhaltsmodel transformiert wird, sei es weil <xref href="" id="a9633456-53da-4ed9-84a8-82f3f0d663bd" type="">das Inhaltsmodell</xref>  erst schrittweise erschlossen wird, da der Überblick über die Daten noch fehlt. </p>
          <p id="8b4ccbe4-af94-44e1-a8b2-a62ab7fea4ffd7e79">In jedem Fall muss für manche Elemente in einem späteren Schritt entschieden werden, wohin sie umsortiert werden sollten, weil sie jetzt gerade stören.</p>
          <p id="e9804e09-c03c-400f-b8f8-a18557e67c7cd7e76">
             <b id="5db4c681-e1c8-4ace-8fd4-e5c7aab2045ed7e77">Beispiele:</b>
@@ -220,7 +220,7 @@ keine Grenzen setzt.</p>
             </li>
          </ol>
          <p id="8e83f4cf-4b41-4713-b780-1ffd111c68fad7e106">Mehrstufige Transformationen werden in <xref href="9a77a304-db82-437f-95d3-02656d93692f"
-                  id="cdc36f6a-a2c2-4c16-bf5c-8ad4cc028c59"
+                  id="fadba962-964b-42da-b691-8e643fce57a7"
                   type="topic">Migrationen</xref> eingesetzt. </p>
       </section>
    </body>

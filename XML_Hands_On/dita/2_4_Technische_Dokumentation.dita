@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e6f0d83b-432a-41aa-9dfa-35cff640926f">
+   <title id="140ad880-94b2-4f6f-8323-d5ff5a36914a">Technische Dokumentation</title>
+   <body id="401e1697-a27d-491e-8930-372ae2c367f9">
+      <p id="b475b76c-c8f4-4941-8b2c-3107d3aa7b0f">95% aller technischen Dokumente werden vermtl. mit Micro$oft Word produziert. 
+Es gibt jedoch einige Use Cases in denen ein Standard Word Prozessor nicht mehr ausreicht.</p>
+      <section id="cd6b8470-de6c-4c27-9f06-598c62cefafed7e6">
+         <title id="78358ab1-5cb8-4a15-9dde-ed9b6adfbb4cd7e7">Use Cases</title>
+         <p id="3f5d7b62-d638-4cd3-8b25-30ea0e0f587dd7e9">[[subtitle:Maschinenbauer]] </p>
+         <fig id="be1cef2e-5ee0-4902-946d-15973b2a84b3d7e11" expanse="spread" frame="all"
+              scale="50"
+              status="changed">
+            <image href="images/Grossbeak-_8.svg"/>
+         </fig>
+         <p id="349af573-c70e-4279-93d9-56c6e02279a3d7e13">Ein Maschinenbauhersteller[[xe1:Use Cases;xe2:Maschinenbauer]] verwendet bestimmte Bauteile in mehreren Maschinen. Die Dokumentation dieser Parts soll mit wenig Aufwand in verschiedenen Büchern wiederverwendet werden. Copy 'n Paste kommt nicht in Frage, da sich wegen des schnellen technischen Fortschritts, die Dokumentation häufig ändert. Zudem läuft auf etwas älteren Maschinenmodellen noch eine alte Version von Micro$oft Windows, so dass ein Service-Techniker an der Maschine auf eine Dokumentation im veralteten Windows Hildeformat CHM angewiesen ist.</p>
+         <p id="f7d7011a-8666-463d-97cc-d35427254142d7e13">[[subtitle:KFZ Hersteller]]</p>
+         <p id="0584e8f2-0fdf-4ae2-8c58-f5cc907a5f52d7e15">Ein KFZ Hersteller[[xe1:Use Cases;xe2:KFZ Hersteller]]  hat verschiedene Automodelle im Angebot. Da sich die Fahrzeuge in über 
+hundert Ländern verkaufen lassen, sind Handbücher in vielen Sprachen verfügbar. Es
+enstehen enorme Übersetzungskosten, selbst für Teile, die in allen Büchern denselben
+Inhalt tragen, wie bspw. bestimmte Warnhinweise.</p>
+         <p id="07d5d3ef-f35e-4e7e-b065-236e473cd97dd7e17">[[subtitle:Kommunikationstechnik]] </p>
+         <p id="c1ddc0b9-5613-43aa-b9b3-8ae3718adad6d7e19">Ein Hersteller in der Kommunikations- und Signalerfassungstechnik[[xe1:Use Cases;xe2:Kommunikations- und Signalerfassung]]  will die Erstellung von 
+Datenblättern automatisieren, indem direkt Messergebnisse aus einer Datenbank in die 
+Dokumentation wandern. Dadurch werden die Kosten bzgl. einer manuellen Bedatung minimiert.
+Gesucht ist ein automatisierter Prozess, der die bereitgestellten Daten zur Dokumentation
+hinzufügt.</p>
+         <p id="d8b5c3b9-9e75-4512-8c38-37bb3721d54fd7e21">[[subtitle:Fluggesellschaft]] </p>
+         <p id="657880c2-4355-46ca-b6b7-bdd8857cc318d7e23">Eine Fluggesellschaft[[xe1:Use Cases;xe2:Fluggesellschaft]]  stellt für ihre Piloten eine eigene Dokumentation zu ihren Flugzeugtypen 
+bereit. Da die Piloten bei der Erstellung der Doku als sogenannte "Subject Matter Experts"[[xe1:Subject Matter Experts]]  mitwirken, genügt es nicht nur ein Handbuch in Papierform zu produzieren, sondern auch ein interaktives
+Portal ist notwendig, mit dem die Piloten die Dokumentation Korrekturlesen und Freigeben können.
+Schliesslich brauchen sie auch noch eine Version der Doku auf dem Tablet, um bspw. Checklisten vor
+dem Start interaktiv abhaken zu können - diese Funktionalität rangiert gewöhnlich unter der Bezeichnung 
+"Electronic Flightbag - EFB"[[xe1:Electronic Flightbag]] .</p>
+      </section>
+      <section id="3ec1fbc2-5a19-4630-8526-ec8eb4947a65d7e27">
+         <title id="808ee4ad-8c10-4b03-8854-85b47f27d6c8d7e26">Konzepte</title>
+         <p id="7eb0580e-d43b-441a-afc1-c0dbd1c2d7b5d7e28">Um die zuvor genannten Use Cases realisieren zu können, wurden im Bereich Technische Dokumentation 
+Konzepte entwickelt, die sich stets - unter Einbezug der aktuellen technischen Möglichkeiten - weiterentwickeln.
+Einige dieser Konzepte sind im Kapitel <xref href="792c9845-7c63-4a18-8aee-1878763200b5"
+                  id="894f08df-90f9-40ea-abf8-bb07131831c8"
+                  type="topic">Anwendungsgebiete </xref> schon kurz genannt. Im Bezug auf die Use Cases oben sind die folgenden
+interessant:</p>
+         <p id="b51cd460-08f1-4b37-a46c-88ed83b73bc7d7e30">[[subtitle:Modularisierung und Wiederverwendung]] </p>
+         <p id="c6da319f-e4f9-4996-a33b-082b2eb51b7bd7e32">Durch eine feingranulare Modularisierung[[xe1:Konzepte;xe2:Wiederverwendung]]  des Content existiert jede Informationseinheit im System nur einmal, 
+und kann in verschiedenen Publikationen referenziert werden. Die Auflösung dieser Referenzen geschieht 
+zum Zeitpunkt der Auslieferung des Ausgabeformats, d.h. bei der Bestückung des Webservers mit einer 
+Online-Dokumentation oder beim Erzeugen von XSL-FO als Vorformat für eine Print-Publikation mittels PDF.</p>
+         <p id="4a106c57-3d99-458a-84bc-f467ab27594ed7e34">[[subtitle:Single Sourcing]]</p>
+         <p id="739bc068-5e2b-470e-bd5a-c2b8e2704ef5d7e36">Aus einer Quelle werden mehrere Ausgabeformate erzeugt[[xe1:Konzepte;xe2:Single Source Publishing]]. Dadurch wird Redundanz vermieden und alle Publikationen
+können so stets aktuell gehalten werden. Wenn sich die Quelle ändert, wird automatisch auch das Ziel aktualisiert.
+Gängige Ausgabeformate sind PDF, Online-Hilfe, Online-Portale, eBook Formate, usw.
+Auch veraltete Legacy Formate, wie Windows Hilfe CHM, können bei Bedarf über eine neu hinzugefügte Ausgabestrecke 
+realisiert werden ohne den Kern des Systems zu belasten.</p>
+         <p id="044c4b10-d41b-40ec-821d-7954de09b99ed7e41">[[subtitle:Variantensteuerung]]</p>
+         <p id="bee142cc-5e83-4550-92f9-a2f3a88b1b94d7e43">Über konditionale Bedingungen <i id="f18ec577-206a-40e3-a862-7f4db9a9eba3d7e45">"Gültigkeiten"</i> auf Kapitel- und Elementebene kann die Ausgabe für verschiedene Produktvarianten feingranular gesteuert werden. Dabei werden z.B. die Varianten in einer (Entscheidungs-) baumstruktur unabhängig von der Publikation verwaltet. Erst beim Publizieren wird entschieden, welche Grafiken und Satzbausteine herangezogen werden.</p>
+         <p id="2cc0ff32-231f-4ca0-b5a2-d5a9e8bd2cfad7e38">[[subtitle:Übersetzungsmanagement]] </p>
+         <p id="fe911ed8-08a7-4ccc-a242-04bd618b3da0d7e40">Die Übersetzung[[xe1:Übersetzungsmanagement]]  einer Quellsprache in eine Zielsprache wird gemeinsam mit der Quellinformationseinheit verwaltet. So kann 
+auch auf Seiten der Redakteure eine Versionshistorie bzgl. der Übersetzungen gepflegt werden. Die Abhängigkeit
+zum Übersetzungsdienstleister wird dadurch minimiert. Einmal getätigte Übersetzungen können wiederverwendet 
+werden und belasten das Budget nicht.</p>
+         <p id="fa320d10-86d4-4f8c-8bc5-225c2ffa98e5d7e42">[[subtitle:Automatischer Satz mit XML Technologie]] </p>
+         <p id="6a7c2446-5c85-4fde-855e-d8270b0003ddd7e44">XML ist gängiges Datenformat in der Industrie. XML Daten gelangen aus unterschiedlichen Quellen und über verschiedene Wege, 
+wie Datenbanken, Webservices, mittels BPM Prozesse, Ablageverzeichnisse, manueller Bedatung, usw. in eine
+Publikationsinstanz.[[xe1:Automatischer Satz]] </p>
+         <p id="b5475ea1-a8fc-4e42-aea2-c4f5fe1a050bd7e49">Diese wird als Single Source Quelle in die Ausgabeformate transformiert. Natürlich verlangen
+diese automatischen Eingabeprozesse auch eine automatische Ausgabe. Für Online-Formate ist das weniger tragisch,
+aber für Print-Formate zählt ein guter Umbruch auf Paragraph-, Spalten-, Tabellenzeilen- und Seitenebene. Auch 
+Grafiken und Tabellen müssen gut umbrechen, bspw. soll der Untertitel immer an der Grafik gehalten werden und 
+Tabellenzeilen sollten, auch wie Paragraphen, keine [[link]]Hurenkinder und Schusterjungen[[fn:https://de.wikipedia.org/wiki/Hurenkind_und_Schusterjunge*Wikipedia-Seite zum Thema Hurenkinder und Schusterjungen]] erzeugen.[[xe1:Schusterjungen und Hurenkinder]] </p>
+         <p id="40f5665c-6ef5-421f-91e3-7a98c8b5349bd7e46">[[subtitle:Moderne End-User Applikationen]] </p>
+         <p id="3deaed9e-554f-48c1-b9e7-862c2e6e8652d7e49">Schlussendlich liefert Word keine Datenbasis für moderne Applikationen, wie interaktive Portale oder Smartphone-
+bzw. Tabletapplikationen. Gegenstand aktueller Forschung sind VR und AR, bspw. sollte es genügen eine bestimmte
+Maschine im Fokus seines Smartphones zu halten, um relevante Technische Dokumentation zu übertragen. Auch werden 
+neue Metadatenkonzepte erforscht, wie die Modellierung der Beziehungen zwischen einzelnen Informationseinheiten
+über RDF Tripel.</p>
+         <pre id="c2d09af9-3676-49ba-9983-0cc16b91a9c4d7e65" xml:space="preserve">Bsp.: Bauteil A hat Funktion X  in Maschine Q aber Bauteil A hat Funktion Y  in Maschine W. 
+Zeige mir alle Funktionen von Bauteil A.</pre>
+         <p id="83996541-9c46-48d9-bbb0-b0c8de44800ed7e53">Spezielle Content Delivery Portale[[xe1:Content Delivery Portal]]  spannen dazu einen Beziehungsgraphen auf und ermöglichen das schnelle Bereitstellen
+der gesuchten Information. Federführend ist hier der [[link]]iiRDS Standard[[fn:https://iirds.org/*Webseite zum iiRDS Standard]].</p>
+      </section>
+      <section id="814cb0fb-635c-459a-8e6b-fa2661423a07d7e69">
+         <title id="80de8ebe-ce78-4ddc-bba7-97c68b3fd86cd7e56">Werkzeuge</title>
+         <p id="4b1d0279-378b-4706-a39f-3c4919ff457ad7e58">Um die genannten Use Cases umfassend zu erschlagen sind spezielle Content Management Systeme erforderlich, 
+sogenannte [[link]]Component Content Management Systeme[[fn:https://en.wikipedia.org/wiki/Component_content_management_system*Wikipedia Seite zum Thema Component Content Management]].[[xe1:Component Management System]]  Diese Systeme existieren größenteils seit den 90er Jahren, laufen auf dem Desktop und erfordern enorme Betriebs- und Einführungskosten,
+die sich nur größere Konzerne und Unternehmungen leisten. [[link]]Tektur CCMS[[fn:http://www.tekturcms.de*Homepage von Tektur CCMS]] versucht hier mit einer
+modernen, webbasierten und kostengünstigen Lösung in die Bresche zu springen.</p>
+      </section>
+   </body>
+</topic>
